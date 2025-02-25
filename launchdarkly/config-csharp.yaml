@@ -1,0 +1,13 @@
+generatorName: csharp
+additionalProperties:
+  packageName: Org.LaunchDarklyTools
+  packageGuid: "{A16B50AC-BDE8-4AA5-B101-880226E80AC9}"
+  oseg.namespace: OSEG.LaunchDarklyExamples
+  oseg.packageGuid: "{7FE6D24C-67B5-4D2C-9242-64BE4A0A314F}"
+  oseg.security.ApiKey.api_key: YOUR_API_KEY
+globalProperties:
+    apiTests: false
+    modelTests: false
+    apiDocs: false
+    modelDocs: false
+

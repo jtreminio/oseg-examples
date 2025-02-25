@@ -1,0 +1,1203 @@
+/*
+ * LaunchDarkly REST API
+ * # Overview  ## Authentication  LaunchDarkly's REST API uses the HTTPS protocol with a minimum TLS version of 1.2.  All REST API resources are authenticated with either [personal or service access tokens](https://docs.launchdarkly.com/home/account/api), or session cookies. Other authentication mechanisms are not supported. You can manage personal access tokens on your [**Authorization**](https://app.launchdarkly.com/settings/authorization) page in the LaunchDarkly UI.  LaunchDarkly also has SDK keys, mobile keys, and client-side IDs that are used by our server-side SDKs, mobile SDKs, and JavaScript-based SDKs, respectively. **These keys cannot be used to access our REST API**. These keys are environment-specific, and can only perform read-only operations such as fetching feature flag settings.  | Auth mechanism                                                                                  | Allowed resources                                                                                     | Use cases                                          | | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------- | | [Personal or service access tokens](https://docs.launchdarkly.com/home/account/api) | Can be customized on a per-token basis                                                                | Building scripts, custom integrations, data export. | | SDK keys                                                                                        | Can only access read-only resources specific to server-side SDKs. Restricted to a single environment. | Server-side SDKs                     | | Mobile keys                                                                                     | Can only access read-only resources specific to mobile SDKs, and only for flags marked available to mobile keys. Restricted to a single environment.           | Mobile SDKs                                        | | Client-side ID                                                                                  | Can only access read-only resources specific to JavaScript-based client-side SDKs, and only for flags marked available to client-side. Restricted to a single environment.           | Client-side JavaScript                             |  > #### Keep your access tokens and SDK keys private > > Access tokens should _never_ be exposed in untrusted contexts. Never put an access token in client-side JavaScript, or embed it in a mobile application. LaunchDarkly has special mobile keys that you can embed in mobile apps. If you accidentally expose an access token or SDK key, you can reset it from your [**Authorization**](https://app.launchdarkly.com/settings/authorization) page. > > The client-side ID is safe to embed in untrusted contexts. It's designed for use in client-side JavaScript.  ### Authentication using request header  The preferred way to authenticate with the API is by adding an `Authorization` header containing your access token to your requests. The value of the `Authorization` header must be your access token.  Manage personal access tokens from the [**Authorization**](https://app.launchdarkly.com/settings/authorization) page.  ### Authentication using session cookie  For testing purposes, you can make API calls directly from your web browser. If you are logged in to the LaunchDarkly application, the API will use your existing session to authenticate calls.  If you have a [role](https://docs.launchdarkly.com/home/account/built-in-roles) other than Admin, or have a [custom role](https://docs.launchdarkly.com/home/account/custom-roles) defined, you may not have permission to perform some API calls. You will receive a `401` response code in that case.  > ### Modifying the Origin header causes an error > > LaunchDarkly validates that the Origin header for any API request authenticated by a session cookie matches the expected Origin header. The expected Origin header is `https://app.launchdarkly.com`. > > If the Origin header does not match what's expected, LaunchDarkly returns an error. This error can prevent the LaunchDarkly app from working correctly. > > Any browser extension that intentionally changes the Origin header can cause this problem. For example, the `Allow-Control-Allow-Origin: *` Chrome extension changes the Origin header to `http://evil.com` and causes the app to fail. > > To prevent this error, do not modify your Origin header. > > LaunchDarkly does not require origin matching when authenticating with an access token, so this issue does not affect normal API usage.  ## Representations  All resources expect and return JSON response bodies. Error responses also send a JSON body. To learn more about the error format of the API, read [Errors](/#section/Overview/Errors).  In practice this means that you always get a response with a `Content-Type` header set to `application/json`.  In addition, request bodies for `PATCH`, `POST`, and `PUT` requests must be encoded as JSON with a `Content-Type` header set to `application/json`.  ### Summary and detailed representations  When you fetch a list of resources, the response includes only the most important attributes of each resource. This is a _summary representation_ of the resource. When you fetch an individual resource, such as a single feature flag, you receive a _detailed representation_ of the resource.  The best way to find a detailed representation is to follow links. Every summary representation includes a link to its detailed representation.  ### Expanding responses  Sometimes the detailed representation of a resource does not include all of the attributes of the resource by default. If this is the case, the request method will clearly document this and describe which attributes you can include in an expanded response.  To include the additional attributes, append the `expand` request parameter to your request and add a comma-separated list of the attributes to include. For example, when you append `?expand=members,maintainers` to the [Get team](/tag/Teams#operation/getTeam) endpoint, the expanded response includes both of these attributes.  ### Links and addressability  The best way to navigate the API is by following links. These are attributes in representations that link to other resources. The API always uses the same format for links:  - Links to other resources within the API are encapsulated in a `_links` object - If the resource has a corresponding link to HTML content on the site, it is stored in a special `_site` link  Each link has two attributes:  - An `href`, which contains the URL - A `type`, which describes the content type  For example, a feature resource might return the following:  ```json {   \"_links\": {     \"parent\": {       \"href\": \"/api/features\",       \"type\": \"application/json\"     },     \"self\": {       \"href\": \"/api/features/sort.order\",       \"type\": \"application/json\"     }   },   \"_site\": {     \"href\": \"/features/sort.order\",     \"type\": \"text/html\"   } } ```  From this, you can navigate to the parent collection of features by following the `parent` link, or navigate to the site page for the feature by following the `_site` link.  Collections are always represented as a JSON object with an `items` attribute containing an array of representations. Like all other representations, collections have `_links` defined at the top level.  Paginated collections include `first`, `last`, `next`, and `prev` links containing a URL with the respective set of elements in the collection.  ## Updates  Resources that accept partial updates use the `PATCH` verb. Most resources support the [JSON patch](/reference#updates-using-json-patch) format. Some resources also support the [JSON merge patch](/reference#updates-using-json-merge-patch) format, and some resources support the [semantic patch](/reference#updates-using-semantic-patch) format, which is a way to specify the modifications to perform as a set of executable instructions. Each resource supports optional [comments](/reference#updates-with-comments) that you can submit with updates. Comments appear in outgoing webhooks, the audit log, and other integrations.  When a resource supports both JSON patch and semantic patch, we document both in the request method. However, the specific request body fields and descriptions included in our documentation only match one type of patch or the other.  ### Updates using JSON patch  [JSON patch](https://datatracker.ietf.org/doc/html/rfc6902) is a way to specify the modifications to perform on a resource. JSON patch uses paths and a limited set of operations to describe how to transform the current state of the resource into a new state. JSON patch documents are always arrays, where each element contains an operation, a path to the field to update, and the new value.  For example, in this feature flag representation:  ```json {     \"name\": \"New recommendations engine\",     \"key\": \"engine.enable\",     \"description\": \"This is the description\",     ... } ``` You can change the feature flag's description with the following patch document:  ```json [{ \"op\": \"replace\", \"path\": \"/description\", \"value\": \"This is the new description\" }] ```  You can specify multiple modifications to perform in a single request. You can also test that certain preconditions are met before applying the patch:  ```json [   { \"op\": \"test\", \"path\": \"/version\", \"value\": 10 },   { \"op\": \"replace\", \"path\": \"/description\", \"value\": \"The new description\" } ] ```  The above patch request tests whether the feature flag's `version` is `10`, and if so, changes the feature flag's description.  Attributes that are not editable, such as a resource's `_links`, have names that start with an underscore.  ### Updates using JSON merge patch  [JSON merge patch](https://datatracker.ietf.org/doc/html/rfc7386) is another format for specifying the modifications to perform on a resource. JSON merge patch is less expressive than JSON patch. However, in many cases it is simpler to construct a merge patch document. For example, you can change a feature flag's description with the following merge patch document:  ```json {   \"description\": \"New flag description\" } ```  ### Updates using semantic patch  Some resources support the semantic patch format. A semantic patch is a way to specify the modifications to perform on a resource as a set of executable instructions.  Semantic patch allows you to be explicit about intent using precise, custom instructions. In many cases, you can define semantic patch instructions independently of the current state of the resource. This can be useful when defining a change that may be applied at a future date.  To make a semantic patch request, you must append `domain-model=launchdarkly.semanticpatch` to your `Content-Type` header.  Here's how:  ``` Content-Type: application/json; domain-model=launchdarkly.semanticpatch ```  If you call a semantic patch resource without this header, you will receive a `400` response because your semantic patch will be interpreted as a JSON patch.  The body of a semantic patch request takes the following properties:  * `comment` (string): (Optional) A description of the update. * `environmentKey` (string): (Required for some resources only) The environment key. * `instructions` (array): (Required) A list of actions the update should perform. Each action in the list must be an object with a `kind` property that indicates the instruction. If the instruction requires parameters, you must include those parameters as additional fields in the object. The documentation for each resource that supports semantic patch includes the available instructions and any additional parameters.  For example:  ```json {   \"comment\": \"optional comment\",   \"instructions\": [ {\"kind\": \"turnFlagOn\"} ] } ```  Semantic patches are not applied partially; either all of the instructions are applied or none of them are. If **any** instruction is invalid, the endpoint returns an error and will not change the resource. If all instructions are valid, the request succeeds and the resources are updated if necessary, or left unchanged if they are already in the state you request.  ### Updates with comments  You can submit optional comments with `PATCH` changes.  To submit a comment along with a JSON patch document, use the following format:  ```json {   \"comment\": \"This is a comment string\",   \"patch\": [{ \"op\": \"replace\", \"path\": \"/description\", \"value\": \"The new description\" }] } ```  To submit a comment along with a JSON merge patch document, use the following format:  ```json {   \"comment\": \"This is a comment string\",   \"merge\": { \"description\": \"New flag description\" } } ```  To submit a comment along with a semantic patch, use the following format:  ```json {   \"comment\": \"This is a comment string\",   \"instructions\": [ {\"kind\": \"turnFlagOn\"} ] } ```  ## Errors  The API always returns errors in a common format. Here's an example:  ```json {   \"code\": \"invalid_request\",   \"message\": \"A feature with that key already exists\",   \"id\": \"30ce6058-87da-11e4-b116-123b93f75cba\" } ```  The `code` indicates the general class of error. The `message` is a human-readable explanation of what went wrong. The `id` is a unique identifier. Use it when you're working with LaunchDarkly Support to debug a problem with a specific API call.  ### HTTP status error response codes  | Code | Definition        | Description                                                                                       | Possible Solution                                                | | ---- | ----------------- | ------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | | 400  | Invalid request       | The request cannot be understood.                                    | Ensure JSON syntax in request body is correct.                   | | 401  | Invalid access token      | Requestor is unauthorized or does not have permission for this API call.                                                | Ensure your API access token is valid and has the appropriate permissions.                                     | | 403  | Forbidden         | Requestor does not have access to this resource.                                                | Ensure that the account member or access token has proper permissions set. | | 404  | Invalid resource identifier | The requested resource is not valid. | Ensure that the resource is correctly identified by ID or key. | | 405  | Method not allowed | The request method is not allowed on this resource. | Ensure that the HTTP verb is correct. | | 409  | Conflict          | The API request can not be completed because it conflicts with a concurrent API request. | Retry your request.                                              | | 422  | Unprocessable entity | The API request can not be completed because the update description can not be understood. | Ensure that the request body is correct for the type of patch you are using, either JSON patch or semantic patch. | 429  | Too many requests | Read [Rate limiting](/#section/Overview/Rate-limiting).                                               | Wait and try again later.                                        |  ## CORS  The LaunchDarkly API supports Cross Origin Resource Sharing (CORS) for AJAX requests from any origin. If an `Origin` header is given in a request, it will be echoed as an explicitly allowed origin. Otherwise the request returns a wildcard, `Access-Control-Allow-Origin: *`. For more information on CORS, read the [CORS W3C Recommendation](http://www.w3.org/TR/cors). Example CORS headers might look like:  ```http Access-Control-Allow-Headers: Accept, Content-Type, Content-Length, Accept-Encoding, Authorization Access-Control-Allow-Methods: OPTIONS, GET, DELETE, PATCH Access-Control-Allow-Origin: * Access-Control-Max-Age: 300 ```  You can make authenticated CORS calls just as you would make same-origin calls, using either [token or session-based authentication](/#section/Overview/Authentication). If you are using session authentication, you should set the `withCredentials` property for your `xhr` request to `true`. You should never expose your access tokens to untrusted entities.  ## Rate limiting  We use several rate limiting strategies to ensure the availability of our APIs. Rate-limited calls to our APIs return a `429` status code. Calls to our APIs include headers indicating the current rate limit status. The specific headers returned depend on the API route being called. The limits differ based on the route, authentication mechanism, and other factors. Routes that are not rate limited may not contain any of the headers described below.  > ### Rate limiting and SDKs > > LaunchDarkly SDKs are never rate limited and do not use the API endpoints defined here. LaunchDarkly uses a different set of approaches, including streaming/server-sent events and a global CDN, to ensure availability to the routes used by LaunchDarkly SDKs.  ### Global rate limits  Authenticated requests are subject to a global limit. This is the maximum number of calls that your account can make to the API per ten seconds. All service and personal access tokens on the account share this limit, so exceeding the limit with one access token will impact other tokens. Calls that are subject to global rate limits may return the headers below:  | Header name                    | Description                                                                      | | ------------------------------ | -------------------------------------------------------------------------------- | | `X-Ratelimit-Global-Remaining` | The maximum number of requests the account is permitted to make per ten seconds. | | `X-Ratelimit-Reset`            | The time at which the current rate limit window resets in epoch milliseconds.    |  We do not publicly document the specific number of calls that can be made globally. This limit may change, and we encourage clients to program against the specification, relying on the two headers defined above, rather than hardcoding to the current limit.  ### Route-level rate limits  Some authenticated routes have custom rate limits. These also reset every ten seconds. Any service or personal access tokens hitting the same route share this limit, so exceeding the limit with one access token may impact other tokens. Calls that are subject to route-level rate limits return the headers below:  | Header name                   | Description                                                                                           | | ----------------------------- | ----------------------------------------------------------------------------------------------------- | | `X-Ratelimit-Route-Remaining` | The maximum number of requests to the current route the account is permitted to make per ten seconds. | | `X-Ratelimit-Reset`           | The time at which the current rate limit window resets in epoch milliseconds.                         |  A _route_ represents a specific URL pattern and verb. For example, the [Delete environment](/tag/Environments#operation/deleteEnvironment) endpoint is considered a single route, and each call to delete an environment counts against your route-level rate limit for that route.  We do not publicly document the specific number of calls that an account can make to each endpoint per ten seconds. These limits may change, and we encourage clients to program against the specification, relying on the two headers defined above, rather than hardcoding to the current limits.  ### IP-based rate limiting  We also employ IP-based rate limiting on some API routes. If you hit an IP-based rate limit, your API response will include a `Retry-After` header indicating how long to wait before re-trying the call. Clients must wait at least `Retry-After` seconds before making additional calls to our API, and should employ jitter and backoff strategies to avoid triggering rate limits again.  ## OpenAPI (Swagger) and client libraries  We have a [complete OpenAPI (Swagger) specification](https://app.launchdarkly.com/api/v2/openapi.json) for our API.  We auto-generate multiple client libraries based on our OpenAPI specification. To learn more, visit the [collection of client libraries on GitHub](https://github.com/search?q=topic%3Alaunchdarkly-api+org%3Alaunchdarkly&type=Repositories). You can also use this specification to generate client libraries to interact with our REST API in your language of choice.  Our OpenAPI specification is supported by several API-based tools such as Postman and Insomnia. In many cases, you can directly import our specification to explore our APIs.  ## Method overriding  Some firewalls and HTTP clients restrict the use of verbs other than `GET` and `POST`. In those environments, our API endpoints that use `DELETE`, `PATCH`, and `PUT` verbs are inaccessible.  To avoid this issue, our API supports the `X-HTTP-Method-Override` header, allowing clients to \"tunnel\" `DELETE`, `PATCH`, and `PUT` requests using a `POST` request.  For example, to call a `PATCH` endpoint using a `POST` request, you can include `X-HTTP-Method-Override:PATCH` as a header.  ## Beta resources  We sometimes release new API resources in **beta** status before we release them with general availability.  Resources that are in beta are still undergoing testing and development. They may change without notice, including becoming backwards incompatible.  We try to promote resources into general availability as quickly as possible. This happens after sufficient testing and when we're satisfied that we no longer need to make backwards-incompatible changes.  We mark beta resources with a \"Beta\" callout in our documentation, pictured below:  > ### This feature is in beta > > To use this feature, pass in a header including the `LD-API-Version` key with value set to `beta`. Use this header with each call. To learn more, read [Beta resources](/#section/Overview/Beta-resources). > > Resources that are in beta are still undergoing testing and development. They may change without notice, including becoming backwards incompatible.  ### Using beta resources  To use a beta resource, you must include a header in the request. If you call a beta resource without this header, you receive a `403` response.  Use this header:  ``` LD-API-Version: beta ```  ## Federal environments  The version of LaunchDarkly that is available on domains controlled by the United States government is different from the version of LaunchDarkly available to the general public. If you are an employee or contractor for a United States federal agency and use LaunchDarkly in your work, you likely use the federal instance of LaunchDarkly.  If you are working in the federal instance of LaunchDarkly, the base URI for each request is `https://app.launchdarkly.us`. In the \"Try it\" sandbox for each request, click the request path to view the complete resource path for the federal environment.  To learn more, read [LaunchDarkly in federal environments](https://docs.launchdarkly.com/home/infrastructure/federal).  ## Versioning  We try hard to keep our REST API backwards compatible, but we occasionally have to make backwards-incompatible changes in the process of shipping new features. These breaking changes can cause unexpected behavior if you don't prepare for them accordingly.  Updates to our REST API include support for the latest features in LaunchDarkly. We also release a new version of our REST API every time we make a breaking change. We provide simultaneous support for multiple API versions so you can migrate from your current API version to a new version at your own pace.  ### Setting the API version per request  You can set the API version on a specific request by sending an `LD-API-Version` header, as shown in the example below:  ``` LD-API-Version: 20240415 ```  The header value is the version number of the API version you would like to request. The number for each version corresponds to the date the version was released in `yyyymmdd` format. In the example above the version `20240415` corresponds to April 15, 2024.  ### Setting the API version per access token  When you create an access token, you must specify a specific version of the API to use. This ensures that integrations using this token cannot be broken by version changes.  Tokens created before versioning was released have their version set to `20160426`, which is the version of the API that existed before the current versioning scheme, so that they continue working the same way they did before versioning.  If you would like to upgrade your integration to use a new API version, you can explicitly set the header described above.  > ### Best practice: Set the header for every client or integration > > We recommend that you set the API version header explicitly in any client or integration you build. > > Only rely on the access token API version during manual testing.  ### API version changelog  |<div style=\"width:75px\">Version</div> | Changes | End of life (EOL) |---|---|---| | `20240415` | <ul><li>Changed several endpoints from unpaginated to paginated. Use the `limit` and `offset` query parameters to page through the results.</li> <li>Changed the [list access tokens](/tag/Access-tokens#operation/getTokens) endpoint: <ul><li>Response is now paginated with a default limit of `25`</li></ul></li> <li>Changed the [list account members](/tag/Account-members#operation/getMembers) endpoint: <ul><li>The `accessCheck` filter is no longer available</li></ul></li> <li>Changed the [list custom roles](/tag/Custom-roles#operation/getCustomRoles) endpoint: <ul><li>Response is now paginated with a default limit of `20`</li></ul></li> <li>Changed the [list feature flags](/tag/Feature-flags#operation/getFeatureFlags) endpoint: <ul><li>Response is now paginated with a default limit of `20`</li><li>The `environments` field is now only returned if the request is filtered by environment, using the `filterEnv` query parameter</li><li>The `filterEnv` query parameter supports a maximum of three environments</li><li>The `followerId`, `hasDataExport`, `status`, `contextKindTargeted`, and `segmentTargeted` filters are no longer available</li></ul></li> <li>Changed the [list segments](/tag/Segments#operation/getSegments) endpoint: <ul><li>Response is now paginated with a default limit of `20`</li></ul></li> <li>Changed the [list teams](/tag/Teams#operation/getTeams) endpoint: <ul><li>The `expand` parameter no longer supports including `projects` or `roles`</li><li>In paginated results, the maximum page size is now 100</li></ul></li> <li>Changed the [get workflows](/tag/Workflows#operation/getWorkflows) endpoint: <ul><li>Response is now paginated with a default limit of `20`</li><li>The `_conflicts` field in the response is no longer available</li></ul></li> </ul>  | Current | | `20220603` | <ul><li>Changed the [list projects](/tag/Projects#operation/getProjects) return value:<ul><li>Response is now paginated with a default limit of `20`.</li><li>Added support for filter and sort.</li><li>The project `environments` field is now expandable. This field is omitted by default.</li></ul></li><li>Changed the [get project](/tag/Projects#operation/getProject) return value:<ul><li>The `environments` field is now expandable. This field is omitted by default.</li></ul></li></ul> | 2025-04-15 | | `20210729` | <ul><li>Changed the [create approval request](/tag/Approvals#operation/postApprovalRequest) return value. It now returns HTTP Status Code `201` instead of `200`.</li><li> Changed the [get users](/tag/Users#operation/getUser) return value. It now returns a user record, not a user. </li><li>Added additional optional fields to environment, segments, flags, members, and segments, including the ability to create big segments. </li><li> Added default values for flag variations when new environments are created. </li><li>Added filtering and pagination for getting flags and members, including `limit`, `number`, `filter`, and `sort` query parameters. </li><li>Added endpoints for expiring user targets for flags and segments, scheduled changes, access tokens, Relay Proxy configuration, integrations and subscriptions, and approvals. </li></ul> | 2023-06-03 | | `20191212` | <ul><li>[List feature flags](/tag/Feature-flags#operation/getFeatureFlags) now defaults to sending summaries of feature flag configurations, equivalent to setting the query parameter `summary=true`. Summaries omit flag targeting rules and individual user targets from the payload. </li><li> Added endpoints for flags, flag status, projects, environments, audit logs, members, users, custom roles, segments, usage, streams, events, and data export. </li></ul> | 2022-07-29 | | `20160426` | <ul><li>Initial versioning of API. Tokens created before versioning have their version set to this.</li></ul> | 2020-12-12 |  To learn more about how EOL is determined, read LaunchDarkly's [End of Life (EOL) Policy](https://launchdarkly.com/policies/end-of-life-policy/). 
+ *
+ * The version of the OpenAPI document: 2.0
+ * Contact: support@launchdarkly.com
+ *
+ * NOTE: This class is auto generated by OpenAPI Generator (https://openapi-generator.tech).
+ * https://openapi-generator.tech
+ * Do not edit the class manually.
+ */
+
+
+package com.launchdarkly.client.model;
+
+import java.util.Objects;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import com.launchdarkly.client.model.ApprovalSettings;
+import com.launchdarkly.client.model.Conflict;
+import com.launchdarkly.client.model.CopiedFromEnv;
+import com.launchdarkly.client.model.CustomWorkflowMeta;
+import com.launchdarkly.client.model.Environment;
+import com.launchdarkly.client.model.ExpandedFlagRep;
+import com.launchdarkly.client.model.ExpandedResourceRep;
+import com.launchdarkly.client.model.IntegrationMetadata;
+import com.launchdarkly.client.model.Project;
+import com.launchdarkly.client.model.ReviewResponse;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.TypeAdapterFactory;
+import com.google.gson.reflect.TypeToken;
+import com.google.gson.TypeAdapter;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import com.launchdarkly.client.JSON;
+
+/**
+ * ExpandableApprovalRequestResponse
+ */
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.11.0")
+public class ExpandableApprovalRequestResponse {
+  public static final String SERIALIZED_NAME_ID = "_id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  @javax.annotation.Nonnull
+  private String id;
+
+  public static final String SERIALIZED_NAME_VERSION = "_version";
+  @SerializedName(SERIALIZED_NAME_VERSION)
+  @javax.annotation.Nonnull
+  private Integer version;
+
+  public static final String SERIALIZED_NAME_CREATION_DATE = "creationDate";
+  @SerializedName(SERIALIZED_NAME_CREATION_DATE)
+  @javax.annotation.Nonnull
+  private Long creationDate;
+
+  public static final String SERIALIZED_NAME_SERVICE_KIND = "serviceKind";
+  @SerializedName(SERIALIZED_NAME_SERVICE_KIND)
+  @javax.annotation.Nonnull
+  private String serviceKind;
+
+  public static final String SERIALIZED_NAME_REQUESTOR_ID = "requestorId";
+  @SerializedName(SERIALIZED_NAME_REQUESTOR_ID)
+  @javax.annotation.Nullable
+  private String requestorId;
+
+  public static final String SERIALIZED_NAME_DESCRIPTION = "description";
+  @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  @javax.annotation.Nullable
+  private String description;
+
+  /**
+   * Current status of the review of this approval request
+   */
+  @JsonAdapter(ReviewStatusEnum.Adapter.class)
+  public enum ReviewStatusEnum {
+    APPROVED("approved"),
+    
+    DECLINED("declined"),
+    
+    PENDING("pending");
+
+    private String value;
+
+    ReviewStatusEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static ReviewStatusEnum fromValue(String value) {
+      for (ReviewStatusEnum b : ReviewStatusEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<ReviewStatusEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final ReviewStatusEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public ReviewStatusEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return ReviewStatusEnum.fromValue(value);
+      }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      ReviewStatusEnum.fromValue(value);
+    }
+  }
+
+  public static final String SERIALIZED_NAME_REVIEW_STATUS = "reviewStatus";
+  @SerializedName(SERIALIZED_NAME_REVIEW_STATUS)
+  @javax.annotation.Nonnull
+  private ReviewStatusEnum reviewStatus;
+
+  public static final String SERIALIZED_NAME_ALL_REVIEWS = "allReviews";
+  @SerializedName(SERIALIZED_NAME_ALL_REVIEWS)
+  @javax.annotation.Nonnull
+  private List<ReviewResponse> allReviews = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_NOTIFY_MEMBER_IDS = "notifyMemberIds";
+  @SerializedName(SERIALIZED_NAME_NOTIFY_MEMBER_IDS)
+  @javax.annotation.Nonnull
+  private List<String> notifyMemberIds = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_APPLIED_DATE = "appliedDate";
+  @SerializedName(SERIALIZED_NAME_APPLIED_DATE)
+  @javax.annotation.Nullable
+  private Long appliedDate;
+
+  public static final String SERIALIZED_NAME_APPLIED_BY_MEMBER_ID = "appliedByMemberId";
+  @SerializedName(SERIALIZED_NAME_APPLIED_BY_MEMBER_ID)
+  @javax.annotation.Nullable
+  private String appliedByMemberId;
+
+  public static final String SERIALIZED_NAME_APPLIED_BY_SERVICE_TOKEN_ID = "appliedByServiceTokenId";
+  @SerializedName(SERIALIZED_NAME_APPLIED_BY_SERVICE_TOKEN_ID)
+  @javax.annotation.Nullable
+  private String appliedByServiceTokenId;
+
+  /**
+   * Current status of the approval request
+   */
+  @JsonAdapter(StatusEnum.Adapter.class)
+  public enum StatusEnum {
+    PENDING("pending"),
+    
+    COMPLETED("completed"),
+    
+    FAILED("failed"),
+    
+    SCHEDULED("scheduled");
+
+    private String value;
+
+    StatusEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static StatusEnum fromValue(String value) {
+      for (StatusEnum b : StatusEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<StatusEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final StatusEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public StatusEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return StatusEnum.fromValue(value);
+      }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      StatusEnum.fromValue(value);
+    }
+  }
+
+  public static final String SERIALIZED_NAME_STATUS = "status";
+  @SerializedName(SERIALIZED_NAME_STATUS)
+  @javax.annotation.Nonnull
+  private StatusEnum status;
+
+  public static final String SERIALIZED_NAME_INSTRUCTIONS = "instructions";
+  @SerializedName(SERIALIZED_NAME_INSTRUCTIONS)
+  @javax.annotation.Nonnull
+  private List<Map<String, Object>> instructions = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_CONFLICTS = "conflicts";
+  @SerializedName(SERIALIZED_NAME_CONFLICTS)
+  @javax.annotation.Nonnull
+  private List<Conflict> conflicts = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_LINKS = "_links";
+  @SerializedName(SERIALIZED_NAME_LINKS)
+  @javax.annotation.Nonnull
+  private Map<String, Object> links = new HashMap<>();
+
+  public static final String SERIALIZED_NAME_EXECUTION_DATE = "executionDate";
+  @SerializedName(SERIALIZED_NAME_EXECUTION_DATE)
+  @javax.annotation.Nullable
+  private Long executionDate;
+
+  public static final String SERIALIZED_NAME_OPERATING_ON_ID = "operatingOnId";
+  @SerializedName(SERIALIZED_NAME_OPERATING_ON_ID)
+  @javax.annotation.Nullable
+  private String operatingOnId;
+
+  public static final String SERIALIZED_NAME_INTEGRATION_METADATA = "integrationMetadata";
+  @SerializedName(SERIALIZED_NAME_INTEGRATION_METADATA)
+  @javax.annotation.Nullable
+  private IntegrationMetadata integrationMetadata;
+
+  public static final String SERIALIZED_NAME_SOURCE = "source";
+  @SerializedName(SERIALIZED_NAME_SOURCE)
+  @javax.annotation.Nullable
+  private CopiedFromEnv source;
+
+  public static final String SERIALIZED_NAME_CUSTOM_WORKFLOW_METADATA = "customWorkflowMetadata";
+  @SerializedName(SERIALIZED_NAME_CUSTOM_WORKFLOW_METADATA)
+  @javax.annotation.Nullable
+  private CustomWorkflowMeta customWorkflowMetadata;
+
+  public static final String SERIALIZED_NAME_RESOURCE_ID = "resourceId";
+  @SerializedName(SERIALIZED_NAME_RESOURCE_ID)
+  @javax.annotation.Nullable
+  private String resourceId;
+
+  public static final String SERIALIZED_NAME_APPROVAL_SETTINGS = "approvalSettings";
+  @SerializedName(SERIALIZED_NAME_APPROVAL_SETTINGS)
+  @javax.annotation.Nullable
+  private ApprovalSettings approvalSettings;
+
+  public static final String SERIALIZED_NAME_PROJECT = "project";
+  @SerializedName(SERIALIZED_NAME_PROJECT)
+  @javax.annotation.Nullable
+  private Project project;
+
+  public static final String SERIALIZED_NAME_ENVIRONMENTS = "environments";
+  @SerializedName(SERIALIZED_NAME_ENVIRONMENTS)
+  @javax.annotation.Nullable
+  private List<Environment> environments = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_FLAG = "flag";
+  @SerializedName(SERIALIZED_NAME_FLAG)
+  @javax.annotation.Nullable
+  private ExpandedFlagRep flag;
+
+  public static final String SERIALIZED_NAME_RESOURCE = "resource";
+  @SerializedName(SERIALIZED_NAME_RESOURCE)
+  @javax.annotation.Nullable
+  private ExpandedResourceRep resource;
+
+  public ExpandableApprovalRequestResponse() {
+  }
+
+  public ExpandableApprovalRequestResponse id(@javax.annotation.Nonnull String id) {
+    this.id = id;
+    return this;
+  }
+
+  /**
+   * The ID of this approval request
+   * @return id
+   */
+  @javax.annotation.Nonnull
+  public String getId() {
+    return id;
+  }
+
+  public void setId(@javax.annotation.Nonnull String id) {
+    this.id = id;
+  }
+
+
+  public ExpandableApprovalRequestResponse version(@javax.annotation.Nonnull Integer version) {
+    this.version = version;
+    return this;
+  }
+
+  /**
+   * Version of the approval request
+   * @return version
+   */
+  @javax.annotation.Nonnull
+  public Integer getVersion() {
+    return version;
+  }
+
+  public void setVersion(@javax.annotation.Nonnull Integer version) {
+    this.version = version;
+  }
+
+
+  public ExpandableApprovalRequestResponse creationDate(@javax.annotation.Nonnull Long creationDate) {
+    this.creationDate = creationDate;
+    return this;
+  }
+
+  /**
+   * Get creationDate
+   * @return creationDate
+   */
+  @javax.annotation.Nonnull
+  public Long getCreationDate() {
+    return creationDate;
+  }
+
+  public void setCreationDate(@javax.annotation.Nonnull Long creationDate) {
+    this.creationDate = creationDate;
+  }
+
+
+  public ExpandableApprovalRequestResponse serviceKind(@javax.annotation.Nonnull String serviceKind) {
+    this.serviceKind = serviceKind;
+    return this;
+  }
+
+  /**
+   * Get serviceKind
+   * @return serviceKind
+   */
+  @javax.annotation.Nonnull
+  public String getServiceKind() {
+    return serviceKind;
+  }
+
+  public void setServiceKind(@javax.annotation.Nonnull String serviceKind) {
+    this.serviceKind = serviceKind;
+  }
+
+
+  public ExpandableApprovalRequestResponse requestorId(@javax.annotation.Nullable String requestorId) {
+    this.requestorId = requestorId;
+    return this;
+  }
+
+  /**
+   * The ID of the member who requested the approval
+   * @return requestorId
+   */
+  @javax.annotation.Nullable
+  public String getRequestorId() {
+    return requestorId;
+  }
+
+  public void setRequestorId(@javax.annotation.Nullable String requestorId) {
+    this.requestorId = requestorId;
+  }
+
+
+  public ExpandableApprovalRequestResponse description(@javax.annotation.Nullable String description) {
+    this.description = description;
+    return this;
+  }
+
+  /**
+   * A human-friendly name for the approval request
+   * @return description
+   */
+  @javax.annotation.Nullable
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(@javax.annotation.Nullable String description) {
+    this.description = description;
+  }
+
+
+  public ExpandableApprovalRequestResponse reviewStatus(@javax.annotation.Nonnull ReviewStatusEnum reviewStatus) {
+    this.reviewStatus = reviewStatus;
+    return this;
+  }
+
+  /**
+   * Current status of the review of this approval request
+   * @return reviewStatus
+   */
+  @javax.annotation.Nonnull
+  public ReviewStatusEnum getReviewStatus() {
+    return reviewStatus;
+  }
+
+  public void setReviewStatus(@javax.annotation.Nonnull ReviewStatusEnum reviewStatus) {
+    this.reviewStatus = reviewStatus;
+  }
+
+
+  public ExpandableApprovalRequestResponse allReviews(@javax.annotation.Nonnull List<ReviewResponse> allReviews) {
+    this.allReviews = allReviews;
+    return this;
+  }
+
+  public ExpandableApprovalRequestResponse addAllReviewsItem(ReviewResponse allReviewsItem) {
+    if (this.allReviews == null) {
+      this.allReviews = new ArrayList<>();
+    }
+    this.allReviews.add(allReviewsItem);
+    return this;
+  }
+
+  /**
+   * An array of individual reviews of this approval request
+   * @return allReviews
+   */
+  @javax.annotation.Nonnull
+  public List<ReviewResponse> getAllReviews() {
+    return allReviews;
+  }
+
+  public void setAllReviews(@javax.annotation.Nonnull List<ReviewResponse> allReviews) {
+    this.allReviews = allReviews;
+  }
+
+
+  public ExpandableApprovalRequestResponse notifyMemberIds(@javax.annotation.Nonnull List<String> notifyMemberIds) {
+    this.notifyMemberIds = notifyMemberIds;
+    return this;
+  }
+
+  public ExpandableApprovalRequestResponse addNotifyMemberIdsItem(String notifyMemberIdsItem) {
+    if (this.notifyMemberIds == null) {
+      this.notifyMemberIds = new ArrayList<>();
+    }
+    this.notifyMemberIds.add(notifyMemberIdsItem);
+    return this;
+  }
+
+  /**
+   * An array of member IDs. These members are notified to review the approval request.
+   * @return notifyMemberIds
+   */
+  @javax.annotation.Nonnull
+  public List<String> getNotifyMemberIds() {
+    return notifyMemberIds;
+  }
+
+  public void setNotifyMemberIds(@javax.annotation.Nonnull List<String> notifyMemberIds) {
+    this.notifyMemberIds = notifyMemberIds;
+  }
+
+
+  public ExpandableApprovalRequestResponse appliedDate(@javax.annotation.Nullable Long appliedDate) {
+    this.appliedDate = appliedDate;
+    return this;
+  }
+
+  /**
+   * Get appliedDate
+   * @return appliedDate
+   */
+  @javax.annotation.Nullable
+  public Long getAppliedDate() {
+    return appliedDate;
+  }
+
+  public void setAppliedDate(@javax.annotation.Nullable Long appliedDate) {
+    this.appliedDate = appliedDate;
+  }
+
+
+  public ExpandableApprovalRequestResponse appliedByMemberId(@javax.annotation.Nullable String appliedByMemberId) {
+    this.appliedByMemberId = appliedByMemberId;
+    return this;
+  }
+
+  /**
+   * The member ID of the member who applied the approval request
+   * @return appliedByMemberId
+   */
+  @javax.annotation.Nullable
+  public String getAppliedByMemberId() {
+    return appliedByMemberId;
+  }
+
+  public void setAppliedByMemberId(@javax.annotation.Nullable String appliedByMemberId) {
+    this.appliedByMemberId = appliedByMemberId;
+  }
+
+
+  public ExpandableApprovalRequestResponse appliedByServiceTokenId(@javax.annotation.Nullable String appliedByServiceTokenId) {
+    this.appliedByServiceTokenId = appliedByServiceTokenId;
+    return this;
+  }
+
+  /**
+   * The service token ID of the service token which applied the approval request
+   * @return appliedByServiceTokenId
+   */
+  @javax.annotation.Nullable
+  public String getAppliedByServiceTokenId() {
+    return appliedByServiceTokenId;
+  }
+
+  public void setAppliedByServiceTokenId(@javax.annotation.Nullable String appliedByServiceTokenId) {
+    this.appliedByServiceTokenId = appliedByServiceTokenId;
+  }
+
+
+  public ExpandableApprovalRequestResponse status(@javax.annotation.Nonnull StatusEnum status) {
+    this.status = status;
+    return this;
+  }
+
+  /**
+   * Current status of the approval request
+   * @return status
+   */
+  @javax.annotation.Nonnull
+  public StatusEnum getStatus() {
+    return status;
+  }
+
+  public void setStatus(@javax.annotation.Nonnull StatusEnum status) {
+    this.status = status;
+  }
+
+
+  public ExpandableApprovalRequestResponse instructions(@javax.annotation.Nonnull List<Map<String, Object>> instructions) {
+    this.instructions = instructions;
+    return this;
+  }
+
+  public ExpandableApprovalRequestResponse addInstructionsItem(Map<String, Object> instructionsItem) {
+    if (this.instructions == null) {
+      this.instructions = new ArrayList<>();
+    }
+    this.instructions.add(instructionsItem);
+    return this;
+  }
+
+  /**
+   * Get instructions
+   * @return instructions
+   */
+  @javax.annotation.Nonnull
+  public List<Map<String, Object>> getInstructions() {
+    return instructions;
+  }
+
+  public void setInstructions(@javax.annotation.Nonnull List<Map<String, Object>> instructions) {
+    this.instructions = instructions;
+  }
+
+
+  public ExpandableApprovalRequestResponse conflicts(@javax.annotation.Nonnull List<Conflict> conflicts) {
+    this.conflicts = conflicts;
+    return this;
+  }
+
+  public ExpandableApprovalRequestResponse addConflictsItem(Conflict conflictsItem) {
+    if (this.conflicts == null) {
+      this.conflicts = new ArrayList<>();
+    }
+    this.conflicts.add(conflictsItem);
+    return this;
+  }
+
+  /**
+   * Details on any conflicting approval requests
+   * @return conflicts
+   */
+  @javax.annotation.Nonnull
+  public List<Conflict> getConflicts() {
+    return conflicts;
+  }
+
+  public void setConflicts(@javax.annotation.Nonnull List<Conflict> conflicts) {
+    this.conflicts = conflicts;
+  }
+
+
+  public ExpandableApprovalRequestResponse links(@javax.annotation.Nonnull Map<String, Object> links) {
+    this.links = links;
+    return this;
+  }
+
+  public ExpandableApprovalRequestResponse putLinksItem(String key, Object linksItem) {
+    if (this.links == null) {
+      this.links = new HashMap<>();
+    }
+    this.links.put(key, linksItem);
+    return this;
+  }
+
+  /**
+   * The location and content type of related resources
+   * @return links
+   */
+  @javax.annotation.Nonnull
+  public Map<String, Object> getLinks() {
+    return links;
+  }
+
+  public void setLinks(@javax.annotation.Nonnull Map<String, Object> links) {
+    this.links = links;
+  }
+
+
+  public ExpandableApprovalRequestResponse executionDate(@javax.annotation.Nullable Long executionDate) {
+    this.executionDate = executionDate;
+    return this;
+  }
+
+  /**
+   * Get executionDate
+   * @return executionDate
+   */
+  @javax.annotation.Nullable
+  public Long getExecutionDate() {
+    return executionDate;
+  }
+
+  public void setExecutionDate(@javax.annotation.Nullable Long executionDate) {
+    this.executionDate = executionDate;
+  }
+
+
+  public ExpandableApprovalRequestResponse operatingOnId(@javax.annotation.Nullable String operatingOnId) {
+    this.operatingOnId = operatingOnId;
+    return this;
+  }
+
+  /**
+   * ID of scheduled change to edit or delete
+   * @return operatingOnId
+   */
+  @javax.annotation.Nullable
+  public String getOperatingOnId() {
+    return operatingOnId;
+  }
+
+  public void setOperatingOnId(@javax.annotation.Nullable String operatingOnId) {
+    this.operatingOnId = operatingOnId;
+  }
+
+
+  public ExpandableApprovalRequestResponse integrationMetadata(@javax.annotation.Nullable IntegrationMetadata integrationMetadata) {
+    this.integrationMetadata = integrationMetadata;
+    return this;
+  }
+
+  /**
+   * Get integrationMetadata
+   * @return integrationMetadata
+   */
+  @javax.annotation.Nullable
+  public IntegrationMetadata getIntegrationMetadata() {
+    return integrationMetadata;
+  }
+
+  public void setIntegrationMetadata(@javax.annotation.Nullable IntegrationMetadata integrationMetadata) {
+    this.integrationMetadata = integrationMetadata;
+  }
+
+
+  public ExpandableApprovalRequestResponse source(@javax.annotation.Nullable CopiedFromEnv source) {
+    this.source = source;
+    return this;
+  }
+
+  /**
+   * Get source
+   * @return source
+   */
+  @javax.annotation.Nullable
+  public CopiedFromEnv getSource() {
+    return source;
+  }
+
+  public void setSource(@javax.annotation.Nullable CopiedFromEnv source) {
+    this.source = source;
+  }
+
+
+  public ExpandableApprovalRequestResponse customWorkflowMetadata(@javax.annotation.Nullable CustomWorkflowMeta customWorkflowMetadata) {
+    this.customWorkflowMetadata = customWorkflowMetadata;
+    return this;
+  }
+
+  /**
+   * Get customWorkflowMetadata
+   * @return customWorkflowMetadata
+   */
+  @javax.annotation.Nullable
+  public CustomWorkflowMeta getCustomWorkflowMetadata() {
+    return customWorkflowMetadata;
+  }
+
+  public void setCustomWorkflowMetadata(@javax.annotation.Nullable CustomWorkflowMeta customWorkflowMetadata) {
+    this.customWorkflowMetadata = customWorkflowMetadata;
+  }
+
+
+  public ExpandableApprovalRequestResponse resourceId(@javax.annotation.Nullable String resourceId) {
+    this.resourceId = resourceId;
+    return this;
+  }
+
+  /**
+   * String representation of a resource
+   * @return resourceId
+   */
+  @javax.annotation.Nullable
+  public String getResourceId() {
+    return resourceId;
+  }
+
+  public void setResourceId(@javax.annotation.Nullable String resourceId) {
+    this.resourceId = resourceId;
+  }
+
+
+  public ExpandableApprovalRequestResponse approvalSettings(@javax.annotation.Nullable ApprovalSettings approvalSettings) {
+    this.approvalSettings = approvalSettings;
+    return this;
+  }
+
+  /**
+   * Get approvalSettings
+   * @return approvalSettings
+   */
+  @javax.annotation.Nullable
+  public ApprovalSettings getApprovalSettings() {
+    return approvalSettings;
+  }
+
+  public void setApprovalSettings(@javax.annotation.Nullable ApprovalSettings approvalSettings) {
+    this.approvalSettings = approvalSettings;
+  }
+
+
+  public ExpandableApprovalRequestResponse project(@javax.annotation.Nullable Project project) {
+    this.project = project;
+    return this;
+  }
+
+  /**
+   * Get project
+   * @return project
+   */
+  @javax.annotation.Nullable
+  public Project getProject() {
+    return project;
+  }
+
+  public void setProject(@javax.annotation.Nullable Project project) {
+    this.project = project;
+  }
+
+
+  public ExpandableApprovalRequestResponse environments(@javax.annotation.Nullable List<Environment> environments) {
+    this.environments = environments;
+    return this;
+  }
+
+  public ExpandableApprovalRequestResponse addEnvironmentsItem(Environment environmentsItem) {
+    if (this.environments == null) {
+      this.environments = new ArrayList<>();
+    }
+    this.environments.add(environmentsItem);
+    return this;
+  }
+
+  /**
+   * List of environments the approval impacts
+   * @return environments
+   */
+  @javax.annotation.Nullable
+  public List<Environment> getEnvironments() {
+    return environments;
+  }
+
+  public void setEnvironments(@javax.annotation.Nullable List<Environment> environments) {
+    this.environments = environments;
+  }
+
+
+  public ExpandableApprovalRequestResponse flag(@javax.annotation.Nullable ExpandedFlagRep flag) {
+    this.flag = flag;
+    return this;
+  }
+
+  /**
+   * Get flag
+   * @return flag
+   */
+  @javax.annotation.Nullable
+  public ExpandedFlagRep getFlag() {
+    return flag;
+  }
+
+  public void setFlag(@javax.annotation.Nullable ExpandedFlagRep flag) {
+    this.flag = flag;
+  }
+
+
+  public ExpandableApprovalRequestResponse resource(@javax.annotation.Nullable ExpandedResourceRep resource) {
+    this.resource = resource;
+    return this;
+  }
+
+  /**
+   * Get resource
+   * @return resource
+   */
+  @javax.annotation.Nullable
+  public ExpandedResourceRep getResource() {
+    return resource;
+  }
+
+  public void setResource(@javax.annotation.Nullable ExpandedResourceRep resource) {
+    this.resource = resource;
+  }
+
+
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    ExpandableApprovalRequestResponse expandableApprovalRequestResponse = (ExpandableApprovalRequestResponse) o;
+    return Objects.equals(this.id, expandableApprovalRequestResponse.id) &&
+        Objects.equals(this.version, expandableApprovalRequestResponse.version) &&
+        Objects.equals(this.creationDate, expandableApprovalRequestResponse.creationDate) &&
+        Objects.equals(this.serviceKind, expandableApprovalRequestResponse.serviceKind) &&
+        Objects.equals(this.requestorId, expandableApprovalRequestResponse.requestorId) &&
+        Objects.equals(this.description, expandableApprovalRequestResponse.description) &&
+        Objects.equals(this.reviewStatus, expandableApprovalRequestResponse.reviewStatus) &&
+        Objects.equals(this.allReviews, expandableApprovalRequestResponse.allReviews) &&
+        Objects.equals(this.notifyMemberIds, expandableApprovalRequestResponse.notifyMemberIds) &&
+        Objects.equals(this.appliedDate, expandableApprovalRequestResponse.appliedDate) &&
+        Objects.equals(this.appliedByMemberId, expandableApprovalRequestResponse.appliedByMemberId) &&
+        Objects.equals(this.appliedByServiceTokenId, expandableApprovalRequestResponse.appliedByServiceTokenId) &&
+        Objects.equals(this.status, expandableApprovalRequestResponse.status) &&
+        Objects.equals(this.instructions, expandableApprovalRequestResponse.instructions) &&
+        Objects.equals(this.conflicts, expandableApprovalRequestResponse.conflicts) &&
+        Objects.equals(this.links, expandableApprovalRequestResponse.links) &&
+        Objects.equals(this.executionDate, expandableApprovalRequestResponse.executionDate) &&
+        Objects.equals(this.operatingOnId, expandableApprovalRequestResponse.operatingOnId) &&
+        Objects.equals(this.integrationMetadata, expandableApprovalRequestResponse.integrationMetadata) &&
+        Objects.equals(this.source, expandableApprovalRequestResponse.source) &&
+        Objects.equals(this.customWorkflowMetadata, expandableApprovalRequestResponse.customWorkflowMetadata) &&
+        Objects.equals(this.resourceId, expandableApprovalRequestResponse.resourceId) &&
+        Objects.equals(this.approvalSettings, expandableApprovalRequestResponse.approvalSettings) &&
+        Objects.equals(this.project, expandableApprovalRequestResponse.project) &&
+        Objects.equals(this.environments, expandableApprovalRequestResponse.environments) &&
+        Objects.equals(this.flag, expandableApprovalRequestResponse.flag) &&
+        Objects.equals(this.resource, expandableApprovalRequestResponse.resource);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(id, version, creationDate, serviceKind, requestorId, description, reviewStatus, allReviews, notifyMemberIds, appliedDate, appliedByMemberId, appliedByServiceTokenId, status, instructions, conflicts, links, executionDate, operatingOnId, integrationMetadata, source, customWorkflowMetadata, resourceId, approvalSettings, project, environments, flag, resource);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class ExpandableApprovalRequestResponse {\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    version: ").append(toIndentedString(version)).append("\n");
+    sb.append("    creationDate: ").append(toIndentedString(creationDate)).append("\n");
+    sb.append("    serviceKind: ").append(toIndentedString(serviceKind)).append("\n");
+    sb.append("    requestorId: ").append(toIndentedString(requestorId)).append("\n");
+    sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    reviewStatus: ").append(toIndentedString(reviewStatus)).append("\n");
+    sb.append("    allReviews: ").append(toIndentedString(allReviews)).append("\n");
+    sb.append("    notifyMemberIds: ").append(toIndentedString(notifyMemberIds)).append("\n");
+    sb.append("    appliedDate: ").append(toIndentedString(appliedDate)).append("\n");
+    sb.append("    appliedByMemberId: ").append(toIndentedString(appliedByMemberId)).append("\n");
+    sb.append("    appliedByServiceTokenId: ").append(toIndentedString(appliedByServiceTokenId)).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    instructions: ").append(toIndentedString(instructions)).append("\n");
+    sb.append("    conflicts: ").append(toIndentedString(conflicts)).append("\n");
+    sb.append("    links: ").append(toIndentedString(links)).append("\n");
+    sb.append("    executionDate: ").append(toIndentedString(executionDate)).append("\n");
+    sb.append("    operatingOnId: ").append(toIndentedString(operatingOnId)).append("\n");
+    sb.append("    integrationMetadata: ").append(toIndentedString(integrationMetadata)).append("\n");
+    sb.append("    source: ").append(toIndentedString(source)).append("\n");
+    sb.append("    customWorkflowMetadata: ").append(toIndentedString(customWorkflowMetadata)).append("\n");
+    sb.append("    resourceId: ").append(toIndentedString(resourceId)).append("\n");
+    sb.append("    approvalSettings: ").append(toIndentedString(approvalSettings)).append("\n");
+    sb.append("    project: ").append(toIndentedString(project)).append("\n");
+    sb.append("    environments: ").append(toIndentedString(environments)).append("\n");
+    sb.append("    flag: ").append(toIndentedString(flag)).append("\n");
+    sb.append("    resource: ").append(toIndentedString(resource)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("_id");
+    openapiFields.add("_version");
+    openapiFields.add("creationDate");
+    openapiFields.add("serviceKind");
+    openapiFields.add("requestorId");
+    openapiFields.add("description");
+    openapiFields.add("reviewStatus");
+    openapiFields.add("allReviews");
+    openapiFields.add("notifyMemberIds");
+    openapiFields.add("appliedDate");
+    openapiFields.add("appliedByMemberId");
+    openapiFields.add("appliedByServiceTokenId");
+    openapiFields.add("status");
+    openapiFields.add("instructions");
+    openapiFields.add("conflicts");
+    openapiFields.add("_links");
+    openapiFields.add("executionDate");
+    openapiFields.add("operatingOnId");
+    openapiFields.add("integrationMetadata");
+    openapiFields.add("source");
+    openapiFields.add("customWorkflowMetadata");
+    openapiFields.add("resourceId");
+    openapiFields.add("approvalSettings");
+    openapiFields.add("project");
+    openapiFields.add("environments");
+    openapiFields.add("flag");
+    openapiFields.add("resource");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("_id");
+    openapiRequiredFields.add("_version");
+    openapiRequiredFields.add("creationDate");
+    openapiRequiredFields.add("serviceKind");
+    openapiRequiredFields.add("reviewStatus");
+    openapiRequiredFields.add("allReviews");
+    openapiRequiredFields.add("notifyMemberIds");
+    openapiRequiredFields.add("status");
+    openapiRequiredFields.add("instructions");
+    openapiRequiredFields.add("conflicts");
+    openapiRequiredFields.add("_links");
+  }
+
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ExpandableApprovalRequestResponse
+   */
+  public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      if (jsonElement == null) {
+        if (!ExpandableApprovalRequestResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in ExpandableApprovalRequestResponse is not found in the empty JSON string", ExpandableApprovalRequestResponse.openapiRequiredFields.toString()));
+        }
+      }
+
+      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Map.Entry<String, JsonElement> entry : entries) {
+        if (!ExpandableApprovalRequestResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ExpandableApprovalRequestResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : ExpandableApprovalRequestResponse.openapiRequiredFields) {
+        if (jsonElement.getAsJsonObject().get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
+        }
+      }
+        JsonObject jsonObj = jsonElement.getAsJsonObject();
+      if (!jsonObj.get("_id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `_id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("_id").toString()));
+      }
+      if (!jsonObj.get("serviceKind").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `serviceKind` to be a primitive type in the JSON string but got `%s`", jsonObj.get("serviceKind").toString()));
+      }
+      if ((jsonObj.get("requestorId") != null && !jsonObj.get("requestorId").isJsonNull()) && !jsonObj.get("requestorId").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `requestorId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("requestorId").toString()));
+      }
+      if ((jsonObj.get("description") != null && !jsonObj.get("description").isJsonNull()) && !jsonObj.get("description").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `description` to be a primitive type in the JSON string but got `%s`", jsonObj.get("description").toString()));
+      }
+      if (!jsonObj.get("reviewStatus").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `reviewStatus` to be a primitive type in the JSON string but got `%s`", jsonObj.get("reviewStatus").toString()));
+      }
+      // validate the required field `reviewStatus`
+      ReviewStatusEnum.validateJsonElement(jsonObj.get("reviewStatus"));
+      // ensure the json data is an array
+      if (!jsonObj.get("allReviews").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `allReviews` to be an array in the JSON string but got `%s`", jsonObj.get("allReviews").toString()));
+      }
+
+      JsonArray jsonArrayallReviews = jsonObj.getAsJsonArray("allReviews");
+      // validate the required field `allReviews` (array)
+      for (int i = 0; i < jsonArrayallReviews.size(); i++) {
+        ReviewResponse.validateJsonElement(jsonArrayallReviews.get(i));
+      };
+      // ensure the required json array is present
+      if (jsonObj.get("notifyMemberIds") == null) {
+        throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
+      } else if (!jsonObj.get("notifyMemberIds").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `notifyMemberIds` to be an array in the JSON string but got `%s`", jsonObj.get("notifyMemberIds").toString()));
+      }
+      if ((jsonObj.get("appliedByMemberId") != null && !jsonObj.get("appliedByMemberId").isJsonNull()) && !jsonObj.get("appliedByMemberId").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `appliedByMemberId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("appliedByMemberId").toString()));
+      }
+      if ((jsonObj.get("appliedByServiceTokenId") != null && !jsonObj.get("appliedByServiceTokenId").isJsonNull()) && !jsonObj.get("appliedByServiceTokenId").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `appliedByServiceTokenId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("appliedByServiceTokenId").toString()));
+      }
+      if (!jsonObj.get("status").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `status` to be a primitive type in the JSON string but got `%s`", jsonObj.get("status").toString()));
+      }
+      // validate the required field `status`
+      StatusEnum.validateJsonElement(jsonObj.get("status"));
+      // ensure the required json array is present
+      if (jsonObj.get("instructions") == null) {
+        throw new IllegalArgumentException("Expected the field `linkedContent` to be an array in the JSON string but got `null`");
+      } else if (!jsonObj.get("instructions").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `instructions` to be an array in the JSON string but got `%s`", jsonObj.get("instructions").toString()));
+      }
+      // ensure the json data is an array
+      if (!jsonObj.get("conflicts").isJsonArray()) {
+        throw new IllegalArgumentException(String.format("Expected the field `conflicts` to be an array in the JSON string but got `%s`", jsonObj.get("conflicts").toString()));
+      }
+
+      JsonArray jsonArrayconflicts = jsonObj.getAsJsonArray("conflicts");
+      // validate the required field `conflicts` (array)
+      for (int i = 0; i < jsonArrayconflicts.size(); i++) {
+        Conflict.validateJsonElement(jsonArrayconflicts.get(i));
+      };
+      if ((jsonObj.get("operatingOnId") != null && !jsonObj.get("operatingOnId").isJsonNull()) && !jsonObj.get("operatingOnId").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `operatingOnId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("operatingOnId").toString()));
+      }
+      // validate the optional field `integrationMetadata`
+      if (jsonObj.get("integrationMetadata") != null && !jsonObj.get("integrationMetadata").isJsonNull()) {
+        IntegrationMetadata.validateJsonElement(jsonObj.get("integrationMetadata"));
+      }
+      // validate the optional field `source`
+      if (jsonObj.get("source") != null && !jsonObj.get("source").isJsonNull()) {
+        CopiedFromEnv.validateJsonElement(jsonObj.get("source"));
+      }
+      // validate the optional field `customWorkflowMetadata`
+      if (jsonObj.get("customWorkflowMetadata") != null && !jsonObj.get("customWorkflowMetadata").isJsonNull()) {
+        CustomWorkflowMeta.validateJsonElement(jsonObj.get("customWorkflowMetadata"));
+      }
+      if ((jsonObj.get("resourceId") != null && !jsonObj.get("resourceId").isJsonNull()) && !jsonObj.get("resourceId").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `resourceId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("resourceId").toString()));
+      }
+      // validate the optional field `approvalSettings`
+      if (jsonObj.get("approvalSettings") != null && !jsonObj.get("approvalSettings").isJsonNull()) {
+        ApprovalSettings.validateJsonElement(jsonObj.get("approvalSettings"));
+      }
+      // validate the optional field `project`
+      if (jsonObj.get("project") != null && !jsonObj.get("project").isJsonNull()) {
+        Project.validateJsonElement(jsonObj.get("project"));
+      }
+      if (jsonObj.get("environments") != null && !jsonObj.get("environments").isJsonNull()) {
+        JsonArray jsonArrayenvironments = jsonObj.getAsJsonArray("environments");
+        if (jsonArrayenvironments != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("environments").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `environments` to be an array in the JSON string but got `%s`", jsonObj.get("environments").toString()));
+          }
+
+          // validate the optional field `environments` (array)
+          for (int i = 0; i < jsonArrayenvironments.size(); i++) {
+            Environment.validateJsonElement(jsonArrayenvironments.get(i));
+          };
+        }
+      }
+      // validate the optional field `flag`
+      if (jsonObj.get("flag") != null && !jsonObj.get("flag").isJsonNull()) {
+        ExpandedFlagRep.validateJsonElement(jsonObj.get("flag"));
+      }
+      // validate the optional field `resource`
+      if (jsonObj.get("resource") != null && !jsonObj.get("resource").isJsonNull()) {
+        ExpandedResourceRep.validateJsonElement(jsonObj.get("resource"));
+      }
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!ExpandableApprovalRequestResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ExpandableApprovalRequestResponse' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<ExpandableApprovalRequestResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ExpandableApprovalRequestResponse.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<ExpandableApprovalRequestResponse>() {
+           @Override
+           public void write(JsonWriter out, ExpandableApprovalRequestResponse value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public ExpandableApprovalRequestResponse read(JsonReader in) throws IOException {
+             JsonElement jsonElement = elementAdapter.read(in);
+             validateJsonElement(jsonElement);
+             return thisAdapter.fromJsonTree(jsonElement);
+           }
+
+       }.nullSafe();
+    }
+  }
+
+  /**
+   * Create an instance of ExpandableApprovalRequestResponse given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ExpandableApprovalRequestResponse
+   * @throws IOException if the JSON string is invalid with respect to ExpandableApprovalRequestResponse
+   */
+  public static ExpandableApprovalRequestResponse fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ExpandableApprovalRequestResponse.class);
+  }
+
+  /**
+   * Convert an instance of ExpandableApprovalRequestResponse to an JSON string
+   *
+   * @return JSON string
+   */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
+}
+

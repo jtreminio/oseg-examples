@@ -1,0 +1,120 @@
+{
+  "getAIConfigMetrics": {
+    "example": {
+      "query": {
+        "from": 123,
+        "to": 456
+      }
+    }
+  },
+  "getAIConfigMetricsByVariation": {
+    "example": {
+      "query": {
+        "from": 123,
+        "to": 456
+      }
+    }
+  },
+  "patchExpiringFlagsForUser": {
+    "example": {
+      "path": {
+        "projectKey": "the-project-key",
+        "userKey": "the-user-key",
+        "environmentKey": "the-environment-key"
+      },
+      "body": {
+        "comment": "optional comment",
+        "instructions": [
+          {
+            "kind": "addExpireUserTargetDate",
+            "flagKey": "sample-flag-key",
+            "variationId": "ce12d345-a1b2-4fb5-a123-ab123d4d5f5d",
+            "value": 16534692,
+            "version": 1
+          }
+        ]
+      }
+    }
+  },
+  "patchExpiringUserTargetsForSegment": {
+    "example": {
+      "path": {
+        "projectKey": "the-project-key",
+        "environmentKey": "the-environment-key",
+        "segmentKey": "the-segment-key"
+      },
+      "body": {
+        "comment": "optional comment",
+        "instructions": [
+          {
+            "kind": "addExpireUserTargetDate",
+            "userKey": "sample-user-key",
+            "targetType": "included",
+            "value": 16534692,
+            "version": 0
+          }
+        ]
+      }
+    }
+  },
+  "postReleasePipeline": {
+    "example": {
+      "path": {
+        "projectKey": "the-project-key"
+      },
+      "body": {
+        "key": "standard-pipeline",
+        "name": "Standard Pipeline",
+        "description": "Standard pipeline to roll out to production",
+        "isProjectDefault": false,
+        "isLegacy": false,
+        "tags": [
+          "example-tag"
+        ],
+        "phases": [
+          {
+            "name": "Phase 1 - Testing",
+            "audiences": [
+              {
+                "environmentKey": "the-environment-key",
+                "name": "Some name",
+                "segmentKeys": [],
+                "configuration": {
+                  "releaseStrategy": "the-release-strategy",
+                  "requireApproval": true,
+                  "notifyMemberIds":  [
+                    "1234a56b7c89d012345e678f"
+                  ],
+                  "notifyTeamKeys": [
+                    "example-reviewer-team"
+                  ],
+                  "releaseGuardianConfiguration": {
+                    "monitoringWindowMilliseconds": 60000,
+                    "rolloutWeight": 50,
+                    "rollbackOnRegression": true,
+                    "randomizationUnit": "user"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "putExperimentationSettings": {
+    "example": {
+      "path": {
+        "projectKey": "the-project-key"
+      },
+      "body": {
+        "randomizationUnits": [
+          {
+            "randomizationUnit": "user",
+            "standardRandomizationUnit": "organization"
+          }
+        ]
+      }
+    }
+  }
+}

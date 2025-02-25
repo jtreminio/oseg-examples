@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text.Json;
+
+using Org.LaunchDarklyTools.Api;
+using Org.LaunchDarklyTools.Client;
+using Org.LaunchDarklyTools.Model;
+
+namespace OSEG.LaunchDarklyExamples;
+
+public class GetMemberExample
+{
+    public static void Run()
+    {
+        var config = new Configuration();
+        config.ApiKey = new Dictionary<string, string> {["ApiKey"] = "YOUR_API_KEY"};
+
+        try
+        {
+            var response = new AccountMembersApi(config).GetMember(
+                id: null,
+                expand: null
+            );
+
+            Console.WriteLine(response);
+        }
+        catch (ApiException e)
+        {
+            Console.WriteLine("Exception when calling AccountMembers#GetMember: " + e.Message);
+            Console.WriteLine("Status Code: " + e.ErrorCode);
+            Console.WriteLine(e.StackTrace);
+        }
+    }
+}

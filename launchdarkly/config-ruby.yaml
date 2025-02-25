@@ -1,0 +1,12 @@
+generatorName: ruby
+additionalProperties:
+  gemName: launchdarkly_client
+  moduleName: LaunchDarklyClient
+  oseg.security.ApiKey.api_key: YOUR_API_KEY
+  oseg.printApiCallProperty: true
+globalProperties:
+    apiTests: false
+    modelTests: false
+    apiDocs: false
+    modelDocs: false
+

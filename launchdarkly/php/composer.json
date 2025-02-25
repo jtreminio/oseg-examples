@@ -1,0 +1,20 @@
+{
+    "name": "oseg/launchdarkly_examples",
+    "autoload": {
+        "psr-4": {
+            "OSEG\\LaunchDarklyExamples\\": ""
+        }
+    },
+    "require": {
+        "php": "^8.1",
+        "launchdarkly/client": "*",
+        "ext-json": "*"
+    },
+    "repositories": [
+      {
+        "type": "artifact",
+        "url": "./artifacts"
+      }
+    ],
+  "minimum-stability": "dev"
+}

@@ -1,0 +1,39 @@
+<?php
+
+namespace OSEG\LaunchDarklyExamples;
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use SplFileObject;
+use LaunchDarkly;
+
+$config = LaunchDarkly\Client\Configuration::getDefaultConfiguration();
+$config->setApiKey("ApiKey", "YOUR_API_KEY");
+
+$metric_post = (new LaunchDarkly\Client\Model\MetricPost())
+    ->setKey("metric-key-123abc")
+    ->setKind(LaunchDarkly\Client\Model\MetricPost::KIND_CUSTOM)
+    ->setName(null)
+    ->setDescription(null)
+    ->setSelector(null)
+    ->setIsActive(true)
+    ->setIsNumeric(false)
+    ->setUnit(null)
+    ->setEventKey("trackedClick")
+    ->setSuccessCriteria(null)
+    ->setUnitAggregationType(null)
+    ->setAnalysisType(null)
+    ->setPercentileValue(null)
+    ->setTags(null)
+    ->setRandomizationUnits(null);
+
+try {
+    $response = (new LaunchDarkly\Client\Api\MetricsApi(config: $config))->postMetric(
+        project_key: null,
+        metric_post: $metric_post,
+    );
+
+    print_r($response);
+} catch (LaunchDarkly\Client\ApiException $e) {
+    echo "Exception when calling Metrics#postMetric: {$e->getMessage()}";
+}

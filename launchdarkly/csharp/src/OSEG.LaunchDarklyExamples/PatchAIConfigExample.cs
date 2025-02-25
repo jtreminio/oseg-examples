@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text.Json;
+
+using Org.LaunchDarklyTools.Api;
+using Org.LaunchDarklyTools.Client;
+using Org.LaunchDarklyTools.Model;
+
+namespace OSEG.LaunchDarklyExamples;
+
+public class PatchAIConfigExample
+{
+    public static void Run()
+    {
+        var config = new Configuration();
+        config.ApiKey = new Dictionary<string, string> {["ApiKey"] = "YOUR_API_KEY"};
+
+        var aIConfigPatch = new AIConfigPatch(
+            description: "description",
+            name: "name",
+            tags: [
+                "tags",
+                "tags",
+            ]
+        );
+
+        try
+        {
+            var response = new AIConfigsBetaApi(config).PatchAIConfig(
+                lDAPIVersion: null,
+                projectKey: null,
+                configKey: null,
+                aIConfigPatch: aIConfigPatch
+            );
+
+            Console.WriteLine(response);
+        }
+        catch (ApiException e)
+        {
+            Console.WriteLine("Exception when calling AIConfigsBeta#PatchAIConfig: " + e.Message);
+            Console.WriteLine("Status Code: " + e.ErrorCode);
+            Console.WriteLine(e.StackTrace);
+        }
+    }
+}

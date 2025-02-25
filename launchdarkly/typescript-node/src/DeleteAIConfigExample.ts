@@ -1,0 +1,15 @@
+import * as fs from 'fs';
+import api from "launchdarkly_client"
+import models from "launchdarkly_client"
+
+const apiCaller = new api.AIConfigsBetaApi();
+apiCaller.setApiKey(api.AIConfigsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
+
+apiCaller.deleteAIConfig(
+  undefined, // lDAPIVersion
+  "default", // projectKey
+  undefined, // configKey
+).catch(error => {
+  console.log("Exception when calling AIConfigsBeta#deleteAIConfig:");
+  console.log(error.body);
+});

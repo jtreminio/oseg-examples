@@ -1,0 +1,12 @@
+generatorName: python
+additionalProperties:
+  packageName: launchdarkly_client
+  projectName: launchdarkly-client
+  oseg.propertyNamingConvention: camel_case
+  oseg.security.ApiKey.api_key: YOUR_API_KEY
+globalProperties:
+    apiTests: false
+    modelTests: false
+    apiDocs: false
+    modelDocs: false
+
