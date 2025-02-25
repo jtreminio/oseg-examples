@@ -1,0 +1,20 @@
+{
+    "name": "oseg/petstore_examples",
+    "autoload": {
+        "psr-4": {
+            "OSEG\\PetStoreExamples\\": ""
+        }
+    },
+    "require": {
+        "php": "^8.1",
+        "openapi/client": "*",
+        "ext-json": "*"
+    },
+    "repositories": [
+      {
+        "type": "artifact",
+        "url": "./artifacts"
+      }
+    ],
+  "minimum-stability": "dev"
+}
