@@ -19,5 +19,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling UserSettings#getUserFlagSettings: {$e->getMessage()}";
+    echo "Exception when calling UserSettingsApi#getUserFlagSettings: {$e->getMessage()}";
 }

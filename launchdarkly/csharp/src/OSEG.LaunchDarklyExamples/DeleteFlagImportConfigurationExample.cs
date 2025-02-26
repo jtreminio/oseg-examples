@@ -26,7 +26,7 @@ public class DeleteFlagImportConfigurationExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling FlagImportConfigurationsBeta#DeleteFlagImportConfiguration: " + e.Message);
+            Console.WriteLine("Exception when calling FlagImportConfigurationsBetaApi#DeleteFlagImportConfiguration: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

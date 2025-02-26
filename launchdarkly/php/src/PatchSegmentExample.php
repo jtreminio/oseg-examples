@@ -37,5 +37,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Segments#patchSegment: {$e->getMessage()}";
+    echo "Exception when calling SegmentsApi#patchSegment: {$e->getMessage()}";
 }

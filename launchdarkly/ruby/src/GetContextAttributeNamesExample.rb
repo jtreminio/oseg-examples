@@ -13,5 +13,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling Contexts#get_context_attribute_names: #{e}"
+    puts "Exception when calling ContextsApi#get_context_attribute_names: #{e}"
 end

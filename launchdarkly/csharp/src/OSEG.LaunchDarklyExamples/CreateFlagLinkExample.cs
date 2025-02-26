@@ -35,7 +35,7 @@ public class CreateFlagLinkExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling FlagLinksBeta#CreateFlagLink: " + e.Message);
+            Console.WriteLine("Exception when calling FlagLinksBetaApi#CreateFlagLink: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

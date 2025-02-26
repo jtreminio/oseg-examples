@@ -13,6 +13,6 @@ apiCaller.getFeatureFlagScheduledChange(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling ScheduledChanges#getFeatureFlagScheduledChange:");
+  console.log("Exception when calling ScheduledChangesApi#getFeatureFlagScheduledChange:");
   console.log(error.body);
 });

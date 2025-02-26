@@ -22,5 +22,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling AccountUsageBeta#getStreamUsageBySdkVersion: {$e->getMessage()}";
+    echo "Exception when calling AccountUsageBetaApi#getStreamUsageBySdkVersion: {$e->getMessage()}";
 }

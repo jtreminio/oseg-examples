@@ -35,7 +35,7 @@ public class PutContextFlagSettingExample
                 valuePut
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling ContextSettings#putContextFlagSetting");
+            System.err.println("Exception when calling ContextSettingsApi#putContextFlagSetting");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

@@ -17,4 +17,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling FlagLinksBeta#get_flag_links: %s\n" % e)
+        print("Exception when calling FlagLinksBetaApi#get_flag_links: %s\n" % e)

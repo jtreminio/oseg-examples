@@ -22,6 +22,6 @@ apiCaller.patchCustomRole(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling CustomRoles#patchCustomRole:");
+  console.log("Exception when calling CustomRolesApi#patchCustomRole:");
   console.log(error.body);
 });

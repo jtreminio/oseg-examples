@@ -27,7 +27,7 @@ public class ResetRelayAutoConfigExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling RelayProxyConfigurations#ResetRelayAutoConfig: " + e.Message);
+            Console.WriteLine("Exception when calling RelayProxyConfigurationsApi#ResetRelayAutoConfig: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

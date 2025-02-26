@@ -16,5 +16,5 @@ try {
         pipeline_key: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling ReleasePipelinesBeta#deleteReleasePipeline: {$e->getMessage()}";
+    echo "Exception when calling ReleasePipelinesBetaApi#deleteReleasePipeline: {$e->getMessage()}";
 }

@@ -15,4 +15,4 @@ with ApiClient(configuration) as api_client:
             metric_key=None,
         )
     except ApiException as e:
-        print("Exception when calling Metrics#delete_metric: %s\n" % e)
+        print("Exception when calling MetricsApi#delete_metric: %s\n" % e)

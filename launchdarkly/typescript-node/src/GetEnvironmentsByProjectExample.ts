@@ -14,6 +14,6 @@ apiCaller.getEnvironmentsByProject(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Environments#getEnvironmentsByProject:");
+  console.log("Exception when calling EnvironmentsApi#getEnvironmentsByProject:");
   console.log(error.body);
 });

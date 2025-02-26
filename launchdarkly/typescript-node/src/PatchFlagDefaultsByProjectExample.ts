@@ -19,6 +19,6 @@ apiCaller.patchFlagDefaultsByProject(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Projects#patchFlagDefaultsByProject:");
+  console.log("Exception when calling ProjectsApi#patchFlagDefaultsByProject:");
   console.log(error.body);
 });

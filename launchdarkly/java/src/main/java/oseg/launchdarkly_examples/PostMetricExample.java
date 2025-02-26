@@ -37,7 +37,7 @@ public class PostMetricExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling Metrics#postMetric");
+            System.err.println("Exception when calling MetricsApi#postMetric");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

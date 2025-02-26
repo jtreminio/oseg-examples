@@ -28,7 +28,7 @@ public class DeleteFeatureFlagExample
                 null // featureFlagKey
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling FeatureFlags#deleteFeatureFlag");
+            System.err.println("Exception when calling FeatureFlagsApi#deleteFeatureFlag");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

@@ -18,5 +18,5 @@ try {
         member_id: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling FollowFlags#putFlagFollower: {$e->getMessage()}";
+    echo "Exception when calling FollowFlagsApi#putFlagFollower: {$e->getMessage()}";
 }

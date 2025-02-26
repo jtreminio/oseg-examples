@@ -40,7 +40,7 @@ public class PostExtinctionExample
                 extinction
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling CodeReferences#postExtinction");
+            System.err.println("Exception when calling CodeReferencesApi#postExtinction");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

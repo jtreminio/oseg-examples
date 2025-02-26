@@ -10,5 +10,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling Tags#get_tags: #{e}"
+    puts "Exception when calling TagsApi#get_tags: #{e}"
 end

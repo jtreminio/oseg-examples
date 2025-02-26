@@ -22,5 +22,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling Environments#patch_environment: #{e}"
+    puts "Exception when calling EnvironmentsApi#patch_environment: #{e}"
 end

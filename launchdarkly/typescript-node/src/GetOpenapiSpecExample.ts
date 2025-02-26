@@ -6,6 +6,6 @@ const apiCaller = new api.OtherApi();
 apiCaller.setApiKey(api.OtherApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getOpenapiSpec().catch(error => {
-  console.log("Exception when calling Other#getOpenapiSpec:");
+  console.log("Exception when calling OtherApi#getOpenapiSpec:");
   console.log(error.body);
 });

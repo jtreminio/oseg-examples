@@ -33,5 +33,5 @@ begin
         post_deployment_event_input,
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling InsightsDeploymentsBeta#create_deployment_event: #{e}"
+    puts "Exception when calling InsightsDeploymentsBetaApi#create_deployment_event: #{e}"
 end

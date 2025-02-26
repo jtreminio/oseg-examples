@@ -10,6 +10,6 @@ apiCaller.deleteUser(
   undefined, // environmentKey
   undefined, // userKey
 ).catch(error => {
-  console.log("Exception when calling Users#deleteUser:");
+  console.log("Exception when calling UsersApi#deleteUser:");
   console.log(error.body);
 });

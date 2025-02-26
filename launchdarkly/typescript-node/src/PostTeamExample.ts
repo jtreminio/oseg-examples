@@ -23,6 +23,6 @@ apiCaller.postTeam(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Teams#postTeam:");
+  console.log("Exception when calling TeamsApi#postTeam:");
   console.log(error.body);
 });

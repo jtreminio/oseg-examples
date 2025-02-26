@@ -14,5 +14,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling ScheduledChanges#get_flag_config_scheduled_changes: #{e}"
+    puts "Exception when calling ScheduledChangesApi#get_flag_config_scheduled_changes: #{e}"
 end

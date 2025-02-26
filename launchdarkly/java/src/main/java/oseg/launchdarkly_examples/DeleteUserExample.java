@@ -29,7 +29,7 @@ public class DeleteUserExample
                 null // userKey
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling Users#deleteUser");
+            System.err.println("Exception when calling UsersApi#deleteUser");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

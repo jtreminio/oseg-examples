@@ -11,5 +11,5 @@ begin
         nil, # metric_group_key
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling MetricsBeta#delete_metric_group: #{e}"
+    puts "Exception when calling MetricsBetaApi#delete_metric_group: #{e}"
 end

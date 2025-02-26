@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.TeamsApiApiKeys.ApiKey, "YOUR_API_KEY");
 apiCaller.getTeams().then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Teams#getTeams:");
+  console.log("Exception when calling TeamsApi#getTeams:");
   console.log(error.body);
 });

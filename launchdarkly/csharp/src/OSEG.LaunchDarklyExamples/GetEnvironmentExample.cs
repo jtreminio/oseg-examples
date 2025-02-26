@@ -27,7 +27,7 @@ public class GetEnvironmentExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Environments#GetEnvironment: " + e.Message);
+            Console.WriteLine("Exception when calling EnvironmentsApi#GetEnvironment: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

@@ -32,4 +32,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling ScheduledChanges#post_flag_config_scheduled_changes: %s\n" % e)
+        print("Exception when calling ScheduledChangesApi#post_flag_config_scheduled_changes: %s\n" % e)

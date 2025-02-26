@@ -29,5 +29,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Segments#postSegment: {$e->getMessage()}";
+    echo "Exception when calling SegmentsApi#postSegment: {$e->getMessage()}";
 }

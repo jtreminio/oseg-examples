@@ -39,5 +39,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling ReleasesBeta#update_phase_status: #{e}"
+    puts "Exception when calling ReleasesBetaApi#update_phase_status: #{e}"
 end

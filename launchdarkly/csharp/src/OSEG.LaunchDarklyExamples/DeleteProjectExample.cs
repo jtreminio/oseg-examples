@@ -24,7 +24,7 @@ public class DeleteProjectExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Projects#DeleteProject: " + e.Message);
+            Console.WriteLine("Exception when calling ProjectsApi#DeleteProject: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

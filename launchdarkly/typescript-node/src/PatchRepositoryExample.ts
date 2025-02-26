@@ -19,6 +19,6 @@ apiCaller.patchRepository(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling CodeReferences#patchRepository:");
+  console.log("Exception when calling CodeReferencesApi#patchRepository:");
   console.log(error.body);
 });

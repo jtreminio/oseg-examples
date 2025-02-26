@@ -14,6 +14,6 @@ apiCaller.getContextAttributeValues(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Contexts#getContextAttributeValues:");
+  console.log("Exception when calling ContextsApi#getContextAttributeValues:");
   console.log(error.body);
 });

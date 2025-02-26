@@ -9,6 +9,6 @@ apiCaller.deleteRepositoryProject(
   undefined, // repositoryKey
   undefined, // projectKey
 ).catch(error => {
-  console.log("Exception when calling InsightsRepositoriesBeta#deleteRepositoryProject:");
+  console.log("Exception when calling InsightsRepositoriesBetaApi#deleteRepositoryProject:");
   console.log(error.body);
 });

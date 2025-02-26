@@ -20,5 +20,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Segments#getBigSegmentImport: {$e->getMessage()}";
+    echo "Exception when calling SegmentsApi#getBigSegmentImport: {$e->getMessage()}";
 }

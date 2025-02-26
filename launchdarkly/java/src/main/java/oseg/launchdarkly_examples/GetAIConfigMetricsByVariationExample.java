@@ -23,7 +23,7 @@ public class GetAIConfigMetricsByVariationExample
 
         try
         {
-            var response = new AIConfigsBetaApi(config).getAIConfigMetricsByVariation(
+            var response = new AiConfigsBetaApi(config).getAIConfigMetricsByVariation(
                 null, // lDAPIVersion
                 null, // projectKey
                 null, // configKey
@@ -34,7 +34,7 @@ public class GetAIConfigMetricsByVariationExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling AIConfigsBeta#getAIConfigMetricsByVariation");
+            System.err.println("Exception when calling AiConfigsBetaApi#getAIConfigMetricsByVariation");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

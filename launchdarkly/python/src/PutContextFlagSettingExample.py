@@ -23,4 +23,4 @@ with ApiClient(configuration) as api_client:
             value_put=value_put,
         )
     except ApiException as e:
-        print("Exception when calling ContextSettings#put_context_flag_setting: %s\n" % e)
+        print("Exception when calling ContextSettingsApi#put_context_flag_setting: %s\n" % e)

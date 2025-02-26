@@ -44,5 +44,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling WorkflowTemplates#create_workflow_template: #{e}"
+    puts "Exception when calling WorkflowTemplatesApi#create_workflow_template: #{e}"
 end

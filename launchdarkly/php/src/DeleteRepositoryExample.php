@@ -15,5 +15,5 @@ try {
         repo: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling CodeReferences#deleteRepository: {$e->getMessage()}";
+    echo "Exception when calling CodeReferencesApi#deleteRepository: {$e->getMessage()}";
 }

@@ -33,6 +33,6 @@ apiCaller.patchAIConfigVariation(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling AIConfigsBeta#patchAIConfigVariation:");
+  console.log("Exception when calling AIConfigsBetaApi#patchAIConfigVariation:");
   console.log(error.body);
 });

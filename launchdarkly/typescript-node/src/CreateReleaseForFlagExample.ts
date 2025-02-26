@@ -16,6 +16,6 @@ apiCaller.createReleaseForFlag(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling ReleasesBeta#createReleaseForFlag:");
+  console.log("Exception when calling ReleasesBetaApi#createReleaseForFlag:");
   console.log(error.body);
 });

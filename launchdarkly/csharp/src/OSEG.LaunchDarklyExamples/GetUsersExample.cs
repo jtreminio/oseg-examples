@@ -29,7 +29,7 @@ public class GetUsersExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Users#GetUsers: " + e.Message);
+            Console.WriteLine("Exception when calling UsersApi#GetUsers: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

@@ -26,5 +26,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling CodeReferences#patchRepository: {$e->getMessage()}";
+    echo "Exception when calling CodeReferencesApi#patchRepository: {$e->getMessage()}";
 }

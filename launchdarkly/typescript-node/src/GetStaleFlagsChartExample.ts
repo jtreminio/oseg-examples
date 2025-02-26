@@ -16,6 +16,6 @@ apiCaller.getStaleFlagsChart(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling InsightsChartsBeta#getStaleFlagsChart:");
+  console.log("Exception when calling InsightsChartsBetaApi#getStaleFlagsChart:");
   console.log(error.body);
 });

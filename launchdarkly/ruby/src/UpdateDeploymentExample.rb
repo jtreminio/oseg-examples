@@ -21,5 +21,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling InsightsDeploymentsBeta#update_deployment: #{e}"
+    puts "Exception when calling InsightsDeploymentsBetaApi#update_deployment: #{e}"
 end

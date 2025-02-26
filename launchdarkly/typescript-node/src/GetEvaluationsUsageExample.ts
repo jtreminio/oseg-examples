@@ -15,6 +15,6 @@ apiCaller.getEvaluationsUsage(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling AccountUsageBeta#getEvaluationsUsage:");
+  console.log("Exception when calling AccountUsageBetaApi#getEvaluationsUsage:");
   console.log(error.body);
 });

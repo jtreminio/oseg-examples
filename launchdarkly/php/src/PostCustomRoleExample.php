@@ -40,5 +40,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling CustomRoles#postCustomRole: {$e->getMessage()}";
+    echo "Exception when calling CustomRolesApi#postCustomRole: {$e->getMessage()}";
 }

@@ -18,6 +18,6 @@ apiCaller.postMetric(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Metrics#postMetric:");
+  console.log("Exception when calling MetricsApi#postMetric:");
   console.log(error.body);
 });

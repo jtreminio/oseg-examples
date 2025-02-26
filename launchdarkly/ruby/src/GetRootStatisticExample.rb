@@ -10,5 +10,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling CodeReferences#get_root_statistic: #{e}"
+    puts "Exception when calling CodeReferencesApi#get_root_statistic: #{e}"
 end

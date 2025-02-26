@@ -28,7 +28,7 @@ public class DeleteReleasePipelineExample
                 null // pipelineKey
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling ReleasePipelinesBeta#deleteReleasePipeline");
+            System.err.println("Exception when calling ReleasePipelinesBetaApi#deleteReleasePipeline");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

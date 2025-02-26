@@ -34,7 +34,7 @@ public class GetSearchUsersExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Users#GetSearchUsers: " + e.Message);
+            Console.WriteLine("Exception when calling UsersApi#GetSearchUsers: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

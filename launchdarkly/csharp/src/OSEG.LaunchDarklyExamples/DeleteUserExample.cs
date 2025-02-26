@@ -26,7 +26,7 @@ public class DeleteUserExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Users#DeleteUser: " + e.Message);
+            Console.WriteLine("Exception when calling UsersApi#DeleteUser: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

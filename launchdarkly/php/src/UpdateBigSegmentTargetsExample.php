@@ -34,5 +34,5 @@ try {
         segment_user_state: $segment_user_state,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Segments#updateBigSegmentTargets: {$e->getMessage()}";
+    echo "Exception when calling SegmentsApi#updateBigSegmentTargets: {$e->getMessage()}";
 }

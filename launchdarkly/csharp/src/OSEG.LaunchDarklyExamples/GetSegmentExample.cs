@@ -28,7 +28,7 @@ public class GetSegmentExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Segments#GetSegment: " + e.Message);
+            Console.WriteLine("Exception when calling SegmentsApi#GetSegment: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

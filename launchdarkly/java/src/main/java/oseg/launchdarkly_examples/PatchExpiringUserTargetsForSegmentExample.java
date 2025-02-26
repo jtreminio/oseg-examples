@@ -47,7 +47,7 @@ public class PatchExpiringUserTargetsForSegmentExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling Segments#patchExpiringUserTargetsForSegment");
+            System.err.println("Exception when calling SegmentsApi#patchExpiringUserTargetsForSegment");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

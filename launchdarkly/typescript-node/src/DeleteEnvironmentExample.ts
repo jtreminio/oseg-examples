@@ -9,6 +9,6 @@ apiCaller.deleteEnvironment(
   undefined, // projectKey
   undefined, // environmentKey
 ).catch(error => {
-  console.log("Exception when calling Environments#deleteEnvironment:");
+  console.log("Exception when calling EnvironmentsApi#deleteEnvironment:");
   console.log(error.body);
 });

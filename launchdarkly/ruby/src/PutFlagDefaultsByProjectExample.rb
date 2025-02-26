@@ -34,5 +34,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling Projects#put_flag_defaults_by_project: #{e}"
+    puts "Exception when calling ProjectsApi#put_flag_defaults_by_project: #{e}"
 end

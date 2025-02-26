@@ -31,6 +31,6 @@ apiCaller.postAuditLogEntries(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling AuditLog#postAuditLogEntries:");
+  console.log("Exception when calling AuditLogApi#postAuditLogEntries:");
   console.log(error.body);
 });

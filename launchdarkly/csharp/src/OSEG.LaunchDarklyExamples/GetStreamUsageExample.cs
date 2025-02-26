@@ -29,7 +29,7 @@ public class GetStreamUsageExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling AccountUsageBeta#GetStreamUsage: " + e.Message);
+            Console.WriteLine("Exception when calling AccountUsageBetaApi#GetStreamUsage: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

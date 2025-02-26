@@ -12,6 +12,6 @@ apiCaller.getDestination(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling DataExportDestinations#getDestination:");
+  console.log("Exception when calling DataExportDestinationsApi#getDestination:");
   console.log(error.body);
 });

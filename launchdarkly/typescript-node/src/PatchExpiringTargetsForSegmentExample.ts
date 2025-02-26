@@ -29,6 +29,6 @@ apiCaller.patchExpiringTargetsForSegment(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Segments#patchExpiringTargetsForSegment:");
+  console.log("Exception when calling SegmentsApi#patchExpiringTargetsForSegment:");
   console.log(error.body);
 });

@@ -10,6 +10,6 @@ apiCaller.deleteDestination(
   undefined, // environmentKey
   undefined, // id
 ).catch(error => {
-  console.log("Exception when calling DataExportDestinations#deleteDestination:");
+  console.log("Exception when calling DataExportDestinationsApi#deleteDestination:");
   console.log(error.body);
 });

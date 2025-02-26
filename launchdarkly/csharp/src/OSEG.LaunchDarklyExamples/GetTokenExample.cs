@@ -26,7 +26,7 @@ public class GetTokenExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling AccessTokens#GetToken: " + e.Message);
+            Console.WriteLine("Exception when calling AccessTokensApi#GetToken: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

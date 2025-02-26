@@ -12,6 +12,6 @@ apiCaller.getFeatureFlagStatusAcrossEnvironments(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling FeatureFlags#getFeatureFlagStatusAcrossEnvironments:");
+  console.log("Exception when calling FeatureFlagsApi#getFeatureFlagStatusAcrossEnvironments:");
   console.log(error.body);
 });

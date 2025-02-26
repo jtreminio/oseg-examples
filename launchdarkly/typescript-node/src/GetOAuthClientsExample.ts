@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.OAuth2ClientsApiApiKeys.ApiKey, "YOUR_API_KEY");
 apiCaller.getOAuthClients().then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling OAuth2Clients#getOAuthClients:");
+  console.log("Exception when calling OAuth2ClientsApi#getOAuthClients:");
   console.log(error.body);
 });

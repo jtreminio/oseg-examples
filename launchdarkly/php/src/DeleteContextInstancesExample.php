@@ -17,5 +17,5 @@ try {
         id: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Contexts#deleteContextInstances: {$e->getMessage()}";
+    echo "Exception when calling ContextsApi#deleteContextInstances: {$e->getMessage()}";
 }

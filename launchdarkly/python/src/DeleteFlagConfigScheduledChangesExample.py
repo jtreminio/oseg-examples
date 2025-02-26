@@ -17,4 +17,4 @@ with ApiClient(configuration) as api_client:
             id=None,
         )
     except ApiException as e:
-        print("Exception when calling ScheduledChanges#delete_flag_config_scheduled_changes: %s\n" % e)
+        print("Exception when calling ScheduledChangesApi#delete_flag_config_scheduled_changes: %s\n" % e)

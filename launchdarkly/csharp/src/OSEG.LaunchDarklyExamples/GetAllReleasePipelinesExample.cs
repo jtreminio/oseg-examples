@@ -29,7 +29,7 @@ public class GetAllReleasePipelinesExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling ReleasePipelinesBeta#GetAllReleasePipelines: " + e.Message);
+            Console.WriteLine("Exception when calling ReleasePipelinesBetaApi#GetAllReleasePipelines: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

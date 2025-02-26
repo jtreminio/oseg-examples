@@ -10,6 +10,6 @@ apiCaller.getStreamUsageSdkversion(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling AccountUsageBeta#getStreamUsageSdkversion:");
+  console.log("Exception when calling AccountUsageBetaApi#getStreamUsageSdkversion:");
   console.log(error.body);
 });

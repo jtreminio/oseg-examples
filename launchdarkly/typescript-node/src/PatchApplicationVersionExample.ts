@@ -20,6 +20,6 @@ apiCaller.patchApplicationVersion(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling ApplicationsBeta#patchApplicationVersion:");
+  console.log("Exception when calling ApplicationsBetaApi#patchApplicationVersion:");
   console.log(error.body);
 });

@@ -31,7 +31,7 @@ public class GetAIConfigMetricsByVariationExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling AIConfigsBeta#GetAIConfigMetricsByVariation: " + e.Message);
+            Console.WriteLine("Exception when calling AIConfigsBetaApi#GetAIConfigMetricsByVariation: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

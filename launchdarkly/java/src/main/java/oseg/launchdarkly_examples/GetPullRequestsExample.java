@@ -40,7 +40,7 @@ public class GetPullRequestsExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling InsightsPullRequestsBeta#getPullRequests");
+            System.err.println("Exception when calling InsightsPullRequestsBetaApi#getPullRequests");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

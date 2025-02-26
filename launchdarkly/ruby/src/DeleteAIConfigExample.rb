@@ -12,5 +12,5 @@ begin
         nil, # config_key
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling AIConfigsBeta#delete_ai_config: #{e}"
+    puts "Exception when calling AIConfigsBetaApi#delete_ai_config: #{e}"
 end

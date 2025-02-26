@@ -22,5 +22,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling FeatureFlags#post_migration_safety_issues: #{e}"
+    puts "Exception when calling FeatureFlagsApi#post_migration_safety_issues: #{e}"
 end

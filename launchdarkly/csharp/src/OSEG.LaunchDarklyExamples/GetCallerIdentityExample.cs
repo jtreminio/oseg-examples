@@ -24,7 +24,7 @@ public class GetCallerIdentityExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Other#GetCallerIdentity: " + e.Message);
+            Console.WriteLine("Exception when calling OtherApi#GetCallerIdentity: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

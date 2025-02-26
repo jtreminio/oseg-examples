@@ -14,4 +14,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling Projects#get_projects: %s\n" % e)
+        print("Exception when calling ProjectsApi#get_projects: %s\n" % e)

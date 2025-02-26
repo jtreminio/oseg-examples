@@ -31,4 +31,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling FlagTriggers#patch_trigger_workflow: %s\n" % e)
+        print("Exception when calling FlagTriggersApi#patch_trigger_workflow: %s\n" % e)

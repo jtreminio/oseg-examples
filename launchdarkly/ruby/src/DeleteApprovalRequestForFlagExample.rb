@@ -13,5 +13,5 @@ begin
         nil, # id
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling Approvals#delete_approval_request_for_flag: #{e}"
+    puts "Exception when calling ApprovalsApi#delete_approval_request_for_flag: #{e}"
 end

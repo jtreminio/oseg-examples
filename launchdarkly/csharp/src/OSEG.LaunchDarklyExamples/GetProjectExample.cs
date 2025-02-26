@@ -27,7 +27,7 @@ public class GetProjectExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Projects#GetProject: " + e.Message);
+            Console.WriteLine("Exception when calling ProjectsApi#GetProject: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

@@ -28,7 +28,7 @@ public class GetFeatureFlagStatusAcrossEnvironmentsExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling FeatureFlags#GetFeatureFlagStatusAcrossEnvironments: " + e.Message);
+            Console.WriteLine("Exception when calling FeatureFlagsApi#GetFeatureFlagStatusAcrossEnvironments: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

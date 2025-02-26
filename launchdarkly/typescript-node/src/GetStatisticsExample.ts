@@ -11,6 +11,6 @@ apiCaller.getStatistics(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling CodeReferences#getStatistics:");
+  console.log("Exception when calling CodeReferencesApi#getStatistics:");
   console.log(error.body);
 });

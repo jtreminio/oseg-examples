@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.OtherApiApiKeys.ApiKey, "YOUR_API_KEY");
 apiCaller.getVersions().then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Other#getVersions:");
+  console.log("Exception when calling OtherApi#getVersions:");
   console.log(error.body);
 });

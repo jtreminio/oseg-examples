@@ -27,6 +27,6 @@ apiCaller.createFlagImportConfiguration(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling FlagImportConfigurationsBeta#createFlagImportConfiguration:");
+  console.log("Exception when calling FlagImportConfigurationsBetaApi#createFlagImportConfiguration:");
   console.log(error.body);
 });

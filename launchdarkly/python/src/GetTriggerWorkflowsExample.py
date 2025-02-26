@@ -18,4 +18,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling FlagTriggers#get_trigger_workflows: %s\n" % e)
+        print("Exception when calling FlagTriggersApi#get_trigger_workflows: %s\n" % e)

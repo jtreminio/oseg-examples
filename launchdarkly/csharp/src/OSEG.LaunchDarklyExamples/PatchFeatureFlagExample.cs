@@ -43,7 +43,7 @@ public class PatchFeatureFlagExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling FeatureFlags#PatchFeatureFlag: " + e.Message);
+            Console.WriteLine("Exception when calling FeatureFlagsApi#PatchFeatureFlag: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

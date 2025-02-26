@@ -38,7 +38,7 @@ public class PatchReleaseByFlagKeyExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling ReleasesBeta#PatchReleaseByFlagKey: " + e.Message);
+            Console.WriteLine("Exception when calling ReleasesBetaApi#PatchReleaseByFlagKey: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

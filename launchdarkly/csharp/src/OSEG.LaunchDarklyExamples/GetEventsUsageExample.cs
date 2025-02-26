@@ -28,7 +28,7 @@ public class GetEventsUsageExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling AccountUsageBeta#GetEventsUsage: " + e.Message);
+            Console.WriteLine("Exception when calling AccountUsageBetaApi#GetEventsUsage: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

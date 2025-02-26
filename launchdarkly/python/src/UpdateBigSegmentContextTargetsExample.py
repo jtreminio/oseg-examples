@@ -36,4 +36,4 @@ with ApiClient(configuration) as api_client:
             segment_user_state=segment_user_state,
         )
     except ApiException as e:
-        print("Exception when calling Segments#update_big_segment_context_targets: %s\n" % e)
+        print("Exception when calling SegmentsApi#update_big_segment_context_targets: %s\n" % e)

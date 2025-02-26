@@ -29,7 +29,7 @@ public class PatchFlagConfigApprovalRequestExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling ApprovalsBeta#PatchFlagConfigApprovalRequest: " + e.Message);
+            Console.WriteLine("Exception when calling ApprovalsBetaApi#PatchFlagConfigApprovalRequest: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

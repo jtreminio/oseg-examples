@@ -10,5 +10,5 @@ begin
         nil, # id
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling AccessTokens#delete_token: #{e}"
+    puts "Exception when calling AccessTokensApi#delete_token: #{e}"
 end

@@ -33,7 +33,7 @@ public class GetContextInstancesExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Contexts#GetContextInstances: " + e.Message);
+            Console.WriteLine("Exception when calling ContextsApi#GetContextInstances: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

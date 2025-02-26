@@ -23,14 +23,14 @@ public class ListModelConfigsExample
 
         try
         {
-            var response = new AIConfigsBetaApi(config).listModelConfigs(
+            var response = new AiConfigsBetaApi(config).listModelConfigs(
                 null, // lDAPIVersion
                 "default" // projectKey
             );
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling AIConfigsBeta#listModelConfigs");
+            System.err.println("Exception when calling AiConfigsBetaApi#listModelConfigs");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

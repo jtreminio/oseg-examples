@@ -15,5 +15,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling Segments#get_big_segment_export: #{e}"
+    puts "Exception when calling SegmentsApi#get_big_segment_export: #{e}"
 end

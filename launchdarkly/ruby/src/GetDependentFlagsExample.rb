@@ -13,5 +13,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling FeatureFlagsBeta#get_dependent_flags: #{e}"
+    puts "Exception when calling FeatureFlagsBetaApi#get_dependent_flags: #{e}"
 end

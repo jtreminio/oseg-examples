@@ -15,4 +15,4 @@ with ApiClient(configuration) as api_client:
             metric_group_key=None,
         )
     except ApiException as e:
-        print("Exception when calling MetricsBeta#delete_metric_group: %s\n" % e)
+        print("Exception when calling MetricsBetaApi#delete_metric_group: %s\n" % e)

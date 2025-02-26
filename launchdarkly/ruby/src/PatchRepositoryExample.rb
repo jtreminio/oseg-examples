@@ -21,5 +21,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling CodeReferences#patch_repository: #{e}"
+    puts "Exception when calling CodeReferencesApi#patch_repository: #{e}"
 end

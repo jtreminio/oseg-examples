@@ -16,6 +16,6 @@ apiCaller.putContextFlagSetting(
   undefined, // featureFlagKey
   valuePut,
 ).catch(error => {
-  console.log("Exception when calling ContextSettings#putContextFlagSetting:");
+  console.log("Exception when calling ContextSettingsApi#putContextFlagSetting:");
   console.log(error.body);
 });

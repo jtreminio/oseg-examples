@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.AccountMembersApiApiKeys.ApiKey, "YOUR_API_KEY");
 apiCaller.deleteMember(
   undefined, // id
 ).catch(error => {
-  console.log("Exception when calling AccountMembers#deleteMember:");
+  console.log("Exception when calling AccountMembersApi#deleteMember:");
   console.log(error.body);
 });

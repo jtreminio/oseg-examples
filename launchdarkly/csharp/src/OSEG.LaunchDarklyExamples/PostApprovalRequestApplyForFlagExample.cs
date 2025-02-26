@@ -34,7 +34,7 @@ public class PostApprovalRequestApplyForFlagExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Approvals#PostApprovalRequestApplyForFlag: " + e.Message);
+            Console.WriteLine("Exception when calling ApprovalsApi#PostApprovalRequestApplyForFlag: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

@@ -38,5 +38,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling AuditLog#postAuditLogEntries: {$e->getMessage()}";
+    echo "Exception when calling AuditLogApi#postAuditLogEntries: {$e->getMessage()}";
 }

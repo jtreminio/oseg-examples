@@ -17,4 +17,4 @@ with ApiClient(configuration) as api_client:
             id=None,
         )
     except ApiException as e:
-        print("Exception when calling Approvals#delete_approval_request_for_flag: %s\n" % e)
+        print("Exception when calling ApprovalsApi#delete_approval_request_for_flag: %s\n" % e)

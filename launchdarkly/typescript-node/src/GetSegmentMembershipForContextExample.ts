@@ -13,6 +13,6 @@ apiCaller.getSegmentMembershipForContext(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Segments#getSegmentMembershipForContext:");
+  console.log("Exception when calling SegmentsApi#getSegmentMembershipForContext:");
   console.log(error.body);
 });

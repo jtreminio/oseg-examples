@@ -19,5 +19,5 @@ try {
         ],
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling CodeReferences#deleteBranches: {$e->getMessage()}";
+    echo "Exception when calling CodeReferencesApi#deleteBranches: {$e->getMessage()}";
 }

@@ -16,6 +16,6 @@ apiCaller.getExperiments(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Experiments#getExperiments:");
+  console.log("Exception when calling ExperimentsApi#getExperiments:");
   console.log(error.body);
 });

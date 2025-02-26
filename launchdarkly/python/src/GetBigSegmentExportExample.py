@@ -19,4 +19,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling Segments#get_big_segment_export: %s\n" % e)
+        print("Exception when calling SegmentsApi#get_big_segment_export: %s\n" % e)

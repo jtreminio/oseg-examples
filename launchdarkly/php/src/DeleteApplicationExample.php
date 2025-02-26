@@ -15,5 +15,5 @@ try {
         application_key: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling ApplicationsBeta#deleteApplication: {$e->getMessage()}";
+    echo "Exception when calling ApplicationsBetaApi#deleteApplication: {$e->getMessage()}";
 }

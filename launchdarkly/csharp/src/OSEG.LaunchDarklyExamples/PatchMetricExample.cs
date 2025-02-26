@@ -38,7 +38,7 @@ public class PatchMetricExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Metrics#PatchMetric: " + e.Message);
+            Console.WriteLine("Exception when calling MetricsApi#PatchMetric: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

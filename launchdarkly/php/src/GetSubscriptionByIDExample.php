@@ -18,5 +18,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling IntegrationAuditLogSubscriptions#getSubscriptionByID: {$e->getMessage()}";
+    echo "Exception when calling IntegrationAuditLogSubscriptionsApi#getSubscriptionByID: {$e->getMessage()}";
 }

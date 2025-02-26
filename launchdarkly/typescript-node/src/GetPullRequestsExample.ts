@@ -21,6 +21,6 @@ apiCaller.getPullRequests(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling InsightsPullRequestsBeta#getPullRequests:");
+  console.log("Exception when calling InsightsPullRequestsBetaApi#getPullRequests:");
   console.log(error.body);
 });

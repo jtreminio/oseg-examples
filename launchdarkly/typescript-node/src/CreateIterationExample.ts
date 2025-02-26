@@ -55,6 +55,6 @@ apiCaller.createIteration(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Experiments#createIteration:");
+  console.log("Exception when calling ExperimentsApi#createIteration:");
   console.log(error.body);
 });

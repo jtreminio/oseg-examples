@@ -11,6 +11,6 @@ apiCaller.getMember(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling AccountMembers#getMember:");
+  console.log("Exception when calling AccountMembersApi#getMember:");
   console.log(error.body);
 });

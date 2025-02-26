@@ -24,7 +24,7 @@ public class GetDeploymentFrequencyChartExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling InsightsChartsBeta#GetDeploymentFrequencyChart: " + e.Message);
+            Console.WriteLine("Exception when calling InsightsChartsBetaApi#GetDeploymentFrequencyChart: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

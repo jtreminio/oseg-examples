@@ -19,5 +19,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling ScheduledChanges#getFlagConfigScheduledChanges: {$e->getMessage()}";
+    echo "Exception when calling ScheduledChangesApi#getFlagConfigScheduledChanges: {$e->getMessage()}";
 }

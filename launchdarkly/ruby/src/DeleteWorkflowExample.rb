@@ -13,5 +13,5 @@ begin
         nil, # workflow_id
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling Workflows#delete_workflow: #{e}"
+    puts "Exception when calling WorkflowsApi#delete_workflow: #{e}"
 end

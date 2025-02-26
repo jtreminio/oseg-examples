@@ -29,7 +29,7 @@ public class GetAllIntegrationConfigurationsExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling IntegrationsBeta#getAllIntegrationConfigurations");
+            System.err.println("Exception when calling IntegrationsBetaApi#getAllIntegrationConfigurations");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

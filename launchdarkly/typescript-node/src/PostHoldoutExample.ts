@@ -37,6 +37,6 @@ apiCaller.postHoldout(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling HoldoutsBeta#postHoldout:");
+  console.log("Exception when calling HoldoutsBetaApi#postHoldout:");
   console.log(error.body);
 });

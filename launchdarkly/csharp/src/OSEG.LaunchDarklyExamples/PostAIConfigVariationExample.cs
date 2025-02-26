@@ -52,7 +52,7 @@ public class PostAIConfigVariationExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling AIConfigsBeta#PostAIConfigVariation: " + e.Message);
+            Console.WriteLine("Exception when calling AIConfigsBetaApi#PostAIConfigVariation: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

@@ -15,5 +15,5 @@ try {
         team_key: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Teams#deleteTeam: {$e->getMessage()}";
+    echo "Exception when calling TeamsApi#deleteTeam: {$e->getMessage()}";
 }

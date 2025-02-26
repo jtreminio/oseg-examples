@@ -17,4 +17,4 @@ with ApiClient(configuration) as api_client:
             integration_id=None,
         )
     except ApiException as e:
-        print("Exception when calling PersistentStoreIntegrationsBeta#delete_big_segment_store_integration: %s\n" % e)
+        print("Exception when calling PersistentStoreIntegrationsBetaApi#delete_big_segment_store_integration: %s\n" % e)

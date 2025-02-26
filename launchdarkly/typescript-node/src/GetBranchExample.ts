@@ -13,6 +13,6 @@ apiCaller.getBranch(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling CodeReferences#getBranch:");
+  console.log("Exception when calling CodeReferencesApi#getBranch:");
   console.log(error.body);
 });

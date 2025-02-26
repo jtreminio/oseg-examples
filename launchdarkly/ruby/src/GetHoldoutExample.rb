@@ -14,5 +14,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling HoldoutsBeta#get_holdout: #{e}"
+    puts "Exception when calling HoldoutsBetaApi#get_holdout: #{e}"
 end

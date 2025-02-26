@@ -28,7 +28,7 @@ public class GetTriggerWorkflowsExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling FlagTriggers#GetTriggerWorkflows: " + e.Message);
+            Console.WriteLine("Exception when calling FlagTriggersApi#GetTriggerWorkflows: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

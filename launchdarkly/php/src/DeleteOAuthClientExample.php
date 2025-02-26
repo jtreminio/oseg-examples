@@ -15,5 +15,5 @@ try {
         client_id: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling OAuth2Clients#deleteOAuthClient: {$e->getMessage()}";
+    echo "Exception when calling OAuth2ClientsApi#deleteOAuthClient: {$e->getMessage()}";
 }

@@ -32,7 +32,7 @@ public class PostDestinationExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling DataExportDestinations#PostDestination: " + e.Message);
+            Console.WriteLine("Exception when calling DataExportDestinationsApi#PostDestination: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

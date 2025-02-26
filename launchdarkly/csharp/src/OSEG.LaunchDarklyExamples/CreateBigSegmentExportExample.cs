@@ -26,7 +26,7 @@ public class CreateBigSegmentExportExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Segments#CreateBigSegmentExport: " + e.Message);
+            Console.WriteLine("Exception when calling SegmentsApi#CreateBigSegmentExport: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

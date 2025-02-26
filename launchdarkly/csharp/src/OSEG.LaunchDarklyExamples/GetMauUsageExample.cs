@@ -24,7 +24,7 @@ public class GetMauUsageExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling AccountUsageBeta#GetMauUsage: " + e.Message);
+            Console.WriteLine("Exception when calling AccountUsageBetaApi#GetMauUsage: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

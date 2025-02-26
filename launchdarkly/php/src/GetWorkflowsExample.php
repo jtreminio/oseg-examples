@@ -23,5 +23,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Workflows#getWorkflows: {$e->getMessage()}";
+    echo "Exception when calling WorkflowsApi#getWorkflows: {$e->getMessage()}";
 }

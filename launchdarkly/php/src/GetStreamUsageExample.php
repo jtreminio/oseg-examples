@@ -20,5 +20,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling AccountUsageBeta#getStreamUsage: {$e->getMessage()}";
+    echo "Exception when calling AccountUsageBetaApi#getStreamUsage: {$e->getMessage()}";
 }

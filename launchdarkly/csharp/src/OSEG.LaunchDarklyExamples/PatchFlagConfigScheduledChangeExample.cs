@@ -47,7 +47,7 @@ public class PatchFlagConfigScheduledChangeExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling ScheduledChanges#PatchFlagConfigScheduledChange: " + e.Message);
+            Console.WriteLine("Exception when calling ScheduledChangesApi#PatchFlagConfigScheduledChange: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

@@ -14,4 +14,4 @@ with ApiClient(configuration) as api_client:
             repo=None,
         )
     except ApiException as e:
-        print("Exception when calling CodeReferences#delete_repository: %s\n" % e)
+        print("Exception when calling CodeReferencesApi#delete_repository: %s\n" % e)

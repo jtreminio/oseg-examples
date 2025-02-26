@@ -16,5 +16,5 @@ try {
         version_key: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling ApplicationsBeta#deleteApplicationVersion: {$e->getMessage()}";
+    echo "Exception when calling ApplicationsBetaApi#deleteApplicationVersion: {$e->getMessage()}";
 }

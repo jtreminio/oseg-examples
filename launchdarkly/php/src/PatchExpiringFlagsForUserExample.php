@@ -35,5 +35,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling UserSettings#patchExpiringFlagsForUser: {$e->getMessage()}";
+    echo "Exception when calling UserSettingsApi#patchExpiringFlagsForUser: {$e->getMessage()}";
 }

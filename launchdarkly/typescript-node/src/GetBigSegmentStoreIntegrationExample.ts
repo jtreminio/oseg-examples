@@ -13,6 +13,6 @@ apiCaller.getBigSegmentStoreIntegration(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling PersistentStoreIntegrationsBeta#getBigSegmentStoreIntegration:");
+  console.log("Exception when calling PersistentStoreIntegrationsBetaApi#getBigSegmentStoreIntegration:");
   console.log(error.body);
 });

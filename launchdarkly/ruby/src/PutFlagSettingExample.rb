@@ -17,5 +17,5 @@ begin
         value_put,
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling UserSettings#put_flag_setting: #{e}"
+    puts "Exception when calling UserSettingsApi#put_flag_setting: #{e}"
 end

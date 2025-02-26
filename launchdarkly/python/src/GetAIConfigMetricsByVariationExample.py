@@ -21,4 +21,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling AIConfigsBeta#get_ai_config_metrics_by_variation: %s\n" % e)
+        print("Exception when calling AIConfigsBetaApi#get_ai_config_metrics_by_variation: %s\n" % e)

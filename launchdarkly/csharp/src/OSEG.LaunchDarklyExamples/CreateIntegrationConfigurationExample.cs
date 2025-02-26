@@ -77,7 +77,7 @@ public class CreateIntegrationConfigurationExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling IntegrationsBeta#CreateIntegrationConfiguration: " + e.Message);
+            Console.WriteLine("Exception when calling IntegrationsBetaApi#CreateIntegrationConfiguration: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

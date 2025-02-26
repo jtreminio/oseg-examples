@@ -37,6 +37,6 @@ apiCaller.createSubscription(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling IntegrationAuditLogSubscriptions#createSubscription:");
+  console.log("Exception when calling IntegrationAuditLogSubscriptionsApi#createSubscription:");
   console.log(error.body);
 });

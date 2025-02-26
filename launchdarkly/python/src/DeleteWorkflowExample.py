@@ -17,4 +17,4 @@ with ApiClient(configuration) as api_client:
             workflow_id=None,
         )
     except ApiException as e:
-        print("Exception when calling Workflows#delete_workflow: %s\n" % e)
+        print("Exception when calling WorkflowsApi#delete_workflow: %s\n" % e)

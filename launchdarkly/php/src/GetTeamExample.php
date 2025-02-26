@@ -18,5 +18,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Teams#getTeam: {$e->getMessage()}";
+    echo "Exception when calling TeamsApi#getTeam: {$e->getMessage()}";
 }

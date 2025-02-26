@@ -29,7 +29,7 @@ public class GetAIConfigVariationExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling AIConfigsBeta#GetAIConfigVariation: " + e.Message);
+            Console.WriteLine("Exception when calling AIConfigsBetaApi#GetAIConfigVariation: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

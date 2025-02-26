@@ -29,6 +29,6 @@ apiCaller.patchSegment(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Segments#patchSegment:");
+  console.log("Exception when calling SegmentsApi#patchSegment:");
   console.log(error.body);
 });

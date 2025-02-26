@@ -12,4 +12,4 @@ with ApiClient(configuration) as api_client:
     try:
         api.OtherApi(api_client).get_openapi_spec()
     except ApiException as e:
-        print("Exception when calling Other#get_openapi_spec: %s\n" % e)
+        print("Exception when calling OtherApi#get_openapi_spec: %s\n" % e)

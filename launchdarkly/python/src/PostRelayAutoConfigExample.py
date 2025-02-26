@@ -35,4 +35,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling RelayProxyConfigurations#post_relay_auto_config: %s\n" % e)
+        print("Exception when calling RelayProxyConfigurationsApi#post_relay_auto_config: %s\n" % e)

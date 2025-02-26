@@ -29,4 +29,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling Segments#get_context_instance_segments_membership_by_env: %s\n" % e)
+        print("Exception when calling SegmentsApi#get_context_instance_segments_membership_by_env: %s\n" % e)

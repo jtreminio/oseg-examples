@@ -21,6 +21,6 @@ apiCaller.patchDestination(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling DataExportDestinations#patchDestination:");
+  console.log("Exception when calling DataExportDestinationsApi#patchDestination:");
   console.log(error.body);
 });

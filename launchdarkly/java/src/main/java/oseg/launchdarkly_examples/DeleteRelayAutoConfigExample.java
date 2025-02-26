@@ -27,7 +27,7 @@ public class DeleteRelayAutoConfigExample
                 null // id
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling RelayProxyConfigurations#deleteRelayAutoConfig");
+            System.err.println("Exception when calling RelayProxyConfigurationsApi#deleteRelayAutoConfig");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

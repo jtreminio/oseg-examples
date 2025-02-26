@@ -34,6 +34,6 @@ apiCaller.postFlagCopyConfigApprovalRequest(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Approvals#postFlagCopyConfigApprovalRequest:");
+  console.log("Exception when calling ApprovalsApi#postFlagCopyConfigApprovalRequest:");
   console.log(error.body);
 });

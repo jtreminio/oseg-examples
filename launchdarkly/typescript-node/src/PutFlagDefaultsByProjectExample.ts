@@ -32,6 +32,6 @@ apiCaller.putFlagDefaultsByProject(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Projects#putFlagDefaultsByProject:");
+  console.log("Exception when calling ProjectsApi#putFlagDefaultsByProject:");
   console.log(error.body);
 });

@@ -29,7 +29,7 @@ public class GetApprovalForFlagExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Approvals#GetApprovalForFlag: " + e.Message);
+            Console.WriteLine("Exception when calling ApprovalsApi#GetApprovalForFlag: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

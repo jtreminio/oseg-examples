@@ -13,6 +13,6 @@ apiCaller.getAIConfigVariation(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling AIConfigsBeta#getAIConfigVariation:");
+  console.log("Exception when calling AIConfigsBetaApi#getAIConfigVariation:");
   console.log(error.body);
 });

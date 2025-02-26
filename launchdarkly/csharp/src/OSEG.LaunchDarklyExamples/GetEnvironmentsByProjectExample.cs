@@ -30,7 +30,7 @@ public class GetEnvironmentsByProjectExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Environments#GetEnvironmentsByProject: " + e.Message);
+            Console.WriteLine("Exception when calling EnvironmentsApi#GetEnvironmentsByProject: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

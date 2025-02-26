@@ -37,7 +37,7 @@ public class PatchWebhookExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Webhooks#PatchWebhook: " + e.Message);
+            Console.WriteLine("Exception when calling WebhooksApi#PatchWebhook: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

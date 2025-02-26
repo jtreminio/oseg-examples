@@ -17,4 +17,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling AccessTokens#reset_token: %s\n" % e)
+        print("Exception when calling AccessTokensApi#reset_token: %s\n" % e)

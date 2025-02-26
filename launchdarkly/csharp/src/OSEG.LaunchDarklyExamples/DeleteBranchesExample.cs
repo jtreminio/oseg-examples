@@ -28,7 +28,7 @@ public class DeleteBranchesExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling CodeReferences#DeleteBranches: " + e.Message);
+            Console.WriteLine("Exception when calling CodeReferencesApi#DeleteBranches: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

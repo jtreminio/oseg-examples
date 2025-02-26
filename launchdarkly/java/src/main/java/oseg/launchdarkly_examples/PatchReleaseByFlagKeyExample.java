@@ -39,7 +39,7 @@ public class PatchReleaseByFlagKeyExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling ReleasesBeta#patchReleaseByFlagKey");
+            System.err.println("Exception when calling ReleasesBetaApi#patchReleaseByFlagKey");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

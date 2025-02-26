@@ -26,7 +26,7 @@ public class GetWebhookExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Webhooks#GetWebhook: " + e.Message);
+            Console.WriteLine("Exception when calling WebhooksApi#GetWebhook: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

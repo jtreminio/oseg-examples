@@ -13,5 +13,5 @@ $config->setApiKey("ApiKey", "YOUR_API_KEY");
 try {
     (new LaunchDarkly\Client\Api\OtherApi(config: $config))->getOpenapiSpec();
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Other#getOpenapiSpec: {$e->getMessage()}";
+    echo "Exception when calling OtherApi#getOpenapiSpec: {$e->getMessage()}";
 }

@@ -30,6 +30,6 @@ apiCaller.createMetricGroup(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling MetricsBeta#createMetricGroup:");
+  console.log("Exception when calling MetricsBetaApi#createMetricGroup:");
   console.log(error.body);
 });

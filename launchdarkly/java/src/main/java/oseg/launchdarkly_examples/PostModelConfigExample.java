@@ -34,7 +34,7 @@ public class PostModelConfigExample
 
         try
         {
-            var response = new AIConfigsBetaApi(config).postModelConfig(
+            var response = new AiConfigsBetaApi(config).postModelConfig(
                 null, // lDAPIVersion
                 "default", // projectKey
                 modelConfigPost
@@ -42,7 +42,7 @@ public class PostModelConfigExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling AIConfigsBeta#postModelConfig");
+            System.err.println("Exception when calling AiConfigsBetaApi#postModelConfig");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

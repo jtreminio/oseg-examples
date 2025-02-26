@@ -25,5 +25,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Contexts#getContexts: {$e->getMessage()}";
+    echo "Exception when calling ContextsApi#getContexts: {$e->getMessage()}";
 }

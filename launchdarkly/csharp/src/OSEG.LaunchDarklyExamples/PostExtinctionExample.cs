@@ -39,7 +39,7 @@ public class PostExtinctionExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling CodeReferences#PostExtinction: " + e.Message);
+            Console.WriteLine("Exception when calling CodeReferencesApi#PostExtinction: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

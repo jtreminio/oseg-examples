@@ -18,5 +18,5 @@ try {
         workflow_id: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Workflows#deleteWorkflow: {$e->getMessage()}";
+    echo "Exception when calling WorkflowsApi#deleteWorkflow: {$e->getMessage()}";
 }

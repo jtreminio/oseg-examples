@@ -33,4 +33,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling PersistentStoreIntegrationsBeta#create_big_segment_store_integration: %s\n" % e)
+        print("Exception when calling PersistentStoreIntegrationsBetaApi#create_big_segment_store_integration: %s\n" % e)

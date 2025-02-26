@@ -17,4 +17,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling Approvals#get_approval_request: %s\n" % e)
+        print("Exception when calling ApprovalsApi#get_approval_request: %s\n" % e)

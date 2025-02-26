@@ -28,7 +28,7 @@ public class GetFlagConfigScheduledChangesExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling ScheduledChanges#GetFlagConfigScheduledChanges: " + e.Message);
+            Console.WriteLine("Exception when calling ScheduledChangesApi#GetFlagConfigScheduledChanges: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

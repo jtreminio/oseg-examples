@@ -15,5 +15,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling AccountUsageBeta#getMauSdksByType: {$e->getMessage()}";
+    echo "Exception when calling AccountUsageBetaApi#getMauSdksByType: {$e->getMessage()}";
 }

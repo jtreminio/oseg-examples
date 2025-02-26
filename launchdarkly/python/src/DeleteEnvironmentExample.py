@@ -15,4 +15,4 @@ with ApiClient(configuration) as api_client:
             environment_key=None,
         )
     except ApiException as e:
-        print("Exception when calling Environments#delete_environment: %s\n" % e)
+        print("Exception when calling EnvironmentsApi#delete_environment: %s\n" % e)

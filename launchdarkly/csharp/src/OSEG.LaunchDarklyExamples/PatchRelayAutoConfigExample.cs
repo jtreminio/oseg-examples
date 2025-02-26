@@ -41,7 +41,7 @@ public class PatchRelayAutoConfigExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling RelayProxyConfigurations#PatchRelayAutoConfig: " + e.Message);
+            Console.WriteLine("Exception when calling RelayProxyConfigurationsApi#PatchRelayAutoConfig: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

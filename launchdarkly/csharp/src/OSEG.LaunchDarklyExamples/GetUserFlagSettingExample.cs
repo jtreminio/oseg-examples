@@ -29,7 +29,7 @@ public class GetUserFlagSettingExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling UserSettings#GetUserFlagSetting: " + e.Message);
+            Console.WriteLine("Exception when calling UserSettingsApi#GetUserFlagSetting: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

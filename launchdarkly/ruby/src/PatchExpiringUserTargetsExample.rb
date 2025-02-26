@@ -29,5 +29,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling FeatureFlags#patch_expiring_user_targets: #{e}"
+    puts "Exception when calling FeatureFlagsApi#patch_expiring_user_targets: #{e}"
 end

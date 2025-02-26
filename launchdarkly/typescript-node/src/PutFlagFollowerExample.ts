@@ -11,6 +11,6 @@ apiCaller.putFlagFollower(
   undefined, // environmentKey
   undefined, // memberId
 ).catch(error => {
-  console.log("Exception when calling FollowFlags#putFlagFollower:");
+  console.log("Exception when calling FollowFlagsApi#putFlagFollower:");
   console.log(error.body);
 });

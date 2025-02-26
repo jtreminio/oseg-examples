@@ -10,5 +10,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling CodeReferences#get_extinctions: #{e}"
+    puts "Exception when calling CodeReferencesApi#get_extinctions: #{e}"
 end

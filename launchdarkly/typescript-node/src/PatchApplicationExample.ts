@@ -19,6 +19,6 @@ apiCaller.patchApplication(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling ApplicationsBeta#patchApplication:");
+  console.log("Exception when calling ApplicationsBetaApi#patchApplication:");
   console.log(error.body);
 });

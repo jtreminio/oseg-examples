@@ -19,6 +19,6 @@ apiCaller.patchMember(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling AccountMembers#patchMember:");
+  console.log("Exception when calling AccountMembersApi#patchMember:");
   console.log(error.body);
 });

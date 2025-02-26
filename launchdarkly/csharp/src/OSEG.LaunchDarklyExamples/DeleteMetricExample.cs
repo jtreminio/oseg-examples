@@ -25,7 +25,7 @@ public class DeleteMetricExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Metrics#DeleteMetric: " + e.Message);
+            Console.WriteLine("Exception when calling MetricsApi#DeleteMetric: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

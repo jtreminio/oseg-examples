@@ -42,7 +42,7 @@ public class SearchContextsExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling Contexts#searchContexts");
+            System.err.println("Exception when calling ContextsApi#searchContexts");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

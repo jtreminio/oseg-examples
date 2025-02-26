@@ -10,6 +10,6 @@ apiCaller.getIntegrationConfiguration(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling IntegrationsBeta#getIntegrationConfiguration:");
+  console.log("Exception when calling IntegrationsBetaApi#getIntegrationConfiguration:");
   console.log(error.body);
 });

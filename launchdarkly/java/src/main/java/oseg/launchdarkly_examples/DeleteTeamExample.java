@@ -27,7 +27,7 @@ public class DeleteTeamExample
                 null // teamKey
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling Teams#deleteTeam");
+            System.err.println("Exception when calling TeamsApi#deleteTeam");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

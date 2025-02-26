@@ -12,6 +12,6 @@ apiCaller.getSegment(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Segments#getSegment:");
+  console.log("Exception when calling SegmentsApi#getSegment:");
   console.log(error.body);
 });

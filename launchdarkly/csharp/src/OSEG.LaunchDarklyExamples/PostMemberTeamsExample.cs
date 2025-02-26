@@ -34,7 +34,7 @@ public class PostMemberTeamsExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling AccountMembers#PostMemberTeams: " + e.Message);
+            Console.WriteLine("Exception when calling AccountMembersApi#PostMemberTeams: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

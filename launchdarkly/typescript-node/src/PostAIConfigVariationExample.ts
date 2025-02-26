@@ -32,6 +32,6 @@ apiCaller.postAIConfigVariation(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling AIConfigsBeta#postAIConfigVariation:");
+  console.log("Exception when calling AIConfigsBetaApi#postAIConfigVariation:");
   console.log(error.body);
 });

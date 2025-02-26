@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.CodeReferencesApiApiKeys.ApiKey, "YOUR_API_KEY");
 apiCaller.getRepositories().then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling CodeReferences#getRepositories:");
+  console.log("Exception when calling CodeReferencesApi#getRepositories:");
   console.log(error.body);
 });

@@ -40,5 +40,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling AIConfigsBeta#patchAIConfigVariation: {$e->getMessage()}";
+    echo "Exception when calling AIConfigsBetaApi#patchAIConfigVariation: {$e->getMessage()}";
 }

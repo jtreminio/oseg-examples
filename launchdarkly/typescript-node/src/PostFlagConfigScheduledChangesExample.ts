@@ -23,6 +23,6 @@ apiCaller.postFlagConfigScheduledChanges(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling ScheduledChanges#postFlagConfigScheduledChanges:");
+  console.log("Exception when calling ScheduledChangesApi#postFlagConfigScheduledChanges:");
   console.log(error.body);
 });

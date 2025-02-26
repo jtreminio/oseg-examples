@@ -11,6 +11,6 @@ apiCaller.getReleaseByFlagKey(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling ReleasesBeta#getReleaseByFlagKey:");
+  console.log("Exception when calling ReleasesBetaApi#getReleaseByFlagKey:");
   console.log(error.body);
 });

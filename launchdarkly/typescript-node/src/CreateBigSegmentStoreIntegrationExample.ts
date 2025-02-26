@@ -24,6 +24,6 @@ apiCaller.createBigSegmentStoreIntegration(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling PersistentStoreIntegrationsBeta#createBigSegmentStoreIntegration:");
+  console.log("Exception when calling PersistentStoreIntegrationsBetaApi#createBigSegmentStoreIntegration:");
   console.log(error.body);
 });

@@ -17,5 +17,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling OAuth2Clients#create_o_auth2_client: #{e}"
+    puts "Exception when calling OAuth2ClientsApi#create_o_auth2_client: #{e}"
 end

@@ -15,5 +15,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling InsightsScoresBeta#getInsightGroups: {$e->getMessage()}";
+    echo "Exception when calling InsightsScoresBetaApi#getInsightGroups: {$e->getMessage()}";
 }

@@ -30,7 +30,7 @@ public class GetMemberExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling AccountMembers#getMember");
+            System.err.println("Exception when calling AccountMembersApi#getMember");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

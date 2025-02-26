@@ -24,7 +24,7 @@ public class GetRepositoriesExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling CodeReferences#GetRepositories: " + e.Message);
+            Console.WriteLine("Exception when calling CodeReferencesApi#GetRepositories: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

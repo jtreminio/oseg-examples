@@ -27,7 +27,7 @@ public class GetMemberExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling AccountMembers#GetMember: " + e.Message);
+            Console.WriteLine("Exception when calling AccountMembersApi#GetMember: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

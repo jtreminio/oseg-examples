@@ -10,5 +10,5 @@ begin
         nil, # repo
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling CodeReferences#delete_repository: #{e}"
+    puts "Exception when calling CodeReferencesApi#delete_repository: #{e}"
 end

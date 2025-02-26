@@ -24,5 +24,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling RelayProxyConfigurations#patch_relay_auto_config: #{e}"
+    puts "Exception when calling RelayProxyConfigurationsApi#patch_relay_auto_config: #{e}"
 end

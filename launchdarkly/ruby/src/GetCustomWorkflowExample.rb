@@ -15,5 +15,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling Workflows#get_custom_workflow: #{e}"
+    puts "Exception when calling WorkflowsApi#get_custom_workflow: #{e}"
 end

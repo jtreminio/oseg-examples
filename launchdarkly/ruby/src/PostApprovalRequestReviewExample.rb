@@ -17,5 +17,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling Approvals#post_approval_request_review: #{e}"
+    puts "Exception when calling ApprovalsApi#post_approval_request_review: #{e}"
 end

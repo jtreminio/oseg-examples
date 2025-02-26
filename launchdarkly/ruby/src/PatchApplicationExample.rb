@@ -21,5 +21,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling ApplicationsBeta#patch_application: #{e}"
+    puts "Exception when calling ApplicationsBetaApi#patch_application: #{e}"
 end

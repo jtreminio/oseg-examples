@@ -19,5 +19,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling HoldoutsBeta#getHoldoutById: {$e->getMessage()}";
+    echo "Exception when calling HoldoutsBetaApi#getHoldoutById: {$e->getMessage()}";
 }

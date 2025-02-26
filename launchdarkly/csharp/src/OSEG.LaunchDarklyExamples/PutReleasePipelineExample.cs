@@ -79,7 +79,7 @@ public class PutReleasePipelineExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling ReleasePipelinesBeta#PutReleasePipeline: " + e.Message);
+            Console.WriteLine("Exception when calling ReleasePipelinesBetaApi#PutReleasePipeline: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

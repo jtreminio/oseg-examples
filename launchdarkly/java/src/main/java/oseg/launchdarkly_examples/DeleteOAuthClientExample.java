@@ -27,7 +27,7 @@ public class DeleteOAuthClientExample
                 null // clientId
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling OAuth2Clients#deleteOAuthClient");
+            System.err.println("Exception when calling OAuth2ClientsApi#deleteOAuthClient");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

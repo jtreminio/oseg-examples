@@ -42,7 +42,7 @@ public class UpdateLayerExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Layers#UpdateLayer: " + e.Message);
+            Console.WriteLine("Exception when calling LayersApi#UpdateLayer: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

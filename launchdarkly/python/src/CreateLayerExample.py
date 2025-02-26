@@ -23,4 +23,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling Layers#create_layer: %s\n" % e)
+        print("Exception when calling LayersApi#create_layer: %s\n" % e)

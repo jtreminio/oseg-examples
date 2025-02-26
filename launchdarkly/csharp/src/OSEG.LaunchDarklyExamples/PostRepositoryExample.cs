@@ -35,7 +35,7 @@ public class PostRepositoryExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling CodeReferences#PostRepository: " + e.Message);
+            Console.WriteLine("Exception when calling CodeReferencesApi#PostRepository: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

@@ -9,6 +9,6 @@ apiCaller.deleteFeatureFlag(
   undefined, // projectKey
   undefined, // featureFlagKey
 ).catch(error => {
-  console.log("Exception when calling FeatureFlags#deleteFeatureFlag:");
+  console.log("Exception when calling FeatureFlagsApi#deleteFeatureFlag:");
   console.log(error.body);
 });

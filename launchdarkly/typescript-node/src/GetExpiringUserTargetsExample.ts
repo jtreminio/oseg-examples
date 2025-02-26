@@ -12,6 +12,6 @@ apiCaller.getExpiringUserTargets(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling FeatureFlags#getExpiringUserTargets:");
+  console.log("Exception when calling FeatureFlagsApi#getExpiringUserTargets:");
   console.log(error.body);
 });

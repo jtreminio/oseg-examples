@@ -12,6 +12,6 @@ apiCaller.deleteBranches(
     "another-branch-to-be-deleted",
   ], // requestBody
 ).catch(error => {
-  console.log("Exception when calling CodeReferences#deleteBranches:");
+  console.log("Exception when calling CodeReferencesApi#deleteBranches:");
   console.log(error.body);
 });

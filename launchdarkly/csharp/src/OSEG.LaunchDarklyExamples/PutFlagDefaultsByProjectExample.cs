@@ -51,7 +51,7 @@ public class PutFlagDefaultsByProjectExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Projects#PutFlagDefaultsByProject: " + e.Message);
+            Console.WriteLine("Exception when calling ProjectsApi#PutFlagDefaultsByProject: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

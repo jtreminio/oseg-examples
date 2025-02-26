@@ -17,6 +17,6 @@ apiCaller.postApprovalRequestApplyForFlag(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Approvals#postApprovalRequestApplyForFlag:");
+  console.log("Exception when calling ApprovalsApi#postApprovalRequestApplyForFlag:");
   console.log(error.body);
 });

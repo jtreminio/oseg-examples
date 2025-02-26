@@ -19,6 +19,6 @@ apiCaller.patchToken(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling AccessTokens#patchToken:");
+  console.log("Exception when calling AccessTokensApi#patchToken:");
   console.log(error.body);
 });

@@ -16,4 +16,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling CodeReferences#get_repository: %s\n" % e)
+        print("Exception when calling CodeReferencesApi#get_repository: %s\n" % e)

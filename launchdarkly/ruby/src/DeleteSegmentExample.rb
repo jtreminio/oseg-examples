@@ -12,5 +12,5 @@ begin
         nil, # segment_key
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling Segments#delete_segment: #{e}"
+    puts "Exception when calling SegmentsApi#delete_segment: #{e}"
 end

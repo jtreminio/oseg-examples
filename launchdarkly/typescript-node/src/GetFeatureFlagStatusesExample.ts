@@ -11,6 +11,6 @@ apiCaller.getFeatureFlagStatuses(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling FeatureFlags#getFeatureFlagStatuses:");
+  console.log("Exception when calling FeatureFlagsApi#getFeatureFlagStatuses:");
   console.log(error.body);
 });

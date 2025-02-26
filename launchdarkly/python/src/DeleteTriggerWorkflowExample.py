@@ -17,4 +17,4 @@ with ApiClient(configuration) as api_client:
             id=None,
         )
     except ApiException as e:
-        print("Exception when calling FlagTriggers#delete_trigger_workflow: %s\n" % e)
+        print("Exception when calling FlagTriggersApi#delete_trigger_workflow: %s\n" % e)

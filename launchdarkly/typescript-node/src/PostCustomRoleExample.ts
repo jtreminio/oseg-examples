@@ -30,6 +30,6 @@ apiCaller.postCustomRole(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling CustomRoles#postCustomRole:");
+  console.log("Exception when calling CustomRolesApi#postCustomRole:");
   console.log(error.body);
 });

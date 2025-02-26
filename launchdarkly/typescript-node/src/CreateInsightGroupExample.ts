@@ -20,6 +20,6 @@ apiCaller.createInsightGroup(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling InsightsScoresBeta#createInsightGroup:");
+  console.log("Exception when calling InsightsScoresBetaApi#createInsightGroup:");
   console.log(error.body);
 });

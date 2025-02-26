@@ -18,5 +18,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Environments#resetEnvironmentMobileKey: {$e->getMessage()}";
+    echo "Exception when calling EnvironmentsApi#resetEnvironmentMobileKey: {$e->getMessage()}";
 }

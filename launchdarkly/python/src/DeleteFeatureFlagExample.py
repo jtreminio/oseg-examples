@@ -15,4 +15,4 @@ with ApiClient(configuration) as api_client:
             feature_flag_key=None,
         )
     except ApiException as e:
-        print("Exception when calling FeatureFlags#delete_feature_flag: %s\n" % e)
+        print("Exception when calling FeatureFlagsApi#delete_feature_flag: %s\n" % e)

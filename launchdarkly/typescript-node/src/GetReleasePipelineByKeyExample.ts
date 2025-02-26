@@ -11,6 +11,6 @@ apiCaller.getReleasePipelineByKey(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling ReleasePipelinesBeta#getReleasePipelineByKey:");
+  console.log("Exception when calling ReleasePipelinesBetaApi#getReleasePipelineByKey:");
   console.log(error.body);
 });

@@ -38,7 +38,7 @@ public class UpdateIntegrationConfigurationExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling IntegrationsBeta#updateIntegrationConfiguration");
+            System.err.println("Exception when calling IntegrationsBetaApi#updateIntegrationConfiguration");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

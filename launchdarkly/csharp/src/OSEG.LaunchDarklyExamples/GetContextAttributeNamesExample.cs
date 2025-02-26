@@ -29,7 +29,7 @@ public class GetContextAttributeNamesExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Contexts#GetContextAttributeNames: " + e.Message);
+            Console.WriteLine("Exception when calling ContextsApi#GetContextAttributeNames: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

@@ -29,7 +29,7 @@ public class GetFeatureFlagScheduledChangeExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling ScheduledChanges#GetFeatureFlagScheduledChange: " + e.Message);
+            Console.WriteLine("Exception when calling ScheduledChangesApi#GetFeatureFlagScheduledChange: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

@@ -15,6 +15,6 @@ apiCaller.getStreamUsageBySdkVersion(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling AccountUsageBeta#getStreamUsageBySdkVersion:");
+  console.log("Exception when calling AccountUsageBetaApi#getStreamUsageBySdkVersion:");
   console.log(error.body);
 });

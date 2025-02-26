@@ -20,6 +20,6 @@ apiCaller.patchMetric(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Metrics#patchMetric:");
+  console.log("Exception when calling MetricsApi#patchMetric:");
   console.log(error.body);
 });

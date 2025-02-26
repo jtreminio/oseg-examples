@@ -43,5 +43,5 @@ begin
         put_branch,
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling CodeReferences#put_branch: #{e}"
+    puts "Exception when calling CodeReferencesApi#put_branch: #{e}"
 end

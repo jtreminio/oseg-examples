@@ -39,7 +39,7 @@ public class PatchMetricExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling Metrics#patchMetric");
+            System.err.println("Exception when calling MetricsApi#patchMetric");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

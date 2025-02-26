@@ -34,7 +34,7 @@ public class PostMigrationSafetyIssuesExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling FeatureFlags#PostMigrationSafetyIssues: " + e.Message);
+            Console.WriteLine("Exception when calling FeatureFlagsApi#PostMigrationSafetyIssues: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

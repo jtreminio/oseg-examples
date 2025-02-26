@@ -27,7 +27,7 @@ public class DeleteRepositoryExample
                 null // repo
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling CodeReferences#deleteRepository");
+            System.err.println("Exception when calling CodeReferencesApi#deleteRepository");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

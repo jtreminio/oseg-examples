@@ -31,7 +31,7 @@ public class PatchAIConfigExample
 
         try
         {
-            var response = new AIConfigsBetaApi(config).patchAIConfig(
+            var response = new AiConfigsBetaApi(config).patchAIConfig(
                 null, // lDAPIVersion
                 null, // projectKey
                 null, // configKey
@@ -40,7 +40,7 @@ public class PatchAIConfigExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling AIConfigsBeta#patchAIConfig");
+            System.err.println("Exception when calling AiConfigsBetaApi#patchAIConfig");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

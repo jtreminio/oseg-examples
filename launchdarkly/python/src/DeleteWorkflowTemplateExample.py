@@ -14,4 +14,4 @@ with ApiClient(configuration) as api_client:
             template_key=None,
         )
     except ApiException as e:
-        print("Exception when calling WorkflowTemplates#delete_workflow_template: %s\n" % e)
+        print("Exception when calling WorkflowTemplatesApi#delete_workflow_template: %s\n" % e)

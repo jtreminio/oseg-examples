@@ -46,7 +46,7 @@ public class CreateFlagImportConfigurationExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling FlagImportConfigurationsBeta#CreateFlagImportConfiguration: " + e.Message);
+            Console.WriteLine("Exception when calling FlagImportConfigurationsBetaApi#CreateFlagImportConfiguration: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.CodeReferencesApiApiKeys.ApiKey, "YOUR_API_KEY");
 apiCaller.getRootStatistic().then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling CodeReferences#getRootStatistic:");
+  console.log("Exception when calling CodeReferencesApi#getRootStatistic:");
   console.log(error.body);
 });

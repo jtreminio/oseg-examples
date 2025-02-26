@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.CustomRolesApiApiKeys.ApiKey, "YOUR_API_KEY");
 apiCaller.deleteCustomRole(
   undefined, // customRoleKey
 ).catch(error => {
-  console.log("Exception when calling CustomRoles#deleteCustomRole:");
+  console.log("Exception when calling CustomRolesApi#deleteCustomRole:");
   console.log(error.body);
 });

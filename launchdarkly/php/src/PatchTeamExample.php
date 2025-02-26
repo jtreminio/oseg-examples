@@ -30,5 +30,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Teams#patchTeam: {$e->getMessage()}";
+    echo "Exception when calling TeamsApi#patchTeam: {$e->getMessage()}";
 }

@@ -24,7 +24,7 @@ public class GetRootStatisticExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling CodeReferences#GetRootStatistic: " + e.Message);
+            Console.WriteLine("Exception when calling CodeReferencesApi#GetRootStatistic: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

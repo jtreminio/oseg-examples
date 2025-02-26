@@ -10,5 +10,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling Other#get_ips: #{e}"
+    puts "Exception when calling OtherApi#get_ips: #{e}"
 end

@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.PersistentStoreIntegrationsBetaApiApiKeys.ApiKey, "YOUR_
 apiCaller.getBigSegmentStoreIntegrations().then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling PersistentStoreIntegrationsBeta#getBigSegmentStoreIntegrations:");
+  console.log("Exception when calling PersistentStoreIntegrationsBetaApi#getBigSegmentStoreIntegrations:");
   console.log(error.body);
 });

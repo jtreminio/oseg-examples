@@ -24,6 +24,6 @@ apiCaller.patchExpiringUserTargets(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling FeatureFlags#patchExpiringUserTargets:");
+  console.log("Exception when calling FeatureFlagsApi#patchExpiringUserTargets:");
   console.log(error.body);
 });

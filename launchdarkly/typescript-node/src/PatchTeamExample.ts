@@ -21,6 +21,6 @@ apiCaller.patchTeam(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Teams#patchTeam:");
+  console.log("Exception when calling TeamsApi#patchTeam:");
   console.log(error.body);
 });

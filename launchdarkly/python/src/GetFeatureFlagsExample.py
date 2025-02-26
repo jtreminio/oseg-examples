@@ -26,4 +26,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling FeatureFlags#get_feature_flags: %s\n" % e)
+        print("Exception when calling FeatureFlagsApi#get_feature_flags: %s\n" % e)

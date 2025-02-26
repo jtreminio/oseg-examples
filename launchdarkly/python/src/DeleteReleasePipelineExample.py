@@ -15,4 +15,4 @@ with ApiClient(configuration) as api_client:
             pipeline_key=None,
         )
     except ApiException as e:
-        print("Exception when calling ReleasePipelinesBeta#delete_release_pipeline: %s\n" % e)
+        print("Exception when calling ReleasePipelinesBetaApi#delete_release_pipeline: %s\n" % e)

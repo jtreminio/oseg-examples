@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.InsightsScoresBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 apiCaller.getInsightGroups().then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling InsightsScoresBeta#getInsightGroups:");
+  console.log("Exception when calling InsightsScoresBetaApi#getInsightGroups:");
   console.log(error.body);
 });

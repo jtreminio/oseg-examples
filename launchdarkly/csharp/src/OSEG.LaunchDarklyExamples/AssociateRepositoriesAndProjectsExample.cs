@@ -40,7 +40,7 @@ public class AssociateRepositoriesAndProjectsExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling InsightsRepositoriesBeta#AssociateRepositoriesAndProjects: " + e.Message);
+            Console.WriteLine("Exception when calling InsightsRepositoriesBetaApi#AssociateRepositoriesAndProjects: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

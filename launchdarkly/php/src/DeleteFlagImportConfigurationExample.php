@@ -17,5 +17,5 @@ try {
         integration_id: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling FlagImportConfigurationsBeta#deleteFlagImportConfiguration: {$e->getMessage()}";
+    echo "Exception when calling FlagImportConfigurationsBetaApi#deleteFlagImportConfiguration: {$e->getMessage()}";
 }

@@ -10,6 +10,6 @@ apiCaller.getToken(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling AccessTokens#getToken:");
+  console.log("Exception when calling AccessTokensApi#getToken:");
   console.log(error.body);
 });

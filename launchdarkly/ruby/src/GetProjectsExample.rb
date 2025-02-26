@@ -10,5 +10,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling Projects#get_projects: #{e}"
+    puts "Exception when calling ProjectsApi#get_projects: #{e}"
 end

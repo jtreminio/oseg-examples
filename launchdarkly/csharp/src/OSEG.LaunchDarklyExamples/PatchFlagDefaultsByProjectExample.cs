@@ -37,7 +37,7 @@ public class PatchFlagDefaultsByProjectExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Projects#PatchFlagDefaultsByProject: " + e.Message);
+            Console.WriteLine("Exception when calling ProjectsApi#PatchFlagDefaultsByProject: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

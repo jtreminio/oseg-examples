@@ -21,6 +21,6 @@ apiCaller.postExtinction(
   undefined, // branch
   extinction,
 ).catch(error => {
-  console.log("Exception when calling CodeReferences#postExtinction:");
+  console.log("Exception when calling CodeReferencesApi#postExtinction:");
   console.log(error.body);
 });

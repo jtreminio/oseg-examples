@@ -27,7 +27,7 @@ public class GetUserAttributeNamesExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling UsersBeta#GetUserAttributeNames: " + e.Message);
+            Console.WriteLine("Exception when calling UsersBetaApi#GetUserAttributeNames: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

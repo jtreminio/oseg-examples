@@ -16,4 +16,4 @@ with ApiClient(configuration) as api_client:
             segment_key=None,
         )
     except ApiException as e:
-        print("Exception when calling Segments#create_big_segment_export: %s\n" % e)
+        print("Exception when calling SegmentsApi#create_big_segment_export: %s\n" % e)

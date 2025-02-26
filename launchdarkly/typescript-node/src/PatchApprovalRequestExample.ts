@@ -10,6 +10,6 @@ apiCaller.patchApprovalRequest(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling ApprovalsBeta#patchApprovalRequest:");
+  console.log("Exception when calling ApprovalsBetaApi#patchApprovalRequest:");
   console.log(error.body);
 });

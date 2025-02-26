@@ -13,6 +13,6 @@ apiCaller.validateIntegrationDeliveryConfiguration(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling IntegrationDeliveryConfigurationsBeta#validateIntegrationDeliveryConfiguration:");
+  console.log("Exception when calling IntegrationDeliveryConfigurationsBetaApi#validateIntegrationDeliveryConfiguration:");
   console.log(error.body);
 });

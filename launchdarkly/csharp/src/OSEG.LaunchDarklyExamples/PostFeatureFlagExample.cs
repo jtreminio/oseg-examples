@@ -39,7 +39,7 @@ public class PostFeatureFlagExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling FeatureFlags#PostFeatureFlag: " + e.Message);
+            Console.WriteLine("Exception when calling FeatureFlagsApi#PostFeatureFlag: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

@@ -25,7 +25,7 @@ public class DeleteReleasePipelineExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling ReleasePipelinesBeta#DeleteReleasePipeline: " + e.Message);
+            Console.WriteLine("Exception when calling ReleasePipelinesBetaApi#DeleteReleasePipeline: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

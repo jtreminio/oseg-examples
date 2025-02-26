@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.AccountUsageBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 apiCaller.getExperimentationKeysUsage().then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling AccountUsageBeta#getExperimentationKeysUsage:");
+  console.log("Exception when calling AccountUsageBetaApi#getExperimentationKeysUsage:");
   console.log(error.body);
 });

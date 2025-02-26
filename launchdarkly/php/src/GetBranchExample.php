@@ -20,5 +20,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling CodeReferences#getBranch: {$e->getMessage()}";
+    echo "Exception when calling CodeReferencesApi#getBranch: {$e->getMessage()}";
 }

@@ -11,6 +11,6 @@ apiCaller.deleteFlagConfigScheduledChanges(
   undefined, // environmentKey
   undefined, // id
 ).catch(error => {
-  console.log("Exception when calling ScheduledChanges#deleteFlagConfigScheduledChanges:");
+  console.log("Exception when calling ScheduledChangesApi#deleteFlagConfigScheduledChanges:");
   console.log(error.body);
 });

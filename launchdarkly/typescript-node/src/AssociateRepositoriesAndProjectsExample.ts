@@ -21,6 +21,6 @@ apiCaller.associateRepositoriesAndProjects(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling InsightsRepositoriesBeta#associateRepositoriesAndProjects:");
+  console.log("Exception when calling InsightsRepositoriesBetaApi#associateRepositoriesAndProjects:");
   console.log(error.body);
 });

@@ -28,7 +28,7 @@ public class DeleteMetricGroupExample
                 null // metricGroupKey
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling MetricsBeta#deleteMetricGroup");
+            System.err.println("Exception when calling MetricsBetaApi#deleteMetricGroup");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

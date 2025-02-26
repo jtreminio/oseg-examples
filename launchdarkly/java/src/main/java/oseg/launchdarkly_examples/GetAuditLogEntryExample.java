@@ -29,7 +29,7 @@ public class GetAuditLogEntryExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling AuditLog#getAuditLogEntry");
+            System.err.println("Exception when calling AuditLogApi#getAuditLogEntry");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

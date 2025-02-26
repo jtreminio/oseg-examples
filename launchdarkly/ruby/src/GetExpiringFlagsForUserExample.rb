@@ -14,5 +14,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling UserSettings#get_expiring_flags_for_user: #{e}"
+    puts "Exception when calling UserSettingsApi#get_expiring_flags_for_user: #{e}"
 end

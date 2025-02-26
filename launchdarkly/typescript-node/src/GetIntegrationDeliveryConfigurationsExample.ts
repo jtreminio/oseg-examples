@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.IntegrationDeliveryConfigurationsBetaApiApiKeys.ApiKey, 
 apiCaller.getIntegrationDeliveryConfigurations().then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling IntegrationDeliveryConfigurationsBeta#getIntegrationDeliveryConfigurations:");
+  console.log("Exception when calling IntegrationDeliveryConfigurationsBetaApi#getIntegrationDeliveryConfigurations:");
   console.log(error.body);
 });

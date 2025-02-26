@@ -14,4 +14,4 @@ with ApiClient(configuration) as api_client:
             custom_role_key=None,
         )
     except ApiException as e:
-        print("Exception when calling CustomRoles#delete_custom_role: %s\n" % e)
+        print("Exception when calling CustomRolesApi#delete_custom_role: %s\n" % e)

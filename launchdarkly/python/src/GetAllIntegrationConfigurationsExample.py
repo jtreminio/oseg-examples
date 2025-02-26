@@ -16,4 +16,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling IntegrationsBeta#get_all_integration_configurations: %s\n" % e)
+        print("Exception when calling IntegrationsBetaApi#get_all_integration_configurations: %s\n" % e)

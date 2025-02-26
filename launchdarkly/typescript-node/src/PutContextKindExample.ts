@@ -19,6 +19,6 @@ apiCaller.putContextKind(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Contexts#putContextKind:");
+  console.log("Exception when calling ContextsApi#putContextKind:");
   console.log(error.body);
 });

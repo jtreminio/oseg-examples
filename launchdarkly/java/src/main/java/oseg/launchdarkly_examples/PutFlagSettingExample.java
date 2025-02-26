@@ -34,7 +34,7 @@ public class PutFlagSettingExample
                 valuePut
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling UserSettings#putFlagSetting");
+            System.err.println("Exception when calling UserSettingsApi#putFlagSetting");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

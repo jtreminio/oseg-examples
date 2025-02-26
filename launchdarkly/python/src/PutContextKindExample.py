@@ -26,4 +26,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling Contexts#put_context_kind: %s\n" % e)
+        print("Exception when calling ContextsApi#put_context_kind: %s\n" % e)

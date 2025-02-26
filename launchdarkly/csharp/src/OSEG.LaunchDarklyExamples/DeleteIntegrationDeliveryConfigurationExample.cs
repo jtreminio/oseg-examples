@@ -27,7 +27,7 @@ public class DeleteIntegrationDeliveryConfigurationExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling IntegrationDeliveryConfigurationsBeta#DeleteIntegrationDeliveryConfiguration: " + e.Message);
+            Console.WriteLine("Exception when calling IntegrationDeliveryConfigurationsBetaApi#DeleteIntegrationDeliveryConfiguration: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

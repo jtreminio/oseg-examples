@@ -31,7 +31,7 @@ public class GetFeatureFlagStatusAcrossEnvironmentsExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling FeatureFlags#getFeatureFlagStatusAcrossEnvironments");
+            System.err.println("Exception when calling FeatureFlagsApi#getFeatureFlagStatusAcrossEnvironments");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

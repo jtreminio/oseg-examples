@@ -13,6 +13,6 @@ apiCaller.getBigSegmentImport(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Segments#getBigSegmentImport:");
+  console.log("Exception when calling SegmentsApi#getBigSegmentImport:");
   console.log(error.body);
 });

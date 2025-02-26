@@ -34,7 +34,7 @@ public class GetLeadTimeChartExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling InsightsChartsBeta#GetLeadTimeChart: " + e.Message);
+            Console.WriteLine("Exception when calling InsightsChartsBetaApi#GetLeadTimeChart: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

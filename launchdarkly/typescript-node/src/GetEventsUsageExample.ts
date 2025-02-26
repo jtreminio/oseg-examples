@@ -12,6 +12,6 @@ apiCaller.getEventsUsage(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling AccountUsageBeta#getEventsUsage:");
+  console.log("Exception when calling AccountUsageBetaApi#getEventsUsage:");
   console.log(error.body);
 });

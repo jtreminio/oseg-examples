@@ -22,7 +22,7 @@ public class GetOpenapiSpecExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Other#GetOpenapiSpec: " + e.Message);
+            Console.WriteLine("Exception when calling OtherApi#GetOpenapiSpec: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

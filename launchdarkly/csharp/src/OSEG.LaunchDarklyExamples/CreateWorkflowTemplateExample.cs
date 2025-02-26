@@ -64,7 +64,7 @@ public class CreateWorkflowTemplateExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling WorkflowTemplates#CreateWorkflowTemplate: " + e.Message);
+            Console.WriteLine("Exception when calling WorkflowTemplatesApi#CreateWorkflowTemplate: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

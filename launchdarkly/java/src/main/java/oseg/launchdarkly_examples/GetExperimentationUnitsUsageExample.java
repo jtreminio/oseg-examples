@@ -27,7 +27,7 @@ public class GetExperimentationUnitsUsageExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling AccountUsageBeta#getExperimentationUnitsUsage");
+            System.err.println("Exception when calling AccountUsageBetaApi#getExperimentationUnitsUsage");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

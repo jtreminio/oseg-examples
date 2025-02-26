@@ -31,7 +31,7 @@ public class GetAIConfigsExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling AIConfigsBeta#GetAIConfigs: " + e.Message);
+            Console.WriteLine("Exception when calling AIConfigsBetaApi#GetAIConfigs: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

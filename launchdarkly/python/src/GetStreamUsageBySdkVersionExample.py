@@ -21,4 +21,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling AccountUsageBeta#get_stream_usage_by_sdk_version: %s\n" % e)
+        print("Exception when calling AccountUsageBetaApi#get_stream_usage_by_sdk_version: %s\n" % e)

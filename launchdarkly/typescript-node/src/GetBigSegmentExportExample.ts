@@ -13,6 +13,6 @@ apiCaller.getBigSegmentExport(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Segments#getBigSegmentExport:");
+  console.log("Exception when calling SegmentsApi#getBigSegmentExport:");
   console.log(error.body);
 });

@@ -12,6 +12,6 @@ apiCaller.getUser(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Users#getUser:");
+  console.log("Exception when calling UsersApi#getUser:");
   console.log(error.body);
 });

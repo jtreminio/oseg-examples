@@ -10,5 +10,5 @@ begin
         nil, # id
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling RelayProxyConfigurations#delete_relay_auto_config: #{e}"
+    puts "Exception when calling RelayProxyConfigurationsApi#delete_relay_auto_config: #{e}"
 end

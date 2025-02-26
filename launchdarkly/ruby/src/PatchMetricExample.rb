@@ -22,5 +22,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling Metrics#patch_metric: #{e}"
+    puts "Exception when calling MetricsApi#patch_metric: #{e}"
 end

@@ -23,5 +23,5 @@ begin
         extinction,
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling CodeReferences#post_extinction: #{e}"
+    puts "Exception when calling CodeReferencesApi#post_extinction: #{e}"
 end

@@ -18,5 +18,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Environments#getEnvironment: {$e->getMessage()}";
+    echo "Exception when calling EnvironmentsApi#getEnvironment: {$e->getMessage()}";
 }

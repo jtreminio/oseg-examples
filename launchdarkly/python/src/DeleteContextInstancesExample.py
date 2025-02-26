@@ -16,4 +16,4 @@ with ApiClient(configuration) as api_client:
             id=None,
         )
     except ApiException as e:
-        print("Exception when calling Contexts#delete_context_instances: %s\n" % e)
+        print("Exception when calling ContextsApi#delete_context_instances: %s\n" % e)

@@ -41,6 +41,6 @@ apiCaller.postWorkflow(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Workflows#postWorkflow:");
+  console.log("Exception when calling WorkflowsApi#postWorkflow:");
   console.log(error.body);
 });

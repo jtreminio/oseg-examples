@@ -26,5 +26,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Webhooks#patchWebhook: {$e->getMessage()}";
+    echo "Exception when calling WebhooksApi#patchWebhook: {$e->getMessage()}";
 }

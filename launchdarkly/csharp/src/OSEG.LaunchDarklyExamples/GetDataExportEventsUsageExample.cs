@@ -24,7 +24,7 @@ public class GetDataExportEventsUsageExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling AccountUsageBeta#GetDataExportEventsUsage: " + e.Message);
+            Console.WriteLine("Exception when calling AccountUsageBetaApi#GetDataExportEventsUsage: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

@@ -18,5 +18,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling AccessTokens#resetToken: {$e->getMessage()}";
+    echo "Exception when calling AccessTokensApi#resetToken: {$e->getMessage()}";
 }

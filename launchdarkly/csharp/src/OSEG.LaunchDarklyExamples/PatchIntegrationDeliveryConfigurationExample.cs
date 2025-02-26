@@ -40,7 +40,7 @@ public class PatchIntegrationDeliveryConfigurationExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling IntegrationDeliveryConfigurationsBeta#PatchIntegrationDeliveryConfiguration: " + e.Message);
+            Console.WriteLine("Exception when calling IntegrationDeliveryConfigurationsBetaApi#PatchIntegrationDeliveryConfiguration: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

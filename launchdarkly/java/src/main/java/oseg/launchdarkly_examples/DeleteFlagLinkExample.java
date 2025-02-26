@@ -29,7 +29,7 @@ public class DeleteFlagLinkExample
                 null // id
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling FlagLinksBeta#deleteFlagLink");
+            System.err.println("Exception when calling FlagLinksBetaApi#deleteFlagLink");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

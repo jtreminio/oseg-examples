@@ -20,6 +20,6 @@ apiCaller.getFeatureFlags(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling FeatureFlags#getFeatureFlags:");
+  console.log("Exception when calling FeatureFlagsApi#getFeatureFlags:");
   console.log(error.body);
 });

@@ -25,7 +25,7 @@ public class DeleteMetricGroupExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling MetricsBeta#DeleteMetricGroup: " + e.Message);
+            Console.WriteLine("Exception when calling MetricsBetaApi#DeleteMetricGroup: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

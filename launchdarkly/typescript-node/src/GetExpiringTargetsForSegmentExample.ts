@@ -12,6 +12,6 @@ apiCaller.getExpiringTargetsForSegment(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Segments#getExpiringTargetsForSegment:");
+  console.log("Exception when calling SegmentsApi#getExpiringTargetsForSegment:");
   console.log(error.body);
 });

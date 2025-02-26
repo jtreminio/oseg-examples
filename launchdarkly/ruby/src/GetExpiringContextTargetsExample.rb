@@ -14,5 +14,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling FeatureFlags#get_expiring_context_targets: #{e}"
+    puts "Exception when calling FeatureFlagsApi#get_expiring_context_targets: #{e}"
 end

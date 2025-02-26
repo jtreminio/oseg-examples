@@ -13,6 +13,6 @@ apiCaller.postToken(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling AccessTokens#postToken:");
+  console.log("Exception when calling AccessTokensApi#postToken:");
   console.log(error.body);
 });

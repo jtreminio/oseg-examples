@@ -54,6 +54,6 @@ apiCaller.createIntegrationConfiguration(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling IntegrationsBeta#createIntegrationConfiguration:");
+  console.log("Exception when calling IntegrationsBetaApi#createIntegrationConfiguration:");
   console.log(error.body);
 });

@@ -58,6 +58,6 @@ apiCaller.postReleasePipeline(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling ReleasePipelinesBeta#postReleasePipeline:");
+  console.log("Exception when calling ReleasePipelinesBetaApi#postReleasePipeline:");
   console.log(error.body);
 });

@@ -10,6 +10,6 @@ apiCaller.getSubscriptions(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling IntegrationAuditLogSubscriptions#getSubscriptions:");
+  console.log("Exception when calling IntegrationAuditLogSubscriptionsApi#getSubscriptions:");
   console.log(error.body);
 });

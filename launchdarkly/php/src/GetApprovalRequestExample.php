@@ -18,5 +18,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Approvals#getApprovalRequest: {$e->getMessage()}";
+    echo "Exception when calling ApprovalsApi#getApprovalRequest: {$e->getMessage()}";
 }

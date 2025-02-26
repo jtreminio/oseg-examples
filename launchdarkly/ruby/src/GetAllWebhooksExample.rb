@@ -10,5 +10,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling Webhooks#get_all_webhooks: #{e}"
+    puts "Exception when calling WebhooksApi#get_all_webhooks: #{e}"
 end

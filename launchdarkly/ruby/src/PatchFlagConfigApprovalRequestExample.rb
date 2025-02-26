@@ -15,5 +15,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling ApprovalsBeta#patch_flag_config_approval_request: #{e}"
+    puts "Exception when calling ApprovalsBetaApi#patch_flag_config_approval_request: #{e}"
 end

@@ -52,7 +52,7 @@ public class PostFlagCopyConfigApprovalRequestExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Approvals#PostFlagCopyConfigApprovalRequest: " + e.Message);
+            Console.WriteLine("Exception when calling ApprovalsApi#PostFlagCopyConfigApprovalRequest: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

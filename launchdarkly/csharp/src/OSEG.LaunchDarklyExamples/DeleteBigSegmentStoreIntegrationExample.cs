@@ -27,7 +27,7 @@ public class DeleteBigSegmentStoreIntegrationExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling PersistentStoreIntegrationsBeta#DeleteBigSegmentStoreIntegration: " + e.Message);
+            Console.WriteLine("Exception when calling PersistentStoreIntegrationsBetaApi#DeleteBigSegmentStoreIntegration: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

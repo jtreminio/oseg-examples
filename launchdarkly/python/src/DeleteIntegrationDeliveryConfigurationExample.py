@@ -17,4 +17,4 @@ with ApiClient(configuration) as api_client:
             id=None,
         )
     except ApiException as e:
-        print("Exception when calling IntegrationDeliveryConfigurationsBeta#delete_integration_delivery_configuration: %s\n" % e)
+        print("Exception when calling IntegrationDeliveryConfigurationsBetaApi#delete_integration_delivery_configuration: %s\n" % e)

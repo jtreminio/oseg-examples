@@ -35,7 +35,7 @@ public class CreateReleaseForFlagExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling ReleasesBeta#createReleaseForFlag");
+            System.err.println("Exception when calling ReleasesBetaApi#createReleaseForFlag");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

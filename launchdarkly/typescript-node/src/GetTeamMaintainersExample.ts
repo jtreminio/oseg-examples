@@ -12,6 +12,6 @@ apiCaller.getTeamMaintainers(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Teams#getTeamMaintainers:");
+  console.log("Exception when calling TeamsApi#getTeamMaintainers:");
   console.log(error.body);
 });

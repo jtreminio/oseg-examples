@@ -13,6 +13,6 @@ apiCaller.getTriggerWorkflowById(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling FlagTriggers#getTriggerWorkflowById:");
+  console.log("Exception when calling FlagTriggersApi#getTriggerWorkflowById:");
   console.log(error.body);
 });

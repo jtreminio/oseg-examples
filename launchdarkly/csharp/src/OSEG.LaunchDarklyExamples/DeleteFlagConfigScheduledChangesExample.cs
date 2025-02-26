@@ -27,7 +27,7 @@ public class DeleteFlagConfigScheduledChangesExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling ScheduledChanges#DeleteFlagConfigScheduledChanges: " + e.Message);
+            Console.WriteLine("Exception when calling ScheduledChangesApi#DeleteFlagConfigScheduledChanges: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

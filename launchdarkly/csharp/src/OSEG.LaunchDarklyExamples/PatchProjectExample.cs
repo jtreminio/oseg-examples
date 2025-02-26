@@ -37,7 +37,7 @@ public class PatchProjectExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Projects#PatchProject: " + e.Message);
+            Console.WriteLine("Exception when calling ProjectsApi#PatchProject: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

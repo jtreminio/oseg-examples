@@ -16,4 +16,4 @@ with ApiClient(configuration) as api_client:
             id=None,
         )
     except ApiException as e:
-        print("Exception when calling DataExportDestinations#delete_destination: %s\n" % e)
+        print("Exception when calling DataExportDestinationsApi#delete_destination: %s\n" % e)

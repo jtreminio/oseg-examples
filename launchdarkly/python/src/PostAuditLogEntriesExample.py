@@ -38,4 +38,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling AuditLog#post_audit_log_entries: %s\n" % e)
+        print("Exception when calling AuditLogApi#post_audit_log_entries: %s\n" % e)

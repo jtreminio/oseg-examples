@@ -48,7 +48,7 @@ public class CreateDeploymentEventExample
                 postDeploymentEventInput
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling InsightsDeploymentsBeta#createDeploymentEvent");
+            System.err.println("Exception when calling InsightsDeploymentsBetaApi#createDeploymentEvent");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

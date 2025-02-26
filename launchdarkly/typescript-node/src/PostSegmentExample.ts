@@ -22,6 +22,6 @@ apiCaller.postSegment(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Segments#postSegment:");
+  console.log("Exception when calling SegmentsApi#postSegment:");
   console.log(error.body);
 });

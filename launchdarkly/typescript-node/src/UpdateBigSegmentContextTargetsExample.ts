@@ -27,6 +27,6 @@ apiCaller.updateBigSegmentContextTargets(
   undefined, // segmentKey
   segmentUserState,
 ).catch(error => {
-  console.log("Exception when calling Segments#updateBigSegmentContextTargets:");
+  console.log("Exception when calling SegmentsApi#updateBigSegmentContextTargets:");
   console.log(error.body);
 });

@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.ProjectsApiApiKeys.ApiKey, "YOUR_API_KEY");
 apiCaller.deleteProject(
   undefined, // projectKey
 ).catch(error => {
-  console.log("Exception when calling Projects#deleteProject:");
+  console.log("Exception when calling ProjectsApi#deleteProject:");
   console.log(error.body);
 });

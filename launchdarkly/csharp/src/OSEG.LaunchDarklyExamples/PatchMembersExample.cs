@@ -42,7 +42,7 @@ public class PatchMembersExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling AccountMembersBeta#PatchMembers: " + e.Message);
+            Console.WriteLine("Exception when calling AccountMembersBetaApi#PatchMembers: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

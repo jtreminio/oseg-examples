@@ -14,4 +14,4 @@ with ApiClient(configuration) as api_client:
             id=None,
         )
     except ApiException as e:
-        print("Exception when calling Webhooks#delete_webhook: %s\n" % e)
+        print("Exception when calling WebhooksApi#delete_webhook: %s\n" % e)

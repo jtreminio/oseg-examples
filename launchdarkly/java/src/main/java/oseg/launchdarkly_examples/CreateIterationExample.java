@@ -74,7 +74,7 @@ public class CreateIterationExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling Experiments#createIteration");
+            System.err.println("Exception when calling ExperimentsApi#createIteration");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

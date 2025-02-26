@@ -26,7 +26,7 @@ public class DeleteSegmentExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Segments#DeleteSegment: " + e.Message);
+            Console.WriteLine("Exception when calling SegmentsApi#DeleteSegment: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

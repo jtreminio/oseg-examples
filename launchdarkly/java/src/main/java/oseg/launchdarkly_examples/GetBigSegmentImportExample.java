@@ -32,7 +32,7 @@ public class GetBigSegmentImportExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling Segments#getBigSegmentImport");
+            System.err.println("Exception when calling SegmentsApi#getBigSegmentImport");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

@@ -26,7 +26,7 @@ public class GetExperimentationSettingsExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Experiments#GetExperimentationSettings: " + e.Message);
+            Console.WriteLine("Exception when calling ExperimentsApi#GetExperimentationSettings: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

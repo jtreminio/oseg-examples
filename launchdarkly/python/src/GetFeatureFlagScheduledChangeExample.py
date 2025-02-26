@@ -19,4 +19,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling ScheduledChanges#get_feature_flag_scheduled_change: %s\n" % e)
+        print("Exception when calling ScheduledChangesApi#get_feature_flag_scheduled_change: %s\n" % e)

@@ -32,7 +32,7 @@ public class GetSegmentMembershipForUserExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling Segments#getSegmentMembershipForUser");
+            System.err.println("Exception when calling SegmentsApi#getSegmentMembershipForUser");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

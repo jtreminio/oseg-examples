@@ -33,5 +33,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling IntegrationDeliveryConfigurationsBeta#createIntegrationDeliveryConfiguration: {$e->getMessage()}";
+    echo "Exception when calling IntegrationDeliveryConfigurationsBetaApi#createIntegrationDeliveryConfiguration: {$e->getMessage()}";
 }

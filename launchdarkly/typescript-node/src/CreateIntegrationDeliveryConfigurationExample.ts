@@ -24,6 +24,6 @@ apiCaller.createIntegrationDeliveryConfiguration(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling IntegrationDeliveryConfigurationsBeta#createIntegrationDeliveryConfiguration:");
+  console.log("Exception when calling IntegrationDeliveryConfigurationsBetaApi#createIntegrationDeliveryConfiguration:");
   console.log(error.body);
 });

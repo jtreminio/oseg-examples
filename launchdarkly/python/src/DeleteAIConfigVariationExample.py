@@ -17,4 +17,4 @@ with ApiClient(configuration) as api_client:
             variation_key=None,
         )
     except ApiException as e:
-        print("Exception when calling AIConfigsBeta#delete_ai_config_variation: %s\n" % e)
+        print("Exception when calling AIConfigsBetaApi#delete_ai_config_variation: %s\n" % e)

@@ -24,7 +24,7 @@ public class GetInsightGroupsExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling InsightsScoresBeta#GetInsightGroups: " + e.Message);
+            Console.WriteLine("Exception when calling InsightsScoresBetaApi#GetInsightGroups: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

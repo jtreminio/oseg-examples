@@ -19,5 +19,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Environments#resetEnvironmentSDKKey: {$e->getMessage()}";
+    echo "Exception when calling EnvironmentsApi#resetEnvironmentSDKKey: {$e->getMessage()}";
 }

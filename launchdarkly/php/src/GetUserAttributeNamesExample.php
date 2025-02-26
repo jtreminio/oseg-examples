@@ -18,5 +18,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling UsersBeta#getUserAttributeNames: {$e->getMessage()}";
+    echo "Exception when calling UsersBetaApi#getUserAttributeNames: {$e->getMessage()}";
 }

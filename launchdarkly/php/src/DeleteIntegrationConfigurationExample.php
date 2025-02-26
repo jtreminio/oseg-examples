@@ -15,5 +15,5 @@ try {
         integration_configuration_id: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling IntegrationsBeta#deleteIntegrationConfiguration: {$e->getMessage()}";
+    echo "Exception when calling IntegrationsBetaApi#deleteIntegrationConfiguration: {$e->getMessage()}";
 }

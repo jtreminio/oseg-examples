@@ -23,7 +23,7 @@ public class GetAIConfigsExample
 
         try
         {
-            var response = new AIConfigsBetaApi(config).getAIConfigs(
+            var response = new AiConfigsBetaApi(config).getAIConfigs(
                 null, // lDAPIVersion
                 "default", // projectKey
                 null, // sort
@@ -34,7 +34,7 @@ public class GetAIConfigsExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling AIConfigsBeta#getAIConfigs");
+            System.err.println("Exception when calling AiConfigsBetaApi#getAIConfigs");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

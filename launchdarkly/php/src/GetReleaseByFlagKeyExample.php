@@ -18,5 +18,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling ReleasesBeta#getReleaseByFlagKey: {$e->getMessage()}";
+    echo "Exception when calling ReleasesBetaApi#getReleaseByFlagKey: {$e->getMessage()}";
 }

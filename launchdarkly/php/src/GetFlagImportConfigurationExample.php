@@ -19,5 +19,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling FlagImportConfigurationsBeta#getFlagImportConfiguration: {$e->getMessage()}";
+    echo "Exception when calling FlagImportConfigurationsBetaApi#getFlagImportConfiguration: {$e->getMessage()}";
 }

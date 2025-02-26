@@ -29,7 +29,7 @@ public class GetSegmentMembershipForContextExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Segments#GetSegmentMembershipForContext: " + e.Message);
+            Console.WriteLine("Exception when calling SegmentsApi#GetSegmentMembershipForContext: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

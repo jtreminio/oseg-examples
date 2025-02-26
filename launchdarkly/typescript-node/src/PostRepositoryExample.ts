@@ -18,6 +18,6 @@ apiCaller.postRepository(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling CodeReferences#postRepository:");
+  console.log("Exception when calling CodeReferencesApi#postRepository:");
   console.log(error.body);
 });

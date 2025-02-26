@@ -17,5 +17,5 @@ try {
         id: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling DataExportDestinations#deleteDestination: {$e->getMessage()}";
+    echo "Exception when calling DataExportDestinationsApi#deleteDestination: {$e->getMessage()}";
 }

@@ -28,6 +28,6 @@ apiCaller.patchExpiringUserTargetsForSegment(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Segments#patchExpiringUserTargetsForSegment:");
+  console.log("Exception when calling SegmentsApi#patchExpiringUserTargetsForSegment:");
   console.log(error.body);
 });

@@ -18,5 +18,5 @@ try {
         member_id: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling FollowFlags#deleteFlagFollower: {$e->getMessage()}";
+    echo "Exception when calling FollowFlagsApi#deleteFlagFollower: {$e->getMessage()}";
 }

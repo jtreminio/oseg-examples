@@ -38,7 +38,7 @@ public class GetFlagEventsExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling InsightsFlagEventsBeta#GetFlagEvents: " + e.Message);
+            Console.WriteLine("Exception when calling InsightsFlagEventsBetaApi#GetFlagEvents: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

@@ -27,5 +27,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling Experiments#patch_experiment: #{e}"
+    puts "Exception when calling ExperimentsApi#patch_experiment: #{e}"
 end

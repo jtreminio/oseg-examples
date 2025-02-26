@@ -43,7 +43,7 @@ public class PatchExpiringUserTargetsExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling FeatureFlags#PatchExpiringUserTargets: " + e.Message);
+            Console.WriteLine("Exception when calling FeatureFlagsApi#PatchExpiringUserTargets: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

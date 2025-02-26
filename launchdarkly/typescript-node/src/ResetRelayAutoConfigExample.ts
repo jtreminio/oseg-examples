@@ -11,6 +11,6 @@ apiCaller.resetRelayAutoConfig(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling RelayProxyConfigurations#resetRelayAutoConfig:");
+  console.log("Exception when calling RelayProxyConfigurationsApi#resetRelayAutoConfig:");
   console.log(error.body);
 });

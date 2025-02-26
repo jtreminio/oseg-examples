@@ -49,7 +49,7 @@ public class PostMembersExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling AccountMembers#postMembers");
+            System.err.println("Exception when calling AccountMembersApi#postMembers");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

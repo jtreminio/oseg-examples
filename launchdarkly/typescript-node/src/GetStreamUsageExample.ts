@@ -13,6 +13,6 @@ apiCaller.getStreamUsage(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling AccountUsageBeta#getStreamUsage:");
+  console.log("Exception when calling AccountUsageBetaApi#getStreamUsage:");
   console.log(error.body);
 });

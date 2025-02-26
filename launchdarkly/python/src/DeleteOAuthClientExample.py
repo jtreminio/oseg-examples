@@ -14,4 +14,4 @@ with ApiClient(configuration) as api_client:
             client_id=None,
         )
     except ApiException as e:
-        print("Exception when calling OAuth2Clients#delete_o_auth_client: %s\n" % e)
+        print("Exception when calling OAuth2ClientsApi#delete_o_auth_client: %s\n" % e)

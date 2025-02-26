@@ -13,6 +13,6 @@ apiCaller.getContextAttributeNames(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Contexts#getContextAttributeNames:");
+  console.log("Exception when calling ContextsApi#getContextAttributeNames:");
   console.log(error.body);
 });

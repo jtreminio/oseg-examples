@@ -12,6 +12,6 @@ apiCaller.getTeamRoles(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Teams#getTeamRoles:");
+  console.log("Exception when calling TeamsApi#getTeamRoles:");
   console.log(error.body);
 });

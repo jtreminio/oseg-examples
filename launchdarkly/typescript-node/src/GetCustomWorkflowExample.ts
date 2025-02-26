@@ -13,6 +13,6 @@ apiCaller.getCustomWorkflow(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Workflows#getCustomWorkflow:");
+  console.log("Exception when calling WorkflowsApi#getCustomWorkflow:");
   console.log(error.body);
 });

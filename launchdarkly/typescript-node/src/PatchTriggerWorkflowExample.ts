@@ -22,6 +22,6 @@ apiCaller.patchTriggerWorkflow(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling FlagTriggers#patchTriggerWorkflow:");
+  console.log("Exception when calling FlagTriggersApi#patchTriggerWorkflow:");
   console.log(error.body);
 });

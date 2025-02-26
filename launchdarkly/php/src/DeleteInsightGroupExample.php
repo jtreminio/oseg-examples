@@ -15,5 +15,5 @@ try {
         insight_group_key: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling InsightsScoresBeta#deleteInsightGroup: {$e->getMessage()}";
+    echo "Exception when calling InsightsScoresBetaApi#deleteInsightGroup: {$e->getMessage()}";
 }

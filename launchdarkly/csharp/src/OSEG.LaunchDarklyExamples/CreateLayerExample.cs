@@ -33,7 +33,7 @@ public class CreateLayerExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Layers#CreateLayer: " + e.Message);
+            Console.WriteLine("Exception when calling LayersApi#CreateLayer: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

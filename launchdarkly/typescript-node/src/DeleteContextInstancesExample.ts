@@ -10,6 +10,6 @@ apiCaller.deleteContextInstances(
   undefined, // environmentKey
   undefined, // id
 ).catch(error => {
-  console.log("Exception when calling Contexts#deleteContextInstances:");
+  console.log("Exception when calling ContextsApi#deleteContextInstances:");
   console.log(error.body);
 });

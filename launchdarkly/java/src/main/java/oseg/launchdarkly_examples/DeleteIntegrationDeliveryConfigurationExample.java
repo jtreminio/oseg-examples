@@ -30,7 +30,7 @@ public class DeleteIntegrationDeliveryConfigurationExample
                 null // id
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling IntegrationDeliveryConfigurationsBeta#deleteIntegrationDeliveryConfiguration");
+            System.err.println("Exception when calling IntegrationDeliveryConfigurationsBetaApi#deleteIntegrationDeliveryConfiguration");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

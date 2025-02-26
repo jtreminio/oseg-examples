@@ -28,7 +28,7 @@ public class GetFlagStatusChartExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling InsightsChartsBeta#GetFlagStatusChart: " + e.Message);
+            Console.WriteLine("Exception when calling InsightsChartsBetaApi#GetFlagStatusChart: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

@@ -38,7 +38,7 @@ public class UpdateSubscriptionExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling IntegrationAuditLogSubscriptions#UpdateSubscription: " + e.Message);
+            Console.WriteLine("Exception when calling IntegrationAuditLogSubscriptionsApi#UpdateSubscription: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

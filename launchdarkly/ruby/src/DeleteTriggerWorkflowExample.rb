@@ -13,5 +13,5 @@ begin
         nil, # id
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling FlagTriggers#delete_trigger_workflow: #{e}"
+    puts "Exception when calling FlagTriggersApi#delete_trigger_workflow: #{e}"
 end

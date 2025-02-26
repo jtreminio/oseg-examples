@@ -11,5 +11,5 @@ begin
         nil, # id
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling IntegrationAuditLogSubscriptions#delete_subscription: #{e}"
+    puts "Exception when calling IntegrationAuditLogSubscriptionsApi#delete_subscription: #{e}"
 end

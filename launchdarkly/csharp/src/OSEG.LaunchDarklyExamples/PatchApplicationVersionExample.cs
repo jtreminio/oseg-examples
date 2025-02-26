@@ -38,7 +38,7 @@ public class PatchApplicationVersionExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling ApplicationsBeta#PatchApplicationVersion: " + e.Message);
+            Console.WriteLine("Exception when calling ApplicationsBetaApi#PatchApplicationVersion: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

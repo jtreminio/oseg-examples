@@ -12,5 +12,5 @@ begin
         nil, # id
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling Contexts#delete_context_instances: #{e}"
+    puts "Exception when calling ContextsApi#delete_context_instances: #{e}"
 end

@@ -19,5 +19,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling DataExportDestinations#getDestination: {$e->getMessage()}";
+    echo "Exception when calling DataExportDestinationsApi#getDestination: {$e->getMessage()}";
 }

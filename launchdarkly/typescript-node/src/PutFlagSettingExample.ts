@@ -15,6 +15,6 @@ apiCaller.putFlagSetting(
   undefined, // featureFlagKey
   valuePut,
 ).catch(error => {
-  console.log("Exception when calling UserSettings#putFlagSetting:");
+  console.log("Exception when calling UserSettingsApi#putFlagSetting:");
   console.log(error.body);
 });

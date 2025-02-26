@@ -13,5 +13,5 @@ begin
         nil, # integration_id
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling PersistentStoreIntegrationsBeta#delete_big_segment_store_integration: #{e}"
+    puts "Exception when calling PersistentStoreIntegrationsBetaApi#delete_big_segment_store_integration: #{e}"
 end

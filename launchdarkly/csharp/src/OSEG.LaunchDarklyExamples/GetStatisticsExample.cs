@@ -27,7 +27,7 @@ public class GetStatisticsExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling CodeReferences#GetStatistics: " + e.Message);
+            Console.WriteLine("Exception when calling CodeReferencesApi#GetStatistics: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

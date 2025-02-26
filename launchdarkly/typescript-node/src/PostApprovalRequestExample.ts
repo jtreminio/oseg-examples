@@ -23,6 +23,6 @@ apiCaller.postApprovalRequest(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Approvals#postApprovalRequest:");
+  console.log("Exception when calling ApprovalsApi#postApprovalRequest:");
   console.log(error.body);
 });

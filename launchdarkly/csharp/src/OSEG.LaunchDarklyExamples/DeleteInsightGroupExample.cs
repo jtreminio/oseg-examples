@@ -24,7 +24,7 @@ public class DeleteInsightGroupExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling InsightsScoresBeta#DeleteInsightGroup: " + e.Message);
+            Console.WriteLine("Exception when calling InsightsScoresBetaApi#DeleteInsightGroup: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

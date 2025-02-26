@@ -12,5 +12,5 @@ begin
         nil, # id
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling FlagLinksBeta#delete_flag_link: #{e}"
+    puts "Exception when calling FlagLinksBetaApi#delete_flag_link: #{e}"
 end

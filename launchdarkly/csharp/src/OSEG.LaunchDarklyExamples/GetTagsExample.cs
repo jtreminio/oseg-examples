@@ -24,7 +24,7 @@ public class GetTagsExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Tags#GetTags: " + e.Message);
+            Console.WriteLine("Exception when calling TagsApi#GetTags: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

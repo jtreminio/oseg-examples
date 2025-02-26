@@ -19,6 +19,6 @@ apiCaller.updateDeployment(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling InsightsDeploymentsBeta#updateDeployment:");
+  console.log("Exception when calling InsightsDeploymentsBetaApi#updateDeployment:");
   console.log(error.body);
 });

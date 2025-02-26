@@ -14,4 +14,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling Other#get_caller_identity: %s\n" % e)
+        print("Exception when calling OtherApi#get_caller_identity: %s\n" % e)

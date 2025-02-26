@@ -11,5 +11,5 @@ begin
         nil, # project_key
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling InsightsRepositoriesBeta#delete_repository_project: #{e}"
+    puts "Exception when calling InsightsRepositoriesBetaApi#delete_repository_project: #{e}"
 end

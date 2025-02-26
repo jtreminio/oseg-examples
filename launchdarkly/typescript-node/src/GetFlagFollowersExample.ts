@@ -12,6 +12,6 @@ apiCaller.getFlagFollowers(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling FollowFlags#getFlagFollowers:");
+  console.log("Exception when calling FollowFlagsApi#getFlagFollowers:");
   console.log(error.body);
 });

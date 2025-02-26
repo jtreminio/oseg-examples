@@ -16,5 +16,5 @@ try {
         flag_key: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling ReleasesBeta#deleteReleaseByFlagKey: {$e->getMessage()}";
+    echo "Exception when calling ReleasesBetaApi#deleteReleaseByFlagKey: {$e->getMessage()}";
 }

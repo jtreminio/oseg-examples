@@ -26,7 +26,7 @@ public class GetAuditLogEntryExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling AuditLog#GetAuditLogEntry: " + e.Message);
+            Console.WriteLine("Exception when calling AuditLogApi#GetAuditLogEntry: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

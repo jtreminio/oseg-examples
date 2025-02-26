@@ -41,6 +41,6 @@ apiCaller.putBranch(
   undefined, // branch
   putBranch,
 ).catch(error => {
-  console.log("Exception when calling CodeReferences#putBranch:");
+  console.log("Exception when calling CodeReferencesApi#putBranch:");
   console.log(error.body);
 });

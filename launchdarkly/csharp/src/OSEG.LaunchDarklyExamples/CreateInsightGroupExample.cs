@@ -37,7 +37,7 @@ public class CreateInsightGroupExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling InsightsScoresBeta#CreateInsightGroup: " + e.Message);
+            Console.WriteLine("Exception when calling InsightsScoresBetaApi#CreateInsightGroup: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

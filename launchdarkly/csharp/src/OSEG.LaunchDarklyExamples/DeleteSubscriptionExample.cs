@@ -25,7 +25,7 @@ public class DeleteSubscriptionExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling IntegrationAuditLogSubscriptions#DeleteSubscription: " + e.Message);
+            Console.WriteLine("Exception when calling IntegrationAuditLogSubscriptionsApi#DeleteSubscription: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

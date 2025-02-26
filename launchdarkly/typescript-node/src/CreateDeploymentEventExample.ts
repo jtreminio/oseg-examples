@@ -25,6 +25,6 @@ postDeploymentEventInput.deploymentMetadata =   {
 apiCaller.createDeploymentEvent(
   postDeploymentEventInput,
 ).catch(error => {
-  console.log("Exception when calling InsightsDeploymentsBeta#createDeploymentEvent:");
+  console.log("Exception when calling InsightsDeploymentsBetaApi#createDeploymentEvent:");
   console.log(error.body);
 });

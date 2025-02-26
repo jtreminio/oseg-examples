@@ -54,5 +54,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling WorkflowTemplates#createWorkflowTemplate: {$e->getMessage()}";
+    echo "Exception when calling WorkflowTemplatesApi#createWorkflowTemplate: {$e->getMessage()}";
 }

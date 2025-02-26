@@ -41,4 +41,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling Webhooks#post_webhook: %s\n" % e)
+        print("Exception when calling WebhooksApi#post_webhook: %s\n" % e)

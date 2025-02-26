@@ -19,6 +19,6 @@ apiCaller.patchWebhook(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Webhooks#patchWebhook:");
+  console.log("Exception when calling WebhooksApi#patchWebhook:");
   console.log(error.body);
 });

@@ -26,5 +26,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling Segments#get_context_instance_segments_membership_by_env: #{e}"
+    puts "Exception when calling SegmentsApi#get_context_instance_segments_membership_by_env: #{e}"
 end

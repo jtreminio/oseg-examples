@@ -15,5 +15,5 @@ try {
         custom_role_key: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling CustomRoles#deleteCustomRole: {$e->getMessage()}";
+    echo "Exception when calling CustomRolesApi#deleteCustomRole: {$e->getMessage()}";
 }

@@ -25,5 +25,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Users#getSearchUsers: {$e->getMessage()}";
+    echo "Exception when calling UsersApi#getSearchUsers: {$e->getMessage()}";
 }

@@ -27,7 +27,7 @@ public class GetExtinctionsExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling CodeReferences#getExtinctions");
+            System.err.println("Exception when calling CodeReferencesApi#getExtinctions");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

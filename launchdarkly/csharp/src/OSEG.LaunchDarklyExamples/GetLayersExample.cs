@@ -27,7 +27,7 @@ public class GetLayersExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Layers#GetLayers: " + e.Message);
+            Console.WriteLine("Exception when calling LayersApi#GetLayers: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

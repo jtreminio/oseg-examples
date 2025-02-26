@@ -27,7 +27,7 @@ public class PutFlagFollowerExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling FollowFlags#PutFlagFollower: " + e.Message);
+            Console.WriteLine("Exception when calling FollowFlagsApi#PutFlagFollower: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

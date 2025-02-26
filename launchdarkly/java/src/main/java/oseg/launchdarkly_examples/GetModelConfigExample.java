@@ -23,7 +23,7 @@ public class GetModelConfigExample
 
         try
         {
-            var response = new AIConfigsBetaApi(config).getModelConfig(
+            var response = new AiConfigsBetaApi(config).getModelConfig(
                 null, // lDAPIVersion
                 "default", // projectKey
                 "default" // modelConfigKey
@@ -31,7 +31,7 @@ public class GetModelConfigExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling AIConfigsBeta#getModelConfig");
+            System.err.println("Exception when calling AiConfigsBetaApi#getModelConfig");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

@@ -27,7 +27,7 @@ public class GetRootStatisticExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling CodeReferences#getRootStatistic");
+            System.err.println("Exception when calling CodeReferencesApi#getRootStatistic");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

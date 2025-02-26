@@ -22,5 +22,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling OAuth2Clients#createOAuth2Client: {$e->getMessage()}";
+    echo "Exception when calling OAuth2ClientsApi#createOAuth2Client: {$e->getMessage()}";
 }

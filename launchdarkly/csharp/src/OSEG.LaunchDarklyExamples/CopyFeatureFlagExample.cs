@@ -44,7 +44,7 @@ public class CopyFeatureFlagExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling FeatureFlags#CopyFeatureFlag: " + e.Message);
+            Console.WriteLine("Exception when calling FeatureFlagsApi#CopyFeatureFlag: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

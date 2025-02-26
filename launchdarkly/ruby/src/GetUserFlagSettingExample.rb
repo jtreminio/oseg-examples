@@ -15,5 +15,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling UserSettings#get_user_flag_setting: #{e}"
+    puts "Exception when calling UserSettingsApi#get_user_flag_setting: #{e}"
 end

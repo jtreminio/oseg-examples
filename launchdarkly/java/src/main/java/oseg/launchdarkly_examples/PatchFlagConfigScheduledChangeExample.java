@@ -49,7 +49,7 @@ public class PatchFlagConfigScheduledChangeExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling ScheduledChanges#patchFlagConfigScheduledChange");
+            System.err.println("Exception when calling ScheduledChangesApi#patchFlagConfigScheduledChange");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

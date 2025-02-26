@@ -22,5 +22,5 @@ try {
         value_put: $value_put,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling UserSettings#putFlagSetting: {$e->getMessage()}";
+    echo "Exception when calling UserSettingsApi#putFlagSetting: {$e->getMessage()}";
 }

@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.InsightsChartsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 apiCaller.getDeploymentFrequencyChart().then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling InsightsChartsBeta#getDeploymentFrequencyChart:");
+  console.log("Exception when calling InsightsChartsBetaApi#getDeploymentFrequencyChart:");
   console.log(error.body);
 });

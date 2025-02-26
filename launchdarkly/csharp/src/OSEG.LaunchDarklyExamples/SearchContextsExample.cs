@@ -40,7 +40,7 @@ public class SearchContextsExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Contexts#SearchContexts: " + e.Message);
+            Console.WriteLine("Exception when calling ContextsApi#SearchContexts: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

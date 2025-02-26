@@ -30,7 +30,7 @@ public class PostTokenExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling AccessTokens#PostToken: " + e.Message);
+            Console.WriteLine("Exception when calling AccessTokensApi#PostToken: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

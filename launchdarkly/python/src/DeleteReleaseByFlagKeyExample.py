@@ -15,4 +15,4 @@ with ApiClient(configuration) as api_client:
             flag_key=None,
         )
     except ApiException as e:
-        print("Exception when calling ReleasesBeta#delete_release_by_flag_key: %s\n" % e)
+        print("Exception when calling ReleasesBetaApi#delete_release_by_flag_key: %s\n" % e)

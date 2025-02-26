@@ -14,5 +14,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling Segments#get_expiring_targets_for_segment: #{e}"
+    puts "Exception when calling SegmentsApi#get_expiring_targets_for_segment: #{e}"
 end

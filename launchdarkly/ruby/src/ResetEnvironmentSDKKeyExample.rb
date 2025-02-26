@@ -13,5 +13,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling Environments#reset_environment_sdk_key: #{e}"
+    puts "Exception when calling EnvironmentsApi#reset_environment_sdk_key: #{e}"
 end

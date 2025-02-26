@@ -20,5 +20,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Metrics#getMetric: {$e->getMessage()}";
+    echo "Exception when calling MetricsApi#getMetric: {$e->getMessage()}";
 }

@@ -24,4 +24,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling Users#get_search_users: %s\n" % e)
+        print("Exception when calling UsersApi#get_search_users: %s\n" % e)

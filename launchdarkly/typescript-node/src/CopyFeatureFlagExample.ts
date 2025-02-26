@@ -25,6 +25,6 @@ apiCaller.copyFeatureFlag(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling FeatureFlags#copyFeatureFlag:");
+  console.log("Exception when calling FeatureFlagsApi#copyFeatureFlag:");
   console.log(error.body);
 });

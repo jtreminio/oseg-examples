@@ -11,6 +11,6 @@ apiCaller.getEnvironment(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Environments#getEnvironment:");
+  console.log("Exception when calling EnvironmentsApi#getEnvironment:");
   console.log(error.body);
 });

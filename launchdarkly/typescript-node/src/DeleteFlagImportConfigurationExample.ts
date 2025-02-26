@@ -10,6 +10,6 @@ apiCaller.deleteFlagImportConfiguration(
   undefined, // integrationKey
   undefined, // integrationId
 ).catch(error => {
-  console.log("Exception when calling FlagImportConfigurationsBeta#deleteFlagImportConfiguration:");
+  console.log("Exception when calling FlagImportConfigurationsBetaApi#deleteFlagImportConfiguration:");
   console.log(error.body);
 });

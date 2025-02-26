@@ -10,6 +10,6 @@ apiCaller.getContextKindsByProjectKey(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Contexts#getContextKindsByProjectKey:");
+  console.log("Exception when calling ContextsApi#getContextKindsByProjectKey:");
   console.log(error.body);
 });

@@ -24,7 +24,7 @@ public class DeleteOAuthClientExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling OAuth2Clients#DeleteOAuthClient: " + e.Message);
+            Console.WriteLine("Exception when calling OAuth2ClientsApi#DeleteOAuthClient: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

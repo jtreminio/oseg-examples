@@ -31,7 +31,7 @@ public class GetEvaluationsUsageExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling AccountUsageBeta#GetEvaluationsUsage: " + e.Message);
+            Console.WriteLine("Exception when calling AccountUsageBetaApi#GetEvaluationsUsage: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

@@ -12,6 +12,6 @@ apiCaller.getExpiringFlagsForUser(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling UserSettings#getExpiringFlagsForUser:");
+  console.log("Exception when calling UserSettingsApi#getExpiringFlagsForUser:");
   console.log(error.body);
 });

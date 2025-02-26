@@ -19,5 +19,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Segments#getExpiringTargetsForSegment: {$e->getMessage()}";
+    echo "Exception when calling SegmentsApi#getExpiringTargetsForSegment: {$e->getMessage()}";
 }

@@ -10,6 +10,6 @@ apiCaller.triggerFlagImportJob(
   undefined, // integrationKey
   undefined, // integrationId
 ).catch(error => {
-  console.log("Exception when calling FlagImportConfigurationsBeta#triggerFlagImportJob:");
+  console.log("Exception when calling FlagImportConfigurationsBetaApi#triggerFlagImportJob:");
   console.log(error.body);
 });

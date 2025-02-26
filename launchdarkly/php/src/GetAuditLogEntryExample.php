@@ -17,5 +17,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling AuditLog#getAuditLogEntry: {$e->getMessage()}";
+    echo "Exception when calling AuditLogApi#getAuditLogEntry: {$e->getMessage()}";
 }

@@ -47,7 +47,7 @@ public class PatchExpiringFlagsForUserExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling UserSettings#PatchExpiringFlagsForUser: " + e.Message);
+            Console.WriteLine("Exception when calling UserSettingsApi#PatchExpiringFlagsForUser: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

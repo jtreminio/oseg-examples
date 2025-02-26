@@ -13,5 +13,5 @@ begin
         nil, # member_id
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling FollowFlags#put_flag_follower: #{e}"
+    puts "Exception when calling FollowFlagsApi#put_flag_follower: #{e}"
 end

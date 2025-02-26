@@ -23,6 +23,6 @@ apiCaller.postModelConfig(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling AIConfigsBeta#postModelConfig:");
+  console.log("Exception when calling AIConfigsBetaApi#postModelConfig:");
   console.log(error.body);
 });

@@ -14,4 +14,4 @@ with ApiClient(configuration) as api_client:
             insight_group_key=None,
         )
     except ApiException as e:
-        print("Exception when calling InsightsScoresBeta#delete_insight_group: %s\n" % e)
+        print("Exception when calling InsightsScoresBetaApi#delete_insight_group: %s\n" % e)

@@ -14,4 +14,4 @@ with ApiClient(configuration) as api_client:
             team_key=None,
         )
     except ApiException as e:
-        print("Exception when calling Teams#delete_team: %s\n" % e)
+        print("Exception when calling TeamsApi#delete_team: %s\n" % e)

@@ -11,6 +11,6 @@ apiCaller.getLayers(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Layers#getLayers:");
+  console.log("Exception when calling LayersApi#getLayers:");
   console.log(error.body);
 });

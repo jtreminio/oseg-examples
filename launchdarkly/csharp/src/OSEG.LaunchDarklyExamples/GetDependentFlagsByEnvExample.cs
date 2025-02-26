@@ -28,7 +28,7 @@ public class GetDependentFlagsByEnvExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling FeatureFlagsBeta#GetDependentFlagsByEnv: " + e.Message);
+            Console.WriteLine("Exception when calling FeatureFlagsBetaApi#GetDependentFlagsByEnv: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

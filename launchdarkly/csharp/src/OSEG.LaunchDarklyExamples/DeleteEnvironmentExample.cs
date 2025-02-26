@@ -25,7 +25,7 @@ public class DeleteEnvironmentExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Environments#DeleteEnvironment: " + e.Message);
+            Console.WriteLine("Exception when calling EnvironmentsApi#DeleteEnvironment: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

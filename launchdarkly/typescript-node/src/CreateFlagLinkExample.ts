@@ -18,6 +18,6 @@ apiCaller.createFlagLink(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling FlagLinksBeta#createFlagLink:");
+  console.log("Exception when calling FlagLinksBetaApi#createFlagLink:");
   console.log(error.body);
 });

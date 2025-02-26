@@ -36,4 +36,4 @@ with ApiClient(configuration) as api_client:
             post_deployment_event_input=post_deployment_event_input,
         )
     except ApiException as e:
-        print("Exception when calling InsightsDeploymentsBeta#create_deployment_event: %s\n" % e)
+        print("Exception when calling InsightsDeploymentsBetaApi#create_deployment_event: %s\n" % e)

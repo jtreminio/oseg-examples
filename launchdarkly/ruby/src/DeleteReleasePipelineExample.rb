@@ -11,5 +11,5 @@ begin
         nil, # pipeline_key
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling ReleasePipelinesBeta#delete_release_pipeline: #{e}"
+    puts "Exception when calling ReleasePipelinesBetaApi#delete_release_pipeline: #{e}"
 end

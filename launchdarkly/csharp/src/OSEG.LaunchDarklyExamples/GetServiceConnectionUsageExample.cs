@@ -24,7 +24,7 @@ public class GetServiceConnectionUsageExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling AccountUsageBeta#GetServiceConnectionUsage: " + e.Message);
+            Console.WriteLine("Exception when calling AccountUsageBetaApi#GetServiceConnectionUsage: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

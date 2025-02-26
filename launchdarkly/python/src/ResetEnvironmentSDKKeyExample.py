@@ -18,4 +18,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling Environments#reset_environment_sdk_key: %s\n" % e)
+        print("Exception when calling EnvironmentsApi#reset_environment_sdk_key: %s\n" % e)

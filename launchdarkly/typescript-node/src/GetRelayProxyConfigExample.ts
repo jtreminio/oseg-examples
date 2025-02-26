@@ -10,6 +10,6 @@ apiCaller.getRelayProxyConfig(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling RelayProxyConfigurations#getRelayProxyConfig:");
+  console.log("Exception when calling RelayProxyConfigurationsApi#getRelayProxyConfig:");
   console.log(error.body);
 });

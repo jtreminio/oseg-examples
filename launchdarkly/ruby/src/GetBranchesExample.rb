@@ -12,5 +12,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling CodeReferences#get_branches: #{e}"
+    puts "Exception when calling CodeReferencesApi#get_branches: #{e}"
 end

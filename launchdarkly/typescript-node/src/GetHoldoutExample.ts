@@ -13,6 +13,6 @@ apiCaller.getHoldout(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling HoldoutsBeta#getHoldout:");
+  console.log("Exception when calling HoldoutsBetaApi#getHoldout:");
   console.log(error.body);
 });

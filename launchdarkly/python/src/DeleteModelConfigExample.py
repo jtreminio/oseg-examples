@@ -16,4 +16,4 @@ with ApiClient(configuration) as api_client:
             model_config_key=None,
         )
     except ApiException as e:
-        print("Exception when calling AIConfigsBeta#delete_model_config: %s\n" % e)
+        print("Exception when calling AIConfigsBetaApi#delete_model_config: %s\n" % e)

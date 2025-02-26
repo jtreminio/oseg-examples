@@ -78,7 +78,7 @@ public class CreateIterationExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Experiments#CreateIteration: " + e.Message);
+            Console.WriteLine("Exception when calling ExperimentsApi#CreateIteration: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

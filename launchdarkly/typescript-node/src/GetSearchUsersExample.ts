@@ -18,6 +18,6 @@ apiCaller.getSearchUsers(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Users#getSearchUsers:");
+  console.log("Exception when calling UsersApi#getSearchUsers:");
   console.log(error.body);
 });

@@ -11,6 +11,6 @@ apiCaller.deleteBigSegmentStoreIntegration(
   undefined, // integrationKey
   undefined, // integrationId
 ).catch(error => {
-  console.log("Exception when calling PersistentStoreIntegrationsBeta#deleteBigSegmentStoreIntegration:");
+  console.log("Exception when calling PersistentStoreIntegrationsBetaApi#deleteBigSegmentStoreIntegration:");
   console.log(error.body);
 });

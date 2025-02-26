@@ -41,7 +41,7 @@ public class GetFlagEventsExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling InsightsFlagEventsBeta#getFlagEvents");
+            System.err.println("Exception when calling InsightsFlagEventsBetaApi#getFlagEvents");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

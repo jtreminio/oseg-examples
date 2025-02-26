@@ -27,7 +27,7 @@ public class GetVersionsExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling Other#getVersions");
+            System.err.println("Exception when calling OtherApi#getVersions");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

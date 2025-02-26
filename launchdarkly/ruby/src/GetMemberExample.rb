@@ -12,5 +12,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling AccountMembers#get_member: #{e}"
+    puts "Exception when calling AccountMembersApi#get_member: #{e}"
 end

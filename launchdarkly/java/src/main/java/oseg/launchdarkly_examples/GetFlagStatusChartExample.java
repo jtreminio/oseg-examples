@@ -31,7 +31,7 @@ public class GetFlagStatusChartExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling InsightsChartsBeta#getFlagStatusChart");
+            System.err.println("Exception when calling InsightsChartsBetaApi#getFlagStatusChart");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

@@ -11,6 +11,6 @@ apiCaller.getIntegrationDeliveryConfigurationByEnvironment(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling IntegrationDeliveryConfigurationsBeta#getIntegrationDeliveryConfigurationByEnvironment:");
+  console.log("Exception when calling IntegrationDeliveryConfigurationsBetaApi#getIntegrationDeliveryConfigurationByEnvironment:");
   console.log(error.body);
 });

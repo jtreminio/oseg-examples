@@ -24,7 +24,7 @@ public class DeleteTeamExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Teams#DeleteTeam: " + e.Message);
+            Console.WriteLine("Exception when calling TeamsApi#DeleteTeam: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

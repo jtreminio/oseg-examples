@@ -17,5 +17,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Contexts#getContextKindsByProjectKey: {$e->getMessage()}";
+    echo "Exception when calling ContextsApi#getContextKindsByProjectKey: {$e->getMessage()}";
 }

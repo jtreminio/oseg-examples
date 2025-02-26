@@ -26,7 +26,7 @@ public class GetRelayProxyConfigExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling RelayProxyConfigurations#GetRelayProxyConfig: " + e.Message);
+            Console.WriteLine("Exception when calling RelayProxyConfigurationsApi#GetRelayProxyConfig: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

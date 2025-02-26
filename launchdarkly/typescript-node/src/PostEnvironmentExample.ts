@@ -16,6 +16,6 @@ apiCaller.postEnvironment(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Environments#postEnvironment:");
+  console.log("Exception when calling EnvironmentsApi#postEnvironment:");
   console.log(error.body);
 });

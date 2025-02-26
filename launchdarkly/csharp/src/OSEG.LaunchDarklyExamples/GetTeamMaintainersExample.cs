@@ -28,7 +28,7 @@ public class GetTeamMaintainersExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Teams#GetTeamMaintainers: " + e.Message);
+            Console.WriteLine("Exception when calling TeamsApi#GetTeamMaintainers: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

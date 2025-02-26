@@ -29,5 +29,5 @@ begin
         segment_user_state,
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling Segments#update_big_segment_targets: #{e}"
+    puts "Exception when calling SegmentsApi#update_big_segment_targets: #{e}"
 end

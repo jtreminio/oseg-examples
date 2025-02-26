@@ -25,7 +25,7 @@ public class DeleteApplicationVersionExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling ApplicationsBeta#DeleteApplicationVersion: " + e.Message);
+            Console.WriteLine("Exception when calling ApplicationsBetaApi#DeleteApplicationVersion: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

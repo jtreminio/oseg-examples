@@ -18,5 +18,5 @@ try {
         id: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling FlagTriggers#deleteTriggerWorkflow: {$e->getMessage()}";
+    echo "Exception when calling FlagTriggersApi#deleteTriggerWorkflow: {$e->getMessage()}";
 }

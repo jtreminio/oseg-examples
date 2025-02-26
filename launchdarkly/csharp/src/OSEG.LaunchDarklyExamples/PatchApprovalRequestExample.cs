@@ -26,7 +26,7 @@ public class PatchApprovalRequestExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling ApprovalsBeta#PatchApprovalRequest: " + e.Message);
+            Console.WriteLine("Exception when calling ApprovalsBetaApi#PatchApprovalRequest: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

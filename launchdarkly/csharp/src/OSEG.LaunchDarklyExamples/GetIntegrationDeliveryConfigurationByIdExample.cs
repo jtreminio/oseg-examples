@@ -29,7 +29,7 @@ public class GetIntegrationDeliveryConfigurationByIdExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling IntegrationDeliveryConfigurationsBeta#GetIntegrationDeliveryConfigurationById: " + e.Message);
+            Console.WriteLine("Exception when calling IntegrationDeliveryConfigurationsBetaApi#GetIntegrationDeliveryConfigurationById: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

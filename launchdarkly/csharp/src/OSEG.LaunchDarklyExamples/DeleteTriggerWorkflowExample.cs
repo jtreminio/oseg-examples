@@ -27,7 +27,7 @@ public class DeleteTriggerWorkflowExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling FlagTriggers#DeleteTriggerWorkflow: " + e.Message);
+            Console.WriteLine("Exception when calling FlagTriggersApi#DeleteTriggerWorkflow: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

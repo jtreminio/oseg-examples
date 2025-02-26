@@ -42,7 +42,7 @@ public class PostAIConfigVariationExample
 
         try
         {
-            var response = new AIConfigsBetaApi(config).postAIConfigVariation(
+            var response = new AiConfigsBetaApi(config).postAIConfigVariation(
                 null, // lDAPIVersion
                 null, // projectKey
                 null, // configKey
@@ -51,7 +51,7 @@ public class PostAIConfigVariationExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling AIConfigsBeta#postAIConfigVariation");
+            System.err.println("Exception when calling AiConfigsBetaApi#postAIConfigVariation");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

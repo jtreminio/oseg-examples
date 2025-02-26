@@ -32,5 +32,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling CustomRoles#post_custom_role: #{e}"
+    puts "Exception when calling CustomRolesApi#post_custom_role: #{e}"
 end

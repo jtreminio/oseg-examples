@@ -12,6 +12,6 @@ apiCaller.getMetricGroup(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling MetricsBeta#getMetricGroup:");
+  console.log("Exception when calling MetricsBetaApi#getMetricGroup:");
   console.log(error.body);
 });

@@ -12,5 +12,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling Teams#post_team_members: #{e}"
+    puts "Exception when calling TeamsApi#post_team_members: #{e}"
 end

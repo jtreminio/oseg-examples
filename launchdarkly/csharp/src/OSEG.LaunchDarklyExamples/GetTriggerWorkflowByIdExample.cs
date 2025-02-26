@@ -29,7 +29,7 @@ public class GetTriggerWorkflowByIdExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling FlagTriggers#GetTriggerWorkflowById: " + e.Message);
+            Console.WriteLine("Exception when calling FlagTriggersApi#GetTriggerWorkflowById: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

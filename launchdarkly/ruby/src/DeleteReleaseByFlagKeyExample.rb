@@ -11,5 +11,5 @@ begin
         nil, # flag_key
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling ReleasesBeta#delete_release_by_flag_key: #{e}"
+    puts "Exception when calling ReleasesBetaApi#delete_release_by_flag_key: #{e}"
 end

@@ -10,6 +10,6 @@ apiCaller.deleteSegment(
   undefined, // environmentKey
   undefined, // segmentKey
 ).catch(error => {
-  console.log("Exception when calling Segments#deleteSegment:");
+  console.log("Exception when calling SegmentsApi#deleteSegment:");
   console.log(error.body);
 });

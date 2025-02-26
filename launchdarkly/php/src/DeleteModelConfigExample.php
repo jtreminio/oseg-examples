@@ -17,5 +17,5 @@ try {
         model_config_key: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling AIConfigsBeta#deleteModelConfig: {$e->getMessage()}";
+    echo "Exception when calling AIConfigsBetaApi#deleteModelConfig: {$e->getMessage()}";
 }

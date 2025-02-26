@@ -15,5 +15,5 @@ try {
         id: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Approvals#deleteApprovalRequest: {$e->getMessage()}";
+    echo "Exception when calling ApprovalsApi#deleteApprovalRequest: {$e->getMessage()}";
 }

@@ -28,6 +28,6 @@ apiCaller.patchExpiringFlagsForUser(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling UserSettings#patchExpiringFlagsForUser:");
+  console.log("Exception when calling UserSettingsApi#patchExpiringFlagsForUser:");
   console.log(error.body);
 });

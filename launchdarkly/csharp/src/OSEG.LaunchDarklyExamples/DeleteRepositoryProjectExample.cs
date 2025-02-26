@@ -25,7 +25,7 @@ public class DeleteRepositoryProjectExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling InsightsRepositoriesBeta#DeleteRepositoryProject: " + e.Message);
+            Console.WriteLine("Exception when calling InsightsRepositoriesBetaApi#DeleteRepositoryProject: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

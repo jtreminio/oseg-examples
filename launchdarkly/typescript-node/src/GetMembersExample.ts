@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.AccountMembersApiApiKeys.ApiKey, "YOUR_API_KEY");
 apiCaller.getMembers().then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling AccountMembers#getMembers:");
+  console.log("Exception when calling AccountMembersApi#getMembers:");
   console.log(error.body);
 });

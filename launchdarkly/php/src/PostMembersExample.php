@@ -37,5 +37,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling AccountMembers#postMembers: {$e->getMessage()}";
+    echo "Exception when calling AccountMembersApi#postMembers: {$e->getMessage()}";
 }

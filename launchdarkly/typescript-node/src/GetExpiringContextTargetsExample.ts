@@ -12,6 +12,6 @@ apiCaller.getExpiringContextTargets(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling FeatureFlags#getExpiringContextTargets:");
+  console.log("Exception when calling FeatureFlagsApi#getExpiringContextTargets:");
   console.log(error.body);
 });

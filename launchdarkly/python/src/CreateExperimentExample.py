@@ -73,4 +73,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling Experiments#create_experiment: %s\n" % e)
+        print("Exception when calling ExperimentsApi#create_experiment: %s\n" % e)

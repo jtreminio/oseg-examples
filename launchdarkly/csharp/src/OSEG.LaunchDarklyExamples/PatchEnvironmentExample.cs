@@ -38,7 +38,7 @@ public class PatchEnvironmentExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Environments#PatchEnvironment: " + e.Message);
+            Console.WriteLine("Exception when calling EnvironmentsApi#PatchEnvironment: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

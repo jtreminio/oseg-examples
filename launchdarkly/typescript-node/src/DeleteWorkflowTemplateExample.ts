@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.WorkflowTemplatesApiApiKeys.ApiKey, "YOUR_API_KEY");
 apiCaller.deleteWorkflowTemplate(
   undefined, // templateKey
 ).catch(error => {
-  console.log("Exception when calling WorkflowTemplates#deleteWorkflowTemplate:");
+  console.log("Exception when calling WorkflowTemplatesApi#deleteWorkflowTemplate:");
   console.log(error.body);
 });

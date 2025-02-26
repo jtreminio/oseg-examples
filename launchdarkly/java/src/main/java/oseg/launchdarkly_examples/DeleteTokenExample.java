@@ -27,7 +27,7 @@ public class DeleteTokenExample
                 null // id
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling AccessTokens#deleteToken");
+            System.err.println("Exception when calling AccessTokensApi#deleteToken");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

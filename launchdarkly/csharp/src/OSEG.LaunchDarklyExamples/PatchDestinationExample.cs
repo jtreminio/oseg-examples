@@ -39,7 +39,7 @@ public class PatchDestinationExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling DataExportDestinations#PatchDestination: " + e.Message);
+            Console.WriteLine("Exception when calling DataExportDestinationsApi#PatchDestination: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

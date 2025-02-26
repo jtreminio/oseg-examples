@@ -17,4 +17,4 @@ with ApiClient(configuration) as api_client:
             member_id=None,
         )
     except ApiException as e:
-        print("Exception when calling FollowFlags#put_flag_follower: %s\n" % e)
+        print("Exception when calling FollowFlagsApi#put_flag_follower: %s\n" % e)

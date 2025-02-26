@@ -35,7 +35,7 @@ public class PostMetricExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Metrics#PostMetric: " + e.Message);
+            Console.WriteLine("Exception when calling MetricsApi#PostMetric: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

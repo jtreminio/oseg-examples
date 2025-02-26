@@ -22,6 +22,6 @@ apiCaller.patchRelayAutoConfig(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling RelayProxyConfigurations#patchRelayAutoConfig:");
+  console.log("Exception when calling RelayProxyConfigurationsApi#patchRelayAutoConfig:");
   console.log(error.body);
 });

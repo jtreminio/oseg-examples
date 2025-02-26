@@ -22,6 +22,6 @@ apiCaller.patchHoldout(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling HoldoutsBeta#patchHoldout:");
+  console.log("Exception when calling HoldoutsBetaApi#patchHoldout:");
   console.log(error.body);
 });

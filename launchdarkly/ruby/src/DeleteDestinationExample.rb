@@ -12,5 +12,5 @@ begin
         nil, # id
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling DataExportDestinations#delete_destination: #{e}"
+    puts "Exception when calling DataExportDestinationsApi#delete_destination: #{e}"
 end

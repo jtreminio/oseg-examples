@@ -13,5 +13,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling MetricsBeta#get_metric_group: #{e}"
+    puts "Exception when calling MetricsBetaApi#get_metric_group: #{e}"
 end

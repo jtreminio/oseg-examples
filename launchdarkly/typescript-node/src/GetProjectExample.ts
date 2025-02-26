@@ -11,6 +11,6 @@ apiCaller.getProject(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Projects#getProject:");
+  console.log("Exception when calling ProjectsApi#getProject:");
   console.log(error.body);
 });

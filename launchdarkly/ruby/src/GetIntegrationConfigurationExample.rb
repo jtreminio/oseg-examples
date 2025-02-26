@@ -12,5 +12,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling IntegrationsBeta#get_integration_configuration: #{e}"
+    puts "Exception when calling IntegrationsBetaApi#get_integration_configuration: #{e}"
 end

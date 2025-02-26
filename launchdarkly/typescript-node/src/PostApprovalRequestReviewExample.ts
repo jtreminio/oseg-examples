@@ -15,6 +15,6 @@ apiCaller.postApprovalRequestReview(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Approvals#postApprovalRequestReview:");
+  console.log("Exception when calling ApprovalsApi#postApprovalRequestReview:");
   console.log(error.body);
 });

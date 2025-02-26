@@ -21,6 +21,6 @@ apiCaller.postAIConfig(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling AIConfigsBeta#postAIConfig:");
+  console.log("Exception when calling AIConfigsBetaApi#postAIConfig:");
   console.log(error.body);
 });

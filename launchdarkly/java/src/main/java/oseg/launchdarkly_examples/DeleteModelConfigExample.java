@@ -23,13 +23,13 @@ public class DeleteModelConfigExample
 
         try
         {
-            new AIConfigsBetaApi(config).deleteModelConfig(
+            new AiConfigsBetaApi(config).deleteModelConfig(
                 null, // lDAPIVersion
                 "default", // projectKey
                 null // modelConfigKey
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling AIConfigsBeta#deleteModelConfig");
+            System.err.println("Exception when calling AiConfigsBetaApi#deleteModelConfig");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

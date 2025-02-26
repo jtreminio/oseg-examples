@@ -13,6 +13,6 @@ apiCaller.getFeatureFlag(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling FeatureFlags#getFeatureFlag:");
+  console.log("Exception when calling FeatureFlagsApi#getFeatureFlag:");
   console.log(error.body);
 });

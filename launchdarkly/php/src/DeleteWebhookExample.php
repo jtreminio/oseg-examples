@@ -15,5 +15,5 @@ try {
         id: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Webhooks#deleteWebhook: {$e->getMessage()}";
+    echo "Exception when calling WebhooksApi#deleteWebhook: {$e->getMessage()}";
 }

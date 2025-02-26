@@ -36,7 +36,7 @@ public class PutContextKindExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Contexts#PutContextKind: " + e.Message);
+            Console.WriteLine("Exception when calling ContextsApi#PutContextKind: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

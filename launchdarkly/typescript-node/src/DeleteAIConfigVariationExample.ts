@@ -11,6 +11,6 @@ apiCaller.deleteAIConfigVariation(
   undefined, // configKey
   undefined, // variationKey
 ).catch(error => {
-  console.log("Exception when calling AIConfigsBeta#deleteAIConfigVariation:");
+  console.log("Exception when calling AIConfigsBetaApi#deleteAIConfigVariation:");
   console.log(error.body);
 });

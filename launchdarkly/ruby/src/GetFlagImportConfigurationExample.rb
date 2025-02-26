@@ -14,5 +14,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling FlagImportConfigurationsBeta#get_flag_import_configuration: #{e}"
+    puts "Exception when calling FlagImportConfigurationsBetaApi#get_flag_import_configuration: #{e}"
 end

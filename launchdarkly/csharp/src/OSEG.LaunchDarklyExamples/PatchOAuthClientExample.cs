@@ -37,7 +37,7 @@ public class PatchOAuthClientExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling OAuth2Clients#PatchOAuthClient: " + e.Message);
+            Console.WriteLine("Exception when calling OAuth2ClientsApi#PatchOAuthClient: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

@@ -24,7 +24,7 @@ public class DeleteTokenExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling AccessTokens#DeleteToken: " + e.Message);
+            Console.WriteLine("Exception when calling AccessTokensApi#DeleteToken: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

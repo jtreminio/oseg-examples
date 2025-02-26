@@ -29,7 +29,7 @@ public class ValidateIntegrationDeliveryConfigurationExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling IntegrationDeliveryConfigurationsBeta#ValidateIntegrationDeliveryConfiguration: " + e.Message);
+            Console.WriteLine("Exception when calling IntegrationDeliveryConfigurationsBetaApi#ValidateIntegrationDeliveryConfiguration: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

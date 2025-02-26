@@ -33,5 +33,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling PersistentStoreIntegrationsBeta#createBigSegmentStoreIntegration: {$e->getMessage()}";
+    echo "Exception when calling PersistentStoreIntegrationsBetaApi#createBigSegmentStoreIntegration: {$e->getMessage()}";
 }

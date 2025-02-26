@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.TagsApiApiKeys.ApiKey, "YOUR_API_KEY");
 apiCaller.getTags().then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Tags#getTags:");
+  console.log("Exception when calling TagsApi#getTags:");
   console.log(error.body);
 });

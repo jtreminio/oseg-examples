@@ -23,5 +23,5 @@ try {
         value_put: $value_put,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling ContextSettings#putContextFlagSetting: {$e->getMessage()}";
+    echo "Exception when calling ContextSettingsApi#putContextFlagSetting: {$e->getMessage()}";
 }

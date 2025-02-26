@@ -19,5 +19,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling FeatureFlagsBeta#getDependentFlagsByEnv: {$e->getMessage()}";
+    echo "Exception when calling FeatureFlagsBetaApi#getDependentFlagsByEnv: {$e->getMessage()}";
 }

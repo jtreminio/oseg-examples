@@ -22,6 +22,6 @@ apiCaller.putExperimentationSettings(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Experiments#putExperimentationSettings:");
+  console.log("Exception when calling ExperimentsApi#putExperimentationSettings:");
   console.log(error.body);
 });

@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.IntegrationsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 apiCaller.deleteIntegrationConfiguration(
   undefined, // integrationConfigurationId
 ).catch(error => {
-  console.log("Exception when calling IntegrationsBeta#deleteIntegrationConfiguration:");
+  console.log("Exception when calling IntegrationsBetaApi#deleteIntegrationConfiguration:");
   console.log(error.body);
 });

@@ -40,7 +40,7 @@ public class PostTeamExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Teams#PostTeam: " + e.Message);
+            Console.WriteLine("Exception when calling TeamsApi#PostTeam: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

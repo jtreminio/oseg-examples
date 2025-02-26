@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.ApplicationsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 apiCaller.getApplications().then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling ApplicationsBeta#getApplications:");
+  console.log("Exception when calling ApplicationsBetaApi#getApplications:");
   console.log(error.body);
 });

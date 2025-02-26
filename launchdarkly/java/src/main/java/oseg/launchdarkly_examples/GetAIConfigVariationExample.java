@@ -23,7 +23,7 @@ public class GetAIConfigVariationExample
 
         try
         {
-            var response = new AIConfigsBetaApi(config).getAIConfigVariation(
+            var response = new AiConfigsBetaApi(config).getAIConfigVariation(
                 null, // lDAPIVersion
                 "default", // projectKey
                 "default", // configKey
@@ -32,7 +32,7 @@ public class GetAIConfigVariationExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling AIConfigsBeta#getAIConfigVariation");
+            System.err.println("Exception when calling AiConfigsBetaApi#getAIConfigVariation");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

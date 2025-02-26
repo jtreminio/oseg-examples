@@ -49,7 +49,7 @@ public class PostCustomRoleExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling CustomRoles#PostCustomRole: " + e.Message);
+            Console.WriteLine("Exception when calling CustomRolesApi#PostCustomRole: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

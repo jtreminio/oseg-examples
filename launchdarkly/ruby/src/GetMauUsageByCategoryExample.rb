@@ -10,5 +10,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling AccountUsageBeta#get_mau_usage_by_category: #{e}"
+    puts "Exception when calling AccountUsageBetaApi#get_mau_usage_by_category: #{e}"
 end

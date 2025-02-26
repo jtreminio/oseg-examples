@@ -21,6 +21,6 @@ apiCaller.updateFlagLink(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling FlagLinksBeta#updateFlagLink:");
+  console.log("Exception when calling FlagLinksBetaApi#updateFlagLink:");
   console.log(error.body);
 });

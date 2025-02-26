@@ -24,6 +24,6 @@ apiCaller.patchFeatureFlag(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling FeatureFlags#patchFeatureFlag:");
+  console.log("Exception when calling FeatureFlagsApi#patchFeatureFlag:");
   console.log(error.body);
 });

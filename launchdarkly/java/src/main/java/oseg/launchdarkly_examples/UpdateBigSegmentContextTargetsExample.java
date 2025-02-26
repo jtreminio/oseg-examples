@@ -42,7 +42,7 @@ public class UpdateBigSegmentContextTargetsExample
                 segmentUserState
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling Segments#updateBigSegmentContextTargets");
+            System.err.println("Exception when calling SegmentsApi#updateBigSegmentContextTargets");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

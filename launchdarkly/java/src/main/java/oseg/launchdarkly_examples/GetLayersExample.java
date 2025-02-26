@@ -30,7 +30,7 @@ public class GetLayersExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling Layers#getLayers");
+            System.err.println("Exception when calling LayersApi#getLayers");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

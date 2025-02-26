@@ -14,4 +14,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling InsightsChartsBeta#get_deployment_frequency_chart: %s\n" % e)
+        print("Exception when calling InsightsChartsBetaApi#get_deployment_frequency_chart: %s\n" % e)

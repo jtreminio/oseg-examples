@@ -13,5 +13,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling InsightsFlagEventsBeta#get_flag_events: #{e}"
+    puts "Exception when calling InsightsFlagEventsBetaApi#get_flag_events: #{e}"
 end

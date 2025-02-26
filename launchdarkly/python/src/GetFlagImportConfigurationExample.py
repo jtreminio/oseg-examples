@@ -18,4 +18,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling FlagImportConfigurationsBeta#get_flag_import_configuration: %s\n" % e)
+        print("Exception when calling FlagImportConfigurationsBetaApi#get_flag_import_configuration: %s\n" % e)

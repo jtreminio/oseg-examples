@@ -18,6 +18,6 @@ apiCaller.getContexts(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Contexts#getContexts:");
+  console.log("Exception when calling ContextsApi#getContexts:");
   console.log(error.body);
 });

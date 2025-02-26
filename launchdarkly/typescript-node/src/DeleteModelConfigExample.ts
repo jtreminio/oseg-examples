@@ -10,6 +10,6 @@ apiCaller.deleteModelConfig(
   "default", // projectKey
   undefined, // modelConfigKey
 ).catch(error => {
-  console.log("Exception when calling AIConfigsBeta#deleteModelConfig:");
+  console.log("Exception when calling AIConfigsBetaApi#deleteModelConfig:");
   console.log(error.body);
 });

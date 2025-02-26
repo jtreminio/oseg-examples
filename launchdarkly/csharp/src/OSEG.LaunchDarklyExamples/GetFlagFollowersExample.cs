@@ -28,7 +28,7 @@ public class GetFlagFollowersExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling FollowFlags#GetFlagFollowers: " + e.Message);
+            Console.WriteLine("Exception when calling FollowFlagsApi#GetFlagFollowers: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

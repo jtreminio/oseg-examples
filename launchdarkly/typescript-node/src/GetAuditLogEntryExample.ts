@@ -10,6 +10,6 @@ apiCaller.getAuditLogEntry(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling AuditLog#getAuditLogEntry:");
+  console.log("Exception when calling AuditLogApi#getAuditLogEntry:");
   console.log(error.body);
 });

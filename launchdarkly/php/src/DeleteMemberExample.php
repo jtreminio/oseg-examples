@@ -15,5 +15,5 @@ try {
         id: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling AccountMembers#deleteMember: {$e->getMessage()}";
+    echo "Exception when calling AccountMembersApi#deleteMember: {$e->getMessage()}";
 }

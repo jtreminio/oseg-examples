@@ -17,5 +17,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Projects#getFlagDefaultsByProject: {$e->getMessage()}";
+    echo "Exception when calling ProjectsApi#getFlagDefaultsByProject: {$e->getMessage()}";
 }

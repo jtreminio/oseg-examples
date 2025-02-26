@@ -20,5 +20,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling FlagLinksBeta#create_flag_link: #{e}"
+    puts "Exception when calling FlagLinksBetaApi#create_flag_link: #{e}"
 end

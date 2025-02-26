@@ -15,6 +15,6 @@ apiCaller.createOAuth2Client(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling OAuth2Clients#createOAuth2Client:");
+  console.log("Exception when calling OAuth2ClientsApi#createOAuth2Client:");
   console.log(error.body);
 });

@@ -42,7 +42,7 @@ public class PatchAIConfigVariationExample
 
         try
         {
-            var response = new AIConfigsBetaApi(config).patchAIConfigVariation(
+            var response = new AiConfigsBetaApi(config).patchAIConfigVariation(
                 null, // lDAPIVersion
                 null, // projectKey
                 null, // configKey
@@ -52,7 +52,7 @@ public class PatchAIConfigVariationExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling AIConfigsBeta#patchAIConfigVariation");
+            System.err.println("Exception when calling AiConfigsBetaApi#patchAIConfigVariation");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

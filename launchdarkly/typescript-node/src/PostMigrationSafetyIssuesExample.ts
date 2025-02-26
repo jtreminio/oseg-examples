@@ -17,6 +17,6 @@ apiCaller.postMigrationSafetyIssues(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling FeatureFlags#postMigrationSafetyIssues:");
+  console.log("Exception when calling FeatureFlagsApi#postMigrationSafetyIssues:");
   console.log(error.body);
 });

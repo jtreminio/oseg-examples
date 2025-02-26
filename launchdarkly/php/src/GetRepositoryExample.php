@@ -17,5 +17,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling CodeReferences#getRepository: {$e->getMessage()}";
+    echo "Exception when calling CodeReferencesApi#getRepository: {$e->getMessage()}";
 }

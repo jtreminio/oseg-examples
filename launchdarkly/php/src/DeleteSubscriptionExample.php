@@ -16,5 +16,5 @@ try {
         id: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling IntegrationAuditLogSubscriptions#deleteSubscription: {$e->getMessage()}";
+    echo "Exception when calling IntegrationAuditLogSubscriptionsApi#deleteSubscription: {$e->getMessage()}";
 }

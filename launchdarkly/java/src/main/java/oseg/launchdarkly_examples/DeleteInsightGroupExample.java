@@ -27,7 +27,7 @@ public class DeleteInsightGroupExample
                 null // insightGroupKey
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling InsightsScoresBeta#deleteInsightGroup");
+            System.err.println("Exception when calling InsightsScoresBetaApi#deleteInsightGroup");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

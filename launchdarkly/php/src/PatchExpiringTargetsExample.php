@@ -33,5 +33,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling FeatureFlags#patchExpiringTargets: {$e->getMessage()}";
+    echo "Exception when calling FeatureFlagsApi#patchExpiringTargets: {$e->getMessage()}";
 }

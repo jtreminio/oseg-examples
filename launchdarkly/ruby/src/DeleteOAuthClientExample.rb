@@ -10,5 +10,5 @@ begin
         nil, # client_id
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling OAuth2Clients#delete_o_auth_client: #{e}"
+    puts "Exception when calling OAuth2ClientsApi#delete_o_auth_client: #{e}"
 end

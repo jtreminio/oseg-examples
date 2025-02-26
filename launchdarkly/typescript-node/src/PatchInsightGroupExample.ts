@@ -19,6 +19,6 @@ apiCaller.patchInsightGroup(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling InsightsScoresBeta#patchInsightGroup:");
+  console.log("Exception when calling InsightsScoresBetaApi#patchInsightGroup:");
   console.log(error.body);
 });

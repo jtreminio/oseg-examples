@@ -19,5 +19,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling FeatureFlags#getExpiringContextTargets: {$e->getMessage()}";
+    echo "Exception when calling FeatureFlagsApi#getExpiringContextTargets: {$e->getMessage()}";
 }

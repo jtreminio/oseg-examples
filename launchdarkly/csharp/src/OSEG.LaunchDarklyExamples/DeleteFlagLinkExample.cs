@@ -26,7 +26,7 @@ public class DeleteFlagLinkExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling FlagLinksBeta#DeleteFlagLink: " + e.Message);
+            Console.WriteLine("Exception when calling FlagLinksBetaApi#DeleteFlagLink: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

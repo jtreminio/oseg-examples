@@ -12,5 +12,5 @@ begin
         nil, # integration_id
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling FlagImportConfigurationsBeta#trigger_flag_import_job: #{e}"
+    puts "Exception when calling FlagImportConfigurationsBetaApi#trigger_flag_import_job: #{e}"
 end

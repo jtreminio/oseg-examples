@@ -15,6 +15,6 @@ apiCaller.postDestination(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling DataExportDestinations#postDestination:");
+  console.log("Exception when calling DataExportDestinationsApi#postDestination:");
   console.log(error.body);
 });

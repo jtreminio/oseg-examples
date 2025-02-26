@@ -21,5 +21,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling Contexts#put_context_kind: #{e}"
+    puts "Exception when calling ContextsApi#put_context_kind: #{e}"
 end

@@ -13,6 +13,6 @@ apiCaller.patchFlagConfigApprovalRequest(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling ApprovalsBeta#patchFlagConfigApprovalRequest:");
+  console.log("Exception when calling ApprovalsBetaApi#patchFlagConfigApprovalRequest:");
   console.log(error.body);
 });

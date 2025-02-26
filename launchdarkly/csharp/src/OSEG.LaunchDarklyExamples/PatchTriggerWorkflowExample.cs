@@ -41,7 +41,7 @@ public class PatchTriggerWorkflowExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling FlagTriggers#PatchTriggerWorkflow: " + e.Message);
+            Console.WriteLine("Exception when calling FlagTriggersApi#PatchTriggerWorkflow: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

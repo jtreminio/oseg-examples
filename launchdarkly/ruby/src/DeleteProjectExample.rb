@@ -10,5 +10,5 @@ begin
         nil, # project_key
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling Projects#delete_project: #{e}"
+    puts "Exception when calling ProjectsApi#delete_project: #{e}"
 end

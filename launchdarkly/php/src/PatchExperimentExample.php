@@ -31,5 +31,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Experiments#patchExperiment: {$e->getMessage()}";
+    echo "Exception when calling ExperimentsApi#patchExperiment: {$e->getMessage()}";
 }

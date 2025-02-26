@@ -26,7 +26,7 @@ public class GetAllIntegrationConfigurationsExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling IntegrationsBeta#GetAllIntegrationConfigurations: " + e.Message);
+            Console.WriteLine("Exception when calling IntegrationsBetaApi#GetAllIntegrationConfigurations: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

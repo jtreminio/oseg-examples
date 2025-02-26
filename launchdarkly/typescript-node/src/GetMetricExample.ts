@@ -13,6 +13,6 @@ apiCaller.getMetric(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Metrics#getMetric:");
+  console.log("Exception when calling MetricsApi#getMetric:");
   console.log(error.body);
 });

@@ -37,7 +37,7 @@ public class PatchInsightGroupExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling InsightsScoresBeta#PatchInsightGroup: " + e.Message);
+            Console.WriteLine("Exception when calling InsightsScoresBetaApi#PatchInsightGroup: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

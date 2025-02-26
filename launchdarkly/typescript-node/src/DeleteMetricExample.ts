@@ -9,6 +9,6 @@ apiCaller.deleteMetric(
   undefined, // projectKey
   undefined, // metricKey
 ).catch(error => {
-  console.log("Exception when calling Metrics#deleteMetric:");
+  console.log("Exception when calling MetricsApi#deleteMetric:");
   console.log(error.body);
 });

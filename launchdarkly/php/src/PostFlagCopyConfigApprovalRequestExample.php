@@ -41,5 +41,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Approvals#postFlagCopyConfigApprovalRequest: {$e->getMessage()}";
+    echo "Exception when calling ApprovalsApi#postFlagCopyConfigApprovalRequest: {$e->getMessage()}";
 }

@@ -23,5 +23,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling DataExportDestinations#patch_destination: #{e}"
+    puts "Exception when calling DataExportDestinationsApi#patch_destination: #{e}"
 end

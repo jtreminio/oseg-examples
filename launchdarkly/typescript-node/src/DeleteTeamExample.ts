@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.TeamsApiApiKeys.ApiKey, "YOUR_API_KEY");
 apiCaller.deleteTeam(
   undefined, // teamKey
 ).catch(error => {
-  console.log("Exception when calling Teams#deleteTeam:");
+  console.log("Exception when calling TeamsApi#deleteTeam:");
   console.log(error.body);
 });

@@ -43,7 +43,7 @@ public class CreateIntegrationDeliveryConfigurationExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling IntegrationDeliveryConfigurationsBeta#CreateIntegrationDeliveryConfiguration: " + e.Message);
+            Console.WriteLine("Exception when calling IntegrationDeliveryConfigurationsBetaApi#CreateIntegrationDeliveryConfiguration: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

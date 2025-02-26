@@ -24,7 +24,7 @@ public class DeleteApplicationExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling ApplicationsBeta#DeleteApplication: " + e.Message);
+            Console.WriteLine("Exception when calling ApplicationsBetaApi#DeleteApplication: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

@@ -29,7 +29,7 @@ public class GetMetricExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Metrics#GetMetric: " + e.Message);
+            Console.WriteLine("Exception when calling MetricsApi#GetMetric: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

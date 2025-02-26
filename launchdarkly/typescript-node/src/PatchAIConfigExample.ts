@@ -21,6 +21,6 @@ apiCaller.patchAIConfig(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling AIConfigsBeta#patchAIConfig:");
+  console.log("Exception when calling AIConfigsBetaApi#patchAIConfig:");
   console.log(error.body);
 });

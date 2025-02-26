@@ -19,5 +19,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling FlagTriggers#getTriggerWorkflows: {$e->getMessage()}";
+    echo "Exception when calling FlagTriggersApi#getTriggerWorkflows: {$e->getMessage()}";
 }

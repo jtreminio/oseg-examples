@@ -26,4 +26,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling AccountMembers#patch_member: %s\n" % e)
+        print("Exception when calling AccountMembersApi#patch_member: %s\n" % e)

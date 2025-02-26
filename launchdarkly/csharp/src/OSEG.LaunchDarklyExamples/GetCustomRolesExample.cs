@@ -24,7 +24,7 @@ public class GetCustomRolesExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling CustomRoles#GetCustomRoles: " + e.Message);
+            Console.WriteLine("Exception when calling CustomRolesApi#GetCustomRoles: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

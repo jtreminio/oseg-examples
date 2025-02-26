@@ -56,5 +56,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Workflows#postWorkflow: {$e->getMessage()}";
+    echo "Exception when calling WorkflowsApi#postWorkflow: {$e->getMessage()}";
 }

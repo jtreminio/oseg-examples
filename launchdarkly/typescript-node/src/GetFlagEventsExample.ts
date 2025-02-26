@@ -22,6 +22,6 @@ apiCaller.getFlagEvents(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling InsightsFlagEventsBeta#getFlagEvents:");
+  console.log("Exception when calling InsightsFlagEventsBetaApi#getFlagEvents:");
   console.log(error.body);
 });

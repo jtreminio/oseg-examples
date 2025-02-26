@@ -13,5 +13,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling UsersBeta#get_user_attribute_names: #{e}"
+    puts "Exception when calling UsersBetaApi#get_user_attribute_names: #{e}"
 end

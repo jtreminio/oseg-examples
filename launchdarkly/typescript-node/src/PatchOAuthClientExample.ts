@@ -19,6 +19,6 @@ apiCaller.patchOAuthClient(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling OAuth2Clients#patchOAuthClient:");
+  console.log("Exception when calling OAuth2ClientsApi#patchOAuthClient:");
   console.log(error.body);
 });

@@ -17,4 +17,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling FollowFlags#get_followers_by_proj_env: %s\n" % e)
+        print("Exception when calling FollowFlagsApi#get_followers_by_proj_env: %s\n" % e)

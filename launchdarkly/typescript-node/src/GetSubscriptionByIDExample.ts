@@ -11,6 +11,6 @@ apiCaller.getSubscriptionByID(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling IntegrationAuditLogSubscriptions#getSubscriptionByID:");
+  console.log("Exception when calling IntegrationAuditLogSubscriptionsApi#getSubscriptionByID:");
   console.log(error.body);
 });

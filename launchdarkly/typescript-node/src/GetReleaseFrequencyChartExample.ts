@@ -20,6 +20,6 @@ apiCaller.getReleaseFrequencyChart(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling InsightsChartsBeta#getReleaseFrequencyChart:");
+  console.log("Exception when calling InsightsChartsBetaApi#getReleaseFrequencyChart:");
   console.log(error.body);
 });

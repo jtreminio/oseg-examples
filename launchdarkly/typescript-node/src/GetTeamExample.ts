@@ -11,6 +11,6 @@ apiCaller.getTeam(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Teams#getTeam:");
+  console.log("Exception when calling TeamsApi#getTeam:");
   console.log(error.body);
 });

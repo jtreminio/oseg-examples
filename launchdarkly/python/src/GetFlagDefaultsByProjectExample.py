@@ -16,4 +16,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling Projects#get_flag_defaults_by_project: %s\n" % e)
+        print("Exception when calling ProjectsApi#get_flag_defaults_by_project: %s\n" % e)

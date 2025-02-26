@@ -33,7 +33,7 @@ public class CreateReleaseForFlagExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling ReleasesBeta#CreateReleaseForFlag: " + e.Message);
+            Console.WriteLine("Exception when calling ReleasesBetaApi#CreateReleaseForFlag: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

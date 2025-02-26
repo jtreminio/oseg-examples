@@ -22,4 +22,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling DataExportDestinations#post_destination: %s\n" % e)
+        print("Exception when calling DataExportDestinationsApi#post_destination: %s\n" % e)

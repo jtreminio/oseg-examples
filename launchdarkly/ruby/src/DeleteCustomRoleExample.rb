@@ -10,5 +10,5 @@ begin
         nil, # custom_role_key
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling CustomRoles#delete_custom_role: #{e}"
+    puts "Exception when calling CustomRolesApi#delete_custom_role: #{e}"
 end

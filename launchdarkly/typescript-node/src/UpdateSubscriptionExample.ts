@@ -20,6 +20,6 @@ apiCaller.updateSubscription(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling IntegrationAuditLogSubscriptions#updateSubscription:");
+  console.log("Exception when calling IntegrationAuditLogSubscriptionsApi#updateSubscription:");
   console.log(error.body);
 });

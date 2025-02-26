@@ -23,4 +23,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling ReleasesBeta#create_release_for_flag: %s\n" % e)
+        print("Exception when calling ReleasesBetaApi#create_release_for_flag: %s\n" % e)

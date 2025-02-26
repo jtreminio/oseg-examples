@@ -30,7 +30,7 @@ public class GetApplicationVersionsExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling ApplicationsBeta#GetApplicationVersions: " + e.Message);
+            Console.WriteLine("Exception when calling ApplicationsBetaApi#GetApplicationVersions: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

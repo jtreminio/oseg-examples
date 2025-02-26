@@ -26,7 +26,7 @@ public class DeleteAIConfigExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling AIConfigsBeta#DeleteAIConfig: " + e.Message);
+            Console.WriteLine("Exception when calling AIConfigsBetaApi#DeleteAIConfig: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

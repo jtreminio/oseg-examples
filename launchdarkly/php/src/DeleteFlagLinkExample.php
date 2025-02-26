@@ -17,5 +17,5 @@ try {
         id: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling FlagLinksBeta#deleteFlagLink: {$e->getMessage()}";
+    echo "Exception when calling FlagLinksBetaApi#deleteFlagLink: {$e->getMessage()}";
 }

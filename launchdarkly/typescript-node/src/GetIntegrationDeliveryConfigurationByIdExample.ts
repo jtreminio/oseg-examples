@@ -13,6 +13,6 @@ apiCaller.getIntegrationDeliveryConfigurationById(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling IntegrationDeliveryConfigurationsBeta#getIntegrationDeliveryConfigurationById:");
+  console.log("Exception when calling IntegrationDeliveryConfigurationsBetaApi#getIntegrationDeliveryConfigurationById:");
   console.log(error.body);
 });

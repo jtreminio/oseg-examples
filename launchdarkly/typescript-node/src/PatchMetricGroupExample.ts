@@ -20,6 +20,6 @@ apiCaller.patchMetricGroup(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling MetricsBeta#patchMetricGroup:");
+  console.log("Exception when calling MetricsBetaApi#patchMetricGroup:");
   console.log(error.body);
 });

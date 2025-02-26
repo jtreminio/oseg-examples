@@ -17,4 +17,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling ApplicationsBeta#get_application: %s\n" % e)
+        print("Exception when calling ApplicationsBetaApi#get_application: %s\n" % e)

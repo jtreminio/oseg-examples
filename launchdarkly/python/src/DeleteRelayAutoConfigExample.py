@@ -14,4 +14,4 @@ with ApiClient(configuration) as api_client:
             id=None,
         )
     except ApiException as e:
-        print("Exception when calling RelayProxyConfigurations#delete_relay_auto_config: %s\n" % e)
+        print("Exception when calling RelayProxyConfigurationsApi#delete_relay_auto_config: %s\n" % e)

@@ -17,5 +17,5 @@ try {
         user_key: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Users#deleteUser: {$e->getMessage()}";
+    echo "Exception when calling UsersApi#deleteUser: {$e->getMessage()}";
 }

@@ -20,6 +20,6 @@ apiCaller.evaluateContextInstance(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Contexts#evaluateContextInstance:");
+  console.log("Exception when calling ContextsApi#evaluateContextInstance:");
   console.log(error.body);
 });

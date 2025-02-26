@@ -10,6 +10,6 @@ apiCaller.getWebhook(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Webhooks#getWebhook:");
+  console.log("Exception when calling WebhooksApi#getWebhook:");
   console.log(error.body);
 });

@@ -24,7 +24,7 @@ public class GetRootExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Other#GetRoot: " + e.Message);
+            Console.WriteLine("Exception when calling OtherApi#GetRoot: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

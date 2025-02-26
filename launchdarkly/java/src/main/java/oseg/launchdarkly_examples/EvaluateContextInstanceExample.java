@@ -41,7 +41,7 @@ public class EvaluateContextInstanceExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling Contexts#evaluateContextInstance");
+            System.err.println("Exception when calling ContextsApi#evaluateContextInstance");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

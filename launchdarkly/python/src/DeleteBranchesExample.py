@@ -18,4 +18,4 @@ with ApiClient(configuration) as api_client:
             ],
         )
     except ApiException as e:
-        print("Exception when calling CodeReferences#delete_branches: %s\n" % e)
+        print("Exception when calling CodeReferencesApi#delete_branches: %s\n" % e)

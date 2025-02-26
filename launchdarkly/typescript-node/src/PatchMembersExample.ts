@@ -23,6 +23,6 @@ apiCaller.patchMembers(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling AccountMembersBeta#patchMembers:");
+  console.log("Exception when calling AccountMembersBetaApi#patchMembers:");
   console.log(error.body);
 });

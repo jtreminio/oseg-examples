@@ -18,4 +18,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling FeatureFlagsBeta#get_dependent_flags_by_env: %s\n" % e)
+        print("Exception when calling FeatureFlagsBetaApi#get_dependent_flags_by_env: %s\n" % e)

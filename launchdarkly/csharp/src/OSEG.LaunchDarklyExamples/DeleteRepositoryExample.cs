@@ -24,7 +24,7 @@ public class DeleteRepositoryExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling CodeReferences#DeleteRepository: " + e.Message);
+            Console.WriteLine("Exception when calling CodeReferencesApi#DeleteRepository: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

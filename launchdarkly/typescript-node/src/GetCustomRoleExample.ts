@@ -10,6 +10,6 @@ apiCaller.getCustomRole(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling CustomRoles#getCustomRole:");
+  console.log("Exception when calling CustomRolesApi#getCustomRole:");
   console.log(error.body);
 });

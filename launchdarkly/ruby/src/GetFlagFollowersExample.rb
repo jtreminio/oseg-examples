@@ -14,5 +14,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling FollowFlags#get_flag_followers: #{e}"
+    puts "Exception when calling FollowFlagsApi#get_flag_followers: #{e}"
 end

@@ -15,6 +15,6 @@ apiCaller.getAIConfigMetrics(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling AIConfigsBeta#getAIConfigMetrics:");
+  console.log("Exception when calling AIConfigsBetaApi#getAIConfigMetrics:");
   console.log(error.body);
 });

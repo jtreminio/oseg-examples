@@ -63,7 +63,7 @@ public class PostWorkflowExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Workflows#PostWorkflow: " + e.Message);
+            Console.WriteLine("Exception when calling WorkflowsApi#PostWorkflow: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

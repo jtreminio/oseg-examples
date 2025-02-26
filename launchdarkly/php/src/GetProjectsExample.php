@@ -15,5 +15,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Projects#getProjects: {$e->getMessage()}";
+    echo "Exception when calling ProjectsApi#getProjects: {$e->getMessage()}";
 }

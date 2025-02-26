@@ -56,7 +56,7 @@ public class UpdatePhaseStatusExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling ReleasesBeta#updatePhaseStatus");
+            System.err.println("Exception when calling ReleasesBetaApi#updatePhaseStatus");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

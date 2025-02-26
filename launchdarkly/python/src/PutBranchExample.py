@@ -50,4 +50,4 @@ with ApiClient(configuration) as api_client:
             put_branch=put_branch,
         )
     except ApiException as e:
-        print("Exception when calling CodeReferences#put_branch: %s\n" % e)
+        print("Exception when calling CodeReferencesApi#put_branch: %s\n" % e)

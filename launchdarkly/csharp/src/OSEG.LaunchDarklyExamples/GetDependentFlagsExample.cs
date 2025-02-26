@@ -27,7 +27,7 @@ public class GetDependentFlagsExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling FeatureFlagsBeta#GetDependentFlags: " + e.Message);
+            Console.WriteLine("Exception when calling FeatureFlagsBetaApi#GetDependentFlags: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

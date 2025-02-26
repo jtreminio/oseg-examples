@@ -17,4 +17,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling AIConfigsBeta#list_model_configs: %s\n" % e)
+        print("Exception when calling AIConfigsBetaApi#list_model_configs: %s\n" % e)

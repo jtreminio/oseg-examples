@@ -43,7 +43,7 @@ public class CreateTriggerWorkflowExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling FlagTriggers#createTriggerWorkflow");
+            System.err.println("Exception when calling FlagTriggersApi#createTriggerWorkflow");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

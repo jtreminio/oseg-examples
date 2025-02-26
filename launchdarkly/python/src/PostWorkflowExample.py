@@ -51,4 +51,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling Workflows#post_workflow: %s\n" % e)
+        print("Exception when calling WorkflowsApi#post_workflow: %s\n" % e)

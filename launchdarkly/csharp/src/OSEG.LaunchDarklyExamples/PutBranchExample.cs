@@ -62,7 +62,7 @@ public class PutBranchExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling CodeReferences#PutBranch: " + e.Message);
+            Console.WriteLine("Exception when calling CodeReferencesApi#PutBranch: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

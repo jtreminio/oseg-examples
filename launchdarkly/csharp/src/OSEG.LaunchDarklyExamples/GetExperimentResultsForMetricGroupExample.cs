@@ -30,7 +30,7 @@ public class GetExperimentResultsForMetricGroupExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Experiments#GetExperimentResultsForMetricGroup: " + e.Message);
+            Console.WriteLine("Exception when calling ExperimentsApi#GetExperimentResultsForMetricGroup: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

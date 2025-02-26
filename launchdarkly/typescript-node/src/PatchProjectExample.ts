@@ -19,6 +19,6 @@ apiCaller.patchProject(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Projects#patchProject:");
+  console.log("Exception when calling ProjectsApi#patchProject:");
   console.log(error.body);
 });

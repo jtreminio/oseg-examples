@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.ApplicationsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 apiCaller.deleteApplication(
   undefined, // applicationKey
 ).catch(error => {
-  console.log("Exception when calling ApplicationsBeta#deleteApplication:");
+  console.log("Exception when calling ApplicationsBetaApi#deleteApplication:");
   console.log(error.body);
 });

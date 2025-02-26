@@ -10,6 +10,6 @@ apiCaller.deleteAIConfig(
   "default", // projectKey
   undefined, // configKey
 ).catch(error => {
-  console.log("Exception when calling AIConfigsBeta#deleteAIConfig:");
+  console.log("Exception when calling AIConfigsBetaApi#deleteAIConfig:");
   console.log(error.body);
 });

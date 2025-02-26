@@ -37,7 +37,7 @@ public class CreateFlagLinkExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling FlagLinksBeta#createFlagLink");
+            System.err.println("Exception when calling FlagLinksBetaApi#createFlagLink");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

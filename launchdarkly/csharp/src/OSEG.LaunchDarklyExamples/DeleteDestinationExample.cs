@@ -26,7 +26,7 @@ public class DeleteDestinationExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling DataExportDestinations#DeleteDestination: " + e.Message);
+            Console.WriteLine("Exception when calling DataExportDestinationsApi#DeleteDestination: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

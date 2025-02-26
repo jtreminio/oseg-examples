@@ -11,6 +11,6 @@ apiCaller.deleteFlagFollower(
   undefined, // environmentKey
   undefined, // memberId
 ).catch(error => {
-  console.log("Exception when calling FollowFlags#deleteFlagFollower:");
+  console.log("Exception when calling FollowFlagsApi#deleteFlagFollower:");
   console.log(error.body);
 });

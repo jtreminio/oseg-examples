@@ -17,4 +17,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling ReleasePipelinesBeta#get_release_pipeline_by_key: %s\n" % e)
+        print("Exception when calling ReleasePipelinesBetaApi#get_release_pipeline_by_key: %s\n" % e)

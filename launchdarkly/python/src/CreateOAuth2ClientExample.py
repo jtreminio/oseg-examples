@@ -22,4 +22,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling OAuth2Clients#create_o_auth2_client: %s\n" % e)
+        print("Exception when calling OAuth2ClientsApi#create_o_auth2_client: %s\n" % e)

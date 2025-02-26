@@ -11,6 +11,6 @@ apiCaller.deleteWorkflow(
   undefined, // environmentKey
   undefined, // workflowId
 ).catch(error => {
-  console.log("Exception when calling Workflows#deleteWorkflow:");
+  console.log("Exception when calling WorkflowsApi#deleteWorkflow:");
   console.log(error.body);
 });

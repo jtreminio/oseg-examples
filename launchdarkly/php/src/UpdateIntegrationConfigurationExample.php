@@ -26,5 +26,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling IntegrationsBeta#updateIntegrationConfiguration: {$e->getMessage()}";
+    echo "Exception when calling IntegrationsBetaApi#updateIntegrationConfiguration: {$e->getMessage()}";
 }

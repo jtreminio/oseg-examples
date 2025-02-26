@@ -29,7 +29,7 @@ public class GetBigSegmentImportExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Segments#GetBigSegmentImport: " + e.Message);
+            Console.WriteLine("Exception when calling SegmentsApi#GetBigSegmentImport: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.OtherApiApiKeys.ApiKey, "YOUR_API_KEY");
 apiCaller.getIps().then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Other#getIps:");
+  console.log("Exception when calling OtherApi#getIps:");
   console.log(error.body);
 });

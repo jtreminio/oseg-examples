@@ -27,7 +27,7 @@ public class DeleteFlagFollowerExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling FollowFlags#DeleteFlagFollower: " + e.Message);
+            Console.WriteLine("Exception when calling FollowFlagsApi#DeleteFlagFollower: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

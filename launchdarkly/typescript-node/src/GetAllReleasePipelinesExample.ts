@@ -13,6 +13,6 @@ apiCaller.getAllReleasePipelines(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling ReleasePipelinesBeta#getAllReleasePipelines:");
+  console.log("Exception when calling ReleasePipelinesBetaApi#getAllReleasePipelines:");
   console.log(error.body);
 });

@@ -19,5 +19,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling InsightsChartsBeta#getFlagStatusChart: {$e->getMessage()}";
+    echo "Exception when calling InsightsChartsBetaApi#getFlagStatusChart: {$e->getMessage()}";
 }

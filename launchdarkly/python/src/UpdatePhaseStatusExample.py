@@ -46,4 +46,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling ReleasesBeta#update_phase_status: %s\n" % e)
+        print("Exception when calling ReleasesBetaApi#update_phase_status: %s\n" % e)

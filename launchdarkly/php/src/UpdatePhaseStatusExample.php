@@ -44,5 +44,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling ReleasesBeta#updatePhaseStatus: {$e->getMessage()}";
+    echo "Exception when calling ReleasesBetaApi#updatePhaseStatus: {$e->getMessage()}";
 }

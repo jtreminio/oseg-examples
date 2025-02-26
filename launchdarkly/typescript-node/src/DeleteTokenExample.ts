@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.AccessTokensApiApiKeys.ApiKey, "YOUR_API_KEY");
 apiCaller.deleteToken(
   undefined, // id
 ).catch(error => {
-  console.log("Exception when calling AccessTokens#deleteToken:");
+  console.log("Exception when calling AccessTokensApi#deleteToken:");
   console.log(error.body);
 });

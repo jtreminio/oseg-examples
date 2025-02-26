@@ -18,5 +18,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling RelayProxyConfigurations#resetRelayAutoConfig: {$e->getMessage()}";
+    echo "Exception when calling RelayProxyConfigurationsApi#resetRelayAutoConfig: {$e->getMessage()}";
 }

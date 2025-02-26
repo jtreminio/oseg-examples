@@ -15,5 +15,5 @@ try {
         id: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling RelayProxyConfigurations#deleteRelayAutoConfig: {$e->getMessage()}";
+    echo "Exception when calling RelayProxyConfigurationsApi#deleteRelayAutoConfig: {$e->getMessage()}";
 }

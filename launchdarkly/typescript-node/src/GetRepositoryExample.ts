@@ -10,6 +10,6 @@ apiCaller.getRepository(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling CodeReferences#getRepository:");
+  console.log("Exception when calling CodeReferencesApi#getRepository:");
   console.log(error.body);
 });

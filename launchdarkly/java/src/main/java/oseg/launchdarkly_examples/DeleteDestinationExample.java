@@ -29,7 +29,7 @@ public class DeleteDestinationExample
                 null // id
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling DataExportDestinations#deleteDestination");
+            System.err.println("Exception when calling DataExportDestinationsApi#deleteDestination");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

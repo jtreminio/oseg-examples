@@ -26,7 +26,7 @@ public class GetOAuthClientByIdExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling OAuth2Clients#GetOAuthClientById: " + e.Message);
+            Console.WriteLine("Exception when calling OAuth2ClientsApi#GetOAuthClientById: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

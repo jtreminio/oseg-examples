@@ -11,5 +11,5 @@ begin
         nil, # environment_key
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling Environments#delete_environment: #{e}"
+    puts "Exception when calling EnvironmentsApi#delete_environment: #{e}"
 end

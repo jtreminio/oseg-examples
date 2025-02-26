@@ -10,5 +10,5 @@ begin
         nil, # id
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling AccountMembers#delete_member: #{e}"
+    puts "Exception when calling AccountMembersApi#delete_member: #{e}"
 end

@@ -28,7 +28,7 @@ public class GetMetricGroupExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling MetricsBeta#GetMetricGroup: " + e.Message);
+            Console.WriteLine("Exception when calling MetricsBetaApi#GetMetricGroup: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

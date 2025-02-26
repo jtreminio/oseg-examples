@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.AccountUsageBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 apiCaller.getMauSdksByType().then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling AccountUsageBeta#getMauSdksByType:");
+  console.log("Exception when calling AccountUsageBetaApi#getMauSdksByType:");
   console.log(error.body);
 });

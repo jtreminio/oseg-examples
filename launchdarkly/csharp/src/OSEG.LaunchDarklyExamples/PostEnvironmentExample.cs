@@ -33,7 +33,7 @@ public class PostEnvironmentExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Environments#PostEnvironment: " + e.Message);
+            Console.WriteLine("Exception when calling EnvironmentsApi#PostEnvironment: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

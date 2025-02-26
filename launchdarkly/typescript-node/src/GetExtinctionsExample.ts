@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.CodeReferencesApiApiKeys.ApiKey, "YOUR_API_KEY");
 apiCaller.getExtinctions().then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling CodeReferences#getExtinctions:");
+  console.log("Exception when calling CodeReferencesApi#getExtinctions:");
   console.log(error.body);
 });

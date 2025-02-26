@@ -24,7 +24,7 @@ public class GetExperimentationKeysUsageExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling AccountUsageBeta#GetExperimentationKeysUsage: " + e.Message);
+            Console.WriteLine("Exception when calling AccountUsageBetaApi#GetExperimentationKeysUsage: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

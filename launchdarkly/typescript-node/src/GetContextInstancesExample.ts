@@ -17,6 +17,6 @@ apiCaller.getContextInstances(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Contexts#getContextInstances:");
+  console.log("Exception when calling ContextsApi#getContextInstances:");
   console.log(error.body);
 });

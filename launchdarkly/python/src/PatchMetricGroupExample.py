@@ -27,4 +27,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling MetricsBeta#patch_metric_group: %s\n" % e)
+        print("Exception when calling MetricsBetaApi#patch_metric_group: %s\n" % e)

@@ -48,7 +48,7 @@ public class PatchSegmentExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling Segments#patchSegment");
+            System.err.println("Exception when calling SegmentsApi#patchSegment");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

@@ -57,7 +57,7 @@ public class UpdatePhaseStatusExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling ReleasesBeta#UpdatePhaseStatus: " + e.Message);
+            Console.WriteLine("Exception when calling ReleasesBetaApi#UpdatePhaseStatus: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

@@ -37,5 +37,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling AIConfigsBeta#patch_ai_config_variation: #{e}"
+    puts "Exception when calling AIConfigsBetaApi#patch_ai_config_variation: #{e}"
 end

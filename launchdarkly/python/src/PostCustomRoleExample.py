@@ -38,4 +38,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling CustomRoles#post_custom_role: %s\n" % e)
+        print("Exception when calling CustomRolesApi#post_custom_role: %s\n" % e)

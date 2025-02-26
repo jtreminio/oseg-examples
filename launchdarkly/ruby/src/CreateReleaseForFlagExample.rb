@@ -18,5 +18,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling ReleasesBeta#create_release_for_flag: #{e}"
+    puts "Exception when calling ReleasesBetaApi#create_release_for_flag: #{e}"
 end

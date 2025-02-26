@@ -36,5 +36,5 @@ try {
         post_deployment_event_input: $post_deployment_event_input,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling InsightsDeploymentsBeta#createDeploymentEvent: {$e->getMessage()}";
+    echo "Exception when calling InsightsDeploymentsBetaApi#createDeploymentEvent: {$e->getMessage()}";
 }

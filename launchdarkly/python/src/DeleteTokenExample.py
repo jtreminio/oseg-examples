@@ -14,4 +14,4 @@ with ApiClient(configuration) as api_client:
             id=None,
         )
     except ApiException as e:
-        print("Exception when calling AccessTokens#delete_token: %s\n" % e)
+        print("Exception when calling AccessTokensApi#delete_token: %s\n" % e)

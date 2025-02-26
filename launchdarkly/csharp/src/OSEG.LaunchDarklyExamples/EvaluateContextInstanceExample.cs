@@ -38,7 +38,7 @@ public class EvaluateContextInstanceExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Contexts#EvaluateContextInstance: " + e.Message);
+            Console.WriteLine("Exception when calling ContextsApi#EvaluateContextInstance: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

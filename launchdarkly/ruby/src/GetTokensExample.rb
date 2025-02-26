@@ -10,5 +10,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling AccessTokens#get_tokens: #{e}"
+    puts "Exception when calling AccessTokensApi#get_tokens: #{e}"
 end

@@ -14,6 +14,6 @@ apiCaller.getAllReleaseProgressionsForReleasePipeline(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling ReleasePipelinesBeta#getAllReleaseProgressionsForReleasePipeline:");
+  console.log("Exception when calling ReleasePipelinesBetaApi#getAllReleaseProgressionsForReleasePipeline:");
   console.log(error.body);
 });

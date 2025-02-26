@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.ApprovalsApiApiKeys.ApiKey, "YOUR_API_KEY");
 apiCaller.deleteApprovalRequest(
   undefined, // id
 ).catch(error => {
-  console.log("Exception when calling Approvals#deleteApprovalRequest:");
+  console.log("Exception when calling ApprovalsApi#deleteApprovalRequest:");
   console.log(error.body);
 });

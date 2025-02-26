@@ -42,7 +42,7 @@ public class PostFlagConfigScheduledChangesExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling ScheduledChanges#PostFlagConfigScheduledChanges: " + e.Message);
+            Console.WriteLine("Exception when calling ScheduledChangesApi#PostFlagConfigScheduledChanges: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

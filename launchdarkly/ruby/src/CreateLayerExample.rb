@@ -18,5 +18,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling Layers#create_layer: #{e}"
+    puts "Exception when calling LayersApi#create_layer: #{e}"
 end

@@ -39,7 +39,7 @@ public class PatchFlagImportConfigurationExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling FlagImportConfigurationsBeta#PatchFlagImportConfiguration: " + e.Message);
+            Console.WriteLine("Exception when calling FlagImportConfigurationsBetaApi#PatchFlagImportConfiguration: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

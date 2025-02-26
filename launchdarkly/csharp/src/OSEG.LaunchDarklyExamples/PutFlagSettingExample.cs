@@ -32,7 +32,7 @@ public class PutFlagSettingExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling UserSettings#PutFlagSetting: " + e.Message);
+            Console.WriteLine("Exception when calling UserSettingsApi#PutFlagSetting: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

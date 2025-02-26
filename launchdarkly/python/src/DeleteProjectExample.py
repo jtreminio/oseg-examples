@@ -14,4 +14,4 @@ with ApiClient(configuration) as api_client:
             project_key=None,
         )
     except ApiException as e:
-        print("Exception when calling Projects#delete_project: %s\n" % e)
+        print("Exception when calling ProjectsApi#delete_project: %s\n" % e)

@@ -11,6 +11,6 @@ apiCaller.getApprovalRequest(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Approvals#getApprovalRequest:");
+  console.log("Exception when calling ApprovalsApi#getApprovalRequest:");
   console.log(error.body);
 });

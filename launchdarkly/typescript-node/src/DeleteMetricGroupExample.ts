@@ -9,6 +9,6 @@ apiCaller.deleteMetricGroup(
   undefined, // projectKey
   undefined, // metricGroupKey
 ).catch(error => {
-  console.log("Exception when calling MetricsBeta#deleteMetricGroup:");
+  console.log("Exception when calling MetricsBetaApi#deleteMetricGroup:");
   console.log(error.body);
 });

@@ -16,5 +16,5 @@ try {
         environment_key: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Environments#deleteEnvironment: {$e->getMessage()}";
+    echo "Exception when calling EnvironmentsApi#deleteEnvironment: {$e->getMessage()}";
 }

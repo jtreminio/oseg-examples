@@ -18,5 +18,5 @@ try {
         variation_key: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling AIConfigsBeta#deleteAIConfigVariation: {$e->getMessage()}";
+    echo "Exception when calling AIConfigsBetaApi#deleteAIConfigVariation: {$e->getMessage()}";
 }

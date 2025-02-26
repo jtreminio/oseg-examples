@@ -24,7 +24,7 @@ public class GetBigSegmentStoreIntegrationsExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling PersistentStoreIntegrationsBeta#GetBigSegmentStoreIntegrations: " + e.Message);
+            Console.WriteLine("Exception when calling PersistentStoreIntegrationsBetaApi#GetBigSegmentStoreIntegrations: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

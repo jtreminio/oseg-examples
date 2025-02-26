@@ -13,5 +13,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling FeatureFlags#get_feature_flag_status_across_environments: #{e}"
+    puts "Exception when calling FeatureFlagsApi#get_feature_flag_status_across_environments: #{e}"
 end

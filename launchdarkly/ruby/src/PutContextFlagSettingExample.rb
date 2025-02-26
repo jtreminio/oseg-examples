@@ -18,5 +18,5 @@ begin
         value_put,
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling ContextSettings#put_context_flag_setting: #{e}"
+    puts "Exception when calling ContextSettingsApi#put_context_flag_setting: #{e}"
 end

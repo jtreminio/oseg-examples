@@ -15,5 +15,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling AccountUsageBeta#getMauUsage: {$e->getMessage()}";
+    echo "Exception when calling AccountUsageBetaApi#getMauUsage: {$e->getMessage()}";
 }

@@ -49,7 +49,7 @@ public class PatchSegmentExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Segments#PatchSegment: " + e.Message);
+            Console.WriteLine("Exception when calling SegmentsApi#PatchSegment: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

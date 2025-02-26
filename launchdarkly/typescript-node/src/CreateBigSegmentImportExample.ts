@@ -13,6 +13,6 @@ apiCaller.createBigSegmentImport(
   undefined, // mode
   undefined, // waitOnApprovals
 ).catch(error => {
-  console.log("Exception when calling Segments#createBigSegmentImport:");
+  console.log("Exception when calling SegmentsApi#createBigSegmentImport:");
   console.log(error.body);
 });

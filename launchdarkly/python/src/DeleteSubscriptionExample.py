@@ -15,4 +15,4 @@ with ApiClient(configuration) as api_client:
             id=None,
         )
     except ApiException as e:
-        print("Exception when calling IntegrationAuditLogSubscriptions#delete_subscription: %s\n" % e)
+        print("Exception when calling IntegrationAuditLogSubscriptionsApi#delete_subscription: %s\n" % e)

@@ -15,4 +15,4 @@ with ApiClient(configuration) as api_client:
             version_key=None,
         )
     except ApiException as e:
-        print("Exception when calling ApplicationsBeta#delete_application_version: %s\n" % e)
+        print("Exception when calling ApplicationsBetaApi#delete_application_version: %s\n" % e)

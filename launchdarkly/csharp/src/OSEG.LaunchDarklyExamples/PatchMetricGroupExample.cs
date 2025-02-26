@@ -38,7 +38,7 @@ public class PatchMetricGroupExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling MetricsBeta#PatchMetricGroup: " + e.Message);
+            Console.WriteLine("Exception when calling MetricsBetaApi#PatchMetricGroup: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

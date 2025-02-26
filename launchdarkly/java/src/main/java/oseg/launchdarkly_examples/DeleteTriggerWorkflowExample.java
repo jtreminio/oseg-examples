@@ -30,7 +30,7 @@ public class DeleteTriggerWorkflowExample
                 null // id
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling FlagTriggers#deleteTriggerWorkflow");
+            System.err.println("Exception when calling FlagTriggersApi#deleteTriggerWorkflow");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

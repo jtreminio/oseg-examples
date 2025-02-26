@@ -36,5 +36,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Approvals#postApprovalRequestForFlag: {$e->getMessage()}";
+    echo "Exception when calling ApprovalsApi#postApprovalRequestForFlag: {$e->getMessage()}";
 }

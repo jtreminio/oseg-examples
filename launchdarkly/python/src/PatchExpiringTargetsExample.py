@@ -33,4 +33,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling FeatureFlags#patch_expiring_targets: %s\n" % e)
+        print("Exception when calling FeatureFlagsApi#patch_expiring_targets: %s\n" % e)

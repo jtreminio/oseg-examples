@@ -32,5 +32,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling Approvals#post_approval_request_for_flag: #{e}"
+    puts "Exception when calling ApprovalsApi#post_approval_request_for_flag: #{e}"
 end

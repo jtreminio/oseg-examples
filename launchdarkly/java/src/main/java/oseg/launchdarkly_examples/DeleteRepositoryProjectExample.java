@@ -28,7 +28,7 @@ public class DeleteRepositoryProjectExample
                 null // projectKey
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling InsightsRepositoriesBeta#deleteRepositoryProject");
+            System.err.println("Exception when calling InsightsRepositoriesBetaApi#deleteRepositoryProject");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

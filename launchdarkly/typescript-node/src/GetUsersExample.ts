@@ -13,6 +13,6 @@ apiCaller.getUsers(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Users#getUsers:");
+  console.log("Exception when calling UsersApi#getUsers:");
   console.log(error.body);
 });

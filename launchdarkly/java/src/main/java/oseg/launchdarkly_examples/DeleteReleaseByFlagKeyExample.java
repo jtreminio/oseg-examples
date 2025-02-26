@@ -28,7 +28,7 @@ public class DeleteReleaseByFlagKeyExample
                 null // flagKey
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling ReleasesBeta#deleteReleaseByFlagKey");
+            System.err.println("Exception when calling ReleasesBetaApi#deleteReleaseByFlagKey");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

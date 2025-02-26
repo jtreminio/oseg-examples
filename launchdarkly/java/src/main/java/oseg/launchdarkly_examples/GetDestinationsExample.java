@@ -27,7 +27,7 @@ public class GetDestinationsExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling DataExportDestinations#getDestinations");
+            System.err.println("Exception when calling DataExportDestinationsApi#getDestinations");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

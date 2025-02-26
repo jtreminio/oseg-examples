@@ -37,7 +37,7 @@ public class PatchRepositoryExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling CodeReferences#PatchRepository: " + e.Message);
+            Console.WriteLine("Exception when calling CodeReferencesApi#PatchRepository: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

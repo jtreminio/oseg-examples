@@ -42,6 +42,6 @@ apiCaller.createWorkflowTemplate(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling WorkflowTemplates#createWorkflowTemplate:");
+  console.log("Exception when calling WorkflowTemplatesApi#createWorkflowTemplate:");
   console.log(error.body);
 });

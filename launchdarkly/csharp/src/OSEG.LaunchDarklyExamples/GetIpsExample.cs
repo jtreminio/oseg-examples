@@ -24,7 +24,7 @@ public class GetIpsExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Other#GetIps: " + e.Message);
+            Console.WriteLine("Exception when calling OtherApi#GetIps: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

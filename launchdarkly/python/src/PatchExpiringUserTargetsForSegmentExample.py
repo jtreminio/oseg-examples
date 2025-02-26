@@ -36,4 +36,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling Segments#patch_expiring_user_targets_for_segment: %s\n" % e)
+        print("Exception when calling SegmentsApi#patch_expiring_user_targets_for_segment: %s\n" % e)

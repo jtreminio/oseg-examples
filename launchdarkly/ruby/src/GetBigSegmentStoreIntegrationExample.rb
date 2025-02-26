@@ -15,5 +15,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling PersistentStoreIntegrationsBeta#get_big_segment_store_integration: #{e}"
+    puts "Exception when calling PersistentStoreIntegrationsBetaApi#get_big_segment_store_integration: #{e}"
 end

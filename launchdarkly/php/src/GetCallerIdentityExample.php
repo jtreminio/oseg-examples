@@ -15,5 +15,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Other#getCallerIdentity: {$e->getMessage()}";
+    echo "Exception when calling OtherApi#getCallerIdentity: {$e->getMessage()}";
 }

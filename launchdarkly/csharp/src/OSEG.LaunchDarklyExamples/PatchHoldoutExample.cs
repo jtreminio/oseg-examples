@@ -41,7 +41,7 @@ public class PatchHoldoutExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling HoldoutsBeta#PatchHoldout: " + e.Message);
+            Console.WriteLine("Exception when calling HoldoutsBetaApi#PatchHoldout: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

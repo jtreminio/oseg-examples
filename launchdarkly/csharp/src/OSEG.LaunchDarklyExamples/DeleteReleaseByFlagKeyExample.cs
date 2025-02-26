@@ -25,7 +25,7 @@ public class DeleteReleaseByFlagKeyExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling ReleasesBeta#DeleteReleaseByFlagKey: " + e.Message);
+            Console.WriteLine("Exception when calling ReleasesBetaApi#DeleteReleaseByFlagKey: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

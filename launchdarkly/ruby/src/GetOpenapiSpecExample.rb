@@ -8,5 +8,5 @@ end
 begin
     LaunchDarklyClient::OtherApi.new.get_openapi_spec
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling Other#get_openapi_spec: #{e}"
+    puts "Exception when calling OtherApi#get_openapi_spec: #{e}"
 end

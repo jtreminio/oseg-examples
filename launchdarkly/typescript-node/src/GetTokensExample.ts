@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.AccessTokensApiApiKeys.ApiKey, "YOUR_API_KEY");
 apiCaller.getTokens().then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling AccessTokens#getTokens:");
+  console.log("Exception when calling AccessTokensApi#getTokens:");
   console.log(error.body);
 });

@@ -36,7 +36,7 @@ public class GetDeploymentsExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling InsightsDeploymentsBeta#GetDeployments: " + e.Message);
+            Console.WriteLine("Exception when calling InsightsDeploymentsBetaApi#GetDeployments: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

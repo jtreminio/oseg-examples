@@ -19,4 +19,4 @@ with ApiClient(configuration) as api_client:
             wait_on_approvals=None,
         )
     except ApiException as e:
-        print("Exception when calling Segments#create_big_segment_import: %s\n" % e)
+        print("Exception when calling SegmentsApi#create_big_segment_import: %s\n" % e)

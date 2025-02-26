@@ -28,7 +28,7 @@ public class DeleteEnvironmentExample
                 null // environmentKey
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling Environments#deleteEnvironment");
+            System.err.println("Exception when calling EnvironmentsApi#deleteEnvironment");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

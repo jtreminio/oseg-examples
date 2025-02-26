@@ -39,7 +39,7 @@ public class UpdateSubscriptionExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling IntegrationAuditLogSubscriptions#updateSubscription");
+            System.err.println("Exception when calling IntegrationAuditLogSubscriptionsApi#updateSubscription");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

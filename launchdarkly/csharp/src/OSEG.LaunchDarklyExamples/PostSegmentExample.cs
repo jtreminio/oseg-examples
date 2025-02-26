@@ -39,7 +39,7 @@ public class PostSegmentExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Segments#PostSegment: " + e.Message);
+            Console.WriteLine("Exception when calling SegmentsApi#PostSegment: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

@@ -37,7 +37,7 @@ public class GetPullRequestsExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling InsightsPullRequestsBeta#GetPullRequests: " + e.Message);
+            Console.WriteLine("Exception when calling InsightsPullRequestsBetaApi#GetPullRequests: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

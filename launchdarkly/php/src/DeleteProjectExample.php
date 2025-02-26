@@ -15,5 +15,5 @@ try {
         project_key: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Projects#deleteProject: {$e->getMessage()}";
+    echo "Exception when calling ProjectsApi#deleteProject: {$e->getMessage()}";
 }

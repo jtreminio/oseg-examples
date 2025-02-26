@@ -32,5 +32,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Layers#updateLayer: {$e->getMessage()}";
+    echo "Exception when calling LayersApi#updateLayer: {$e->getMessage()}";
 }

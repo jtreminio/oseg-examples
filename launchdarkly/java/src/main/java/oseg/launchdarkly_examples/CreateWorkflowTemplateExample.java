@@ -61,7 +61,7 @@ public class CreateWorkflowTemplateExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling WorkflowTemplates#createWorkflowTemplate");
+            System.err.println("Exception when calling WorkflowTemplatesApi#createWorkflowTemplate");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

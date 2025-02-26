@@ -29,7 +29,7 @@ public class GetHoldoutExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling HoldoutsBeta#GetHoldout: " + e.Message);
+            Console.WriteLine("Exception when calling HoldoutsBetaApi#GetHoldout: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

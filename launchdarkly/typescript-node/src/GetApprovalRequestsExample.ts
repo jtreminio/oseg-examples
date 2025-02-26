@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.ApprovalsApiApiKeys.ApiKey, "YOUR_API_KEY");
 apiCaller.getApprovalRequests().then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Approvals#getApprovalRequests:");
+  console.log("Exception when calling ApprovalsApi#getApprovalRequests:");
   console.log(error.body);
 });

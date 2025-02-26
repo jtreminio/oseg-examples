@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.FlagImportConfigurationsBetaApiApiKeys.ApiKey, "YOUR_API
 apiCaller.getFlagImportConfigurations().then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling FlagImportConfigurationsBeta#getFlagImportConfigurations:");
+  console.log("Exception when calling FlagImportConfigurationsBetaApi#getFlagImportConfigurations:");
   console.log(error.body);
 });

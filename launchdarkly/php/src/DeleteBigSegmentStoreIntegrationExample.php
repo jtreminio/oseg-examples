@@ -18,5 +18,5 @@ try {
         integration_id: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling PersistentStoreIntegrationsBeta#deleteBigSegmentStoreIntegration: {$e->getMessage()}";
+    echo "Exception when calling PersistentStoreIntegrationsBetaApi#deleteBigSegmentStoreIntegration: {$e->getMessage()}";
 }

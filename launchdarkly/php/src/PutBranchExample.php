@@ -48,5 +48,5 @@ try {
         put_branch: $put_branch,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling CodeReferences#putBranch: {$e->getMessage()}";
+    echo "Exception when calling CodeReferencesApi#putBranch: {$e->getMessage()}";
 }

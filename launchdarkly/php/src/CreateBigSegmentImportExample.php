@@ -20,5 +20,5 @@ try {
         wait_on_approvals: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Segments#createBigSegmentImport: {$e->getMessage()}";
+    echo "Exception when calling SegmentsApi#createBigSegmentImport: {$e->getMessage()}";
 }

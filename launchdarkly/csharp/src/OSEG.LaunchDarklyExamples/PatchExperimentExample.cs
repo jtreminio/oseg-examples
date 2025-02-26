@@ -41,7 +41,7 @@ public class PatchExperimentExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Experiments#PatchExperiment: " + e.Message);
+            Console.WriteLine("Exception when calling ExperimentsApi#PatchExperiment: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

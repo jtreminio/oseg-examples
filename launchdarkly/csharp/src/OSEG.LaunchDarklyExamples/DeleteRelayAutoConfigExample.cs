@@ -24,7 +24,7 @@ public class DeleteRelayAutoConfigExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling RelayProxyConfigurations#DeleteRelayAutoConfig: " + e.Message);
+            Console.WriteLine("Exception when calling RelayProxyConfigurationsApi#DeleteRelayAutoConfig: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

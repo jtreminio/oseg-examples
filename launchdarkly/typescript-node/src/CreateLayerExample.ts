@@ -16,6 +16,6 @@ apiCaller.createLayer(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Layers#createLayer:");
+  console.log("Exception when calling LayersApi#createLayer:");
   console.log(error.body);
 });

@@ -24,7 +24,7 @@ public class GetExtinctionsExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling CodeReferences#GetExtinctions: " + e.Message);
+            Console.WriteLine("Exception when calling CodeReferencesApi#GetExtinctions: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

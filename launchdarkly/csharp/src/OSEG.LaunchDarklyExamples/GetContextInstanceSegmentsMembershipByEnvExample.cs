@@ -39,7 +39,7 @@ public class GetContextInstanceSegmentsMembershipByEnvExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Segments#GetContextInstanceSegmentsMembershipByEnv: " + e.Message);
+            Console.WriteLine("Exception when calling SegmentsApi#GetContextInstanceSegmentsMembershipByEnv: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

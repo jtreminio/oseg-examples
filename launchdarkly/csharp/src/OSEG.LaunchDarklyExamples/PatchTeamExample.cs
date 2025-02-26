@@ -40,7 +40,7 @@ public class PatchTeamExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Teams#PatchTeam: " + e.Message);
+            Console.WriteLine("Exception when calling TeamsApi#PatchTeam: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

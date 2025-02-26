@@ -21,6 +21,6 @@ apiCaller.getContextInstanceSegmentsMembershipByEnv(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Segments#getContextInstanceSegmentsMembershipByEnv:");
+  console.log("Exception when calling SegmentsApi#getContextInstanceSegmentsMembershipByEnv:");
   console.log(error.body);
 });

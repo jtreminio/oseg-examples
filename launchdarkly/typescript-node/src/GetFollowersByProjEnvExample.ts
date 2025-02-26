@@ -11,6 +11,6 @@ apiCaller.getFollowersByProjEnv(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling FollowFlags#getFollowersByProjEnv:");
+  console.log("Exception when calling FollowFlagsApi#getFollowersByProjEnv:");
   console.log(error.body);
 });

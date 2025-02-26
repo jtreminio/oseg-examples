@@ -9,6 +9,6 @@ apiCaller.deleteSubscription(
   undefined, // integrationKey
   undefined, // id
 ).catch(error => {
-  console.log("Exception when calling IntegrationAuditLogSubscriptions#deleteSubscription:");
+  console.log("Exception when calling IntegrationAuditLogSubscriptionsApi#deleteSubscription:");
   console.log(error.body);
 });

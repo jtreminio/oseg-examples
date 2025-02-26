@@ -24,7 +24,7 @@ public class GetInsightsRepositoriesExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling InsightsRepositoriesBeta#GetInsightsRepositories: " + e.Message);
+            Console.WriteLine("Exception when calling InsightsRepositoriesBetaApi#GetInsightsRepositories: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

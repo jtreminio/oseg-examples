@@ -27,5 +27,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Environments#patchEnvironment: {$e->getMessage()}";
+    echo "Exception when calling EnvironmentsApi#patchEnvironment: {$e->getMessage()}";
 }

@@ -24,7 +24,7 @@ public class GetApprovalRequestsExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Approvals#GetApprovalRequests: " + e.Message);
+            Console.WriteLine("Exception when calling ApprovalsApi#GetApprovalRequests: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

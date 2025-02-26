@@ -11,6 +11,6 @@ apiCaller.resetEnvironmentMobileKey(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Environments#resetEnvironmentMobileKey:");
+  console.log("Exception when calling EnvironmentsApi#resetEnvironmentMobileKey:");
   console.log(error.body);
 });

@@ -20,6 +20,6 @@ apiCaller.patchEnvironment(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Environments#patchEnvironment:");
+  console.log("Exception when calling EnvironmentsApi#patchEnvironment:");
   console.log(error.body);
 });

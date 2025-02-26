@@ -28,5 +28,5 @@ try {
         extinction: $extinction,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling CodeReferences#postExtinction: {$e->getMessage()}";
+    echo "Exception when calling CodeReferencesApi#postExtinction: {$e->getMessage()}";
 }

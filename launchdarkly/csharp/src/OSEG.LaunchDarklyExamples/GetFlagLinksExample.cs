@@ -27,7 +27,7 @@ public class GetFlagLinksExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling FlagLinksBeta#GetFlagLinks: " + e.Message);
+            Console.WriteLine("Exception when calling FlagLinksBetaApi#GetFlagLinks: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

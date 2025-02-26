@@ -10,5 +10,5 @@ begin
         nil, # insight_group_key
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling InsightsScoresBeta#delete_insight_group: #{e}"
+    puts "Exception when calling InsightsScoresBetaApi#delete_insight_group: #{e}"
 end

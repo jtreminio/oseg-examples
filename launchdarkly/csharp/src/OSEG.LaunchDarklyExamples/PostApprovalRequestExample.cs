@@ -40,7 +40,7 @@ public class PostApprovalRequestExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Approvals#PostApprovalRequest: " + e.Message);
+            Console.WriteLine("Exception when calling ApprovalsApi#PostApprovalRequest: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

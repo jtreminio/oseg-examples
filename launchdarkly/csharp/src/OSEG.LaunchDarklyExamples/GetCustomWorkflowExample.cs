@@ -29,7 +29,7 @@ public class GetCustomWorkflowExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Workflows#GetCustomWorkflow: " + e.Message);
+            Console.WriteLine("Exception when calling WorkflowsApi#GetCustomWorkflow: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

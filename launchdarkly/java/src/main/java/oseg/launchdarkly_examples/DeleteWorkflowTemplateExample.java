@@ -27,7 +27,7 @@ public class DeleteWorkflowTemplateExample
                 null // templateKey
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling WorkflowTemplates#deleteWorkflowTemplate");
+            System.err.println("Exception when calling WorkflowTemplatesApi#deleteWorkflowTemplate");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

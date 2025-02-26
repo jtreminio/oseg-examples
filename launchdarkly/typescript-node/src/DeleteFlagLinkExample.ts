@@ -10,6 +10,6 @@ apiCaller.deleteFlagLink(
   undefined, // featureFlagKey
   undefined, // id
 ).catch(error => {
-  console.log("Exception when calling FlagLinksBeta#deleteFlagLink:");
+  console.log("Exception when calling FlagLinksBetaApi#deleteFlagLink:");
   console.log(error.body);
 });

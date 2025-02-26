@@ -15,5 +15,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling FlagTriggers#get_trigger_workflow_by_id: #{e}"
+    puts "Exception when calling FlagTriggersApi#get_trigger_workflow_by_id: #{e}"
 end

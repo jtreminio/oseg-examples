@@ -24,7 +24,7 @@ public class GetTeamsExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Teams#GetTeams: " + e.Message);
+            Console.WriteLine("Exception when calling TeamsApi#GetTeams: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

@@ -32,7 +32,7 @@ public class CreateOAuth2ClientExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling OAuth2Clients#CreateOAuth2Client: " + e.Message);
+            Console.WriteLine("Exception when calling OAuth2ClientsApi#CreateOAuth2Client: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

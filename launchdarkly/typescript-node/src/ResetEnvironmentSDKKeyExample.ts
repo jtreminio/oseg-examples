@@ -12,6 +12,6 @@ apiCaller.resetEnvironmentSDKKey(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Environments#resetEnvironmentSDKKey:");
+  console.log("Exception when calling EnvironmentsApi#resetEnvironmentSDKKey:");
   console.log(error.body);
 });

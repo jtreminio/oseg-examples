@@ -60,5 +60,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling ReleasePipelinesBeta#post_release_pipeline: #{e}"
+    puts "Exception when calling ReleasePipelinesBetaApi#post_release_pipeline: #{e}"
 end

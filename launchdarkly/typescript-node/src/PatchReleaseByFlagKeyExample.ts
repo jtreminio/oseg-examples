@@ -20,6 +20,6 @@ apiCaller.patchReleaseByFlagKey(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling ReleasesBeta#patchReleaseByFlagKey:");
+  console.log("Exception when calling ReleasesBetaApi#patchReleaseByFlagKey:");
   console.log(error.body);
 });

@@ -33,6 +33,6 @@ apiCaller.postWebhook(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Webhooks#postWebhook:");
+  console.log("Exception when calling WebhooksApi#postWebhook:");
   console.log(error.body);
 });

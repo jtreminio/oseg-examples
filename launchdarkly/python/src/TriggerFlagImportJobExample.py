@@ -16,4 +16,4 @@ with ApiClient(configuration) as api_client:
             integration_id=None,
         )
     except ApiException as e:
-        print("Exception when calling FlagImportConfigurationsBeta#trigger_flag_import_job: %s\n" % e)
+        print("Exception when calling FlagImportConfigurationsBetaApi#trigger_flag_import_job: %s\n" % e)

@@ -12,6 +12,6 @@ apiCaller.getTriggerWorkflows(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling FlagTriggers#getTriggerWorkflows:");
+  console.log("Exception when calling FlagTriggersApi#getTriggerWorkflows:");
   console.log(error.body);
 });

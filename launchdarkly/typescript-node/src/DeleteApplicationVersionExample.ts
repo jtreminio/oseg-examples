@@ -9,6 +9,6 @@ apiCaller.deleteApplicationVersion(
   undefined, // applicationKey
   undefined, // versionKey
 ).catch(error => {
-  console.log("Exception when calling ApplicationsBeta#deleteApplicationVersion:");
+  console.log("Exception when calling ApplicationsBetaApi#deleteApplicationVersion:");
   console.log(error.body);
 });

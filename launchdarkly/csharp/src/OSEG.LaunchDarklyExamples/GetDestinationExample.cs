@@ -28,7 +28,7 @@ public class GetDestinationExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling DataExportDestinations#GetDestination: " + e.Message);
+            Console.WriteLine("Exception when calling DataExportDestinationsApi#GetDestination: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

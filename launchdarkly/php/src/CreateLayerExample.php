@@ -23,5 +23,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Layers#createLayer: {$e->getMessage()}";
+    echo "Exception when calling LayersApi#createLayer: {$e->getMessage()}";
 }

@@ -36,7 +36,7 @@ public class GetReleaseFrequencyChartExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling InsightsChartsBeta#GetReleaseFrequencyChart: " + e.Message);
+            Console.WriteLine("Exception when calling InsightsChartsBetaApi#GetReleaseFrequencyChart: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

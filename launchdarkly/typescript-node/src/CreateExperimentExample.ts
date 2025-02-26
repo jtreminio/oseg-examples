@@ -62,6 +62,6 @@ apiCaller.createExperiment(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Experiments#createExperiment:");
+  console.log("Exception when calling ExperimentsApi#createExperiment:");
   console.log(error.body);
 });

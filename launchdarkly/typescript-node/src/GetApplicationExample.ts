@@ -11,6 +11,6 @@ apiCaller.getApplication(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling ApplicationsBeta#getApplication:");
+  console.log("Exception when calling ApplicationsBetaApi#getApplication:");
   console.log(error.body);
 });

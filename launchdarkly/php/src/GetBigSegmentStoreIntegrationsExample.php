@@ -15,5 +15,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling PersistentStoreIntegrationsBeta#getBigSegmentStoreIntegrations: {$e->getMessage()}";
+    echo "Exception when calling PersistentStoreIntegrationsBetaApi#getBigSegmentStoreIntegrations: {$e->getMessage()}";
 }

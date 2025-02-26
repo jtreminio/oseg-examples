@@ -43,5 +43,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Webhooks#postWebhook: {$e->getMessage()}";
+    echo "Exception when calling WebhooksApi#postWebhook: {$e->getMessage()}";
 }

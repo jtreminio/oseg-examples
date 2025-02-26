@@ -12,5 +12,5 @@ begin
         nil, # segment_key
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling Segments#create_big_segment_import: #{e}"
+    puts "Exception when calling SegmentsApi#create_big_segment_import: #{e}"
 end

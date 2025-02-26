@@ -12,6 +12,6 @@ apiCaller.getInsightsScores(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling InsightsScoresBeta#getInsightsScores:");
+  console.log("Exception when calling InsightsScoresBetaApi#getInsightsScores:");
   console.log(error.body);
 });

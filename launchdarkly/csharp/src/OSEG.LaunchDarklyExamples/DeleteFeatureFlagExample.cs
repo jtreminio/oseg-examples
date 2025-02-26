@@ -25,7 +25,7 @@ public class DeleteFeatureFlagExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling FeatureFlags#DeleteFeatureFlag: " + e.Message);
+            Console.WriteLine("Exception when calling FeatureFlagsApi#DeleteFeatureFlag: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

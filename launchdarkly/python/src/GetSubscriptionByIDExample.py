@@ -17,4 +17,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling IntegrationAuditLogSubscriptions#get_subscription_by_id: %s\n" % e)
+        print("Exception when calling IntegrationAuditLogSubscriptionsApi#get_subscription_by_id: %s\n" % e)

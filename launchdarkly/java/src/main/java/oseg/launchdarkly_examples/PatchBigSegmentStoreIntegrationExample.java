@@ -41,7 +41,7 @@ public class PatchBigSegmentStoreIntegrationExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling PersistentStoreIntegrationsBeta#patchBigSegmentStoreIntegration");
+            System.err.println("Exception when calling PersistentStoreIntegrationsBetaApi#patchBigSegmentStoreIntegration");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

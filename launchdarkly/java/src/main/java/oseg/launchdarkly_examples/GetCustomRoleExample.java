@@ -29,7 +29,7 @@ public class GetCustomRoleExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling CustomRoles#getCustomRole");
+            System.err.println("Exception when calling CustomRolesApi#getCustomRole");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

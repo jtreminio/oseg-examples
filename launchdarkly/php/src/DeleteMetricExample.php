@@ -16,5 +16,5 @@ try {
         metric_key: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Metrics#deleteMetric: {$e->getMessage()}";
+    echo "Exception when calling MetricsApi#deleteMetric: {$e->getMessage()}";
 }

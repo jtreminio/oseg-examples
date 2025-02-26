@@ -31,7 +31,7 @@ public class GetStreamUsageBySdkVersionExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling AccountUsageBeta#GetStreamUsageBySdkVersion: " + e.Message);
+            Console.WriteLine("Exception when calling AccountUsageBetaApi#GetStreamUsageBySdkVersion: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

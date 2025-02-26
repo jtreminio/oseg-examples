@@ -10,6 +10,6 @@ apiCaller.createBigSegmentExport(
   undefined, // environmentKey
   undefined, // segmentKey
 ).catch(error => {
-  console.log("Exception when calling Segments#createBigSegmentExport:");
+  console.log("Exception when calling SegmentsApi#createBigSegmentExport:");
   console.log(error.body);
 });

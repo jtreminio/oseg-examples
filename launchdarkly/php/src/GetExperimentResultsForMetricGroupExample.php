@@ -21,5 +21,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Experiments#getExperimentResultsForMetricGroup: {$e->getMessage()}";
+    echo "Exception when calling ExperimentsApi#getExperimentResultsForMetricGroup: {$e->getMessage()}";
 }

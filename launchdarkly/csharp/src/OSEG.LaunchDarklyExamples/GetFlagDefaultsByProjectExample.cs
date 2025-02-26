@@ -26,7 +26,7 @@ public class GetFlagDefaultsByProjectExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Projects#GetFlagDefaultsByProject: " + e.Message);
+            Console.WriteLine("Exception when calling ProjectsApi#GetFlagDefaultsByProject: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

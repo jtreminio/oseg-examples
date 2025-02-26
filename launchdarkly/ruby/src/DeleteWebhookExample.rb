@@ -10,5 +10,5 @@ begin
         nil, # id
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling Webhooks#delete_webhook: #{e}"
+    puts "Exception when calling WebhooksApi#delete_webhook: #{e}"
 end

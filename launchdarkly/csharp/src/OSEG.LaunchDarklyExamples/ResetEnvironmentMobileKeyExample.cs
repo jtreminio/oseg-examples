@@ -27,7 +27,7 @@ public class ResetEnvironmentMobileKeyExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Environments#ResetEnvironmentMobileKey: " + e.Message);
+            Console.WriteLine("Exception when calling EnvironmentsApi#ResetEnvironmentMobileKey: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

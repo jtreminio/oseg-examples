@@ -16,5 +16,5 @@ try {
         metric_group_key: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling MetricsBeta#deleteMetricGroup: {$e->getMessage()}";
+    echo "Exception when calling MetricsBetaApi#deleteMetricGroup: {$e->getMessage()}";
 }

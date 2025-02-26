@@ -24,7 +24,7 @@ public class DeleteCustomRoleExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling CustomRoles#DeleteCustomRole: " + e.Message);
+            Console.WriteLine("Exception when calling CustomRolesApi#DeleteCustomRole: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

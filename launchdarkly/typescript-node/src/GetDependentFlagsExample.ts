@@ -11,6 +11,6 @@ apiCaller.getDependentFlags(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling FeatureFlagsBeta#getDependentFlags:");
+  console.log("Exception when calling FeatureFlagsBetaApi#getDependentFlags:");
   console.log(error.body);
 });

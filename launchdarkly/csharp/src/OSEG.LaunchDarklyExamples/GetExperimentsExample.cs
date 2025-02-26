@@ -32,7 +32,7 @@ public class GetExperimentsExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Experiments#GetExperiments: " + e.Message);
+            Console.WriteLine("Exception when calling ExperimentsApi#GetExperiments: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

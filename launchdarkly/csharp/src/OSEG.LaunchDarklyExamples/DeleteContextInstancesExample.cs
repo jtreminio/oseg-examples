@@ -26,7 +26,7 @@ public class DeleteContextInstancesExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Contexts#DeleteContextInstances: " + e.Message);
+            Console.WriteLine("Exception when calling ContextsApi#DeleteContextInstances: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

@@ -11,6 +11,6 @@ apiCaller.deleteApprovalRequestForFlag(
   undefined, // environmentKey
   undefined, // id
 ).catch(error => {
-  console.log("Exception when calling Approvals#deleteApprovalRequestForFlag:");
+  console.log("Exception when calling ApprovalsApi#deleteApprovalRequestForFlag:");
   console.log(error.body);
 });

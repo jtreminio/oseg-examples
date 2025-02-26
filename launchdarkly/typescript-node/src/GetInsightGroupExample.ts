@@ -11,6 +11,6 @@ apiCaller.getInsightGroup(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling InsightsScoresBeta#getInsightGroup:");
+  console.log("Exception when calling InsightsScoresBetaApi#getInsightGroup:");
   console.log(error.body);
 });

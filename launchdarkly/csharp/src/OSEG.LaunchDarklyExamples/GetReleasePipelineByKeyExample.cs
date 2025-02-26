@@ -27,7 +27,7 @@ public class GetReleasePipelineByKeyExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling ReleasePipelinesBeta#GetReleasePipelineByKey: " + e.Message);
+            Console.WriteLine("Exception when calling ReleasePipelinesBetaApi#GetReleasePipelineByKey: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

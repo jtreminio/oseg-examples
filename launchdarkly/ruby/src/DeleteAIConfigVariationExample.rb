@@ -13,5 +13,5 @@ begin
         nil, # variation_key
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling AIConfigsBeta#delete_ai_config_variation: #{e}"
+    puts "Exception when calling AIConfigsBetaApi#delete_ai_config_variation: #{e}"
 end

@@ -12,6 +12,6 @@ apiCaller.getModelConfig(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling AIConfigsBeta#getModelConfig:");
+  console.log("Exception when calling AIConfigsBetaApi#getModelConfig:");
   console.log(error.body);
 });

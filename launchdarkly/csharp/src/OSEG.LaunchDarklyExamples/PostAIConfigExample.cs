@@ -38,7 +38,7 @@ public class PostAIConfigExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling AIConfigsBeta#PostAIConfig: " + e.Message);
+            Console.WriteLine("Exception when calling AIConfigsBetaApi#PostAIConfig: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

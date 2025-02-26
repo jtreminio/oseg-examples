@@ -10,6 +10,6 @@ apiCaller.getExperimentationSettings(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Experiments#getExperimentationSettings:");
+  console.log("Exception when calling ExperimentsApi#getExperimentationSettings:");
   console.log(error.body);
 });

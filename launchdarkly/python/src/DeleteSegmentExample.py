@@ -16,4 +16,4 @@ with ApiClient(configuration) as api_client:
             segment_key=None,
         )
     except ApiException as e:
-        print("Exception when calling Segments#delete_segment: %s\n" % e)
+        print("Exception when calling SegmentsApi#delete_segment: %s\n" % e)

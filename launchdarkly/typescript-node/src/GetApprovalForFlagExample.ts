@@ -13,6 +13,6 @@ apiCaller.getApprovalForFlag(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Approvals#getApprovalForFlag:");
+  console.log("Exception when calling ApprovalsApi#getApprovalForFlag:");
   console.log(error.body);
 });

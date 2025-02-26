@@ -19,4 +19,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling Segments#get_segment_membership_for_user: %s\n" % e)
+        print("Exception when calling SegmentsApi#get_segment_membership_for_user: %s\n" % e)

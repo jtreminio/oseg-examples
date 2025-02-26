@@ -21,6 +21,6 @@ apiCaller.postFeatureFlag(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling FeatureFlags#postFeatureFlag:");
+  console.log("Exception when calling FeatureFlagsApi#postFeatureFlag:");
   console.log(error.body);
 });

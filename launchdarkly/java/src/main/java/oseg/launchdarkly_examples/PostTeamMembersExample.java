@@ -30,7 +30,7 @@ public class PostTeamMembersExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling Teams#postTeamMembers");
+            System.err.println("Exception when calling TeamsApi#postTeamMembers");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

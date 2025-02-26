@@ -10,6 +10,6 @@ apiCaller.getOAuthClientById(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling OAuth2Clients#getOAuthClientById:");
+  console.log("Exception when calling OAuth2ClientsApi#getOAuthClientById:");
   console.log(error.body);
 });

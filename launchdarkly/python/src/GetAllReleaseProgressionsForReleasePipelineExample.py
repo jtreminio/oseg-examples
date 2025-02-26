@@ -20,4 +20,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling ReleasePipelinesBeta#get_all_release_progressions_for_release_pipeline: %s\n" % e)
+        print("Exception when calling ReleasePipelinesBetaApi#get_all_release_progressions_for_release_pipeline: %s\n" % e)

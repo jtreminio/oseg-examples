@@ -17,5 +17,5 @@ try {
         segment_key: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Segments#createBigSegmentExport: {$e->getMessage()}";
+    echo "Exception when calling SegmentsApi#createBigSegmentExport: {$e->getMessage()}";
 }

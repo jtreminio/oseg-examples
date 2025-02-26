@@ -18,6 +18,6 @@ apiCaller.getLeadTimeChart(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling InsightsChartsBeta#getLeadTimeChart:");
+  console.log("Exception when calling InsightsChartsBetaApi#getLeadTimeChart:");
   console.log(error.body);
 });

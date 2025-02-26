@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.CodeReferencesApiApiKeys.ApiKey, "YOUR_API_KEY");
 apiCaller.deleteRepository(
   undefined, // repo
 ).catch(error => {
-  console.log("Exception when calling CodeReferences#deleteRepository:");
+  console.log("Exception when calling CodeReferencesApi#deleteRepository:");
   console.log(error.body);
 });

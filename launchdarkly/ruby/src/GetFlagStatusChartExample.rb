@@ -13,5 +13,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling InsightsChartsBeta#get_flag_status_chart: #{e}"
+    puts "Exception when calling InsightsChartsBetaApi#get_flag_status_chart: #{e}"
 end

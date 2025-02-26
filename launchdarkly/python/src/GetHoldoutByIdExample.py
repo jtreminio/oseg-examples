@@ -18,4 +18,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling HoldoutsBeta#get_holdout_by_id: %s\n" % e)
+        print("Exception when calling HoldoutsBetaApi#get_holdout_by_id: %s\n" % e)

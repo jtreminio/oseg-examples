@@ -30,5 +30,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Contexts#searchContexts: {$e->getMessage()}";
+    echo "Exception when calling ContextsApi#searchContexts: {$e->getMessage()}";
 }

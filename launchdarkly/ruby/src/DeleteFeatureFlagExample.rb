@@ -11,5 +11,5 @@ begin
         nil, # feature_flag_key
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling FeatureFlags#delete_feature_flag: #{e}"
+    puts "Exception when calling FeatureFlagsApi#delete_feature_flag: #{e}"
 end

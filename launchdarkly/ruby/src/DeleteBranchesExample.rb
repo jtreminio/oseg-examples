@@ -14,5 +14,5 @@ begin
         ], # request_body
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling CodeReferences#delete_branches: #{e}"
+    puts "Exception when calling CodeReferencesApi#delete_branches: #{e}"
 end

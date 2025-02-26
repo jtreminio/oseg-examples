@@ -12,6 +12,6 @@ apiCaller.getHoldoutById(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling HoldoutsBeta#getHoldoutById:");
+  console.log("Exception when calling HoldoutsBetaApi#getHoldoutById:");
   console.log(error.body);
 });

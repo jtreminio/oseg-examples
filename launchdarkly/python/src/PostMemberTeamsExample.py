@@ -24,4 +24,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling AccountMembers#post_member_teams: %s\n" % e)
+        print("Exception when calling AccountMembersApi#post_member_teams: %s\n" % e)

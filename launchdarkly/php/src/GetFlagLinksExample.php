@@ -18,5 +18,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling FlagLinksBeta#getFlagLinks: {$e->getMessage()}";
+    echo "Exception when calling FlagLinksBetaApi#getFlagLinks: {$e->getMessage()}";
 }

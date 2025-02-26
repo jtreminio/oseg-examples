@@ -11,6 +11,6 @@ apiCaller.getFlagLinks(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling FlagLinksBeta#getFlagLinks:");
+  console.log("Exception when calling FlagLinksBetaApi#getFlagLinks:");
   console.log(error.body);
 });

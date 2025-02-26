@@ -26,7 +26,7 @@ public class GetBranchesExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling CodeReferences#GetBranches: " + e.Message);
+            Console.WriteLine("Exception when calling CodeReferencesApi#GetBranches: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

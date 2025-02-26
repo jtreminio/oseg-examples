@@ -27,7 +27,7 @@ public class ResetTokenExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling AccessTokens#ResetToken: " + e.Message);
+            Console.WriteLine("Exception when calling AccessTokensApi#ResetToken: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

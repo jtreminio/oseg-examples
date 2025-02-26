@@ -15,4 +15,4 @@ with ApiClient(configuration) as api_client:
             project_key=None,
         )
     except ApiException as e:
-        print("Exception when calling InsightsRepositoriesBeta#delete_repository_project: %s\n" % e)
+        print("Exception when calling InsightsRepositoriesBetaApi#delete_repository_project: %s\n" % e)

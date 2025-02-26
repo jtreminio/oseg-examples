@@ -23,14 +23,14 @@ public class DeleteAIConfigVariationExample
 
         try
         {
-            new AIConfigsBetaApi(config).deleteAIConfigVariation(
+            new AiConfigsBetaApi(config).deleteAIConfigVariation(
                 null, // lDAPIVersion
                 null, // projectKey
                 null, // configKey
                 null // variationKey
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling AIConfigsBeta#deleteAIConfigVariation");
+            System.err.println("Exception when calling AiConfigsBetaApi#deleteAIConfigVariation");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

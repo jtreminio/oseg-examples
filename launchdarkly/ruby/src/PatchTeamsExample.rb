@@ -30,5 +30,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling TeamsBeta#patch_teams: #{e}"
+    puts "Exception when calling TeamsBetaApi#patch_teams: #{e}"
 end

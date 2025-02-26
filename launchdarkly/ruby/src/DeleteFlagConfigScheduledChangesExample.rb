@@ -13,5 +13,5 @@ begin
         nil, # id
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling ScheduledChanges#delete_flag_config_scheduled_changes: #{e}"
+    puts "Exception when calling ScheduledChangesApi#delete_flag_config_scheduled_changes: #{e}"
 end

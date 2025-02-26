@@ -32,7 +32,7 @@ public class GetStaleFlagsChartExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling InsightsChartsBeta#GetStaleFlagsChart: " + e.Message);
+            Console.WriteLine("Exception when calling InsightsChartsBetaApi#GetStaleFlagsChart: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

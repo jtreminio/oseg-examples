@@ -29,7 +29,7 @@ public class CreateBigSegmentExportExample
                 null // segmentKey
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling Segments#createBigSegmentExport");
+            System.err.println("Exception when calling SegmentsApi#createBigSegmentExport");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

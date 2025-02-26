@@ -30,7 +30,7 @@ public class DeleteBigSegmentStoreIntegrationExample
                 null // integrationId
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling PersistentStoreIntegrationsBeta#deleteBigSegmentStoreIntegration");
+            System.err.println("Exception when calling PersistentStoreIntegrationsBetaApi#deleteBigSegmentStoreIntegration");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

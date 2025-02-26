@@ -12,6 +12,6 @@ apiCaller.getUserFlagSettings(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling UserSettings#getUserFlagSettings:");
+  console.log("Exception when calling UserSettingsApi#getUserFlagSettings:");
   console.log(error.body);
 });

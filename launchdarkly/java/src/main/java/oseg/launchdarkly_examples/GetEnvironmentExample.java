@@ -30,7 +30,7 @@ public class GetEnvironmentExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling Environments#getEnvironment");
+            System.err.println("Exception when calling EnvironmentsApi#getEnvironment");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

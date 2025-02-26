@@ -12,6 +12,6 @@ apiCaller.getFlagStatusChart(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling InsightsChartsBeta#getFlagStatusChart:");
+  console.log("Exception when calling InsightsChartsBetaApi#getFlagStatusChart:");
   console.log(error.body);
 });

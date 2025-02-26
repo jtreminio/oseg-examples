@@ -22,6 +22,6 @@ apiCaller.patchIntegrationDeliveryConfiguration(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling IntegrationDeliveryConfigurationsBeta#patchIntegrationDeliveryConfiguration:");
+  console.log("Exception when calling IntegrationDeliveryConfigurationsBetaApi#patchIntegrationDeliveryConfiguration:");
   console.log(error.body);
 });

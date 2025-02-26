@@ -19,6 +19,6 @@ apiCaller.updateIntegrationConfiguration(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling IntegrationsBeta#updateIntegrationConfiguration:");
+  console.log("Exception when calling IntegrationsBetaApi#updateIntegrationConfiguration:");
   console.log(error.body);
 });

@@ -23,6 +23,6 @@ apiCaller.searchContextInstances(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Contexts#searchContextInstances:");
+  console.log("Exception when calling ContextsApi#searchContextInstances:");
   console.log(error.body);
 });

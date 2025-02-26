@@ -12,5 +12,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling InsightsChartsBeta#get_lead_time_chart: #{e}"
+    puts "Exception when calling InsightsChartsBetaApi#get_lead_time_chart: #{e}"
 end

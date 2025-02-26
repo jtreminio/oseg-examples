@@ -21,5 +21,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling Contexts#getContextAttributeValues: {$e->getMessage()}";
+    echo "Exception when calling ContextsApi#getContextAttributeValues: {$e->getMessage()}";
 }

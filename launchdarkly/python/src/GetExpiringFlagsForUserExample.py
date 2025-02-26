@@ -18,4 +18,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling UserSettings#get_expiring_flags_for_user: %s\n" % e)
+        print("Exception when calling UserSettingsApi#get_expiring_flags_for_user: %s\n" % e)

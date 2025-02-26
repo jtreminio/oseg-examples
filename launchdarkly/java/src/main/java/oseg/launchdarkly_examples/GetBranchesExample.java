@@ -29,7 +29,7 @@ public class GetBranchesExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling CodeReferences#getBranches");
+            System.err.println("Exception when calling CodeReferencesApi#getBranches");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

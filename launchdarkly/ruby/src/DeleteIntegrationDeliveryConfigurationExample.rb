@@ -13,5 +13,5 @@ begin
         nil, # id
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling IntegrationDeliveryConfigurationsBeta#delete_integration_delivery_configuration: #{e}"
+    puts "Exception when calling IntegrationDeliveryConfigurationsBetaApi#delete_integration_delivery_configuration: #{e}"
 end

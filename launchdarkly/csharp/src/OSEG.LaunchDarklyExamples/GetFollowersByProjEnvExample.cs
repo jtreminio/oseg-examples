@@ -27,7 +27,7 @@ public class GetFollowersByProjEnvExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling FollowFlags#GetFollowersByProjEnv: " + e.Message);
+            Console.WriteLine("Exception when calling FollowFlagsApi#GetFollowersByProjEnv: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

@@ -13,5 +13,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling InsightsScoresBeta#get_insights_scores: #{e}"
+    puts "Exception when calling InsightsScoresBetaApi#get_insights_scores: #{e}"
 end

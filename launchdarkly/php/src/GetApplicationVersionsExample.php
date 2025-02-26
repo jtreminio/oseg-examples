@@ -21,5 +21,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling ApplicationsBeta#getApplicationVersions: {$e->getMessage()}";
+    echo "Exception when calling ApplicationsBetaApi#getApplicationVersions: {$e->getMessage()}";
 }

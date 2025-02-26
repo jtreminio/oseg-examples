@@ -38,7 +38,7 @@ public class PatchAIConfigExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling AIConfigsBeta#PatchAIConfig: " + e.Message);
+            Console.WriteLine("Exception when calling AIConfigsBetaApi#PatchAIConfig: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

@@ -28,7 +28,7 @@ public class GetExpiringFlagsForUserExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling UserSettings#GetExpiringFlagsForUser: " + e.Message);
+            Console.WriteLine("Exception when calling UserSettingsApi#GetExpiringFlagsForUser: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

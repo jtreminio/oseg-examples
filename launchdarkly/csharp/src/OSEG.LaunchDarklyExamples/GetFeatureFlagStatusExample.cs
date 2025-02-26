@@ -28,7 +28,7 @@ public class GetFeatureFlagStatusExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling FeatureFlags#GetFeatureFlagStatus: " + e.Message);
+            Console.WriteLine("Exception when calling FeatureFlagsApi#GetFeatureFlagStatus: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

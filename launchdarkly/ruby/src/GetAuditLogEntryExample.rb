@@ -12,5 +12,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling AuditLog#get_audit_log_entry: #{e}"
+    puts "Exception when calling AuditLogApi#get_audit_log_entry: #{e}"
 end

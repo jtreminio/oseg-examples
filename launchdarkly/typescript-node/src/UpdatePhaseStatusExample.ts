@@ -37,6 +37,6 @@ apiCaller.updatePhaseStatus(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling ReleasesBeta#updatePhaseStatus:");
+  console.log("Exception when calling ReleasesBetaApi#updatePhaseStatus:");
   console.log(error.body);
 });

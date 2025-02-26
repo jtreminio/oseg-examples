@@ -11,6 +11,6 @@ apiCaller.resetToken(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling AccessTokens#resetToken:");
+  console.log("Exception when calling AccessTokensApi#resetToken:");
   console.log(error.body);
 });

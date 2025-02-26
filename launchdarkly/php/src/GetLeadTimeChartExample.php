@@ -25,5 +25,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling InsightsChartsBeta#getLeadTimeChart: {$e->getMessage()}";
+    echo "Exception when calling InsightsChartsBetaApi#getLeadTimeChart: {$e->getMessage()}";
 }

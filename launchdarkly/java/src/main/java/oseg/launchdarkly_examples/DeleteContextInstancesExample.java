@@ -29,7 +29,7 @@ public class DeleteContextInstancesExample
                 null // id
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling Contexts#deleteContextInstances");
+            System.err.println("Exception when calling ContextsApi#deleteContextInstances");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

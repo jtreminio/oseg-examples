@@ -33,7 +33,7 @@ public class PutContextFlagSettingExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling ContextSettings#PutContextFlagSetting: " + e.Message);
+            Console.WriteLine("Exception when calling ContextSettingsApi#PutContextFlagSetting: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

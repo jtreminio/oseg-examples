@@ -21,5 +21,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling ReleasePipelinesBeta#getAllReleaseProgressionsForReleasePipeline: {$e->getMessage()}";
+    echo "Exception when calling ReleasePipelinesBetaApi#getAllReleaseProgressionsForReleasePipeline: {$e->getMessage()}";
 }

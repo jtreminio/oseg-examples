@@ -11,6 +11,6 @@ apiCaller.deleteTriggerWorkflow(
   undefined, // featureFlagKey
   undefined, // id
 ).catch(error => {
-  console.log("Exception when calling FlagTriggers#deleteTriggerWorkflow:");
+  console.log("Exception when calling FlagTriggersApi#deleteTriggerWorkflow:");
   console.log(error.body);
 });

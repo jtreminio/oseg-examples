@@ -11,6 +11,6 @@ apiCaller.getDeployment(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling InsightsDeploymentsBeta#getDeployment:");
+  console.log("Exception when calling InsightsDeploymentsBetaApi#getDeployment:");
   console.log(error.body);
 });

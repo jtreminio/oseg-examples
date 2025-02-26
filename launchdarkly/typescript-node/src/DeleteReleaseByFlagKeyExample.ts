@@ -9,6 +9,6 @@ apiCaller.deleteReleaseByFlagKey(
   undefined, // projectKey
   undefined, // flagKey
 ).catch(error => {
-  console.log("Exception when calling ReleasesBeta#deleteReleaseByFlagKey:");
+  console.log("Exception when calling ReleasesBetaApi#deleteReleaseByFlagKey:");
   console.log(error.body);
 });

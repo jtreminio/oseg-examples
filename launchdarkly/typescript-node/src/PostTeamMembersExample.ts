@@ -11,6 +11,6 @@ apiCaller.postTeamMembers(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Teams#postTeamMembers:");
+  console.log("Exception when calling TeamsApi#postTeamMembers:");
   console.log(error.body);
 });

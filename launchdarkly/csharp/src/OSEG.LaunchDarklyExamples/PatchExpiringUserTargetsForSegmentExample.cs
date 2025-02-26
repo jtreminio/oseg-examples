@@ -47,7 +47,7 @@ public class PatchExpiringUserTargetsForSegmentExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Segments#PatchExpiringUserTargetsForSegment: " + e.Message);
+            Console.WriteLine("Exception when calling SegmentsApi#PatchExpiringUserTargetsForSegment: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

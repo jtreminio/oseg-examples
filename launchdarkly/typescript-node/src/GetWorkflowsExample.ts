@@ -16,6 +16,6 @@ apiCaller.getWorkflows(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Workflows#getWorkflows:");
+  console.log("Exception when calling WorkflowsApi#getWorkflows:");
   console.log(error.body);
 });

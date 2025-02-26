@@ -14,6 +14,6 @@ apiCaller.getExperimentResultsForMetricGroup(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Experiments#getExperimentResultsForMetricGroup:");
+  console.log("Exception when calling ExperimentsApi#getExperimentResultsForMetricGroup:");
   console.log(error.body);
 });

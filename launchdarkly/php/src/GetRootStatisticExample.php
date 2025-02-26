@@ -15,5 +15,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling CodeReferences#getRootStatistic: {$e->getMessage()}";
+    echo "Exception when calling CodeReferencesApi#getRootStatistic: {$e->getMessage()}";
 }

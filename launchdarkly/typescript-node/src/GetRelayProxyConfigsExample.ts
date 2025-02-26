@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.RelayProxyConfigurationsApiApiKeys.ApiKey, "YOUR_API_KEY
 apiCaller.getRelayProxyConfigs().then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling RelayProxyConfigurations#getRelayProxyConfigs:");
+  console.log("Exception when calling RelayProxyConfigurationsApi#getRelayProxyConfigs:");
   console.log(error.body);
 });

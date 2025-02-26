@@ -37,7 +37,7 @@ public class UpdateIntegrationConfigurationExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling IntegrationsBeta#UpdateIntegrationConfiguration: " + e.Message);
+            Console.WriteLine("Exception when calling IntegrationsBetaApi#UpdateIntegrationConfiguration: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

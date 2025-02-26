@@ -14,6 +14,6 @@ apiCaller.postProject(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Projects#postProject:");
+  console.log("Exception when calling ProjectsApi#postProject:");
   console.log(error.body);
 });

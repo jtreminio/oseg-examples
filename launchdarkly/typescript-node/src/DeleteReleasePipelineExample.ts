@@ -9,6 +9,6 @@ apiCaller.deleteReleasePipeline(
   undefined, // projectKey
   undefined, // pipelineKey
 ).catch(error => {
-  console.log("Exception when calling ReleasePipelinesBeta#deleteReleasePipeline:");
+  console.log("Exception when calling ReleasePipelinesBetaApi#deleteReleasePipeline:");
   console.log(error.body);
 });

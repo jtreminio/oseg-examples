@@ -25,7 +25,7 @@ public class GetOpenapiSpecExample
         {
             new OtherApi(config).getOpenapiSpec();
         } catch (ApiException e) {
-            System.err.println("Exception when calling Other#getOpenapiSpec");
+            System.err.println("Exception when calling OtherApi#getOpenapiSpec");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

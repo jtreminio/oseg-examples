@@ -34,4 +34,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling TeamsBeta#patch_teams: %s\n" % e)
+        print("Exception when calling TeamsBetaApi#patch_teams: %s\n" % e)

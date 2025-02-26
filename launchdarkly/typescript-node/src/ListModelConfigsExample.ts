@@ -11,6 +11,6 @@ apiCaller.listModelConfigs(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling AIConfigsBeta#listModelConfigs:");
+  console.log("Exception when calling AIConfigsBetaApi#listModelConfigs:");
   console.log(error.body);
 });

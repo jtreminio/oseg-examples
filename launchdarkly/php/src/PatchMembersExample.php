@@ -32,5 +32,5 @@ try {
 
     print_r($response);
 } catch (LaunchDarkly\Client\ApiException $e) {
-    echo "Exception when calling AccountMembersBeta#patchMembers: {$e->getMessage()}";
+    echo "Exception when calling AccountMembersBetaApi#patchMembers: {$e->getMessage()}";
 }

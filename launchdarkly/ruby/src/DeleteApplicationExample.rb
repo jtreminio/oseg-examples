@@ -10,5 +10,5 @@ begin
         nil, # application_key
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling ApplicationsBeta#delete_application: #{e}"
+    puts "Exception when calling ApplicationsBetaApi#delete_application: #{e}"
 end

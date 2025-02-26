@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.CustomRolesApiApiKeys.ApiKey, "YOUR_API_KEY");
 apiCaller.getCustomRoles().then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling CustomRoles#getCustomRoles:");
+  console.log("Exception when calling CustomRolesApi#getCustomRoles:");
   console.log(error.body);
 });

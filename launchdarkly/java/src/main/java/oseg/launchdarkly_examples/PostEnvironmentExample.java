@@ -35,7 +35,7 @@ public class PostEnvironmentExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling Environments#postEnvironment");
+            System.err.println("Exception when calling EnvironmentsApi#postEnvironment");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

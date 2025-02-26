@@ -30,7 +30,7 @@ public class DeleteApprovalRequestForFlagExample
                 null // id
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling Approvals#deleteApprovalRequestForFlag");
+            System.err.println("Exception when calling ApprovalsApi#deleteApprovalRequestForFlag");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

@@ -11,6 +11,6 @@ apiCaller.deleteIntegrationDeliveryConfiguration(
   undefined, // integrationKey
   undefined, // id
 ).catch(error => {
-  console.log("Exception when calling IntegrationDeliveryConfigurationsBeta#deleteIntegrationDeliveryConfiguration:");
+  console.log("Exception when calling IntegrationDeliveryConfigurationsBetaApi#deleteIntegrationDeliveryConfiguration:");
   console.log(error.body);
 });

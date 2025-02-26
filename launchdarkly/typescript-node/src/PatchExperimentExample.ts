@@ -22,6 +22,6 @@ apiCaller.patchExperiment(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Experiments#patchExperiment:");
+  console.log("Exception when calling ExperimentsApi#patchExperiment:");
   console.log(error.body);
 });

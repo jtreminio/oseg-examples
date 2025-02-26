@@ -26,7 +26,7 @@ public class TriggerFlagImportJobExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling FlagImportConfigurationsBeta#TriggerFlagImportJob: " + e.Message);
+            Console.WriteLine("Exception when calling FlagImportConfigurationsBetaApi#TriggerFlagImportJob: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

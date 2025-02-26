@@ -10,5 +10,5 @@ begin
         nil, # template_key
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling WorkflowTemplates#delete_workflow_template: #{e}"
+    puts "Exception when calling WorkflowTemplatesApi#delete_workflow_template: #{e}"
 end

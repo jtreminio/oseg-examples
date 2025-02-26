@@ -10,5 +10,5 @@ begin
         nil, # team_key
     )
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling Teams#delete_team: #{e}"
+    puts "Exception when calling TeamsApi#delete_team: #{e}"
 end

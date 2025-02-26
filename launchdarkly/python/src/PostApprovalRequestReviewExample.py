@@ -22,4 +22,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling Approvals#post_approval_request_review: %s\n" % e)
+        print("Exception when calling ApprovalsApi#post_approval_request_review: %s\n" % e)

@@ -24,7 +24,7 @@ public class DeleteApprovalRequestExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Approvals#DeleteApprovalRequest: " + e.Message);
+            Console.WriteLine("Exception when calling ApprovalsApi#DeleteApprovalRequest: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

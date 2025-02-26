@@ -27,7 +27,7 @@ public class GetApplicationExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling ApplicationsBeta#GetApplication: " + e.Message);
+            Console.WriteLine("Exception when calling ApplicationsBetaApi#GetApplication: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

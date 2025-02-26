@@ -21,6 +21,6 @@ apiCaller.patchFlagImportConfiguration(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling FlagImportConfigurationsBeta#patchFlagImportConfiguration:");
+  console.log("Exception when calling FlagImportConfigurationsBetaApi#patchFlagImportConfiguration:");
   console.log(error.body);
 });

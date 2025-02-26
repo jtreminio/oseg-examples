@@ -24,7 +24,7 @@ public class DeleteWorkflowTemplateExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling WorkflowTemplates#DeleteWorkflowTemplate: " + e.Message);
+            Console.WriteLine("Exception when calling WorkflowTemplatesApi#DeleteWorkflowTemplate: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

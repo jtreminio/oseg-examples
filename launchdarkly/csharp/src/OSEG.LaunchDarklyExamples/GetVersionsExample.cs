@@ -24,7 +24,7 @@ public class GetVersionsExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Other#GetVersions: " + e.Message);
+            Console.WriteLine("Exception when calling OtherApi#GetVersions: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

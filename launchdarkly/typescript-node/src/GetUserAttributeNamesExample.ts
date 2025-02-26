@@ -11,6 +11,6 @@ apiCaller.getUserAttributeNames(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling UsersBeta#getUserAttributeNames:");
+  console.log("Exception when calling UsersBetaApi#getUserAttributeNames:");
   console.log(error.body);
 });

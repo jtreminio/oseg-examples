@@ -27,5 +27,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling FeatureFlags#copy_feature_flag: #{e}"
+    puts "Exception when calling FeatureFlagsApi#copy_feature_flag: #{e}"
 end

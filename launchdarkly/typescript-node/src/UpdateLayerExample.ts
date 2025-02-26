@@ -23,6 +23,6 @@ apiCaller.updateLayer(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Layers#updateLayer:");
+  console.log("Exception when calling LayersApi#updateLayer:");
   console.log(error.body);
 });

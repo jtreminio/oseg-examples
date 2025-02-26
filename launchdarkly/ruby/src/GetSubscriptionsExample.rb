@@ -12,5 +12,5 @@ begin
 
     p response
 rescue LaunchDarklyClient::ApiError => e
-    puts "Exception when calling IntegrationAuditLogSubscriptions#get_subscriptions: #{e}"
+    puts "Exception when calling IntegrationAuditLogSubscriptionsApi#get_subscriptions: #{e}"
 end

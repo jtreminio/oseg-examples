@@ -18,6 +18,6 @@ apiCaller.postApprovalRequestReviewForFlag(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Approvals#postApprovalRequestReviewForFlag:");
+  console.log("Exception when calling ApprovalsApi#postApprovalRequestReviewForFlag:");
   console.log(error.body);
 });

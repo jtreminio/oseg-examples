@@ -40,7 +40,7 @@ public class PostModelConfigExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling AIConfigsBeta#PostModelConfig: " + e.Message);
+            Console.WriteLine("Exception when calling AIConfigsBetaApi#PostModelConfig: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }
