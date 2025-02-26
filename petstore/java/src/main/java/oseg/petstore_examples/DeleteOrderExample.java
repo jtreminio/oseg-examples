@@ -4,6 +4,7 @@ import org.openapitools.client.ApiException;
 import org.openapitools.client.Configuration;
 import org.openapitools.client.api.*;
 import org.openapitools.client.auth.*;
+import org.openapitools.client.JSON;
 import org.openapitools.client.model.*;
 
 import java.io.File;

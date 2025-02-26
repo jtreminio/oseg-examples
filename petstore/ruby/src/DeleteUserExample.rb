@@ -1,3 +1,4 @@
+require "json"
 require "openapi_client"
 
 OpenApiClient.configure do |config|
