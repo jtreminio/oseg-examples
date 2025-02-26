@@ -24,7 +24,7 @@ public class GetInventoryExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Store#GetInventory: " + e.Message);
+            Console.WriteLine("Exception when calling StoreApi#GetInventory: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

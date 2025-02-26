@@ -45,5 +45,5 @@ try {
 
     print_r($response);
 } catch (OpenAPI\Client\ApiException $e) {
-    echo "Exception when calling Pet#updatePet: {$e->getMessage()}";
+    echo "Exception when calling PetApi#updatePet: {$e->getMessage()}";
 }

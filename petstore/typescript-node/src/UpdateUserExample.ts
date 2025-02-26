@@ -19,6 +19,6 @@ apiCaller.updateUser(
   "my-username", // username
   user,
 ).catch(error => {
-  console.log("Exception when calling User#updateUser:");
+  console.log("Exception when calling UserApi#updateUser:");
   console.log(error.body);
 });

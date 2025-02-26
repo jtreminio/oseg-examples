@@ -26,7 +26,7 @@ public class GetPetByIdExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Pet#GetPetById: " + e.Message);
+            Console.WriteLine("Exception when calling PetApi#GetPetById: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

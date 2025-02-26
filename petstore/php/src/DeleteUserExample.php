@@ -15,5 +15,5 @@ try {
         username: "my_username",
     );
 } catch (OpenAPI\Client\ApiException $e) {
-    echo "Exception when calling User#deleteUser: {$e->getMessage()}";
+    echo "Exception when calling UserApi#deleteUser: {$e->getMessage()}";
 }

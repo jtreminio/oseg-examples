@@ -19,6 +19,6 @@ apiCaller.placeOrder(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Store#placeOrder:");
+  console.log("Exception when calling StoreApi#placeOrder:");
   console.log(error.body);
 });

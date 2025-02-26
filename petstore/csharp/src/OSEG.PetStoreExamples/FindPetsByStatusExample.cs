@@ -29,7 +29,7 @@ public class FindPetsByStatusExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Pet#FindPetsByStatus: " + e.Message);
+            Console.WriteLine("Exception when calling PetApi#FindPetsByStatus: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

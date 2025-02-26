@@ -25,7 +25,7 @@ public class DeletePetExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Pet#DeletePet: " + e.Message);
+            Console.WriteLine("Exception when calling PetApi#DeletePet: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

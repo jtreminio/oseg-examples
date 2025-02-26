@@ -16,5 +16,5 @@ try {
         order_id: "12345",
     );
 } catch (OpenAPI\Client\ApiException $e) {
-    echo "Exception when calling Store#deleteOrder: {$e->getMessage()}";
+    echo "Exception when calling StoreApi#deleteOrder: {$e->getMessage()}";
 }

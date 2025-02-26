@@ -10,6 +10,6 @@ apiCaller.updatePetWithForm(
   "Pet's new name", // name
   "sold", // status
 ).catch(error => {
-  console.log("Exception when calling Pet#updatePetWithForm:");
+  console.log("Exception when calling PetApi#updatePetWithForm:");
   console.log(error.body);
 });

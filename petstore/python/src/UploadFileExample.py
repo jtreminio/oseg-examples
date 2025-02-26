@@ -18,4 +18,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling Pet#upload_file: %s\n" % e)
+        print("Exception when calling PetApi#upload_file: %s\n" % e)

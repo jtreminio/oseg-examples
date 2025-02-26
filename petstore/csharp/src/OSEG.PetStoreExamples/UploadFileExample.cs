@@ -31,7 +31,7 @@ public class UploadFileExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Pet#UploadFile: " + e.Message);
+            Console.WriteLine("Exception when calling PetApi#UploadFile: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

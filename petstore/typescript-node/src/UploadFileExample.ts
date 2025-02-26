@@ -12,6 +12,6 @@ apiCaller.uploadFile(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Pet#uploadFile:");
+  console.log("Exception when calling PetApi#uploadFile:");
   console.log(error.body);
 });

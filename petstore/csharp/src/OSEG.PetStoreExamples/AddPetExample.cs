@@ -59,7 +59,7 @@ public class AddPetExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Pet#AddPet: " + e.Message);
+            Console.WriteLine("Exception when calling PetApi#AddPet: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

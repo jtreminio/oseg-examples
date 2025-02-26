@@ -26,5 +26,5 @@ try {
 
     print_r($response);
 } catch (OpenAPI\Client\ApiException $e) {
-    echo "Exception when calling Store#placeOrder: {$e->getMessage()}";
+    echo "Exception when calling StoreApi#placeOrder: {$e->getMessage()}";
 }

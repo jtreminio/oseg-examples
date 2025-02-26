@@ -17,5 +17,5 @@ try {
         status: "sold",
     );
 } catch (OpenAPI\Client\ApiException $e) {
-    echo "Exception when calling Pet#updatePetWithForm: {$e->getMessage()}";
+    echo "Exception when calling PetApi#updatePetWithForm: {$e->getMessage()}";
 }

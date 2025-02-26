@@ -20,5 +20,5 @@ begin
         user,
     )
 rescue OpenApiClient::ApiError => e
-    puts "Exception when calling User#create_user: #{e}"
+    puts "Exception when calling UserApi#create_user: #{e}"
 end

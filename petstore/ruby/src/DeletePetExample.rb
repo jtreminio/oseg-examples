@@ -13,5 +13,5 @@ begin
         },
     )
 rescue OpenApiClient::ApiError => e
-    puts "Exception when calling Pet#delete_pet: #{e}"
+    puts "Exception when calling PetApi#delete_pet: #{e}"
 end

@@ -12,4 +12,4 @@ with ApiClient(configuration) as api_client:
     try:
         api.UserApi(api_client).logout_user()
     except ApiException as e:
-        print("Exception when calling User#logout_user: %s\n" % e)
+        print("Exception when calling UserApi#logout_user: %s\n" % e)

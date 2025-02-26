@@ -28,7 +28,7 @@ public class DeleteOrderExample
                 "12345" // orderId
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling Store#deleteOrder");
+            System.err.println("Exception when calling StoreApi#deleteOrder");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

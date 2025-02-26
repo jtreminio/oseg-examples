@@ -35,7 +35,7 @@ public class CreateUserExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling User#CreateUser: " + e.Message);
+            Console.WriteLine("Exception when calling UserApi#CreateUser: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

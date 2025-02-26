@@ -13,5 +13,5 @@ begin
 
     p response
 rescue OpenApiClient::ApiError => e
-    puts "Exception when calling User#get_user_by_name: #{e}"
+    puts "Exception when calling UserApi#get_user_by_name: #{e}"
 end

@@ -27,7 +27,7 @@ public class GetOrderByIdExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Store#GetOrderById: " + e.Message);
+            Console.WriteLine("Exception when calling StoreApi#GetOrderById: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

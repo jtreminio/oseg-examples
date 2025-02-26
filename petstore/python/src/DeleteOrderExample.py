@@ -15,4 +15,4 @@ with ApiClient(configuration) as api_client:
             order_id="12345",
         )
     except ApiException as e:
-        print("Exception when calling Store#delete_order: %s\n" % e)
+        print("Exception when calling StoreApi#delete_order: %s\n" % e)

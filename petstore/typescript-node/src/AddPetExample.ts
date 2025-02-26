@@ -38,6 +38,6 @@ apiCaller.addPet(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Pet#addPet:");
+  console.log("Exception when calling PetApi#addPet:");
   console.log(error.body);
 });

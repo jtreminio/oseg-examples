@@ -26,4 +26,4 @@ with ApiClient(configuration) as api_client:
             user=user,
         )
     except ApiException as e:
-        print("Exception when calling User#update_user: %s\n" % e)
+        print("Exception when calling UserApi#update_user: %s\n" % e)

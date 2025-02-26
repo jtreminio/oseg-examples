@@ -18,6 +18,6 @@ user.userStatus = 1;
 apiCaller.createUser(
   user,
 ).catch(error => {
-  console.log("Exception when calling User#createUser:");
+  console.log("Exception when calling UserApi#createUser:");
   console.log(error.body);
 });

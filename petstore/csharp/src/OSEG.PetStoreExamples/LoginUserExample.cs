@@ -28,7 +28,7 @@ public class LoginUserExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling User#LoginUser: " + e.Message);
+            Console.WriteLine("Exception when calling UserApi#LoginUser: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }
