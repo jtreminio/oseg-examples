@@ -36,7 +36,7 @@ public class PlaceOrderExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Store#PlaceOrder: " + e.Message);
+            Console.WriteLine("Exception when calling StoreApi#PlaceOrder: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

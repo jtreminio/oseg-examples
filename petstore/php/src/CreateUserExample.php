@@ -25,5 +25,5 @@ try {
         user: $user,
     );
 } catch (OpenAPI\Client\ApiException $e) {
-    echo "Exception when calling User#createUser: {$e->getMessage()}";
+    echo "Exception when calling UserApi#createUser: {$e->getMessage()}";
 }

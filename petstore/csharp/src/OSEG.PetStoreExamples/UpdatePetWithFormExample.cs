@@ -26,7 +26,7 @@ public class UpdatePetWithFormExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Pet#UpdatePetWithForm: " + e.Message);
+            Console.WriteLine("Exception when calling PetApi#UpdatePetWithForm: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

@@ -35,5 +35,5 @@ begin
         user,
     )
 rescue OpenApiClient::ApiError => e
-    puts "Exception when calling User#create_users_with_list_input: #{e}"
+    puts "Exception when calling UserApi#create_users_with_list_input: #{e}"
 end

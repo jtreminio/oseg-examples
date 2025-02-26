@@ -20,5 +20,5 @@ try {
 
     print_r($response);
 } catch (OpenAPI\Client\ApiException $e) {
-    echo "Exception when calling Pet#findPetsByStatus: {$e->getMessage()}";
+    echo "Exception when calling PetApi#findPetsByStatus: {$e->getMessage()}";
 }

@@ -10,5 +10,5 @@ begin
         "my_username", # username
     )
 rescue OpenApiClient::ApiError => e
-    puts "Exception when calling User#delete_user: #{e}"
+    puts "Exception when calling UserApi#delete_user: #{e}"
 end

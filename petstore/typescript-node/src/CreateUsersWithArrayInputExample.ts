@@ -33,6 +33,6 @@ const user = [
 apiCaller.createUsersWithArrayInput(
   user,
 ).catch(error => {
-  console.log("Exception when calling User#createUsersWithArrayInput:");
+  console.log("Exception when calling UserApi#createUsersWithArrayInput:");
   console.log(error.body);
 });

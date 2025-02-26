@@ -52,7 +52,7 @@ public class CreateUsersWithListInputExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling User#CreateUsersWithListInput: " + e.Message);
+            Console.WriteLine("Exception when calling UserApi#CreateUsersWithListInput: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

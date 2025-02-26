@@ -15,5 +15,5 @@ try {
 
     print_r($response);
 } catch (OpenAPI\Client\ApiException $e) {
-    echo "Exception when calling Store#getInventory: {$e->getMessage()}";
+    echo "Exception when calling StoreApi#getInventory: {$e->getMessage()}";
 }

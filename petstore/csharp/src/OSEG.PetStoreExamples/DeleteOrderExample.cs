@@ -25,7 +25,7 @@ public class DeleteOrderExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling Store#DeleteOrder: " + e.Message);
+            Console.WriteLine("Exception when calling StoreApi#DeleteOrder: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

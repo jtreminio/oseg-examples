@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.UserApiApiKeys.api_key, "YOUR_API_KEY");
 apiCaller.deleteUser(
   "my_username", // username
 ).catch(error => {
-  console.log("Exception when calling User#deleteUser:");
+  console.log("Exception when calling UserApi#deleteUser:");
   console.log(error.body);
 });

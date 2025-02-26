@@ -11,5 +11,5 @@ begin
         "12345", # order_id
     )
 rescue OpenApiClient::ApiError => e
-    puts "Exception when calling Store#delete_order: #{e}"
+    puts "Exception when calling StoreApi#delete_order: #{e}"
 end

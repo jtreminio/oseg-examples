@@ -19,4 +19,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling Pet#find_pets_by_status: %s\n" % e)
+        print("Exception when calling PetApi#find_pets_by_status: %s\n" % e)

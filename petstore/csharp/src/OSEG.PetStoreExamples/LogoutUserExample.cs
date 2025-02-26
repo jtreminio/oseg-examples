@@ -22,7 +22,7 @@ public class LogoutUserExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling User#LogoutUser: " + e.Message);
+            Console.WriteLine("Exception when calling UserApi#LogoutUser: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

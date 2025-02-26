@@ -52,7 +52,7 @@ public class CreateUsersWithArrayInputExample
                 user
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling User#createUsersWithArrayInput");
+            System.err.println("Exception when calling UserApi#createUsersWithArrayInput");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

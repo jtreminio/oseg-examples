@@ -9,6 +9,6 @@ apiCaller.accessToken = "YOUR_ACCESS_TOKEN";
 apiCaller.deleteOrder(
   "12345", // orderId
 ).catch(error => {
-  console.log("Exception when calling Store#deleteOrder:");
+  console.log("Exception when calling StoreApi#deleteOrder:");
   console.log(error.body);
 });

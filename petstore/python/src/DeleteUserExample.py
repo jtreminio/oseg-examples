@@ -14,4 +14,4 @@ with ApiClient(configuration) as api_client:
             username="my_username",
         )
     except ApiException as e:
-        print("Exception when calling User#delete_user: %s\n" % e)
+        print("Exception when calling UserApi#delete_user: %s\n" % e)

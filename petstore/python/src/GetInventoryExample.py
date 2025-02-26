@@ -14,4 +14,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling Store#get_inventory: %s\n" % e)
+        print("Exception when calling StoreApi#get_inventory: %s\n" % e)

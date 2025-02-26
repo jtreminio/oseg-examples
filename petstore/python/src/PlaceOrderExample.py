@@ -26,4 +26,4 @@ with ApiClient(configuration) as api_client:
 
         pprint(response)
     except ApiException as e:
-        print("Exception when calling Store#place_order: %s\n" % e)
+        print("Exception when calling StoreApi#place_order: %s\n" % e)

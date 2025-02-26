@@ -28,7 +28,7 @@ public class DeletePetExample
                 "df560d5ba4eb7adbc635c87c3931a8421ae24dc81646196cd66544fd4471414a" // apiKey
             );
         } catch (ApiException e) {
-            System.err.println("Exception when calling Pet#deletePet");
+            System.err.println("Exception when calling PetApi#deletePet");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

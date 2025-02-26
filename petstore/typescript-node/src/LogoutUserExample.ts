@@ -6,6 +6,6 @@ const apiCaller = new api.UserApi();
 apiCaller.setApiKey(api.UserApiApiKeys.api_key, "YOUR_API_KEY");
 
 apiCaller.logoutUser().catch(error => {
-  console.log("Exception when calling User#logoutUser:");
+  console.log("Exception when calling UserApi#logoutUser:");
   console.log(error.body);
 });

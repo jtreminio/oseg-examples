@@ -11,6 +11,6 @@ apiCaller.getOrderById(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Store#getOrderById:");
+  console.log("Exception when calling StoreApi#getOrderById:");
   console.log(error.body);
 });

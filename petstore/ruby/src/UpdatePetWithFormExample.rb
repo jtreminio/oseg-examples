@@ -14,5 +14,5 @@ begin
         },
     )
 rescue OpenApiClient::ApiError => e
-    puts "Exception when calling Pet#update_pet_with_form: #{e}"
+    puts "Exception when calling PetApi#update_pet_with_form: #{e}"
 end

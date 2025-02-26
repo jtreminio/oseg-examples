@@ -40,5 +40,5 @@ try {
         user: $user,
     );
 } catch (OpenAPI\Client\ApiException $e) {
-    echo "Exception when calling User#createUsersWithListInput: {$e->getMessage()}";
+    echo "Exception when calling UserApi#createUsersWithListInput: {$e->getMessage()}";
 }

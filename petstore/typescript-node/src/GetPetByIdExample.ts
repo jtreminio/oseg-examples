@@ -10,6 +10,6 @@ apiCaller.getPetById(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Pet#getPetById:");
+  console.log("Exception when calling PetApi#getPetById:");
   console.log(error.body);
 });

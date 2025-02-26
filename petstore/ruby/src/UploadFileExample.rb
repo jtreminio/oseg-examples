@@ -16,5 +16,5 @@ begin
 
     p response
 rescue OpenApiClient::ApiError => e
-    puts "Exception when calling Pet#upload_file: #{e}"
+    puts "Exception when calling PetApi#upload_file: #{e}"
 end

@@ -13,6 +13,6 @@ apiCaller.findPetsByTags(
 ).then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Pet#findPetsByTags:");
+  console.log("Exception when calling PetApi#findPetsByTags:");
   console.log(error.body);
 });

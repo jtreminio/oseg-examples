@@ -19,5 +19,5 @@ try {
 
     print_r($response);
 } catch (OpenAPI\Client\ApiException $e) {
-    echo "Exception when calling Pet#uploadFile: {$e->getMessage()}";
+    echo "Exception when calling PetApi#uploadFile: {$e->getMessage()}";
 }

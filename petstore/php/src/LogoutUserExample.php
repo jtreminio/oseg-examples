@@ -13,5 +13,5 @@ $config->setApiKey("api_key", "YOUR_API_KEY");
 try {
     (new OpenAPI\Client\Api\UserApi(config: $config))->logoutUser();
 } catch (OpenAPI\Client\ApiException $e) {
-    echo "Exception when calling User#logoutUser: {$e->getMessage()}";
+    echo "Exception when calling UserApi#logoutUser: {$e->getMessage()}";
 }

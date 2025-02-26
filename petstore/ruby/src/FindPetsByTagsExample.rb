@@ -15,5 +15,5 @@ begin
 
     p response
 rescue OpenApiClient::ApiError => e
-    puts "Exception when calling Pet#find_pets_by_tags: #{e}"
+    puts "Exception when calling PetApi#find_pets_by_tags: #{e}"
 end

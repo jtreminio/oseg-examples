@@ -16,4 +16,4 @@ with ApiClient(configuration) as api_client:
             status="sold",
         )
     except ApiException as e:
-        print("Exception when calling Pet#update_pet_with_form: %s\n" % e)
+        print("Exception when calling PetApi#update_pet_with_form: %s\n" % e)

@@ -40,5 +40,5 @@ begin
 
     p response
 rescue OpenApiClient::ApiError => e
-    puts "Exception when calling Pet#update_pet: #{e}"
+    puts "Exception when calling PetApi#update_pet: #{e}"
 end

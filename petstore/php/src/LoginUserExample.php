@@ -19,5 +19,5 @@ try {
 
     print_r($response);
 } catch (OpenAPI\Client\ApiException $e) {
-    echo "Exception when calling User#loginUser: {$e->getMessage()}";
+    echo "Exception when calling UserApi#loginUser: {$e->getMessage()}";
 }

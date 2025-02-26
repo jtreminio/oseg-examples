@@ -36,7 +36,7 @@ public class UpdateUserExample
         }
         catch (ApiException e)
         {
-            Console.WriteLine("Exception when calling User#UpdateUser: " + e.Message);
+            Console.WriteLine("Exception when calling UserApi#UpdateUser: " + e.Message);
             Console.WriteLine("Status Code: " + e.ErrorCode);
             Console.WriteLine(e.StackTrace);
         }

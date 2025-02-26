@@ -8,6 +8,6 @@ apiCaller.setApiKey(api.StoreApiApiKeys.api_key, "YOUR_API_KEY");
 apiCaller.getInventory().then(response => {
   console.log(response.body);
 }).catch(error => {
-  console.log("Exception when calling Store#getInventory:");
+  console.log("Exception when calling StoreApi#getInventory:");
   console.log(error.body);
 });

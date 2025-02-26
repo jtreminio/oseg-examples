@@ -16,5 +16,5 @@ try {
         api_key: "df560d5ba4eb7adbc635c87c3931a8421ae24dc81646196cd66544fd4471414a",
     );
 } catch (OpenAPI\Client\ApiException $e) {
-    echo "Exception when calling Pet#deletePet: {$e->getMessage()}";
+    echo "Exception when calling PetApi#deletePet: {$e->getMessage()}";
 }

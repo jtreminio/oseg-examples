@@ -41,4 +41,4 @@ with ApiClient(configuration) as api_client:
             user=user,
         )
     except ApiException as e:
-        print("Exception when calling User#create_users_with_list_input: %s\n" % e)
+        print("Exception when calling UserApi#create_users_with_list_input: %s\n" % e)

@@ -21,5 +21,5 @@ begin
 
     p response
 rescue OpenApiClient::ApiError => e
-    puts "Exception when calling Store#place_order: #{e}"
+    puts "Exception when calling StoreApi#place_order: #{e}"
 end

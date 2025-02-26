@@ -27,7 +27,7 @@ public class GetInventoryExample
 
             System.out.println(response);
         } catch (ApiException e) {
-            System.err.println("Exception when calling Store#getInventory");
+            System.err.println("Exception when calling StoreApi#getInventory");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
