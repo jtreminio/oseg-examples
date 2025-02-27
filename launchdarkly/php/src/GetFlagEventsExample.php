@@ -1,0 +1,33 @@
+<?php
+
+namespace OSEG\LaunchDarklyExamples;
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use SplFileObject;
+use LaunchDarkly;
+
+$config = LaunchDarkly\Client\Configuration::getDefaultConfiguration();
+$config->setApiKey("ApiKey", "YOUR_API_KEY");
+
+try {
+    $response = (new LaunchDarkly\Client\Api\InsightsFlagEventsBetaApi(config: $config))->getFlagEvents(
+        project_key: null,
+        environment_key: null,
+        application_key: null,
+        query: null,
+        impact_size: null,
+        has_experiments: null,
+        global: null,
+        expand: null,
+        limit: null,
+        from: null,
+        to: null,
+        after: null,
+        before: null,
+    );
+
+    print_r($response);
+} catch (LaunchDarkly\Client\ApiException $e) {
+    echo "Exception when calling InsightsFlagEventsBetaApi#getFlagEvents: {$e->getMessage()}";
+}

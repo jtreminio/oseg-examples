@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text.Json;
+
+using Org.LaunchDarklyTools.Api;
+using Org.LaunchDarklyTools.Client;
+using Org.LaunchDarklyTools.Model;
+
+namespace OSEG.LaunchDarklyExamples;
+
+public class GetEvaluationsUsageExample
+{
+    public static void Run()
+    {
+        var config = new Configuration();
+        config.ApiKey = new Dictionary<string, string> {["ApiKey"] = "YOUR_API_KEY"};
+
+        try
+        {
+            var response = new AccountUsageBetaApi(config).GetEvaluationsUsage(
+                projectKey: null,
+                environmentKey: null,
+                featureFlagKey: null,
+                from: null,
+                to: null,
+                tz: null
+            );
+
+            Console.WriteLine(response);
+        }
+        catch (ApiException e)
+        {
+            Console.WriteLine("Exception when calling AccountUsageBetaApi#GetEvaluationsUsage: " + e.Message);
+            Console.WriteLine("Status Code: " + e.ErrorCode);
+            Console.WriteLine(e.StackTrace);
+        }
+    }
+}
