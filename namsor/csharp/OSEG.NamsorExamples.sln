@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+VisualStudioVersion = 12.0.0.0
+MinimumVisualStudioVersion = 10.0.0.1
+Project("{2927C4F7-9987-4601-917B-E16574E9D8E9}") = "OSEG.NamsorExamples", "src\OSEG.NamsorExamples\OSEG.NamsorExamples.csproj", "{7CBB1CA9-46F9-4BBF-9117-04786F057EF3}"
+EndProject
+Global
+    GlobalSection(SolutionConfigurationPlatforms) = preSolution
+        Debug|Any CPU = Debug|Any CPU
+        Release|Any CPU = Release|Any CPU
+    EndGlobalSection
+    GlobalSection(ProjectConfigurationPlatforms) = postSolution
+        {7CBB1CA9-46F9-4BBF-9117-04786F057EF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {7CBB1CA9-46F9-4BBF-9117-04786F057EF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {7CBB1CA9-46F9-4BBF-9117-04786F057EF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {7CBB1CA9-46F9-4BBF-9117-04786F057EF3}.Release|Any CPU.Build.0 = Release|Any CPU
+    EndGlobalSection
+    GlobalSection(SolutionProperties) = preSolution
+        HideSolutionNode = FALSE
+    EndGlobalSection
+EndGlobal

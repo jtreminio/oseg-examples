@@ -1,0 +1,15 @@
+generatorName: java
+additionalProperties:
+  invokerPackage: app.namsor.client
+  apiPackage: app.namsor.client.api
+  modelPackage: app.namsor.client.model
+  artifactId: namsor-java-client
+  hideGenerationTimestamp: true
+  oseg.package: oseg.namsor_examples
+  oseg.security.api_key.api_key: YOUR_API_KEY
+  oseg.printApiCallProperty: true
+globalProperties:
+  apiTests: false
+  modelTests: false
+  apiDocs: false
+  modelDocs: false

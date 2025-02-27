@@ -1,0 +1,11 @@
+generatorName: python
+additionalProperties:
+  packageName: namsor_client
+  projectName: namsor-client
+  oseg.propertyNamingConvention: camel_case
+  oseg.security.api_key.api_key: YOUR_API_KEY
+globalProperties:
+  apiTests: false
+  modelTests: false
+  apiDocs: false
+  modelDocs: false

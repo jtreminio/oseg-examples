@@ -1,0 +1,11 @@
+generatorName: ruby
+additionalProperties:
+  gemName: namsor_client
+  moduleName: NamsorClient
+  oseg.security.api_key.api_key: YOUR_API_KEY
+  oseg.printApiCallProperty: true
+globalProperties:
+  apiTests: false
+  modelTests: false
+  apiDocs: false
+  modelDocs: false

@@ -1,0 +1,989 @@
+{
+  "origin": {
+    "example": {
+      "path": {
+        "firstName": "Keith",
+        "lastName": "Haring"
+      }
+    }
+  },
+  "originBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+            "firstName": "Keith",
+            "lastName": "Haring"
+          }
+        ]
+      }
+    }
+  },
+  "originFull": {
+    "example": {
+      "path": {
+        "personalNameFull": "Keith Haring"
+      }
+    }
+  },
+  "originFullBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+            "name": "Keith Haring"
+          }
+        ]
+      }
+    }
+  },
+  "diasporaBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "0d7d6417-0bbb-4205-951d-b3473f605b56",
+            "firstName": "Keith",
+            "lastName": "Haring",
+            "countryIso2": "US"
+          }
+        ]
+      }
+    }
+  },
+  "diaspora": {
+    "example": {
+      "path": {
+        "firstName": "Keith",
+        "lastName": "Haring",
+        "countryIso2": "US"
+      }
+    }
+  },
+  "diasporaFull": {
+    "example": {
+      "path": {
+        "personalNameFull": "Keith Haring",
+        "countryIso2": "US"
+      }
+    }
+  },
+  "diasporaFullBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "0d7d6417-0bbb-4205-951d-b3473f605b56",
+            "name": "Keith Haring",
+            "countryIso2": "US"
+          }
+        ]
+      }
+    }
+  },
+  "usRaceEthnicity": {
+    "example": {
+      "path": {
+        "firstName": "Keith",
+        "lastName": "Haring"
+      }
+    }
+  },
+  "usRaceEthnicityZIP5": {
+    "example": {
+      "path": {
+        "firstName": "Keith",
+        "lastName": "Haring",
+        "zip5Code": "12345"
+      }
+    }
+  },
+  "usRaceEthnicityBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "85dd5f48-b9e1-4019-88ce-ccc7e56b763f",
+            "firstName": "Keith",
+            "lastName": "Haring",
+            "countryIso2": "US"
+          }
+        ]
+      }
+    }
+  },
+  "usZipRaceEthnicityBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "728767f9-c5b2-4ed3-a071-828077f16552",
+            "firstName": "Keith",
+            "lastName": "Haring",
+            "countryIso2": "US",
+            "zipCode": "10019"
+          }
+        ]
+      }
+    }
+  },
+  "usRaceEthnicityFull": {
+    "example": {
+      "path": {
+        "personalNameFull": "Keith Haring"
+      }
+    }
+  },
+  "usRaceEthnicityFullBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "85dd5f48-b9e1-4019-88ce-ccc7e56b763f",
+            "name": "Keith Haring",
+            "countryIso2": "US"
+          }
+        ]
+      }
+    }
+  },
+  "countryFnLn": {
+    "example": {
+      "path": {
+        "firstName": "Keith",
+        "lastName": "Haring"
+      }
+    }
+  },
+  "countryFnLnBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "9a3283bd-4efb-4b7b-906c-e3f3c03ea6a4",
+            "firstName": "Keith",
+            "lastName": "Haring"
+          }
+        ]
+      }
+    }
+  },
+  "country": {
+    "example": {
+      "path": {
+        "personalNameFull": "Keith Haring"
+      }
+    }
+  },
+  "countryBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "9a3283bd-4efb-4b7b-906c-e3f3c03ea6a4",
+            "name": "Keith Haring"
+          }
+        ]
+      }
+    }
+  },
+  "corridor": {
+    "example": {
+      "path": {
+        "firstNameFrom": "Ada",
+        "lastNameFrom": "Lovelace",
+        "countryIso2From": "GB",
+        "firstNameTo": "Nicolas",
+        "lastNameTo": "Tesla",
+        "countryIso2To": "US"
+      }
+    }
+  },
+  "corridorBatch": {
+    "example": {
+      "body": {
+        "corridorFromTo": [
+          {
+            "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+            "firstLastNameGeoFrom": {
+              "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+              "firstName": "Ada",
+              "lastName": "Lovelace",
+              "countryIso2": "GB"
+            },
+            "firstLastNameGeoTo": {
+              "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+              "firstName": "Nicolas",
+              "lastName": "Tesla",
+              "countryIso2": "US"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "communityEngage": {
+    "example": {
+      "path": {
+        "firstName": "Ada",
+        "lastName": "Lovelace",
+        "countryIso2": "GB"
+      }
+    }
+  },
+  "communityEngageFull": {
+    "example": {
+      "path": {
+        "personalNameFull": "Ada Lovelace",
+        "countryIso2": "GB"
+      }
+    }
+  },
+  "gender": {
+    "example": {
+      "path": {
+        "firstName": "Keith"
+      }
+    }
+  },
+  "gender_1": {
+    "example": {
+      "path": {
+        "firstName": "Keith",
+        "lastName": "Haring"
+      }
+    }
+  },
+  "genderFull": {
+    "example": {
+      "path": {
+        "fullName": "Keith Haring"
+      }
+    }
+  },
+  "genderBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "b590b04c-da23-4f2f-a334-aee384ee420a",
+            "firstName": "Keith",
+            "lastName": "Haring"
+          }
+        ]
+      }
+    }
+  },
+  "genderFullBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "0f472330-11a9-49ad-a0f5-bcac90a3f6bf",
+            "name": "Keith Haring"
+          }
+        ]
+      }
+    }
+  },
+  "genderGeo": {
+    "example": {
+      "path": {
+        "firstName": "Keith",
+        "lastName": "Haring",
+        "countryIso2": "US"
+      }
+    }
+  },
+  "genderFullGeo": {
+    "example": {
+      "path": {
+        "fullName": "Keith Haring",
+        "countryIso2": "US"
+      }
+    }
+  },
+  "genderFullGeoBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "3a2d203a-a6a4-42f9-acd1-1b5c56c7d39f",
+            "name": "Keith Haring",
+            "countryIso2": "US"
+          }
+        ]
+      }
+    }
+  },
+  "nameType": {
+    "example": {
+      "path": {
+        "properNoun": "Zippo"
+      }
+    }
+  },
+  "nameTypeBatch": {
+    "example": {
+      "body": {
+        "properNouns": [
+          {
+            "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+            "name": "Zippo"
+          }
+        ]
+      }
+    }
+  },
+  "nameTypeGeo": {
+    "example": {
+      "path": {
+        "properNoun": "Edi Gathegi",
+        "countryIso2": "KE"
+      }
+    }
+  },
+  "nameTypeGeoBatch": {
+    "example": {
+      "body": {
+        "properNouns": [
+          {
+            "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+            "name": "Edi Gathegi",
+            "countryIso2": "KE"
+          }
+        ]
+      }
+    }
+  },
+  "parseName": {
+    "example": {
+      "path": {
+        "nameFull": "John Smith"
+      }
+    }
+  },
+  "parseNameBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+            "name": "John Smith"
+          }
+        ]
+      }
+    }
+  },
+  "parseNameGeo": {
+    "example": {
+      "path": {
+        "nameFull": "Ricardo Darín",
+        "countryIso2": "AR"
+      }
+    }
+  },
+  "parseNameGeoBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+            "name": "Ricardo Darín",
+            "countryIso2": "AR"
+          }
+        ]
+      }
+    }
+  },
+  "japaneseNameLatinCandidates": {
+    "example": {
+      "path": {
+        "japaneseSurnameKanji": "塩田",
+        "japaneseGivenNameKanji": "千春"
+      }
+    }
+  },
+  "japaneseNameLatinCandidatesBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+            "firstName": "塩田",
+            "lastName": "千春"
+          }
+        ]
+      }
+    }
+  },
+  "japaneseNameKanjiCandidates_1": {
+    "example": {
+      "path": {
+        "japaneseSurnameLatin": "Sanae",
+        "japaneseGivenNameLatin": "Yamamoto"
+      }
+    }
+  },
+  "japaneseNameKanjiCandidates": {
+    "example": {
+      "path": {
+        "japaneseSurnameLatin": "Sanae",
+        "japaneseGivenNameLatin": "Yamamoto",
+        "knownGender": "m"
+      }
+    }
+  },
+  "japaneseNameKanjiCandidatesBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+            "firstName": "Sanae",
+            "lastName": "Yamamoto"
+          }
+        ]
+      }
+    }
+  },
+  "japaneseNameGenderKanjiCandidatesBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+            "firstName": "Takashi",
+            "lastName": "Murakami",
+            "gender": "male"
+          }
+        ]
+      }
+    }
+  },
+  "japaneseNameMatch": {
+    "example": {
+      "path": {
+        "japaneseSurnameLatin": "Tessai",
+        "japaneseGivenNameLatin": "Tomioka",
+        "japaneseName": "富岡 鉄斎"
+      }
+    }
+  },
+  "japaneseNameMatchFeedbackLoop": {
+    "example": {
+      "path": {
+        "japaneseSurnameLatin": "Tessai",
+        "japaneseGivenNameLatin": "Tomioka",
+        "japaneseName": "富岡 鉄斎"
+      }
+    }
+  },
+  "japaneseNameMatchBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c41",
+            "name1": {
+              "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+              "firstName": "Tessai",
+              "lastName": "Tomioka"
+            },
+            "name2": {
+              "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c43",
+              "name": "富岡 鉄斎"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "genderJapaneseNameBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+            "firstName": "Satoshi",
+            "lastName": "Nakamoto"
+          }
+        ]
+      }
+    }
+  },
+  "genderJapaneseNamePinyin": {
+    "example": {
+      "path": {
+        "japaneseSurname": "中松",
+        "japaneseGivenName": "義郎"
+      }
+    }
+  },
+  "genderJapaneseNameFull": {
+    "example": {
+      "path": {
+        "japaneseName": "中松 義郎"
+      }
+    }
+  },
+  "genderJapaneseNameFullBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+            "name": "中松 義郎"
+          }
+        ]
+      }
+    }
+  },
+  "parseJapaneseName": {
+    "example": {
+      "path": {
+        "japaneseName": "小島 秀夫"
+      }
+    }
+  },
+  "parseJapaneseNameBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+            "name": "小島 秀夫"
+          }
+        ]
+      }
+    }
+  },
+  "pinyinChineseName": {
+    "example": {
+      "path": {
+        "chineseName": "赵丽颖"
+      }
+    }
+  },
+  "pinyinChineseNameBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+            "name": "赵丽颖"
+          }
+        ]
+      }
+    }
+  },
+  "chineseNameCandidates": {
+    "example": {
+      "path": {
+        "chineseSurnameLatin": "Hong",
+        "chineseGivenNameLatin": "Yu"
+      }
+    }
+  },
+  "chineseNameGenderCandidates": {
+    "example": {
+      "path": {
+        "chineseSurnameLatin": "Hong",
+        "chineseGivenNameLatin": "Yu",
+        "knownGender": "m"
+      }
+    }
+  },
+  "chineseNameCandidatesBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+            "firstName": "LiYing",
+            "lastName": "Zhao"
+          }
+        ]
+      }
+    }
+  },
+  "chineseNameCandidatesGenderBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+            "firstName": "LiYing",
+            "lastName": "Zhao",
+            "gender": "female"
+          }
+        ]
+      }
+    }
+  },
+  "chineseNameMatch": {
+    "example": {
+      "path": {
+        "chineseGivenNameLatin": "Hong",
+        "chineseSurnameLatin": "Yu",
+        "chineseName": "喻红"
+      }
+    }
+  },
+  "chineseNameMatchBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c41",
+            "name1": {
+              "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+              "firstName": "Hong",
+              "lastName": "Yu"
+            },
+            "name2": {
+              "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c43",
+              "name": "喻红"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "genderChineseNamePinyin": {
+    "example": {
+      "path": {
+        "chineseSurnameLatin": "Dèng",
+        "chineseGivenNameLatin": "Qīngyún"
+      }
+    }
+  },
+  "genderChineseNamePinyinBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+            "firstName": "Dèng",
+            "lastName": "Qīngyún"
+          }
+        ]
+      }
+    }
+  },
+  "genderChineseName": {
+    "example": {
+      "path": {
+        "chineseName": "谢晓亮"
+      }
+    }
+  },
+  "genderChineseNameBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+            "name": "谢晓亮"
+          }
+        ]
+      }
+    }
+  },
+  "parseChineseName": {
+    "example": {
+      "path": {
+        "chineseName": "赵丽颖"
+      }
+    }
+  },
+  "parseChineseNameBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+            "name": "赵丽颖"
+          }
+        ]
+      }
+    }
+  },
+  "castegroupIndian": {
+    "example": {
+      "path": {
+        "firstName": "Akash",
+        "lastName": "Sharma",
+        "subDivisionIso31662": "IN-UP"
+      }
+    }
+  },
+  "castegroupIndianBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+            "firstName": "Akash",
+            "lastName": "Sharma",
+            "subdivisionIso": "IN-UP"
+          }
+        ]
+      }
+    }
+  },
+  "castegroupIndianFull": {
+    "example": {
+      "path": {
+        "personalNameFull": "Akash Sharma",
+        "subDivisionIso31662": "IN-UP"
+      }
+    }
+  },
+  "castegroupIndianFullBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+            "name": "Akash Sharma",
+            "subdivisionIso": "IN-UP"
+          }
+        ]
+      }
+    }
+  },
+  "castegroupIndianHindu": {
+    "example": {
+      "path": {
+        "firstName": "Akash",
+        "lastName": "Sharma",
+        "subDivisionIso31662": "IN-UP"
+      }
+    }
+  },
+  "religion": {
+    "example": {
+      "path": {
+        "subDivisionIso31662": "IN-UP",
+        "personalNameFull": "Akash Sharma"
+      }
+    }
+  },
+  "religion_1": {
+    "example": {
+      "path": {
+        "subDivisionIso31662": "IN-UP",
+        "firstName": "Akash",
+        "lastName": "Sharma"
+      }
+    }
+  },
+  "religion_2": {
+    "example": {
+      "path": {
+        "countryIso2": "NG",
+        "subDivisionIso31662": "IN-UP",
+        "firstName": "Akash",
+        "lastName": "Sharma"
+      }
+    }
+  },
+  "religionFull": {
+    "example": {
+      "path": {
+        "countryIso2": "NG",
+        "subDivisionIso31662": "IN-UP",
+        "personalNameFull": "Akash Sharma"
+      }
+    }
+  },
+  "religionIndianBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+            "firstName": "Akash",
+            "lastName": "Sharma",
+            "subdivisionIso": "IN-PB"
+          }
+        ]
+      }
+    }
+  },
+  "religionIndianFullBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+            "name": "Akash Sharma",
+            "subdivisionIso": "IN-PB"
+          }
+        ]
+      }
+    }
+  },
+  "subclassificationIndian": {
+    "example": {
+      "path": {
+        "firstName": "Jannat",
+        "lastName": "Rahmani"
+      }
+    }
+  },
+  "subclassificationIndianBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+            "firstName": "Jannat",
+            "lastName": "Rahmani"
+          }
+        ]
+      }
+    }
+  },
+  "subclassification": {
+    "example": {
+      "path": {
+        "firstName": "Jannat",
+        "lastName": "Rahmani",
+        "countryIso2": "NG"
+      }
+    }
+  },
+  "subclassificationFull": {
+    "example": {
+      "path": {
+        "fullName": "Jannat Rahmani",
+        "countryIso2": "NG"
+      }
+    }
+  },
+  "subclassificationIndianFull": {
+    "example": {
+      "path": {
+        "fullName": "Jannat Rahmani"
+      }
+    }
+  },
+  "subclassificationIndianFullBatch": {
+    "example": {
+      "body": {
+        "personalNames": [
+          {
+            "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+            "name": "Jannat Rahmani"
+          }
+        ]
+      }
+    }
+  },
+  "phoneCode": {
+    "example": {
+      "path": {
+        "firstName": "Jamini",
+        "lastName": "Roy",
+        "phoneNumber": "09804201420"
+      }
+    }
+  },
+  "phoneCodeBatch": {
+    "example": {
+      "body": {
+        "personalNamesWithPhoneNumbers": [
+          {
+            "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+            "firstName": "Jamini",
+            "lastName": "Roy",
+            "phoneNumber": "09804201420"
+          }
+        ]
+      }
+    }
+  },
+  "phoneCodeGeo": {
+    "example": {
+      "path": {
+        "firstName": "Teniola",
+        "lastName": "Apata",
+        "phoneNumber": "08186472651",
+        "countryIso2": "NG"
+      }
+    }
+  },
+  "phoneCodeGeoFeedbackLoop": {
+    "example": {
+      "path": {
+        "firstName": "Teniola",
+        "lastName": "Apata",
+        "phoneNumber": "08186472651",
+        "phoneNumberE164": "",
+        "countryIso2": "NG"
+      }
+    }
+  },
+  "phoneCodeGeoBatch": {
+    "example": {
+      "body": {
+        "personalNamesWithPhoneNumbers": [
+          {
+            "id": "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+            "firstName": "Teniola",
+            "lastName": "Apata",
+            "phoneNumber": "08186472651",
+            "countryIso2": "NG",
+            "countryIso2Alt": "CI"
+          }
+        ]
+      }
+    }
+  },
+  "anonymize": {
+    "example": {
+      "path": {
+        "source": "source",
+        "anonymized": true
+      }
+    }
+  },
+  "anonymize_1": {
+    "example": {
+      "path": {
+        "source": "source",
+        "anonymized": true,
+        "token": "token"
+      }
+    }
+  },
+  "disable": {
+    "example": {
+      "path": {
+        "source": "source",
+        "disabled": true
+      }
+    }
+  },
+  "learnable": {
+    "example": {
+      "path": {
+        "source": "source",
+        "learnable": true,
+        "token": "token"
+      }
+    }
+  },
+  "learnable_1": {
+    "example": {
+      "path": {
+        "source": "source",
+        "learnable": true
+      }
+    }
+  }
+}

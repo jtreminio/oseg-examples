@@ -1,0 +1,11 @@
+generatorName: typescript-node
+additionalProperties:
+  npmName: namsor_client
+  oseg.npmName: "@oseg/namsor"
+  oseg.security.api_key.api_key: YOUR_API_KEY
+  oseg.printApiCallProperty: true
+globalProperties:
+  apiTests: false
+  modelTests: false
+  apiDocs: false
+  modelDocs: false

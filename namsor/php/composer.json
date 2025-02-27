@@ -1,0 +1,20 @@
+{
+    "name": "oseg/namsor_examples",
+    "autoload": {
+        "psr-4": {
+            "OSEG\\NamsorExamples\\": ""
+        }
+    },
+    "require": {
+        "php": "^8.1",
+        "namsor/client": "*",
+        "ext-json": "*"
+    },
+    "repositories": [
+      {
+        "type": "artifact",
+        "url": "./artifacts"
+      }
+    ],
+  "minimum-stability": "dev"
+}

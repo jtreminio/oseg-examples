@@ -1,0 +1,17 @@
+generatorName: php
+additionalProperties:
+  invokerPackage: "Namsor\\Client"
+  packageName: namsor/client
+  composerPackageName: namsor/client
+  packageVersion: "1.0.0"
+  artifactVersion: "1.0.0"
+  oseg.composerPackageName: oseg/namsor_examples
+  oseg.namespace: OSEG\NamsorExamples
+  oseg.autoloadLocation: "__DIR__ . '/../vendor/autoload.php'"
+  oseg.ignoreOptionalUnset: false
+  oseg.security.api_key.api_key: YOUR_API_KEY
+globalProperties:
+  apiTests: false
+  modelTests: false
+  apiDocs: false
+  modelDocs: false
