@@ -1,7 +1,0 @@
-**/.github/
-**/.openapi-generator/
-
-csharp/sdk/api/
-
-java/sdk/api/
-java/sdk/gradle/
