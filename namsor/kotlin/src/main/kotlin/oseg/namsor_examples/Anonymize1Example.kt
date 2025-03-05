@@ -10,7 +10,9 @@ import java.time.OffsetDateTime
 import kotlin.collections.ArrayList
 import kotlin.collections.List
 import kotlin.collections.Map
+import com.squareup.moshi.adapter
 
+@ExperimentalStdlibApi
 class Anonymize1Example
 {
     fun anonymize1()
