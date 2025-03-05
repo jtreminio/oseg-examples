@@ -35,7 +35,7 @@ public class PostModelConfigExample
         try
         {
             var response = new AiConfigsBetaApi(config).postModelConfig(
-                null, // lDAPIVersion
+                null, // ldAPIVersion
                 "default", // projectKey
                 modelConfigPost
             );

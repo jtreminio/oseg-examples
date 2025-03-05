@@ -19,7 +19,7 @@ class PatchAIConfigExample
     {
         ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
 
-        val aIConfigPatch = AIConfigPatch(
+        val aiConfigPatch = AIConfigPatch(
             description = "description",
             name = "name",
             tags = listOf (
@@ -31,10 +31,10 @@ class PatchAIConfigExample
         try
         {
             val response = AIConfigsBetaApi().patchAIConfig(
-                lDAPIVersion = null,
+                ldAPIVersion = null,
                 projectKey = null,
                 configKey = null,
-                aIConfigPatch = aIConfigPatch,
+                aiConfigPatch = aiConfigPatch,
             )
 
             println(response)

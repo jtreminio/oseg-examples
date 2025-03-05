@@ -22,7 +22,7 @@ class GetAIConfigsExample
         try
         {
             val response = AIConfigsBetaApi().getAIConfigs(
-                lDAPIVersion = null,
+                ldAPIVersion = null,
                 projectKey = "default",
                 sort = null,
                 limit = null,

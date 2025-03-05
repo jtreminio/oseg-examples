@@ -24,7 +24,7 @@ public class DeleteAIConfigExample
         try
         {
             new AiConfigsBetaApi(config).deleteAIConfig(
-                null, // lDAPIVersion
+                null, // ldAPIVersion
                 "default", // projectKey
                 null // configKey
             );

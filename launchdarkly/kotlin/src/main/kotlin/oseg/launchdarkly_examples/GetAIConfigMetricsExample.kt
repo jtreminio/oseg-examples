@@ -22,7 +22,7 @@ class GetAIConfigMetricsExample
         try
         {
             val response = AIConfigsBetaApi().getAIConfigMetrics(
-                lDAPIVersion = null,
+                ldAPIVersion = null,
                 projectKey = null,
                 configKey = null,
                 from = 123,

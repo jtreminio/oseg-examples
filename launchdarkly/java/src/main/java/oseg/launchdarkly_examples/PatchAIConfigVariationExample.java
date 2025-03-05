@@ -34,20 +34,20 @@ public class PatchAIConfigVariationExample
             messages2
         ));
 
-        var aIConfigVariationPatch = new AIConfigVariationPatch();
-        aIConfigVariationPatch.modelConfigKey("modelConfigKey");
-        aIConfigVariationPatch.name("name");
-        aIConfigVariationPatch.published(true);
-        aIConfigVariationPatch.messages(messages);
+        var aiConfigVariationPatch = new AIConfigVariationPatch();
+        aiConfigVariationPatch.modelConfigKey("modelConfigKey");
+        aiConfigVariationPatch.name("name");
+        aiConfigVariationPatch.published(true);
+        aiConfigVariationPatch.messages(messages);
 
         try
         {
             var response = new AiConfigsBetaApi(config).patchAIConfigVariation(
-                null, // lDAPIVersion
+                null, // ldAPIVersion
                 null, // projectKey
                 null, // configKey
                 null, // variationKey
-                aIConfigVariationPatch
+                aiConfigVariationPatch
             );
 
             System.out.println(response);

@@ -24,7 +24,7 @@ public class DeleteModelConfigExample
         try
         {
             new AiConfigsBetaApi(config).deleteModelConfig(
-                null, // lDAPIVersion
+                null, // ldAPIVersion
                 "default", // projectKey
                 null // modelConfigKey
             );

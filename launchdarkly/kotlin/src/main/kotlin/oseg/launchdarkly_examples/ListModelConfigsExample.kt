@@ -22,7 +22,7 @@ class ListModelConfigsExample
         try
         {
             val response = AIConfigsBetaApi().listModelConfigs(
-                lDAPIVersion = null,
+                ldAPIVersion = null,
                 projectKey = "default",
             )
 

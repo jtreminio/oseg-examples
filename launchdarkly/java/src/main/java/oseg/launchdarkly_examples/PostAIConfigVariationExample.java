@@ -34,19 +34,19 @@ public class PostAIConfigVariationExample
             messages2
         ));
 
-        var aIConfigVariationPost = new AIConfigVariationPost();
-        aIConfigVariationPost.key("key");
-        aIConfigVariationPost.name("name");
-        aIConfigVariationPost.modelConfigKey("modelConfigKey");
-        aIConfigVariationPost.messages(messages);
+        var aiConfigVariationPost = new AIConfigVariationPost();
+        aiConfigVariationPost.key("key");
+        aiConfigVariationPost.name("name");
+        aiConfigVariationPost.modelConfigKey("modelConfigKey");
+        aiConfigVariationPost.messages(messages);
 
         try
         {
             var response = new AiConfigsBetaApi(config).postAIConfigVariation(
-                null, // lDAPIVersion
+                null, // ldAPIVersion
                 null, // projectKey
                 null, // configKey
-                aIConfigVariationPost
+                aiConfigVariationPost
             );
 
             System.out.println(response);

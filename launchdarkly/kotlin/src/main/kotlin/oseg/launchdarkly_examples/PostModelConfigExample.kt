@@ -34,7 +34,7 @@ class PostModelConfigExample
         try
         {
             val response = AIConfigsBetaApi().postModelConfig(
-                lDAPIVersion = null,
+                ldAPIVersion = null,
                 projectKey = "default",
                 modelConfigPost = modelConfigPost,
             )

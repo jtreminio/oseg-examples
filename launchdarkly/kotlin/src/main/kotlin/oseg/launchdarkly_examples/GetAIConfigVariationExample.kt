@@ -22,7 +22,7 @@ class GetAIConfigVariationExample
         try
         {
             val response = AIConfigsBetaApi().getAIConfigVariation(
-                lDAPIVersion = null,
+                ldAPIVersion = null,
                 projectKey = "default",
                 configKey = "default",
                 variationKey = "default",

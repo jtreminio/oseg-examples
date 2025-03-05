@@ -24,7 +24,7 @@ public class GetAIConfigsExample
         try
         {
             var response = new AiConfigsBetaApi(config).getAIConfigs(
-                null, // lDAPIVersion
+                null, // ldAPIVersion
                 "default", // projectKey
                 null, // sort
                 null, // limit

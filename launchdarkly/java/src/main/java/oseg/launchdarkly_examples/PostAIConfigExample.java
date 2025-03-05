@@ -21,11 +21,11 @@ public class PostAIConfigExample
         var config = Configuration.getDefaultApiClient();
         config.setApiKey("YOUR_API_KEY");
 
-        var aIConfigPost = new AIConfigPost();
-        aIConfigPost.key("key");
-        aIConfigPost.name("name");
-        aIConfigPost.description("");
-        aIConfigPost.tags(List.of (
+        var aiConfigPost = new AIConfigPost();
+        aiConfigPost.key("key");
+        aiConfigPost.name("name");
+        aiConfigPost.description("");
+        aiConfigPost.tags(List.of (
             "tags",
             "tags"
         ));
@@ -33,9 +33,9 @@ public class PostAIConfigExample
         try
         {
             var response = new AiConfigsBetaApi(config).postAIConfig(
-                null, // lDAPIVersion
+                null, // ldAPIVersion
                 null, // projectKey
-                aIConfigPost
+                aiConfigPost
             );
 
             System.out.println(response);

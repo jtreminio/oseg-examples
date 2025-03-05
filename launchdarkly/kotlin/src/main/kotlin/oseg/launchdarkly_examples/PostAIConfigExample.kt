@@ -19,7 +19,7 @@ class PostAIConfigExample
     {
         ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
 
-        val aIConfigPost = AIConfigPost(
+        val aiConfigPost = AIConfigPost(
             key = "key",
             name = "name",
             description = "",
@@ -32,9 +32,9 @@ class PostAIConfigExample
         try
         {
             val response = AIConfigsBetaApi().postAIConfig(
-                lDAPIVersion = null,
+                ldAPIVersion = null,
                 projectKey = null,
-                aIConfigPost = aIConfigPost,
+                aiConfigPost = aiConfigPost,
             )
 
             println(response)

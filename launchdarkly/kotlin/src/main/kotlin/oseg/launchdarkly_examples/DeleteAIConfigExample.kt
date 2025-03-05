@@ -22,7 +22,7 @@ class DeleteAIConfigExample
         try
         {
             AIConfigsBetaApi().deleteAIConfig(
-                lDAPIVersion = null,
+                ldAPIVersion = null,
                 projectKey = "default",
                 configKey = null,
             )

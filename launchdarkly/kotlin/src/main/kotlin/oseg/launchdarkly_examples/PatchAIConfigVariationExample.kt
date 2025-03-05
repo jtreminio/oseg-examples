@@ -34,7 +34,7 @@ class PatchAIConfigVariationExample
             messages2,
         )
 
-        val aIConfigVariationPatch = AIConfigVariationPatch(
+        val aiConfigVariationPatch = AIConfigVariationPatch(
             modelConfigKey = "modelConfigKey",
             name = "name",
             published = true,
@@ -44,11 +44,11 @@ class PatchAIConfigVariationExample
         try
         {
             val response = AIConfigsBetaApi().patchAIConfigVariation(
-                lDAPIVersion = null,
+                ldAPIVersion = null,
                 projectKey = null,
                 configKey = null,
                 variationKey = null,
-                aIConfigVariationPatch = aIConfigVariationPatch,
+                aiConfigVariationPatch = aiConfigVariationPatch,
             )
 
             println(response)

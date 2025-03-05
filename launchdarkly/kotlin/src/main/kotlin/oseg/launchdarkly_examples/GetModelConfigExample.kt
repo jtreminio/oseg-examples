@@ -22,7 +22,7 @@ class GetModelConfigExample
         try
         {
             val response = AIConfigsBetaApi().getModelConfig(
-                lDAPIVersion = null,
+                ldAPIVersion = null,
                 projectKey = "default",
                 modelConfigKey = "default",
             )

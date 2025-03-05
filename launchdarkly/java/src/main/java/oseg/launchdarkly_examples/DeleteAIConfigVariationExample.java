@@ -24,7 +24,7 @@ public class DeleteAIConfigVariationExample
         try
         {
             new AiConfigsBetaApi(config).deleteAIConfigVariation(
-                null, // lDAPIVersion
+                null, // ldAPIVersion
                 null, // projectKey
                 null, // configKey
                 null // variationKey

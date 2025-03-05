@@ -24,7 +24,7 @@ public class ListModelConfigsExample
         try
         {
             var response = new AiConfigsBetaApi(config).listModelConfigs(
-                null, // lDAPIVersion
+                null, // ldAPIVersion
                 "default" // projectKey
             );
 

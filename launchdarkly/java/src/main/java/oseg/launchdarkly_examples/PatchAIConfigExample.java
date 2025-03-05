@@ -21,10 +21,10 @@ public class PatchAIConfigExample
         var config = Configuration.getDefaultApiClient();
         config.setApiKey("YOUR_API_KEY");
 
-        var aIConfigPatch = new AIConfigPatch();
-        aIConfigPatch.description("description");
-        aIConfigPatch.name("name");
-        aIConfigPatch.tags(List.of (
+        var aiConfigPatch = new AIConfigPatch();
+        aiConfigPatch.description("description");
+        aiConfigPatch.name("name");
+        aiConfigPatch.tags(List.of (
             "tags",
             "tags"
         ));
@@ -32,10 +32,10 @@ public class PatchAIConfigExample
         try
         {
             var response = new AiConfigsBetaApi(config).patchAIConfig(
-                null, // lDAPIVersion
+                null, // ldAPIVersion
                 null, // projectKey
                 null, // configKey
-                aIConfigPatch
+                aiConfigPatch
             );
 
             System.out.println(response);

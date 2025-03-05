@@ -22,7 +22,7 @@ class DeleteModelConfigExample
         try
         {
             AIConfigsBetaApi().deleteModelConfig(
-                lDAPIVersion = null,
+                ldAPIVersion = null,
                 projectKey = "default",
                 modelConfigKey = null,
             )

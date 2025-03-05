@@ -24,7 +24,7 @@ public class GetAIConfigMetricsByVariationExample
         try
         {
             var response = new AiConfigsBetaApi(config).getAIConfigMetricsByVariation(
-                null, // lDAPIVersion
+                null, // ldAPIVersion
                 null, // projectKey
                 null, // configKey
                 123, // from
