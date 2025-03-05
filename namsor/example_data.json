@@ -985,5 +985,12 @@
         "learnable": true
       }
     }
+  },
+  "taxonomyClasses": {
+    "example": {
+      "path": {
+        "classifierName": "classifierName"
+      }
+    }
   }
 }

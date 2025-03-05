@@ -1,0 +1,13 @@
+generatorName: kotlin
+additionalProperties:
+  groupId: app.namsor
+  packageName: app.namsor.client
+  artifactId: namsor-kotlin-client
+  hideGenerationTimestamp: true
+  oseg.package: oseg.namsor_examples
+  oseg.security.api_key.api_key: YOUR_API_KEY
+globalProperties:
+  apiTests: false
+  modelTests: false
+  apiDocs: false
+  modelDocs: false

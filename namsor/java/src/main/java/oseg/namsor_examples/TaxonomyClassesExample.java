@@ -24,7 +24,7 @@ public class TaxonomyClassesExample
         try
         {
             var response = new AdminApi(config).taxonomyClasses(
-                null // classifierName
+                "classifierName" // classifierName
             );
 
             System.out.println(response);

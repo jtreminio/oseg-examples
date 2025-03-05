@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.AdminApi(api_client).taxonomy_classes(
-            classifier_name=None,
+            classifier_name="classifierName",
         )
 
         pprint(response)

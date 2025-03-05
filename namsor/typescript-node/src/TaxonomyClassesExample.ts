@@ -6,7 +6,7 @@ const apiCaller = new api.AdminApi();
 apiCaller.setApiKey(api.AdminApiApiKeys.api_key, "YOUR_API_KEY");
 
 apiCaller.taxonomyClasses(
-  undefined, // classifierName
+  "classifierName", // classifierName
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

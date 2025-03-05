@@ -19,7 +19,7 @@ public class TaxonomyClassesExample
         try
         {
             var response = new AdminApi(config).TaxonomyClasses(
-                classifierName: null
+                classifierName: "classifierName"
             );
 
             Console.WriteLine(response);
