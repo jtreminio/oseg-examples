@@ -1,0 +1,40 @@
+package oseg.launchdarkly_examples
+
+import com.launchdarkly.client.infrastructure.*
+import com.launchdarkly.client.apis.*
+import com.launchdarkly.client.models.*
+
+import java.io.File
+import java.time.LocalDate
+import java.time.OffsetDateTime
+import kotlin.collections.ArrayList
+import kotlin.collections.List
+import kotlin.collections.Map
+import com.squareup.moshi.adapter
+
+@ExperimentalStdlibApi
+class GetUsersExample
+{
+    fun getUsers()
+    {
+        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+
+        try
+        {
+            val response = UsersApi().getUsers(
+                projectKey = null,
+                environmentKey = null,
+                limit = null,
+                searchAfter = null,
+            )
+
+            println(response)
+        } catch (e: ClientException) {
+            println("4xx response calling UsersApi#getUsers")
+            e.printStackTrace()
+        } catch (e: ServerException) {
+            println("5xx response calling UsersApi#getUsers")
+            e.printStackTrace()
+        }
+    }
+}

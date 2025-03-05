@@ -13,8 +13,8 @@ $config->setApiKey("ApiKey", "YOUR_API_KEY");
 $repository_post = (new LaunchDarkly\Client\Model\RepositoryPost())
     ->setName("LaunchDarkly-Docs")
     ->setSourceLink("https://github.com/launchdarkly/LaunchDarkly-Docs")
-    ->setCommitUrlTemplate('https://github.com/launchdarkly/LaunchDarkly-Docs/commit/${sha}')
-    ->setHunkUrlTemplate('https://github.com/launchdarkly/LaunchDarkly-Docs/blob/${sha}/${filePath}#L${lineNumber}')
+    ->setCommitUrlTemplate("https://github.com/launchdarkly/LaunchDarkly-Docs/commit/\${sha}")
+    ->setHunkUrlTemplate("https://github.com/launchdarkly/LaunchDarkly-Docs/blob/\${sha}/\${filePath}#L\${lineNumber}")
     ->setType(LaunchDarkly\Client\Model\RepositoryPost::TYPE_GITHUB)
     ->setDefaultBranch("main");
 
