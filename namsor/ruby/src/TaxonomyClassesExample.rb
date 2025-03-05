@@ -7,7 +7,7 @@ end
 
 begin
     response = NamsorClient::AdminApi.new.taxonomy_classes(
-        nil, # classifier_name
+        "classifierName", # classifier_name
     )
 
     p response

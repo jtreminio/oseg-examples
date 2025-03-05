@@ -12,7 +12,7 @@ $config->setApiKey("api_key", "YOUR_API_KEY");
 
 try {
     $response = (new Namsor\Client\Api\AdminApi(config: $config))->taxonomyClasses(
-        classifier_name: null,
+        classifier_name: "classifierName",
     );
 
     print_r($response);
