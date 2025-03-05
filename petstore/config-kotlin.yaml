@@ -1,0 +1,15 @@
+generatorName: kotlin
+additionalProperties:
+  groupId: org.openapitools
+  packageName: org.openapitools.client
+  artifactId: openapi-kotlin-client
+  hideGenerationTimestamp: true
+  oseg.package: oseg.petstore_examples
+  oseg.security.api_key.api_key: YOUR_API_KEY
+  oseg.security.petstore_auth.access_token: YOUR_ACCESS_TOKEN
+  oseg.printApiCallProperty: true
+globalProperties:
+  apiTests: false
+  modelTests: false
+  apiDocs: false
+  modelDocs: false

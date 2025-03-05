@@ -5,3 +5,5 @@
 
 **/java/sdk/api/
 **/java/sdk/gradle/
+
+**/kotlin/sdk/gradle/
