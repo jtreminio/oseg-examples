@@ -1,0 +1,64 @@
+package oseg.chatwoot_examples;
+
+import com.chatwoot.client.ApiException;
+import com.chatwoot.client.Configuration;
+import com.chatwoot.client.api.*;
+import com.chatwoot.client.auth.*;
+import com.chatwoot.client.JSON;
+import com.chatwoot.client.model.*;
+
+import java.io.File;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+public class ContactFilterExample
+{
+    public static void main(String[] args)
+    {
+        var config = Configuration.getDefaultApiClient();
+        config.setApiKey("USER_API_KEY");
+        // config.setApiKey("AGENT_BOT_API_KEY");
+
+        var contactFilterRequest = new ContactFilterRequest();
+        contactFilterRequest.payload(JSON.deserialize("""
+            [
+                {
+                    "attribute_key": "name",
+                    "filter_operator": "equal_to",
+                    "query_operator": "AND",
+                    "values": [
+                        "en"
+                    ]
+                },
+                {
+                    "attribute_key": "country_code",
+                    "filter_operator": "equal_to",
+                    "query_operator": null,
+                    "values": [
+                        "us"
+                    ]
+                }
+            ]
+        """, List.class));
+
+        try
+        {
+            var response = new ContactsApi(config).contactFilter(
+                null, // accountId
+                contactFilterRequest, // body
+                null // page
+            );
+
+            System.out.println(response);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling ContactsApi#contactFilter");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}

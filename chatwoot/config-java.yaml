@@ -1,0 +1,17 @@
+generatorName: java
+additionalProperties:
+  invokerPackage: com.chatwoot.client
+  apiPackage: com.chatwoot.client.api
+  modelPackage: com.chatwoot.client.model
+  artifactId: chatwoot-java-client
+  hideGenerationTimestamp: true
+  oseg.package: oseg.chatwoot_examples
+  oseg.security.userApiKey.api_key: USER_API_KEY
+  oseg.security.agentBotApiKey.api_key: AGENT_BOT_API_KEY
+  oseg.security.platformAppApiKey.api_key: PLATFORM_APP_API_KEY
+  oseg.printApiCallProperty: true
+globalProperties:
+  apiTests: false
+  modelTests: false
+  apiDocs: false
+  modelDocs: false

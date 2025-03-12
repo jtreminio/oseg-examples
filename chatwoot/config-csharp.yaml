@@ -1,0 +1,13 @@
+generatorName: csharp
+additionalProperties:
+  packageName: Com.Chatwoot
+  packageGuid: "{A4F4447B-05CB-4737-B6F9-87FEB3577D18}"
+  library: restsharp
+  oseg.namespace: OSEG.ChatwootExamples
+  oseg.packageGuid: "{1E804E93-F86D-4F52-B724-36DC7AB7AB62}"
+  oseg.security.userApiKey.api_key: USER_API_KEY
+  oseg.security.agentBotApiKey.api_key: AGENT_BOT_API_KEY
+  oseg.security.platformAppApiKey.api_key: PLATFORM_APP_API_KEY
+globalProperties:
+  apiTests: false
+  modelTests: false
