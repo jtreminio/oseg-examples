@@ -7,7 +7,7 @@ apiCaller.setApiKey(api.ScheduledChangesApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 const postFlagScheduledChangesInput = new models.PostFlagScheduledChangesInput();
 postFlagScheduledChangesInput.executionDate = 1718467200000;
-postFlagScheduledChangesInput.instructions =   [
+postFlagScheduledChangesInput.instructions = [
   {
     "kind": "turnFlagOn"
   }

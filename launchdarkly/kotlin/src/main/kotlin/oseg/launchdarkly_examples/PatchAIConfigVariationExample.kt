@@ -38,6 +38,7 @@ class PatchAIConfigVariationExample
             modelConfigKey = "modelConfigKey",
             name = "name",
             published = true,
+            model = Map.of (),
             messages = messages,
         )
 

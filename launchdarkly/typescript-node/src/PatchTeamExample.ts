@@ -6,7 +6,7 @@ const apiCaller = new api.TeamsApi();
 apiCaller.setApiKey(api.TeamsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 const teamPatchInput = new models.TeamPatchInput();
-teamPatchInput.instructions =   [
+teamPatchInput.instructions = [
   {
     "kind": "updateDescription",
     "value": "New description for the team"

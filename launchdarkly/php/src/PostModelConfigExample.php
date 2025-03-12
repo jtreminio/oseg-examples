@@ -19,7 +19,9 @@ $model_config_post = (new LaunchDarkly\Client\Model\ModelConfigPost())
     ->setTags([
         "tags",
         "tags",
-    ]);
+    ])
+    ->setParams([])
+    ->setCustomParams([]);
 
 try {
     $response = (new LaunchDarkly\Client\Api\AIConfigsBetaApi(config: $config))->postModelConfig(

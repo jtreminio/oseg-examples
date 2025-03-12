@@ -12,9 +12,7 @@ with ApiClient(configuration) as api_client:
     create_approval_request_request = models.CreateApprovalRequestRequest(
         resourceId="proj/projKey:env/envKey:flag/flagKey",
         description="Requesting to update targeting",
-        instructions=json.loads("""
-            []
-        """),
+        instructions=[],
         comment="optional comment",
         notifyMemberIds=[
             "1234a56b7c89d012345e678f",

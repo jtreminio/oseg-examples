@@ -10,9 +10,7 @@ configuration = Configuration(
 
 with ApiClient(configuration) as api_client:
     flag_sempatch = models.FlagSempatch(
-        instructions=json.loads("""
-            []
-        """),
+        instructions=[],
         comment=None,
     )
 

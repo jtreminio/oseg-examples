@@ -35,6 +35,7 @@ public class PostAIConfigVariationExample
         var aIConfigVariationPost = new AIConfigVariationPost(
             key: "key",
             name: "name",
+            model: new Dictionary<string, object>(),
             modelConfigKey: "modelConfigKey",
             messages: messages
         );

@@ -19,6 +19,8 @@ with ApiClient(configuration) as api_client:
             "tags",
             "tags",
         ],
+        params={},
+        customParams={},
     )
 
     try:

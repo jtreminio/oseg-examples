@@ -28,6 +28,7 @@ with ApiClient(configuration) as api_client:
         modelConfigKey="modelConfigKey",
         name="name",
         published=True,
+        model={},
         messages=messages,
     )
 

@@ -36,6 +36,7 @@ public class PatchAIConfigVariationExample
             modelConfigKey: "modelConfigKey",
             name: "name",
             published: true,
+            model: new Dictionary<string, object>(),
             messages: messages
         );
 

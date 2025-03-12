@@ -8,7 +8,7 @@ apiCaller.setApiKey(api.ContextsApiApiKeys.ApiKey, "YOUR_API_KEY");
 apiCaller.evaluateContextInstance(
   undefined, // projectKey
   undefined, // environmentKey
-    {
+  {
     "key": "user-key-123abc",
     "kind": "user",
     "otherAttribute": "other attribute value"

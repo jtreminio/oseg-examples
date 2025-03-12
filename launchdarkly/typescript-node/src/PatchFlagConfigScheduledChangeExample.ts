@@ -6,7 +6,7 @@ const apiCaller = new api.ScheduledChangesApi();
 apiCaller.setApiKey(api.ScheduledChangesApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 const flagScheduledChangesInput = new models.FlagScheduledChangesInput();
-flagScheduledChangesInput.instructions =   [
+flagScheduledChangesInput.instructions = [
   {
     "kind": "replaceScheduledChangesInstructions",
     "value": [

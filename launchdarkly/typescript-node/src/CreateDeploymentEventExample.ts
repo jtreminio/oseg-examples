@@ -15,10 +15,10 @@ postDeploymentEventInput.applicationName = "Billing Service";
 postDeploymentEventInput.applicationKind = models.PostDeploymentEventInput.ApplicationKindEnum.Server;
 postDeploymentEventInput.versionName = "v1.0.0";
 postDeploymentEventInput.eventTime = 1706701522000;
-postDeploymentEventInput.eventMetadata =   {
+postDeploymentEventInput.eventMetadata = {
   "buildSystemVersion": "v1.2.3"
 };
-postDeploymentEventInput.deploymentMetadata =   {
+postDeploymentEventInput.deploymentMetadata = {
   "buildNumber": "1234"
 };
 

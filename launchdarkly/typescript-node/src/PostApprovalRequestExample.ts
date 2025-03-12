@@ -8,7 +8,7 @@ apiCaller.setApiKey(api.ApprovalsApiApiKeys.ApiKey, "YOUR_API_KEY");
 const createApprovalRequestRequest = new models.CreateApprovalRequestRequest();
 createApprovalRequestRequest.resourceId = "proj/projKey:env/envKey:flag/flagKey";
 createApprovalRequestRequest.description = "Requesting to update targeting";
-createApprovalRequestRequest.instructions =   [];
+createApprovalRequestRequest.instructions = [];
 createApprovalRequestRequest.comment = "optional comment";
 createApprovalRequestRequest.notifyMemberIds = [
   "1234a56b7c89d012345e678f",

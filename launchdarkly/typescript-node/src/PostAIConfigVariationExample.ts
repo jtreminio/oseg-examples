@@ -21,6 +21,7 @@ const messages = [
 const aIConfigVariationPost = new models.AIConfigVariationPost();
 aIConfigVariationPost.key = "key";
 aIConfigVariationPost.name = "name";
+aIConfigVariationPost.model = {};
 aIConfigVariationPost.modelConfigKey = "modelConfigKey";
 aIConfigVariationPost.messages = messages;
 

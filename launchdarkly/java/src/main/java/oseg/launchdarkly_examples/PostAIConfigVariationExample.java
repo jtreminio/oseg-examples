@@ -37,6 +37,7 @@ public class PostAIConfigVariationExample
         var aiConfigVariationPost = new AIConfigVariationPost();
         aiConfigVariationPost.key("key");
         aiConfigVariationPost.name("name");
+        aiConfigVariationPost.model(Map.of ());
         aiConfigVariationPost.modelConfigKey("modelConfigKey");
         aiConfigVariationPost.messages(messages);
 

@@ -37,6 +37,7 @@ class PostAIConfigVariationExample
         val aiConfigVariationPost = AIConfigVariationPost(
             key = "key",
             name = "name",
+            model = Map.of (),
             modelConfigKey = "modelConfigKey",
             messages = messages,
         )

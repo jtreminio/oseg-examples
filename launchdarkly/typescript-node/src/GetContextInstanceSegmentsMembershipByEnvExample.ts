@@ -8,7 +8,7 @@ apiCaller.setApiKey(api.SegmentsApiApiKeys.ApiKey, "YOUR_API_KEY");
 apiCaller.getContextInstanceSegmentsMembershipByEnv(
   undefined, // projectKey
   undefined, // environmentKey
-    {
+  {
     "address": {
       "city": "Springfield",
       "street": "123 Main Street"

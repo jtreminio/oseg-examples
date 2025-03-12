@@ -27,6 +27,7 @@ with ApiClient(configuration) as api_client:
     ai_config_variation_post = models.AIConfigVariationPost(
         key="key",
         name="name",
+        model={},
         modelConfigKey="modelConfigKey",
         messages=messages,
     )

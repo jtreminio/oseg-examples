@@ -6,7 +6,7 @@ const apiCaller = new api.FlagImportConfigurationsBetaApi();
 apiCaller.setApiKey(api.FlagImportConfigurationsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 const flagImportConfigurationPost = new models.FlagImportConfigurationPost();
-flagImportConfigurationPost.config =   {
+flagImportConfigurationPost.config = {
   "environmentId": "The ID of the environment in the external system",
   "ldApiKey": "An API key with create flag permissions in your LaunchDarkly account",
   "ldMaintainer": "The ID of the member who will be the maintainer of the imported flags",

@@ -13,9 +13,7 @@ $config->setApiKey("ApiKey", "YOUR_API_KEY");
 $create_approval_request_request = (new LaunchDarkly\Client\Model\CreateApprovalRequestRequest())
     ->setResourceId("proj/projKey:env/envKey:flag/flagKey")
     ->setDescription("Requesting to update targeting")
-    ->setInstructions(json_decode(<<<'EOD'
-        []
-    EOD, true))
+    ->setInstructions([])
     ->setComment("optional comment")
     ->setNotifyMemberIds([
         "1234a56b7c89d012345e678f",

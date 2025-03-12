@@ -6,7 +6,7 @@ const apiCaller = new api.TeamsBetaApi();
 apiCaller.setApiKey(api.TeamsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 const teamsPatchInput = new models.TeamsPatchInput();
-teamsPatchInput.instructions =   [
+teamsPatchInput.instructions = [
   {
     "kind": "addMembersToTeams",
     "memberIDs": [

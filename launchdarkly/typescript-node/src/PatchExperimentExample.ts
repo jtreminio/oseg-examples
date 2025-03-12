@@ -6,7 +6,7 @@ const apiCaller = new api.ExperimentsApi();
 apiCaller.setApiKey(api.ExperimentsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 const experimentPatchInput = new models.ExperimentPatchInput();
-experimentPatchInput.instructions =   [
+experimentPatchInput.instructions = [
   {
     "kind": "updateName",
     "value": "Updated experiment name"

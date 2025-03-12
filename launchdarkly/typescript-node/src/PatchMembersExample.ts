@@ -6,7 +6,7 @@ const apiCaller = new api.AccountMembersBetaApi();
 apiCaller.setApiKey(api.AccountMembersBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 const membersPatchInput = new models.MembersPatchInput();
-membersPatchInput.instructions =   [
+membersPatchInput.instructions = [
   {
     "kind": "replaceMembersRoles",
     "memberIDs": [

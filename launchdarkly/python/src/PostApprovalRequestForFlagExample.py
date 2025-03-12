@@ -11,9 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     create_flag_config_approval_request_request = models.CreateFlagConfigApprovalRequestRequest(
         description="Requesting to update targeting",
-        instructions=json.loads("""
-            []
-        """),
+        instructions=[],
         comment="optional comment",
         executionDate=1706701522000,
         operatingOnId="6297ed79dee7dc14e1f9a80c",

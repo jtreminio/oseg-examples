@@ -11,9 +11,7 @@ $config = LaunchDarkly\Client\Configuration::getDefaultConfiguration();
 $config->setApiKey("ApiKey", "YOUR_API_KEY");
 
 $flag_sempatch = (new LaunchDarkly\Client\Model\FlagSempatch())
-    ->setInstructions(json_decode(<<<'EOD'
-        []
-    EOD, true))
+    ->setInstructions([])
     ->setComment(null);
 
 try {

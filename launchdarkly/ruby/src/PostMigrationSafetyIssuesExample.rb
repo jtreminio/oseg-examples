@@ -6,10 +6,7 @@ LaunchDarklyClient.configure do |config|
 end
 
 flag_sempatch = LaunchDarklyClient::FlagSempatch.new
-flag_sempatch.instructions = JSON.parse(<<-EOD
-    []
-    EOD
-)
+flag_sempatch.instructions = []
 flag_sempatch.comment = nil
 
 begin

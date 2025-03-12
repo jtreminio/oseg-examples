@@ -22,6 +22,7 @@ const aIConfigVariationPatch = new models.AIConfigVariationPatch();
 aIConfigVariationPatch.modelConfigKey = "modelConfigKey";
 aIConfigVariationPatch.name = "name";
 aIConfigVariationPatch.published = true;
+aIConfigVariationPatch.model = {};
 aIConfigVariationPatch.messages = messages;
 
 apiCaller.patchAIConfigVariation(

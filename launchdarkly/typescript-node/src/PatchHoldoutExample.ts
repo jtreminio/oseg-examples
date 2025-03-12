@@ -6,7 +6,7 @@ const apiCaller = new api.HoldoutsBetaApi();
 apiCaller.setApiKey(api.HoldoutsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 const holdoutPatchInput = new models.HoldoutPatchInput();
-holdoutPatchInput.instructions =   [
+holdoutPatchInput.instructions = [
   {
     "kind": "updateName",
     "value": "Updated holdout name"

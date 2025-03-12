@@ -12,9 +12,7 @@ $config->setApiKey("ApiKey", "YOUR_API_KEY");
 
 $create_flag_config_approval_request_request = (new LaunchDarkly\Client\Model\CreateFlagConfigApprovalRequestRequest())
     ->setDescription("Requesting to update targeting")
-    ->setInstructions(json_decode(<<<'EOD'
-        []
-    EOD, true))
+    ->setInstructions([])
     ->setComment("optional comment")
     ->setExecutionDate(1706701522000)
     ->setOperatingOnId("6297ed79dee7dc14e1f9a80c")

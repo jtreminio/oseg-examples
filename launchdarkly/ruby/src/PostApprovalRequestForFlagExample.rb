@@ -7,10 +7,7 @@ end
 
 create_flag_config_approval_request_request = LaunchDarklyClient::CreateFlagConfigApprovalRequestRequest.new
 create_flag_config_approval_request_request.description = "Requesting to update targeting"
-create_flag_config_approval_request_request.instructions = JSON.parse(<<-EOD
-    []
-    EOD
-)
+create_flag_config_approval_request_request.instructions = []
 create_flag_config_approval_request_request.comment = "optional comment"
 create_flag_config_approval_request_request.execution_date = 1706701522000
 create_flag_config_approval_request_request.operating_on_id = "6297ed79dee7dc14e1f9a80c"

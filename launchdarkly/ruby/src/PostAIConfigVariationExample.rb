@@ -21,6 +21,7 @@ messages = [
 ai_config_variation_post = LaunchDarklyClient::AIConfigVariationPost.new
 ai_config_variation_post.key = "key"
 ai_config_variation_post.name = "name"
+ai_config_variation_post.model = {}
 ai_config_variation_post.model_config_key = "modelConfigKey"
 ai_config_variation_post.messages = messages
 

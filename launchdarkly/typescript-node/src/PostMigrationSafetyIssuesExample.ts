@@ -6,7 +6,7 @@ const apiCaller = new api.FeatureFlagsApi();
 apiCaller.setApiKey(api.FeatureFlagsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 const flagSempatch = new models.FlagSempatch();
-flagSempatch.instructions =   [];
+flagSempatch.instructions = [];
 flagSempatch.comment = undefined;
 
 apiCaller.postMigrationSafetyIssues(

@@ -37,7 +37,7 @@ capabilityConfig.auditLogEventsHook = capabilityConfigAuditLogEventsHook;
 
 const integrationConfigurationPost = new models.IntegrationConfigurationPost();
 integrationConfigurationPost.name = "Example integration configuration";
-integrationConfigurationPost.configValues =   {
+integrationConfigurationPost.configValues = {
   "optional": "an optional property",
   "required": "the required property",
   "url": "https://example.com"

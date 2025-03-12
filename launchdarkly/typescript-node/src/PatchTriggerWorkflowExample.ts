@@ -7,7 +7,7 @@ apiCaller.setApiKey(api.FlagTriggersApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 const flagTriggerInput = new models.FlagTriggerInput();
 flagTriggerInput.comment = "optional comment";
-flagTriggerInput.instructions =   [
+flagTriggerInput.instructions = [
   {
     "kind": "disableTrigger"
   }

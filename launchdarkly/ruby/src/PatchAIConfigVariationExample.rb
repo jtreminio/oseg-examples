@@ -22,6 +22,7 @@ ai_config_variation_patch = LaunchDarklyClient::AIConfigVariationPatch.new
 ai_config_variation_patch.model_config_key = "modelConfigKey"
 ai_config_variation_patch.name = "name"
 ai_config_variation_patch.published = true
+ai_config_variation_patch.model = {}
 ai_config_variation_patch.messages = messages
 
 begin

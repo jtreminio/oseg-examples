@@ -31,6 +31,8 @@ public class PostModelConfigExample
             "tags",
             "tags"
         ));
+        modelConfigPost.params(Map.of ());
+        modelConfigPost.customParams(Map.of ());
 
         try
         {

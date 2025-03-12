@@ -26,6 +26,7 @@ $messages = [
 $ai_config_variation_post = (new LaunchDarkly\Client\Model\AIConfigVariationPost())
     ->setKey("key")
     ->setName("name")
+    ->setModel([])
     ->setModelConfigKey("modelConfigKey")
     ->setMessages($messages);
 

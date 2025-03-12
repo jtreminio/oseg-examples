@@ -25,7 +25,9 @@ public class PostModelConfigExample
             tags: [
                 "tags",
                 "tags",
-            ]
+            ],
+            varParams: new Dictionary<string, object>(),
+            customParams: new Dictionary<string, object>()
         );
 
         try

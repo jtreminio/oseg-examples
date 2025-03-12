@@ -15,6 +15,8 @@ modelConfigPost.tags = [
   "tags",
   "tags",
 ];
+modelConfigPost.params = {};
+modelConfigPost.customParams = {};
 
 apiCaller.postModelConfig(
   undefined, // lDAPIVersion

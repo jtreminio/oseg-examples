@@ -6,7 +6,7 @@ const apiCaller = new api.FeatureFlagsApi();
 apiCaller.setApiKey(api.FeatureFlagsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 const patchFlagsRequest = new models.PatchFlagsRequest();
-patchFlagsRequest.instructions =   [
+patchFlagsRequest.instructions = [
   {
     "kind": "addExpireUserTargetDate",
     "userKey": "sandy",

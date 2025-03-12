@@ -20,7 +20,7 @@ const statements = [
 
 const subscriptionPost = new models.SubscriptionPost();
 subscriptionPost.name = "Example audit log subscription.";
-subscriptionPost.config =   {
+subscriptionPost.config = {
   "optional": "an optional property",
   "required": "the required property",
   "url": "https://example.com"

@@ -29,6 +29,8 @@ class PostModelConfigExample
                 "tags",
                 "tags",
             ),
+            params = Map.of (),
+            customParams = Map.of (),
         )
 
         try

@@ -15,6 +15,8 @@ model_config_post.tags = [
     "tags",
     "tags",
 ]
+model_config_post.params = {}
+model_config_post.custom_params = {}
 
 begin
     response = LaunchDarklyClient::AIConfigsBetaApi.new.post_model_config(

@@ -8,10 +8,7 @@ end
 create_approval_request_request = LaunchDarklyClient::CreateApprovalRequestRequest.new
 create_approval_request_request.resource_id = "proj/projKey:env/envKey:flag/flagKey"
 create_approval_request_request.description = "Requesting to update targeting"
-create_approval_request_request.instructions = JSON.parse(<<-EOD
-    []
-    EOD
-)
+create_approval_request_request.instructions = []
 create_approval_request_request.comment = "optional comment"
 create_approval_request_request.notify_member_ids = [
     "1234a56b7c89d012345e678f",

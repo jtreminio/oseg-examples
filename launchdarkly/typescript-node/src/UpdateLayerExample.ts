@@ -6,7 +6,7 @@ const apiCaller = new api.LayersApi();
 apiCaller.setApiKey(api.LayersApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 const layerPatchInput = new models.LayerPatchInput();
-layerPatchInput.instructions =   [
+layerPatchInput.instructions = [
   {
     "experimentKey": "checkout-button-color",
     "kind": "updateExperimentReservation",

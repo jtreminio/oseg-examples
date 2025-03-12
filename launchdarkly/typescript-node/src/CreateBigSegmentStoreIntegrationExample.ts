@@ -6,7 +6,7 @@ const apiCaller = new api.PersistentStoreIntegrationsBetaApi();
 apiCaller.setApiKey(api.PersistentStoreIntegrationsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 const integrationDeliveryConfigurationPost = new models.IntegrationDeliveryConfigurationPost();
-integrationDeliveryConfigurationPost.config =   {
+integrationDeliveryConfigurationPost.config = {
   "optional": "example value for optional formVariables property for sample-integration",
   "required": "example value for required formVariables property for sample-integration"
 };

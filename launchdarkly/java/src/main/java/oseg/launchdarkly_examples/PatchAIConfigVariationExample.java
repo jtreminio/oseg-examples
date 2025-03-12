@@ -38,6 +38,7 @@ public class PatchAIConfigVariationExample
         aiConfigVariationPatch.modelConfigKey("modelConfigKey");
         aiConfigVariationPatch.name("name");
         aiConfigVariationPatch.published(true);
+        aiConfigVariationPatch.model(Map.of ());
         aiConfigVariationPatch.messages(messages);
 
         try

@@ -27,6 +27,7 @@ $ai_config_variation_patch = (new LaunchDarkly\Client\Model\AIConfigVariationPat
     ->setModelConfigKey("modelConfigKey")
     ->setName("name")
     ->setPublished(true)
+    ->setModel([])
     ->setMessages($messages);
 
 try {

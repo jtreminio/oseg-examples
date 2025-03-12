@@ -8,7 +8,7 @@ apiCaller.setApiKey(api.FlagTriggersApiApiKeys.ApiKey, "YOUR_API_KEY");
 const triggerPost = new models.TriggerPost();
 triggerPost.integrationKey = "generic-trigger";
 triggerPost.comment = "example comment";
-triggerPost.instructions =   [
+triggerPost.instructions = [
   {
     "kind": "turnFlagOn"
   }
