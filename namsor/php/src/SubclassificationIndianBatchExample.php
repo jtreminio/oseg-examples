@@ -13,8 +13,7 @@ $config->setApiKey("X-API-KEY", "YOUR_API_KEY");
 $personal_names_1 = (new Namsor\Client\Model\FirstLastNameGeoIn())
     ->setId("e630dda5-13b3-42c5-8f1d-648aa8a21c42")
     ->setFirstName("Jannat")
-    ->setLastName("Rahmani")
-    ->setCountryIso2(null);
+    ->setLastName("Rahmani");
 
 $personal_names = [
     $personal_names_1,
