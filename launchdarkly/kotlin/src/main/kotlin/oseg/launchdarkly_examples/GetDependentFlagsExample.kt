@@ -17,7 +17,7 @@ class GetDependentFlagsExample
 {
     fun getDependentFlags()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         try
         {

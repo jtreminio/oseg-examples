@@ -19,7 +19,7 @@ public class CreateMetricGroupExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("YOUR_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("ApiKey")).setApiKey("YOUR_API_KEY");
 
         var metrics1 = new MetricInMetricGroupInput();
         metrics1.key("metric-key-123abc");

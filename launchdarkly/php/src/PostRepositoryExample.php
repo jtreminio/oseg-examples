@@ -8,7 +8,7 @@ use SplFileObject;
 use LaunchDarkly;
 
 $config = LaunchDarkly\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("ApiKey", "YOUR_API_KEY");
+$config->setApiKey("Authorization", "YOUR_API_KEY");
 
 $repository_post = (new LaunchDarkly\Client\Model\RepositoryPost())
     ->setName("LaunchDarkly-Docs")

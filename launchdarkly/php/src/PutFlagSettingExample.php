@@ -8,7 +8,7 @@ use SplFileObject;
 use LaunchDarkly;
 
 $config = LaunchDarkly\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("ApiKey", "YOUR_API_KEY");
+$config->setApiKey("Authorization", "YOUR_API_KEY");
 
 $value_put = (new LaunchDarkly\Client\Model\ValuePut())
     ->setComment("make sure this context experiences a specific variation");

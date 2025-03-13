@@ -19,7 +19,7 @@ public class CorridorBatchExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("YOUR_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("api_key")).setApiKey("YOUR_API_KEY");
 
         var corridorFromTo1FirstLastNameGeoFrom = new FirstLastNameGeoIn();
         corridorFromTo1FirstLastNameGeoFrom.id("e630dda5-13b3-42c5-8f1d-648aa8a21c42");

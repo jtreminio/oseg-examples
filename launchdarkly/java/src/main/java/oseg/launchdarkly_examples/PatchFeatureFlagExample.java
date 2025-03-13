@@ -19,7 +19,7 @@ public class PatchFeatureFlagExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("YOUR_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("ApiKey")).setApiKey("YOUR_API_KEY");
 
         var patch1 = new PatchOperation();
         patch1.op("replace");

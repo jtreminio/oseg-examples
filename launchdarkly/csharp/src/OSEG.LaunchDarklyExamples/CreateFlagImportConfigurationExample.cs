@@ -14,7 +14,7 @@ public class CreateFlagImportConfigurationExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["ApiKey"] = "YOUR_API_KEY"};
+        config.ApiKey.Add("Authorization", "YOUR_API_KEY");
 
         var flagImportConfigurationPost = new FlagImportConfigurationPost(
             config: JsonSerializer.Deserialize<Dictionary<string, object>>("""

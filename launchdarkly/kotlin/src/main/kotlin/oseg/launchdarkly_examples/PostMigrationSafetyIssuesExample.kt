@@ -17,7 +17,7 @@ class PostMigrationSafetyIssuesExample
 {
     fun postMigrationSafetyIssues()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val flagSempatch = FlagSempatch(
             instructions = listOf (),

@@ -14,7 +14,7 @@ public class CountryFnLnBatchExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["api_key"] = "YOUR_API_KEY"};
+        config.ApiKey.Add("X-API-KEY", "YOUR_API_KEY");
 
         var personalNames1 = new FirstLastNameIn(
             id: "9a3283bd-4efb-4b7b-906c-e3f3c03ea6a4",

@@ -8,7 +8,7 @@ use SplFileObject;
 use Namsor;
 
 $config = Namsor\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("api_key", "YOUR_API_KEY");
+$config->setApiKey("X-API-KEY", "YOUR_API_KEY");
 
 try {
     $response = (new Namsor\Client\Api\AdminApi(config: $config))->anonymize1(

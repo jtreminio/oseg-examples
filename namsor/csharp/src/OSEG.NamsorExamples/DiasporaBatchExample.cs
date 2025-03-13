@@ -14,7 +14,7 @@ public class DiasporaBatchExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["api_key"] = "YOUR_API_KEY"};
+        config.ApiKey.Add("X-API-KEY", "YOUR_API_KEY");
 
         var personalNames1 = new FirstLastNameGeoIn(
             id: "0d7d6417-0bbb-4205-951d-b3473f605b56",

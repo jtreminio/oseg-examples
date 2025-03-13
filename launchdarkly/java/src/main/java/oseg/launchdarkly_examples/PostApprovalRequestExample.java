@@ -19,7 +19,7 @@ public class PostApprovalRequestExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("YOUR_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("ApiKey")).setApiKey("YOUR_API_KEY");
 
         var createApprovalRequestRequest = new CreateApprovalRequestRequest();
         createApprovalRequestRequest.resourceId("proj/projKey:env/envKey:flag/flagKey");

@@ -17,7 +17,7 @@ class ApiKeyInfoExample
 {
     fun apiKeyInfo()
     {
-        ApiClient.apiKey["api_key"] = "YOUR_API_KEY"
+        ApiClient.apiKey["X-API-KEY"] = "YOUR_API_KEY"
 
         try
         {

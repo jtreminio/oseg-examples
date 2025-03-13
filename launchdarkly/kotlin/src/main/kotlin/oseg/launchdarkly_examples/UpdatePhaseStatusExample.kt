@@ -17,7 +17,7 @@ class UpdatePhaseStatusExample
 {
     fun updatePhaseStatus()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val audiences1ReleaseGuardianConfiguration = ReleaseGuardianConfigurationInput(
             monitoringWindowMilliseconds = 60000,

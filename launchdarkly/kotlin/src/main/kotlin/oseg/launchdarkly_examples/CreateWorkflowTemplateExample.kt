@@ -17,7 +17,7 @@ class CreateWorkflowTemplateExample
 {
     fun createWorkflowTemplate()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val stages1Action = ActionInput()
         )

@@ -8,7 +8,7 @@ use SplFileObject;
 use LaunchDarkly;
 
 $config = LaunchDarkly\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("ApiKey", "YOUR_API_KEY");
+$config->setApiKey("Authorization", "YOUR_API_KEY");
 
 $ai_config_patch = (new LaunchDarkly\Client\Model\AIConfigPatch())
     ->setDescription("description")

@@ -17,7 +17,7 @@ class PostTeamExample
 {
     fun postTeam()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val teamPostInput = TeamPostInput(
             key = "team-key-123abc",

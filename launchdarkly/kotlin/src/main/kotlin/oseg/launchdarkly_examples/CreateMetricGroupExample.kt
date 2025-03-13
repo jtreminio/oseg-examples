@@ -17,7 +17,7 @@ class CreateMetricGroupExample
 {
     fun createMetricGroup()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val metrics1 = MetricInMetricGroupInput(
             key = "metric-key-123abc",

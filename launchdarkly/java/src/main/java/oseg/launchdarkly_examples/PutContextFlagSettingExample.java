@@ -19,7 +19,7 @@ public class PutContextFlagSettingExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("YOUR_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("ApiKey")).setApiKey("YOUR_API_KEY");
 
         var valuePut = new ValuePut();
         valuePut.comment("make sure this context experiences a specific variation");

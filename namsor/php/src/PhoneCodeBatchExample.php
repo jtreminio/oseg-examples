@@ -8,7 +8,7 @@ use SplFileObject;
 use Namsor;
 
 $config = Namsor\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("api_key", "YOUR_API_KEY");
+$config->setApiKey("X-API-KEY", "YOUR_API_KEY");
 
 $personal_names_with_phone_numbers_1 = (new Namsor\Client\Model\FirstLastNamePhoneNumberIn())
     ->setId("e630dda5-13b3-42c5-8f1d-648aa8a21c42")

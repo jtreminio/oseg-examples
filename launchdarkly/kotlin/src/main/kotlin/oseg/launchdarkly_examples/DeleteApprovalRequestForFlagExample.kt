@@ -17,7 +17,7 @@ class DeleteApprovalRequestForFlagExample
 {
     fun deleteApprovalRequestForFlag()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         try
         {

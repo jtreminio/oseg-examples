@@ -17,7 +17,7 @@ class PostCustomRoleExample
 {
     fun postCustomRole()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val policy1 = StatementPost(
             effect = StatementPost.Effect.allow,

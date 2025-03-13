@@ -17,7 +17,7 @@ class GenderFullBatchExample
 {
     fun genderFullBatch()
     {
-        ApiClient.apiKey["api_key"] = "YOUR_API_KEY"
+        ApiClient.apiKey["X-API-KEY"] = "YOUR_API_KEY"
 
         val personalNames1 = PersonalNameIn(
             id = "0f472330-11a9-49ad-a0f5-bcac90a3f6bf",

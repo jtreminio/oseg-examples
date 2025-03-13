@@ -17,7 +17,7 @@ class CreateFlagImportConfigurationExample
 {
     fun createFlagImportConfiguration()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val flagImportConfigurationPost = FlagImportConfigurationPost(
             config = Serializer.moshi.adapter<Map<String, Any>>().fromJson("""

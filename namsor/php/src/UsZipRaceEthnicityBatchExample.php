@@ -8,7 +8,7 @@ use SplFileObject;
 use Namsor;
 
 $config = Namsor\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("api_key", "YOUR_API_KEY");
+$config->setApiKey("X-API-KEY", "YOUR_API_KEY");
 
 $personal_names_1 = (new Namsor\Client\Model\FirstLastNameGeoZippedIn())
     ->setId("728767f9-c5b2-4ed3-a071-828077f16552")

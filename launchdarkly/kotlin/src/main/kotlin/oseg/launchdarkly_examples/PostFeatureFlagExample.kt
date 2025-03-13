@@ -17,7 +17,7 @@ class PostFeatureFlagExample
 {
     fun postFeatureFlag()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val clientSideAvailability = ClientSideAvailabilityPost(
             usingEnvironmentId = true,

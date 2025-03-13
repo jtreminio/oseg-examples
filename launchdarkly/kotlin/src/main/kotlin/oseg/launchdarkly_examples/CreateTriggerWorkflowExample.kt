@@ -17,7 +17,7 @@ class CreateTriggerWorkflowExample
 {
     fun createTriggerWorkflow()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val triggerPost = TriggerPost(
             integrationKey = "generic-trigger",

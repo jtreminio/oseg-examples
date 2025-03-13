@@ -2,7 +2,7 @@ require "json"
 require "launchdarkly_client"
 
 LaunchDarklyClient.configure do |config|
-    config.api_key["ApiKey"] = "YOUR_API_KEY"
+    config.api_key["Authorization"] = "YOUR_API_KEY"
 end
 
 phases_1_audiences_1_configuration_release_guardian_configuration = LaunchDarklyClient::ReleaseGuardianConfiguration.new

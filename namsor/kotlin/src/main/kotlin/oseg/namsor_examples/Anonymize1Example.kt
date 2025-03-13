@@ -17,7 +17,7 @@ class Anonymize1Example
 {
     fun anonymize1()
     {
-        ApiClient.apiKey["api_key"] = "YOUR_API_KEY"
+        ApiClient.apiKey["X-API-KEY"] = "YOUR_API_KEY"
 
         try
         {

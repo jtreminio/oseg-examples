@@ -17,7 +17,7 @@ class PatchExperimentExample
 {
     fun patchExperiment()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val experimentPatchInput = ExperimentPatchInput(
             instructions = Serializer.moshi.adapter<List<Map<String, Any>>>().fromJson("""

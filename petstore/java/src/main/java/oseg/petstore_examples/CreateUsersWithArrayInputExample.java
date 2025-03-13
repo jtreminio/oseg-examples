@@ -19,7 +19,7 @@ public class CreateUsersWithArrayInputExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("YOUR_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("api_key")).setApiKey("YOUR_API_KEY");
 
         var user1 = new User();
         user1.id(12345L);

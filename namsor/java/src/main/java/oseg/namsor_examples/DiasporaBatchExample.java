@@ -19,7 +19,7 @@ public class DiasporaBatchExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("YOUR_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("api_key")).setApiKey("YOUR_API_KEY");
 
         var personalNames1 = new FirstLastNameGeoIn();
         personalNames1.id("0d7d6417-0bbb-4205-951d-b3473f605b56");

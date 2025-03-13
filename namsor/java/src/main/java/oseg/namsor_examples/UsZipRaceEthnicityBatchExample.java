@@ -19,7 +19,7 @@ public class UsZipRaceEthnicityBatchExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("YOUR_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("api_key")).setApiKey("YOUR_API_KEY");
 
         var personalNames1 = new FirstLastNameGeoZippedIn();
         personalNames1.id("728767f9-c5b2-4ed3-a071-828077f16552");

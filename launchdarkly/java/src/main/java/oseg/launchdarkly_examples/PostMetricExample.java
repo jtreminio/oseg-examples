@@ -19,7 +19,7 @@ public class PostMetricExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("YOUR_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("ApiKey")).setApiKey("YOUR_API_KEY");
 
         var metricPost = new MetricPost();
         metricPost.key("metric-key-123abc");

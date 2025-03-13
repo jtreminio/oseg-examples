@@ -17,7 +17,7 @@ class PatchTeamExample
 {
     fun patchTeam()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val teamPatchInput = TeamPatchInput(
             instructions = Serializer.moshi.adapter<List<Map<String, Any>>>().fromJson("""

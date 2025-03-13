@@ -17,7 +17,7 @@ class PatchExpiringTargetsExample
 {
     fun patchExpiringTargets()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val patchFlagsRequest = PatchFlagsRequest(
             instructions = Serializer.moshi.adapter<List<Map<String, Any>>>().fromJson("""

@@ -19,7 +19,7 @@ public class PostFlagConfigScheduledChangesExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("YOUR_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("ApiKey")).setApiKey("YOUR_API_KEY");
 
         var postFlagScheduledChangesInput = new PostFlagScheduledChangesInput();
         postFlagScheduledChangesInput.executionDate(1718467200000L);

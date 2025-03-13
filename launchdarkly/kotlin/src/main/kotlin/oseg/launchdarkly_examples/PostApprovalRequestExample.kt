@@ -17,7 +17,7 @@ class PostApprovalRequestExample
 {
     fun postApprovalRequest()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val createApprovalRequestRequest = CreateApprovalRequestRequest(
             resourceId = "proj/projKey:env/envKey:flag/flagKey",

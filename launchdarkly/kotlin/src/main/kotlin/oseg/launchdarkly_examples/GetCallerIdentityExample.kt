@@ -17,7 +17,7 @@ class GetCallerIdentityExample
 {
     fun getCallerIdentity()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         try
         {

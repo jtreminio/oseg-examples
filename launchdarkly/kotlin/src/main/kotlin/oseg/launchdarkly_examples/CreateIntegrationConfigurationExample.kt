@@ -17,7 +17,7 @@ class CreateIntegrationConfigurationExample
 {
     fun createIntegrationConfiguration()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val capabilityConfigAuditLogEventsHookStatements1 = StatementPost(
             effect = StatementPost.Effect.allow,

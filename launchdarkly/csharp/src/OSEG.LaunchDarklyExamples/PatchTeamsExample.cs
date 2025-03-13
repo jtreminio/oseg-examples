@@ -14,7 +14,7 @@ public class PatchTeamsExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["ApiKey"] = "YOUR_API_KEY"};
+        config.ApiKey.Add("Authorization", "YOUR_API_KEY");
 
         var teamsPatchInput = new TeamsPatchInput(
             instructions: JsonSerializer.Deserialize<List<Dictionary<string, object>>>("""

@@ -15,7 +15,7 @@ public class PlaceOrderExample
     {
         var config = new Configuration();
         config.AccessToken = "YOUR_ACCESS_TOKEN";
-        // config.ApiKey = new Dictionary<string, string> {["api_key"] = "YOUR_API_KEY"};
+        // config.ApiKey.Add("api_key", "YOUR_API_KEY");
 
         var order = new Order(
             id: 12345,

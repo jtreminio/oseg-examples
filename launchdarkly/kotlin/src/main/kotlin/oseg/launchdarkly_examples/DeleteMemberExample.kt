@@ -17,7 +17,7 @@ class DeleteMemberExample
 {
     fun deleteMember()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         try
         {

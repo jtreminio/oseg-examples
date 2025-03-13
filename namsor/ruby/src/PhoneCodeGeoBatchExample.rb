@@ -2,7 +2,7 @@ require "json"
 require "namsor_client"
 
 NamsorClient.configure do |config|
-    config.api_key["api_key"] = "YOUR_API_KEY"
+    config.api_key["X-API-KEY"] = "YOUR_API_KEY"
 end
 
 personal_names_with_phone_numbers_1 = NamsorClient::FirstLastNamePhoneNumberGeoIn.new

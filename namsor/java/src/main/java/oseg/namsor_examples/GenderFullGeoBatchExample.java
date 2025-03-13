@@ -19,7 +19,7 @@ public class GenderFullGeoBatchExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("YOUR_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("api_key")).setApiKey("YOUR_API_KEY");
 
         var personalNames1 = new PersonalNameGeoIn();
         personalNames1.id("3a2d203a-a6a4-42f9-acd1-1b5c56c7d39f");

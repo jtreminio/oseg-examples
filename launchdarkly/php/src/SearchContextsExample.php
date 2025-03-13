@@ -8,7 +8,7 @@ use SplFileObject;
 use LaunchDarkly;
 
 $config = LaunchDarkly\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("ApiKey", "YOUR_API_KEY");
+$config->setApiKey("Authorization", "YOUR_API_KEY");
 
 $context_search = (new LaunchDarkly\Client\Model\ContextSearch())
     ->setFilter("*.name startsWith Jo,kind anyOf [\"user\",\"organization\"]")

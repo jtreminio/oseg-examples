@@ -19,7 +19,7 @@ public class PostExtinctionExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("YOUR_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("ApiKey")).setApiKey("YOUR_API_KEY");
 
         var extinction1 = new Extinction();
         extinction1.revision("a94a8fe5ccb19ba61c4c0873d391e987982fbbd3");

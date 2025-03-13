@@ -8,7 +8,7 @@ use SplFileObject;
 use LaunchDarkly;
 
 $config = LaunchDarkly\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("ApiKey", "YOUR_API_KEY");
+$config->setApiKey("Authorization", "YOUR_API_KEY");
 
 $patch_flags_request = (new LaunchDarkly\Client\Model\PatchFlagsRequest())
     ->setInstructions(json_decode(<<<'EOD'

@@ -17,7 +17,7 @@ class GetWebhookExample
 {
     fun getWebhook()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         try
         {

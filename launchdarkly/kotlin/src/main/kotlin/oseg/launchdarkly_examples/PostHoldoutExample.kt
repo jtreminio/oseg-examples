@@ -17,7 +17,7 @@ class PostHoldoutExample
 {
     fun postHoldout()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val metrics1 = MetricInput(
             key = "metric-key-123abc",

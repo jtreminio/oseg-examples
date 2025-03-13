@@ -17,7 +17,7 @@ class GetOpenapiSpecExample
 {
     fun getOpenapiSpec()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         try
         {

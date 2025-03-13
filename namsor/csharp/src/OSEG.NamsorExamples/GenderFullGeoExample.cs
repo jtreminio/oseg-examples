@@ -14,7 +14,7 @@ public class GenderFullGeoExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["api_key"] = "YOUR_API_KEY"};
+        config.ApiKey.Add("X-API-KEY", "YOUR_API_KEY");
 
         try
         {

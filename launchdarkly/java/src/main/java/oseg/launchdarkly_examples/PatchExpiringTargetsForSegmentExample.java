@@ -19,7 +19,7 @@ public class PatchExpiringTargetsForSegmentExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("YOUR_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("ApiKey")).setApiKey("YOUR_API_KEY");
 
         var instructions1 = new PatchSegmentExpiringTargetInstruction();
         instructions1.kind(PatchSegmentExpiringTargetInstruction.KindEnum.UPDATE_EXPIRING_TARGET);

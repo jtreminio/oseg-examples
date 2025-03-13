@@ -17,7 +17,7 @@ class PatchMembersExample
 {
     fun patchMembers()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val membersPatchInput = MembersPatchInput(
             instructions = Serializer.moshi.adapter<List<Map<String, Any>>>().fromJson("""

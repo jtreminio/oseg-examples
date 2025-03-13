@@ -17,7 +17,7 @@ class CreateFlagLinkExample
 {
     fun createFlagLink()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val flagLinkPost = FlagLinkPost(
             key = "flag-link-key-123abc",

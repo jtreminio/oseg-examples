@@ -17,7 +17,7 @@ class PostFlagCopyConfigApprovalRequestExample
 {
     fun postFlagCopyConfigApprovalRequest()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val source = SourceFlag(
             key = "environment-key-123abc",

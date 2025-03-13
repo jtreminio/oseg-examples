@@ -17,7 +17,7 @@ class PatchTriggerWorkflowExample
 {
     fun patchTriggerWorkflow()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val flagTriggerInput = FlagTriggerInput(
             comment = "optional comment",
