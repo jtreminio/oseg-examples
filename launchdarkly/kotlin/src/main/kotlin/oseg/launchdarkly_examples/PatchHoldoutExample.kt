@@ -17,7 +17,7 @@ class PatchHoldoutExample
 {
     fun patchHoldout()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val holdoutPatchInput = HoldoutPatchInput(
             instructions = Serializer.moshi.adapter<List<Map<String, Any>>>().fromJson("""

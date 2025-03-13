@@ -17,7 +17,7 @@ class CreateExperimentExample
 {
     fun createExperiment()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val iterationTreatments1Parameters1 = TreatmentParameterInput(
             flagKey = "example-flag-for-experiment",

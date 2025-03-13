@@ -17,7 +17,7 @@ class DeleteEnvironmentExample
 {
     fun deleteEnvironment()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         try
         {

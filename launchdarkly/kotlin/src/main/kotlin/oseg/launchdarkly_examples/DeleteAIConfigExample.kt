@@ -17,7 +17,7 @@ class DeleteAIConfigExample
 {
     fun deleteAIConfig()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         try
         {

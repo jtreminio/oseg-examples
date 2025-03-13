@@ -17,7 +17,7 @@ class CreateOAuth2ClientExample
 {
     fun createOAuth2Client()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val oauthClientPost = OauthClientPost(
             name = null,

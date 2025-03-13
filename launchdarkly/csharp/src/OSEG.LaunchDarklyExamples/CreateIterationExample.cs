@@ -14,7 +14,7 @@ public class CreateIterationExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["ApiKey"] = "YOUR_API_KEY"};
+        config.ApiKey.Add("Authorization", "YOUR_API_KEY");
 
         var treatments1Parameters1 = new TreatmentParameterInput(
             flagKey: "example-flag-for-experiment",

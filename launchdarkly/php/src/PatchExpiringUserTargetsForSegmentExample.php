@@ -8,7 +8,7 @@ use SplFileObject;
 use LaunchDarkly;
 
 $config = LaunchDarkly\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("ApiKey", "YOUR_API_KEY");
+$config->setApiKey("Authorization", "YOUR_API_KEY");
 
 $instructions_1 = (new LaunchDarkly\Client\Model\PatchSegmentInstruction())
     ->setKind(LaunchDarkly\Client\Model\PatchSegmentInstruction::KIND_ADD_EXPIRE_USER_TARGET_DATE)

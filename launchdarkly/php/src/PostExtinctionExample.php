@@ -8,7 +8,7 @@ use SplFileObject;
 use LaunchDarkly;
 
 $config = LaunchDarkly\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("ApiKey", "YOUR_API_KEY");
+$config->setApiKey("Authorization", "YOUR_API_KEY");
 
 $extinction_1 = (new LaunchDarkly\Client\Model\Extinction())
     ->setRevision("a94a8fe5ccb19ba61c4c0873d391e987982fbbd3")

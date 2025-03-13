@@ -17,7 +17,7 @@ class PutFlagDefaultsByProjectExample
 {
     fun putFlagDefaultsByProject()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val booleanDefaults = BooleanFlagDefaults(
             trueDisplayName = "True",

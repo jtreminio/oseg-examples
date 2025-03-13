@@ -17,7 +17,7 @@ class GetContextsExample
 {
     fun getContexts()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         try
         {

@@ -17,7 +17,7 @@ class CountryBatchExample
 {
     fun countryBatch()
     {
-        ApiClient.apiKey["api_key"] = "YOUR_API_KEY"
+        ApiClient.apiKey["X-API-KEY"] = "YOUR_API_KEY"
 
         val personalNames1 = PersonalNameIn(
             id = "9a3283bd-4efb-4b7b-906c-e3f3c03ea6a4",

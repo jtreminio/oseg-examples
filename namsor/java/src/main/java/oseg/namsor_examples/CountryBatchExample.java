@@ -19,7 +19,7 @@ public class CountryBatchExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("YOUR_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("api_key")).setApiKey("YOUR_API_KEY");
 
         var personalNames1 = new PersonalNameIn();
         personalNames1.id("9a3283bd-4efb-4b7b-906c-e3f3c03ea6a4");

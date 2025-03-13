@@ -17,7 +17,7 @@ class GetDestinationExample
 {
     fun getDestination()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         try
         {

@@ -17,7 +17,7 @@ class PatchFlagConfigScheduledChangeExample
 {
     fun patchFlagConfigScheduledChange()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val flagScheduledChangesInput = FlagScheduledChangesInput(
             instructions = Serializer.moshi.adapter<List<Map<String, Any>>>().fromJson("""

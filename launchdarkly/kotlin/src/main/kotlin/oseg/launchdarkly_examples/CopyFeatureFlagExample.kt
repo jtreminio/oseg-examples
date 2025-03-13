@@ -17,7 +17,7 @@ class CopyFeatureFlagExample
 {
     fun copyFeatureFlag()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val source = FlagCopyConfigEnvironment(
             key = "source-env-key-123abc",

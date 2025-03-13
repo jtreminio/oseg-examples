@@ -17,7 +17,7 @@ class PutBranchExample
 {
     fun putBranch()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val references1Hunks1 = HunkRep(
             startingLineNumber = 45,

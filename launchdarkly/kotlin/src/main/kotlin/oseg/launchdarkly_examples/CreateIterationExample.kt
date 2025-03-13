@@ -17,7 +17,7 @@ class CreateIterationExample
 {
     fun createIteration()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val treatments1Parameters1 = TreatmentParameterInput(
             flagKey = "example-flag-for-experiment",

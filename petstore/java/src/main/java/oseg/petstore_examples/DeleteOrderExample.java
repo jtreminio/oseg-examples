@@ -19,8 +19,8 @@ public class DeleteOrderExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setAccessToken("YOUR_ACCESS_TOKEN");
-        // config.setApiKey("YOUR_API_KEY");
+        ((HttpBearerAuth) config.getAuthentication("petstore_auth")).setBearerToken("YOUR_ACCESS_TOKEN");
+        // ((ApiKeyAuth) config.getAuthentication("api_key")).setApiKey("YOUR_API_KEY");
 
         try
         {

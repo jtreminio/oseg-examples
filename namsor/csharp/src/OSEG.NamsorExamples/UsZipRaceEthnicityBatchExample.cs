@@ -14,7 +14,7 @@ public class UsZipRaceEthnicityBatchExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["api_key"] = "YOUR_API_KEY"};
+        config.ApiKey.Add("X-API-KEY", "YOUR_API_KEY");
 
         var personalNames1 = new FirstLastNameGeoZippedIn(
             id: "728767f9-c5b2-4ed3-a071-828077f16552",

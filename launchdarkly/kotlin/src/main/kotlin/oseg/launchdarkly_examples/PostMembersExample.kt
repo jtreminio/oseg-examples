@@ -17,7 +17,7 @@ class PostMembersExample
 {
     fun postMembers()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val newMemberForm1 = NewMemberForm(
             email = "sandy@acme.com",

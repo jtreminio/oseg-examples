@@ -17,7 +17,7 @@ class UpdateLayerExample
 {
     fun updateLayer()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val layerPatchInput = LayerPatchInput(
             instructions = Serializer.moshi.adapter<List<Map<String, Any>>>().fromJson("""

@@ -17,7 +17,7 @@ class PostMemberTeamsExample
 {
     fun postMemberTeams()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val memberTeamsPostInput = MemberTeamsPostInput(
             teamKeys = listOf (

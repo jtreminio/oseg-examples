@@ -2,7 +2,7 @@ require "json"
 require "launchdarkly_client"
 
 LaunchDarklyClient.configure do |config|
-    config.api_key["ApiKey"] = "YOUR_API_KEY"
+    config.api_key["Authorization"] = "YOUR_API_KEY"
 end
 
 capability_config_audit_log_events_hook_statements_1 = LaunchDarklyClient::StatementPost.new

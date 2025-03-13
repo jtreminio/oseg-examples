@@ -2,6 +2,7 @@ generatorName: csharp
 additionalProperties:
   packageName: App.Namsor
   packageGuid: "{7CBB1CA9-46F9-4BBF-9117-04786F057EF3}"
+  library: restsharp
   oseg.namespace: OSEG.NamsorExamples
   oseg.packageGuid: "{2927C4F7-9987-4601-917B-E16574E9D8E9}"
   oseg.security.api_key.api_key: YOUR_API_KEY

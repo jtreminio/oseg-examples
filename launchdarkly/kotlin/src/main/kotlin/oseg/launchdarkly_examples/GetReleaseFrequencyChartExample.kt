@@ -17,7 +17,7 @@ class GetReleaseFrequencyChartExample
 {
     fun getReleaseFrequencyChart()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         try
         {

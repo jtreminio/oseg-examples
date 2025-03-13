@@ -8,7 +8,7 @@ use SplFileObject;
 use LaunchDarkly;
 
 $config = LaunchDarkly\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("ApiKey", "YOUR_API_KEY");
+$config->setApiKey("Authorization", "YOUR_API_KEY");
 
 $phases_1_audiences_1_configuration_release_guardian_configuration = (new LaunchDarkly\Client\Model\ReleaseGuardianConfiguration())
     ->setMonitoringWindowMilliseconds(60000)

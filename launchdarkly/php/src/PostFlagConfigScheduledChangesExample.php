@@ -8,7 +8,7 @@ use SplFileObject;
 use LaunchDarkly;
 
 $config = LaunchDarkly\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("ApiKey", "YOUR_API_KEY");
+$config->setApiKey("Authorization", "YOUR_API_KEY");
 
 $post_flag_scheduled_changes_input = (new LaunchDarkly\Client\Model\PostFlagScheduledChangesInput())
     ->setExecutionDate(1718467200000)

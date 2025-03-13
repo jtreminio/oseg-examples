@@ -17,7 +17,7 @@ class PostFlagConfigScheduledChangesExample
 {
     fun postFlagConfigScheduledChanges()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val postFlagScheduledChangesInput = PostFlagScheduledChangesInput(
             executionDate = 1718467200000,

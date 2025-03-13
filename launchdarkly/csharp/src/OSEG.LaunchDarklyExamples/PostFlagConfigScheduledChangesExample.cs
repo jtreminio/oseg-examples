@@ -14,7 +14,7 @@ public class PostFlagConfigScheduledChangesExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["ApiKey"] = "YOUR_API_KEY"};
+        config.ApiKey.Add("Authorization", "YOUR_API_KEY");
 
         var postFlagScheduledChangesInput = new PostFlagScheduledChangesInput(
             executionDate: 1718467200000,

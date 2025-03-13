@@ -19,7 +19,7 @@ public class GenderFullBatchExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("YOUR_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("api_key")).setApiKey("YOUR_API_KEY");
 
         var personalNames1 = new PersonalNameIn();
         personalNames1.id("0f472330-11a9-49ad-a0f5-bcac90a3f6bf");

@@ -8,7 +8,7 @@ use SplFileObject;
 use LaunchDarkly;
 
 $config = LaunchDarkly\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("ApiKey", "YOUR_API_KEY");
+$config->setApiKey("Authorization", "YOUR_API_KEY");
 
 $create_approval_request_request = (new LaunchDarkly\Client\Model\CreateApprovalRequestRequest())
     ->setResourceId("proj/projKey:env/envKey:flag/flagKey")

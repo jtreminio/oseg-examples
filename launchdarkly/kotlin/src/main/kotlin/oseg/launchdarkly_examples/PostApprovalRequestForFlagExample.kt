@@ -17,7 +17,7 @@ class PostApprovalRequestForFlagExample
 {
     fun postApprovalRequestForFlag()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val createFlagConfigApprovalRequestRequest = CreateFlagConfigApprovalRequestRequest(
             description = "Requesting to update targeting",

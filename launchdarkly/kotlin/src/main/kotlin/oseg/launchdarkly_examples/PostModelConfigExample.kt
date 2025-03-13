@@ -17,7 +17,7 @@ class PostModelConfigExample
 {
     fun postModelConfig()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val modelConfigPost = ModelConfigPost(
             id = "id",

@@ -14,7 +14,7 @@ public class PostTeamExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["ApiKey"] = "YOUR_API_KEY"};
+        config.ApiKey.Add("Authorization", "YOUR_API_KEY");
 
         var teamPostInput = new TeamPostInput(
             key: "team-key-123abc",

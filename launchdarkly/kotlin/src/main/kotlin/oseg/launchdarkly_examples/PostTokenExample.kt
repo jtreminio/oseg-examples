@@ -17,7 +17,7 @@ class PostTokenExample
 {
     fun postToken()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val accessTokenPost = AccessTokenPost(
             role = AccessTokenPost.Role.reader,

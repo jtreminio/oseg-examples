@@ -17,7 +17,7 @@ class CreateDeploymentEventExample
 {
     fun createDeploymentEvent()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val postDeploymentEventInput = PostDeploymentEventInput(
             projectKey = "default",

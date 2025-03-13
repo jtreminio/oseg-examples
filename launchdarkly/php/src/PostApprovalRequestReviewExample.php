@@ -8,7 +8,7 @@ use SplFileObject;
 use LaunchDarkly;
 
 $config = LaunchDarkly\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("ApiKey", "YOUR_API_KEY");
+$config->setApiKey("Authorization", "YOUR_API_KEY");
 
 $post_approval_request_review_request = (new LaunchDarkly\Client\Model\PostApprovalRequestReviewRequest())
     ->setKind(LaunchDarkly\Client\Model\PostApprovalRequestReviewRequest::KIND_APPROVE)

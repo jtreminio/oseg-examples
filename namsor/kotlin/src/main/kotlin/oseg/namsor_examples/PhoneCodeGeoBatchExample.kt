@@ -17,7 +17,7 @@ class PhoneCodeGeoBatchExample
 {
     fun phoneCodeGeoBatch()
     {
-        ApiClient.apiKey["api_key"] = "YOUR_API_KEY"
+        ApiClient.apiKey["X-API-KEY"] = "YOUR_API_KEY"
 
         val personalNamesWithPhoneNumbers1 = FirstLastNamePhoneNumberGeoIn(
             id = "e630dda5-13b3-42c5-8f1d-648aa8a21c42",

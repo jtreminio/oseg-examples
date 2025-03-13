@@ -14,7 +14,7 @@ public class PostDestinationExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["ApiKey"] = "YOUR_API_KEY"};
+        config.ApiKey.Add("Authorization", "YOUR_API_KEY");
 
         var destinationPost = new DestinationPost(
             kind: DestinationPost.KindEnum.GooglePubsub

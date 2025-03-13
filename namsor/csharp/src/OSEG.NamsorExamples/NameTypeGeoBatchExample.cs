@@ -14,7 +14,7 @@ public class NameTypeGeoBatchExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["api_key"] = "YOUR_API_KEY"};
+        config.ApiKey.Add("X-API-KEY", "YOUR_API_KEY");
 
         var properNouns1 = new NameGeoIn(
             id: "e630dda5-13b3-42c5-8f1d-648aa8a21c42",

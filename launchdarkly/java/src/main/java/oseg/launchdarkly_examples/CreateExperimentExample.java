@@ -19,7 +19,7 @@ public class CreateExperimentExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("YOUR_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("ApiKey")).setApiKey("YOUR_API_KEY");
 
         var iterationTreatments1Parameters1 = new TreatmentParameterInput();
         iterationTreatments1Parameters1.flagKey("example-flag-for-experiment");

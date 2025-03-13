@@ -17,7 +17,7 @@ class PostExtinctionExample
 {
     fun postExtinction()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val extinction1 = Extinction(
             revision = "a94a8fe5ccb19ba61c4c0873d391e987982fbbd3",

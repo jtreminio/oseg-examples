@@ -17,7 +17,7 @@ class DeleteApprovalRequestExample
 {
     fun deleteApprovalRequest()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         try
         {

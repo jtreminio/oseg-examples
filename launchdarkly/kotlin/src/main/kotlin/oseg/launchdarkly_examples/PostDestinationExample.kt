@@ -17,7 +17,7 @@ class PostDestinationExample
 {
     fun postDestination()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val destinationPost = DestinationPost(
             kind = DestinationPost.Kind.googleMinusPubsub,

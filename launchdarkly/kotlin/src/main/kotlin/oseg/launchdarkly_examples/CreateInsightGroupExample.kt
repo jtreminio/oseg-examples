@@ -17,7 +17,7 @@ class CreateInsightGroupExample
 {
     fun createInsightGroup()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val postInsightGroupParams = PostInsightGroupParams(
             name = "Production - All Apps",

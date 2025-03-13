@@ -17,7 +17,7 @@ class PostEnvironmentExample
 {
     fun postEnvironment()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val environmentPost = EnvironmentPost(
             name = "My Environment",

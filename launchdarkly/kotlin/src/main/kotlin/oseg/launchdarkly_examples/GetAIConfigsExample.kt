@@ -17,7 +17,7 @@ class GetAIConfigsExample
 {
     fun getAIConfigs()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         try
         {

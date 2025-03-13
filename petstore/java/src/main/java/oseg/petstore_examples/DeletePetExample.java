@@ -19,7 +19,7 @@ public class DeletePetExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setAccessToken("YOUR_ACCESS_TOKEN");
+        ((HttpBearerAuth) config.getAuthentication("petstore_auth")).setBearerToken("YOUR_ACCESS_TOKEN");
 
         try
         {

@@ -2,7 +2,7 @@ require "json"
 require "launchdarkly_client"
 
 LaunchDarklyClient.configure do |config|
-    config.api_key["ApiKey"] = "YOUR_API_KEY"
+    config.api_key["Authorization"] = "YOUR_API_KEY"
 end
 
 extinction_1 = LaunchDarklyClient::Extinction.new

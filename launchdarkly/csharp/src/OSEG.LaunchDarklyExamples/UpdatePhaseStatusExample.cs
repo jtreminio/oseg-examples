@@ -14,7 +14,7 @@ public class UpdatePhaseStatusExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["ApiKey"] = "YOUR_API_KEY"};
+        config.ApiKey.Add("Authorization", "YOUR_API_KEY");
 
         var audiences1ReleaseGuardianConfiguration = new ReleaseGuardianConfigurationInput(
             monitoringWindowMilliseconds: 60000,

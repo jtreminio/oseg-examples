@@ -17,7 +17,7 @@ class PatchExpiringTargetsForSegmentExample
 {
     fun patchExpiringTargetsForSegment()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val instructions1 = PatchSegmentExpiringTargetInstruction(
             kind = PatchSegmentExpiringTargetInstruction.Kind.updateExpiringTarget,

@@ -2,7 +2,7 @@ require "json"
 require "launchdarkly_client"
 
 LaunchDarklyClient.configure do |config|
-    config.api_key["ApiKey"] = "YOUR_API_KEY"
+    config.api_key["Authorization"] = "YOUR_API_KEY"
 end
 
 treatments_1_parameters_1 = LaunchDarklyClient::TreatmentParameterInput.new

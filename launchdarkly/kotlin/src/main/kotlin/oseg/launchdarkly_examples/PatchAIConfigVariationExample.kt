@@ -17,7 +17,7 @@ class PatchAIConfigVariationExample
 {
     fun patchAIConfigVariation()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val messages1 = Message(
             content = "content",

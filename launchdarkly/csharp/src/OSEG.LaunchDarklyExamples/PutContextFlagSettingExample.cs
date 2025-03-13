@@ -14,7 +14,7 @@ public class PutContextFlagSettingExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["ApiKey"] = "YOUR_API_KEY"};
+        config.ApiKey.Add("Authorization", "YOUR_API_KEY");
 
         var valuePut = new ValuePut(
             comment: "make sure this context experiences a specific variation"

@@ -19,7 +19,7 @@ public class PatchExpiringFlagsForUserExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("YOUR_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("ApiKey")).setApiKey("YOUR_API_KEY");
 
         var instructions1 = new InstructionUserRequest();
         instructions1.kind(InstructionUserRequest.KindEnum.ADD_EXPIRE_USER_TARGET_DATE);

@@ -17,7 +17,7 @@ class GenderGeoBatchExample
 {
     fun genderGeoBatch()
     {
-        ApiClient.apiKey["api_key"] = "YOUR_API_KEY"
+        ApiClient.apiKey["X-API-KEY"] = "YOUR_API_KEY"
 
         val personalNames1 = FirstLastNameGeoIn(
             id = "id",

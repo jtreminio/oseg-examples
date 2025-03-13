@@ -19,7 +19,7 @@ public class UsRaceEthnicityBatchExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("YOUR_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("api_key")).setApiKey("YOUR_API_KEY");
 
         var personalNames1 = new FirstLastNameGeoIn();
         personalNames1.id("85dd5f48-b9e1-4019-88ce-ccc7e56b763f");

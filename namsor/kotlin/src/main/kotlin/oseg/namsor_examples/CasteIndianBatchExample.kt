@@ -17,7 +17,7 @@ class CasteIndianBatchExample
 {
     fun casteIndianBatch()
     {
-        ApiClient.apiKey["api_key"] = "YOUR_API_KEY"
+        ApiClient.apiKey["X-API-KEY"] = "YOUR_API_KEY"
 
         val personalNames1 = FirstLastNameGeoSubdivisionIn(
             id = "id",

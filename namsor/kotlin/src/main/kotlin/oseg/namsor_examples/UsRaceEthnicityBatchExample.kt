@@ -17,7 +17,7 @@ class UsRaceEthnicityBatchExample
 {
     fun usRaceEthnicityBatch()
     {
-        ApiClient.apiKey["api_key"] = "YOUR_API_KEY"
+        ApiClient.apiKey["X-API-KEY"] = "YOUR_API_KEY"
 
         val personalNames1 = FirstLastNameGeoIn(
             id = "85dd5f48-b9e1-4019-88ce-ccc7e56b763f",

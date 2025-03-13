@@ -17,7 +17,7 @@ class PatchEnvironmentExample
 {
     fun patchEnvironment()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val patchOperation1 = PatchOperation(
             op = "replace",

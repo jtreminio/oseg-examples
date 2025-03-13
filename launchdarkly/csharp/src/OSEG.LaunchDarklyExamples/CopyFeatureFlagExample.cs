@@ -14,7 +14,7 @@ public class CopyFeatureFlagExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["ApiKey"] = "YOUR_API_KEY"};
+        config.ApiKey.Add("Authorization", "YOUR_API_KEY");
 
         var source = new FlagCopyConfigEnvironment(
             key: "source-env-key-123abc",

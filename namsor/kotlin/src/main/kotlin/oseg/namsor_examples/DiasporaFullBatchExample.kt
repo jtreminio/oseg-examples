@@ -17,7 +17,7 @@ class DiasporaFullBatchExample
 {
     fun diasporaFullBatch()
     {
-        ApiClient.apiKey["api_key"] = "YOUR_API_KEY"
+        ApiClient.apiKey["X-API-KEY"] = "YOUR_API_KEY"
 
         val personalNames1 = PersonalNameGeoIn(
             id = "0d7d6417-0bbb-4205-951d-b3473f605b56",

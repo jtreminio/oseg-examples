@@ -17,7 +17,7 @@ class SubclassificationBatchExample
 {
     fun subclassificationBatch()
     {
-        ApiClient.apiKey["api_key"] = "YOUR_API_KEY"
+        ApiClient.apiKey["X-API-KEY"] = "YOUR_API_KEY"
 
         val personalNames1 = FirstLastNameGeoIn(
             id = "id",

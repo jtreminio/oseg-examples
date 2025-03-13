@@ -17,7 +17,7 @@ class PostRepositoryExample
 {
     fun postRepository()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val repositoryPost = RepositoryPost(
             name = "LaunchDarkly-Docs",

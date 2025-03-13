@@ -14,7 +14,7 @@ public class CreateUsersWithArrayInputExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["api_key"] = "YOUR_API_KEY"};
+        config.ApiKey.Add("api_key", "YOUR_API_KEY");
 
         var user1 = new User(
             id: 12345,

@@ -14,7 +14,7 @@ public class GenderBatchExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["api_key"] = "YOUR_API_KEY"};
+        config.ApiKey.Add("X-API-KEY", "YOUR_API_KEY");
 
         var personalNames1 = new FirstLastNameIn(
             id: "b590b04c-da23-4f2f-a334-aee384ee420a",

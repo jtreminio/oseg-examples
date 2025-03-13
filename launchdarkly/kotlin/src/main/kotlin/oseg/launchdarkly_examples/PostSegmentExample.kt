@@ -17,7 +17,7 @@ class PostSegmentExample
 {
     fun postSegment()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val segmentBody = SegmentBody(
             name = "Example segment",

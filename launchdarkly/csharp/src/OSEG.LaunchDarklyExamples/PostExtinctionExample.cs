@@ -14,7 +14,7 @@ public class PostExtinctionExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["ApiKey"] = "YOUR_API_KEY"};
+        config.ApiKey.Add("Authorization", "YOUR_API_KEY");
 
         var extinction1 = new Extinction(
             revision: "a94a8fe5ccb19ba61c4c0873d391e987982fbbd3",

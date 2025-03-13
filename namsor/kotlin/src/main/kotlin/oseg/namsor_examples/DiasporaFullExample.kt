@@ -17,7 +17,7 @@ class DiasporaFullExample
 {
     fun diasporaFull()
     {
-        ApiClient.apiKey["api_key"] = "YOUR_API_KEY"
+        ApiClient.apiKey["X-API-KEY"] = "YOUR_API_KEY"
 
         try
         {

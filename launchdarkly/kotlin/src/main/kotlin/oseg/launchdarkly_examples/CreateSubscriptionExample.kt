@@ -17,7 +17,7 @@ class CreateSubscriptionExample
 {
     fun createSubscription()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val statements1 = StatementPost(
             effect = StatementPost.Effect.allow,

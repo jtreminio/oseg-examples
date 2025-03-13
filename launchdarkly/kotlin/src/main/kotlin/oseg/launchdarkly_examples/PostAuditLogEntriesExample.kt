@@ -17,7 +17,7 @@ class PostAuditLogEntriesExample
 {
     fun postAuditLogEntries()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val statementPost1 = StatementPost(
             effect = StatementPost.Effect.allow,

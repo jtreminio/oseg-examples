@@ -17,7 +17,7 @@ class SearchContextInstancesExample
 {
     fun searchContextInstances()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val contextInstanceSearch = ContextInstanceSearch(
             filter = "{\"filter\": \"kindKeys:{\"contains\": [\"user:Henry\"]},\"sort\": \"-ts\",\"limit\": 50}",

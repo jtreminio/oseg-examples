@@ -17,7 +17,7 @@ class CreateLayerExample
 {
     fun createLayer()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val layerPost = LayerPost(
             key = "checkout-flow",

@@ -17,7 +17,7 @@ class PostRelayAutoConfigExample
 {
     fun postRelayAutoConfig()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val policy1 = Statement(
             effect = Statement.Effect.allow,

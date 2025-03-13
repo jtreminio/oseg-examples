@@ -17,7 +17,7 @@ class PutReleasePipelineExample
 {
     fun putReleasePipeline()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val phases1Audiences1ConfigurationReleaseGuardianConfiguration = ReleaseGuardianConfiguration(
             monitoringWindowMilliseconds = 60000,

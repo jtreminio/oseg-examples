@@ -17,7 +17,7 @@ class PatchExpiringFlagsForUserExample
 {
     fun patchExpiringFlagsForUser()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val instructions1 = InstructionUserRequest(
             kind = InstructionUserRequest.Kind.addExpireUserTargetDate,

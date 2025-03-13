@@ -17,7 +17,7 @@ class PostAIConfigExample
 {
     fun postAIConfig()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val aiConfigPost = AIConfigPost(
             key = "key",

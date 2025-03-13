@@ -17,7 +17,7 @@ class CreateBigSegmentStoreIntegrationExample
 {
     fun createBigSegmentStoreIntegration()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val integrationDeliveryConfigurationPost = IntegrationDeliveryConfigurationPost(
             config = Serializer.moshi.adapter<Map<String, Any>>().fromJson("""

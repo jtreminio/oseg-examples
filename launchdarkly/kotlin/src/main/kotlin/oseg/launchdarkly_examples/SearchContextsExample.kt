@@ -17,7 +17,7 @@ class SearchContextsExample
 {
     fun searchContexts()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val contextSearch = ContextSearch(
             filter = "*.name startsWith Jo,kind anyOf [\"user\",\"organization\"]",

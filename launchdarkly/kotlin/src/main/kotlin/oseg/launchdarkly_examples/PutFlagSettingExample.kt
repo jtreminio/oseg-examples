@@ -17,7 +17,7 @@ class PutFlagSettingExample
 {
     fun putFlagSetting()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val valuePut = ValuePut(
             comment = "make sure this context experiences a specific variation",

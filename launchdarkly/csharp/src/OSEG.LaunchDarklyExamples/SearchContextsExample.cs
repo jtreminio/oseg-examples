@@ -14,7 +14,7 @@ public class SearchContextsExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["ApiKey"] = "YOUR_API_KEY"};
+        config.ApiKey.Add("Authorization", "YOUR_API_KEY");
 
         var contextSearch = new ContextSearch(
             filter: "*.name startsWith Jo,kind anyOf [\"user\",\"organization\"]",

@@ -8,7 +8,7 @@ use SplFileObject;
 use LaunchDarkly;
 
 $config = LaunchDarkly\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("ApiKey", "YOUR_API_KEY");
+$config->setApiKey("Authorization", "YOUR_API_KEY");
 
 $integration_delivery_configuration_post = (new LaunchDarkly\Client\Model\IntegrationDeliveryConfigurationPost())
     ->setConfig(json_decode(<<<'EOD'

@@ -17,7 +17,7 @@ class UsZipRaceEthnicityBatchExample
 {
     fun usZipRaceEthnicityBatch()
     {
-        ApiClient.apiKey["api_key"] = "YOUR_API_KEY"
+        ApiClient.apiKey["X-API-KEY"] = "YOUR_API_KEY"
 
         val personalNames1 = FirstLastNameGeoZippedIn(
             id = "728767f9-c5b2-4ed3-a071-828077f16552",

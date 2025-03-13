@@ -17,7 +17,7 @@ class PostApprovalRequestReviewForFlagExample
 {
     fun postApprovalRequestReviewForFlag()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val postApprovalRequestReviewRequest = PostApprovalRequestReviewRequest(
             kind = PostApprovalRequestReviewRequest.Kind.approve,

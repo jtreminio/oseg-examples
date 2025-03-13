@@ -8,7 +8,7 @@ use SplFileObject;
 use LaunchDarkly;
 
 $config = LaunchDarkly\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("ApiKey", "YOUR_API_KEY");
+$config->setApiKey("Authorization", "YOUR_API_KEY");
 
 $policy_1 = (new LaunchDarkly\Client\Model\Statement())
     ->setEffect(LaunchDarkly\Client\Model\Statement::EFFECT_ALLOW)

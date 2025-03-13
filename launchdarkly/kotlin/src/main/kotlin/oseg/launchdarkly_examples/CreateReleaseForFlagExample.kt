@@ -17,7 +17,7 @@ class CreateReleaseForFlagExample
 {
     fun createReleaseForFlag()
     {
-        ApiClient.apiKey["ApiKey"] = "YOUR_API_KEY"
+        ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val createReleaseInput = CreateReleaseInput(
             releasePipelineKey = null,
