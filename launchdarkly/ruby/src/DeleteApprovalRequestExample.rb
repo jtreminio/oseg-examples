@@ -7,7 +7,7 @@ end
 
 begin
     LaunchDarklyClient::ApprovalsApi.new.delete_approval_request(
-        nil, # id
+        "id_string", # id
     )
 rescue LaunchDarklyClient::ApiError => e
     puts "Exception when calling ApprovalsApi#delete_approval_request: #{e}"

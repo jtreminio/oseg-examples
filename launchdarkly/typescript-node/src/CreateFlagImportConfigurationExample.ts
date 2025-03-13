@@ -21,8 +21,8 @@ flagImportConfigurationPost.tags = [
 ];
 
 apiCaller.createFlagImportConfiguration(
-  undefined, // projectKey
-  undefined, // integrationKey
+  "projectKey_string", // projectKey
+  "integrationKey_string", // integrationKey
   flagImportConfigurationPost,
 ).then(response => {
   console.log(response.body);

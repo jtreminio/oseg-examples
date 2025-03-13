@@ -19,10 +19,10 @@ public class GetExperimentResultsExample
         try
         {
             var response = new ExperimentsApi(config).GetExperimentResults(
-                projectKey: null,
-                environmentKey: null,
-                experimentKey: null,
-                metricKey: null,
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                experimentKey: "experimentKey_string",
+                metricKey: "metricKey_string",
                 iterationId: null,
                 expand: null
             );

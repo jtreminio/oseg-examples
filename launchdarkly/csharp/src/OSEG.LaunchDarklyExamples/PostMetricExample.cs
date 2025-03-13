@@ -27,7 +27,7 @@ public class PostMetricExample
         try
         {
             var response = new MetricsApi(config).PostMetric(
-                projectKey: null,
+                projectKey: "projectKey_string",
                 metricPost: metricPost
             );
 

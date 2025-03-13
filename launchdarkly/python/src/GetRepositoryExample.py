@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.CodeReferencesApi(api_client).get_repository(
-            repo=None,
+            repo="repo_string",
         )
 
         pprint(response)

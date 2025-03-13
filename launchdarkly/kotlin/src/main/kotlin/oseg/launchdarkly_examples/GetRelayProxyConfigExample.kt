@@ -22,7 +22,7 @@ class GetRelayProxyConfigExample
         try
         {
             val response = RelayProxyConfigurationsApi().getRelayProxyConfig(
-                id = null,
+                id = "id_string",
             )
 
             println(response)

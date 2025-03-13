@@ -31,7 +31,7 @@ public class PostMetricExample
         try
         {
             var response = new MetricsApi(config).postMetric(
-                null, // projectKey
+                "projectKey_string", // projectKey
                 metricPost
             );
 

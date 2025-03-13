@@ -33,8 +33,8 @@ public class PatchFeatureFlagExample
         try
         {
             var response = new FeatureFlagsApi(config).PatchFeatureFlag(
-                projectKey: null,
-                featureFlagKey: null,
+                projectKey: "projectKey_string",
+                featureFlagKey: "featureFlagKey_string",
                 patchWithComment: patchWithComment,
                 ignoreConflicts: null
             );

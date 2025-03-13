@@ -20,7 +20,7 @@ $patch_operation = [
 
 try {
     $response = (new LaunchDarkly\Client\Api\AccountMembersApi(config: $config))->patchMember(
-        id: null,
+        id: "id_string",
         patch_operation: $patch_operation,
     );
 

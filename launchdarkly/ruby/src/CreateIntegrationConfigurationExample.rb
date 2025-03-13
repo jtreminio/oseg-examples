@@ -53,7 +53,7 @@ integration_configuration_post.capability_config = capability_config
 
 begin
     response = LaunchDarklyClient::IntegrationsBetaApi.new.create_integration_configuration(
-        nil, # integration_key
+        "integrationKey_string", # integration_key
         integration_configuration_post,
     )
 

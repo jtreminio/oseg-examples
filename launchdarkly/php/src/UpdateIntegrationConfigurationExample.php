@@ -20,7 +20,7 @@ $patch_operation = [
 
 try {
     $response = (new LaunchDarkly\Client\Api\IntegrationsBetaApi(config: $config))->updateIntegrationConfiguration(
-        integration_configuration_id: null,
+        integration_configuration_id: "integrationConfigurationId_string",
         patch_operation: $patch_operation,
     );
 

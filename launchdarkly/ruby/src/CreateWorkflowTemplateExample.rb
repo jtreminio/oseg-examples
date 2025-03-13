@@ -28,13 +28,7 @@ stages = [
 ]
 
 create_workflow_template_input = LaunchDarklyClient::CreateWorkflowTemplateInput.new
-create_workflow_template_input.key = nil
-create_workflow_template_input.name = nil
-create_workflow_template_input.description = nil
-create_workflow_template_input.workflow_id = nil
-create_workflow_template_input.project_key = nil
-create_workflow_template_input.environment_key = nil
-create_workflow_template_input.flag_key = nil
+create_workflow_template_input.key = "key_string"
 create_workflow_template_input.stages = stages
 
 begin

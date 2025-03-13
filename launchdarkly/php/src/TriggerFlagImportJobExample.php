@@ -12,9 +12,9 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     (new LaunchDarkly\Client\Api\FlagImportConfigurationsBetaApi(config: $config))->triggerFlagImportJob(
-        project_key: null,
-        integration_key: null,
-        integration_id: null,
+        project_key: "projectKey_string",
+        integration_key: "integrationKey_string",
+        integration_id: "integrationId_string",
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
     echo "Exception when calling FlagImportConfigurationsBetaApi#triggerFlagImportJob: {$e->getMessage()}";

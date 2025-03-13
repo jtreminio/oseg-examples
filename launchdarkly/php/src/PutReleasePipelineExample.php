@@ -17,7 +17,7 @@ $phases_1_audiences_1_configuration_release_guardian_configuration = (new Launch
     ->setRandomizationUnit("user");
 
 $phases_1_audiences_1_configuration = (new LaunchDarkly\Client\Model\AudienceConfiguration())
-    ->setReleaseStrategy(null)
+    ->setReleaseStrategy("releaseStrategy_string")
     ->setRequireApproval(true)
     ->setNotifyMemberIds([
         "1234a56b7c89d012345e678f",
@@ -28,8 +28,8 @@ $phases_1_audiences_1_configuration = (new LaunchDarkly\Client\Model\AudienceCon
     ->setReleaseGuardianConfiguration($phases_1_audiences_1_configuration_release_guardian_configuration);
 
 $phases_1_audiences_1 = (new LaunchDarkly\Client\Model\AudiencePost())
-    ->setEnvironmentKey(null)
-    ->setName(null)
+    ->setEnvironmentKey("environmentKey_string")
+    ->setName("name_string")
     ->setSegmentKeys([
     ])
     ->setConfiguration($phases_1_audiences_1_configuration);
@@ -56,8 +56,8 @@ $update_release_pipeline_input = (new LaunchDarkly\Client\Model\UpdateReleasePip
 
 try {
     $response = (new LaunchDarkly\Client\Api\ReleasePipelinesBetaApi(config: $config))->putReleasePipeline(
-        project_key: null,
-        pipeline_key: null,
+        project_key: "projectKey_string",
+        pipeline_key: "pipelineKey_string",
         update_release_pipeline_input: $update_release_pipeline_input,
     );
 

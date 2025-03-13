@@ -19,8 +19,8 @@ public class DeleteSubscriptionExample
         try
         {
             new IntegrationAuditLogSubscriptionsApi(config).DeleteSubscription(
-                integrationKey: null,
-                id: null
+                integrationKey: "integrationKey_string",
+                id: "id_string"
             );
         }
         catch (ApiException e)

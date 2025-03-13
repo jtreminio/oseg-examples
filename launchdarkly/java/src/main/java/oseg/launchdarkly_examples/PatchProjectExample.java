@@ -32,7 +32,7 @@ public class PatchProjectExample
         try
         {
             var response = new ProjectsApi(config).patchProject(
-                null, // projectKey
+                "projectKey_string", // projectKey
                 patchOperation
             );
 

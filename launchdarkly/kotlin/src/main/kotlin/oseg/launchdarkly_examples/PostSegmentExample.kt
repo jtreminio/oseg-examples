@@ -33,8 +33,8 @@ class PostSegmentExample
         try
         {
             val response = SegmentsApi().postSegment(
-                projectKey = null,
-                environmentKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
                 segmentBody = segmentBody,
             )
 

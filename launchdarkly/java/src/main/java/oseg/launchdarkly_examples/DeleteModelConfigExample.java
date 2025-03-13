@@ -24,9 +24,9 @@ public class DeleteModelConfigExample
         try
         {
             new AiConfigsBetaApi(config).deleteModelConfig(
-                null, // ldAPIVersion
+                "beta", // ldAPIVersion
                 "default", // projectKey
-                null // modelConfigKey
+                "modelConfigKey_string" // modelConfigKey
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling AiConfigsBetaApi#deleteModelConfig");

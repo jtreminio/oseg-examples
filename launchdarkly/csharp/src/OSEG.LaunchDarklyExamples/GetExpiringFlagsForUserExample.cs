@@ -19,9 +19,9 @@ public class GetExpiringFlagsForUserExample
         try
         {
             var response = new UserSettingsApi(config).GetExpiringFlagsForUser(
-                projectKey: null,
-                userKey: null,
-                environmentKey: null
+                projectKey: "projectKey_string",
+                userKey: "userKey_string",
+                environmentKey: "environmentKey_string"
             );
 
             Console.WriteLine(response);

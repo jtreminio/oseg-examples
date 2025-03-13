@@ -19,10 +19,10 @@ public class GetBigSegmentExportExample
         try
         {
             var response = new SegmentsApi(config).GetBigSegmentExport(
-                projectKey: null,
-                environmentKey: null,
-                segmentKey: null,
-                exportID: null
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                segmentKey: "segmentKey_string",
+                exportID: "exportID_string"
             );
 
             Console.WriteLine(response);

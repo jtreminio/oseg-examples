@@ -29,8 +29,8 @@ public class PatchReleaseByFlagKeyExample
         try
         {
             var response = new ReleasesBetaApi(config).PatchReleaseByFlagKey(
-                projectKey: null,
-                flagKey: null,
+                projectKey: "projectKey_string",
+                flagKey: "flagKey_string",
                 patchOperation: patchOperation
             );
 

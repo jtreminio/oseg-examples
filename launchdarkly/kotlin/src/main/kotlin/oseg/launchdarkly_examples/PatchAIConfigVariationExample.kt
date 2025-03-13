@@ -38,17 +38,17 @@ class PatchAIConfigVariationExample
             modelConfigKey = "modelConfigKey",
             name = "name",
             published = true,
-            model = Map.of (),
+            model = mapOf<String, Any> (),
             messages = messages,
         )
 
         try
         {
             val response = AIConfigsBetaApi().patchAIConfigVariation(
-                ldAPIVersion = null,
-                projectKey = null,
-                configKey = null,
-                variationKey = null,
+                ldAPIVersion = AIConfigsBetaApi.LdAPIVersionPatchAIConfigVariation.beta,
+                projectKey = "projectKey_string",
+                configKey = "configKey_string",
+                variationKey = "variationKey_string",
                 aiConfigVariationPatch = aiConfigVariationPatch,
             )
 

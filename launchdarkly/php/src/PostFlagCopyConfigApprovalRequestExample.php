@@ -33,9 +33,9 @@ $create_copy_flag_config_approval_request_request = (new LaunchDarkly\Client\Mod
 
 try {
     $response = (new LaunchDarkly\Client\Api\ApprovalsApi(config: $config))->postFlagCopyConfigApprovalRequest(
-        project_key: null,
-        feature_flag_key: null,
-        environment_key: null,
+        project_key: "projectKey_string",
+        feature_flag_key: "featureFlagKey_string",
+        environment_key: "environmentKey_string",
         create_copy_flag_config_approval_request_request: $create_copy_flag_config_approval_request_request,
     );
 

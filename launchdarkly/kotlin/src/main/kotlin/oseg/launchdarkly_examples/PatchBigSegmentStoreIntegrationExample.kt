@@ -31,10 +31,10 @@ class PatchBigSegmentStoreIntegrationExample
         try
         {
             val response = PersistentStoreIntegrationsBetaApi().patchBigSegmentStoreIntegration(
-                projectKey = null,
-                environmentKey = null,
-                integrationKey = null,
-                integrationId = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                integrationKey = "integrationKey_string",
+                integrationId = "integrationId_string",
                 patchOperation = patchOperation,
             )
 

@@ -19,7 +19,7 @@ public class GetLayersExample
         try
         {
             var response = new LayersApi(config).GetLayers(
-                projectKey: null,
+                projectKey: "projectKey_string",
                 filter: null
             );
 

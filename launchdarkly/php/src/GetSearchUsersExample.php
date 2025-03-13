@@ -12,8 +12,8 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     $response = (new LaunchDarkly\Client\Api\UsersApi(config: $config))->getSearchUsers(
-        project_key: null,
-        environment_key: null,
+        project_key: "projectKey_string",
+        environment_key: "environmentKey_string",
         q: null,
         limit: null,
         offset: null,

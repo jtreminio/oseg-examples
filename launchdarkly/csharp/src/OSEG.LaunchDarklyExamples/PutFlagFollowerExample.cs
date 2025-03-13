@@ -19,10 +19,10 @@ public class PutFlagFollowerExample
         try
         {
             new FollowFlagsApi(config).PutFlagFollower(
-                projectKey: null,
-                featureFlagKey: null,
-                environmentKey: null,
-                memberId: null
+                projectKey: "projectKey_string",
+                featureFlagKey: "featureFlagKey_string",
+                environmentKey: "environmentKey_string",
+                memberId: "memberId_string"
             );
         }
         catch (ApiException e)

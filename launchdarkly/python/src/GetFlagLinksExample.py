@@ -11,8 +11,8 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.FlagLinksBetaApi(api_client).get_flag_links(
-            project_key=None,
-            feature_flag_key=None,
+            project_key="projectKey_string",
+            feature_flag_key="featureFlagKey_string",
         )
 
         pprint(response)

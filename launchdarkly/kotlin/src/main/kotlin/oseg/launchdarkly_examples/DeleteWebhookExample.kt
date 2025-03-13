@@ -22,7 +22,7 @@ class DeleteWebhookExample
         try
         {
             WebhooksApi().deleteWebhook(
-                id = null,
+                id = "id_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling WebhooksApi#deleteWebhook")

@@ -19,9 +19,9 @@ public class GetContextInstancesExample
         try
         {
             var response = new ContextsApi(config).GetContextInstances(
-                projectKey: null,
-                environmentKey: null,
-                id: null,
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                id: "id_string",
                 limit: null,
                 continuationToken: null,
                 sort: null,

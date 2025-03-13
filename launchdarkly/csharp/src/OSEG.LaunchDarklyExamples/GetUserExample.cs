@@ -19,9 +19,9 @@ public class GetUserExample
         try
         {
             var response = new UsersApi(config).GetUser(
-                projectKey: null,
-                environmentKey: null,
-                userKey: null
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                userKey: "userKey_string"
             );
 
             Console.WriteLine(response);

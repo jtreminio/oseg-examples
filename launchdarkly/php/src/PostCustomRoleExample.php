@@ -15,11 +15,9 @@ $policy_1 = (new LaunchDarkly\Client\Model\StatementPost())
     ->setResources([
         "proj/*:env/production:flag/*",
     ])
-    ->setNotResources(null)
     ->setActions([
         "updateOn",
-    ])
-    ->setNotActions(null);
+    ]);
 
 $policy = [
     $policy_1,
@@ -30,7 +28,6 @@ $custom_role_post = (new LaunchDarkly\Client\Model\CustomRolePost())
     ->setKey("role-key-123abc")
     ->setDescription("An example role for members of the ops team")
     ->setBasePermissions("reader")
-    ->setResourceCategory(null)
     ->setPolicy($policy);
 
 try {

@@ -24,9 +24,9 @@ public class GetUserExample
         try
         {
             var response = new UsersApi(config).getUser(
-                null, // projectKey
-                null, // environmentKey
-                null // userKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "userKey_string" // userKey
             );
 
             System.out.println(response);

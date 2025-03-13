@@ -22,9 +22,9 @@ class GetExpiringFlagsForUserExample
         try
         {
             val response = UserSettingsApi().getExpiringFlagsForUser(
-                projectKey = null,
-                userKey = null,
-                environmentKey = null,
+                projectKey = "projectKey_string",
+                userKey = "userKey_string",
+                environmentKey = "environmentKey_string",
             )
 
             println(response)

@@ -19,7 +19,7 @@ public class GetModelConfigExample
         try
         {
             var response = new AIConfigsBetaApi(config).GetModelConfig(
-                lDAPIVersion: null,
+                lDAPIVersion: "beta",
                 projectKey: "default",
                 modelConfigKey: "default"
             );

@@ -37,8 +37,8 @@ public class CopyFeatureFlagExample
         try
         {
             var response = new FeatureFlagsApi(config).copyFeatureFlag(
-                null, // projectKey
-                null, // featureFlagKey
+                "projectKey_string", // projectKey
+                "featureFlagKey_string", // featureFlagKey
                 flagCopyConfigPost
             );
 

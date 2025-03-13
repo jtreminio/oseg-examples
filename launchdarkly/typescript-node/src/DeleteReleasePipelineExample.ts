@@ -6,8 +6,8 @@ const apiCaller = new api.ReleasePipelinesBetaApi();
 apiCaller.setApiKey(api.ReleasePipelinesBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.deleteReleasePipeline(
-  undefined, // projectKey
-  undefined, // pipelineKey
+  "projectKey_string", // projectKey
+  "pipelineKey_string", // pipelineKey
 ).catch(error => {
   console.log("Exception when calling ReleasePipelinesBetaApi#deleteReleasePipeline:");
   console.log(error.body);

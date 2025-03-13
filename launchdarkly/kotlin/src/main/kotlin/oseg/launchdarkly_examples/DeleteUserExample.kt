@@ -22,9 +22,9 @@ class DeleteUserExample
         try
         {
             UsersApi().deleteUser(
-                projectKey = null,
-                environmentKey = null,
-                userKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                userKey = "userKey_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling UsersApi#deleteUser")

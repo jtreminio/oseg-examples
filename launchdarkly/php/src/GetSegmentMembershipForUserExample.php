@@ -12,10 +12,10 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     $response = (new LaunchDarkly\Client\Api\SegmentsApi(config: $config))->getSegmentMembershipForUser(
-        project_key: null,
-        environment_key: null,
-        segment_key: null,
-        user_key: null,
+        project_key: "projectKey_string",
+        environment_key: "environmentKey_string",
+        segment_key: "segmentKey_string",
+        user_key: "userKey_string",
     );
 
     print_r($response);

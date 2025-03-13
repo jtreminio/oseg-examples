@@ -22,8 +22,8 @@ class GetDependentFlagsExample
         try
         {
             val response = FeatureFlagsBetaApi().getDependentFlags(
-                projectKey = null,
-                featureFlagKey = null,
+                projectKey = "projectKey_string",
+                featureFlagKey = "featureFlagKey_string",
             )
 
             println(response)

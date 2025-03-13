@@ -19,9 +19,9 @@ public class DeleteModelConfigExample
         try
         {
             new AIConfigsBetaApi(config).DeleteModelConfig(
-                lDAPIVersion: null,
+                lDAPIVersion: "beta",
                 projectKey: "default",
-                modelConfigKey: null
+                modelConfigKey: "modelConfigKey_string"
             );
         }
         catch (ApiException e)

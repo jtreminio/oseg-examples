@@ -24,8 +24,8 @@ public class GetContextInstanceSegmentsMembershipByEnvExample
         try
         {
             var response = new SegmentsApi(config).getContextInstanceSegmentsMembershipByEnv(
-                null, // projectKey
-                null, // environmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
                 JSON.deserialize("""
                     {
                         "address": {

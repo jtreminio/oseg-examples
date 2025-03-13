@@ -35,7 +35,7 @@ public class PatchTeamExample
         try
         {
             var response = new TeamsApi(config).patchTeam(
-                null, // teamKey
+                "teamKey_string", // teamKey
                 teamPatchInput,
                 null // expand
             );

@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.AccessTokensApi(api_client).delete_token(
-            id=None,
+            id="id_string",
         )
     except ApiException as e:
         print("Exception when calling AccessTokensApi#delete_token: %s\n" % e)

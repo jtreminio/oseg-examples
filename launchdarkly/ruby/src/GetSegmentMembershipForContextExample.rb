@@ -7,10 +7,10 @@ end
 
 begin
     response = LaunchDarklyClient::SegmentsApi.new.get_segment_membership_for_context(
-        nil, # project_key
-        nil, # environment_key
-        nil, # segment_key
-        nil, # context_key
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
+        "segmentKey_string", # segment_key
+        "contextKey_string", # context_key
     )
 
     p response

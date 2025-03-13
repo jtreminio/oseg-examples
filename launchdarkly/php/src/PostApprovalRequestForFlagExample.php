@@ -21,14 +21,13 @@ $create_flag_config_approval_request_request = (new LaunchDarkly\Client\Model\Cr
     ])
     ->setNotifyTeamKeys([
         "example-reviewer-team",
-    ])
-    ->setIntegrationConfig(null);
+    ]);
 
 try {
     $response = (new LaunchDarkly\Client\Api\ApprovalsApi(config: $config))->postApprovalRequestForFlag(
-        project_key: null,
-        feature_flag_key: null,
-        environment_key: null,
+        project_key: "projectKey_string",
+        feature_flag_key: "featureFlagKey_string",
+        environment_key: "environmentKey_string",
         create_flag_config_approval_request_request: $create_flag_config_approval_request_request,
     );
 

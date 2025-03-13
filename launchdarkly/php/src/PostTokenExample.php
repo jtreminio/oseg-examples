@@ -11,12 +11,7 @@ $config = LaunchDarkly\Client\Configuration::getDefaultConfiguration();
 $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 $access_token_post = (new LaunchDarkly\Client\Model\AccessTokenPost())
-    ->setName(null)
-    ->setDescription(null)
-    ->setRole(LaunchDarkly\Client\Model\AccessTokenPost::ROLE_READER)
-    ->setServiceToken(null)
-    ->setDefaultApiVersion(null)
-    ->setCustomRoleIds(null);
+    ->setRole(LaunchDarkly\Client\Model\AccessTokenPost::ROLE_READER);
 
 try {
     $response = (new LaunchDarkly\Client\Api\AccessTokensApi(config: $config))->postToken(

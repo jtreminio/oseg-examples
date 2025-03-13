@@ -16,8 +16,8 @@ ai_config_post.tags = [
 
 begin
     response = LaunchDarklyClient::AIConfigsBetaApi.new.post_ai_config(
-        nil, # ld_api_version
-        nil, # project_key
+        "beta", # ld_api_version
+        "projectKey_string", # project_key
         ai_config_post,
     )
 

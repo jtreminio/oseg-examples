@@ -22,12 +22,12 @@ class GetAIConfigMetricsByVariationExample
         try
         {
             val response = AIConfigsBetaApi().getAIConfigMetricsByVariation(
-                ldAPIVersion = null,
-                projectKey = null,
-                configKey = null,
+                ldAPIVersion = AIConfigsBetaApi.LdAPIVersionGetAIConfigMetricsByVariation.beta,
+                projectKey = "projectKey_string",
+                configKey = "configKey_string",
                 from = 123,
                 to = 456,
-                env = null,
+                env = "env_string",
             )
 
             println(response)

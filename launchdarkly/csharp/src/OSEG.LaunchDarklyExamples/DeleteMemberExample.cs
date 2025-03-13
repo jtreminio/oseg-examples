@@ -19,7 +19,7 @@ public class DeleteMemberExample
         try
         {
             new AccountMembersApi(config).DeleteMember(
-                id: null
+                id: "id_string"
             );
         }
         catch (ApiException e)

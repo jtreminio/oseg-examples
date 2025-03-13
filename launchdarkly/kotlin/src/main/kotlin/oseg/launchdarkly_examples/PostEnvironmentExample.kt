@@ -28,7 +28,7 @@ class PostEnvironmentExample
         try
         {
             val response = EnvironmentsApi().postEnvironment(
-                projectKey = null,
+                projectKey = "projectKey_string",
                 environmentPost = environmentPost,
             )
 

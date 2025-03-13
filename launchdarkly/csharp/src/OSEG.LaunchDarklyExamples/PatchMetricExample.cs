@@ -29,8 +29,8 @@ public class PatchMetricExample
         try
         {
             var response = new MetricsApi(config).PatchMetric(
-                projectKey: null,
-                metricKey: null,
+                projectKey: "projectKey_string",
+                metricKey: "metricKey_string",
                 patchOperation: patchOperation
             );
 

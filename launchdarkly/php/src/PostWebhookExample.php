@@ -15,11 +15,9 @@ $statements_1 = (new LaunchDarkly\Client\Model\StatementPost())
     ->setResources([
         "proj/test",
     ])
-    ->setNotResources(null)
     ->setActions([
         "*",
-    ])
-    ->setNotActions(null);
+    ]);
 
 $statements = [
     $statements_1,
@@ -30,7 +28,6 @@ $webhook_post = (new LaunchDarkly\Client\Model\WebhookPost())
     ->setSign(false)
     ->setOn(true)
     ->setName("apidocs test webhook")
-    ->setSecret(null)
     ->setTags([
         "example-tag",
     ])

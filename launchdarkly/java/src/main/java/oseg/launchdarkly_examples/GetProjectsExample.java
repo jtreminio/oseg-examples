@@ -23,7 +23,13 @@ public class GetProjectsExample
 
         try
         {
-            var response = new ProjectsApi(config).getProjects();
+            var response = new ProjectsApi(config).getProjects(
+                null, // limit
+                null, // offset
+                null, // filter
+                null, // sort
+                null // expand
+            );
 
             System.out.println(response);
         } catch (ApiException e) {

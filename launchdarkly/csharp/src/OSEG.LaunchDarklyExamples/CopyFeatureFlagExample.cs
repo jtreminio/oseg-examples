@@ -35,8 +35,8 @@ public class CopyFeatureFlagExample
         try
         {
             var response = new FeatureFlagsApi(config).CopyFeatureFlag(
-                projectKey: null,
-                featureFlagKey: null,
+                projectKey: "projectKey_string",
+                featureFlagKey: "featureFlagKey_string",
                 flagCopyConfigPost: flagCopyConfigPost
             );
 

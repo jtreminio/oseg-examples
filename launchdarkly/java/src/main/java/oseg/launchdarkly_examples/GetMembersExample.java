@@ -23,7 +23,13 @@ public class GetMembersExample
 
         try
         {
-            var response = new AccountMembersApi(config).getMembers();
+            var response = new AccountMembersApi(config).getMembers(
+                null, // limit
+                null, // offset
+                null, // filter
+                null, // expand
+                null // sort
+            );
 
             System.out.println(response);
         } catch (ApiException e) {

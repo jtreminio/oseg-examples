@@ -20,8 +20,8 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.ReleasesBetaApi(api_client).patch_release_by_flag_key(
-            project_key=None,
-            flag_key=None,
+            project_key="projectKey_string",
+            flag_key="flagKey_string",
             patch_operation=patch_operation,
         )
 

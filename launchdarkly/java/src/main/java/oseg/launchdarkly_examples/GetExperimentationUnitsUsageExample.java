@@ -23,7 +23,12 @@ public class GetExperimentationUnitsUsageExample
 
         try
         {
-            var response = new AccountUsageBetaApi(config).getExperimentationUnitsUsage();
+            var response = new AccountUsageBetaApi(config).getExperimentationUnitsUsage(
+                null, // from
+                null, // to
+                null, // projectKey
+                null // environmentKey
+            );
 
             System.out.println(response);
         } catch (ApiException e) {

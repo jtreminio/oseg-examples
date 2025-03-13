@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.CodeReferencesApi(api_client).delete_repository(
-            repo=None,
+            repo="repo_string",
         )
     except ApiException as e:
         print("Exception when calling CodeReferencesApi#delete_repository: %s\n" % e)

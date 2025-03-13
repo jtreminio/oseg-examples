@@ -22,10 +22,10 @@ class GetSegmentMembershipForUserExample
         try
         {
             val response = SegmentsApi().getSegmentMembershipForUser(
-                projectKey = null,
-                environmentKey = null,
-                segmentKey = null,
-                userKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                segmentKey = "segmentKey_string",
+                userKey = "userKey_string",
             )
 
             println(response)

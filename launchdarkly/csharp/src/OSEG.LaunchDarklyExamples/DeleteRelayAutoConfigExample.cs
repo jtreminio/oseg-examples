@@ -19,7 +19,7 @@ public class DeleteRelayAutoConfigExample
         try
         {
             new RelayProxyConfigurationsApi(config).DeleteRelayAutoConfig(
-                id: null
+                id: "id_string"
             );
         }
         catch (ApiException e)

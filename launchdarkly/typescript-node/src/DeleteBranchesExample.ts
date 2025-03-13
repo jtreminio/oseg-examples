@@ -6,7 +6,7 @@ const apiCaller = new api.CodeReferencesApi();
 apiCaller.setApiKey(api.CodeReferencesApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.deleteBranches(
-  undefined, // repo
+  "repo_string", // repo
   [
     "branch-to-be-deleted",
     "another-branch-to-be-deleted",

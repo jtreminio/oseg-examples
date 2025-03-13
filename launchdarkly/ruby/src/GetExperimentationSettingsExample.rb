@@ -7,7 +7,7 @@ end
 
 begin
     response = LaunchDarklyClient::ExperimentsApi.new.get_experimentation_settings(
-        nil, # project_key
+        "projectKey_string", # project_key
     )
 
     p response

@@ -22,9 +22,9 @@ class GetDependentFlagsByEnvExample
         try
         {
             val response = FeatureFlagsBetaApi().getDependentFlagsByEnv(
-                projectKey = null,
-                environmentKey = null,
-                featureFlagKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                featureFlagKey = "featureFlagKey_string",
             )
 
             println(response)

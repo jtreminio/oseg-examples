@@ -19,7 +19,7 @@ public class GetSubscriptionsExample
         try
         {
             var response = new IntegrationAuditLogSubscriptionsApi(config).GetSubscriptions(
-                integrationKey: null
+                integrationKey: "integrationKey_string"
             );
 
             Console.WriteLine(response);

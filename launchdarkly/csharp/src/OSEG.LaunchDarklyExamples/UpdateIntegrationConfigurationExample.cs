@@ -29,7 +29,7 @@ public class UpdateIntegrationConfigurationExample
         try
         {
             var response = new IntegrationsBetaApi(config).UpdateIntegrationConfiguration(
-                integrationConfigurationId: null,
+                integrationConfigurationId: "integrationConfigurationId_string",
                 patchOperation: patchOperation
             );
 

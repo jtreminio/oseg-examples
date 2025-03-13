@@ -37,7 +37,6 @@ class PostHoldoutExample
             holdoutamount = "10",
             primarymetrickey = "metric-key-123abc",
             prerequisiteflagkey = "flag-key-123abc",
-            maintainerId = null,
             attributes = listOf (
                 "country",
                 "device",
@@ -49,8 +48,8 @@ class PostHoldoutExample
         try
         {
             val response = HoldoutsBetaApi().postHoldout(
-                projectKey = null,
-                environmentKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
                 holdoutPostRequest = holdoutPostRequest,
             )
 

@@ -35,8 +35,8 @@ class PatchFeatureFlagExample
         try
         {
             val response = FeatureFlagsApi().patchFeatureFlag(
-                projectKey = null,
-                featureFlagKey = null,
+                projectKey = "projectKey_string",
+                featureFlagKey = "featureFlagKey_string",
                 patchWithComment = patchWithComment,
                 ignoreConflicts = null,
             )

@@ -19,9 +19,9 @@ public class DeleteUserExample
         try
         {
             new UsersApi(config).DeleteUser(
-                projectKey: null,
-                environmentKey: null,
-                userKey: null
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                userKey: "userKey_string"
             );
         }
         catch (ApiException e)

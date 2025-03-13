@@ -24,9 +24,9 @@ public class GetWorkflowsExample
         try
         {
             var response = new WorkflowsApi(config).getWorkflows(
-                null, // projectKey
-                null, // featureFlagKey
-                null, // environmentKey
+                "projectKey_string", // projectKey
+                "featureFlagKey_string", // featureFlagKey
+                "environmentKey_string", // environmentKey
                 null, // status
                 null, // sort
                 null, // limit

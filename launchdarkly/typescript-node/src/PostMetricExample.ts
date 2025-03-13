@@ -13,7 +13,7 @@ metricPost.isNumeric = false;
 metricPost.eventKey = "trackedClick";
 
 apiCaller.postMetric(
-  undefined, // projectKey
+  "projectKey_string", // projectKey
   metricPost,
 ).then(response => {
   console.log(response.body);

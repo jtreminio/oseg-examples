@@ -7,7 +7,7 @@ end
 
 begin
     response = LaunchDarklyClient::TeamsApi.new.get_team_maintainers(
-        nil, # team_key
+        "teamKey_string", # team_key
     )
 
     p response

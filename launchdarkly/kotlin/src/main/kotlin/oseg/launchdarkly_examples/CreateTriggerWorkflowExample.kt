@@ -34,9 +34,9 @@ class CreateTriggerWorkflowExample
         try
         {
             val response = FlagTriggersApi().createTriggerWorkflow(
-                projectKey = null,
-                environmentKey = null,
-                featureFlagKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                featureFlagKey = "featureFlagKey_string",
                 triggerPost = triggerPost,
             )
 

@@ -29,14 +29,14 @@ class PostModelConfigExample
                 "tags",
                 "tags",
             ),
-            params = Map.of (),
-            customParams = Map.of (),
+            params = mapOf<String, Any> (),
+            customParams = mapOf<String, Any> (),
         )
 
         try
         {
             val response = AIConfigsBetaApi().postModelConfig(
-                ldAPIVersion = null,
+                ldAPIVersion = AIConfigsBetaApi.LdAPIVersionPostModelConfig.beta,
                 projectKey = "default",
                 modelConfigPost = modelConfigPost,
             )

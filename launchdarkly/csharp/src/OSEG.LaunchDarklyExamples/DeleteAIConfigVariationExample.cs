@@ -19,10 +19,10 @@ public class DeleteAIConfigVariationExample
         try
         {
             new AIConfigsBetaApi(config).DeleteAIConfigVariation(
-                lDAPIVersion: null,
-                projectKey: null,
-                configKey: null,
-                variationKey: null
+                lDAPIVersion: "beta",
+                projectKey: "projectKey_string",
+                configKey: "configKey_string",
+                variationKey: "variationKey_string"
             );
         }
         catch (ApiException e)

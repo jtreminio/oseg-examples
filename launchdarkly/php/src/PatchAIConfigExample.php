@@ -20,9 +20,9 @@ $ai_config_patch = (new LaunchDarkly\Client\Model\AIConfigPatch())
 
 try {
     $response = (new LaunchDarkly\Client\Api\AIConfigsBetaApi(config: $config))->patchAIConfig(
-        ld_api_version: null,
-        project_key: null,
-        config_key: null,
+        ld_api_version: LaunchDarkly\Client\Model\AIConfigPatch::LD_API_VERSION_BETA,
+        project_key: "projectKey_string",
+        config_key: "configKey_string",
         ai_config_patch: $ai_config_patch,
     );
 

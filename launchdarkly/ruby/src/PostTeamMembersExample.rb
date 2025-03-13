@@ -7,7 +7,7 @@ end
 
 begin
     response = LaunchDarklyClient::TeamsApi.new.post_team_members(
-        nil, # team_key
+        "teamKey_string", # team_key
     )
 
     p response

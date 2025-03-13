@@ -12,8 +12,8 @@ flagLinkPost.title = "Example link title";
 flagLinkPost.description = "Example link description";
 
 apiCaller.createFlagLink(
-  undefined, // projectKey
-  undefined, // featureFlagKey
+  "projectKey_string", // projectKey
+  "featureFlagKey_string", // featureFlagKey
   flagLinkPost,
 ).then(response => {
   console.log(response.body);

@@ -6,7 +6,7 @@ const apiCaller = new api.ApprovalsApi();
 apiCaller.setApiKey(api.ApprovalsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.deleteApprovalRequest(
-  undefined, // id
+  "id_string", // id
 ).catch(error => {
   console.log("Exception when calling ApprovalsApi#deleteApprovalRequest:");
   console.log(error.body);

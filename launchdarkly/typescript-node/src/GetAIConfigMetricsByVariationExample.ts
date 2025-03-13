@@ -6,12 +6,12 @@ const apiCaller = new api.AIConfigsBetaApi();
 apiCaller.setApiKey(api.AIConfigsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getAIConfigMetricsByVariation(
-  undefined, // lDAPIVersion
-  undefined, // projectKey
-  undefined, // configKey
+  "beta", // lDAPIVersion
+  "projectKey_string", // projectKey
+  "configKey_string", // configKey
   123, // from
   456, // to
-  undefined, // env
+  "env_string", // env
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

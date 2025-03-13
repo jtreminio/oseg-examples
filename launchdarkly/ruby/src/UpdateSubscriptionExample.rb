@@ -15,8 +15,8 @@ patch_operation = [
 
 begin
     response = LaunchDarklyClient::IntegrationAuditLogSubscriptionsApi.new.update_subscription(
-        nil, # integration_key
-        nil, # id
+        "integrationKey_string", # integration_key
+        "id_string", # id
         patch_operation,
     )
 

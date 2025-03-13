@@ -23,7 +23,13 @@ public class GetInsightGroupsExample
 
         try
         {
-            var response = new InsightsScoresBetaApi(config).getInsightGroups();
+            var response = new InsightsScoresBetaApi(config).getInsightGroups(
+                null, // limit
+                null, // offset
+                null, // sort
+                null, // query
+                null // expand
+            );
 
             System.out.println(response);
         } catch (ApiException e) {

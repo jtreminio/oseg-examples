@@ -23,7 +23,12 @@ public class GetApprovalRequestsExample
 
         try
         {
-            var response = new ApprovalsApi(config).getApprovalRequests();
+            var response = new ApprovalsApi(config).getApprovalRequests(
+                null, // filter
+                null, // expand
+                null, // limit
+                null // offset
+            );
 
             System.out.println(response);
         } catch (ApiException e) {

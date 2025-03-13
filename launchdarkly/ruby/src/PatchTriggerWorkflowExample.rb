@@ -18,10 +18,10 @@ flag_trigger_input.instructions = JSON.parse(<<-EOD
 
 begin
     response = LaunchDarklyClient::FlagTriggersApi.new.patch_trigger_workflow(
-        nil, # project_key
-        nil, # environment_key
-        nil, # feature_flag_key
-        nil, # id
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
+        "featureFlagKey_string", # feature_flag_key
+        "id_string", # id
         flag_trigger_input,
     )
 

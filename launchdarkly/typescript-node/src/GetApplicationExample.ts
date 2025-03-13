@@ -6,7 +6,7 @@ const apiCaller = new api.ApplicationsBetaApi();
 apiCaller.setApiKey(api.ApplicationsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getApplication(
-  undefined, // applicationKey
+  "applicationKey_string", // applicationKey
   undefined, // expand
 ).then(response => {
   console.log(response.body);

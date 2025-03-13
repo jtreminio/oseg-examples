@@ -38,7 +38,6 @@ public class PostHoldoutExample
         holdoutPostRequest.holdoutamount("10");
         holdoutPostRequest.primarymetrickey("metric-key-123abc");
         holdoutPostRequest.prerequisiteflagkey("flag-key-123abc");
-        holdoutPostRequest.maintainerId(null);
         holdoutPostRequest.attributes(List.of (
             "country",
             "device",
@@ -49,8 +48,8 @@ public class PostHoldoutExample
         try
         {
             var response = new HoldoutsBetaApi(config).postHoldout(
-                null, // projectKey
-                null, // environmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
                 holdoutPostRequest
             );
 

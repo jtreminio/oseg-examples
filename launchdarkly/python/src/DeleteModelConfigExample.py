@@ -11,9 +11,9 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.AIConfigsBetaApi(api_client).delete_model_config(
-            ld_api_version=None,
+            ld_api_version="beta",
             project_key="default",
-            model_config_key=None,
+            model_config_key="modelConfigKey_string",
         )
     except ApiException as e:
         print("Exception when calling AIConfigsBetaApi#delete_model_config: %s\n" % e)

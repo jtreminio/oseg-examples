@@ -20,8 +20,8 @@ $patch_operation = [
 
 try {
     $response = (new LaunchDarkly\Client\Api\ReleasesBetaApi(config: $config))->patchReleaseByFlagKey(
-        project_key: null,
-        flag_key: null,
+        project_key: "projectKey_string",
+        flag_key: "flagKey_string",
         patch_operation: $patch_operation,
     );
 

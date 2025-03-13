@@ -19,9 +19,9 @@ public class GetExpiringUserTargetsForSegmentExample
         try
         {
             var response = new SegmentsApi(config).GetExpiringUserTargetsForSegment(
-                projectKey: null,
-                environmentKey: null,
-                segmentKey: null
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                segmentKey: "segmentKey_string"
             );
 
             Console.WriteLine(response);

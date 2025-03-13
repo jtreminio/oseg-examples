@@ -6,9 +6,9 @@ const apiCaller = new api.ApprovalsApi();
 apiCaller.setApiKey(api.ApprovalsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getApprovalsForFlag(
-  undefined, // projectKey
-  undefined, // featureFlagKey
-  undefined, // environmentKey
+  "projectKey_string", // projectKey
+  "featureFlagKey_string", // featureFlagKey
+  "environmentKey_string", // environmentKey
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

@@ -19,8 +19,8 @@ public class DeleteReleasePipelineExample
         try
         {
             new ReleasePipelinesBetaApi(config).DeleteReleasePipeline(
-                projectKey: null,
-                pipelineKey: null
+                projectKey: "projectKey_string",
+                pipelineKey: "pipelineKey_string"
             );
         }
         catch (ApiException e)

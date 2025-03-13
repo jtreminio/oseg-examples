@@ -6,7 +6,7 @@ const apiCaller = new api.WebhooksApi();
 apiCaller.setApiKey(api.WebhooksApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getWebhook(
-  undefined, // id
+  "id_string", // id
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

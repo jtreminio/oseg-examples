@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.AIConfigsBetaApi(api_client).get_ai_configs(
-            ld_api_version=None,
+            ld_api_version="beta",
             project_key="default",
             sort=None,
             limit=None,

@@ -17,16 +17,15 @@ public class PostMigrationSafetyIssuesExample
         config.ApiKey.Add("Authorization", "YOUR_API_KEY");
 
         var flagSempatch = new FlagSempatch(
-            instructions: new List<Dictionary<string, object>>(),
-            comment: null
+            instructions: new List<Dictionary<string, object>>()
         );
 
         try
         {
             var response = new FeatureFlagsApi(config).PostMigrationSafetyIssues(
-                projectKey: null,
-                flagKey: null,
-                environmentKey: null,
+                projectKey: "projectKey_string",
+                flagKey: "flagKey_string",
+                environmentKey: "environmentKey_string",
                 flagSempatch: flagSempatch
             );
 

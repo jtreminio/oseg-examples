@@ -31,8 +31,8 @@ class PatchMetricExample
         try
         {
             val response = MetricsApi().patchMetric(
-                projectKey = null,
-                metricKey = null,
+                projectKey = "projectKey_string",
+                metricKey = "metricKey_string",
                 patchOperation = patchOperation,
             )
 

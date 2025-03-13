@@ -24,8 +24,8 @@ public class DeleteReleaseByFlagKeyExample
         try
         {
             new ReleasesBetaApi(config).deleteReleaseByFlagKey(
-                null, // projectKey
-                null // flagKey
+                "projectKey_string", // projectKey
+                "flagKey_string" // flagKey
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling ReleasesBetaApi#deleteReleaseByFlagKey");

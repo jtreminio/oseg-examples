@@ -24,8 +24,8 @@ public class GetMetricGroupExample
         try
         {
             var response = new MetricsBetaApi(config).getMetricGroup(
-                null, // projectKey
-                null, // metricGroupKey
+                "projectKey_string", // projectKey
+                "metricGroupKey_string", // metricGroupKey
                 null // expand
             );
 

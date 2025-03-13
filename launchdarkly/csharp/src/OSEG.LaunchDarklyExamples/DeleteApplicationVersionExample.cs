@@ -19,8 +19,8 @@ public class DeleteApplicationVersionExample
         try
         {
             new ApplicationsBetaApi(config).DeleteApplicationVersion(
-                applicationKey: null,
-                versionKey: null
+                applicationKey: "applicationKey_string",
+                versionKey: "versionKey_string"
             );
         }
         catch (ApiException e)

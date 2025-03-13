@@ -19,7 +19,7 @@ team_patch_input.comment = "Optional comment about the update"
 
 begin
     response = LaunchDarklyClient::TeamsApi.new.patch_team(
-        nil, # team_key
+        "teamKey_string", # team_key
         team_patch_input,
     )
 

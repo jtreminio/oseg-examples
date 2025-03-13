@@ -14,7 +14,7 @@ const patchOperation = [
 ];
 
 apiCaller.patchOAuthClient(
-  undefined, // clientId
+  "clientId_string", // clientId
   patchOperation,
 ).then(response => {
   console.log(response.body);

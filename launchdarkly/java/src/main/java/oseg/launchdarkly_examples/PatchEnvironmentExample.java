@@ -32,8 +32,8 @@ public class PatchEnvironmentExample
         try
         {
             var response = new EnvironmentsApi(config).patchEnvironment(
-                null, // projectKey
-                null, // environmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
                 patchOperation
             );
 

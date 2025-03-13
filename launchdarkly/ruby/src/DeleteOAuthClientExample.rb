@@ -7,7 +7,7 @@ end
 
 begin
     LaunchDarklyClient::OAuth2ClientsApi.new.delete_o_auth_client(
-        nil, # client_id
+        "clientId_string", # client_id
     )
 rescue LaunchDarklyClient::ApiError => e
     puts "Exception when calling OAuth2ClientsApi#delete_o_auth_client: #{e}"

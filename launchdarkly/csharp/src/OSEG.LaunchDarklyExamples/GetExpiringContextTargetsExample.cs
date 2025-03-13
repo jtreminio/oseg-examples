@@ -19,9 +19,9 @@ public class GetExpiringContextTargetsExample
         try
         {
             var response = new FeatureFlagsApi(config).GetExpiringContextTargets(
-                projectKey: null,
-                environmentKey: null,
-                featureFlagKey: null
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                featureFlagKey: "featureFlagKey_string"
             );
 
             Console.WriteLine(response);

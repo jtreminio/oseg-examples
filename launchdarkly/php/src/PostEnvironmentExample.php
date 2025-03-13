@@ -13,18 +13,11 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 $environment_post = (new LaunchDarkly\Client\Model\EnvironmentPost())
     ->setName("My Environment")
     ->setKey("environment-key-123abc")
-    ->setColor("DADBEE")
-    ->setDefaultTtl(null)
-    ->setSecureMode(null)
-    ->setDefaultTrackEvents(null)
-    ->setConfirmChanges(null)
-    ->setRequireComments(null)
-    ->setCritical(null)
-    ->setTags(null);
+    ->setColor("DADBEE");
 
 try {
     $response = (new LaunchDarkly\Client\Api\EnvironmentsApi(config: $config))->postEnvironment(
-        project_key: null,
+        project_key: "projectKey_string",
         environment_post: $environment_post,
     );
 

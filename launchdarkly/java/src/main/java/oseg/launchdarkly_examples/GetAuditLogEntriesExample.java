@@ -23,7 +23,13 @@ public class GetAuditLogEntriesExample
 
         try
         {
-            var response = new AuditLogApi(config).getAuditLogEntries();
+            var response = new AuditLogApi(config).getAuditLogEntries(
+                null, // before
+                null, // after
+                null, // q
+                null, // limit
+                null // spec
+            );
 
             System.out.println(response);
         } catch (ApiException e) {

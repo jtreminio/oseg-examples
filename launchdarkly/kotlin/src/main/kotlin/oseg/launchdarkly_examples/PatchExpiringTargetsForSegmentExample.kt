@@ -40,9 +40,9 @@ class PatchExpiringTargetsForSegmentExample
         try
         {
             val response = SegmentsApi().patchExpiringTargetsForSegment(
-                projectKey = null,
-                environmentKey = null,
-                segmentKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                segmentKey = "segmentKey_string",
                 patchSegmentExpiringTargetInputRep = patchSegmentExpiringTargetInputRep,
             )
 

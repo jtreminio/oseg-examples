@@ -24,8 +24,8 @@ public class GetMetricExample
         try
         {
             var response = new MetricsApi(config).getMetric(
-                null, // projectKey
-                null, // metricKey
+                "projectKey_string", // projectKey
+                "metricKey_string", // metricKey
                 null, // expand
                 null // versionId
             );

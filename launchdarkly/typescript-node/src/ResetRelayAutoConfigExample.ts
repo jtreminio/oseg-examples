@@ -6,7 +6,7 @@ const apiCaller = new api.RelayProxyConfigurationsApi();
 apiCaller.setApiKey(api.RelayProxyConfigurationsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.resetRelayAutoConfig(
-  undefined, // id
+  "id_string", // id
   undefined, // expiry
 ).then(response => {
   console.log(response.body);

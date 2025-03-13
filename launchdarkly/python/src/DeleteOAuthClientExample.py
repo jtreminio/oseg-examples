@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.OAuth2ClientsApi(api_client).delete_o_auth_client(
-            client_id=None,
+            client_id="clientId_string",
         )
     except ApiException as e:
         print("Exception when calling OAuth2ClientsApi#delete_o_auth_client: %s\n" % e)

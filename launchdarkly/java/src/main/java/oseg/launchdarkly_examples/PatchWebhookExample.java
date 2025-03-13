@@ -32,7 +32,7 @@ public class PatchWebhookExample
         try
         {
             var response = new WebhooksApi(config).patchWebhook(
-                null, // id
+                "id_string", // id
                 patchOperation
             );
 

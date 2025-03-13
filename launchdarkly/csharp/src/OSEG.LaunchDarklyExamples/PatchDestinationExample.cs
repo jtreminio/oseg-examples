@@ -29,9 +29,9 @@ public class PatchDestinationExample
         try
         {
             var response = new DataExportDestinationsApi(config).PatchDestination(
-                projectKey: null,
-                environmentKey: null,
-                id: null,
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                id: "id_string",
                 patchOperation: patchOperation
             );
 

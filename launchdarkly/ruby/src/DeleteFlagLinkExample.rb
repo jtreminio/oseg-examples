@@ -7,9 +7,9 @@ end
 
 begin
     LaunchDarklyClient::FlagLinksBetaApi.new.delete_flag_link(
-        nil, # project_key
-        nil, # feature_flag_key
-        nil, # id
+        "projectKey_string", # project_key
+        "featureFlagKey_string", # feature_flag_key
+        "id_string", # id
     )
 rescue LaunchDarklyClient::ApiError => e
     puts "Exception when calling FlagLinksBetaApi#delete_flag_link: #{e}"

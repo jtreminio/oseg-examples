@@ -31,8 +31,8 @@ class UpdateSubscriptionExample
         try
         {
             val response = IntegrationAuditLogSubscriptionsApi().updateSubscription(
-                integrationKey = null,
-                id = null,
+                integrationKey = "integrationKey_string",
+                id = "id_string",
                 patchOperation = patchOperation,
             )
 

@@ -29,7 +29,7 @@ public class PatchProjectExample
         try
         {
             var response = new ProjectsApi(config).PatchProject(
-                projectKey: null,
+                projectKey: "projectKey_string",
                 patchOperation: patchOperation
             );
 

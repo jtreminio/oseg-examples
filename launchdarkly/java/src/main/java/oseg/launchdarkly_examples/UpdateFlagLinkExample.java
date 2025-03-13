@@ -32,9 +32,9 @@ public class UpdateFlagLinkExample
         try
         {
             var response = new FlagLinksBetaApi(config).updateFlagLink(
-                null, // projectKey
-                null, // featureFlagKey
-                null, // id
+                "projectKey_string", // projectKey
+                "featureFlagKey_string", // featureFlagKey
+                "id_string", // id
                 patchOperation
             );
 

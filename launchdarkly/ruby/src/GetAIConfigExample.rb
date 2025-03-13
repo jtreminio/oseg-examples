@@ -7,9 +7,9 @@ end
 
 begin
     response = LaunchDarklyClient::AIConfigsBetaApi.new.get_ai_config(
-        nil, # ld_api_version
-        nil, # project_key
-        nil, # config_key
+        "beta", # ld_api_version
+        "projectKey_string", # project_key
+        "configKey_string", # config_key
     )
 
     p response

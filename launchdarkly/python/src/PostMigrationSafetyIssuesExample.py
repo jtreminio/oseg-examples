@@ -11,14 +11,13 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     flag_sempatch = models.FlagSempatch(
         instructions=[],
-        comment=None,
     )
 
     try:
         response = api.FeatureFlagsApi(api_client).post_migration_safety_issues(
-            project_key=None,
-            flag_key=None,
-            environment_key=None,
+            project_key="projectKey_string",
+            flag_key="flagKey_string",
+            environment_key="environmentKey_string",
             flag_sempatch=flag_sempatch,
         )
 

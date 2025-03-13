@@ -7,8 +7,8 @@ end
 
 begin
     response = LaunchDarklyClient::FlagLinksBetaApi.new.get_flag_links(
-        nil, # project_key
-        nil, # feature_flag_key
+        "projectKey_string", # project_key
+        "featureFlagKey_string", # feature_flag_key
     )
 
     p response

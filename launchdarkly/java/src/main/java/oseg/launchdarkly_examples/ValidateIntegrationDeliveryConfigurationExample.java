@@ -24,10 +24,10 @@ public class ValidateIntegrationDeliveryConfigurationExample
         try
         {
             var response = new IntegrationDeliveryConfigurationsBetaApi(config).validateIntegrationDeliveryConfiguration(
-                null, // projectKey
-                null, // environmentKey
-                null, // integrationKey
-                null // id
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "integrationKey_string", // integrationKey
+                "id_string" // id
             );
 
             System.out.println(response);

@@ -22,9 +22,9 @@ const patchWithComment = new models.PatchWithComment();
 patchWithComment.patch = patch;
 
 apiCaller.patchSegment(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // segmentKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "segmentKey_string", // segmentKey
   patchWithComment,
 ).then(response => {
   console.log(response.body);

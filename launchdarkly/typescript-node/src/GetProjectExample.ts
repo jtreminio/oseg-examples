@@ -6,7 +6,7 @@ const apiCaller = new api.ProjectsApi();
 apiCaller.setApiKey(api.ProjectsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getProject(
-  undefined, // projectKey
+  "projectKey_string", // projectKey
   undefined, // expand
 ).then(response => {
   console.log(response.body);

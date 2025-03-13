@@ -16,10 +16,10 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.ApprovalsApi(api_client).post_approval_request_review_for_flag(
-            project_key=None,
-            feature_flag_key=None,
-            environment_key=None,
-            id=None,
+            project_key="projectKey_string",
+            feature_flag_key="featureFlagKey_string",
+            environment_key="environmentKey_string",
+            id="id_string",
             post_approval_request_review_request=post_approval_request_review_request,
         )
 

@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.IntegrationAuditLogSubscriptionsApi(api_client).get_subscriptions(
-            integration_key=None,
+            integration_key="integrationKey_string",
         )
 
         pprint(response)

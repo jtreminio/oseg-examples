@@ -7,9 +7,9 @@ end
 
 begin
     response = LaunchDarklyClient::HoldoutsBetaApi.new.get_holdout_by_id(
-        nil, # project_key
-        nil, # environment_key
-        nil, # holdout_id
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
+        "holdoutId_string", # holdout_id
     )
 
     p response

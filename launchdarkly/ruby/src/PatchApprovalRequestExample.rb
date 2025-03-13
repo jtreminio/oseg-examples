@@ -7,7 +7,7 @@ end
 
 begin
     response = LaunchDarklyClient::ApprovalsBetaApi.new.patch_approval_request(
-        nil, # id
+        "id_string", # id
     )
 
     p response

@@ -14,7 +14,7 @@ const patchOperation = [
 ];
 
 apiCaller.patchInsightGroup(
-  undefined, // insightGroupKey
+  "insightGroupKey_string", // insightGroupKey
   patchOperation,
 ).then(response => {
   console.log(response.body);

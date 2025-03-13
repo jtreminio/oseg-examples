@@ -19,7 +19,7 @@ public class GetExperimentationSettingsExample
         try
         {
             var response = new ExperimentsApi(config).GetExperimentationSettings(
-                projectKey: null
+                projectKey: "projectKey_string"
             );
 
             Console.WriteLine(response);

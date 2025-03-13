@@ -7,9 +7,9 @@ end
 
 begin
     response = LaunchDarklyClient::DataExportDestinationsApi.new.get_destination(
-        nil, # project_key
-        nil, # environment_key
-        nil, # id
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
+        "id_string", # id
     )
 
     p response

@@ -20,7 +20,7 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.CodeReferencesApi(api_client).patch_repository(
-            repo=None,
+            repo="repo_string",
             patch_operation=patch_operation,
         )
 

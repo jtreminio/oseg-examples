@@ -16,8 +16,8 @@ segmentBody.tags = [
 ];
 
 apiCaller.postSegment(
-  undefined, // projectKey
-  undefined, // environmentKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
   segmentBody,
 ).then(response => {
   console.log(response.body);

@@ -31,7 +31,7 @@ class PatchWebhookExample
         try
         {
             val response = WebhooksApi().patchWebhook(
-                id = null,
+                id = "id_string",
                 patchOperation = patchOperation,
             )
 

@@ -12,8 +12,8 @@ contextSearch.limit = 10;
 contextSearch.continuationToken = "QAGFKH1313KUGI2351";
 
 apiCaller.searchContexts(
-  undefined, // projectKey
-  undefined, // environmentKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
   contextSearch,
   undefined, // limit
   undefined, // continuationToken

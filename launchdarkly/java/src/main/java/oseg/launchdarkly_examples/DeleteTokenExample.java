@@ -24,7 +24,7 @@ public class DeleteTokenExample
         try
         {
             new AccessTokensApi(config).deleteToken(
-                null // id
+                "id_string" // id
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling AccessTokensApi#deleteToken");

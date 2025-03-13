@@ -7,8 +7,8 @@ end
 
 begin
     response = LaunchDarklyClient::ContextsApi.new.evaluate_context_instance(
-        nil, # project_key
-        nil, # environment_key
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
         JSON.parse(<<-EOD
             {
                 "key": "user-key-123abc",

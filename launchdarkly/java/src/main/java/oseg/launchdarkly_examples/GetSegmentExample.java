@@ -24,9 +24,9 @@ public class GetSegmentExample
         try
         {
             var response = new SegmentsApi(config).getSegment(
-                null, // projectKey
-                null, // environmentKey
-                null // segmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "segmentKey_string" // segmentKey
             );
 
             System.out.println(response);

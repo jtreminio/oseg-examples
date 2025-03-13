@@ -24,9 +24,9 @@ public class GetEvaluationsUsageExample
         try
         {
             var response = new AccountUsageBetaApi(config).getEvaluationsUsage(
-                null, // projectKey
-                null, // environmentKey
-                null, // featureFlagKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "featureFlagKey_string", // featureFlagKey
                 null, // from
                 null, // to
                 null // tz

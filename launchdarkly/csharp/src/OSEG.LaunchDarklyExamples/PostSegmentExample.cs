@@ -30,8 +30,8 @@ public class PostSegmentExample
         try
         {
             var response = new SegmentsApi(config).PostSegment(
-                projectKey: null,
-                environmentKey: null,
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
                 segmentBody: segmentBody
             );
 

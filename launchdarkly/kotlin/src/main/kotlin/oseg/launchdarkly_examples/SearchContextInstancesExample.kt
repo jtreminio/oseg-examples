@@ -29,8 +29,8 @@ class SearchContextInstancesExample
         try
         {
             val response = ContextsApi().searchContextInstances(
-                projectKey = null,
-                environmentKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
                 contextInstanceSearch = contextInstanceSearch,
                 limit = null,
                 continuationToken = null,

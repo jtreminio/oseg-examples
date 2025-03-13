@@ -22,9 +22,6 @@ public class CreateOAuth2ClientExample
         ((ApiKeyAuth) config.getAuthentication("ApiKey")).setApiKey("YOUR_API_KEY");
 
         var oauthClientPost = new OauthClientPost();
-        oauthClientPost.name(null);
-        oauthClientPost.redirectUri(null);
-        oauthClientPost.description(null);
 
         try
         {

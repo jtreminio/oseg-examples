@@ -24,7 +24,7 @@ public class GetPullRequestsExample
         try
         {
             var response = new InsightsPullRequestsBetaApi(config).getPullRequests(
-                null, // projectKey
+                "projectKey_string", // projectKey
                 null, // environmentKey
                 null, // applicationKey
                 null, // status
@@ -32,8 +32,8 @@ public class GetPullRequestsExample
                 null, // limit
                 null, // expand
                 null, // sort
-                OffsetDateTime.parse("None"), // from
-                OffsetDateTime.parse("None"), // to
+                null, // from
+                null, // to
                 null, // after
                 null // before
             );

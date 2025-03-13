@@ -6,7 +6,7 @@ const apiCaller = new api.OAuth2ClientsApi();
 apiCaller.setApiKey(api.OAuth2ClientsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getOAuthClientById(
-  undefined, // clientId
+  "clientId_string", // clientId
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

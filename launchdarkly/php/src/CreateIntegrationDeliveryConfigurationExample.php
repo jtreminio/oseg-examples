@@ -25,9 +25,9 @@ $integration_delivery_configuration_post = (new LaunchDarkly\Client\Model\Integr
 
 try {
     $response = (new LaunchDarkly\Client\Api\IntegrationDeliveryConfigurationsBetaApi(config: $config))->createIntegrationDeliveryConfiguration(
-        project_key: null,
-        environment_key: null,
-        integration_key: null,
+        project_key: "projectKey_string",
+        environment_key: "environmentKey_string",
+        integration_key: "integrationKey_string",
         integration_delivery_configuration_post: $integration_delivery_configuration_post,
     );
 

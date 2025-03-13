@@ -22,7 +22,6 @@ holdout_post_request.randomizationunit = "user"
 holdout_post_request.holdoutamount = "10"
 holdout_post_request.primarymetrickey = "metric-key-123abc"
 holdout_post_request.prerequisiteflagkey = "flag-key-123abc"
-holdout_post_request.maintainer_id = nil
 holdout_post_request.attributes = [
     "country",
     "device",
@@ -32,8 +31,8 @@ holdout_post_request.metrics = metrics
 
 begin
     response = LaunchDarklyClient::HoldoutsBetaApi.new.post_holdout(
-        nil, # project_key
-        nil, # environment_key
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
         holdout_post_request,
     )
 

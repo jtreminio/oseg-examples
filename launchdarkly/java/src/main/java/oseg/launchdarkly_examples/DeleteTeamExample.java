@@ -24,7 +24,7 @@ public class DeleteTeamExample
         try
         {
             new TeamsApi(config).deleteTeam(
-                null // teamKey
+                "teamKey_string" // teamKey
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling TeamsApi#deleteTeam");

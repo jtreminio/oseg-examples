@@ -17,7 +17,7 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.EnvironmentsApi(api_client).post_environment(
-            project_key=None,
+            project_key="projectKey_string",
             environment_post=environment_post,
         )
 

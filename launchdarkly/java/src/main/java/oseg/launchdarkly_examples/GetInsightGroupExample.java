@@ -24,7 +24,7 @@ public class GetInsightGroupExample
         try
         {
             var response = new InsightsScoresBetaApi(config).getInsightGroup(
-                null, // insightGroupKey
+                "insightGroupKey_string", // insightGroupKey
                 null // expand
             );
 

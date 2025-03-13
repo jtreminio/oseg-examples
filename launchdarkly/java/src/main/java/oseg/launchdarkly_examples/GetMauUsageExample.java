@@ -23,7 +23,18 @@ public class GetMauUsageExample
 
         try
         {
-            var response = new AccountUsageBetaApi(config).getMauUsage();
+            var response = new AccountUsageBetaApi(config).getMauUsage(
+                null, // from
+                null, // to
+                null, // project
+                null, // environment
+                null, // sdktype
+                null, // sdk
+                null, // anonymous
+                null, // groupby
+                null, // aggregationType
+                null // contextKind
+            );
 
             System.out.println(response);
         } catch (ApiException e) {

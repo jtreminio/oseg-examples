@@ -22,9 +22,9 @@ class GetExperimentExample
         try
         {
             val response = ExperimentsApi().getExperiment(
-                projectKey = null,
-                environmentKey = null,
-                experimentKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                experimentKey = "experimentKey_string",
                 expand = null,
             )
 

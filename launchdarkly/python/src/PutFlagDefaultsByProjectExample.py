@@ -35,7 +35,7 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.ProjectsApi(api_client).put_flag_defaults_by_project(
-            project_key=None,
+            project_key="projectKey_string",
             upsert_flag_defaults_payload=upsert_flag_defaults_payload,
         )
 

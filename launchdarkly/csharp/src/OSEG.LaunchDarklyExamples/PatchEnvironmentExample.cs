@@ -29,8 +29,8 @@ public class PatchEnvironmentExample
         try
         {
             var response = new EnvironmentsApi(config).PatchEnvironment(
-                projectKey: null,
-                environmentKey: null,
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
                 patchOperation: patchOperation
             );
 

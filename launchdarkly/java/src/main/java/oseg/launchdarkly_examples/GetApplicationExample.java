@@ -24,7 +24,7 @@ public class GetApplicationExample
         try
         {
             var response = new ApplicationsBetaApi(config).getApplication(
-                null, // applicationKey
+                "applicationKey_string", // applicationKey
                 null // expand
             );
 

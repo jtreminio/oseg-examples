@@ -6,9 +6,9 @@ const apiCaller = new api.UserSettingsApi();
 apiCaller.setApiKey(api.UserSettingsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getExpiringFlagsForUser(
-  undefined, // projectKey
-  undefined, // userKey
-  undefined, // environmentKey
+  "projectKey_string", // projectKey
+  "userKey_string", // userKey
+  "environmentKey_string", // environmentKey
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

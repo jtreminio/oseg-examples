@@ -12,7 +12,7 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     $response = (new LaunchDarkly\Client\Api\AccountUsageBetaApi(config: $config))->getStreamUsage(
-        source: null,
+        source: "source_string",
         from: null,
         to: null,
         tz: null,

@@ -15,7 +15,7 @@ patch_operation = [
 
 begin
     response = LaunchDarklyClient::InsightsScoresBetaApi.new.patch_insight_group(
-        nil, # insight_group_key
+        "insightGroupKey_string", # insight_group_key
         patch_operation,
     )
 

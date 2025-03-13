@@ -20,7 +20,7 @@ model_config_post.custom_params = {}
 
 begin
     response = LaunchDarklyClient::AIConfigsBetaApi.new.post_model_config(
-        nil, # ld_api_version
+        "beta", # ld_api_version
         "default", # project_key
         model_config_post,
     )

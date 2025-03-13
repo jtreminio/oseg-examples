@@ -45,9 +45,9 @@ class PostFlagCopyConfigApprovalRequestExample
         try
         {
             val response = ApprovalsApi().postFlagCopyConfigApprovalRequest(
-                projectKey = null,
-                featureFlagKey = null,
-                environmentKey = null,
+                projectKey = "projectKey_string",
+                featureFlagKey = "featureFlagKey_string",
+                environmentKey = "environmentKey_string",
                 createCopyFlagConfigApprovalRequestRequest = createCopyFlagConfigApprovalRequestRequest,
             )
 

@@ -14,7 +14,7 @@ const patchOperation = [
 ];
 
 apiCaller.patchRepository(
-  undefined, // repo
+  "repo_string", // repo
   patchOperation,
 ).then(response => {
   console.log(response.body);

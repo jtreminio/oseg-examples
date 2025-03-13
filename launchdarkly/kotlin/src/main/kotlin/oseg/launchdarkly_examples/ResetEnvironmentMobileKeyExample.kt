@@ -22,8 +22,8 @@ class ResetEnvironmentMobileKeyExample
         try
         {
             val response = EnvironmentsApi().resetEnvironmentMobileKey(
-                projectKey = null,
-                environmentKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
             )
 
             println(response)

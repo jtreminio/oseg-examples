@@ -8,10 +8,10 @@ apiCaller.setApiKey(api.LayersApiApiKeys.ApiKey, "YOUR_API_KEY");
 const layerPost = new models.LayerPost();
 layerPost.key = "checkout-flow";
 layerPost.name = "Checkout Flow";
-layerPost.description = undefined;
+layerPost.description = "description_string";
 
 apiCaller.createLayer(
-  undefined, // projectKey
+  "projectKey_string", // projectKey
   layerPost,
 ).then(response => {
   console.log(response.body);

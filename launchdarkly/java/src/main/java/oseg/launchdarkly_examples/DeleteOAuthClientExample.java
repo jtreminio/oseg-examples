@@ -24,7 +24,7 @@ public class DeleteOAuthClientExample
         try
         {
             new OAuth2ClientsApi(config).deleteOAuthClient(
-                null // clientId
+                "clientId_string" // clientId
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling OAuth2ClientsApi#deleteOAuthClient");

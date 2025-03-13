@@ -23,7 +23,10 @@ public class GetMauUsageByCategoryExample
 
         try
         {
-            var response = new AccountUsageBetaApi(config).getMauUsageByCategory();
+            var response = new AccountUsageBetaApi(config).getMauUsageByCategory(
+                null, // from
+                null // to
+            );
 
             System.out.println(response);
         } catch (ApiException e) {

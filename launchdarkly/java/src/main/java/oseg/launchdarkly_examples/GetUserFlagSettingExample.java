@@ -24,10 +24,10 @@ public class GetUserFlagSettingExample
         try
         {
             var response = new UserSettingsApi(config).getUserFlagSetting(
-                null, // projectKey
-                null, // environmentKey
-                null, // userKey
-                null // featureFlagKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "userKey_string", // userKey
+                "featureFlagKey_string" // featureFlagKey
             );
 
             System.out.println(response);

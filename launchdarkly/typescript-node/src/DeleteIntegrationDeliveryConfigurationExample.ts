@@ -6,10 +6,10 @@ const apiCaller = new api.IntegrationDeliveryConfigurationsBetaApi();
 apiCaller.setApiKey(api.IntegrationDeliveryConfigurationsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.deleteIntegrationDeliveryConfiguration(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // integrationKey
-  undefined, // id
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "integrationKey_string", // integrationKey
+  "id_string", // id
 ).catch(error => {
   console.log("Exception when calling IntegrationDeliveryConfigurationsBetaApi#deleteIntegrationDeliveryConfiguration:");
   console.log(error.body);

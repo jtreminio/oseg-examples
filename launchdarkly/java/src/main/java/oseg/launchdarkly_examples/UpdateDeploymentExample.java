@@ -32,7 +32,7 @@ public class UpdateDeploymentExample
         try
         {
             var response = new InsightsDeploymentsBetaApi(config).updateDeployment(
-                null, // deploymentID
+                "deploymentID_string", // deploymentID
                 patchOperation
             );
 

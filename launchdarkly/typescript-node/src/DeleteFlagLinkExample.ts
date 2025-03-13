@@ -6,9 +6,9 @@ const apiCaller = new api.FlagLinksBetaApi();
 apiCaller.setApiKey(api.FlagLinksBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.deleteFlagLink(
-  undefined, // projectKey
-  undefined, // featureFlagKey
-  undefined, // id
+  "projectKey_string", // projectKey
+  "featureFlagKey_string", // featureFlagKey
+  "id_string", // id
 ).catch(error => {
   console.log("Exception when calling FlagLinksBetaApi#deleteFlagLink:");
   console.log(error.body);

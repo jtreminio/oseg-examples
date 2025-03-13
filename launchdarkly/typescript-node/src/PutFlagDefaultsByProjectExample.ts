@@ -27,7 +27,7 @@ upsertFlagDefaultsPayload.booleanDefaults = booleanDefaults;
 upsertFlagDefaultsPayload.defaultClientSideAvailability = defaultClientSideAvailability;
 
 apiCaller.putFlagDefaultsByProject(
-  undefined, // projectKey
+  "projectKey_string", // projectKey
   upsertFlagDefaultsPayload,
 ).then(response => {
   console.log(response.body);

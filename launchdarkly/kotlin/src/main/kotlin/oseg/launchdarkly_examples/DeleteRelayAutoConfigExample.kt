@@ -22,7 +22,7 @@ class DeleteRelayAutoConfigExample
         try
         {
             RelayProxyConfigurationsApi().deleteRelayAutoConfig(
-                id = null,
+                id = "id_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling RelayProxyConfigurationsApi#deleteRelayAutoConfig")

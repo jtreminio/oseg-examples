@@ -34,8 +34,8 @@ public class PostSegmentExample
         try
         {
             var response = new SegmentsApi(config).postSegment(
-                null, // projectKey
-                null, // environmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
                 segmentBody
             );
 

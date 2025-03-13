@@ -14,9 +14,9 @@ const patchOperation = [
 ];
 
 apiCaller.patchDestination(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // id
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "id_string", // id
   patchOperation,
 ).then(response => {
   console.log(response.body);

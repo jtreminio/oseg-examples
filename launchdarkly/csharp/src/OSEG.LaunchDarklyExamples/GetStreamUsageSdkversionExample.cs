@@ -19,7 +19,7 @@ public class GetStreamUsageSdkversionExample
         try
         {
             var response = new AccountUsageBetaApi(config).GetStreamUsageSdkversion(
-                source: null
+                source: "source_string"
             );
 
             Console.WriteLine(response);

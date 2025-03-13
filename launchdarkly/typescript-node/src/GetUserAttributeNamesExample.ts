@@ -6,8 +6,8 @@ const apiCaller = new api.UsersBetaApi();
 apiCaller.setApiKey(api.UsersBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getUserAttributeNames(
-  undefined, // projectKey
-  undefined, // environmentKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

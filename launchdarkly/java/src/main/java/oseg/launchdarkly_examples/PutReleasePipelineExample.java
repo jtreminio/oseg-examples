@@ -28,7 +28,7 @@ public class PutReleasePipelineExample
         phases1Audiences1ConfigurationReleaseGuardianConfiguration.randomizationUnit("user");
 
         var phases1Audiences1Configuration = new AudienceConfiguration();
-        phases1Audiences1Configuration.releaseStrategy(null);
+        phases1Audiences1Configuration.releaseStrategy("releaseStrategy_string");
         phases1Audiences1Configuration.requireApproval(true);
         phases1Audiences1Configuration.notifyMemberIds(List.of (
             "1234a56b7c89d012345e678f"
@@ -39,8 +39,8 @@ public class PutReleasePipelineExample
         phases1Audiences1Configuration.releaseGuardianConfiguration(phases1Audiences1ConfigurationReleaseGuardianConfiguration);
 
         var phases1Audiences1 = new AudiencePost();
-        phases1Audiences1.environmentKey(null);
-        phases1Audiences1.name(null);
+        phases1Audiences1.environmentKey("environmentKey_string");
+        phases1Audiences1.name("name_string");
         phases1Audiences1.segmentKeys(List.of ());
         phases1Audiences1._configuration(phases1Audiences1Configuration);
 
@@ -67,8 +67,8 @@ public class PutReleasePipelineExample
         try
         {
             var response = new ReleasePipelinesBetaApi(config).putReleasePipeline(
-                null, // projectKey
-                null, // pipelineKey
+                "projectKey_string", // projectKey
+                "pipelineKey_string", // pipelineKey
                 updateReleasePipelineInput
             );
 

@@ -24,7 +24,7 @@ public class GetTokenExample
         try
         {
             var response = new AccessTokensApi(config).getToken(
-                null // id
+                "id_string" // id
             );
 
             System.out.println(response);

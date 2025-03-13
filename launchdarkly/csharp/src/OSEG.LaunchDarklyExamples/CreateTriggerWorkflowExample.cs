@@ -31,9 +31,9 @@ public class CreateTriggerWorkflowExample
         try
         {
             var response = new FlagTriggersApi(config).CreateTriggerWorkflow(
-                projectKey: null,
-                environmentKey: null,
-                featureFlagKey: null,
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                featureFlagKey: "featureFlagKey_string",
                 triggerPost: triggerPost
             );
 

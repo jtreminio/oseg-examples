@@ -24,7 +24,7 @@ public class PutReleasePipelineExample
         );
 
         var phases1Audiences1Configuration = new AudienceConfiguration(
-            releaseStrategy: null,
+            releaseStrategy: "releaseStrategy_string",
             requireApproval: true,
             notifyMemberIds: [
                 "1234a56b7c89d012345e678f",
@@ -36,8 +36,8 @@ public class PutReleasePipelineExample
         );
 
         var phases1Audiences1 = new AudiencePost(
-            environmentKey: null,
-            name: null,
+            environmentKey: "environmentKey_string",
+            name: "name_string",
             segmentKeys: [
             ],
             varConfiguration: phases1Audiences1Configuration
@@ -70,8 +70,8 @@ public class PutReleasePipelineExample
         try
         {
             var response = new ReleasePipelinesBetaApi(config).PutReleasePipeline(
-                projectKey: null,
-                pipelineKey: null,
+                projectKey: "projectKey_string",
+                pipelineKey: "pipelineKey_string",
                 updateReleasePipelineInput: updateReleasePipelineInput
             );
 

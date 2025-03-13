@@ -36,8 +36,8 @@ class UpdateLayerExample
         try
         {
             val response = LayersApi().updateLayer(
-                projectKey = null,
-                layerKey = null,
+                projectKey = "projectKey_string",
+                layerKey = "layerKey_string",
                 layerPatchInput = layerPatchInput,
             )
 

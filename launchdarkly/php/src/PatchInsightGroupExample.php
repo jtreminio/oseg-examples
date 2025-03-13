@@ -20,7 +20,7 @@ $patch_operation = [
 
 try {
     $response = (new LaunchDarkly\Client\Api\InsightsScoresBetaApi(config: $config))->patchInsightGroup(
-        insight_group_key: null,
+        insight_group_key: "insightGroupKey_string",
         patch_operation: $patch_operation,
     );
 

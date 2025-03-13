@@ -27,10 +27,10 @@ public class PutFlagSettingExample
         try
         {
             new UserSettingsApi(config).putFlagSetting(
-                null, // projectKey
-                null, // environmentKey
-                null, // userKey
-                null, // featureFlagKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "userKey_string", // userKey
+                "featureFlagKey_string", // featureFlagKey
                 valuePut
             );
         } catch (ApiException e) {

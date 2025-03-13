@@ -24,8 +24,8 @@ public class GetBranchExample
         try
         {
             var response = new CodeReferencesApi(config).getBranch(
-                null, // repo
-                null, // branch
+                "repo_string", // repo
+                "branch_string", // branch
                 null, // projKey
                 null // flagKey
             );

@@ -24,10 +24,10 @@ public class GetCustomWorkflowExample
         try
         {
             var response = new WorkflowsApi(config).getCustomWorkflow(
-                null, // projectKey
-                null, // featureFlagKey
-                null, // environmentKey
-                null // workflowId
+                "projectKey_string", // projectKey
+                "featureFlagKey_string", // featureFlagKey
+                "environmentKey_string", // environmentKey
+                "workflowId_string" // workflowId
             );
 
             System.out.println(response);

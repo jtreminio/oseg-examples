@@ -33,14 +33,13 @@ public class PostApprovalRequestForFlagExample
         createFlagConfigApprovalRequestRequest.notifyTeamKeys(List.of (
             "example-reviewer-team"
         ));
-        createFlagConfigApprovalRequestRequest.integrationConfig(null);
 
         try
         {
             var response = new ApprovalsApi(config).postApprovalRequestForFlag(
-                null, // projectKey
-                null, // featureFlagKey
-                null, // environmentKey
+                "projectKey_string", // projectKey
+                "featureFlagKey_string", // featureFlagKey
+                "environmentKey_string", // environmentKey
                 createFlagConfigApprovalRequestRequest
             );
 

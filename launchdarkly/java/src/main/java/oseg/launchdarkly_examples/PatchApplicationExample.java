@@ -32,7 +32,7 @@ public class PatchApplicationExample
         try
         {
             var response = new ApplicationsBetaApi(config).patchApplication(
-                null, // applicationKey
+                "applicationKey_string", // applicationKey
                 patchOperation
             );
 

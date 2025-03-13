@@ -6,10 +6,10 @@ const apiCaller = new api.IntegrationDeliveryConfigurationsBetaApi();
 apiCaller.setApiKey(api.IntegrationDeliveryConfigurationsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.validateIntegrationDeliveryConfiguration(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // integrationKey
-  undefined, // id
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "integrationKey_string", // integrationKey
+  "id_string", // id
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

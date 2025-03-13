@@ -11,10 +11,10 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.IntegrationDeliveryConfigurationsBetaApi(api_client).delete_integration_delivery_configuration(
-            project_key=None,
-            environment_key=None,
-            integration_key=None,
-            id=None,
+            project_key="projectKey_string",
+            environment_key="environmentKey_string",
+            integration_key="integrationKey_string",
+            id="id_string",
         )
     except ApiException as e:
         print("Exception when calling IntegrationDeliveryConfigurationsBetaApi#delete_integration_delivery_configuration: %s\n" % e)

@@ -12,9 +12,9 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     $response = (new LaunchDarkly\Client\Api\HoldoutsBetaApi(config: $config))->getHoldout(
-        project_key: null,
-        environment_key: null,
-        holdout_key: null,
+        project_key: "projectKey_string",
+        environment_key: "environmentKey_string",
+        holdout_key: "holdoutKey_string",
         expand: null,
     );
 

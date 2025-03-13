@@ -19,8 +19,8 @@ $upsert_context_kind_payload = (new LaunchDarkly\Client\Model\UpsertContextKindP
 
 try {
     $response = (new LaunchDarkly\Client\Api\ContextsApi(config: $config))->putContextKind(
-        project_key: null,
-        key: null,
+        project_key: "projectKey_string",
+        key: "key_string",
         upsert_context_kind_payload: $upsert_context_kind_payload,
     );
 

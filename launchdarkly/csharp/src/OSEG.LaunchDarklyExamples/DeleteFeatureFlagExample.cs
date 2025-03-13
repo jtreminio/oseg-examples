@@ -19,8 +19,8 @@ public class DeleteFeatureFlagExample
         try
         {
             new FeatureFlagsApi(config).DeleteFeatureFlag(
-                projectKey: null,
-                featureFlagKey: null
+                projectKey: "projectKey_string",
+                featureFlagKey: "featureFlagKey_string"
             );
         }
         catch (ApiException e)

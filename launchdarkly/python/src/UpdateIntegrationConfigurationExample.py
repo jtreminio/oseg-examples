@@ -20,7 +20,7 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.IntegrationsBetaApi(api_client).update_integration_configuration(
-            integration_configuration_id=None,
+            integration_configuration_id="integrationConfigurationId_string",
             patch_operation=patch_operation,
         )
 

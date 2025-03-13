@@ -17,12 +17,11 @@ createFlagConfigApprovalRequestRequest.notifyMemberIds = [
 createFlagConfigApprovalRequestRequest.notifyTeamKeys = [
   "example-reviewer-team",
 ];
-createFlagConfigApprovalRequestRequest.integrationConfig = undefined;
 
 apiCaller.postApprovalRequestForFlag(
-  undefined, // projectKey
-  undefined, // featureFlagKey
-  undefined, // environmentKey
+  "projectKey_string", // projectKey
+  "featureFlagKey_string", // featureFlagKey
+  "environmentKey_string", // environmentKey
   createFlagConfigApprovalRequestRequest,
 ).then(response => {
   console.log(response.body);

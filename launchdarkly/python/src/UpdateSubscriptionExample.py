@@ -20,8 +20,8 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.IntegrationAuditLogSubscriptionsApi(api_client).update_subscription(
-            integration_key=None,
-            id=None,
+            integration_key="integrationKey_string",
+            id="id_string",
             patch_operation=patch_operation,
         )
 

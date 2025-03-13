@@ -19,9 +19,9 @@ trigger_post.instructions = JSON.parse(<<-EOD
 
 begin
     response = LaunchDarklyClient::FlagTriggersApi.new.create_trigger_workflow(
-        nil, # project_key
-        nil, # environment_key
-        nil, # feature_flag_key
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
+        "featureFlagKey_string", # feature_flag_key
         trigger_post,
     )
 

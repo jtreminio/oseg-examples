@@ -32,8 +32,8 @@ public class PatchMetricGroupExample
         try
         {
             var response = new MetricsBetaApi(config).patchMetricGroup(
-                null, // projectKey
-                null, // metricGroupKey
+                "projectKey_string", // projectKey
+                "metricGroupKey_string", // metricGroupKey
                 patchOperation
             );
 

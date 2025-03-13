@@ -22,7 +22,7 @@ class GetApplicationExample
         try
         {
             val response = ApplicationsBetaApi().getApplication(
-                applicationKey = null,
+                applicationKey = "applicationKey_string",
                 expand = null,
             )
 

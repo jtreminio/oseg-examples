@@ -24,8 +24,8 @@ public class GetSearchUsersExample
         try
         {
             var response = new UsersApi(config).getSearchUsers(
-                null, // projectKey
-                null, // environmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
                 null, // q
                 null, // limit
                 null, // offset

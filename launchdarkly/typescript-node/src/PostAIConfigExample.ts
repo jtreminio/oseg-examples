@@ -15,8 +15,8 @@ aIConfigPost.tags = [
 ];
 
 apiCaller.postAIConfig(
-  undefined, // lDAPIVersion
-  undefined, // projectKey
+  models.AIConfigPost.LDAPIVersionEnum.Beta, // lDAPIVersion
+  "projectKey_string", // projectKey
   aIConfigPost,
 ).then(response => {
   console.log(response.body);

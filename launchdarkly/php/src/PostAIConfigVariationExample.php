@@ -32,9 +32,9 @@ $ai_config_variation_post = (new LaunchDarkly\Client\Model\AIConfigVariationPost
 
 try {
     $response = (new LaunchDarkly\Client\Api\AIConfigsBetaApi(config: $config))->postAIConfigVariation(
-        ld_api_version: null,
-        project_key: null,
-        config_key: null,
+        ld_api_version: LaunchDarkly\Client\Model\AIConfigVariationPost::LD_API_VERSION_BETA,
+        project_key: "projectKey_string",
+        config_key: "configKey_string",
         ai_config_variation_post: $ai_config_variation_post,
     );
 

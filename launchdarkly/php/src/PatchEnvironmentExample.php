@@ -20,8 +20,8 @@ $patch_operation = [
 
 try {
     $response = (new LaunchDarkly\Client\Api\EnvironmentsApi(config: $config))->patchEnvironment(
-        project_key: null,
-        environment_key: null,
+        project_key: "projectKey_string",
+        environment_key: "environmentKey_string",
         patch_operation: $patch_operation,
     );
 

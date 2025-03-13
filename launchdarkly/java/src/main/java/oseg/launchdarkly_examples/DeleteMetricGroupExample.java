@@ -24,8 +24,8 @@ public class DeleteMetricGroupExample
         try
         {
             new MetricsBetaApi(config).deleteMetricGroup(
-                null, // projectKey
-                null // metricGroupKey
+                "projectKey_string", // projectKey
+                "metricGroupKey_string" // metricGroupKey
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling MetricsBetaApi#deleteMetricGroup");

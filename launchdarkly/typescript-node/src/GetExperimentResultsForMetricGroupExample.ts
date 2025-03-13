@@ -6,10 +6,10 @@ const apiCaller = new api.ExperimentsApi();
 apiCaller.setApiKey(api.ExperimentsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getExperimentResultsForMetricGroup(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // experimentKey
-  undefined, // metricGroupKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "experimentKey_string", // experimentKey
+  "metricGroupKey_string", // metricGroupKey
   undefined, // iterationId
 ).then(response => {
   console.log(response.body);

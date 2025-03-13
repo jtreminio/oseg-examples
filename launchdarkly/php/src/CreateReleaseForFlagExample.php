@@ -11,13 +11,12 @@ $config = LaunchDarkly\Client\Configuration::getDefaultConfiguration();
 $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 $create_release_input = (new LaunchDarkly\Client\Model\CreateReleaseInput())
-    ->setReleasePipelineKey(null)
-    ->setReleaseVariationId(null);
+    ->setReleasePipelineKey("releasePipelineKey_string");
 
 try {
     $response = (new LaunchDarkly\Client\Api\ReleasesBetaApi(config: $config))->createReleaseForFlag(
-        project_key: null,
-        flag_key: null,
+        project_key: "projectKey_string",
+        flag_key: "flagKey_string",
         create_release_input: $create_release_input,
     );
 

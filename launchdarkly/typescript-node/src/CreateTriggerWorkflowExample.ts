@@ -15,9 +15,9 @@ triggerPost.instructions = [
 ];
 
 apiCaller.createTriggerWorkflow(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // featureFlagKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "featureFlagKey_string", // featureFlagKey
   triggerPost,
 ).then(response => {
   console.log(response.body);

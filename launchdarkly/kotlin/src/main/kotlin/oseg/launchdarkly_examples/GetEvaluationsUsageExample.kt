@@ -22,9 +22,9 @@ class GetEvaluationsUsageExample
         try
         {
             val response = AccountUsageBetaApi().getEvaluationsUsage(
-                projectKey = null,
-                environmentKey = null,
-                featureFlagKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                featureFlagKey = "featureFlagKey_string",
                 from = null,
                 to = null,
                 tz = null,

@@ -19,8 +19,8 @@ public class DeleteEnvironmentExample
         try
         {
             new EnvironmentsApi(config).DeleteEnvironment(
-                projectKey: null,
-                environmentKey: null
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string"
             );
         }
         catch (ApiException e)

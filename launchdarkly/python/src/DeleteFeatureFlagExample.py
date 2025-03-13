@@ -11,8 +11,8 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.FeatureFlagsApi(api_client).delete_feature_flag(
-            project_key=None,
-            feature_flag_key=None,
+            project_key="projectKey_string",
+            feature_flag_key="featureFlagKey_string",
         )
     except ApiException as e:
         print("Exception when calling FeatureFlagsApi#delete_feature_flag: %s\n" % e)

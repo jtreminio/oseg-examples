@@ -29,7 +29,7 @@ public class PatchRepositoryExample
         try
         {
             var response = new CodeReferencesApi(config).PatchRepository(
-                repo: null,
+                repo: "repo_string",
                 patchOperation: patchOperation
             );
 

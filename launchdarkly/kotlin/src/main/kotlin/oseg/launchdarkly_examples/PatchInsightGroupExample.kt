@@ -31,7 +31,7 @@ class PatchInsightGroupExample
         try
         {
             val response = InsightsScoresBetaApi().patchInsightGroup(
-                insightGroupKey = null,
+                insightGroupKey = "insightGroupKey_string",
                 patchOperation = patchOperation,
             )
 

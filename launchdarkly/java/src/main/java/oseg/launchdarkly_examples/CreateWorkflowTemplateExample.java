@@ -44,13 +44,7 @@ public class CreateWorkflowTemplateExample
         ));
 
         var createWorkflowTemplateInput = new CreateWorkflowTemplateInput();
-        createWorkflowTemplateInput.key(null);
-        createWorkflowTemplateInput.name(null);
-        createWorkflowTemplateInput.description(null);
-        createWorkflowTemplateInput.workflowId(null);
-        createWorkflowTemplateInput.projectKey(null);
-        createWorkflowTemplateInput.environmentKey(null);
-        createWorkflowTemplateInput.flagKey(null);
+        createWorkflowTemplateInput.key("key_string");
         createWorkflowTemplateInput.stages(stages);
 
         try

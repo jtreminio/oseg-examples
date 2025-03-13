@@ -22,7 +22,7 @@ class GetCustomRoleExample
         try
         {
             val response = CustomRolesApi().getCustomRole(
-                customRoleKey = null,
+                customRoleKey = "customRoleKey_string",
             )
 
             println(response)

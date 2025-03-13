@@ -31,9 +31,9 @@ class UpdateFlagLinkExample
         try
         {
             val response = FlagLinksBetaApi().updateFlagLink(
-                projectKey = null,
-                featureFlagKey = null,
-                id = null,
+                projectKey = "projectKey_string",
+                featureFlagKey = "featureFlagKey_string",
+                id = "id_string",
                 patchOperation = patchOperation,
             )
 

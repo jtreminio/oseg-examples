@@ -6,8 +6,8 @@ const apiCaller = new api.IntegrationAuditLogSubscriptionsApi();
 apiCaller.setApiKey(api.IntegrationAuditLogSubscriptionsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.deleteSubscription(
-  undefined, // integrationKey
-  undefined, // id
+  "integrationKey_string", // integrationKey
+  "id_string", // id
 ).catch(error => {
   console.log("Exception when calling IntegrationAuditLogSubscriptionsApi#deleteSubscription:");
   console.log(error.body);

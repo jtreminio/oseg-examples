@@ -20,7 +20,7 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.AccountMembersApi(api_client).patch_member(
-            id=None,
+            id="id_string",
             patch_operation=patch_operation,
         )
 

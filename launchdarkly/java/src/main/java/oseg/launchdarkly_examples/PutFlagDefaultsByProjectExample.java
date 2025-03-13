@@ -45,7 +45,7 @@ public class PutFlagDefaultsByProjectExample
         try
         {
             var response = new ProjectsApi(config).putFlagDefaultsByProject(
-                null, // projectKey
+                "projectKey_string", // projectKey
                 upsertFlagDefaultsPayload
             );
 

@@ -23,10 +23,10 @@ public class PutFlagSettingExample
         try
         {
             new UserSettingsApi(config).PutFlagSetting(
-                projectKey: null,
-                environmentKey: null,
-                userKey: null,
-                featureFlagKey: null,
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                userKey: "userKey_string",
+                featureFlagKey: "featureFlagKey_string",
                 valuePut: valuePut
             );
         }

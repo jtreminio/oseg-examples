@@ -7,10 +7,10 @@ end
 
 begin
     response = LaunchDarklyClient::ApprovalsBetaApi.new.patch_flag_config_approval_request(
-        nil, # project_key
-        nil, # feature_flag_key
-        nil, # environment_key
-        nil, # id
+        "projectKey_string", # project_key
+        "featureFlagKey_string", # feature_flag_key
+        "environmentKey_string", # environment_key
+        "id_string", # id
     )
 
     p response

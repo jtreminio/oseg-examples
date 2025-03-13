@@ -20,8 +20,7 @@ $create_approval_request_request = (new LaunchDarkly\Client\Model\CreateApproval
     ])
     ->setNotifyTeamKeys([
         "example-reviewer-team",
-    ])
-    ->setIntegrationConfig(null);
+    ]);
 
 try {
     $response = (new LaunchDarkly\Client\Api\ApprovalsApi(config: $config))->postApprovalRequest(

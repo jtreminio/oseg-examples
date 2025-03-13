@@ -27,8 +27,8 @@ public class PostDestinationExample
         try
         {
             var response = new DataExportDestinationsApi(config).postDestination(
-                null, // projectKey
-                null, // environmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
                 destinationPost
             );
 

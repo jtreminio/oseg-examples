@@ -24,7 +24,7 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.CustomRolesApi(api_client).patch_custom_role(
-            custom_role_key=None,
+            custom_role_key="customRoleKey_string",
             patch_with_comment=patch_with_comment,
         )
 

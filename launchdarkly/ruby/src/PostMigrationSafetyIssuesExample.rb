@@ -7,13 +7,12 @@ end
 
 flag_sempatch = LaunchDarklyClient::FlagSempatch.new
 flag_sempatch.instructions = []
-flag_sempatch.comment = nil
 
 begin
     response = LaunchDarklyClient::FeatureFlagsApi.new.post_migration_safety_issues(
-        nil, # project_key
-        nil, # flag_key
-        nil, # environment_key
+        "projectKey_string", # project_key
+        "flagKey_string", # flag_key
+        "environmentKey_string", # environment_key
         flag_sempatch,
     )
 

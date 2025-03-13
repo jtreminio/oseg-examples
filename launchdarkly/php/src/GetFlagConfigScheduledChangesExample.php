@@ -12,9 +12,9 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     $response = (new LaunchDarkly\Client\Api\ScheduledChangesApi(config: $config))->getFlagConfigScheduledChanges(
-        project_key: null,
-        feature_flag_key: null,
-        environment_key: null,
+        project_key: "projectKey_string",
+        feature_flag_key: "featureFlagKey_string",
+        environment_key: "environmentKey_string",
     );
 
     print_r($response);

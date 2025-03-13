@@ -24,8 +24,8 @@ public class GetAllHoldoutsExample
         try
         {
             var response = new HoldoutsBetaApi(config).getAllHoldouts(
-                null, // projectKey
-                null, // environmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
                 null, // limit
                 null // offset
             );

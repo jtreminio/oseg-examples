@@ -35,10 +35,10 @@ public class PatchFlagConfigScheduledChangeExample
         try
         {
             var response = new ScheduledChangesApi(config).PatchFlagConfigScheduledChange(
-                projectKey: null,
-                featureFlagKey: null,
-                environmentKey: null,
-                id: null,
+                projectKey: "projectKey_string",
+                featureFlagKey: "featureFlagKey_string",
+                environmentKey: "environmentKey_string",
+                id: "id_string",
                 flagScheduledChangesInput: flagScheduledChangesInput,
                 ignoreConflicts: null
             );

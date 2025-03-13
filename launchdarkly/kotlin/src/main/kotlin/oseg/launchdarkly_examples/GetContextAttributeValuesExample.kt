@@ -22,9 +22,9 @@ class GetContextAttributeValuesExample
         try
         {
             val response = ContextsApi().getContextAttributeValues(
-                projectKey = null,
-                environmentKey = null,
-                attributeName = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                attributeName = "attributeName_string",
                 filter = null,
                 limit = null,
             )

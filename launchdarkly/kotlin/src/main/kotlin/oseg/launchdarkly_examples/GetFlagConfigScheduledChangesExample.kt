@@ -22,9 +22,9 @@ class GetFlagConfigScheduledChangesExample
         try
         {
             val response = ScheduledChangesApi().getFlagConfigScheduledChanges(
-                projectKey = null,
-                featureFlagKey = null,
-                environmentKey = null,
+                projectKey = "projectKey_string",
+                featureFlagKey = "featureFlagKey_string",
+                environmentKey = "environmentKey_string",
             )
 
             println(response)

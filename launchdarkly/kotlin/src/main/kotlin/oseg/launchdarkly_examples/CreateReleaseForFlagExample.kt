@@ -20,15 +20,14 @@ class CreateReleaseForFlagExample
         ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val createReleaseInput = CreateReleaseInput(
-            releasePipelineKey = null,
-            releaseVariationId = null,
+            releasePipelineKey = "releasePipelineKey_string",
         )
 
         try
         {
             val response = ReleasesBetaApi().createReleaseForFlag(
-                projectKey = null,
-                flagKey = null,
+                projectKey = "projectKey_string",
+                flagKey = "flagKey_string",
                 createReleaseInput = createReleaseInput,
             )
 

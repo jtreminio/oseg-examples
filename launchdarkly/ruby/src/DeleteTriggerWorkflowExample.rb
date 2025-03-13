@@ -7,10 +7,10 @@ end
 
 begin
     LaunchDarklyClient::FlagTriggersApi.new.delete_trigger_workflow(
-        nil, # project_key
-        nil, # environment_key
-        nil, # feature_flag_key
-        nil, # id
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
+        "featureFlagKey_string", # feature_flag_key
+        "id_string", # id
     )
 rescue LaunchDarklyClient::ApiError => e
     puts "Exception when calling FlagTriggersApi#delete_trigger_workflow: #{e}"

@@ -28,7 +28,7 @@ upsert_flag_defaults_payload.default_client_side_availability = default_client_s
 
 begin
     response = LaunchDarklyClient::ProjectsApi.new.put_flag_defaults_by_project(
-        nil, # project_key
+        "projectKey_string", # project_key
         upsert_flag_defaults_payload,
     )
 

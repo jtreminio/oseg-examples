@@ -22,7 +22,7 @@ class GetContextKindsByProjectKeyExample
         try
         {
             val response = ContextsApi().getContextKindsByProjectKey(
-                projectKey = null,
+                projectKey = "projectKey_string",
             )
 
             println(response)

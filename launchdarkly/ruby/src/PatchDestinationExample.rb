@@ -15,9 +15,9 @@ patch_operation = [
 
 begin
     response = LaunchDarklyClient::DataExportDestinationsApi.new.patch_destination(
-        nil, # project_key
-        nil, # environment_key
-        nil, # id
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
+        "id_string", # id
         patch_operation,
     )
 

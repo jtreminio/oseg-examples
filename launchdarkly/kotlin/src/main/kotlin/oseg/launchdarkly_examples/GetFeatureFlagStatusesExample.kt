@@ -22,8 +22,8 @@ class GetFeatureFlagStatusesExample
         try
         {
             val response = FeatureFlagsApi().getFeatureFlagStatuses(
-                projectKey = null,
-                environmentKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
             )
 
             println(response)

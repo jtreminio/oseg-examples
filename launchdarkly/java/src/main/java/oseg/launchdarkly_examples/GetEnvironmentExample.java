@@ -24,8 +24,8 @@ public class GetEnvironmentExample
         try
         {
             var response = new EnvironmentsApi(config).getEnvironment(
-                null, // projectKey
-                null // environmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string" // environmentKey
             );
 
             System.out.println(response);

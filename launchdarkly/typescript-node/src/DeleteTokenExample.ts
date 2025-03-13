@@ -6,7 +6,7 @@ const apiCaller = new api.AccessTokensApi();
 apiCaller.setApiKey(api.AccessTokensApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.deleteToken(
-  undefined, // id
+  "id_string", // id
 ).catch(error => {
   console.log("Exception when calling AccessTokensApi#deleteToken:");
   console.log(error.body);

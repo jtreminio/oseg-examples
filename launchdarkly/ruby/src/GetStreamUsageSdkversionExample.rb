@@ -7,7 +7,7 @@ end
 
 begin
     response = LaunchDarklyClient::AccountUsageBetaApi.new.get_stream_usage_sdkversion(
-        nil, # source
+        "source_string", # source
     )
 
     p response

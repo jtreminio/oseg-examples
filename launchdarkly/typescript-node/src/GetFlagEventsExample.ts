@@ -6,8 +6,8 @@ const apiCaller = new api.InsightsFlagEventsBetaApi();
 apiCaller.setApiKey(api.InsightsFlagEventsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getFlagEvents(
-  undefined, // projectKey
-  undefined, // environmentKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
   undefined, // applicationKey
   undefined, // query
   undefined, // impactSize

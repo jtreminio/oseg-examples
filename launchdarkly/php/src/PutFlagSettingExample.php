@@ -15,10 +15,10 @@ $value_put = (new LaunchDarkly\Client\Model\ValuePut())
 
 try {
     (new LaunchDarkly\Client\Api\UserSettingsApi(config: $config))->putFlagSetting(
-        project_key: null,
-        environment_key: null,
-        user_key: null,
-        feature_flag_key: null,
+        project_key: "projectKey_string",
+        environment_key: "environmentKey_string",
+        user_key: "userKey_string",
+        feature_flag_key: "featureFlagKey_string",
         value_put: $value_put,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {

@@ -26,7 +26,7 @@ public class PostMemberTeamsExample
         try
         {
             var response = new AccountMembersApi(config).PostMemberTeams(
-                id: null,
+                id: "id_string",
                 memberTeamsPostInput: memberTeamsPostInput
             );
 

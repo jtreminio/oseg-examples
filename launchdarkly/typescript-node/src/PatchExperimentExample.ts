@@ -15,9 +15,9 @@ experimentPatchInput.instructions = [
 experimentPatchInput.comment = "Example comment describing the update";
 
 apiCaller.patchExperiment(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // experimentKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "experimentKey_string", // experimentKey
   experimentPatchInput,
 ).then(response => {
   console.log(response.body);

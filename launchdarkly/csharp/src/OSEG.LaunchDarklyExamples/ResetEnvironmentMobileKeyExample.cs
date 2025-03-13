@@ -19,8 +19,8 @@ public class ResetEnvironmentMobileKeyExample
         try
         {
             var response = new EnvironmentsApi(config).ResetEnvironmentMobileKey(
-                projectKey: null,
-                environmentKey: null
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string"
             );
 
             Console.WriteLine(response);

@@ -31,10 +31,10 @@ class PatchIntegrationDeliveryConfigurationExample
         try
         {
             val response = IntegrationDeliveryConfigurationsBetaApi().patchIntegrationDeliveryConfiguration(
-                projectKey = null,
-                environmentKey = null,
-                integrationKey = null,
-                id = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                integrationKey = "integrationKey_string",
+                id = "id_string",
                 patchOperation = patchOperation,
             )
 

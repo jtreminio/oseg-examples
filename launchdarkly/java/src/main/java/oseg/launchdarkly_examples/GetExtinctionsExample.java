@@ -23,7 +23,14 @@ public class GetExtinctionsExample
 
         try
         {
-            var response = new CodeReferencesApi(config).getExtinctions();
+            var response = new CodeReferencesApi(config).getExtinctions(
+                null, // repoName
+                null, // branchName
+                null, // projKey
+                null, // flagKey
+                null, // from
+                null // to
+            );
 
             System.out.println(response);
         } catch (ApiException e) {

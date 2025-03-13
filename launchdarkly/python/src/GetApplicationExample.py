@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.ApplicationsBetaApi(api_client).get_application(
-            application_key=None,
+            application_key="applicationKey_string",
             expand=None,
         )
 

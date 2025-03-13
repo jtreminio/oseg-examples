@@ -19,8 +19,8 @@ public class GetMetricExample
         try
         {
             var response = new MetricsApi(config).GetMetric(
-                projectKey: null,
-                metricKey: null,
+                projectKey: "projectKey_string",
+                metricKey: "metricKey_string",
                 expand: null,
                 versionId: null
             );

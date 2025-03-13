@@ -22,9 +22,9 @@ class GetFlagImportConfigurationExample
         try
         {
             val response = FlagImportConfigurationsBetaApi().getFlagImportConfiguration(
-                projectKey = null,
-                integrationKey = null,
-                integrationId = null,
+                projectKey = "projectKey_string",
+                integrationKey = "integrationKey_string",
+                integrationId = "integrationId_string",
             )
 
             println(response)

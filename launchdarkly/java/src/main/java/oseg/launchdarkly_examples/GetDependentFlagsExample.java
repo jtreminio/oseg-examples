@@ -24,8 +24,8 @@ public class GetDependentFlagsExample
         try
         {
             var response = new FeatureFlagsBetaApi(config).getDependentFlags(
-                null, // projectKey
-                null // featureFlagKey
+                "projectKey_string", // projectKey
+                "featureFlagKey_string" // featureFlagKey
             );
 
             System.out.println(response);

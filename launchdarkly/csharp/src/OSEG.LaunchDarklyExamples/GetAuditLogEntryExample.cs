@@ -19,7 +19,7 @@ public class GetAuditLogEntryExample
         try
         {
             var response = new AuditLogApi(config).GetAuditLogEntry(
-                id: null
+                id: "id_string"
             );
 
             Console.WriteLine(response);

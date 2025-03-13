@@ -14,10 +14,10 @@ flagTriggerInput.instructions = [
 ];
 
 apiCaller.patchTriggerWorkflow(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // featureFlagKey
-  undefined, // id
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "featureFlagKey_string", // featureFlagKey
+  "id_string", // id
   flagTriggerInput,
 ).then(response => {
   console.log(response.body);

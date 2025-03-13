@@ -24,7 +24,7 @@ public class GetLeadTimeChartExample
         try
         {
             var response = new InsightsChartsBetaApi(config).getLeadTimeChart(
-                null, // projectKey
+                "projectKey_string", // projectKey
                 null, // environmentKey
                 null, // applicationKey
                 null, // from

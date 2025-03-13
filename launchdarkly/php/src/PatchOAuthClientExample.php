@@ -20,7 +20,7 @@ $patch_operation = [
 
 try {
     $response = (new LaunchDarkly\Client\Api\OAuth2ClientsApi(config: $config))->patchOAuthClient(
-        client_id: null,
+        client_id: "clientId_string",
         patch_operation: $patch_operation,
     );
 

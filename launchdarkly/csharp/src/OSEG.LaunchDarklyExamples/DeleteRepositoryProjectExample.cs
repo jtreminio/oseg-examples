@@ -19,8 +19,8 @@ public class DeleteRepositoryProjectExample
         try
         {
             new InsightsRepositoriesBetaApi(config).DeleteRepositoryProject(
-                repositoryKey: null,
-                projectKey: null
+                repositoryKey: "repositoryKey_string",
+                projectKey: "projectKey_string"
             );
         }
         catch (ApiException e)

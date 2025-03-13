@@ -7,9 +7,9 @@ end
 
 begin
     LaunchDarklyClient::ContextsApi.new.delete_context_instances(
-        nil, # project_key
-        nil, # environment_key
-        nil, # id
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
+        "id_string", # id
     )
 rescue LaunchDarklyClient::ApiError => e
     puts "Exception when calling ContextsApi#delete_context_instances: #{e}"

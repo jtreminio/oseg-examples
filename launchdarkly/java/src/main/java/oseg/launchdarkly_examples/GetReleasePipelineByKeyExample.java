@@ -24,8 +24,8 @@ public class GetReleasePipelineByKeyExample
         try
         {
             var response = new ReleasePipelinesBetaApi(config).getReleasePipelineByKey(
-                null, // projectKey
-                null // pipelineKey
+                "projectKey_string", // projectKey
+                "pipelineKey_string" // pipelineKey
             );
 
             System.out.println(response);

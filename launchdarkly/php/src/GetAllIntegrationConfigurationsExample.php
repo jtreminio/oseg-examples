@@ -12,7 +12,7 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     $response = (new LaunchDarkly\Client\Api\IntegrationsBetaApi(config: $config))->getAllIntegrationConfigurations(
-        integration_key: null,
+        integration_key: "integrationKey_string",
     );
 
     print_r($response);

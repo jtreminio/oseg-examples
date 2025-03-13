@@ -22,8 +22,8 @@ class DeleteMetricGroupExample
         try
         {
             MetricsBetaApi().deleteMetricGroup(
-                projectKey = null,
-                metricGroupKey = null,
+                projectKey = "projectKey_string",
+                metricGroupKey = "metricGroupKey_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling MetricsBetaApi#deleteMetricGroup")

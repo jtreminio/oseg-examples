@@ -11,9 +11,9 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.DataExportDestinationsApi(api_client).get_destination(
-            project_key=None,
-            environment_key=None,
-            id=None,
+            project_key="projectKey_string",
+            environment_key="environmentKey_string",
+            id="id_string",
         )
 
         pprint(response)

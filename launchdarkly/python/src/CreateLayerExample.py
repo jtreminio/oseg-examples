@@ -12,12 +12,12 @@ with ApiClient(configuration) as api_client:
     layer_post = models.LayerPost(
         key="checkout-flow",
         name="Checkout Flow",
-        description=None,
+        description="description_string",
     )
 
     try:
         response = api.LayersApi(api_client).create_layer(
-            project_key=None,
+            project_key="projectKey_string",
             layer_post=layer_post,
         )
 

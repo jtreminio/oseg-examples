@@ -19,8 +19,8 @@ public class DeleteMetricExample
         try
         {
             new MetricsApi(config).DeleteMetric(
-                projectKey: null,
-                metricKey: null
+                projectKey: "projectKey_string",
+                metricKey: "metricKey_string"
             );
         }
         catch (ApiException e)

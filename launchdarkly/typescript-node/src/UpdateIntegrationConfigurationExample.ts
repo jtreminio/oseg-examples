@@ -14,7 +14,7 @@ const patchOperation = [
 ];
 
 apiCaller.updateIntegrationConfiguration(
-  undefined, // integrationConfigurationId
+  "integrationConfigurationId_string", // integrationConfigurationId
   patchOperation,
 ).then(response => {
   console.log(response.body);

@@ -19,7 +19,7 @@ public class GetMemberExample
         try
         {
             var response = new AccountMembersApi(config).GetMember(
-                id: null,
+                id: "id_string",
                 expand: null
             );
 

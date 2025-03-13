@@ -11,9 +11,9 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.HoldoutsBetaApi(api_client).get_holdout_by_id(
-            project_key=None,
-            environment_key=None,
-            holdout_id=None,
+            project_key="projectKey_string",
+            environment_key="environmentKey_string",
+            holdout_id="holdoutId_string",
         )
 
         pprint(response)

@@ -33,7 +33,7 @@ $upsert_flag_defaults_payload = (new LaunchDarkly\Client\Model\UpsertFlagDefault
 
 try {
     $response = (new LaunchDarkly\Client\Api\ProjectsApi(config: $config))->putFlagDefaultsByProject(
-        project_key: null,
+        project_key: "projectKey_string",
         upsert_flag_defaults_payload: $upsert_flag_defaults_payload,
     );
 

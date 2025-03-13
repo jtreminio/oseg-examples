@@ -6,8 +6,8 @@ const apiCaller = new api.EnvironmentsApi();
 apiCaller.setApiKey(api.EnvironmentsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.resetEnvironmentSDKKey(
-  undefined, // projectKey
-  undefined, // environmentKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
   undefined, // expiry
 ).then(response => {
   console.log(response.body);

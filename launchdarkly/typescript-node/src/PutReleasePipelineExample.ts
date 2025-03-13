@@ -12,7 +12,7 @@ phases1Audiences1ConfigurationReleaseGuardianConfiguration.rollbackOnRegression 
 phases1Audiences1ConfigurationReleaseGuardianConfiguration.randomizationUnit = "user";
 
 const phases1Audiences1Configuration = new models.AudienceConfiguration();
-phases1Audiences1Configuration.releaseStrategy = undefined;
+phases1Audiences1Configuration.releaseStrategy = "releaseStrategy_string";
 phases1Audiences1Configuration.requireApproval = true;
 phases1Audiences1Configuration.notifyMemberIds = [
   "1234a56b7c89d012345e678f",
@@ -23,8 +23,8 @@ phases1Audiences1Configuration.notifyTeamKeys = [
 phases1Audiences1Configuration.releaseGuardianConfiguration = phases1Audiences1ConfigurationReleaseGuardianConfiguration;
 
 const phases1Audiences1 = new models.AudiencePost();
-phases1Audiences1.environmentKey = undefined;
-phases1Audiences1.name = undefined;
+phases1Audiences1.environmentKey = "environmentKey_string";
+phases1Audiences1.name = "name_string";
 phases1Audiences1.segmentKeys = [
 ];
 phases1Audiences1.configuration = phases1Audiences1Configuration;
@@ -50,8 +50,8 @@ updateReleasePipelineInput.tags = [
 updateReleasePipelineInput.phases = phases;
 
 apiCaller.putReleasePipeline(
-  undefined, // projectKey
-  undefined, // pipelineKey
+  "projectKey_string", // projectKey
+  "pipelineKey_string", // pipelineKey
   updateReleasePipelineInput,
 ).then(response => {
   console.log(response.body);

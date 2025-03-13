@@ -35,9 +35,9 @@ public class PostFlagConfigScheduledChangesExample
         try
         {
             var response = new ScheduledChangesApi(config).postFlagConfigScheduledChanges(
-                null, // projectKey
-                null, // featureFlagKey
-                null, // environmentKey
+                "projectKey_string", // projectKey
+                "featureFlagKey_string", // featureFlagKey
+                "environmentKey_string", // environmentKey
                 postFlagScheduledChangesInput,
                 null // ignoreConflicts
             );

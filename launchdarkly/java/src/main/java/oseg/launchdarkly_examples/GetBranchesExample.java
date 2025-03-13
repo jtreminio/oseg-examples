@@ -24,7 +24,7 @@ public class GetBranchesExample
         try
         {
             var response = new CodeReferencesApi(config).getBranches(
-                null // repo
+                "repo_string" // repo
             );
 
             System.out.println(response);

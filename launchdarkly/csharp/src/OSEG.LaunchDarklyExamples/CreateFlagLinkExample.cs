@@ -26,8 +26,8 @@ public class CreateFlagLinkExample
         try
         {
             var response = new FlagLinksBetaApi(config).CreateFlagLink(
-                projectKey: null,
-                featureFlagKey: null,
+                projectKey: "projectKey_string",
+                featureFlagKey: "featureFlagKey_string",
                 flagLinkPost: flagLinkPost
             );
 

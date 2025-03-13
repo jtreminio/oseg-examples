@@ -14,7 +14,7 @@ metric_post.event_key = "trackedClick"
 
 begin
     response = LaunchDarklyClient::MetricsApi.new.post_metric(
-        nil, # project_key
+        "projectKey_string", # project_key
         metric_post,
     )
 

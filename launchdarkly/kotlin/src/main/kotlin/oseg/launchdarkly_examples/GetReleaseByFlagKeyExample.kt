@@ -22,8 +22,8 @@ class GetReleaseByFlagKeyExample
         try
         {
             val response = ReleasesBetaApi().getReleaseByFlagKey(
-                projectKey = null,
-                flagKey = null,
+                projectKey = "projectKey_string",
+                flagKey = "flagKey_string",
             )
 
             println(response)

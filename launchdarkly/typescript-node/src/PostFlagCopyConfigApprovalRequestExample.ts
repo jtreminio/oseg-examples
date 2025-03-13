@@ -27,9 +27,9 @@ createCopyFlagConfigApprovalRequestRequest.excludedActions = [
 createCopyFlagConfigApprovalRequestRequest.source = source;
 
 apiCaller.postFlagCopyConfigApprovalRequest(
-  undefined, // projectKey
-  undefined, // featureFlagKey
-  undefined, // environmentKey
+  "projectKey_string", // projectKey
+  "featureFlagKey_string", // featureFlagKey
+  "environmentKey_string", // environmentKey
   createCopyFlagConfigApprovalRequestRequest,
 ).then(response => {
   console.log(response.body);

@@ -32,8 +32,8 @@ public class PatchApplicationVersionExample
         try
         {
             var response = new ApplicationsBetaApi(config).patchApplicationVersion(
-                null, // applicationKey
-                null, // versionKey
+                "applicationKey_string", // applicationKey
+                "versionKey_string", // versionKey
                 patchOperation
             );
 

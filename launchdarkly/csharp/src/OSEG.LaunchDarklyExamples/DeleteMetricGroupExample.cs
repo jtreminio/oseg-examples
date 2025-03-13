@@ -19,8 +19,8 @@ public class DeleteMetricGroupExample
         try
         {
             new MetricsBetaApi(config).DeleteMetricGroup(
-                projectKey: null,
-                metricGroupKey: null
+                projectKey: "projectKey_string",
+                metricGroupKey: "metricGroupKey_string"
             );
         }
         catch (ApiException e)

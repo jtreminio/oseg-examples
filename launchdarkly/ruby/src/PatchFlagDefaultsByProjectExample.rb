@@ -15,7 +15,7 @@ patch_operation = [
 
 begin
     response = LaunchDarklyClient::ProjectsApi.new.patch_flag_defaults_by_project(
-        nil, # project_key
+        "projectKey_string", # project_key
         patch_operation,
     )
 

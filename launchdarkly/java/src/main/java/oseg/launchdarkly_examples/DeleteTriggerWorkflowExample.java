@@ -24,10 +24,10 @@ public class DeleteTriggerWorkflowExample
         try
         {
             new FlagTriggersApi(config).deleteTriggerWorkflow(
-                null, // projectKey
-                null, // environmentKey
-                null, // featureFlagKey
-                null // id
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "featureFlagKey_string", // featureFlagKey
+                "id_string" // id
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling FlagTriggersApi#deleteTriggerWorkflow");

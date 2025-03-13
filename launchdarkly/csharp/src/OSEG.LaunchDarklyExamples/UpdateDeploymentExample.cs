@@ -29,7 +29,7 @@ public class UpdateDeploymentExample
         try
         {
             var response = new InsightsDeploymentsBetaApi(config).UpdateDeployment(
-                deploymentID: null,
+                deploymentID: "deploymentID_string",
                 patchOperation: patchOperation
             );
 

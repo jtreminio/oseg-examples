@@ -23,7 +23,12 @@ public class GetServiceConnectionUsageExample
 
         try
         {
-            var response = new AccountUsageBetaApi(config).getServiceConnectionUsage();
+            var response = new AccountUsageBetaApi(config).getServiceConnectionUsage(
+                null, // from
+                null, // to
+                null, // projectKey
+                null // environmentKey
+            );
 
             System.out.println(response);
         } catch (ApiException e) {

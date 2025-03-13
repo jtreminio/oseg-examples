@@ -6,7 +6,7 @@ const apiCaller = new api.EnvironmentsApi();
 apiCaller.setApiKey(api.EnvironmentsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getEnvironmentsByProject(
-  undefined, // projectKey
+  "projectKey_string", // projectKey
   undefined, // limit
   undefined, // offset
   undefined, // filter

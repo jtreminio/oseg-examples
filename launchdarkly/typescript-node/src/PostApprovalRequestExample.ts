@@ -16,7 +16,6 @@ createApprovalRequestRequest.notifyMemberIds = [
 createApprovalRequestRequest.notifyTeamKeys = [
   "example-reviewer-team",
 ];
-createApprovalRequestRequest.integrationConfig = undefined;
 
 apiCaller.postApprovalRequest(
   createApprovalRequestRequest,

@@ -24,8 +24,8 @@ public class DeleteRepositoryProjectExample
         try
         {
             new InsightsRepositoriesBetaApi(config).deleteRepositoryProject(
-                null, // repositoryKey
-                null // projectKey
+                "repositoryKey_string", // repositoryKey
+                "projectKey_string" // projectKey
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling InsightsRepositoriesBetaApi#deleteRepositoryProject");

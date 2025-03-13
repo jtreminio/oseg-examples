@@ -31,7 +31,7 @@ class UpdateDeploymentExample
         try
         {
             val response = InsightsDeploymentsBetaApi().updateDeployment(
-                deploymentID = null,
+                deploymentID = "deploymentID_string",
                 patchOperation = patchOperation,
             )
 

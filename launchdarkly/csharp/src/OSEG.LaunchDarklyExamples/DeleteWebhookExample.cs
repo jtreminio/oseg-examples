@@ -19,7 +19,7 @@ public class DeleteWebhookExample
         try
         {
             new WebhooksApi(config).DeleteWebhook(
-                id: null
+                id: "id_string"
             );
         }
         catch (ApiException e)

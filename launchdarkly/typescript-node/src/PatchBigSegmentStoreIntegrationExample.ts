@@ -14,10 +14,10 @@ const patchOperation = [
 ];
 
 apiCaller.patchBigSegmentStoreIntegration(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // integrationKey
-  undefined, // integrationId
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "integrationKey_string", // integrationKey
+  "integrationId_string", // integrationId
   patchOperation,
 ).then(response => {
   console.log(response.body);

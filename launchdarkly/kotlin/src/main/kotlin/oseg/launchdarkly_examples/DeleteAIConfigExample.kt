@@ -22,9 +22,9 @@ class DeleteAIConfigExample
         try
         {
             AIConfigsBetaApi().deleteAIConfig(
-                ldAPIVersion = null,
+                ldAPIVersion = AIConfigsBetaApi.LdAPIVersionDeleteAIConfig.beta,
                 projectKey = "default",
-                configKey = null,
+                configKey = "configKey_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling AIConfigsBetaApi#deleteAIConfig")

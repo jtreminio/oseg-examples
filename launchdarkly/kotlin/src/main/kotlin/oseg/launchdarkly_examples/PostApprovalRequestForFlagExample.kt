@@ -31,15 +31,14 @@ class PostApprovalRequestForFlagExample
             notifyTeamKeys = listOf (
                 "example-reviewer-team",
             ),
-            integrationConfig = null,
         )
 
         try
         {
             val response = ApprovalsApi().postApprovalRequestForFlag(
-                projectKey = null,
-                featureFlagKey = null,
-                environmentKey = null,
+                projectKey = "projectKey_string",
+                featureFlagKey = "featureFlagKey_string",
+                environmentKey = "environmentKey_string",
                 createFlagConfigApprovalRequestRequest = createFlagConfigApprovalRequestRequest,
             )
 
