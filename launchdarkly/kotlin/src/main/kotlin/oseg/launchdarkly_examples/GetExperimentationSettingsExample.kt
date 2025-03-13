@@ -22,7 +22,7 @@ class GetExperimentationSettingsExample
         try
         {
             val response = ExperimentsApi().getExperimentationSettings(
-                projectKey = null,
+                projectKey = "projectKey_string",
             )
 
             println(response)

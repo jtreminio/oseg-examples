@@ -23,7 +23,10 @@ public class GetCustomRolesExample
 
         try
         {
-            var response = new CustomRolesApi(config).getCustomRoles();
+            var response = new CustomRolesApi(config).getCustomRoles(
+                null, // limit
+                null // offset
+            );
 
             System.out.println(response);
         } catch (ApiException e) {

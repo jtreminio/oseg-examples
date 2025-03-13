@@ -17,7 +17,7 @@ with ApiClient(configuration) as api_client:
     )
 
     phases_1_audiences_1_configuration = models.AudienceConfiguration(
-        releaseStrategy=None,
+        releaseStrategy="releaseStrategy_string",
         requireApproval=True,
         notifyMemberIds=[
             "1234a56b7c89d012345e678f",
@@ -29,8 +29,8 @@ with ApiClient(configuration) as api_client:
     )
 
     phases_1_audiences_1 = models.AudiencePost(
-        environmentKey=None,
-        name=None,
+        environmentKey="environmentKey_string",
+        name="name_string",
         segmentKeys=[
         ],
         configuration=phases_1_audiences_1_configuration,
@@ -60,8 +60,8 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.ReleasePipelinesBetaApi(api_client).put_release_pipeline(
-            project_key=None,
-            pipeline_key=None,
+            project_key="projectKey_string",
+            pipeline_key="pipelineKey_string",
             update_release_pipeline_input=update_release_pipeline_input,
         )
 

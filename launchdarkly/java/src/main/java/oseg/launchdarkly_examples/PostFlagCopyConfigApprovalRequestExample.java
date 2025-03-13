@@ -45,9 +45,9 @@ public class PostFlagCopyConfigApprovalRequestExample
         try
         {
             var response = new ApprovalsApi(config).postFlagCopyConfigApprovalRequest(
-                null, // projectKey
-                null, // featureFlagKey
-                null, // environmentKey
+                "projectKey_string", // projectKey
+                "featureFlagKey_string", // featureFlagKey
+                "environmentKey_string", // environmentKey
                 createCopyFlagConfigApprovalRequestRequest
             );
 

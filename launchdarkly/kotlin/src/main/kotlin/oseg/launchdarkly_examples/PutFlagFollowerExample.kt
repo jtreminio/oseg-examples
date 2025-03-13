@@ -22,10 +22,10 @@ class PutFlagFollowerExample
         try
         {
             FollowFlagsApi().putFlagFollower(
-                projectKey = null,
-                featureFlagKey = null,
-                environmentKey = null,
-                memberId = null,
+                projectKey = "projectKey_string",
+                featureFlagKey = "featureFlagKey_string",
+                environmentKey = "environmentKey_string",
+                memberId = "memberId_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling FollowFlagsApi#putFlagFollower")

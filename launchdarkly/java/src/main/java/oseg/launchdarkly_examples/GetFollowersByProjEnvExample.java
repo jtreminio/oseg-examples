@@ -24,8 +24,8 @@ public class GetFollowersByProjEnvExample
         try
         {
             var response = new FollowFlagsApi(config).getFollowersByProjEnv(
-                null, // projectKey
-                null // environmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string" // environmentKey
             );
 
             System.out.println(response);

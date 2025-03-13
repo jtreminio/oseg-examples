@@ -6,7 +6,7 @@ const apiCaller = new api.InsightsPullRequestsBetaApi();
 apiCaller.setApiKey(api.InsightsPullRequestsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getPullRequests(
-  undefined, // projectKey
+  "projectKey_string", // projectKey
   undefined, // environmentKey
   undefined, // applicationKey
   undefined, // status

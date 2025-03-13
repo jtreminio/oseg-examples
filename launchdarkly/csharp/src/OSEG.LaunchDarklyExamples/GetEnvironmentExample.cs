@@ -19,8 +19,8 @@ public class GetEnvironmentExample
         try
         {
             var response = new EnvironmentsApi(config).GetEnvironment(
-                projectKey: null,
-                environmentKey: null
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string"
             );
 
             Console.WriteLine(response);

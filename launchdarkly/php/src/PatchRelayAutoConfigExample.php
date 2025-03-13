@@ -19,12 +19,11 @@ $patch = [
 ];
 
 $patch_with_comment = (new LaunchDarkly\Client\Model\PatchWithComment())
-    ->setComment(null)
     ->setPatch($patch);
 
 try {
     $response = (new LaunchDarkly\Client\Api\RelayProxyConfigurationsApi(config: $config))->patchRelayAutoConfig(
-        id: null,
+        id: "id_string",
         patch_with_comment: $patch_with_comment,
     );
 

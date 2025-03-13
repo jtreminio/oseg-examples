@@ -12,7 +12,7 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     (new LaunchDarkly\Client\Api\ApprovalsApi(config: $config))->deleteApprovalRequest(
-        id: null,
+        id: "id_string",
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
     echo "Exception when calling ApprovalsApi#deleteApprovalRequest: {$e->getMessage()}";

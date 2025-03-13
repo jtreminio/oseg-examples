@@ -6,7 +6,7 @@ const apiCaller = new api.RelayProxyConfigurationsApi();
 apiCaller.setApiKey(api.RelayProxyConfigurationsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.deleteRelayAutoConfig(
-  undefined, // id
+  "id_string", // id
 ).catch(error => {
   console.log("Exception when calling RelayProxyConfigurationsApi#deleteRelayAutoConfig:");
   console.log(error.body);

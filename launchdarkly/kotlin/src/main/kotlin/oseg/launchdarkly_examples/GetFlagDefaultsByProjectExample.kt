@@ -22,7 +22,7 @@ class GetFlagDefaultsByProjectExample
         try
         {
             val response = ProjectsApi().getFlagDefaultsByProject(
-                projectKey = null,
+                projectKey = "projectKey_string",
             )
 
             println(response)

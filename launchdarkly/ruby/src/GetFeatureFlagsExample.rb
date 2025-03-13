@@ -7,7 +7,7 @@ end
 
 begin
     response = LaunchDarklyClient::FeatureFlagsApi.new.get_feature_flags(
-        nil, # project_key
+        "projectKey_string", # project_key
     )
 
     p response

@@ -19,7 +19,7 @@ public class DeleteApprovalRequestExample
         try
         {
             new ApprovalsApi(config).DeleteApprovalRequest(
-                id: null
+                id: "id_string"
             );
         }
         catch (ApiException e)

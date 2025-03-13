@@ -27,8 +27,8 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.FeatureFlagsApi(api_client).copy_feature_flag(
-            project_key=None,
-            feature_flag_key=None,
+            project_key="projectKey_string",
+            feature_flag_key="featureFlagKey_string",
             flag_copy_config_post=flag_copy_config_post,
         )
 

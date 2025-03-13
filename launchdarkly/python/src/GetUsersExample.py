@@ -11,8 +11,8 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.UsersApi(api_client).get_users(
-            project_key=None,
-            environment_key=None,
+            project_key="projectKey_string",
+            environment_key="environmentKey_string",
             limit=None,
             search_after=None,
         )

@@ -24,7 +24,7 @@ public class GetContextKindsByProjectKeyExample
         try
         {
             var response = new ContextsApi(config).getContextKindsByProjectKey(
-                null // projectKey
+                "projectKey_string" // projectKey
             );
 
             System.out.println(response);

@@ -19,7 +19,7 @@ public class GetProjectExample
         try
         {
             var response = new ProjectsApi(config).GetProject(
-                projectKey: null,
+                projectKey: "projectKey_string",
                 expand: null
             );
 

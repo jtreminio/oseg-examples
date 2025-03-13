@@ -6,7 +6,7 @@ const apiCaller = new api.MetricsBetaApi();
 apiCaller.setApiKey(api.MetricsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getMetricGroups(
-  undefined, // projectKey
+  "projectKey_string", // projectKey
   undefined, // filter
   undefined, // expand
   undefined, // limit

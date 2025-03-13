@@ -11,10 +11,10 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.WorkflowsApi(api_client).delete_workflow(
-            project_key=None,
-            feature_flag_key=None,
-            environment_key=None,
-            workflow_id=None,
+            project_key="projectKey_string",
+            feature_flag_key="featureFlagKey_string",
+            environment_key="environmentKey_string",
+            workflow_id="workflowId_string",
         )
     except ApiException as e:
         print("Exception when calling WorkflowsApi#delete_workflow: %s\n" % e)

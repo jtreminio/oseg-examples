@@ -7,7 +7,7 @@ end
 
 begin
     LaunchDarklyClient::ApplicationsBetaApi.new.delete_application(
-        nil, # application_key
+        "applicationKey_string", # application_key
     )
 rescue LaunchDarklyClient::ApiError => e
     puts "Exception when calling ApplicationsBetaApi#delete_application: #{e}"

@@ -22,7 +22,7 @@ class GetFeatureFlagsExample
         try
         {
             val response = FeatureFlagsApi().getFeatureFlags(
-                projectKey = null,
+                projectKey = "projectKey_string",
                 env = null,
                 tag = null,
                 limit = null,

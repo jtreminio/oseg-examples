@@ -31,8 +31,8 @@ class PatchApplicationVersionExample
         try
         {
             val response = ApplicationsBetaApi().patchApplicationVersion(
-                applicationKey = null,
-                versionKey = null,
+                applicationKey = "applicationKey_string",
+                versionKey = "versionKey_string",
                 patchOperation = patchOperation,
             )
 

@@ -34,7 +34,7 @@ const treatments = [
 
 const iterationInput = new models.IterationInput();
 iterationInput.hypothesis = "Example hypothesis, the new button placement will increase conversion";
-iterationInput.flags = undefined;
+iterationInput.flags = {};
 iterationInput.canReshuffleTraffic = true;
 iterationInput.primarySingleMetricKey = "metric-key-123abc";
 iterationInput.primaryFunnelKey = "metric-group-key-123abc";
@@ -48,9 +48,9 @@ iterationInput.metrics = metrics;
 iterationInput.treatments = treatments;
 
 apiCaller.createIteration(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // experimentKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "experimentKey_string", // experimentKey
   iterationInput,
 ).then(response => {
   console.log(response.body);

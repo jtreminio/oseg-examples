@@ -24,10 +24,10 @@ public class DeleteFlagConfigScheduledChangesExample
         try
         {
             new ScheduledChangesApi(config).deleteFlagConfigScheduledChanges(
-                null, // projectKey
-                null, // featureFlagKey
-                null, // environmentKey
-                null // id
+                "projectKey_string", // projectKey
+                "featureFlagKey_string", // featureFlagKey
+                "environmentKey_string", // environmentKey
+                "id_string" // id
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling ScheduledChangesApi#deleteFlagConfigScheduledChanges");

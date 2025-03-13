@@ -27,7 +27,6 @@ $holdout_post_request = (new LaunchDarkly\Client\Model\HoldoutPostRequest())
     ->setHoldoutamount("10")
     ->setPrimarymetrickey("metric-key-123abc")
     ->setPrerequisiteflagkey("flag-key-123abc")
-    ->setMaintainerId(null)
     ->setAttributes([
         "country",
         "device",
@@ -37,8 +36,8 @@ $holdout_post_request = (new LaunchDarkly\Client\Model\HoldoutPostRequest())
 
 try {
     $response = (new LaunchDarkly\Client\Api\HoldoutsBetaApi(config: $config))->postHoldout(
-        project_key: null,
-        environment_key: null,
+        project_key: "projectKey_string",
+        environment_key: "environmentKey_string",
         holdout_post_request: $holdout_post_request,
     );
 

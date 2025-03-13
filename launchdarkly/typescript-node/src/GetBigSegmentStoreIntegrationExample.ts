@@ -6,10 +6,10 @@ const apiCaller = new api.PersistentStoreIntegrationsBetaApi();
 apiCaller.setApiKey(api.PersistentStoreIntegrationsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getBigSegmentStoreIntegration(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // integrationKey
-  undefined, // integrationId
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "integrationKey_string", // integrationKey
+  "integrationId_string", // integrationId
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

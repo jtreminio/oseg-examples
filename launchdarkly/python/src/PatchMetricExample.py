@@ -20,8 +20,8 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.MetricsApi(api_client).patch_metric(
-            project_key=None,
-            metric_key=None,
+            project_key="projectKey_string",
+            metric_key="metricKey_string",
             patch_operation=patch_operation,
         )
 

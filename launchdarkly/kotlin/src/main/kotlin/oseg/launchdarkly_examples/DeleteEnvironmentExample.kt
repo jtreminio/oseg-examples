@@ -22,8 +22,8 @@ class DeleteEnvironmentExample
         try
         {
             EnvironmentsApi().deleteEnvironment(
-                projectKey = null,
-                environmentKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling EnvironmentsApi#deleteEnvironment")

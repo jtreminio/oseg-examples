@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.WorkflowTemplatesApi(api_client).delete_workflow_template(
-            template_key=None,
+            template_key="templateKey_string",
         )
     except ApiException as e:
         print("Exception when calling WorkflowTemplatesApi#delete_workflow_template: %s\n" % e)

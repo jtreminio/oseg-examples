@@ -19,12 +19,12 @@ public class GetAIConfigMetricsByVariationExample
         try
         {
             var response = new AIConfigsBetaApi(config).GetAIConfigMetricsByVariation(
-                lDAPIVersion: null,
-                projectKey: null,
-                configKey: null,
+                lDAPIVersion: "beta",
+                projectKey: "projectKey_string",
+                configKey: "configKey_string",
                 from: 123,
                 to: 456,
-                env: null
+                env: "env_string"
             );
 
             Console.WriteLine(response);

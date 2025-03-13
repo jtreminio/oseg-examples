@@ -22,7 +22,7 @@ class DeleteOAuthClientExample
         try
         {
             OAuth2ClientsApi().deleteOAuthClient(
-                clientId = null,
+                clientId = "clientId_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling OAuth2ClientsApi#deleteOAuthClient")

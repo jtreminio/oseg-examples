@@ -19,9 +19,9 @@ public class DeleteDestinationExample
         try
         {
             new DataExportDestinationsApi(config).DeleteDestination(
-                projectKey: null,
-                environmentKey: null,
-                id: null
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                id: "id_string"
             );
         }
         catch (ApiException e)

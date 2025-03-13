@@ -22,7 +22,7 @@ class DeleteTokenExample
         try
         {
             AccessTokensApi().deleteToken(
-                id = null,
+                id = "id_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling AccessTokensApi#deleteToken")

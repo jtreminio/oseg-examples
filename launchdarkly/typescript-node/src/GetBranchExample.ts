@@ -6,8 +6,8 @@ const apiCaller = new api.CodeReferencesApi();
 apiCaller.setApiKey(api.CodeReferencesApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getBranch(
-  undefined, // repo
-  undefined, // branch
+  "repo_string", // repo
+  "branch_string", // branch
   undefined, // projKey
   undefined, // flagKey
 ).then(response => {

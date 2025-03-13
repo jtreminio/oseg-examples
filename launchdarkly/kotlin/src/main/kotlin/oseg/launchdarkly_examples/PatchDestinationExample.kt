@@ -31,9 +31,9 @@ class PatchDestinationExample
         try
         {
             val response = DataExportDestinationsApi().patchDestination(
-                projectKey = null,
-                environmentKey = null,
-                id = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                id = "id_string",
                 patchOperation = patchOperation,
             )
 

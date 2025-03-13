@@ -12,7 +12,7 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     $response = (new LaunchDarkly\Client\Api\CodeReferencesApi(config: $config))->getStatistics(
-        project_key: null,
+        project_key: "projectKey_string",
         flag_key: null,
     );
 

@@ -19,8 +19,8 @@ public class DeleteReleaseByFlagKeyExample
         try
         {
             new ReleasesBetaApi(config).DeleteReleaseByFlagKey(
-                projectKey: null,
-                flagKey: null
+                projectKey: "projectKey_string",
+                flagKey: "flagKey_string"
             );
         }
         catch (ApiException e)

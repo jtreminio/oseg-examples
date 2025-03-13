@@ -20,7 +20,6 @@ class PostWorkflowExample
         ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val stages1Action = ActionInput()
-        )
 
         val stages1Conditions1 = ConditionInput(
             scheduleKind = "relative",
@@ -52,9 +51,9 @@ class PostWorkflowExample
         try
         {
             val response = WorkflowsApi().postWorkflow(
-                projectKey = null,
-                featureFlagKey = null,
-                environmentKey = null,
+                projectKey = "projectKey_string",
+                featureFlagKey = "featureFlagKey_string",
+                environmentKey = "environmentKey_string",
                 customWorkflowInput = customWorkflowInput,
                 templateKey = null,
                 dryRun = null,

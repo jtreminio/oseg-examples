@@ -22,8 +22,8 @@ class DeleteSubscriptionExample
         try
         {
             IntegrationAuditLogSubscriptionsApi().deleteSubscription(
-                integrationKey = null,
-                id = null,
+                integrationKey = "integrationKey_string",
+                id = "id_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling IntegrationAuditLogSubscriptionsApi#deleteSubscription")

@@ -21,8 +21,8 @@ layer_patch_input.environment_key = "production"
 
 begin
     response = LaunchDarklyClient::LayersApi.new.update_layer(
-        nil, # project_key
-        nil, # layer_key
+        "projectKey_string", # project_key
+        "layerKey_string", # layer_key
         layer_patch_input,
     )
 

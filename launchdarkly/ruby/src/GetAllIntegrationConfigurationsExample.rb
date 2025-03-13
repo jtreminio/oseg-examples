@@ -7,7 +7,7 @@ end
 
 begin
     response = LaunchDarklyClient::IntegrationsBetaApi.new.get_all_integration_configurations(
-        nil, # integration_key
+        "integrationKey_string", # integration_key
     )
 
     p response

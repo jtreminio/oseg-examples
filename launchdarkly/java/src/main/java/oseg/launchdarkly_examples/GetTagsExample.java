@@ -23,7 +23,14 @@ public class GetTagsExample
 
         try
         {
-            var response = new TagsApi(config).getTags();
+            var response = new TagsApi(config).getTags(
+                null, // kind
+                null, // pre
+                null, // archived
+                null, // limit
+                null, // offset
+                null // asOf
+            );
 
             System.out.println(response);
         } catch (ApiException e) {

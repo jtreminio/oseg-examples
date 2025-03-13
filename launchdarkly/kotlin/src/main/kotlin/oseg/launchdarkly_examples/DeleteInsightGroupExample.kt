@@ -22,7 +22,7 @@ class DeleteInsightGroupExample
         try
         {
             InsightsScoresBetaApi().deleteInsightGroup(
-                insightGroupKey = null,
+                insightGroupKey = "insightGroupKey_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling InsightsScoresBetaApi#deleteInsightGroup")

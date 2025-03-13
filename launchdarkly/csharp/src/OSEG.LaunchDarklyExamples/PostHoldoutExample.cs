@@ -35,7 +35,6 @@ public class PostHoldoutExample
             holdoutamount: "10",
             primarymetrickey: "metric-key-123abc",
             prerequisiteflagkey: "flag-key-123abc",
-            maintainerId: null,
             attributes: [
                 "country",
                 "device",
@@ -47,8 +46,8 @@ public class PostHoldoutExample
         try
         {
             var response = new HoldoutsBetaApi(config).PostHoldout(
-                projectKey: null,
-                environmentKey: null,
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
                 holdoutPostRequest: holdoutPostRequest
             );
 

@@ -24,7 +24,7 @@ public class GetFeatureFlagsExample
         try
         {
             var response = new FeatureFlagsApi(config).getFeatureFlags(
-                null, // projectKey
+                "projectKey_string", // projectKey
                 null, // env
                 null, // tag
                 null, // limit

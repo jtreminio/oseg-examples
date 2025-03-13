@@ -20,9 +20,9 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.FlagLinksBetaApi(api_client).update_flag_link(
-            project_key=None,
-            feature_flag_key=None,
-            id=None,
+            project_key="projectKey_string",
+            feature_flag_key="featureFlagKey_string",
+            id="id_string",
             patch_operation=patch_operation,
         )
 

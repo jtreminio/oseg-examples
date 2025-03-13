@@ -6,9 +6,9 @@ const apiCaller = new api.WorkflowsApi();
 apiCaller.setApiKey(api.WorkflowsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getWorkflows(
-  undefined, // projectKey
-  undefined, // featureFlagKey
-  undefined, // environmentKey
+  "projectKey_string", // projectKey
+  "featureFlagKey_string", // featureFlagKey
+  "environmentKey_string", // environmentKey
   undefined, // status
   undefined, // sort
   undefined, // limit

@@ -22,8 +22,8 @@ class GetFlagStatusChartExample
         try
         {
             val response = InsightsChartsBetaApi().getFlagStatusChart(
-                projectKey = null,
-                environmentKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
                 applicationKey = null,
             )
 

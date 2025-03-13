@@ -15,7 +15,7 @@ teamPatchInput.instructions = [
 teamPatchInput.comment = "Optional comment about the update";
 
 apiCaller.patchTeam(
-  undefined, // teamKey
+  "teamKey_string", // teamKey
   teamPatchInput,
   undefined, // expand
 ).then(response => {

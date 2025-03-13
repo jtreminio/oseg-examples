@@ -24,7 +24,7 @@ public class DeleteInsightGroupExample
         try
         {
             new InsightsScoresBetaApi(config).deleteInsightGroup(
-                null // insightGroupKey
+                "insightGroupKey_string" // insightGroupKey
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling InsightsScoresBetaApi#deleteInsightGroup");

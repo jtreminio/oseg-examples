@@ -19,9 +19,9 @@ public class GetEvaluationsUsageExample
         try
         {
             var response = new AccountUsageBetaApi(config).GetEvaluationsUsage(
-                projectKey: null,
-                environmentKey: null,
-                featureFlagKey: null,
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                featureFlagKey: "featureFlagKey_string",
                 from: null,
                 to: null,
                 tz: null

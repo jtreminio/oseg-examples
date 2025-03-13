@@ -19,7 +19,7 @@ public class DeleteTokenExample
         try
         {
             new AccessTokensApi(config).DeleteToken(
-                id: null
+                id: "id_string"
             );
         }
         catch (ApiException e)

@@ -19,10 +19,10 @@ public class GetContextsExample
         try
         {
             var response = new ContextsApi(config).GetContexts(
-                projectKey: null,
-                environmentKey: null,
-                kind: null,
-                key: null,
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                kind: "kind_string",
+                key: "key_string",
                 limit: null,
                 continuationToken: null,
                 sort: null,

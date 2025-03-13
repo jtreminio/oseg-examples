@@ -20,7 +20,6 @@ with ApiClient(configuration) as api_client:
         notifyTeamKeys=[
             "example-reviewer-team",
         ],
-        integrationConfig=None,
     )
 
     try:

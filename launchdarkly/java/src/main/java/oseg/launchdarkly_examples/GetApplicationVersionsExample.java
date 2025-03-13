@@ -24,7 +24,7 @@ public class GetApplicationVersionsExample
         try
         {
             var response = new ApplicationsBetaApi(config).getApplicationVersions(
-                null, // applicationKey
+                "applicationKey_string", // applicationKey
                 null, // filter
                 null, // limit
                 null, // offset

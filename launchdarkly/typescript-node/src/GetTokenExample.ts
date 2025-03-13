@@ -6,7 +6,7 @@ const apiCaller = new api.AccessTokensApi();
 apiCaller.setApiKey(api.AccessTokensApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getToken(
-  undefined, // id
+  "id_string", // id
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

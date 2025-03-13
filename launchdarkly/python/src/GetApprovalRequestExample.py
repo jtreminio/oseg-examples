@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.ApprovalsApi(api_client).get_approval_request(
-            id=None,
+            id="id_string",
             expand=None,
         )
 

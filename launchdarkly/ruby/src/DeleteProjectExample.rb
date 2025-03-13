@@ -7,7 +7,7 @@ end
 
 begin
     LaunchDarklyClient::ProjectsApi.new.delete_project(
-        nil, # project_key
+        "projectKey_string", # project_key
     )
 rescue LaunchDarklyClient::ApiError => e
     puts "Exception when calling ProjectsApi#delete_project: #{e}"

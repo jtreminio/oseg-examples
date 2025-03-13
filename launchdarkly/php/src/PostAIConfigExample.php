@@ -21,8 +21,8 @@ $ai_config_post = (new LaunchDarkly\Client\Model\AIConfigPost())
 
 try {
     $response = (new LaunchDarkly\Client\Api\AIConfigsBetaApi(config: $config))->postAIConfig(
-        ld_api_version: null,
-        project_key: null,
+        ld_api_version: LaunchDarkly\Client\Model\AIConfigPost::LD_API_VERSION_BETA,
+        project_key: "projectKey_string",
         ai_config_post: $ai_config_post,
     );
 

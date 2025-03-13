@@ -19,9 +19,9 @@ public class DeleteSegmentExample
         try
         {
             new SegmentsApi(config).DeleteSegment(
-                projectKey: null,
-                environmentKey: null,
-                segmentKey: null
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                segmentKey: "segmentKey_string"
             );
         }
         catch (ApiException e)

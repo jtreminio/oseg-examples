@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.AccountMembersApi(api_client).delete_member(
-            id=None,
+            id="id_string",
         )
     except ApiException as e:
         print("Exception when calling AccountMembersApi#delete_member: %s\n" % e)

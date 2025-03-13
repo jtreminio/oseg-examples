@@ -9,11 +9,11 @@ const valuePut = new models.ValuePut();
 valuePut.comment = "make sure this context experiences a specific variation";
 
 apiCaller.putContextFlagSetting(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // contextKind
-  undefined, // contextKey
-  undefined, // featureFlagKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "contextKind_string", // contextKind
+  "contextKey_string", // contextKey
+  "featureFlagKey_string", // featureFlagKey
   valuePut,
 ).catch(error => {
   console.log("Exception when calling ContextSettingsApi#putContextFlagSetting:");

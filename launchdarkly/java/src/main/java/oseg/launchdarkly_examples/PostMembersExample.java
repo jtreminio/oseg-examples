@@ -35,7 +35,6 @@ public class PostMembersExample
             "team-1",
             "team-2"
         ));
-        newMemberForm1.roleAttributes(null);
 
         var newMemberForm = new ArrayList<NewMemberForm>(List.of (
             newMemberForm1

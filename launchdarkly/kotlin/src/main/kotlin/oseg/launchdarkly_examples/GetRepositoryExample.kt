@@ -22,7 +22,7 @@ class GetRepositoryExample
         try
         {
             val response = CodeReferencesApi().getRepository(
-                repo = null,
+                repo = "repo_string",
             )
 
             println(response)

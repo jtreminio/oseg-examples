@@ -22,7 +22,7 @@ class GetWebhookExample
         try
         {
             val response = WebhooksApi().getWebhook(
-                id = null,
+                id = "id_string",
             )
 
             println(response)

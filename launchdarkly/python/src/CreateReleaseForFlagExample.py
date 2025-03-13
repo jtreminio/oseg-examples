@@ -10,14 +10,13 @@ configuration = Configuration(
 
 with ApiClient(configuration) as api_client:
     create_release_input = models.CreateReleaseInput(
-        releasePipelineKey=None,
-        releaseVariationId=None,
+        releasePipelineKey="releasePipelineKey_string",
     )
 
     try:
         response = api.ReleasesBetaApi(api_client).create_release_for_flag(
-            project_key=None,
-            flag_key=None,
+            project_key="projectKey_string",
+            flag_key="flagKey_string",
             create_release_input=create_release_input,
         )
 

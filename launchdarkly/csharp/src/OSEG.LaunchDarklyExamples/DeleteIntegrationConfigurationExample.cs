@@ -19,7 +19,7 @@ public class DeleteIntegrationConfigurationExample
         try
         {
             new IntegrationsBetaApi(config).DeleteIntegrationConfiguration(
-                integrationConfigurationId: null
+                integrationConfigurationId: "integrationConfigurationId_string"
             );
         }
         catch (ApiException e)

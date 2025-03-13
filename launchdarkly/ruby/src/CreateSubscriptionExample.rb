@@ -36,7 +36,7 @@ subscription_post.statements = statements
 
 begin
     response = LaunchDarklyClient::IntegrationAuditLogSubscriptionsApi.new.create_subscription(
-        nil, # integration_key
+        "integrationKey_string", # integration_key
         subscription_post,
     )
 

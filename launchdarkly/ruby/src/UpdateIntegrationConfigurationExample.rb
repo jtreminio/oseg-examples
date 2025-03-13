@@ -15,7 +15,7 @@ patch_operation = [
 
 begin
     response = LaunchDarklyClient::IntegrationsBetaApi.new.update_integration_configuration(
-        nil, # integration_configuration_id
+        "integrationConfigurationId_string", # integration_configuration_id
         patch_operation,
     )
 

@@ -27,10 +27,10 @@ public class PostApprovalRequestApplyForFlagExample
         try
         {
             var response = new ApprovalsApi(config).postApprovalRequestApplyForFlag(
-                null, // projectKey
-                null, // featureFlagKey
-                null, // environmentKey
-                null, // id
+                "projectKey_string", // projectKey
+                "featureFlagKey_string", // featureFlagKey
+                "environmentKey_string", // environmentKey
+                "id_string", // id
                 postApprovalRequestApplyRequest
             );
 

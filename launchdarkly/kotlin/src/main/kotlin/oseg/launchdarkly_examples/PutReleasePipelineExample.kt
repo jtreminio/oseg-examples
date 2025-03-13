@@ -27,7 +27,7 @@ class PutReleasePipelineExample
         )
 
         val phases1Audiences1Configuration = AudienceConfiguration(
-            releaseStrategy = null,
+            releaseStrategy = "releaseStrategy_string",
             requireApproval = true,
             notifyMemberIds = listOf (
                 "1234a56b7c89d012345e678f",
@@ -39,8 +39,8 @@ class PutReleasePipelineExample
         )
 
         val phases1Audiences1 = AudiencePost(
-            environmentKey = null,
-            name = null,
+            environmentKey = "environmentKey_string",
+            name = "name_string",
             segmentKeys = listOf (),
             configuration = phases1Audiences1Configuration,
         )
@@ -70,8 +70,8 @@ class PutReleasePipelineExample
         try
         {
             val response = ReleasePipelinesBetaApi().putReleasePipeline(
-                projectKey = null,
-                pipelineKey = null,
+                projectKey = "projectKey_string",
+                pipelineKey = "pipelineKey_string",
                 updateReleasePipelineInput = updateReleasePipelineInput,
             )
 

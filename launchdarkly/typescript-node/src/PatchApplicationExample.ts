@@ -14,7 +14,7 @@ const patchOperation = [
 ];
 
 apiCaller.patchApplication(
-  undefined, // applicationKey
+  "applicationKey_string", // applicationKey
   patchOperation,
 ).then(response => {
   console.log(response.body);

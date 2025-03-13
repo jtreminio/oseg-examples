@@ -11,9 +11,9 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.FeatureFlagsBetaApi(api_client).get_dependent_flags_by_env(
-            project_key=None,
-            environment_key=None,
-            feature_flag_key=None,
+            project_key="projectKey_string",
+            environment_key="environmentKey_string",
+            feature_flag_key="featureFlagKey_string",
         )
 
         pprint(response)

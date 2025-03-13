@@ -38,8 +38,8 @@ put_branch.references = references
 
 begin
     LaunchDarklyClient::CodeReferencesApi.new.put_branch(
-        nil, # repo
-        nil, # branch
+        "repo_string", # repo
+        "branch_string", # branch
         put_branch,
     )
 rescue LaunchDarklyClient::ApiError => e

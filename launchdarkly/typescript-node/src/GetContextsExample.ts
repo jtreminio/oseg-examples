@@ -6,10 +6,10 @@ const apiCaller = new api.ContextsApi();
 apiCaller.setApiKey(api.ContextsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getContexts(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // kind
-  undefined, // key
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "kind_string", // kind
+  "key_string", // key
   undefined, // limit
   undefined, // continuationToken
   undefined, // sort

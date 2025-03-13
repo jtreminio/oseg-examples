@@ -24,7 +24,7 @@ public class GetAllReleasePipelinesExample
         try
         {
             var response = new ReleasePipelinesBetaApi(config).getAllReleasePipelines(
-                null, // projectKey
+                "projectKey_string", // projectKey
                 null, // filter
                 null, // limit
                 null // offset

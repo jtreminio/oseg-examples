@@ -12,7 +12,7 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     $response = (new LaunchDarkly\Client\Api\WebhooksApi(config: $config))->getWebhook(
-        id: null,
+        id: "id_string",
     );
 
     print_r($response);

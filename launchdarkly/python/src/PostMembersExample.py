@@ -23,7 +23,6 @@ with ApiClient(configuration) as api_client:
             "team-1",
             "team-2",
         ],
-        roleAttributes=None,
     )
 
     new_member_form = [

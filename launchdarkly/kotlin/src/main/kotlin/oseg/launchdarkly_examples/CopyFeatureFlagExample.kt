@@ -38,8 +38,8 @@ class CopyFeatureFlagExample
         try
         {
             val response = FeatureFlagsApi().copyFeatureFlag(
-                projectKey = null,
-                featureFlagKey = null,
+                projectKey = "projectKey_string",
+                featureFlagKey = "featureFlagKey_string",
                 flagCopyConfigPost = flagCopyConfigPost,
             )
 

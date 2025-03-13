@@ -11,9 +11,9 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.ContextsApi(api_client).get_context_attribute_values(
-            project_key=None,
-            environment_key=None,
-            attribute_name=None,
+            project_key="projectKey_string",
+            environment_key="environmentKey_string",
+            attribute_name="attributeName_string",
             filter=None,
             limit=None,
         )

@@ -19,8 +19,8 @@ public class GetContextInstanceSegmentsMembershipByEnvExample
         try
         {
             var response = new SegmentsApi(config).GetContextInstanceSegmentsMembershipByEnv(
-                projectKey: null,
-                environmentKey: null,
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
                 requestBody: JsonSerializer.Deserialize<Dictionary<string, object>>("""
                     {
                         "address": {

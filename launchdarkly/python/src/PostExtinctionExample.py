@@ -23,8 +23,8 @@ with ApiClient(configuration) as api_client:
 
     try:
         api.CodeReferencesApi(api_client).post_extinction(
-            repo=None,
-            branch=None,
+            repo="repo_string",
+            branch="branch_string",
             extinction=extinction,
         )
     except ApiException as e:

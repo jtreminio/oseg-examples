@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.CodeReferencesApi(api_client).delete_branches(
-            repo=None,
+            repo="repo_string",
             request_body=[
                 "branch-to-be-deleted",
                 "another-branch-to-be-deleted",

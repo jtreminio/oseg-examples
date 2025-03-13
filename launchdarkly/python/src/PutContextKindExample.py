@@ -19,8 +19,8 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.ContextsApi(api_client).put_context_kind(
-            project_key=None,
-            key=None,
+            project_key="projectKey_string",
+            key="key_string",
             upsert_context_kind_payload=upsert_context_kind_payload,
         )
 

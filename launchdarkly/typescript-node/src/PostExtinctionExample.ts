@@ -17,8 +17,8 @@ const extinction = [
 ];
 
 apiCaller.postExtinction(
-  undefined, // repo
-  undefined, // branch
+  "repo_string", // repo
+  "branch_string", // branch
   extinction,
 ).catch(error => {
   console.log("Exception when calling CodeReferencesApi#postExtinction:");

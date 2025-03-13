@@ -30,7 +30,7 @@ public class PostMemberTeamsExample
         try
         {
             var response = new AccountMembersApi(config).postMemberTeams(
-                null, // id
+                "id_string", // id
                 memberTeamsPostInput
             );
 

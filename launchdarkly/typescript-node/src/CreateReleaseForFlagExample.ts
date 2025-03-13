@@ -6,12 +6,11 @@ const apiCaller = new api.ReleasesBetaApi();
 apiCaller.setApiKey(api.ReleasesBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 const createReleaseInput = new models.CreateReleaseInput();
-createReleaseInput.releasePipelineKey = undefined;
-createReleaseInput.releaseVariationId = undefined;
+createReleaseInput.releasePipelineKey = "releasePipelineKey_string";
 
 apiCaller.createReleaseForFlag(
-  undefined, // projectKey
-  undefined, // flagKey
+  "projectKey_string", // projectKey
+  "flagKey_string", // flagKey
   createReleaseInput,
 ).then(response => {
   console.log(response.body);

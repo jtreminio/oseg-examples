@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.OAuth2ClientsApi(api_client).get_o_auth_client_by_id(
-            client_id=None,
+            client_id="clientId_string",
         )
 
         pprint(response)

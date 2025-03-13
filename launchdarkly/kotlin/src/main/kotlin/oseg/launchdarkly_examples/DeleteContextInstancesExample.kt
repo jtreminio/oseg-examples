@@ -22,9 +22,9 @@ class DeleteContextInstancesExample
         try
         {
             ContextsApi().deleteContextInstances(
-                projectKey = null,
-                environmentKey = null,
-                id = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                id = "id_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling ContextsApi#deleteContextInstances")

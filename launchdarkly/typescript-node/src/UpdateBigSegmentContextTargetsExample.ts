@@ -22,9 +22,9 @@ segmentUserState.included = included;
 segmentUserState.excluded = excluded;
 
 apiCaller.updateBigSegmentContextTargets(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // segmentKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "segmentKey_string", // segmentKey
   segmentUserState,
 ).catch(error => {
   console.log("Exception when calling SegmentsApi#updateBigSegmentContextTargets:");

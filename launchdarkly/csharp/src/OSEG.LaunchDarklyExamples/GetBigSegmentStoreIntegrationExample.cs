@@ -19,10 +19,10 @@ public class GetBigSegmentStoreIntegrationExample
         try
         {
             var response = new PersistentStoreIntegrationsBetaApi(config).GetBigSegmentStoreIntegration(
-                projectKey: null,
-                environmentKey: null,
-                integrationKey: null,
-                integrationId: null
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                integrationKey: "integrationKey_string",
+                integrationId: "integrationId_string"
             );
 
             Console.WriteLine(response);

@@ -29,7 +29,7 @@ public class PostEnvironmentExample
         try
         {
             var response = new EnvironmentsApi(config).postEnvironment(
-                null, // projectKey
+                "projectKey_string", // projectKey
                 environmentPost
             );
 

@@ -26,7 +26,7 @@ metric_group_post.metrics = metrics
 
 begin
     response = LaunchDarklyClient::MetricsBetaApi.new.create_metric_group(
-        nil, # project_key
+        "projectKey_string", # project_key
         metric_group_post,
     )
 

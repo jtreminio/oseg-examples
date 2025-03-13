@@ -19,9 +19,9 @@ public class TriggerFlagImportJobExample
         try
         {
             new FlagImportConfigurationsBetaApi(config).TriggerFlagImportJob(
-                projectKey: null,
-                integrationKey: null,
-                integrationId: null
+                projectKey: "projectKey_string",
+                integrationKey: "integrationKey_string",
+                integrationId: "integrationId_string"
             );
         }
         catch (ApiException e)

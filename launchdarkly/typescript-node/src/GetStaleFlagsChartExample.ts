@@ -6,8 +6,8 @@ const apiCaller = new api.InsightsChartsBetaApi();
 apiCaller.setApiKey(api.InsightsChartsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getStaleFlagsChart(
-  undefined, // projectKey
-  undefined, // environmentKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
   undefined, // applicationKey
   undefined, // groupBy
   undefined, // maintainerId

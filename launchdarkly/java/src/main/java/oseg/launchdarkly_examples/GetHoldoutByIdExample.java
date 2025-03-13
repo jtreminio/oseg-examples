@@ -24,9 +24,9 @@ public class GetHoldoutByIdExample
         try
         {
             var response = new HoldoutsBetaApi(config).getHoldoutById(
-                null, // projectKey
-                null, // environmentKey
-                null // holdoutId
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "holdoutId_string" // holdoutId
             );
 
             System.out.println(response);

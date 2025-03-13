@@ -12,7 +12,7 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     $response = (new LaunchDarkly\Client\Api\ApplicationsBetaApi(config: $config))->getApplication(
-        application_key: null,
+        application_key: "applicationKey_string",
         expand: null,
     );
 

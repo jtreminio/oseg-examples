@@ -7,8 +7,8 @@ end
 
 begin
     response = LaunchDarklyClient::SegmentsApi.new.get_context_instance_segments_membership_by_env(
-        nil, # project_key
-        nil, # environment_key
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
         JSON.parse(<<-EOD
             {
                 "address": {

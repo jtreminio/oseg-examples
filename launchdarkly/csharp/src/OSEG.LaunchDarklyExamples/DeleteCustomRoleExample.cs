@@ -19,7 +19,7 @@ public class DeleteCustomRoleExample
         try
         {
             new CustomRolesApi(config).DeleteCustomRole(
-                customRoleKey: null
+                customRoleKey: "customRoleKey_string"
             );
         }
         catch (ApiException e)

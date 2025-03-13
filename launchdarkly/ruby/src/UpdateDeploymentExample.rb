@@ -15,7 +15,7 @@ patch_operation = [
 
 begin
     response = LaunchDarklyClient::InsightsDeploymentsBetaApi.new.update_deployment(
-        nil, # deployment_id
+        "deploymentID_string", # deployment_id
         patch_operation,
     )
 

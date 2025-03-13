@@ -19,7 +19,7 @@ public class GetStatisticsExample
         try
         {
             var response = new CodeReferencesApi(config).GetStatistics(
-                projectKey: null,
+                projectKey: "projectKey_string",
                 flagKey: null
             );
 

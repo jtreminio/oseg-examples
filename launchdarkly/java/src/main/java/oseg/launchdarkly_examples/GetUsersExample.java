@@ -24,8 +24,8 @@ public class GetUsersExample
         try
         {
             var response = new UsersApi(config).getUsers(
-                null, // projectKey
-                null, // environmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
                 null, // limit
                 null // searchAfter
             );

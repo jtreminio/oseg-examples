@@ -29,7 +29,7 @@ public class PatchMemberExample
         try
         {
             var response = new AccountMembersApi(config).PatchMember(
-                id: null,
+                id: "id_string",
                 patchOperation: patchOperation
             );
 

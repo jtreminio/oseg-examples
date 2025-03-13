@@ -31,7 +31,7 @@ class PatchProjectExample
         try
         {
             val response = ProjectsApi().patchProject(
-                projectKey = null,
+                projectKey = "projectKey_string",
                 patchOperation = patchOperation,
             )
 

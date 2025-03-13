@@ -23,8 +23,7 @@ $new_member_form_1 = (new LaunchDarkly\Client\Model\NewMemberForm())
     ->setTeamKeys([
         "team-1",
         "team-2",
-    ])
-    ->setRoleAttributes(null);
+    ]);
 
 $new_member_form = [
     $new_member_form_1,

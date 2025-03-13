@@ -22,7 +22,7 @@ class GetSubscriptionsExample
         try
         {
             val response = IntegrationAuditLogSubscriptionsApi().getSubscriptions(
-                integrationKey = null,
+                integrationKey = "integrationKey_string",
             )
 
             println(response)

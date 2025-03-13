@@ -6,7 +6,7 @@ const apiCaller = new api.InsightsScoresBetaApi();
 apiCaller.setApiKey(api.InsightsScoresBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.deleteInsightGroup(
-  undefined, // insightGroupKey
+  "insightGroupKey_string", // insightGroupKey
 ).catch(error => {
   console.log("Exception when calling InsightsScoresBetaApi#deleteInsightGroup:");
   console.log(error.body);

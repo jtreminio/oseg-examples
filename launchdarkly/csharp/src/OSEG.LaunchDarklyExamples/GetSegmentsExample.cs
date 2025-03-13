@@ -19,8 +19,8 @@ public class GetSegmentsExample
         try
         {
             var response = new SegmentsApi(config).GetSegments(
-                projectKey: null,
-                environmentKey: null,
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
                 limit: null,
                 offset: null,
                 sort: null,

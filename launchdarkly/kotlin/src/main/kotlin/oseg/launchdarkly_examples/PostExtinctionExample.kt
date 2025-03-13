@@ -34,8 +34,8 @@ class PostExtinctionExample
         try
         {
             CodeReferencesApi().postExtinction(
-                repo = null,
-                branch = null,
+                repo = "repo_string",
+                branch = "branch_string",
                 extinction = extinction,
             )
         } catch (e: ClientException) {

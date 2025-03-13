@@ -22,7 +22,7 @@ class PatchApprovalRequestExample
         try
         {
             val response = ApprovalsBetaApi().patchApprovalRequest(
-                id = null,
+                id = "id_string",
             )
 
             println(response)

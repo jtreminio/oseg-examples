@@ -19,9 +19,9 @@ public class DeleteFlagLinkExample
         try
         {
             new FlagLinksBetaApi(config).DeleteFlagLink(
-                projectKey: null,
-                featureFlagKey: null,
-                id: null
+                projectKey: "projectKey_string",
+                featureFlagKey: "featureFlagKey_string",
+                id: "id_string"
             );
         }
         catch (ApiException e)

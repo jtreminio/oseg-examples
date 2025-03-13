@@ -6,8 +6,8 @@ const apiCaller = new api.FollowFlagsApi();
 apiCaller.setApiKey(api.FollowFlagsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getFollowersByProjEnv(
-  undefined, // projectKey
-  undefined, // environmentKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

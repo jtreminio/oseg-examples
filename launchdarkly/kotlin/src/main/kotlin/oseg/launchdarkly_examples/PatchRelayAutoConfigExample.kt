@@ -35,7 +35,7 @@ class PatchRelayAutoConfigExample
         try
         {
             val response = RelayProxyConfigurationsApi().patchRelayAutoConfig(
-                id = null,
+                id = "id_string",
                 patchWithComment = patchWithComment,
             )
 

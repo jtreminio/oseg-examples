@@ -11,9 +11,9 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.UsersApi(api_client).delete_user(
-            project_key=None,
-            environment_key=None,
-            user_key=None,
+            project_key="projectKey_string",
+            environment_key="environmentKey_string",
+            user_key="userKey_string",
         )
     except ApiException as e:
         print("Exception when calling UsersApi#delete_user: %s\n" % e)

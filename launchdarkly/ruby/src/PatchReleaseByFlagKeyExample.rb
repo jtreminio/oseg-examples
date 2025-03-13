@@ -15,8 +15,8 @@ patch_operation = [
 
 begin
     response = LaunchDarklyClient::ReleasesBetaApi.new.patch_release_by_flag_key(
-        nil, # project_key
-        nil, # flag_key
+        "projectKey_string", # project_key
+        "flagKey_string", # flag_key
         patch_operation,
     )
 

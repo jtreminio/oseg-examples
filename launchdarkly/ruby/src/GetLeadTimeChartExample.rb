@@ -7,7 +7,7 @@ end
 
 begin
     response = LaunchDarklyClient::InsightsChartsBetaApi.new.get_lead_time_chart(
-        nil, # project_key
+        "projectKey_string", # project_key
     )
 
     p response

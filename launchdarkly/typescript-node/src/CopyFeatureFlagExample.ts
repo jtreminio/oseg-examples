@@ -19,8 +19,8 @@ flagCopyConfigPost.source = source;
 flagCopyConfigPost.target = target;
 
 apiCaller.copyFeatureFlag(
-  undefined, // projectKey
-  undefined, // featureFlagKey
+  "projectKey_string", // projectKey
+  "featureFlagKey_string", // featureFlagKey
   flagCopyConfigPost,
 ).then(response => {
   console.log(response.body);

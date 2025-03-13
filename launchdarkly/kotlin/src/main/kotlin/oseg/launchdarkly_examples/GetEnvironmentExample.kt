@@ -22,8 +22,8 @@ class GetEnvironmentExample
         try
         {
             val response = EnvironmentsApi().getEnvironment(
-                projectKey = null,
-                environmentKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
             )
 
             println(response)

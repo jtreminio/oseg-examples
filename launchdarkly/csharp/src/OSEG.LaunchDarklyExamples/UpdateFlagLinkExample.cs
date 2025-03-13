@@ -29,9 +29,9 @@ public class UpdateFlagLinkExample
         try
         {
             var response = new FlagLinksBetaApi(config).UpdateFlagLink(
-                projectKey: null,
-                featureFlagKey: null,
-                id: null,
+                projectKey: "projectKey_string",
+                featureFlagKey: "featureFlagKey_string",
+                id: "id_string",
                 patchOperation: patchOperation
             );
 

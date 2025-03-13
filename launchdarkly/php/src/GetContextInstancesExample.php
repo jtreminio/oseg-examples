@@ -12,9 +12,9 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     $response = (new LaunchDarkly\Client\Api\ContextsApi(config: $config))->getContextInstances(
-        project_key: null,
-        environment_key: null,
-        id: null,
+        project_key: "projectKey_string",
+        environment_key: "environmentKey_string",
+        id: "id_string",
         limit: null,
         continuation_token: null,
         sort: null,

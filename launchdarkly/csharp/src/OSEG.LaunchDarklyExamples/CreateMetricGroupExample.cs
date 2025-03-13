@@ -41,7 +41,7 @@ public class CreateMetricGroupExample
         try
         {
             var response = new MetricsBetaApi(config).CreateMetricGroup(
-                projectKey: null,
+                projectKey: "projectKey_string",
                 metricGroupPost: metricGroupPost
             );
 

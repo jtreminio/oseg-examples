@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.MetricsApi(api_client).get_metrics(
-            project_key=None,
+            project_key="projectKey_string",
             expand=None,
             limit=None,
             offset=None,

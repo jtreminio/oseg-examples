@@ -6,8 +6,8 @@ const apiCaller = new api.IntegrationAuditLogSubscriptionsApi();
 apiCaller.setApiKey(api.IntegrationAuditLogSubscriptionsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getSubscriptionByID(
-  undefined, // integrationKey
-  undefined, // id
+  "integrationKey_string", // integrationKey
+  "id_string", // id
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

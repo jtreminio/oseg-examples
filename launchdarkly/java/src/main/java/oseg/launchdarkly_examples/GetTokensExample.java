@@ -23,7 +23,11 @@ public class GetTokensExample
 
         try
         {
-            var response = new AccessTokensApi(config).getTokens();
+            var response = new AccessTokensApi(config).getTokens(
+                null, // showAll
+                null, // limit
+                null // offset
+            );
 
             System.out.println(response);
         } catch (ApiException e) {

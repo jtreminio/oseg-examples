@@ -19,9 +19,9 @@ public class DeleteFlagImportConfigurationExample
         try
         {
             new FlagImportConfigurationsBetaApi(config).DeleteFlagImportConfiguration(
-                projectKey: null,
-                integrationKey: null,
-                integrationId: null
+                projectKey: "projectKey_string",
+                integrationKey: "integrationKey_string",
+                integrationId: "integrationId_string"
             );
         }
         catch (ApiException e)

@@ -22,7 +22,7 @@ class GetTokenExample
         try
         {
             val response = AccessTokensApi().getToken(
-                id = null,
+                id = "id_string",
             )
 
             println(response)

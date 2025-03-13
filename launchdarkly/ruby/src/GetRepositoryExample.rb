@@ -7,7 +7,7 @@ end
 
 begin
     response = LaunchDarklyClient::CodeReferencesApi.new.get_repository(
-        nil, # repo
+        "repo_string", # repo
     )
 
     p response

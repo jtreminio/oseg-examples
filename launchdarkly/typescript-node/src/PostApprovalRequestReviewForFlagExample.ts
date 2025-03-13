@@ -10,10 +10,10 @@ postApprovalRequestReviewRequest.kind = models.PostApprovalRequestReviewRequest.
 postApprovalRequestReviewRequest.comment = "Looks good, thanks for updating";
 
 apiCaller.postApprovalRequestReviewForFlag(
-  undefined, // projectKey
-  undefined, // featureFlagKey
-  undefined, // environmentKey
-  undefined, // id
+  "projectKey_string", // projectKey
+  "featureFlagKey_string", // featureFlagKey
+  "environmentKey_string", // environmentKey
+  "id_string", // id
   postApprovalRequestReviewRequest,
 ).then(response => {
   console.log(response.body);

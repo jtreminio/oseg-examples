@@ -55,8 +55,8 @@ public class PutBranchExample
         try
         {
             new CodeReferencesApi(config).putBranch(
-                null, // repo
-                null, // branch
+                "repo_string", // repo
+                "branch_string", // branch
                 putBranch
             );
         } catch (ApiException e) {

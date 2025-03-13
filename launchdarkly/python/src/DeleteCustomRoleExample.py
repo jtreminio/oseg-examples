@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.CustomRolesApi(api_client).delete_custom_role(
-            custom_role_key=None,
+            custom_role_key="customRoleKey_string",
         )
     except ApiException as e:
         print("Exception when calling CustomRolesApi#delete_custom_role: %s\n" % e)

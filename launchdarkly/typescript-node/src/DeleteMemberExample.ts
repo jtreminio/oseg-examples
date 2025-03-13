@@ -6,7 +6,7 @@ const apiCaller = new api.AccountMembersApi();
 apiCaller.setApiKey(api.AccountMembersApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.deleteMember(
-  undefined, // id
+  "id_string", // id
 ).catch(error => {
   console.log("Exception when calling AccountMembersApi#deleteMember:");
   console.log(error.body);

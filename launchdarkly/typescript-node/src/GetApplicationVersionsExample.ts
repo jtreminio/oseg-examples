@@ -6,7 +6,7 @@ const apiCaller = new api.ApplicationsBetaApi();
 apiCaller.setApiKey(api.ApplicationsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getApplicationVersions(
-  undefined, // applicationKey
+  "applicationKey_string", // applicationKey
   undefined, // filter
   undefined, // limit
   undefined, // offset

@@ -22,9 +22,9 @@ class GetHoldoutByIdExample
         try
         {
             val response = HoldoutsBetaApi().getHoldoutById(
-                projectKey = null,
-                environmentKey = null,
-                holdoutId = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                holdoutId = "holdoutId_string",
             )
 
             println(response)

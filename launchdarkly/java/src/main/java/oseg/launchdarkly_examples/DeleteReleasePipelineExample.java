@@ -24,8 +24,8 @@ public class DeleteReleasePipelineExample
         try
         {
             new ReleasePipelinesBetaApi(config).deleteReleasePipeline(
-                null, // projectKey
-                null // pipelineKey
+                "projectKey_string", // projectKey
+                "pipelineKey_string" // pipelineKey
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling ReleasePipelinesBetaApi#deleteReleasePipeline");

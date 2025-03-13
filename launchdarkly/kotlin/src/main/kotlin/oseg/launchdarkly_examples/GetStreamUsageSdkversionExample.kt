@@ -22,7 +22,7 @@ class GetStreamUsageSdkversionExample
         try
         {
             val response = AccountUsageBetaApi().getStreamUsageSdkversion(
-                source = null,
+                source = "source_string",
             )
 
             println(response)

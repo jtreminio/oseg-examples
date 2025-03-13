@@ -9,7 +9,7 @@ const postApprovalRequestApplyRequest = new models.PostApprovalRequestApplyReque
 postApprovalRequestApplyRequest.comment = "Looks good, thanks for updating";
 
 apiCaller.postApprovalRequestApply(
-  undefined, // id
+  "id_string", // id
   postApprovalRequestApplyRequest,
 ).then(response => {
   console.log(response.body);

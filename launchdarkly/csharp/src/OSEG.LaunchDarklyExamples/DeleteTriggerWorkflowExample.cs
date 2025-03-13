@@ -19,10 +19,10 @@ public class DeleteTriggerWorkflowExample
         try
         {
             new FlagTriggersApi(config).DeleteTriggerWorkflow(
-                projectKey: null,
-                environmentKey: null,
-                featureFlagKey: null,
-                id: null
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                featureFlagKey: "featureFlagKey_string",
+                id: "id_string"
             );
         }
         catch (ApiException e)

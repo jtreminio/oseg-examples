@@ -15,7 +15,7 @@ patch_operation = [
 
 begin
     response = LaunchDarklyClient::ApplicationsBetaApi.new.patch_application(
-        nil, # application_key
+        "applicationKey_string", # application_key
         patch_operation,
     )
 

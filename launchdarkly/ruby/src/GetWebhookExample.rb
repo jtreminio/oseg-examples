@@ -7,7 +7,7 @@ end
 
 begin
     response = LaunchDarklyClient::WebhooksApi.new.get_webhook(
-        nil, # id
+        "id_string", # id
     )
 
     p response

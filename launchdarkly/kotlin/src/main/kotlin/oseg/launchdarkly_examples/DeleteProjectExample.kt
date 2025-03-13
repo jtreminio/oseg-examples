@@ -22,7 +22,7 @@ class DeleteProjectExample
         try
         {
             ProjectsApi().deleteProject(
-                projectKey = null,
+                projectKey = "projectKey_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling ProjectsApi#deleteProject")

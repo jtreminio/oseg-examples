@@ -7,8 +7,8 @@ end
 
 begin
     response = LaunchDarklyClient::ReleasePipelinesBetaApi.new.get_all_release_progressions_for_release_pipeline(
-        nil, # project_key
-        nil, # pipeline_key
+        "projectKey_string", # project_key
+        "pipelineKey_string", # pipeline_key
     )
 
     p response

@@ -24,7 +24,7 @@ public class GetTeamExample
         try
         {
             var response = new TeamsApi(config).getTeam(
-                null, // teamKey
+                "teamKey_string", // teamKey
                 null // expand
             );
 

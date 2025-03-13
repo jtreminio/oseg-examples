@@ -31,8 +31,8 @@ public class PutContextKindExample
         try
         {
             var response = new ContextsApi(config).putContextKind(
-                null, // projectKey
-                null, // key
+                "projectKey_string", // projectKey
+                "key_string", // key
                 upsertContextKindPayload
             );
 

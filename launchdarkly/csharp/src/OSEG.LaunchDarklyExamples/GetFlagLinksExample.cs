@@ -19,8 +19,8 @@ public class GetFlagLinksExample
         try
         {
             var response = new FlagLinksBetaApi(config).GetFlagLinks(
-                projectKey: null,
-                featureFlagKey: null
+                projectKey: "projectKey_string",
+                featureFlagKey: "featureFlagKey_string"
             );
 
             Console.WriteLine(response);

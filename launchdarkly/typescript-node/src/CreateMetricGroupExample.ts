@@ -25,7 +25,7 @@ metricGroupPost.description = "Description of the metric group";
 metricGroupPost.metrics = metrics;
 
 apiCaller.createMetricGroup(
-  undefined, // projectKey
+  "projectKey_string", // projectKey
   metricGroupPost,
 ).then(response => {
   console.log(response.body);

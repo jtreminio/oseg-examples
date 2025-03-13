@@ -6,10 +6,10 @@ const apiCaller = new api.AIConfigsBetaApi();
 apiCaller.setApiKey(api.AIConfigsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.deleteAIConfigVariation(
-  undefined, // lDAPIVersion
-  undefined, // projectKey
-  undefined, // configKey
-  undefined, // variationKey
+  "beta", // lDAPIVersion
+  "projectKey_string", // projectKey
+  "configKey_string", // configKey
+  "variationKey_string", // variationKey
 ).catch(error => {
   console.log("Exception when calling AIConfigsBetaApi#deleteAIConfigVariation:");
   console.log(error.body);

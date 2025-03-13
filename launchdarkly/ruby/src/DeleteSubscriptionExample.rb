@@ -7,8 +7,8 @@ end
 
 begin
     LaunchDarklyClient::IntegrationAuditLogSubscriptionsApi.new.delete_subscription(
-        nil, # integration_key
-        nil, # id
+        "integrationKey_string", # integration_key
+        "id_string", # id
     )
 rescue LaunchDarklyClient::ApiError => e
     puts "Exception when calling IntegrationAuditLogSubscriptionsApi#delete_subscription: #{e}"

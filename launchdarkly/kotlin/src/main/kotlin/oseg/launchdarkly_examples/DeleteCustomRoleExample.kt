@@ -22,7 +22,7 @@ class DeleteCustomRoleExample
         try
         {
             CustomRolesApi().deleteCustomRole(
-                customRoleKey = null,
+                customRoleKey = "customRoleKey_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling CustomRolesApi#deleteCustomRole")

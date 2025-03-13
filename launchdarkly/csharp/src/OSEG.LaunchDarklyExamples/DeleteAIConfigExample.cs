@@ -19,9 +19,9 @@ public class DeleteAIConfigExample
         try
         {
             new AIConfigsBetaApi(config).DeleteAIConfig(
-                lDAPIVersion: null,
+                lDAPIVersion: "beta",
                 projectKey: "default",
-                configKey: null
+                configKey: "configKey_string"
             );
         }
         catch (ApiException e)

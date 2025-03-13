@@ -6,7 +6,7 @@ const apiCaller = new api.AccessTokensApi();
 apiCaller.setApiKey(api.AccessTokensApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.resetToken(
-  undefined, // id
+  "id_string", // id
   undefined, // expiry
 ).then(response => {
   console.log(response.body);

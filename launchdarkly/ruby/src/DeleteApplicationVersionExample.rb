@@ -7,8 +7,8 @@ end
 
 begin
     LaunchDarklyClient::ApplicationsBetaApi.new.delete_application_version(
-        nil, # application_key
-        nil, # version_key
+        "applicationKey_string", # application_key
+        "versionKey_string", # version_key
     )
 rescue LaunchDarklyClient::ApiError => e
     puts "Exception when calling ApplicationsBetaApi#delete_application_version: #{e}"

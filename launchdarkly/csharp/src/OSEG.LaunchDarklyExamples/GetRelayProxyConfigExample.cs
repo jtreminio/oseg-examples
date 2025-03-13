@@ -19,7 +19,7 @@ public class GetRelayProxyConfigExample
         try
         {
             var response = new RelayProxyConfigurationsApi(config).GetRelayProxyConfig(
-                id: null
+                id: "id_string"
             );
 
             Console.WriteLine(response);

@@ -17,7 +17,7 @@ const patchWithComment = new models.PatchWithComment();
 patchWithComment.patch = patch;
 
 apiCaller.patchCustomRole(
-  undefined, // customRoleKey
+  "customRoleKey_string", // customRoleKey
   patchWithComment,
 ).then(response => {
   console.log(response.body);

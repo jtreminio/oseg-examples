@@ -6,7 +6,7 @@ const apiCaller = new api.TeamsApi();
 apiCaller.setApiKey(api.TeamsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.deleteTeam(
-  undefined, // teamKey
+  "teamKey_string", // teamKey
 ).catch(error => {
   console.log("Exception when calling TeamsApi#deleteTeam:");
   console.log(error.body);

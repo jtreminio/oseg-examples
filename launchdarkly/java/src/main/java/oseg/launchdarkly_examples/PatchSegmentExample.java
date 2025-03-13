@@ -40,9 +40,9 @@ public class PatchSegmentExample
         try
         {
             var response = new SegmentsApi(config).patchSegment(
-                null, // projectKey
-                null, // environmentKey
-                null, // segmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "segmentKey_string", // segmentKey
                 patchWithComment
             );
 

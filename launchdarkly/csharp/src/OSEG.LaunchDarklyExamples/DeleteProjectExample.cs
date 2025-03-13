@@ -19,7 +19,7 @@ public class DeleteProjectExample
         try
         {
             new ProjectsApi(config).DeleteProject(
-                projectKey: null
+                projectKey: "projectKey_string"
             );
         }
         catch (ApiException e)

@@ -6,10 +6,10 @@ const apiCaller = new api.SegmentsApi();
 apiCaller.setApiKey(api.SegmentsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getBigSegmentImport(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // segmentKey
-  undefined, // importID
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "segmentKey_string", // segmentKey
+  "importID_string", // importID
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

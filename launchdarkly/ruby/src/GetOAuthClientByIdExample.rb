@@ -7,7 +7,7 @@ end
 
 begin
     response = LaunchDarklyClient::OAuth2ClientsApi.new.get_o_auth_client_by_id(
-        nil, # client_id
+        "clientId_string", # client_id
     )
 
     p response

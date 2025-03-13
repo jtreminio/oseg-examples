@@ -14,8 +14,8 @@ const patchOperation = [
 ];
 
 apiCaller.updateSubscription(
-  undefined, // integrationKey
-  undefined, // id
+  "integrationKey_string", // integrationKey
+  "id_string", // id
   patchOperation,
 ).then(response => {
   console.log(response.body);

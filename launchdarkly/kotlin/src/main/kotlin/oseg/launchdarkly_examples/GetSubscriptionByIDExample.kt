@@ -22,8 +22,8 @@ class GetSubscriptionByIDExample
         try
         {
             val response = IntegrationAuditLogSubscriptionsApi().getSubscriptionByID(
-                integrationKey = null,
-                id = null,
+                integrationKey = "integrationKey_string",
+                id = "id_string",
             )
 
             println(response)

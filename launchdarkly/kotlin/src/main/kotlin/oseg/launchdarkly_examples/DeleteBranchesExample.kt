@@ -22,7 +22,7 @@ class DeleteBranchesExample
         try
         {
             CodeReferencesApi().deleteBranches(
-                repo = null,
+                repo = "repo_string",
                 requestBody = listOf (
                     "branch-to-be-deleted",
                     "another-branch-to-be-deleted",

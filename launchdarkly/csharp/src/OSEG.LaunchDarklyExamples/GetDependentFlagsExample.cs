@@ -19,8 +19,8 @@ public class GetDependentFlagsExample
         try
         {
             var response = new FeatureFlagsBetaApi(config).GetDependentFlags(
-                projectKey: null,
-                featureFlagKey: null
+                projectKey: "projectKey_string",
+                featureFlagKey: "featureFlagKey_string"
             );
 
             Console.WriteLine(response);

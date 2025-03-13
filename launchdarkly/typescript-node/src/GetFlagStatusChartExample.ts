@@ -6,8 +6,8 @@ const apiCaller = new api.InsightsChartsBetaApi();
 apiCaller.setApiKey(api.InsightsChartsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getFlagStatusChart(
-  undefined, // projectKey
-  undefined, // environmentKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
   undefined, // applicationKey
 ).then(response => {
   console.log(response.body);

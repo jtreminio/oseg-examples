@@ -11,10 +11,10 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.FollowFlagsApi(api_client).delete_flag_follower(
-            project_key=None,
-            feature_flag_key=None,
-            environment_key=None,
-            member_id=None,
+            project_key="projectKey_string",
+            feature_flag_key="featureFlagKey_string",
+            environment_key="environmentKey_string",
+            member_id="memberId_string",
         )
     except ApiException as e:
         print("Exception when calling FollowFlagsApi#delete_flag_follower: %s\n" % e)

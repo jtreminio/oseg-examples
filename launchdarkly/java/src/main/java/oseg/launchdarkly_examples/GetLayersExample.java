@@ -24,7 +24,7 @@ public class GetLayersExample
         try
         {
             var response = new LayersApi(config).getLayers(
-                null, // projectKey
+                "projectKey_string", // projectKey
                 null // filter
             );
 

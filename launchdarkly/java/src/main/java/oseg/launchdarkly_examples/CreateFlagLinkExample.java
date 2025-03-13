@@ -30,8 +30,8 @@ public class CreateFlagLinkExample
         try
         {
             var response = new FlagLinksBetaApi(config).createFlagLink(
-                null, // projectKey
-                null, // featureFlagKey
+                "projectKey_string", // projectKey
+                "featureFlagKey_string", // featureFlagKey
                 flagLinkPost
             );
 

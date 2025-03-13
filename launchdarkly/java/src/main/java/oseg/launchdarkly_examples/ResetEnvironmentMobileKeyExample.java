@@ -24,8 +24,8 @@ public class ResetEnvironmentMobileKeyExample
         try
         {
             var response = new EnvironmentsApi(config).resetEnvironmentMobileKey(
-                null, // projectKey
-                null // environmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string" // environmentKey
             );
 
             System.out.println(response);

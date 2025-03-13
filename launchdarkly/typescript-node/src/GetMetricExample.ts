@@ -6,8 +6,8 @@ const apiCaller = new api.MetricsApi();
 apiCaller.setApiKey(api.MetricsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getMetric(
-  undefined, // projectKey
-  undefined, // metricKey
+  "projectKey_string", // projectKey
+  "metricKey_string", // metricKey
   undefined, // expand
   undefined, // versionId
 ).then(response => {

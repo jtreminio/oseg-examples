@@ -22,9 +22,9 @@ class GetTriggerWorkflowsExample
         try
         {
             val response = FlagTriggersApi().getTriggerWorkflows(
-                projectKey = null,
-                environmentKey = null,
-                featureFlagKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                featureFlagKey = "featureFlagKey_string",
             )
 
             println(response)

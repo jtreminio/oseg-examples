@@ -31,7 +31,7 @@ class PatchRepositoryExample
         try
         {
             val response = CodeReferencesApi().patchRepository(
-                repo = null,
+                repo = "repo_string",
                 patchOperation = patchOperation,
             )
 

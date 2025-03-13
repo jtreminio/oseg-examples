@@ -52,7 +52,7 @@ public class CreateSubscriptionExample
         try
         {
             var response = new IntegrationAuditLogSubscriptionsApi(config).createSubscription(
-                null, // integrationKey
+                "integrationKey_string", // integrationKey
                 subscriptionPost
             );
 

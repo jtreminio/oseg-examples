@@ -6,9 +6,9 @@ const apiCaller = new api.SegmentsApi();
 apiCaller.setApiKey(api.SegmentsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.deleteSegment(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // segmentKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "segmentKey_string", // segmentKey
 ).catch(error => {
   console.log("Exception when calling SegmentsApi#deleteSegment:");
   console.log(error.body);

@@ -12,7 +12,7 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     (new LaunchDarkly\Client\Api\WorkflowTemplatesApi(config: $config))->deleteWorkflowTemplate(
-        template_key: null,
+        template_key: "templateKey_string",
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
     echo "Exception when calling WorkflowTemplatesApi#deleteWorkflowTemplate: {$e->getMessage()}";

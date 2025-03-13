@@ -29,7 +29,7 @@ public class PatchTokenExample
         try
         {
             var response = new AccessTokensApi(config).PatchToken(
-                id: null,
+                id: "id_string",
                 patchOperation: patchOperation
             );
 

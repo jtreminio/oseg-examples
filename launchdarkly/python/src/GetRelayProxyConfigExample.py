@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.RelayProxyConfigurationsApi(api_client).get_relay_proxy_config(
-            id=None,
+            id="id_string",
         )
 
         pprint(response)

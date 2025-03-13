@@ -12,7 +12,7 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     (new LaunchDarkly\Client\Api\ApplicationsBetaApi(config: $config))->deleteApplication(
-        application_key: null,
+        application_key: "applicationKey_string",
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
     echo "Exception when calling ApplicationsBetaApi#deleteApplication: {$e->getMessage()}";

@@ -14,14 +14,9 @@ $stages_1_action = (new LaunchDarkly\Client\Model\ActionInput());
 
 $stages_1_conditions_1 = (new LaunchDarkly\Client\Model\ConditionInput())
     ->setScheduleKind("relative")
-    ->setExecutionDate(null)
     ->setWaitDuration(2)
     ->setWaitDurationUnit("calendarDay")
-    ->setExecuteNow(null)
-    ->setDescription(null)
-    ->setKind("schedule")
-    ->setNotifyMemberIds(null)
-    ->setNotifyTeamKeys(null);
+    ->setKind("schedule");
 
 $stages_1_conditions = [
     $stages_1_conditions_1,
@@ -38,13 +33,7 @@ $stages = [
 ];
 
 $create_workflow_template_input = (new LaunchDarkly\Client\Model\CreateWorkflowTemplateInput())
-    ->setKey(null)
-    ->setName(null)
-    ->setDescription(null)
-    ->setWorkflowId(null)
-    ->setProjectKey(null)
-    ->setEnvironmentKey(null)
-    ->setFlagKey(null)
+    ->setKey("key_string")
     ->setStages($stages);
 
 try {

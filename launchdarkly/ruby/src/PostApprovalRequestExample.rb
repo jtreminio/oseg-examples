@@ -16,7 +16,6 @@ create_approval_request_request.notify_member_ids = [
 create_approval_request_request.notify_team_keys = [
     "example-reviewer-team",
 ]
-create_approval_request_request.integration_config = nil
 
 begin
     response = LaunchDarklyClient::ApprovalsApi.new.post_approval_request(

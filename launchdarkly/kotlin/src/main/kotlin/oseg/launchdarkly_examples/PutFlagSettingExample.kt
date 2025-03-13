@@ -26,10 +26,10 @@ class PutFlagSettingExample
         try
         {
             UserSettingsApi().putFlagSetting(
-                projectKey = null,
-                environmentKey = null,
-                userKey = null,
-                featureFlagKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                userKey = "userKey_string",
+                featureFlagKey = "featureFlagKey_string",
                 valuePut = valuePut,
             )
         } catch (e: ClientException) {

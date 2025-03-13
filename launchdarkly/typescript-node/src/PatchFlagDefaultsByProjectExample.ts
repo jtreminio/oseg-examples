@@ -14,7 +14,7 @@ const patchOperation = [
 ];
 
 apiCaller.patchFlagDefaultsByProject(
-  undefined, // projectKey
+  "projectKey_string", // projectKey
   patchOperation,
 ).then(response => {
   console.log(response.body);

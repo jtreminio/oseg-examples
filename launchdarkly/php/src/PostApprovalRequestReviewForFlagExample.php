@@ -16,10 +16,10 @@ $post_approval_request_review_request = (new LaunchDarkly\Client\Model\PostAppro
 
 try {
     $response = (new LaunchDarkly\Client\Api\ApprovalsApi(config: $config))->postApprovalRequestReviewForFlag(
-        project_key: null,
-        feature_flag_key: null,
-        environment_key: null,
-        id: null,
+        project_key: "projectKey_string",
+        feature_flag_key: "featureFlagKey_string",
+        environment_key: "environmentKey_string",
+        id: "id_string",
         post_approval_request_review_request: $post_approval_request_review_request,
     );
 

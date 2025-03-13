@@ -24,7 +24,7 @@ public class GetApprovalRequestExample
         try
         {
             var response = new ApprovalsApi(config).getApprovalRequest(
-                null, // id
+                "id_string", // id
                 null // expand
             );
 

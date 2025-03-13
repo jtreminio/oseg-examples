@@ -22,7 +22,7 @@ class GetMemberExample
         try
         {
             val response = AccountMembersApi().getMember(
-                id = null,
+                id = "id_string",
                 expand = null,
             )
 

@@ -43,8 +43,8 @@ $put_branch = (new LaunchDarkly\Client\Model\PutBranch())
 
 try {
     (new LaunchDarkly\Client\Api\CodeReferencesApi(config: $config))->putBranch(
-        repo: null,
-        branch: null,
+        repo: "repo_string",
+        branch: "branch_string",
         put_branch: $put_branch,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {

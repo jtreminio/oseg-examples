@@ -19,7 +19,7 @@ public class DeleteTeamExample
         try
         {
             new TeamsApi(config).DeleteTeam(
-                teamKey: null
+                teamKey: "teamKey_string"
             );
         }
         catch (ApiException e)

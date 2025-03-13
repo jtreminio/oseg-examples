@@ -7,10 +7,10 @@ end
 
 begin
     LaunchDarklyClient::FollowFlagsApi.new.put_flag_follower(
-        nil, # project_key
-        nil, # feature_flag_key
-        nil, # environment_key
-        nil, # member_id
+        "projectKey_string", # project_key
+        "featureFlagKey_string", # feature_flag_key
+        "environmentKey_string", # environment_key
+        "memberId_string", # member_id
     )
 rescue LaunchDarklyClient::ApiError => e
     puts "Exception when calling FollowFlagsApi#put_flag_follower: #{e}"

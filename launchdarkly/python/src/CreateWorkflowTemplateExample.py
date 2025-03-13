@@ -35,13 +35,7 @@ with ApiClient(configuration) as api_client:
     ]
 
     create_workflow_template_input = models.CreateWorkflowTemplateInput(
-        key=None,
-        name=None,
-        description=None,
-        workflowId=None,
-        projectKey=None,
-        environmentKey=None,
-        flagKey=None,
+        key="key_string",
         stages=stages,
     )
 

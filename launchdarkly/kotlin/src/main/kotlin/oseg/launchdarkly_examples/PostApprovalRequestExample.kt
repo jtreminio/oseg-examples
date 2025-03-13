@@ -30,7 +30,6 @@ class PostApprovalRequestExample
             notifyTeamKeys = listOf (
                 "example-reviewer-team",
             ),
-            integrationConfig = null,
         )
 
         try

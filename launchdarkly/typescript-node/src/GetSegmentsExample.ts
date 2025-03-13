@@ -6,8 +6,8 @@ const apiCaller = new api.SegmentsApi();
 apiCaller.setApiKey(api.SegmentsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getSegments(
-  undefined, // projectKey
-  undefined, // environmentKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
   undefined, // limit
   undefined, // offset
   undefined, // sort

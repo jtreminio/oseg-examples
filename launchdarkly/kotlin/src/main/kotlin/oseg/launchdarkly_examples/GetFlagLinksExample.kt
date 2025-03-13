@@ -22,8 +22,8 @@ class GetFlagLinksExample
         try
         {
             val response = FlagLinksBetaApi().getFlagLinks(
-                projectKey = null,
-                featureFlagKey = null,
+                projectKey = "projectKey_string",
+                featureFlagKey = "featureFlagKey_string",
             )
 
             println(response)

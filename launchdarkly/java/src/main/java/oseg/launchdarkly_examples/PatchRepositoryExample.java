@@ -32,7 +32,7 @@ public class PatchRepositoryExample
         try
         {
             var response = new CodeReferencesApi(config).patchRepository(
-                null, // repo
+                "repo_string", // repo
                 patchOperation
             );
 

@@ -20,7 +20,6 @@ class CreateWorkflowTemplateExample
         ApiClient.apiKey["Authorization"] = "YOUR_API_KEY"
 
         val stages1Action = ActionInput()
-        )
 
         val stages1Conditions1 = ConditionInput(
             scheduleKind = "relative",
@@ -45,13 +44,7 @@ class CreateWorkflowTemplateExample
         )
 
         val createWorkflowTemplateInput = CreateWorkflowTemplateInput(
-            key = null,
-            name = null,
-            description = null,
-            workflowId = null,
-            projectKey = null,
-            environmentKey = null,
-            flagKey = null,
+            key = "key_string",
             stages = stages,
         )
 

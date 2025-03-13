@@ -20,8 +20,8 @@ $patch_operation = [
 
 try {
     $response = (new LaunchDarkly\Client\Api\MetricsBetaApi(config: $config))->patchMetricGroup(
-        project_key: null,
-        metric_group_key: null,
+        project_key: "projectKey_string",
+        metric_group_key: "metricGroupKey_string",
         patch_operation: $patch_operation,
     );
 

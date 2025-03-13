@@ -15,10 +15,10 @@ patch_operation = [
 
 begin
     response = LaunchDarklyClient::PersistentStoreIntegrationsBetaApi.new.patch_big_segment_store_integration(
-        nil, # project_key
-        nil, # environment_key
-        nil, # integration_key
-        nil, # integration_id
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
+        "integrationKey_string", # integration_key
+        "integrationId_string", # integration_id
         patch_operation,
     )
 

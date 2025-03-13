@@ -19,7 +19,7 @@ public class GetFeatureFlagsExample
         try
         {
             var response = new FeatureFlagsApi(config).GetFeatureFlags(
-                projectKey: null,
+                projectKey: "projectKey_string",
                 env: null,
                 tag: null,
                 limit: null,

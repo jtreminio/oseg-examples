@@ -15,9 +15,9 @@ postFlagScheduledChangesInput.instructions = [
 postFlagScheduledChangesInput.comment = "Optional comment describing the scheduled changes";
 
 apiCaller.postFlagConfigScheduledChanges(
-  undefined, // projectKey
-  undefined, // featureFlagKey
-  undefined, // environmentKey
+  "projectKey_string", // projectKey
+  "featureFlagKey_string", // featureFlagKey
+  "environmentKey_string", // environmentKey
   postFlagScheduledChangesInput,
   undefined, // ignoreConflicts
 ).then(response => {

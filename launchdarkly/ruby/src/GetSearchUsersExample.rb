@@ -7,8 +7,8 @@ end
 
 begin
     response = LaunchDarklyClient::UsersApi.new.get_search_users(
-        nil, # project_key
-        nil, # environment_key
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
     )
 
     p response

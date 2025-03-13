@@ -11,9 +11,9 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.FlagImportConfigurationsBetaApi(api_client).trigger_flag_import_job(
-            project_key=None,
-            integration_key=None,
-            integration_id=None,
+            project_key="projectKey_string",
+            integration_key="integrationKey_string",
+            integration_id="integrationId_string",
         )
     except ApiException as e:
         print("Exception when calling FlagImportConfigurationsBetaApi#trigger_flag_import_job: %s\n" % e)

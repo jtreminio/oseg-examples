@@ -23,10 +23,10 @@ public class PostApprovalRequestApplyForFlagExample
         try
         {
             var response = new ApprovalsApi(config).PostApprovalRequestApplyForFlag(
-                projectKey: null,
-                featureFlagKey: null,
-                environmentKey: null,
-                id: null,
+                projectKey: "projectKey_string",
+                featureFlagKey: "featureFlagKey_string",
+                environmentKey: "environmentKey_string",
+                id: "id_string",
                 postApprovalRequestApplyRequest: postApprovalRequestApplyRequest
             );
 

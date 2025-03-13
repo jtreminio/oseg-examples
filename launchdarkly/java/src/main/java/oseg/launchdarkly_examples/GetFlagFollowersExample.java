@@ -24,9 +24,9 @@ public class GetFlagFollowersExample
         try
         {
             var response = new FollowFlagsApi(config).getFlagFollowers(
-                null, // projectKey
-                null, // featureFlagKey
-                null // environmentKey
+                "projectKey_string", // projectKey
+                "featureFlagKey_string", // featureFlagKey
+                "environmentKey_string" // environmentKey
             );
 
             System.out.println(response);

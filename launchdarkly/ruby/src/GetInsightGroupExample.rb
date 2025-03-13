@@ -7,7 +7,7 @@ end
 
 begin
     response = LaunchDarklyClient::InsightsScoresBetaApi.new.get_insight_group(
-        nil, # insight_group_key
+        "insightGroupKey_string", # insight_group_key
     )
 
     p response

@@ -36,9 +36,9 @@ class CreateBigSegmentStoreIntegrationExample
         try
         {
             val response = PersistentStoreIntegrationsBetaApi().createBigSegmentStoreIntegration(
-                projectKey = null,
-                environmentKey = null,
-                integrationKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                integrationKey = "integrationKey_string",
                 integrationDeliveryConfigurationPost = integrationDeliveryConfigurationPost,
             )
 

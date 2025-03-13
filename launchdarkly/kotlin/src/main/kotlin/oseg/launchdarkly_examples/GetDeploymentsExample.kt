@@ -22,8 +22,8 @@ class GetDeploymentsExample
         try
         {
             val response = InsightsDeploymentsBetaApi().getDeployments(
-                projectKey = null,
-                environmentKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
                 applicationKey = null,
                 limit = null,
                 expand = null,

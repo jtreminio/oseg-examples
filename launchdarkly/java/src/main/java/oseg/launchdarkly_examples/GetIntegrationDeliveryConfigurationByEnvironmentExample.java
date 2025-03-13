@@ -24,8 +24,8 @@ public class GetIntegrationDeliveryConfigurationByEnvironmentExample
         try
         {
             var response = new IntegrationDeliveryConfigurationsBetaApi(config).getIntegrationDeliveryConfigurationByEnvironment(
-                null, // projectKey
-                null // environmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string" // environmentKey
             );
 
             System.out.println(response);

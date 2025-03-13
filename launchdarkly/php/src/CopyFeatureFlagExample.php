@@ -20,15 +20,13 @@ $target = (new LaunchDarkly\Client\Model\FlagCopyConfigEnvironment())
 
 $flag_copy_config_post = (new LaunchDarkly\Client\Model\FlagCopyConfigPost())
     ->setComment("optional comment")
-    ->setIncludedActions(null)
-    ->setExcludedActions(null)
     ->setSource($source)
     ->setTarget($target);
 
 try {
     $response = (new LaunchDarkly\Client\Api\FeatureFlagsApi(config: $config))->copyFeatureFlag(
-        project_key: null,
-        feature_flag_key: null,
+        project_key: "projectKey_string",
+        feature_flag_key: "featureFlagKey_string",
         flag_copy_config_post: $flag_copy_config_post,
     );
 

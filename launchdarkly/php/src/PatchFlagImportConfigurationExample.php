@@ -20,9 +20,9 @@ $patch_operation = [
 
 try {
     $response = (new LaunchDarkly\Client\Api\FlagImportConfigurationsBetaApi(config: $config))->patchFlagImportConfiguration(
-        project_key: null,
-        integration_key: null,
-        integration_id: null,
+        project_key: "projectKey_string",
+        integration_key: "integrationKey_string",
+        integration_id: "integrationId_string",
         patch_operation: $patch_operation,
     );
 

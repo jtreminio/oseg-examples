@@ -38,10 +38,10 @@ class PatchFlagConfigScheduledChangeExample
         try
         {
             val response = ScheduledChangesApi().patchFlagConfigScheduledChange(
-                projectKey = null,
-                featureFlagKey = null,
-                environmentKey = null,
-                id = null,
+                projectKey = "projectKey_string",
+                featureFlagKey = "featureFlagKey_string",
+                environmentKey = "environmentKey_string",
+                id = "id_string",
                 flagScheduledChangesInput = flagScheduledChangesInput,
                 ignoreConflicts = null,
             )

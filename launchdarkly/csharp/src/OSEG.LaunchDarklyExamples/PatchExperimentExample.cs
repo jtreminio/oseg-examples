@@ -31,9 +31,9 @@ public class PatchExperimentExample
         try
         {
             var response = new ExperimentsApi(config).PatchExperiment(
-                projectKey: null,
-                environmentKey: null,
-                experimentKey: null,
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                experimentKey: "experimentKey_string",
                 experimentPatchInput: experimentPatchInput
             );
 

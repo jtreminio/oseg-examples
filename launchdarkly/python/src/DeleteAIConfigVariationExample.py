@@ -11,10 +11,10 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.AIConfigsBetaApi(api_client).delete_ai_config_variation(
-            ld_api_version=None,
-            project_key=None,
-            config_key=None,
-            variation_key=None,
+            ld_api_version="beta",
+            project_key="projectKey_string",
+            config_key="configKey_string",
+            variation_key="variationKey_string",
         )
     except ApiException as e:
         print("Exception when calling AIConfigsBetaApi#delete_ai_config_variation: %s\n" % e)

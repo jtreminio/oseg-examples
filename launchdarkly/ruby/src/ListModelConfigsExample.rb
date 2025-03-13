@@ -7,7 +7,7 @@ end
 
 begin
     response = LaunchDarklyClient::AIConfigsBetaApi.new.list_model_configs(
-        nil, # ld_api_version
+        "beta", # ld_api_version
         "default", # project_key
     )
 

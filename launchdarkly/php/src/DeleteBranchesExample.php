@@ -12,7 +12,7 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     (new LaunchDarkly\Client\Api\CodeReferencesApi(config: $config))->deleteBranches(
-        repo: null,
+        repo: "repo_string",
         request_body: [
             "branch-to-be-deleted",
             "another-branch-to-be-deleted",

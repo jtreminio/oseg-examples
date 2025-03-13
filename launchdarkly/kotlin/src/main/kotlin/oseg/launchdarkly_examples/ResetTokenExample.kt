@@ -22,7 +22,7 @@ class ResetTokenExample
         try
         {
             val response = AccessTokensApi().resetToken(
-                id = null,
+                id = "id_string",
                 expiry = null,
             )
 

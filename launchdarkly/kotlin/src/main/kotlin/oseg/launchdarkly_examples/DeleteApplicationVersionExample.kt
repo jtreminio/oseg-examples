@@ -22,8 +22,8 @@ class DeleteApplicationVersionExample
         try
         {
             ApplicationsBetaApi().deleteApplicationVersion(
-                applicationKey = null,
-                versionKey = null,
+                applicationKey = "applicationKey_string",
+                versionKey = "versionKey_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling ApplicationsBetaApi#deleteApplicationVersion")

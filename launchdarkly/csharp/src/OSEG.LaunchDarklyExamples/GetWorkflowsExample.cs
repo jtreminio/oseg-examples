@@ -19,9 +19,9 @@ public class GetWorkflowsExample
         try
         {
             var response = new WorkflowsApi(config).GetWorkflows(
-                projectKey: null,
-                featureFlagKey: null,
-                environmentKey: null,
+                projectKey: "projectKey_string",
+                featureFlagKey: "featureFlagKey_string",
+                environmentKey: "environmentKey_string",
                 status: null,
                 sort: null,
                 limit: null,

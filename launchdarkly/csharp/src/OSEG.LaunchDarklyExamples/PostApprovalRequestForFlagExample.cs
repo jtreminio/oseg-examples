@@ -27,16 +27,15 @@ public class PostApprovalRequestForFlagExample
             ],
             notifyTeamKeys: [
                 "example-reviewer-team",
-            ],
-            integrationConfig: null
+            ]
         );
 
         try
         {
             var response = new ApprovalsApi(config).PostApprovalRequestForFlag(
-                projectKey: null,
-                featureFlagKey: null,
-                environmentKey: null,
+                projectKey: "projectKey_string",
+                featureFlagKey: "featureFlagKey_string",
+                environmentKey: "environmentKey_string",
                 createFlagConfigApprovalRequestRequest: createFlagConfigApprovalRequestRequest
             );
 

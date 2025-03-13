@@ -22,8 +22,8 @@ class GetFeatureFlagExample
         try
         {
             val response = FeatureFlagsApi().getFeatureFlag(
-                projectKey = null,
-                featureFlagKey = null,
+                projectKey = "projectKey_string",
+                featureFlagKey = "featureFlagKey_string",
                 env = null,
                 expand = null,
             )

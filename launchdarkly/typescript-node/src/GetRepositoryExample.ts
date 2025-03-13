@@ -6,7 +6,7 @@ const apiCaller = new api.CodeReferencesApi();
 apiCaller.setApiKey(api.CodeReferencesApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getRepository(
-  undefined, // repo
+  "repo_string", // repo
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

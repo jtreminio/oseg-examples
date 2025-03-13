@@ -19,10 +19,10 @@ public class DeleteFlagFollowerExample
         try
         {
             new FollowFlagsApi(config).DeleteFlagFollower(
-                projectKey: null,
-                featureFlagKey: null,
-                environmentKey: null,
-                memberId: null
+                projectKey: "projectKey_string",
+                featureFlagKey: "featureFlagKey_string",
+                environmentKey: "environmentKey_string",
+                memberId: "memberId_string"
             );
         }
         catch (ApiException e)

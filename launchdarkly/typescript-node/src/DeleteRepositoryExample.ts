@@ -6,7 +6,7 @@ const apiCaller = new api.CodeReferencesApi();
 apiCaller.setApiKey(api.CodeReferencesApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.deleteRepository(
-  undefined, // repo
+  "repo_string", // repo
 ).catch(error => {
   console.log("Exception when calling CodeReferencesApi#deleteRepository:");
   console.log(error.body);

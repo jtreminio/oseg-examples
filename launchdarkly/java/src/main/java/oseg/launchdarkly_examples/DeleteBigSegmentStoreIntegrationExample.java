@@ -24,10 +24,10 @@ public class DeleteBigSegmentStoreIntegrationExample
         try
         {
             new PersistentStoreIntegrationsBetaApi(config).deleteBigSegmentStoreIntegration(
-                null, // projectKey
-                null, // environmentKey
-                null, // integrationKey
-                null // integrationId
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "integrationKey_string", // integrationKey
+                "integrationId_string" // integrationId
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling PersistentStoreIntegrationsBetaApi#deleteBigSegmentStoreIntegration");

@@ -11,8 +11,8 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.EnvironmentsApi(api_client).reset_environment_sdk_key(
-            project_key=None,
-            environment_key=None,
+            project_key="projectKey_string",
+            environment_key="environmentKey_string",
             expiry=None,
         )
 

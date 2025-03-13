@@ -52,7 +52,7 @@ class CreateSubscriptionExample
         try
         {
             val response = IntegrationAuditLogSubscriptionsApi().createSubscription(
-                integrationKey = null,
+                integrationKey = "integrationKey_string",
                 subscriptionPost = subscriptionPost,
             )
 

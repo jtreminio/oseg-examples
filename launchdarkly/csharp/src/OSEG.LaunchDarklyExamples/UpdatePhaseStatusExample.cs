@@ -24,7 +24,6 @@ public class UpdatePhaseStatusExample
         );
 
         var audiences1 = new ReleaserAudienceConfigInput(
-            audienceId: null,
             notifyMemberIds: [
                 "1234a56b7c89d012345e678f",
             ],
@@ -40,16 +39,15 @@ public class UpdatePhaseStatusExample
         };
 
         var updatePhaseStatusInput = new UpdatePhaseStatusInput(
-            status: null,
             audiences: audiences
         );
 
         try
         {
             var response = new ReleasesBetaApi(config).UpdatePhaseStatus(
-                projectKey: null,
-                flagKey: null,
-                phaseId: null,
+                projectKey: "projectKey_string",
+                flagKey: "flagKey_string",
+                phaseId: "phaseId_string",
                 updatePhaseStatusInput: updatePhaseStatusInput
             );
 

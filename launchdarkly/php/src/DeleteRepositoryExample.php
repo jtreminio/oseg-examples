@@ -12,7 +12,7 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     (new LaunchDarkly\Client\Api\CodeReferencesApi(config: $config))->deleteRepository(
-        repo: null,
+        repo: "repo_string",
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
     echo "Exception when calling CodeReferencesApi#deleteRepository: {$e->getMessage()}";

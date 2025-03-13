@@ -31,9 +31,9 @@ public class PatchHoldoutExample
         try
         {
             var response = new HoldoutsBetaApi(config).PatchHoldout(
-                projectKey: null,
-                environmentKey: null,
-                holdoutKey: null,
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                holdoutKey: "holdoutKey_string",
                 holdoutPatchInput: holdoutPatchInput
             );
 

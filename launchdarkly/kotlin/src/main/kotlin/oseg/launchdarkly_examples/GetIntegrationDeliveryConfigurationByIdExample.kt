@@ -22,10 +22,10 @@ class GetIntegrationDeliveryConfigurationByIdExample
         try
         {
             val response = IntegrationDeliveryConfigurationsBetaApi().getIntegrationDeliveryConfigurationById(
-                projectKey = null,
-                environmentKey = null,
-                integrationKey = null,
-                id = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                integrationKey = "integrationKey_string",
+                id = "id_string",
             )
 
             println(response)

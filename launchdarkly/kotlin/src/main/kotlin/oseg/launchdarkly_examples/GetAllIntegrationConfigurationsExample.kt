@@ -22,7 +22,7 @@ class GetAllIntegrationConfigurationsExample
         try
         {
             val response = IntegrationsBetaApi().getAllIntegrationConfigurations(
-                integrationKey = null,
+                integrationKey = "integrationKey_string",
             )
 
             println(response)

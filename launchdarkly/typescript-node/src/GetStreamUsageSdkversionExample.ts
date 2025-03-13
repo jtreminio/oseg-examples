@@ -6,7 +6,7 @@ const apiCaller = new api.AccountUsageBetaApi();
 apiCaller.setApiKey(api.AccountUsageBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getStreamUsageSdkversion(
-  undefined, // source
+  "source_string", // source
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

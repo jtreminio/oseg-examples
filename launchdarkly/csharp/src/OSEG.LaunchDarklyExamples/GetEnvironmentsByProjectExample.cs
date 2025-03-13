@@ -19,7 +19,7 @@ public class GetEnvironmentsByProjectExample
         try
         {
             var response = new EnvironmentsApi(config).GetEnvironmentsByProject(
-                projectKey: null,
+                projectKey: "projectKey_string",
                 limit: null,
                 offset: null,
                 filter: null,

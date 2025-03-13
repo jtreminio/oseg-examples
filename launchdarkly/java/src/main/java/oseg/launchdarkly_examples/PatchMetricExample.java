@@ -32,8 +32,8 @@ public class PatchMetricExample
         try
         {
             var response = new MetricsApi(config).patchMetric(
-                null, // projectKey
-                null, // metricKey
+                "projectKey_string", // projectKey
+                "metricKey_string", // metricKey
                 patchOperation
             );
 

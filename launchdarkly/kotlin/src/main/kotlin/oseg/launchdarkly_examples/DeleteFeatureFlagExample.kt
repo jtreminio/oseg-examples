@@ -22,8 +22,8 @@ class DeleteFeatureFlagExample
         try
         {
             FeatureFlagsApi().deleteFeatureFlag(
-                projectKey = null,
-                featureFlagKey = null,
+                projectKey = "projectKey_string",
+                featureFlagKey = "featureFlagKey_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling FeatureFlagsApi#deleteFeatureFlag")

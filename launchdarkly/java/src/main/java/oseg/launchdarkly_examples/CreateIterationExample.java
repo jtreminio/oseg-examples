@@ -50,7 +50,7 @@ public class CreateIterationExample
 
         var iterationInput = new IterationInput();
         iterationInput.hypothesis("Example hypothesis, the new button placement will increase conversion");
-        iterationInput.flags(null);
+        iterationInput.flags(Map.of ());
         iterationInput.canReshuffleTraffic(true);
         iterationInput.primarySingleMetricKey("metric-key-123abc");
         iterationInput.primaryFunnelKey("metric-group-key-123abc");
@@ -66,9 +66,9 @@ public class CreateIterationExample
         try
         {
             var response = new ExperimentsApi(config).createIteration(
-                null, // projectKey
-                null, // environmentKey
-                null, // experimentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "experimentKey_string", // experimentKey
                 iterationInput
             );
 

@@ -17,19 +17,11 @@ $client_side_availability = (new LaunchDarkly\Client\Model\ClientSideAvailabilit
 $feature_flag_body = (new LaunchDarkly\Client\Model\FeatureFlagBody())
     ->setName("My Flag")
     ->setKey("flag-key-123abc")
-    ->setDescription(null)
-    ->setIncludeInSnippet(null)
-    ->setTemporary(null)
-    ->setPurpose(null)
-    ->setMaintainerId(null)
-    ->setMaintainerTeamKey(null)
-    ->setTags(null)
-    ->setCustomProperties(null)
     ->setClientSideAvailability($client_side_availability);
 
 try {
     $response = (new LaunchDarkly\Client\Api\FeatureFlagsApi(config: $config))->postFeatureFlag(
-        project_key: null,
+        project_key: "projectKey_string",
         feature_flag_body: $feature_flag_body,
         clone: null,
     );

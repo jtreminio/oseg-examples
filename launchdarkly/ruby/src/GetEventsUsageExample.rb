@@ -7,7 +7,7 @@ end
 
 begin
     response = LaunchDarklyClient::AccountUsageBetaApi.new.get_events_usage(
-        nil, # type
+        "type_string", # type
     )
 
     p response

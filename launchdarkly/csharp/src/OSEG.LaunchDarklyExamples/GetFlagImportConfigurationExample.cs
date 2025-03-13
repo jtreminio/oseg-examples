@@ -19,9 +19,9 @@ public class GetFlagImportConfigurationExample
         try
         {
             var response = new FlagImportConfigurationsBetaApi(config).GetFlagImportConfiguration(
-                projectKey: null,
-                integrationKey: null,
-                integrationId: null
+                projectKey: "projectKey_string",
+                integrationKey: "integrationKey_string",
+                integrationId: "integrationId_string"
             );
 
             Console.WriteLine(response);

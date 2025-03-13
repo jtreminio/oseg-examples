@@ -19,7 +19,7 @@ public class GetFlagDefaultsByProjectExample
         try
         {
             var response = new ProjectsApi(config).GetFlagDefaultsByProject(
-                projectKey: null
+                projectKey: "projectKey_string"
             );
 
             Console.WriteLine(response);

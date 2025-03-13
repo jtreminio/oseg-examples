@@ -17,9 +17,9 @@ patchFlagsRequest.instructions = [
 patchFlagsRequest.comment = "optional comment";
 
 apiCaller.patchExpiringUserTargets(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // featureFlagKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "featureFlagKey_string", // featureFlagKey
   patchFlagsRequest,
 ).then(response => {
   console.log(response.body);

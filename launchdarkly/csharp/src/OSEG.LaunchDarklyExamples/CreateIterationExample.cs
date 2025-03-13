@@ -51,7 +51,7 @@ public class CreateIterationExample
 
         var iterationInput = new IterationInput(
             hypothesis: "Example hypothesis, the new button placement will increase conversion",
-            flags: null,
+            flags: new Dictionary<string, object>(),
             canReshuffleTraffic: true,
             primarySingleMetricKey: "metric-key-123abc",
             primaryFunnelKey: "metric-group-key-123abc",
@@ -68,9 +68,9 @@ public class CreateIterationExample
         try
         {
             var response = new ExperimentsApi(config).CreateIteration(
-                projectKey: null,
-                environmentKey: null,
-                experimentKey: null,
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                experimentKey: "experimentKey_string",
                 iterationInput: iterationInput
             );
 

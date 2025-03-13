@@ -7,7 +7,7 @@ end
 
 begin
     response = LaunchDarklyClient::AccessTokensApi.new.get_token(
-        nil, # id
+        "id_string", # id
     )
 
     p response

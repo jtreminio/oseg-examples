@@ -12,7 +12,7 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     $response = (new LaunchDarkly\Client\Api\AIConfigsBetaApi(config: $config))->getModelConfig(
-        ld_api_version: null,
+        ld_api_version: "beta",
         project_key: "default",
         model_config_key: "default",
     );

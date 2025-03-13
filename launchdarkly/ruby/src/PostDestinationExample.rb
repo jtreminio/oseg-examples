@@ -10,8 +10,8 @@ destination_post.kind = "google-pubsub"
 
 begin
     response = LaunchDarklyClient::DataExportDestinationsApi.new.post_destination(
-        nil, # project_key
-        nil, # environment_key
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
         destination_post,
     )
 

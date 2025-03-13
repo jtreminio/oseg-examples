@@ -22,9 +22,9 @@ class GetWorkflowsExample
         try
         {
             val response = WorkflowsApi().getWorkflows(
-                projectKey = null,
-                featureFlagKey = null,
-                environmentKey = null,
+                projectKey = "projectKey_string",
+                featureFlagKey = "featureFlagKey_string",
+                environmentKey = "environmentKey_string",
                 status = null,
                 sort = null,
                 limit = null,

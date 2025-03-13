@@ -43,7 +43,7 @@ public class PutFlagDefaultsByProjectExample
         try
         {
             var response = new ProjectsApi(config).PutFlagDefaultsByProject(
-                projectKey: null,
+                projectKey: "projectKey_string",
                 upsertFlagDefaultsPayload: upsertFlagDefaultsPayload
             );
 

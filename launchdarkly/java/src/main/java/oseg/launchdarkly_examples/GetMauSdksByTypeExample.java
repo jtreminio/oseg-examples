@@ -23,7 +23,11 @@ public class GetMauSdksByTypeExample
 
         try
         {
-            var response = new AccountUsageBetaApi(config).getMauSdksByType();
+            var response = new AccountUsageBetaApi(config).getMauSdksByType(
+                null, // from
+                null, // to
+                null // sdktype
+            );
 
             System.out.println(response);
         } catch (ApiException e) {

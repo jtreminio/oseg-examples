@@ -6,7 +6,7 @@ const apiCaller = new api.FeatureFlagsApi();
 apiCaller.setApiKey(api.FeatureFlagsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getFeatureFlags(
-  undefined, // projectKey
+  "projectKey_string", // projectKey
   undefined, // env
   undefined, // tag
   undefined, // limit

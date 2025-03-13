@@ -11,14 +11,13 @@ $config = LaunchDarkly\Client\Configuration::getDefaultConfiguration();
 $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 $flag_sempatch = (new LaunchDarkly\Client\Model\FlagSempatch())
-    ->setInstructions([])
-    ->setComment(null);
+    ->setInstructions([]);
 
 try {
     $response = (new LaunchDarkly\Client\Api\FeatureFlagsApi(config: $config))->postMigrationSafetyIssues(
-        project_key: null,
-        flag_key: null,
-        environment_key: null,
+        project_key: "projectKey_string",
+        flag_key: "flagKey_string",
+        environment_key: "environmentKey_string",
         flag_sempatch: $flag_sempatch,
     );
 

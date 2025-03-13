@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.WebhooksApi(api_client).get_webhook(
-            id=None,
+            id="id_string",
         )
 
         pprint(response)

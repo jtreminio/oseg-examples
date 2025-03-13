@@ -29,8 +29,8 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.FlagImportConfigurationsBetaApi(api_client).create_flag_import_configuration(
-            project_key=None,
-            integration_key=None,
+            project_key="projectKey_string",
+            integration_key="integrationKey_string",
             flag_import_configuration_post=flag_import_configuration_post,
         )
 

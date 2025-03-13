@@ -41,8 +41,8 @@ public class CreateFlagImportConfigurationExample
         try
         {
             var response = new FlagImportConfigurationsBetaApi(config).createFlagImportConfiguration(
-                null, // projectKey
-                null, // integrationKey
+                "projectKey_string", // projectKey
+                "integrationKey_string", // integrationKey
                 flagImportConfigurationPost
             );
 

@@ -11,8 +11,8 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.UsersBetaApi(api_client).get_user_attribute_names(
-            project_key=None,
-            environment_key=None,
+            project_key="projectKey_string",
+            environment_key="environmentKey_string",
         )
 
         pprint(response)

@@ -22,7 +22,7 @@ class GetBranchesExample
         try
         {
             val response = CodeReferencesApi().getBranches(
-                repo = null,
+                repo = "repo_string",
             )
 
             println(response)

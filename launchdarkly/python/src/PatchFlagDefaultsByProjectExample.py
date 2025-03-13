@@ -20,7 +20,7 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.ProjectsApi(api_client).patch_flag_defaults_by_project(
-            project_key=None,
+            project_key="projectKey_string",
             patch_operation=patch_operation,
         )
 

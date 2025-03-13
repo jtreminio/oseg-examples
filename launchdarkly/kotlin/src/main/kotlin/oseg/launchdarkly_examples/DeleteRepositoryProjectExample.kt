@@ -22,8 +22,8 @@ class DeleteRepositoryProjectExample
         try
         {
             InsightsRepositoriesBetaApi().deleteRepositoryProject(
-                repositoryKey = null,
-                projectKey = null,
+                repositoryKey = "repositoryKey_string",
+                projectKey = "projectKey_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling InsightsRepositoriesBetaApi#deleteRepositoryProject")

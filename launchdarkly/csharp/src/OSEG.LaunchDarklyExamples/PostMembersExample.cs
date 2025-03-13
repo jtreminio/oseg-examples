@@ -29,8 +29,7 @@ public class PostMembersExample
             teamKeys: [
                 "team-1",
                 "team-2",
-            ],
-            roleAttributes: null
+            ]
         );
 
         var newMemberForm = new List<NewMemberForm>

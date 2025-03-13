@@ -17,8 +17,8 @@ const patchWithComment = new models.PatchWithComment();
 patchWithComment.patch = patch;
 
 apiCaller.patchFeatureFlag(
-  undefined, // projectKey
-  undefined, // featureFlagKey
+  "projectKey_string", // projectKey
+  "featureFlagKey_string", // featureFlagKey
   patchWithComment,
   undefined, // ignoreConflicts
 ).then(response => {

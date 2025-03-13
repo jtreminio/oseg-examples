@@ -7,9 +7,9 @@ end
 
 begin
     response = LaunchDarklyClient::UserSettingsApi.new.get_expiring_flags_for_user(
-        nil, # project_key
-        nil, # user_key
-        nil, # environment_key
+        "projectKey_string", # project_key
+        "userKey_string", # user_key
+        "environmentKey_string", # environment_key
     )
 
     p response

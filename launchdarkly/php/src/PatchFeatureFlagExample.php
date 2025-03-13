@@ -19,13 +19,12 @@ $patch = [
 ];
 
 $patch_with_comment = (new LaunchDarkly\Client\Model\PatchWithComment())
-    ->setComment(null)
     ->setPatch($patch);
 
 try {
     $response = (new LaunchDarkly\Client\Api\FeatureFlagsApi(config: $config))->patchFeatureFlag(
-        project_key: null,
-        feature_flag_key: null,
+        project_key: "projectKey_string",
+        feature_flag_key: "featureFlagKey_string",
         patch_with_comment: $patch_with_comment,
         ignore_conflicts: null,
     );

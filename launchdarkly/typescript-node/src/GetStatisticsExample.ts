@@ -6,7 +6,7 @@ const apiCaller = new api.CodeReferencesApi();
 apiCaller.setApiKey(api.CodeReferencesApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getStatistics(
-  undefined, // projectKey
+  "projectKey_string", // projectKey
   undefined, // flagKey
 ).then(response => {
   console.log(response.body);

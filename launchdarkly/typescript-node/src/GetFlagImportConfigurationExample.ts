@@ -6,9 +6,9 @@ const apiCaller = new api.FlagImportConfigurationsBetaApi();
 apiCaller.setApiKey(api.FlagImportConfigurationsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getFlagImportConfiguration(
-  undefined, // projectKey
-  undefined, // integrationKey
-  undefined, // integrationId
+  "projectKey_string", // projectKey
+  "integrationKey_string", // integrationKey
+  "integrationId_string", // integrationId
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

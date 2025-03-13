@@ -37,8 +37,8 @@ public class UpdateLayerExample
         try
         {
             var response = new LayersApi(config).updateLayer(
-                null, // projectKey
-                null, // layerKey
+                "projectKey_string", // projectKey
+                "layerKey_string", // layerKey
                 layerPatchInput
             );
 

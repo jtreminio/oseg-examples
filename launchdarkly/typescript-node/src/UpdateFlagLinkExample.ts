@@ -14,9 +14,9 @@ const patchOperation = [
 ];
 
 apiCaller.updateFlagLink(
-  undefined, // projectKey
-  undefined, // featureFlagKey
-  undefined, // id
+  "projectKey_string", // projectKey
+  "featureFlagKey_string", // featureFlagKey
+  "id_string", // id
   patchOperation,
 ).then(response => {
   console.log(response.body);

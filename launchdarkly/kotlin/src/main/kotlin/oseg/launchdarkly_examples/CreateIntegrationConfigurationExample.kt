@@ -69,7 +69,7 @@ class CreateIntegrationConfigurationExample
         try
         {
             val response = IntegrationsBetaApi().createIntegrationConfiguration(
-                integrationKey = null,
+                integrationKey = "integrationKey_string",
                 integrationConfigurationPost = integrationConfigurationPost,
             )
 

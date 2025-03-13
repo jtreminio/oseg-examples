@@ -24,8 +24,8 @@ public class GetDeploymentsExample
         try
         {
             var response = new InsightsDeploymentsBetaApi(config).getDeployments(
-                null, // projectKey
-                null, // environmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
                 null, // applicationKey
                 null, // limit
                 null, // expand

@@ -17,13 +17,12 @@ create_flag_config_approval_request_request.notify_member_ids = [
 create_flag_config_approval_request_request.notify_team_keys = [
     "example-reviewer-team",
 ]
-create_flag_config_approval_request_request.integration_config = nil
 
 begin
     response = LaunchDarklyClient::ApprovalsApi.new.post_approval_request_for_flag(
-        nil, # project_key
-        nil, # feature_flag_key
-        nil, # environment_key
+        "projectKey_string", # project_key
+        "featureFlagKey_string", # feature_flag_key
+        "environmentKey_string", # environment_key
         create_flag_config_approval_request_request,
     )
 

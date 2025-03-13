@@ -7,7 +7,7 @@ end
 
 begin
     response = LaunchDarklyClient::AccountMembersApi.new.get_member(
-        nil, # id
+        "id_string", # id
     )
 
     p response

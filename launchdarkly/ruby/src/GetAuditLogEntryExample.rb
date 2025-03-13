@@ -7,7 +7,7 @@ end
 
 begin
     response = LaunchDarklyClient::AuditLogApi.new.get_audit_log_entry(
-        nil, # id
+        "id_string", # id
     )
 
     p response

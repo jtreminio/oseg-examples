@@ -14,8 +14,8 @@ const patchOperation = [
 ];
 
 apiCaller.patchApplicationVersion(
-  undefined, // applicationKey
-  undefined, // versionKey
+  "applicationKey_string", // applicationKey
+  "versionKey_string", // versionKey
   patchOperation,
 ).then(response => {
   console.log(response.body);

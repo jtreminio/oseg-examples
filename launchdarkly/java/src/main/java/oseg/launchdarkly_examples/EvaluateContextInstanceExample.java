@@ -24,8 +24,8 @@ public class EvaluateContextInstanceExample
         try
         {
             var response = new ContextsApi(config).evaluateContextInstance(
-                null, // projectKey
-                null, // environmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
                 JSON.deserialize("""
                     {
                         "key": "user-key-123abc",

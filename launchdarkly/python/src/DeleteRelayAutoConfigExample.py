@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.RelayProxyConfigurationsApi(api_client).delete_relay_auto_config(
-            id=None,
+            id="id_string",
         )
     except ApiException as e:
         print("Exception when calling RelayProxyConfigurationsApi#delete_relay_auto_config: %s\n" % e)

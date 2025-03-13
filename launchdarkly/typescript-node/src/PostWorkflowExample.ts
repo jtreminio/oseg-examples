@@ -32,9 +32,9 @@ customWorkflowInput.description = "Turn flag on for 10% of customers each day";
 customWorkflowInput.stages = stages;
 
 apiCaller.postWorkflow(
-  undefined, // projectKey
-  undefined, // featureFlagKey
-  undefined, // environmentKey
+  "projectKey_string", // projectKey
+  "featureFlagKey_string", // featureFlagKey
+  "environmentKey_string", // environmentKey
   customWorkflowInput,
   undefined, // templateKey
   undefined, // dryRun

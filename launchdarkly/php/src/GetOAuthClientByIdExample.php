@@ -12,7 +12,7 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     $response = (new LaunchDarkly\Client\Api\OAuth2ClientsApi(config: $config))->getOAuthClientById(
-        client_id: null,
+        client_id: "clientId_string",
     );
 
     print_r($response);

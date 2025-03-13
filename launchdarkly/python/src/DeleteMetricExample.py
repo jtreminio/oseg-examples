@@ -11,8 +11,8 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.MetricsApi(api_client).delete_metric(
-            project_key=None,
-            metric_key=None,
+            project_key="projectKey_string",
+            metric_key="metricKey_string",
         )
     except ApiException as e:
         print("Exception when calling MetricsApi#delete_metric: %s\n" % e)

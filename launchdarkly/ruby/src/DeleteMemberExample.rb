@@ -7,7 +7,7 @@ end
 
 begin
     LaunchDarklyClient::AccountMembersApi.new.delete_member(
-        nil, # id
+        "id_string", # id
     )
 rescue LaunchDarklyClient::ApiError => e
     puts "Exception when calling AccountMembersApi#delete_member: #{e}"

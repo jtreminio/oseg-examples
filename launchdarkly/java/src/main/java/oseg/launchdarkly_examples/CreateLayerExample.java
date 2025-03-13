@@ -24,12 +24,12 @@ public class CreateLayerExample
         var layerPost = new LayerPost();
         layerPost.key("checkout-flow");
         layerPost.name("Checkout Flow");
-        layerPost.description(null);
+        layerPost.description("description_string");
 
         try
         {
             var response = new LayersApi(config).createLayer(
-                null, // projectKey
+                "projectKey_string", // projectKey
                 layerPost
             );
 

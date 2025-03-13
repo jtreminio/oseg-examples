@@ -7,7 +7,7 @@ end
 
 begin
     response = LaunchDarklyClient::ApprovalsApi.new.get_approval_request(
-        nil, # id
+        "id_string", # id
     )
 
     p response

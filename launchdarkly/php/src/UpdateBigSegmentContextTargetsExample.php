@@ -28,9 +28,9 @@ $segment_user_state = (new LaunchDarkly\Client\Model\SegmentUserState())
 
 try {
     (new LaunchDarkly\Client\Api\SegmentsApi(config: $config))->updateBigSegmentContextTargets(
-        project_key: null,
-        environment_key: null,
-        segment_key: null,
+        project_key: "projectKey_string",
+        environment_key: "environmentKey_string",
+        segment_key: "segmentKey_string",
         segment_user_state: $segment_user_state,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {

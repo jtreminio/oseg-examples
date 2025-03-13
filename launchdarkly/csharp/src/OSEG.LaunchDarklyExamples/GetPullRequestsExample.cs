@@ -19,7 +19,7 @@ public class GetPullRequestsExample
         try
         {
             var response = new InsightsPullRequestsBetaApi(config).GetPullRequests(
-                projectKey: null,
+                projectKey: "projectKey_string",
                 environmentKey: null,
                 applicationKey: null,
                 status: null,

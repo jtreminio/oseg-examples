@@ -18,7 +18,7 @@ patch_with_comment.patch = patch
 
 begin
     response = LaunchDarklyClient::CustomRolesApi.new.patch_custom_role(
-        nil, # custom_role_key
+        "customRoleKey_string", # custom_role_key
         patch_with_comment,
     )
 

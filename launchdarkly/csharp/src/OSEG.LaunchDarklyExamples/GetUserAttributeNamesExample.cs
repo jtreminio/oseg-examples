@@ -19,8 +19,8 @@ public class GetUserAttributeNamesExample
         try
         {
             var response = new UsersBetaApi(config).GetUserAttributeNames(
-                projectKey: null,
-                environmentKey: null
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string"
             );
 
             Console.WriteLine(response);

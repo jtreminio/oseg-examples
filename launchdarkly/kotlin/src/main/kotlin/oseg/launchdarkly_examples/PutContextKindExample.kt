@@ -30,8 +30,8 @@ class PutContextKindExample
         try
         {
             val response = ContextsApi().putContextKind(
-                projectKey = null,
-                key = null,
+                projectKey = "projectKey_string",
+                key = "key_string",
                 upsertContextKindPayload = upsertContextKindPayload,
             )
 

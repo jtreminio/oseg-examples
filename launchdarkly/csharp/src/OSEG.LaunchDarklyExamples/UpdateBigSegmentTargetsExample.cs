@@ -38,9 +38,9 @@ public class UpdateBigSegmentTargetsExample
         try
         {
             new SegmentsApi(config).UpdateBigSegmentTargets(
-                projectKey: null,
-                environmentKey: null,
-                segmentKey: null,
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                segmentKey: "segmentKey_string",
                 segmentUserState: segmentUserState
             );
         }

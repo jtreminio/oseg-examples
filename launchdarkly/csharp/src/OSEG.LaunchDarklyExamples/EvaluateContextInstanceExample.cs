@@ -19,8 +19,8 @@ public class EvaluateContextInstanceExample
         try
         {
             var response = new ContextsApi(config).EvaluateContextInstance(
-                projectKey: null,
-                environmentKey: null,
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
                 requestBody: JsonSerializer.Deserialize<Dictionary<string, object>>("""
                     {
                         "key": "user-key-123abc",

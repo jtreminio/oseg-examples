@@ -6,10 +6,10 @@ const apiCaller = new api.SegmentsApi();
 apiCaller.setApiKey(api.SegmentsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getSegmentMembershipForContext(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // segmentKey
-  undefined, // contextKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "segmentKey_string", // segmentKey
+  "contextKey_string", // contextKey
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

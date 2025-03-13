@@ -31,7 +31,7 @@ class PatchMemberExample
         try
         {
             val response = AccountMembersApi().patchMember(
-                id = null,
+                id = "id_string",
                 patchOperation = patchOperation,
             )
 

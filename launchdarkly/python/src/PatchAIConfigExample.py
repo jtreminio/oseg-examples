@@ -20,9 +20,9 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.AIConfigsBetaApi(api_client).patch_ai_config(
-            ld_api_version=None,
-            project_key=None,
-            config_key=None,
+            ld_api_version="beta",
+            project_key="projectKey_string",
+            config_key="configKey_string",
             ai_config_patch=ai_config_patch,
         )
 

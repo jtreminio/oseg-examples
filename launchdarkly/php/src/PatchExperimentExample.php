@@ -23,9 +23,9 @@ $experiment_patch_input = (new LaunchDarkly\Client\Model\ExperimentPatchInput())
 
 try {
     $response = (new LaunchDarkly\Client\Api\ExperimentsApi(config: $config))->patchExperiment(
-        project_key: null,
-        environment_key: null,
-        experiment_key: null,
+        project_key: "projectKey_string",
+        environment_key: "environmentKey_string",
+        experiment_key: "experimentKey_string",
         experiment_patch_input: $experiment_patch_input,
     );
 

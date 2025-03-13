@@ -7,8 +7,8 @@ end
 
 begin
     response = LaunchDarklyClient::CodeReferencesApi.new.get_branch(
-        nil, # repo
-        nil, # branch
+        "repo_string", # repo
+        "branch_string", # branch
     )
 
     p response

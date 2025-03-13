@@ -37,8 +37,8 @@ public class CreateFlagImportConfigurationExample
         try
         {
             var response = new FlagImportConfigurationsBetaApi(config).CreateFlagImportConfiguration(
-                projectKey: null,
-                integrationKey: null,
+                projectKey: "projectKey_string",
+                integrationKey: "integrationKey_string",
                 flagImportConfigurationPost: flagImportConfigurationPost
             );
 

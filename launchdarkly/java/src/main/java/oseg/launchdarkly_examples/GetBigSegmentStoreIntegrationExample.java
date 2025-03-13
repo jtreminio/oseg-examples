@@ -24,10 +24,10 @@ public class GetBigSegmentStoreIntegrationExample
         try
         {
             var response = new PersistentStoreIntegrationsBetaApi(config).getBigSegmentStoreIntegration(
-                null, // projectKey
-                null, // environmentKey
-                null, // integrationKey
-                null // integrationId
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "integrationKey_string", // integrationKey
+                "integrationId_string" // integrationId
             );
 
             System.out.println(response);

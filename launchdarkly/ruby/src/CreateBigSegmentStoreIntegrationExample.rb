@@ -21,9 +21,9 @@ integration_delivery_configuration_post.tags = [
 
 begin
     response = LaunchDarklyClient::PersistentStoreIntegrationsBetaApi.new.create_big_segment_store_integration(
-        nil, # project_key
-        nil, # environment_key
-        nil, # integration_key
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
+        "integrationKey_string", # integration_key
         integration_delivery_configuration_post,
     )
 

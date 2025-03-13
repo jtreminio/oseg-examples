@@ -6,8 +6,8 @@ const apiCaller = new api.InsightsScoresBetaApi();
 apiCaller.setApiKey(api.InsightsScoresBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getInsightsScores(
-  undefined, // projectKey
-  undefined, // environmentKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
   undefined, // applicationKey
 ).then(response => {
   console.log(response.body);

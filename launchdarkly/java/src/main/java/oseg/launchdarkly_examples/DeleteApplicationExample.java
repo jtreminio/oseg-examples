@@ -24,7 +24,7 @@ public class DeleteApplicationExample
         try
         {
             new ApplicationsBetaApi(config).deleteApplication(
-                null // applicationKey
+                "applicationKey_string" // applicationKey
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling ApplicationsBetaApi#deleteApplication");

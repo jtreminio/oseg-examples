@@ -24,9 +24,9 @@ public class GetHoldoutExample
         try
         {
             var response = new HoldoutsBetaApi(config).getHoldout(
-                null, // projectKey
-                null, // environmentKey
-                null, // holdoutKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "holdoutKey_string", // holdoutKey
                 null // expand
             );
 

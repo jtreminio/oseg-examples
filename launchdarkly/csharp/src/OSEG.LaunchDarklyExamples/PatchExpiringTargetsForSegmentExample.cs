@@ -38,9 +38,9 @@ public class PatchExpiringTargetsForSegmentExample
         try
         {
             var response = new SegmentsApi(config).PatchExpiringTargetsForSegment(
-                projectKey: null,
-                environmentKey: null,
-                segmentKey: null,
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                segmentKey: "segmentKey_string",
                 patchSegmentExpiringTargetInputRep: patchSegmentExpiringTargetInputRep
             );
 

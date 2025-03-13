@@ -13,8 +13,8 @@ upsertContextKindPayload.archived = false;
 upsertContextKindPayload.version = 1;
 
 apiCaller.putContextKind(
-  undefined, // projectKey
-  undefined, // key
+  "projectKey_string", // projectKey
+  "key_string", // key
   upsertContextKindPayload,
 ).then(response => {
   console.log(response.body);

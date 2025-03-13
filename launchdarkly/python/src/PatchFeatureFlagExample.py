@@ -24,8 +24,8 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.FeatureFlagsApi(api_client).patch_feature_flag(
-            project_key=None,
-            feature_flag_key=None,
+            project_key="projectKey_string",
+            feature_flag_key="featureFlagKey_string",
             patch_with_comment=patch_with_comment,
             ignore_conflicts=None,
         )

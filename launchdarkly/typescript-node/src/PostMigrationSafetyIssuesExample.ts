@@ -7,12 +7,11 @@ apiCaller.setApiKey(api.FeatureFlagsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 const flagSempatch = new models.FlagSempatch();
 flagSempatch.instructions = [];
-flagSempatch.comment = undefined;
 
 apiCaller.postMigrationSafetyIssues(
-  undefined, // projectKey
-  undefined, // flagKey
-  undefined, // environmentKey
+  "projectKey_string", // projectKey
+  "flagKey_string", // flagKey
+  "environmentKey_string", // environmentKey
   flagSempatch,
 ).then(response => {
   console.log(response.body);

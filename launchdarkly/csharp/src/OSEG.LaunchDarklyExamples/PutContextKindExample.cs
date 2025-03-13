@@ -27,8 +27,8 @@ public class PutContextKindExample
         try
         {
             var response = new ContextsApi(config).PutContextKind(
-                projectKey: null,
-                key: null,
+                projectKey: "projectKey_string",
+                key: "key_string",
                 upsertContextKindPayload: upsertContextKindPayload
             );
 

@@ -19,7 +19,6 @@ new_member_form_1.team_keys = [
     "team-1",
     "team-2",
 ]
-new_member_form_1.role_attributes = nil
 
 new_member_form = [
     new_member_form_1,

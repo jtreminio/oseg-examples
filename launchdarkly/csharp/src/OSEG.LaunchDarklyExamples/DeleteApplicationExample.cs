@@ -19,7 +19,7 @@ public class DeleteApplicationExample
         try
         {
             new ApplicationsBetaApi(config).DeleteApplication(
-                applicationKey: null
+                applicationKey: "applicationKey_string"
             );
         }
         catch (ApiException e)

@@ -6,9 +6,9 @@ const apiCaller = new api.FeatureFlagsApi();
 apiCaller.setApiKey(api.FeatureFlagsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getExpiringContextTargets(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // featureFlagKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "featureFlagKey_string", // featureFlagKey
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

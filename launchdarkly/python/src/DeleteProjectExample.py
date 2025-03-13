@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.ProjectsApi(api_client).delete_project(
-            project_key=None,
+            project_key="projectKey_string",
         )
     except ApiException as e:
         print("Exception when calling ProjectsApi#delete_project: %s\n" % e)

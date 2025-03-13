@@ -19,8 +19,8 @@ public class GetReleaseByFlagKeyExample
         try
         {
             var response = new ReleasesBetaApi(config).GetReleaseByFlagKey(
-                projectKey: null,
-                flagKey: null
+                projectKey: "projectKey_string",
+                flagKey: "flagKey_string"
             );
 
             Console.WriteLine(response);

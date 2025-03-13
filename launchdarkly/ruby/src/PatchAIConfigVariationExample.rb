@@ -27,10 +27,10 @@ ai_config_variation_patch.messages = messages
 
 begin
     response = LaunchDarklyClient::AIConfigsBetaApi.new.patch_ai_config_variation(
-        nil, # ld_api_version
-        nil, # project_key
-        nil, # config_key
-        nil, # variation_key
+        "beta", # ld_api_version
+        "projectKey_string", # project_key
+        "configKey_string", # config_key
+        "variationKey_string", # variation_key
         {
             ai_config_variation_patch: ai_config_variation_patch,
         },

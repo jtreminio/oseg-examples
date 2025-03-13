@@ -12,10 +12,10 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     $response = (new LaunchDarkly\Client\Api\ApprovalsApi(config: $config))->getApprovalForFlag(
-        project_key: null,
-        feature_flag_key: null,
-        environment_key: null,
-        id: null,
+        project_key: "projectKey_string",
+        feature_flag_key: "featureFlagKey_string",
+        environment_key: "environmentKey_string",
+        id: "id_string",
     );
 
     print_r($response);

@@ -24,8 +24,8 @@ public class GetContextAttributeNamesExample
         try
         {
             var response = new ContextsApi(config).getContextAttributeNames(
-                null, // projectKey
-                null, // environmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
                 null, // filter
                 null // limit
             );

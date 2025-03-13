@@ -21,14 +21,13 @@ with ApiClient(configuration) as api_client:
         notifyTeamKeys=[
             "example-reviewer-team",
         ],
-        integrationConfig=None,
     )
 
     try:
         response = api.ApprovalsApi(api_client).post_approval_request_for_flag(
-            project_key=None,
-            feature_flag_key=None,
-            environment_key=None,
+            project_key="projectKey_string",
+            feature_flag_key="featureFlagKey_string",
+            environment_key="environmentKey_string",
             create_flag_config_approval_request_request=create_flag_config_approval_request_request,
         )
 

@@ -27,7 +27,6 @@ with ApiClient(configuration) as api_client:
         holdoutamount="10",
         primarymetrickey="metric-key-123abc",
         prerequisiteflagkey="flag-key-123abc",
-        maintainerId=None,
         attributes=[
             "country",
             "device",
@@ -38,8 +37,8 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.HoldoutsBetaApi(api_client).post_holdout(
-            project_key=None,
-            environment_key=None,
+            project_key="projectKey_string",
+            environment_key="environmentKey_string",
             holdout_post_request=holdout_post_request,
         )
 

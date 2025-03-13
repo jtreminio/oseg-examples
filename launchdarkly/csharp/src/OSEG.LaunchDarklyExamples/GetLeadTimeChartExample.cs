@@ -19,7 +19,7 @@ public class GetLeadTimeChartExample
         try
         {
             var response = new InsightsChartsBetaApi(config).GetLeadTimeChart(
-                projectKey: null,
+                projectKey: "projectKey_string",
                 environmentKey: null,
                 applicationKey: null,
                 from: null,

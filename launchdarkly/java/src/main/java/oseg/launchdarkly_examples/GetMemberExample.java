@@ -24,7 +24,7 @@ public class GetMemberExample
         try
         {
             var response = new AccountMembersApi(config).getMember(
-                null, // id
+                "id_string", // id
                 null // expand
             );
 

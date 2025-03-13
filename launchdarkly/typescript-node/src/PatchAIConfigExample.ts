@@ -14,9 +14,9 @@ aIConfigPatch.tags = [
 ];
 
 apiCaller.patchAIConfig(
-  undefined, // lDAPIVersion
-  undefined, // projectKey
-  undefined, // configKey
+  models.AIConfigPatch.LDAPIVersionEnum.Beta, // lDAPIVersion
+  "projectKey_string", // projectKey
+  "configKey_string", // configKey
   aIConfigPatch,
 ).then(response => {
   console.log(response.body);

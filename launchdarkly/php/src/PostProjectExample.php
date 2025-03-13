@@ -12,9 +12,7 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 $project_post = (new LaunchDarkly\Client\Model\ProjectPost())
     ->setName("My Project")
-    ->setKey("project-key-123abc")
-    ->setIncludeInSnippetByDefault(null)
-    ->setTags(null);
+    ->setKey("project-key-123abc");
 
 try {
     $response = (new LaunchDarkly\Client\Api\ProjectsApi(config: $config))->postProject(

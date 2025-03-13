@@ -11,10 +11,10 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.ScheduledChangesApi(api_client).delete_flag_config_scheduled_changes(
-            project_key=None,
-            feature_flag_key=None,
-            environment_key=None,
-            id=None,
+            project_key="projectKey_string",
+            feature_flag_key="featureFlagKey_string",
+            environment_key="environmentKey_string",
+            id="id_string",
         )
     except ApiException as e:
         print("Exception when calling ScheduledChangesApi#delete_flag_config_scheduled_changes: %s\n" % e)

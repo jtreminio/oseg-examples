@@ -24,7 +24,7 @@ public class GetStreamUsageSdkversionExample
         try
         {
             var response = new AccountUsageBetaApi(config).getStreamUsageSdkversion(
-                null // source
+                "source_string" // source
             );
 
             System.out.println(response);

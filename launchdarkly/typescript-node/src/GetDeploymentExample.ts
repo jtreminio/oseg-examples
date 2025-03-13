@@ -6,7 +6,7 @@ const apiCaller = new api.InsightsDeploymentsBetaApi();
 apiCaller.setApiKey(api.InsightsDeploymentsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getDeployment(
-  undefined, // deploymentID
+  "deploymentID_string", // deploymentID
   undefined, // expand
 ).then(response => {
   console.log(response.body);

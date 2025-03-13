@@ -14,8 +14,8 @@ const patchOperation = [
 ];
 
 apiCaller.patchMetricGroup(
-  undefined, // projectKey
-  undefined, // metricGroupKey
+  "projectKey_string", // projectKey
+  "metricGroupKey_string", // metricGroupKey
   patchOperation,
 ).then(response => {
   console.log(response.body);

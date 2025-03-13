@@ -43,7 +43,7 @@ class CreateMetricGroupExample
         try
         {
             val response = MetricsBetaApi().createMetricGroup(
-                projectKey = null,
+                projectKey = "projectKey_string",
                 metricGroupPost = metricGroupPost,
             )
 

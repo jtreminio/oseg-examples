@@ -24,9 +24,9 @@ public class GetDestinationExample
         try
         {
             var response = new DataExportDestinationsApi(config).getDestination(
-                null, // projectKey
-                null, // environmentKey
-                null // id
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "id_string" // id
             );
 
             System.out.println(response);

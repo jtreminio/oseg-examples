@@ -7,8 +7,8 @@ end
 
 begin
     response = LaunchDarklyClient::MetricsApi.new.get_metric(
-        nil, # project_key
-        nil, # metric_key
+        "projectKey_string", # project_key
+        "metricKey_string", # metric_key
     )
 
     p response

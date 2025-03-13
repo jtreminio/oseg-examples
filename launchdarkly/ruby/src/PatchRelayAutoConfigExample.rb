@@ -18,7 +18,7 @@ patch_with_comment.patch = patch
 
 begin
     response = LaunchDarklyClient::RelayProxyConfigurationsApi.new.patch_relay_auto_config(
-        nil, # id
+        "id_string", # id
         patch_with_comment,
     )
 

@@ -41,7 +41,7 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.IntegrationAuditLogSubscriptionsApi(api_client).create_subscription(
-            integration_key=None,
+            integration_key="integrationKey_string",
             subscription_post=subscription_post,
         )
 

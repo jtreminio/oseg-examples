@@ -24,7 +24,7 @@ public class GetRepositoryExample
         try
         {
             var response = new CodeReferencesApi(config).getRepository(
-                null // repo
+                "repo_string" // repo
             );
 
             System.out.println(response);

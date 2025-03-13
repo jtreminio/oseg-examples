@@ -6,9 +6,9 @@ const apiCaller = new api.AccountUsageBetaApi();
 apiCaller.setApiKey(api.AccountUsageBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getEvaluationsUsage(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // featureFlagKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "featureFlagKey_string", // featureFlagKey
   undefined, // from
   undefined, // to
   undefined, // tz

@@ -15,11 +15,9 @@ $policy_1 = (new LaunchDarkly\Client\Model\Statement())
     ->setResources([
         "proj/*:env/*",
     ])
-    ->setNotResources(null)
     ->setActions([
         "*",
-    ])
-    ->setNotActions(null);
+    ]);
 
 $policy = [
     $policy_1,

@@ -19,7 +19,7 @@ public class GetInsightGroupExample
         try
         {
             var response = new InsightsScoresBetaApi(config).GetInsightGroup(
-                insightGroupKey: null,
+                insightGroupKey: "insightGroupKey_string",
                 expand: null
             );
 

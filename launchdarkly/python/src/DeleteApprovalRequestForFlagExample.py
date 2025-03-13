@@ -11,10 +11,10 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.ApprovalsApi(api_client).delete_approval_request_for_flag(
-            project_key=None,
-            feature_flag_key=None,
-            environment_key=None,
-            id=None,
+            project_key="projectKey_string",
+            feature_flag_key="featureFlagKey_string",
+            environment_key="environmentKey_string",
+            id="id_string",
         )
     except ApiException as e:
         print("Exception when calling ApprovalsApi#delete_approval_request_for_flag: %s\n" % e)

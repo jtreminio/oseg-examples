@@ -26,9 +26,9 @@ aIConfigVariationPost.modelConfigKey = "modelConfigKey";
 aIConfigVariationPost.messages = messages;
 
 apiCaller.postAIConfigVariation(
-  undefined, // lDAPIVersion
-  undefined, // projectKey
-  undefined, // configKey
+  models.AIConfigVariationPost.LDAPIVersionEnum.Beta, // lDAPIVersion
+  "projectKey_string", // projectKey
+  "configKey_string", // configKey
   aIConfigVariationPost,
 ).then(response => {
   console.log(response.body);

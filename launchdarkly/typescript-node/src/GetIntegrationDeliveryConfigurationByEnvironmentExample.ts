@@ -6,8 +6,8 @@ const apiCaller = new api.IntegrationDeliveryConfigurationsBetaApi();
 apiCaller.setApiKey(api.IntegrationDeliveryConfigurationsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getIntegrationDeliveryConfigurationByEnvironment(
-  undefined, // projectKey
-  undefined, // environmentKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

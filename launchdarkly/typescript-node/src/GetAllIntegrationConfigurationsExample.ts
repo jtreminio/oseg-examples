@@ -6,7 +6,7 @@ const apiCaller = new api.IntegrationsBetaApi();
 apiCaller.setApiKey(api.IntegrationsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getAllIntegrationConfigurations(
-  undefined, // integrationKey
+  "integrationKey_string", // integrationKey
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

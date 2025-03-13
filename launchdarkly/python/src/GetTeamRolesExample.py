@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.TeamsApi(api_client).get_team_roles(
-            team_key=None,
+            team_key="teamKey_string",
             limit=None,
             offset=None,
         )

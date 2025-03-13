@@ -19,10 +19,10 @@ public class GetSegmentMembershipForUserExample
         try
         {
             var response = new SegmentsApi(config).GetSegmentMembershipForUser(
-                projectKey: null,
-                environmentKey: null,
-                segmentKey: null,
-                userKey: null
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                segmentKey: "segmentKey_string",
+                userKey: "userKey_string"
             );
 
             Console.WriteLine(response);

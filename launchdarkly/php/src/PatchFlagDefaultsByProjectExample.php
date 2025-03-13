@@ -20,7 +20,7 @@ $patch_operation = [
 
 try {
     $response = (new LaunchDarkly\Client\Api\ProjectsApi(config: $config))->patchFlagDefaultsByProject(
-        project_key: null,
+        project_key: "projectKey_string",
         patch_operation: $patch_operation,
     );
 

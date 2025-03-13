@@ -12,8 +12,7 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 $randomization_units_1 = (new LaunchDarkly\Client\Model\RandomizationUnitInput())
     ->setRandomizationUnit("user")
-    ->setStandardRandomizationUnit(LaunchDarkly\Client\Model\RandomizationUnitInput::STANDARD_RANDOMIZATION_UNIT_ORGANIZATION)
-    ->setDefault(null);
+    ->setStandardRandomizationUnit(LaunchDarkly\Client\Model\RandomizationUnitInput::STANDARD_RANDOMIZATION_UNIT_ORGANIZATION);
 
 $randomization_units = [
     $randomization_units_1,

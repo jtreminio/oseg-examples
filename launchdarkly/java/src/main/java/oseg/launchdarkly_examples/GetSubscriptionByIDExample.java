@@ -24,8 +24,8 @@ public class GetSubscriptionByIDExample
         try
         {
             var response = new IntegrationAuditLogSubscriptionsApi(config).getSubscriptionByID(
-                null, // integrationKey
-                null // id
+                "integrationKey_string", // integrationKey
+                "id_string" // id
             );
 
             System.out.println(response);

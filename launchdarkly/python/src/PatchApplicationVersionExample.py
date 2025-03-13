@@ -20,8 +20,8 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.ApplicationsBetaApi(api_client).patch_application_version(
-            application_key=None,
-            version_key=None,
+            application_key="applicationKey_string",
+            version_key="versionKey_string",
             patch_operation=patch_operation,
         )
 

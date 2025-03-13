@@ -6,7 +6,7 @@ const apiCaller = new api.AccountUsageBetaApi();
 apiCaller.setApiKey(api.AccountUsageBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getStreamUsage(
-  undefined, // source
+  "source_string", // source
   undefined, // from
   undefined, // to
   undefined, // tz

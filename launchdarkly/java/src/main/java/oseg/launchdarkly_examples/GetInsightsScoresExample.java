@@ -24,8 +24,8 @@ public class GetInsightsScoresExample
         try
         {
             var response = new InsightsScoresBetaApi(config).getInsightsScores(
-                null, // projectKey
-                null, // environmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
                 null // applicationKey
             );
 

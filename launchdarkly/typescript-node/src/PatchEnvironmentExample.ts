@@ -14,8 +14,8 @@ const patchOperation = [
 ];
 
 apiCaller.patchEnvironment(
-  undefined, // projectKey
-  undefined, // environmentKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
   patchOperation,
 ).then(response => {
   console.log(response.body);

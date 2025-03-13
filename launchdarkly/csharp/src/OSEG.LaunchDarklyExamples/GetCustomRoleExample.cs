@@ -19,7 +19,7 @@ public class GetCustomRoleExample
         try
         {
             var response = new CustomRolesApi(config).GetCustomRole(
-                customRoleKey: null
+                customRoleKey: "customRoleKey_string"
             );
 
             Console.WriteLine(response);

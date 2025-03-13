@@ -22,8 +22,8 @@ class EvaluateContextInstanceExample
         try
         {
             val response = ContextsApi().evaluateContextInstance(
-                projectKey = null,
-                environmentKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
                 requestBody = Serializer.moshi.adapter<Map<String, Any>>().fromJson("""
                     {
                         "key": "user-key-123abc",

@@ -24,7 +24,7 @@ public class GetWebhookExample
         try
         {
             var response = new WebhooksApi(config).getWebhook(
-                null // id
+                "id_string" // id
             );
 
             System.out.println(response);

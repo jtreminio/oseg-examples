@@ -17,9 +17,6 @@ public class CreateOAuth2ClientExample
         config.ApiKey.Add("Authorization", "YOUR_API_KEY");
 
         var oauthClientPost = new OauthClientPost(
-            name: null,
-            redirectUri: null,
-            description: null
         );
 
         try

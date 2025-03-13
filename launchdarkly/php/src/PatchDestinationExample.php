@@ -20,9 +20,9 @@ $patch_operation = [
 
 try {
     $response = (new LaunchDarkly\Client\Api\DataExportDestinationsApi(config: $config))->patchDestination(
-        project_key: null,
-        environment_key: null,
-        id: null,
+        project_key: "projectKey_string",
+        environment_key: "environmentKey_string",
+        id: "id_string",
         patch_operation: $patch_operation,
     );
 

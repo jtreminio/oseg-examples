@@ -24,7 +24,7 @@ public class GetAIConfigVariationExample
         try
         {
             var response = new AiConfigsBetaApi(config).getAIConfigVariation(
-                null, // ldAPIVersion
+                "beta", // ldAPIVersion
                 "default", // projectKey
                 "default", // configKey
                 "default" // variationKey

@@ -12,7 +12,7 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     (new LaunchDarkly\Client\Api\OAuth2ClientsApi(config: $config))->deleteOAuthClient(
-        client_id: null,
+        client_id: "clientId_string",
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
     echo "Exception when calling OAuth2ClientsApi#deleteOAuthClient: {$e->getMessage()}";

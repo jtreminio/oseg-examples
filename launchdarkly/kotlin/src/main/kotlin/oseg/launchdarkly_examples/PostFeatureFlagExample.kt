@@ -33,7 +33,7 @@ class PostFeatureFlagExample
         try
         {
             val response = FeatureFlagsApi().postFeatureFlag(
-                projectKey = null,
+                projectKey = "projectKey_string",
                 featureFlagBody = featureFlagBody,
                 clone = null,
             )

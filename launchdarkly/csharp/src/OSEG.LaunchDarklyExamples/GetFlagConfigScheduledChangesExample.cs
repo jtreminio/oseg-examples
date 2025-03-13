@@ -19,9 +19,9 @@ public class GetFlagConfigScheduledChangesExample
         try
         {
             var response = new ScheduledChangesApi(config).GetFlagConfigScheduledChanges(
-                projectKey: null,
-                featureFlagKey: null,
-                environmentKey: null
+                projectKey: "projectKey_string",
+                featureFlagKey: "featureFlagKey_string",
+                environmentKey: "environmentKey_string"
             );
 
             Console.WriteLine(response);

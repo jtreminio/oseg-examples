@@ -32,9 +32,9 @@ public class PatchDestinationExample
         try
         {
             var response = new DataExportDestinationsApi(config).patchDestination(
-                null, // projectKey
-                null, // environmentKey
-                null, // id
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "id_string", // id
                 patchOperation
             );
 

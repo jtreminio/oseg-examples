@@ -7,8 +7,8 @@ end
 
 begin
     response = LaunchDarklyClient::InsightsScoresBetaApi.new.get_insights_scores(
-        nil, # project_key
-        nil, # environment_key
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
     )
 
     p response

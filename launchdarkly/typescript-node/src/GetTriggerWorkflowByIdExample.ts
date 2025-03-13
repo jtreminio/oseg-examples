@@ -6,10 +6,10 @@ const apiCaller = new api.FlagTriggersApi();
 apiCaller.setApiKey(api.FlagTriggersApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getTriggerWorkflowById(
-  undefined, // projectKey
-  undefined, // featureFlagKey
-  undefined, // environmentKey
-  undefined, // id
+  "projectKey_string", // projectKey
+  "featureFlagKey_string", // featureFlagKey
+  "environmentKey_string", // environmentKey
+  "id_string", // id
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

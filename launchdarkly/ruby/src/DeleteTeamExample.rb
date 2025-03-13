@@ -7,7 +7,7 @@ end
 
 begin
     LaunchDarklyClient::TeamsApi.new.delete_team(
-        nil, # team_key
+        "teamKey_string", # team_key
     )
 rescue LaunchDarklyClient::ApiError => e
     puts "Exception when calling TeamsApi#delete_team: #{e}"

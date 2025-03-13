@@ -29,8 +29,8 @@ $flag_import_configuration_post = (new LaunchDarkly\Client\Model\FlagImportConfi
 
 try {
     $response = (new LaunchDarkly\Client\Api\FlagImportConfigurationsBetaApi(config: $config))->createFlagImportConfiguration(
-        project_key: null,
-        integration_key: null,
+        project_key: "projectKey_string",
+        integration_key: "integrationKey_string",
         flag_import_configuration_post: $flag_import_configuration_post,
     );
 

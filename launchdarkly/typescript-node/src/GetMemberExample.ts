@@ -6,7 +6,7 @@ const apiCaller = new api.AccountMembersApi();
 apiCaller.setApiKey(api.AccountMembersApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getMember(
-  undefined, // id
+  "id_string", // id
   undefined, // expand
 ).then(response => {
   console.log(response.body);

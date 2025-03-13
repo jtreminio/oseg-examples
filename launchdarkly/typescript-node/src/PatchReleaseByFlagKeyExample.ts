@@ -14,8 +14,8 @@ const patchOperation = [
 ];
 
 apiCaller.patchReleaseByFlagKey(
-  undefined, // projectKey
-  undefined, // flagKey
+  "projectKey_string", // projectKey
+  "flagKey_string", // flagKey
   patchOperation,
 ).then(response => {
   console.log(response.body);

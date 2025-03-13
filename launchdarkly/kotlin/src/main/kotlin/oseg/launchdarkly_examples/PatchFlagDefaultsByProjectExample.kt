@@ -31,7 +31,7 @@ class PatchFlagDefaultsByProjectExample
         try
         {
             val response = ProjectsApi().patchFlagDefaultsByProject(
-                projectKey = null,
+                projectKey = "projectKey_string",
                 patchOperation = patchOperation,
             )
 

@@ -9,10 +9,10 @@ const valuePut = new models.ValuePut();
 valuePut.comment = "make sure this context experiences a specific variation";
 
 apiCaller.putFlagSetting(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // userKey
-  undefined, // featureFlagKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "userKey_string", // userKey
+  "featureFlagKey_string", // featureFlagKey
   valuePut,
 ).catch(error => {
   console.log("Exception when calling UserSettingsApi#putFlagSetting:");

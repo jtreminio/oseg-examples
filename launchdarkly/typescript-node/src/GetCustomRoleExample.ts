@@ -6,7 +6,7 @@ const apiCaller = new api.CustomRolesApi();
 apiCaller.setApiKey(api.CustomRolesApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getCustomRole(
-  undefined, // customRoleKey
+  "customRoleKey_string", // customRoleKey
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

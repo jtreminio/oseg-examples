@@ -24,8 +24,8 @@ public class ResetEnvironmentSDKKeyExample
         try
         {
             var response = new EnvironmentsApi(config).resetEnvironmentSDKKey(
-                null, // projectKey
-                null, // environmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
                 null // expiry
             );
 

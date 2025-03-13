@@ -22,9 +22,9 @@ class CreateBigSegmentImportExample
         try
         {
             SegmentsApi().createBigSegmentImport(
-                projectKey = null,
-                environmentKey = null,
-                segmentKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                segmentKey = "segmentKey_string",
                 file = null,
                 mode = null,
                 waitOnApprovals = null,

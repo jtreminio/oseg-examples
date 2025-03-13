@@ -19,9 +19,9 @@ public class CreateBigSegmentExportExample
         try
         {
             new SegmentsApi(config).CreateBigSegmentExport(
-                projectKey: null,
-                environmentKey: null,
-                segmentKey: null
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                segmentKey: "segmentKey_string"
             );
         }
         catch (ApiException e)

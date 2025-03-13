@@ -11,8 +11,8 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.CodeReferencesApi(api_client).get_branch(
-            repo=None,
-            branch=None,
+            repo="repo_string",
+            branch="branch_string",
             proj_key=None,
             flag_key=None,
         )

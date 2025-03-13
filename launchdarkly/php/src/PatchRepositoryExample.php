@@ -20,7 +20,7 @@ $patch_operation = [
 
 try {
     $response = (new LaunchDarkly\Client\Api\CodeReferencesApi(config: $config))->patchRepository(
-        repo: null,
+        repo: "repo_string",
         patch_operation: $patch_operation,
     );
 

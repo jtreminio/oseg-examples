@@ -24,7 +24,7 @@ public class ResetTokenExample
         try
         {
             var response = new AccessTokensApi(config).resetToken(
-                null, // id
+                "id_string", // id
                 null // expiry
             );
 

@@ -24,8 +24,8 @@ public class DeleteApplicationVersionExample
         try
         {
             new ApplicationsBetaApi(config).deleteApplicationVersion(
-                null, // applicationKey
-                null // versionKey
+                "applicationKey_string", // applicationKey
+                "versionKey_string" // versionKey
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling ApplicationsBetaApi#deleteApplicationVersion");

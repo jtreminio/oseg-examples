@@ -8,11 +8,11 @@ end
 layer_post = LaunchDarklyClient::LayerPost.new
 layer_post.key = "checkout-flow"
 layer_post.name = "Checkout Flow"
-layer_post.description = nil
+layer_post.description = "description_string"
 
 begin
     response = LaunchDarklyClient::LayersApi.new.create_layer(
-        nil, # project_key
+        "projectKey_string", # project_key
         layer_post,
     )
 

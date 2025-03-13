@@ -6,7 +6,7 @@ const apiCaller = new api.LayersApi();
 apiCaller.setApiKey(api.LayersApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getLayers(
-  undefined, // projectKey
+  "projectKey_string", // projectKey
   undefined, // filter
 ).then(response => {
   console.log(response.body);

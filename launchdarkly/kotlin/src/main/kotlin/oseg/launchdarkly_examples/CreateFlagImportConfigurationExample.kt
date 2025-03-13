@@ -40,8 +40,8 @@ class CreateFlagImportConfigurationExample
         try
         {
             val response = FlagImportConfigurationsBetaApi().createFlagImportConfiguration(
-                projectKey = null,
-                integrationKey = null,
+                projectKey = "projectKey_string",
+                integrationKey = "integrationKey_string",
                 flagImportConfigurationPost = flagImportConfigurationPost,
             )
 

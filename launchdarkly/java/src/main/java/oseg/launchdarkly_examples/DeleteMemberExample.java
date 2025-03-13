@@ -24,7 +24,7 @@ public class DeleteMemberExample
         try
         {
             new AccountMembersApi(config).deleteMember(
-                null // id
+                "id_string" // id
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling AccountMembersApi#deleteMember");

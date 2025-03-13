@@ -24,7 +24,7 @@ public class DeleteWebhookExample
         try
         {
             new WebhooksApi(config).deleteWebhook(
-                null // id
+                "id_string" // id
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling WebhooksApi#deleteWebhook");

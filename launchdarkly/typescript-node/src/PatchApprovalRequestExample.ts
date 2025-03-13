@@ -6,7 +6,7 @@ const apiCaller = new api.ApprovalsBetaApi();
 apiCaller.setApiKey(api.ApprovalsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.patchApprovalRequest(
-  undefined, // id
+  "id_string", // id
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

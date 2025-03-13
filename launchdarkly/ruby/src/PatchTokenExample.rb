@@ -15,7 +15,7 @@ patch_operation = [
 
 begin
     response = LaunchDarklyClient::AccessTokensApi.new.patch_token(
-        nil, # id
+        "id_string", # id
         patch_operation,
     )
 

@@ -31,9 +31,9 @@ class PatchAIConfigExample
         try
         {
             val response = AIConfigsBetaApi().patchAIConfig(
-                ldAPIVersion = null,
-                projectKey = null,
-                configKey = null,
+                ldAPIVersion = AIConfigsBetaApi.LdAPIVersionPatchAIConfig.beta,
+                projectKey = "projectKey_string",
+                configKey = "configKey_string",
                 aiConfigPatch = aiConfigPatch,
             )
 

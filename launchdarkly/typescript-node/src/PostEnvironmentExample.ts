@@ -11,7 +11,7 @@ environmentPost.key = "environment-key-123abc";
 environmentPost.color = "DADBEE";
 
 apiCaller.postEnvironment(
-  undefined, // projectKey
+  "projectKey_string", // projectKey
   environmentPost,
 ).then(response => {
   console.log(response.body);

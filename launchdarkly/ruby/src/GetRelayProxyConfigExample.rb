@@ -7,7 +7,7 @@ end
 
 begin
     response = LaunchDarklyClient::RelayProxyConfigurationsApi.new.get_relay_proxy_config(
-        nil, # id
+        "id_string", # id
     )
 
     p response

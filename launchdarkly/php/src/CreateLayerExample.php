@@ -13,11 +13,11 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 $layer_post = (new LaunchDarkly\Client\Model\LayerPost())
     ->setKey("checkout-flow")
     ->setName("Checkout Flow")
-    ->setDescription(null);
+    ->setDescription("description_string");
 
 try {
     $response = (new LaunchDarkly\Client\Api\LayersApi(config: $config))->createLayer(
-        project_key: null,
+        project_key: "projectKey_string",
         layer_post: $layer_post,
     );
 

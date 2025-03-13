@@ -9,8 +9,8 @@ const destinationPost = new models.DestinationPost();
 destinationPost.kind = models.DestinationPost.KindEnum.GooglePubsub;
 
 apiCaller.postDestination(
-  undefined, // projectKey
-  undefined, // environmentKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
   destinationPost,
 ).then(response => {
   console.log(response.body);

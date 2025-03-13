@@ -6,9 +6,9 @@ const apiCaller = new api.UsersApi();
 apiCaller.setApiKey(api.UsersApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getUser(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // userKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "userKey_string", // userKey
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

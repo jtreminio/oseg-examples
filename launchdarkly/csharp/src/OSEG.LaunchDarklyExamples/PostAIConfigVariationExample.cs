@@ -43,9 +43,9 @@ public class PostAIConfigVariationExample
         try
         {
             var response = new AIConfigsBetaApi(config).PostAIConfigVariation(
-                lDAPIVersion: null,
-                projectKey: null,
-                configKey: null,
+                lDAPIVersion: AIConfigVariationPost.LDAPIVersionEnum.Beta,
+                projectKey: "projectKey_string",
+                configKey: "configKey_string",
                 aIConfigVariationPost: aIConfigVariationPost
             );
 

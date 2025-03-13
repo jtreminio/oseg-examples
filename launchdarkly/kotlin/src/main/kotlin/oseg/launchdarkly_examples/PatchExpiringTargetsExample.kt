@@ -36,9 +36,9 @@ class PatchExpiringTargetsExample
         try
         {
             val response = FeatureFlagsApi().patchExpiringTargets(
-                projectKey = null,
-                environmentKey = null,
-                featureFlagKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                featureFlagKey = "featureFlagKey_string",
                 patchFlagsRequest = patchFlagsRequest,
             )
 

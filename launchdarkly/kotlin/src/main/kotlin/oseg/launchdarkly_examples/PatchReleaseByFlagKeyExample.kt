@@ -31,8 +31,8 @@ class PatchReleaseByFlagKeyExample
         try
         {
             val response = ReleasesBetaApi().patchReleaseByFlagKey(
-                projectKey = null,
-                flagKey = null,
+                projectKey = "projectKey_string",
+                flagKey = "flagKey_string",
                 patchOperation = patchOperation,
             )
 

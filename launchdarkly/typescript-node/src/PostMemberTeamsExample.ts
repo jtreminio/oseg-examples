@@ -12,7 +12,7 @@ memberTeamsPostInput.teamKeys = [
 ];
 
 apiCaller.postMemberTeams(
-  undefined, // id
+  "id_string", // id
   memberTeamsPostInput,
 ).then(response => {
   console.log(response.body);

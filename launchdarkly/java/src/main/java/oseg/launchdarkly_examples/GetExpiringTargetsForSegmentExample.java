@@ -24,9 +24,9 @@ public class GetExpiringTargetsForSegmentExample
         try
         {
             var response = new SegmentsApi(config).getExpiringTargetsForSegment(
-                null, // projectKey
-                null, // environmentKey
-                null // segmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "segmentKey_string" // segmentKey
             );
 
             System.out.println(response);

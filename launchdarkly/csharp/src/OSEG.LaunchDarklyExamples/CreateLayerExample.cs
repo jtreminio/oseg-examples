@@ -19,13 +19,13 @@ public class CreateLayerExample
         var layerPost = new LayerPost(
             key: "checkout-flow",
             name: "Checkout Flow",
-            description: null
+            description: "description_string"
         );
 
         try
         {
             var response = new LayersApi(config).CreateLayer(
-                projectKey: null,
+                projectKey: "projectKey_string",
                 layerPost: layerPost
             );
 

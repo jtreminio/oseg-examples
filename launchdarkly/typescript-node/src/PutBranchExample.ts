@@ -37,8 +37,8 @@ putBranch.commitTime = 1706701522000;
 putBranch.references = references;
 
 apiCaller.putBranch(
-  undefined, // repo
-  undefined, // branch
+  "repo_string", // repo
+  "branch_string", // branch
   putBranch,
 ).catch(error => {
   console.log("Exception when calling CodeReferencesApi#putBranch:");

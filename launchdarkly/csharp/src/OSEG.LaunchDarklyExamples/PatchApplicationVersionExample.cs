@@ -29,8 +29,8 @@ public class PatchApplicationVersionExample
         try
         {
             var response = new ApplicationsBetaApi(config).PatchApplicationVersion(
-                applicationKey: null,
-                versionKey: null,
+                applicationKey: "applicationKey_string",
+                versionKey: "versionKey_string",
                 patchOperation: patchOperation
             );
 

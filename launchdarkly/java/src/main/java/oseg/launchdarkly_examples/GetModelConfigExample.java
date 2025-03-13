@@ -24,7 +24,7 @@ public class GetModelConfigExample
         try
         {
             var response = new AiConfigsBetaApi(config).getModelConfig(
-                null, // ldAPIVersion
+                "beta", // ldAPIVersion
                 "default", // projectKey
                 "default" // modelConfigKey
             );

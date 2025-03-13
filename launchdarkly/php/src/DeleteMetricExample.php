@@ -12,8 +12,8 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     (new LaunchDarkly\Client\Api\MetricsApi(config: $config))->deleteMetric(
-        project_key: null,
-        metric_key: null,
+        project_key: "projectKey_string",
+        metric_key: "metricKey_string",
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
     echo "Exception when calling MetricsApi#deleteMetric: {$e->getMessage()}";

@@ -7,10 +7,10 @@ end
 
 begin
     response = LaunchDarklyClient::WorkflowsApi.new.get_custom_workflow(
-        nil, # project_key
-        nil, # feature_flag_key
-        nil, # environment_key
-        nil, # workflow_id
+        "projectKey_string", # project_key
+        "featureFlagKey_string", # feature_flag_key
+        "environmentKey_string", # environment_key
+        "workflowId_string", # workflow_id
     )
 
     p response

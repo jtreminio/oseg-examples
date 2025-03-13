@@ -23,7 +23,9 @@ public class GetInsightsRepositoriesExample
 
         try
         {
-            var response = new InsightsRepositoriesBetaApi(config).getInsightsRepositories();
+            var response = new InsightsRepositoriesBetaApi(config).getInsightsRepositories(
+                null // expand
+            );
 
             System.out.println(response);
         } catch (ApiException e) {

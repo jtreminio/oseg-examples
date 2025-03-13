@@ -12,17 +12,14 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 $flag_link_post = (new LaunchDarkly\Client\Model\FlagLinkPost())
     ->setKey("flag-link-key-123abc")
-    ->setIntegrationKey(null)
-    ->setTimestamp(null)
     ->setDeepLink("https://example.com/archives/123123123")
     ->setTitle("Example link title")
-    ->setDescription("Example link description")
-    ->setMetadata(null);
+    ->setDescription("Example link description");
 
 try {
     $response = (new LaunchDarkly\Client\Api\FlagLinksBetaApi(config: $config))->createFlagLink(
-        project_key: null,
-        feature_flag_key: null,
+        project_key: "projectKey_string",
+        feature_flag_key: "featureFlagKey_string",
         flag_link_post: $flag_link_post,
     );
 

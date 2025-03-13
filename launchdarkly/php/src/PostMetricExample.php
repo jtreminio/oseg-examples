@@ -13,23 +13,13 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 $metric_post = (new LaunchDarkly\Client\Model\MetricPost())
     ->setKey("metric-key-123abc")
     ->setKind(LaunchDarkly\Client\Model\MetricPost::KIND_CUSTOM)
-    ->setName(null)
-    ->setDescription(null)
-    ->setSelector(null)
     ->setIsActive(true)
     ->setIsNumeric(false)
-    ->setUnit(null)
-    ->setEventKey("trackedClick")
-    ->setSuccessCriteria(null)
-    ->setUnitAggregationType(null)
-    ->setAnalysisType(null)
-    ->setPercentileValue(null)
-    ->setTags(null)
-    ->setRandomizationUnits(null);
+    ->setEventKey("trackedClick");
 
 try {
     $response = (new LaunchDarkly\Client\Api\MetricsApi(config: $config))->postMetric(
-        project_key: null,
+        project_key: "projectKey_string",
         metric_post: $metric_post,
     );
 

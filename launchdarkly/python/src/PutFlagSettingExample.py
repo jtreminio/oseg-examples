@@ -15,10 +15,10 @@ with ApiClient(configuration) as api_client:
 
     try:
         api.UserSettingsApi(api_client).put_flag_setting(
-            project_key=None,
-            environment_key=None,
-            user_key=None,
-            feature_flag_key=None,
+            project_key="projectKey_string",
+            environment_key="environmentKey_string",
+            user_key="userKey_string",
+            feature_flag_key="featureFlagKey_string",
             value_put=value_put,
         )
     except ApiException as e:

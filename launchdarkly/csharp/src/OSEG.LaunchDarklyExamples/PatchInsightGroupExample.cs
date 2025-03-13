@@ -29,7 +29,7 @@ public class PatchInsightGroupExample
         try
         {
             var response = new InsightsScoresBetaApi(config).PatchInsightGroup(
-                insightGroupKey: null,
+                insightGroupKey: "insightGroupKey_string",
                 patchOperation: patchOperation
             );
 

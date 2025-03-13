@@ -24,7 +24,7 @@ public class GetProjectExample
         try
         {
             var response = new ProjectsApi(config).getProject(
-                null, // projectKey
+                "projectKey_string", // projectKey
                 null // expand
             );
 

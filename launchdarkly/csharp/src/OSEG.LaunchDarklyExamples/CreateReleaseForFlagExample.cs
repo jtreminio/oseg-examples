@@ -17,15 +17,14 @@ public class CreateReleaseForFlagExample
         config.ApiKey.Add("Authorization", "YOUR_API_KEY");
 
         var createReleaseInput = new CreateReleaseInput(
-            releasePipelineKey: null,
-            releaseVariationId: null
+            releasePipelineKey: "releasePipelineKey_string"
         );
 
         try
         {
             var response = new ReleasesBetaApi(config).CreateReleaseForFlag(
-                projectKey: null,
-                flagKey: null,
+                projectKey: "projectKey_string",
+                flagKey: "flagKey_string",
                 createReleaseInput: createReleaseInput
             );
 

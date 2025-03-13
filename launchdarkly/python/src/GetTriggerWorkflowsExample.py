@@ -11,9 +11,9 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.FlagTriggersApi(api_client).get_trigger_workflows(
-            project_key=None,
-            environment_key=None,
-            feature_flag_key=None,
+            project_key="projectKey_string",
+            environment_key="environmentKey_string",
+            feature_flag_key="featureFlagKey_string",
         )
 
         pprint(response)

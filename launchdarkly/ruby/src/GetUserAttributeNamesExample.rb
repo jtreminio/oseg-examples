@@ -7,8 +7,8 @@ end
 
 begin
     response = LaunchDarklyClient::UsersBetaApi.new.get_user_attribute_names(
-        nil, # project_key
-        nil, # environment_key
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
     )
 
     p response

@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.IntegrationsBetaApi(api_client).get_all_integration_configurations(
-            integration_key=None,
+            integration_key="integrationKey_string",
         )
 
         pprint(response)

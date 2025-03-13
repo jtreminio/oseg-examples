@@ -22,7 +22,7 @@ class DeleteRepositoryExample
         try
         {
             CodeReferencesApi().deleteRepository(
-                repo = null,
+                repo = "repo_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling CodeReferencesApi#deleteRepository")

@@ -46,7 +46,7 @@ class PutFlagDefaultsByProjectExample
         try
         {
             val response = ProjectsApi().putFlagDefaultsByProject(
-                projectKey = null,
+                projectKey = "projectKey_string",
                 upsertFlagDefaultsPayload = upsertFlagDefaultsPayload,
             )
 

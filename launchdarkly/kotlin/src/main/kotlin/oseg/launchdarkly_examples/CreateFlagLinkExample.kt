@@ -29,8 +29,8 @@ class CreateFlagLinkExample
         try
         {
             val response = FlagLinksBetaApi().createFlagLink(
-                projectKey = null,
-                featureFlagKey = null,
+                projectKey = "projectKey_string",
+                featureFlagKey = "featureFlagKey_string",
                 flagLinkPost = flagLinkPost,
             )
 

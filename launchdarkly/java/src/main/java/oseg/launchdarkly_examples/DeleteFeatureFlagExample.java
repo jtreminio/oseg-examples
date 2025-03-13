@@ -24,8 +24,8 @@ public class DeleteFeatureFlagExample
         try
         {
             new FeatureFlagsApi(config).deleteFeatureFlag(
-                null, // projectKey
-                null // featureFlagKey
+                "projectKey_string", // projectKey
+                "featureFlagKey_string" // featureFlagKey
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling FeatureFlagsApi#deleteFeatureFlag");

@@ -24,10 +24,10 @@ public class PostApprovalRequestReviewForFlagExample
         try
         {
             var response = new ApprovalsApi(config).PostApprovalRequestReviewForFlag(
-                projectKey: null,
-                featureFlagKey: null,
-                environmentKey: null,
-                id: null,
+                projectKey: "projectKey_string",
+                featureFlagKey: "featureFlagKey_string",
+                environmentKey: "environmentKey_string",
+                id: "id_string",
                 postApprovalRequestReviewRequest: postApprovalRequestReviewRequest
             );
 

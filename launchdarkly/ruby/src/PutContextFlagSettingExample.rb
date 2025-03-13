@@ -10,11 +10,11 @@ value_put.comment = "make sure this context experiences a specific variation"
 
 begin
     LaunchDarklyClient::ContextSettingsApi.new.put_context_flag_setting(
-        nil, # project_key
-        nil, # environment_key
-        nil, # context_kind
-        nil, # context_key
-        nil, # feature_flag_key
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
+        "contextKind_string", # context_kind
+        "contextKey_string", # context_key
+        "featureFlagKey_string", # feature_flag_key
         value_put,
     )
 rescue LaunchDarklyClient::ApiError => e

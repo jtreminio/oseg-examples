@@ -15,7 +15,7 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.ApprovalsApi(api_client).post_approval_request_apply(
-            id=None,
+            id="id_string",
             post_approval_request_apply_request=post_approval_request_apply_request,
         )
 

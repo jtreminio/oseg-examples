@@ -19,10 +19,10 @@ public class GetTriggerWorkflowByIdExample
         try
         {
             var response = new FlagTriggersApi(config).GetTriggerWorkflowById(
-                projectKey: null,
-                featureFlagKey: null,
-                environmentKey: null,
-                id: null
+                projectKey: "projectKey_string",
+                featureFlagKey: "featureFlagKey_string",
+                environmentKey: "environmentKey_string",
+                id: "id_string"
             );
 
             Console.WriteLine(response);

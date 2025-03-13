@@ -22,8 +22,8 @@ $segment_body = (new LaunchDarkly\Client\Model\SegmentBody())
 
 try {
     $response = (new LaunchDarkly\Client\Api\SegmentsApi(config: $config))->postSegment(
-        project_key: null,
-        environment_key: null,
+        project_key: "projectKey_string",
+        environment_key: "environmentKey_string",
         segment_body: $segment_body,
     );
 

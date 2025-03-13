@@ -24,9 +24,9 @@ public class GetContextInstancesExample
         try
         {
             var response = new ContextsApi(config).getContextInstances(
-                null, // projectKey
-                null, // environmentKey
-                null, // id
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "id_string", // id
                 null, // limit
                 null, // continuationToken
                 null, // sort

@@ -37,9 +37,9 @@ public class CreateBigSegmentStoreIntegrationExample
         try
         {
             var response = new PersistentStoreIntegrationsBetaApi(config).createBigSegmentStoreIntegration(
-                null, // projectKey
-                null, // environmentKey
-                null, // integrationKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "integrationKey_string", // integrationKey
                 integrationDeliveryConfigurationPost
             );
 

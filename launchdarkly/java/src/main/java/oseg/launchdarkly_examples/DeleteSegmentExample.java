@@ -24,9 +24,9 @@ public class DeleteSegmentExample
         try
         {
             new SegmentsApi(config).deleteSegment(
-                null, // projectKey
-                null, // environmentKey
-                null // segmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "segmentKey_string" // segmentKey
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling SegmentsApi#deleteSegment");

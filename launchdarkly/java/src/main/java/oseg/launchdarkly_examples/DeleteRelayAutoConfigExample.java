@@ -24,7 +24,7 @@ public class DeleteRelayAutoConfigExample
         try
         {
             new RelayProxyConfigurationsApi(config).deleteRelayAutoConfig(
-                null // id
+                "id_string" // id
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling RelayProxyConfigurationsApi#deleteRelayAutoConfig");

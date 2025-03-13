@@ -6,7 +6,7 @@ const apiCaller = new api.ReleasePipelinesBetaApi();
 apiCaller.setApiKey(api.ReleasePipelinesBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getAllReleasePipelines(
-  undefined, // projectKey
+  "projectKey_string", // projectKey
   undefined, // filter
   undefined, // limit
   undefined, // offset

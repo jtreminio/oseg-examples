@@ -20,10 +20,10 @@ $patch_operation = [
 
 try {
     $response = (new LaunchDarkly\Client\Api\IntegrationDeliveryConfigurationsBetaApi(config: $config))->patchIntegrationDeliveryConfiguration(
-        project_key: null,
-        environment_key: null,
-        integration_key: null,
-        id: null,
+        project_key: "projectKey_string",
+        environment_key: "environmentKey_string",
+        integration_key: "integrationKey_string",
+        id: "id_string",
         patch_operation: $patch_operation,
     );
 

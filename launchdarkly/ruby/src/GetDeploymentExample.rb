@@ -7,7 +7,7 @@ end
 
 begin
     response = LaunchDarklyClient::InsightsDeploymentsBetaApi.new.get_deployment(
-        nil, # deployment_id
+        "deploymentID_string", # deployment_id
     )
 
     p response

@@ -11,8 +11,8 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.SegmentsApi(api_client).get_context_instance_segments_membership_by_env(
-            project_key=None,
-            environment_key=None,
+            project_key="projectKey_string",
+            environment_key="environmentKey_string",
             request_body=json.loads("""
                 {
                     "address": {

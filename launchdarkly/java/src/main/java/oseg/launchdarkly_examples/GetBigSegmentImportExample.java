@@ -24,10 +24,10 @@ public class GetBigSegmentImportExample
         try
         {
             var response = new SegmentsApi(config).getBigSegmentImport(
-                null, // projectKey
-                null, // environmentKey
-                null, // segmentKey
-                null // importID
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "segmentKey_string", // segmentKey
+                "importID_string" // importID
             );
 
             System.out.println(response);

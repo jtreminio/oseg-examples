@@ -7,10 +7,10 @@ end
 
 begin
     response = LaunchDarklyClient::ContextsApi.new.get_contexts(
-        nil, # project_key
-        nil, # environment_key
-        nil, # kind
-        nil, # key
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
+        "kind_string", # kind
+        "key_string", # key
     )
 
     p response

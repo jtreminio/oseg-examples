@@ -23,7 +23,12 @@ public class GetDataExportEventsUsageExample
 
         try
         {
-            var response = new AccountUsageBetaApi(config).getDataExportEventsUsage();
+            var response = new AccountUsageBetaApi(config).getDataExportEventsUsage(
+                null, // from
+                null, // to
+                null, // projectKey
+                null // environmentKey
+            );
 
             System.out.println(response);
         } catch (ApiException e) {

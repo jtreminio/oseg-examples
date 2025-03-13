@@ -23,7 +23,7 @@ public class PostApprovalRequestApplyExample
         try
         {
             var response = new ApprovalsApi(config).PostApprovalRequestApply(
-                id: null,
+                id: "id_string",
                 postApprovalRequestApplyRequest: postApprovalRequestApplyRequest
             );
 

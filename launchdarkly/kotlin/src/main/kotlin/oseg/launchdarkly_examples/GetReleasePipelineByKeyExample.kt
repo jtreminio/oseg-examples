@@ -22,8 +22,8 @@ class GetReleasePipelineByKeyExample
         try
         {
             val response = ReleasePipelinesBetaApi().getReleasePipelineByKey(
-                projectKey = null,
-                pipelineKey = null,
+                projectKey = "projectKey_string",
+                pipelineKey = "pipelineKey_string",
             )
 
             println(response)

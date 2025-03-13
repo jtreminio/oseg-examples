@@ -22,7 +22,7 @@ class GetOAuthClientByIdExample
         try
         {
             val response = OAuth2ClientsApi().getOAuthClientById(
-                clientId = null,
+                clientId = "clientId_string",
             )
 
             println(response)

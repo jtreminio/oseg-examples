@@ -6,7 +6,7 @@ const apiCaller = new api.OAuth2ClientsApi();
 apiCaller.setApiKey(api.OAuth2ClientsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.deleteOAuthClient(
-  undefined, // clientId
+  "clientId_string", // clientId
 ).catch(error => {
   console.log("Exception when calling OAuth2ClientsApi#deleteOAuthClient:");
   console.log(error.body);

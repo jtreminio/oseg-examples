@@ -22,7 +22,7 @@ class GetEnvironmentsByProjectExample
         try
         {
             val response = EnvironmentsApi().getEnvironmentsByProject(
-                projectKey = null,
+                projectKey = "projectKey_string",
                 limit = null,
                 offset = null,
                 filter = null,

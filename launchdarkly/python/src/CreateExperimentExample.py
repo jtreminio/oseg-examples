@@ -41,7 +41,7 @@ with ApiClient(configuration) as api_client:
 
     iteration = models.IterationInput(
         hypothesis="Example hypothesis, the new button placement will increase conversion",
-        flags=None,
+        flags={},
         canReshuffleTraffic=True,
         primarySingleMetricKey="metric-key-123abc",
         primaryFunnelKey="metric-group-key-123abc",
@@ -66,8 +66,8 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.ExperimentsApi(api_client).create_experiment(
-            project_key=None,
-            environment_key=None,
+            project_key="projectKey_string",
+            environment_key="environmentKey_string",
             experiment_post=experiment_post,
         )
 

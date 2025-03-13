@@ -19,10 +19,10 @@ public class DeleteBigSegmentStoreIntegrationExample
         try
         {
             new PersistentStoreIntegrationsBetaApi(config).DeleteBigSegmentStoreIntegration(
-                projectKey: null,
-                environmentKey: null,
-                integrationKey: null,
-                integrationId: null
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                integrationKey: "integrationKey_string",
+                integrationId: "integrationId_string"
             );
         }
         catch (ApiException e)

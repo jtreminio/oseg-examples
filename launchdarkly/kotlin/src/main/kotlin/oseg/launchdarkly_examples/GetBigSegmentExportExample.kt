@@ -22,10 +22,10 @@ class GetBigSegmentExportExample
         try
         {
             val response = SegmentsApi().getBigSegmentExport(
-                projectKey = null,
-                environmentKey = null,
-                segmentKey = null,
-                exportID = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                segmentKey = "segmentKey_string",
+                exportID = "exportID_string",
             )
 
             println(response)

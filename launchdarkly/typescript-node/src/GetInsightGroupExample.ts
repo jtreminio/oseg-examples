@@ -6,7 +6,7 @@ const apiCaller = new api.InsightsScoresBetaApi();
 apiCaller.setApiKey(api.InsightsScoresBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getInsightGroup(
-  undefined, // insightGroupKey
+  "insightGroupKey_string", // insightGroupKey
   undefined, // expand
 ).then(response => {
   console.log(response.body);

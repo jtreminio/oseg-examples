@@ -13,8 +13,8 @@ flag_link_post.description = "Example link description"
 
 begin
     response = LaunchDarklyClient::FlagLinksBetaApi.new.create_flag_link(
-        nil, # project_key
-        nil, # feature_flag_key
+        "projectKey_string", # project_key
+        "featureFlagKey_string", # feature_flag_key
         flag_link_post,
     )
 

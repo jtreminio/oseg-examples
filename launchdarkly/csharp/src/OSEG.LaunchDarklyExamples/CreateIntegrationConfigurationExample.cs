@@ -69,7 +69,7 @@ public class CreateIntegrationConfigurationExample
         try
         {
             var response = new IntegrationsBetaApi(config).CreateIntegrationConfiguration(
-                integrationKey: null,
+                integrationKey: "integrationKey_string",
                 integrationConfigurationPost: integrationConfigurationPost
             );
 

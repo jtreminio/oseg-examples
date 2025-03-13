@@ -22,8 +22,8 @@ class GetMetricGroupExample
         try
         {
             val response = MetricsBetaApi().getMetricGroup(
-                projectKey = null,
-                metricGroupKey = null,
+                projectKey = "projectKey_string",
+                metricGroupKey = "metricGroupKey_string",
                 expand = null,
             )
 

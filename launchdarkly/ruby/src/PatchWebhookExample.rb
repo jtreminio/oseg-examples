@@ -15,7 +15,7 @@ patch_operation = [
 
 begin
     response = LaunchDarklyClient::WebhooksApi.new.patch_webhook(
-        nil, # id
+        "id_string", # id
         patch_operation,
     )
 

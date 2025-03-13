@@ -6,7 +6,7 @@ const apiCaller = new api.ExperimentsApi();
 apiCaller.setApiKey(api.ExperimentsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getExperimentationSettings(
-  undefined, // projectKey
+  "projectKey_string", // projectKey
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

@@ -34,10 +34,10 @@ public class PatchTriggerWorkflowExample
         try
         {
             var response = new FlagTriggersApi(config).patchTriggerWorkflow(
-                null, // projectKey
-                null, // environmentKey
-                null, // featureFlagKey
-                null, // id
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "featureFlagKey_string", // featureFlagKey
+                "id_string", // id
                 flagTriggerInput
             );
 

@@ -24,7 +24,7 @@ public class DeleteProjectExample
         try
         {
             new ProjectsApi(config).deleteProject(
-                null // projectKey
+                "projectKey_string" // projectKey
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling ProjectsApi#deleteProject");

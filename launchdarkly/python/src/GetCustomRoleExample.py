@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.CustomRolesApi(api_client).get_custom_role(
-            custom_role_key=None,
+            custom_role_key="customRoleKey_string",
         )
 
         pprint(response)

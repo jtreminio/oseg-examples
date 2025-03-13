@@ -22,7 +22,7 @@ class DeleteApplicationExample
         try
         {
             ApplicationsBetaApi().deleteApplication(
-                applicationKey = null,
+                applicationKey = "applicationKey_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling ApplicationsBetaApi#deleteApplication")

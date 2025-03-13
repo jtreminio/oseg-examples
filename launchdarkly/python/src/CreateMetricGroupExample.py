@@ -32,7 +32,7 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.MetricsBetaApi(api_client).create_metric_group(
-            project_key=None,
+            project_key="projectKey_string",
             metric_group_post=metric_group_post,
         )
 

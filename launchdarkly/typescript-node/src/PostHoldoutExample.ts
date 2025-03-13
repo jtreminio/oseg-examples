@@ -22,7 +22,6 @@ holdoutPostRequest.randomizationunit = "user";
 holdoutPostRequest.holdoutamount = "10";
 holdoutPostRequest.primarymetrickey = "metric-key-123abc";
 holdoutPostRequest.prerequisiteflagkey = "flag-key-123abc";
-holdoutPostRequest.maintainerId = undefined;
 holdoutPostRequest.attributes = [
   "country",
   "device",
@@ -31,8 +30,8 @@ holdoutPostRequest.attributes = [
 holdoutPostRequest.metrics = metrics;
 
 apiCaller.postHoldout(
-  undefined, // projectKey
-  undefined, // environmentKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
   holdoutPostRequest,
 ).then(response => {
   console.log(response.body);

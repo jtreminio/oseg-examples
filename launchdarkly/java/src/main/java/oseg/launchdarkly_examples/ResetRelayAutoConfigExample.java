@@ -24,7 +24,7 @@ public class ResetRelayAutoConfigExample
         try
         {
             var response = new RelayProxyConfigurationsApi(config).resetRelayAutoConfig(
-                null, // id
+                "id_string", // id
                 null // expiry
             );
 

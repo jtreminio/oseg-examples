@@ -6,8 +6,8 @@ const apiCaller = new api.InsightsDeploymentsBetaApi();
 apiCaller.setApiKey(api.InsightsDeploymentsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getDeployments(
-  undefined, // projectKey
-  undefined, // environmentKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
   undefined, // applicationKey
   undefined, // limit
   undefined, // expand

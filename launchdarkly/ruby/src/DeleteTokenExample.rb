@@ -7,7 +7,7 @@ end
 
 begin
     LaunchDarklyClient::AccessTokensApi.new.delete_token(
-        nil, # id
+        "id_string", # id
     )
 rescue LaunchDarklyClient::ApiError => e
     puts "Exception when calling AccessTokensApi#delete_token: #{e}"

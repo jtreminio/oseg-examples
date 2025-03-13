@@ -6,7 +6,7 @@ const apiCaller = new api.MetricsApi();
 apiCaller.setApiKey(api.MetricsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getMetrics(
-  undefined, // projectKey
+  "projectKey_string", // projectKey
   undefined, // expand
   undefined, // limit
   undefined, // offset

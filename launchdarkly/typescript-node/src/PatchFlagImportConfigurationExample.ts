@@ -14,9 +14,9 @@ const patchOperation = [
 ];
 
 apiCaller.patchFlagImportConfiguration(
-  undefined, // projectKey
-  undefined, // integrationKey
-  undefined, // integrationId
+  "projectKey_string", // projectKey
+  "integrationKey_string", // integrationKey
+  "integrationId_string", // integrationId
   patchOperation,
 ).then(response => {
   console.log(response.body);

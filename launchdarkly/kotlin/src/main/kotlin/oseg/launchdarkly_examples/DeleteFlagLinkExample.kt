@@ -22,9 +22,9 @@ class DeleteFlagLinkExample
         try
         {
             FlagLinksBetaApi().deleteFlagLink(
-                projectKey = null,
-                featureFlagKey = null,
-                id = null,
+                projectKey = "projectKey_string",
+                featureFlagKey = "featureFlagKey_string",
+                id = "id_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling FlagLinksBetaApi#deleteFlagLink")

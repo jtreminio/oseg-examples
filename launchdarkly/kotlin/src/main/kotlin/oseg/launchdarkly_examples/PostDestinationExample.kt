@@ -26,8 +26,8 @@ class PostDestinationExample
         try
         {
             val response = DataExportDestinationsApi().postDestination(
-                projectKey = null,
-                environmentKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
                 destinationPost = destinationPost,
             )
 

@@ -23,8 +23,8 @@ public class PostDestinationExample
         try
         {
             var response = new DataExportDestinationsApi(config).PostDestination(
-                projectKey: null,
-                environmentKey: null,
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
                 destinationPost: destinationPost
             );
 

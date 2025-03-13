@@ -25,8 +25,8 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.LayersApi(api_client).update_layer(
-            project_key=None,
-            layer_key=None,
+            project_key="projectKey_string",
+            layer_key="layerKey_string",
             layer_patch_input=layer_patch_input,
         )
 

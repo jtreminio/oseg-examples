@@ -13,7 +13,7 @@ member_teams_post_input.team_keys = [
 
 begin
     response = LaunchDarklyClient::AccountMembersApi.new.post_member_teams(
-        nil, # id
+        "id_string", # id
         member_teams_post_input,
     )
 

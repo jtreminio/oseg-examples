@@ -32,7 +32,7 @@ public class UpdateIntegrationConfigurationExample
         try
         {
             var response = new IntegrationsBetaApi(config).updateIntegrationConfiguration(
-                null, // integrationConfigurationId
+                "integrationConfigurationId_string", // integrationConfigurationId
                 patchOperation
             );
 

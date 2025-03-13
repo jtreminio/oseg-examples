@@ -19,8 +19,8 @@ public class GetReleasePipelineByKeyExample
         try
         {
             var response = new ReleasePipelinesBetaApi(config).GetReleasePipelineByKey(
-                projectKey: null,
-                pipelineKey: null
+                projectKey: "projectKey_string",
+                pipelineKey: "pipelineKey_string"
             );
 
             Console.WriteLine(response);

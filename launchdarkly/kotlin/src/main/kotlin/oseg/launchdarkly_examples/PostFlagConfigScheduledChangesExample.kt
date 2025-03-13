@@ -34,9 +34,9 @@ class PostFlagConfigScheduledChangesExample
         try
         {
             val response = ScheduledChangesApi().postFlagConfigScheduledChanges(
-                projectKey = null,
-                featureFlagKey = null,
-                environmentKey = null,
+                projectKey = "projectKey_string",
+                featureFlagKey = "featureFlagKey_string",
+                environmentKey = "environmentKey_string",
                 postFlagScheduledChangesInput = postFlagScheduledChangesInput,
                 ignoreConflicts = null,
             )

@@ -24,7 +24,7 @@ public class DeleteBranchesExample
         try
         {
             new CodeReferencesApi(config).deleteBranches(
-                null, // repo
+                "repo_string", // repo
                 List.of (
                     "branch-to-be-deleted",
                     "another-branch-to-be-deleted"

@@ -12,8 +12,8 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     $response = (new LaunchDarkly\Client\Api\IntegrationAuditLogSubscriptionsApi(config: $config))->getSubscriptionByID(
-        integration_key: null,
-        id: null,
+        integration_key: "integrationKey_string",
+        id: "id_string",
     );
 
     print_r($response);

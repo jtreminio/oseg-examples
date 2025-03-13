@@ -7,7 +7,7 @@ end
 
 begin
     response = LaunchDarklyClient::EnvironmentsApi.new.get_environments_by_project(
-        nil, # project_key
+        "projectKey_string", # project_key
     )
 
     p response

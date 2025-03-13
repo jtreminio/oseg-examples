@@ -24,10 +24,10 @@ public class DeleteIntegrationDeliveryConfigurationExample
         try
         {
             new IntegrationDeliveryConfigurationsBetaApi(config).deleteIntegrationDeliveryConfiguration(
-                null, // projectKey
-                null, // environmentKey
-                null, // integrationKey
-                null // id
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "integrationKey_string", // integrationKey
+                "id_string" // id
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling IntegrationDeliveryConfigurationsBetaApi#deleteIntegrationDeliveryConfiguration");

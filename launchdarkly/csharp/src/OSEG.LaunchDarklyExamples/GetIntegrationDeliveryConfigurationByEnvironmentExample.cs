@@ -19,8 +19,8 @@ public class GetIntegrationDeliveryConfigurationByEnvironmentExample
         try
         {
             var response = new IntegrationDeliveryConfigurationsBetaApi(config).GetIntegrationDeliveryConfigurationByEnvironment(
-                projectKey: null,
-                environmentKey: null
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string"
             );
 
             Console.WriteLine(response);

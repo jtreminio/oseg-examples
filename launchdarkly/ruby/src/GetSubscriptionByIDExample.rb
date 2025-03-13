@@ -7,8 +7,8 @@ end
 
 begin
     response = LaunchDarklyClient::IntegrationAuditLogSubscriptionsApi.new.get_subscription_by_id(
-        nil, # integration_key
-        nil, # id
+        "integrationKey_string", # integration_key
+        "id_string", # id
     )
 
     p response

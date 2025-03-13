@@ -26,10 +26,10 @@ aIConfigVariationPatch.model = {};
 aIConfigVariationPatch.messages = messages;
 
 apiCaller.patchAIConfigVariation(
-  undefined, // lDAPIVersion
-  undefined, // projectKey
-  undefined, // configKey
-  undefined, // variationKey
+  models.AIConfigVariationPatch.LDAPIVersionEnum.Beta, // lDAPIVersion
+  "projectKey_string", // projectKey
+  "configKey_string", // configKey
+  "variationKey_string", // variationKey
   aIConfigVariationPatch,
 ).then(response => {
   console.log(response.body);

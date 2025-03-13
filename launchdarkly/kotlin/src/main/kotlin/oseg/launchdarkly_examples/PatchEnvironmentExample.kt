@@ -31,8 +31,8 @@ class PatchEnvironmentExample
         try
         {
             val response = EnvironmentsApi().patchEnvironment(
-                projectKey = null,
-                environmentKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
                 patchOperation = patchOperation,
             )
 

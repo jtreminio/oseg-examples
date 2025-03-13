@@ -23,9 +23,9 @@ patch_segment_expiring_target_input_rep.instructions = instructions
 
 begin
     response = LaunchDarklyClient::SegmentsApi.new.patch_expiring_targets_for_segment(
-        nil, # project_key
-        nil, # environment_key
-        nil, # segment_key
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
+        "segmentKey_string", # segment_key
         patch_segment_expiring_target_input_rep,
     )
 

@@ -19,7 +19,7 @@ public class GetTokenExample
         try
         {
             var response = new AccessTokensApi(config).GetToken(
-                id: null
+                id: "id_string"
             );
 
             Console.WriteLine(response);

@@ -7,8 +7,8 @@ end
 
 begin
     response = LaunchDarklyClient::FollowFlagsApi.new.get_followers_by_proj_env(
-        nil, # project_key
-        nil, # environment_key
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
     )
 
     p response

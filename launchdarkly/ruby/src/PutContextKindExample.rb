@@ -14,8 +14,8 @@ upsert_context_kind_payload.version = 1
 
 begin
     response = LaunchDarklyClient::ContextsApi.new.put_context_kind(
-        nil, # project_key
-        nil, # key
+        "projectKey_string", # project_key
+        "key_string", # key
         upsert_context_kind_payload,
     )
 

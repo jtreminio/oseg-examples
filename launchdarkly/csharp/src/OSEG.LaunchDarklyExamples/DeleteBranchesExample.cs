@@ -19,7 +19,7 @@ public class DeleteBranchesExample
         try
         {
             new CodeReferencesApi(config).DeleteBranches(
-                repo: null,
+                repo: "repo_string",
                 requestBody: [
                     "branch-to-be-deleted",
                     "another-branch-to-be-deleted",

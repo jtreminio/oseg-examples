@@ -24,7 +24,7 @@ public class GetFlagDefaultsByProjectExample
         try
         {
             var response = new ProjectsApi(config).getFlagDefaultsByProject(
-                null // projectKey
+                "projectKey_string" // projectKey
             );
 
             System.out.println(response);

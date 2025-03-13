@@ -11,10 +11,10 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.ContextsApi(api_client).get_contexts(
-            project_key=None,
-            environment_key=None,
-            kind=None,
-            key=None,
+            project_key="projectKey_string",
+            environment_key="environmentKey_string",
+            kind="kind_string",
+            key="key_string",
             limit=None,
             continuation_token=None,
             sort=None,

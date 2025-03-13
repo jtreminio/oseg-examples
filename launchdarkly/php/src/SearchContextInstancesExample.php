@@ -18,8 +18,8 @@ $context_instance_search = (new LaunchDarkly\Client\Model\ContextInstanceSearch(
 
 try {
     $response = (new LaunchDarkly\Client\Api\ContextsApi(config: $config))->searchContextInstances(
-        project_key: null,
-        environment_key: null,
+        project_key: "projectKey_string",
+        environment_key: "environmentKey_string",
         context_instance_search: $context_instance_search,
         limit: null,
         continuation_token: null,

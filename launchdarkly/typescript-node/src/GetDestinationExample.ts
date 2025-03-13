@@ -6,9 +6,9 @@ const apiCaller = new api.DataExportDestinationsApi();
 apiCaller.setApiKey(api.DataExportDestinationsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getDestination(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // id
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "id_string", // id
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

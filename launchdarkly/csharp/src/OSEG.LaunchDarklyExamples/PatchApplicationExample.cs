@@ -29,7 +29,7 @@ public class PatchApplicationExample
         try
         {
             var response = new ApplicationsBetaApi(config).PatchApplication(
-                applicationKey: null,
+                applicationKey: "applicationKey_string",
                 patchOperation: patchOperation
             );
 

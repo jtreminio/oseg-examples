@@ -6,9 +6,9 @@ const apiCaller = new api.AIConfigsBetaApi();
 apiCaller.setApiKey(api.AIConfigsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getAIConfig(
-  undefined, // lDAPIVersion
-  undefined, // projectKey
-  undefined, // configKey
+  "beta", // lDAPIVersion
+  "projectKey_string", // projectKey
+  "configKey_string", // configKey
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

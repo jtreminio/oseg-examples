@@ -24,9 +24,9 @@ public class CreateBigSegmentExportExample
         try
         {
             new SegmentsApi(config).createBigSegmentExport(
-                null, // projectKey
-                null, // environmentKey
-                null // segmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "segmentKey_string" // segmentKey
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling SegmentsApi#createBigSegmentExport");

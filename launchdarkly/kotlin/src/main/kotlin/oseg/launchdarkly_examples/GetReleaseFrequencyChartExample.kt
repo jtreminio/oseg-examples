@@ -22,14 +22,14 @@ class GetReleaseFrequencyChartExample
         try
         {
             val response = InsightsChartsBetaApi().getReleaseFrequencyChart(
-                projectKey = null,
-                environmentKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
                 applicationKey = null,
                 hasExperiments = null,
                 global = null,
                 groupBy = null,
-                from = OffsetDateTime.parse("None"),
-                to = OffsetDateTime.parse("None"),
+                from = null,
+                to = null,
                 bucketType = null,
                 bucketMs = null,
                 expand = null,

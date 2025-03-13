@@ -19,7 +19,7 @@ public class DeleteWorkflowTemplateExample
         try
         {
             new WorkflowTemplatesApi(config).DeleteWorkflowTemplate(
-                templateKey: null
+                templateKey: "templateKey_string"
             );
         }
         catch (ApiException e)

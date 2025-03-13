@@ -6,9 +6,9 @@ const apiCaller = new api.HoldoutsBetaApi();
 apiCaller.setApiKey(api.HoldoutsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getHoldout(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // holdoutKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "holdoutKey_string", // holdoutKey
   undefined, // expand
 ).then(response => {
   console.log(response.body);

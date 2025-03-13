@@ -24,8 +24,8 @@ public class GetExperimentsExample
         try
         {
             var response = new ExperimentsApi(config).getExperiments(
-                null, // projectKey
-                null, // environmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
                 null, // limit
                 null, // offset
                 null, // filter

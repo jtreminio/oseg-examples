@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.TeamsApi(api_client).delete_team(
-            team_key=None,
+            team_key="teamKey_string",
         )
     except ApiException as e:
         print("Exception when calling TeamsApi#delete_team: %s\n" % e)

@@ -6,8 +6,8 @@ const apiCaller = new api.MetricsBetaApi();
 apiCaller.setApiKey(api.MetricsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getMetricGroup(
-  undefined, // projectKey
-  undefined, // metricGroupKey
+  "projectKey_string", // projectKey
+  "metricGroupKey_string", // metricGroupKey
   undefined, // expand
 ).then(response => {
   console.log(response.body);

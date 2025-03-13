@@ -6,7 +6,7 @@ const apiCaller = new api.TeamsApi();
 apiCaller.setApiKey(api.TeamsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getTeam(
-  undefined, // teamKey
+  "teamKey_string", // teamKey
   undefined, // expand
 ).then(response => {
   console.log(response.body);

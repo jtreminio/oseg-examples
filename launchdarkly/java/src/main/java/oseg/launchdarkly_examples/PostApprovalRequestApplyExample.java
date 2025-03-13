@@ -27,7 +27,7 @@ public class PostApprovalRequestApplyExample
         try
         {
             var response = new ApprovalsApi(config).postApprovalRequestApply(
-                null, // id
+                "id_string", // id
                 postApprovalRequestApplyRequest
             );
 

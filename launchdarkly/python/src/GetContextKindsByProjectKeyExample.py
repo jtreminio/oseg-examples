@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.ContextsApi(api_client).get_context_kinds_by_project_key(
-            project_key=None,
+            project_key="projectKey_string",
         )
 
         pprint(response)

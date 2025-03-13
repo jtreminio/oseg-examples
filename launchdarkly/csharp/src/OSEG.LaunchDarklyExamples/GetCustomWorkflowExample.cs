@@ -19,10 +19,10 @@ public class GetCustomWorkflowExample
         try
         {
             var response = new WorkflowsApi(config).GetCustomWorkflow(
-                projectKey: null,
-                featureFlagKey: null,
-                environmentKey: null,
-                workflowId: null
+                projectKey: "projectKey_string",
+                featureFlagKey: "featureFlagKey_string",
+                environmentKey: "environmentKey_string",
+                workflowId: "workflowId_string"
             );
 
             Console.WriteLine(response);

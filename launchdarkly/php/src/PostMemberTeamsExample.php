@@ -18,7 +18,7 @@ $member_teams_post_input = (new LaunchDarkly\Client\Model\MemberTeamsPostInput()
 
 try {
     $response = (new LaunchDarkly\Client\Api\AccountMembersApi(config: $config))->postMemberTeams(
-        id: null,
+        id: "id_string",
         member_teams_post_input: $member_teams_post_input,
     );
 

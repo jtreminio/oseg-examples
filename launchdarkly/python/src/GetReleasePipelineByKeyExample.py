@@ -11,8 +11,8 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.ReleasePipelinesBetaApi(api_client).get_release_pipeline_by_key(
-            project_key=None,
-            pipeline_key=None,
+            project_key="projectKey_string",
+            pipeline_key="pipelineKey_string",
         )
 
         pprint(response)

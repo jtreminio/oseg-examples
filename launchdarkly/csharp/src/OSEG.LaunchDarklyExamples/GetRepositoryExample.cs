@@ -19,7 +19,7 @@ public class GetRepositoryExample
         try
         {
             var response = new CodeReferencesApi(config).GetRepository(
-                repo: null
+                repo: "repo_string"
             );
 
             Console.WriteLine(response);

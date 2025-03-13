@@ -24,10 +24,10 @@ public class PutFlagFollowerExample
         try
         {
             new FollowFlagsApi(config).putFlagFollower(
-                null, // projectKey
-                null, // featureFlagKey
-                null, // environmentKey
-                null // memberId
+                "projectKey_string", // projectKey
+                "featureFlagKey_string", // featureFlagKey
+                "environmentKey_string", // environmentKey
+                "memberId_string" // memberId
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling FollowFlagsApi#putFlagFollower");

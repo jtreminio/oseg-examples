@@ -6,8 +6,8 @@ const apiCaller = new api.EnvironmentsApi();
 apiCaller.setApiKey(api.EnvironmentsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.deleteEnvironment(
-  undefined, // projectKey
-  undefined, // environmentKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
 ).catch(error => {
   console.log("Exception when calling EnvironmentsApi#deleteEnvironment:");
   console.log(error.body);

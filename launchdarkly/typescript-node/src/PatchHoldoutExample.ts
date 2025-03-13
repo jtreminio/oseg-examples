@@ -15,9 +15,9 @@ holdoutPatchInput.instructions = [
 holdoutPatchInput.comment = "Optional comment describing the update";
 
 apiCaller.patchHoldout(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // holdoutKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "holdoutKey_string", // holdoutKey
   holdoutPatchInput,
 ).then(response => {
   console.log(response.body);

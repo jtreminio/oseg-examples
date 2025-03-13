@@ -20,8 +20,8 @@ flag_copy_config_post.target = target
 
 begin
     response = LaunchDarklyClient::FeatureFlagsApi.new.copy_feature_flag(
-        nil, # project_key
-        nil, # feature_flag_key
+        "projectKey_string", # project_key
+        "featureFlagKey_string", # feature_flag_key
         flag_copy_config_post,
     )
 

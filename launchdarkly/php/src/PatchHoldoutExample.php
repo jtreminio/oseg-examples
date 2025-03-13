@@ -23,9 +23,9 @@ $holdout_patch_input = (new LaunchDarkly\Client\Model\HoldoutPatchInput())
 
 try {
     $response = (new LaunchDarkly\Client\Api\HoldoutsBetaApi(config: $config))->patchHoldout(
-        project_key: null,
-        environment_key: null,
-        holdout_key: null,
+        project_key: "projectKey_string",
+        environment_key: "environmentKey_string",
+        holdout_key: "holdoutKey_string",
         holdout_patch_input: $holdout_patch_input,
     );
 

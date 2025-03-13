@@ -24,7 +24,7 @@ public class DeleteCustomRoleExample
         try
         {
             new CustomRolesApi(config).deleteCustomRole(
-                null // customRoleKey
+                "customRoleKey_string" // customRoleKey
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling CustomRolesApi#deleteCustomRole");

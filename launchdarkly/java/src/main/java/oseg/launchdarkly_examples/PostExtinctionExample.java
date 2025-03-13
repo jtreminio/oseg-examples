@@ -35,8 +35,8 @@ public class PostExtinctionExample
         try
         {
             new CodeReferencesApi(config).postExtinction(
-                null, // repo
-                null, // branch
+                "repo_string", // repo
+                "branch_string", // branch
                 extinction
             );
         } catch (ApiException e) {

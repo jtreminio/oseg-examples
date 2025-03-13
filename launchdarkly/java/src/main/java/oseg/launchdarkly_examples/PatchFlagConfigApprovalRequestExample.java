@@ -24,10 +24,10 @@ public class PatchFlagConfigApprovalRequestExample
         try
         {
             var response = new ApprovalsBetaApi(config).patchFlagConfigApprovalRequest(
-                null, // projectKey
-                null, // featureFlagKey
-                null, // environmentKey
-                null // id
+                "projectKey_string", // projectKey
+                "featureFlagKey_string", // featureFlagKey
+                "environmentKey_string", // environmentKey
+                "id_string" // id
             );
 
             System.out.println(response);

@@ -11,10 +11,10 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.FlagTriggersApi(api_client).delete_trigger_workflow(
-            project_key=None,
-            environment_key=None,
-            feature_flag_key=None,
-            id=None,
+            project_key="projectKey_string",
+            environment_key="environmentKey_string",
+            feature_flag_key="featureFlagKey_string",
+            id="id_string",
         )
     except ApiException as e:
         print("Exception when calling FlagTriggersApi#delete_trigger_workflow: %s\n" % e)

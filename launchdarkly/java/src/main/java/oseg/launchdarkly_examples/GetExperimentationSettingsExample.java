@@ -24,7 +24,7 @@ public class GetExperimentationSettingsExample
         try
         {
             var response = new ExperimentsApi(config).getExperimentationSettings(
-                null // projectKey
+                "projectKey_string" // projectKey
             );
 
             System.out.println(response);

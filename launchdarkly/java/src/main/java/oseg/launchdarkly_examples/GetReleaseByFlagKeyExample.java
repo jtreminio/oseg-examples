@@ -24,8 +24,8 @@ public class GetReleaseByFlagKeyExample
         try
         {
             var response = new ReleasesBetaApi(config).getReleaseByFlagKey(
-                null, // projectKey
-                null // flagKey
+                "projectKey_string", // projectKey
+                "flagKey_string" // flagKey
             );
 
             System.out.println(response);

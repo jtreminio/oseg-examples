@@ -34,9 +34,9 @@ class PatchExperimentExample
         try
         {
             val response = ExperimentsApi().patchExperiment(
-                projectKey = null,
-                environmentKey = null,
-                experimentKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                experimentKey = "experimentKey_string",
                 experimentPatchInput = experimentPatchInput,
             )
 

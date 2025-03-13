@@ -24,9 +24,9 @@ public class DeleteFlagLinkExample
         try
         {
             new FlagLinksBetaApi(config).deleteFlagLink(
-                null, // projectKey
-                null, // featureFlagKey
-                null // id
+                "projectKey_string", // projectKey
+                "featureFlagKey_string", // featureFlagKey
+                "id_string" // id
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling FlagLinksBetaApi#deleteFlagLink");

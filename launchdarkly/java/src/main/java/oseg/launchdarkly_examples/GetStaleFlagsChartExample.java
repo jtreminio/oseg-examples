@@ -24,8 +24,8 @@ public class GetStaleFlagsChartExample
         try
         {
             var response = new InsightsChartsBetaApi(config).getStaleFlagsChart(
-                null, // projectKey
-                null, // environmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
                 null, // applicationKey
                 null, // groupBy
                 null, // maintainerId

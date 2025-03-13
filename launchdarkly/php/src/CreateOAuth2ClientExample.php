@@ -10,10 +10,7 @@ use LaunchDarkly;
 $config = LaunchDarkly\Client\Configuration::getDefaultConfiguration();
 $config->setApiKey("Authorization", "YOUR_API_KEY");
 
-$oauth_client_post = (new LaunchDarkly\Client\Model\OauthClientPost())
-    ->setName(null)
-    ->setRedirectUri(null)
-    ->setDescription(null);
+$oauth_client_post = (new LaunchDarkly\Client\Model\OauthClientPost());
 
 try {
     $response = (new LaunchDarkly\Client\Api\OAuth2ClientsApi(config: $config))->createOAuth2Client(

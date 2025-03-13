@@ -15,7 +15,7 @@ patch_operation = [
 
 begin
     response = LaunchDarklyClient::CodeReferencesApi.new.patch_repository(
-        nil, # repo
+        "repo_string", # repo
         patch_operation,
     )
 

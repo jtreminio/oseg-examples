@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.AuditLogApi(api_client).get_audit_log_entry(
-            id=None,
+            id="id_string",
         )
 
         pprint(response)

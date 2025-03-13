@@ -12,7 +12,6 @@ audiences_1_release_guardian_configuration.rollback_on_regression = true
 audiences_1_release_guardian_configuration.randomization_unit = "user"
 
 audiences_1 = LaunchDarklyClient::ReleaserAudienceConfigInput.new
-audiences_1.audience_id = nil
 audiences_1.notify_member_ids = [
     "1234a56b7c89d012345e678f",
 ]
@@ -26,14 +25,13 @@ audiences = [
 ]
 
 update_phase_status_input = LaunchDarklyClient::UpdatePhaseStatusInput.new
-update_phase_status_input.status = nil
 update_phase_status_input.audiences = audiences
 
 begin
     response = LaunchDarklyClient::ReleasesBetaApi.new.update_phase_status(
-        nil, # project_key
-        nil, # flag_key
-        nil, # phase_id
+        "projectKey_string", # project_key
+        "flagKey_string", # flag_key
+        "phaseId_string", # phase_id
         update_phase_status_input,
     )
 

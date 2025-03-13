@@ -24,8 +24,8 @@ public class GetSegmentsExample
         try
         {
             var response = new SegmentsApi(config).getSegments(
-                null, // projectKey
-                null, // environmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
                 null, // limit
                 null, // offset
                 null, // sort

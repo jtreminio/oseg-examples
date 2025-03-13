@@ -35,8 +35,8 @@ public class PatchFeatureFlagExample
         try
         {
             var response = new FeatureFlagsApi(config).patchFeatureFlag(
-                null, // projectKey
-                null, // featureFlagKey
+                "projectKey_string", // projectKey
+                "featureFlagKey_string", // featureFlagKey
                 patchWithComment,
                 null // ignoreConflicts
             );

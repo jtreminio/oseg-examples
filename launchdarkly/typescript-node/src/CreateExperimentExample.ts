@@ -34,7 +34,7 @@ const iterationTreatments = [
 
 const iteration = new models.IterationInput();
 iteration.hypothesis = "Example hypothesis, the new button placement will increase conversion";
-iteration.flags = undefined;
+iteration.flags = {};
 iteration.canReshuffleTraffic = true;
 iteration.primarySingleMetricKey = "metric-key-123abc";
 iteration.primaryFunnelKey = "metric-group-key-123abc";
@@ -56,8 +56,8 @@ experimentPost.holdoutId = "f3b74309-d581-44e1-8a2b-bb2933b4fe40";
 experimentPost.iteration = iteration;
 
 apiCaller.createExperiment(
-  undefined, // projectKey
-  undefined, // environmentKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
   experimentPost,
 ).then(response => {
   console.log(response.body);

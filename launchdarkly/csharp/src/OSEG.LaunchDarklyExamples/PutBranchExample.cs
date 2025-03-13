@@ -55,8 +55,8 @@ public class PutBranchExample
         try
         {
             new CodeReferencesApi(config).PutBranch(
-                repo: null,
-                branch: null,
+                repo: "repo_string",
+                branch: "branch_string",
                 putBranch: putBranch
             );
         }

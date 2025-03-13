@@ -7,7 +7,7 @@ end
 
 begin
     response = LaunchDarklyClient::ContextsApi.new.get_context_kinds_by_project_key(
-        nil, # project_key
+        "projectKey_string", # project_key
     )
 
     p response

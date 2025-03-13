@@ -7,7 +7,7 @@ end
 
 begin
     response = LaunchDarklyClient::CustomRolesApi.new.get_custom_role(
-        nil, # custom_role_key
+        "customRoleKey_string", # custom_role_key
     )
 
     p response

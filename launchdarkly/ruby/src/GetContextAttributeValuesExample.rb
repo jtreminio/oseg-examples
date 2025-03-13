@@ -7,9 +7,9 @@ end
 
 begin
     response = LaunchDarklyClient::ContextsApi.new.get_context_attribute_values(
-        nil, # project_key
-        nil, # environment_key
-        nil, # attribute_name
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
+        "attributeName_string", # attribute_name
     )
 
     p response

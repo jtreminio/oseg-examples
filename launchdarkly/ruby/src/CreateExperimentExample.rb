@@ -34,7 +34,7 @@ iteration_treatments = [
 
 iteration = LaunchDarklyClient::IterationInput.new
 iteration.hypothesis = "Example hypothesis, the new button placement will increase conversion"
-iteration.flags = nil
+iteration.flags = {}
 iteration.can_reshuffle_traffic = true
 iteration.primary_single_metric_key = "metric-key-123abc"
 iteration.primary_funnel_key = "metric-group-key-123abc"
@@ -57,8 +57,8 @@ experiment_post.iteration = iteration
 
 begin
     response = LaunchDarklyClient::ExperimentsApi.new.create_experiment(
-        nil, # project_key
-        nil, # environment_key
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
         experiment_post,
     )
 

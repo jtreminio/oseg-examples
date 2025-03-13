@@ -12,7 +12,7 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     $response = (new LaunchDarkly\Client\Api\EnvironmentsApi(config: $config))->getEnvironmentsByProject(
-        project_key: null,
+        project_key: "projectKey_string",
         limit: null,
         offset: null,
         filter: null,

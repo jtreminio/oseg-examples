@@ -6,8 +6,8 @@ const apiCaller = new api.ContextsApi();
 apiCaller.setApiKey(api.ContextsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.evaluateContextInstance(
-  undefined, // projectKey
-  undefined, // environmentKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
   {
     "key": "user-key-123abc",
     "kind": "user",

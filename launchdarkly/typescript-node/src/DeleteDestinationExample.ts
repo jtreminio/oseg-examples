@@ -6,9 +6,9 @@ const apiCaller = new api.DataExportDestinationsApi();
 apiCaller.setApiKey(api.DataExportDestinationsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.deleteDestination(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // id
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "id_string", // id
 ).catch(error => {
   console.log("Exception when calling DataExportDestinationsApi#deleteDestination:");
   console.log(error.body);

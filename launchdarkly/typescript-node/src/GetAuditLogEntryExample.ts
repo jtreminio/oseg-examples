@@ -6,7 +6,7 @@ const apiCaller = new api.AuditLogApi();
 apiCaller.setApiKey(api.AuditLogApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getAuditLogEntry(
-  undefined, // id
+  "id_string", // id
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

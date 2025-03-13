@@ -22,7 +22,7 @@ class GetEventsUsageExample
         try
         {
             val response = AccountUsageBetaApi().getEventsUsage(
-                type = null,
+                type = "type_string",
                 from = null,
                 to = null,
             )

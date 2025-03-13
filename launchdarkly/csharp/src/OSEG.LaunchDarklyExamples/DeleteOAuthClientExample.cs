@@ -19,7 +19,7 @@ public class DeleteOAuthClientExample
         try
         {
             new OAuth2ClientsApi(config).DeleteOAuthClient(
-                clientId: null
+                clientId: "clientId_string"
             );
         }
         catch (ApiException e)

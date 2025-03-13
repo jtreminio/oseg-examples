@@ -6,8 +6,8 @@ const apiCaller = new api.ReleasePipelinesBetaApi();
 apiCaller.setApiKey(api.ReleasePipelinesBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getReleasePipelineByKey(
-  undefined, // projectKey
-  undefined, // pipelineKey
+  "projectKey_string", // projectKey
+  "pipelineKey_string", // pipelineKey
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

@@ -19,8 +19,8 @@ public class GetFollowersByProjEnvExample
         try
         {
             var response = new FollowFlagsApi(config).GetFollowersByProjEnv(
-                projectKey: null,
-                environmentKey: null
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string"
             );
 
             Console.WriteLine(response);

@@ -22,10 +22,10 @@ $flag_trigger_input = (new LaunchDarkly\Client\Model\FlagTriggerInput())
 
 try {
     $response = (new LaunchDarkly\Client\Api\FlagTriggersApi(config: $config))->patchTriggerWorkflow(
-        project_key: null,
-        environment_key: null,
-        feature_flag_key: null,
-        id: null,
+        project_key: "projectKey_string",
+        environment_key: "environmentKey_string",
+        feature_flag_key: "featureFlagKey_string",
+        id: "id_string",
         flag_trigger_input: $flag_trigger_input,
     );
 

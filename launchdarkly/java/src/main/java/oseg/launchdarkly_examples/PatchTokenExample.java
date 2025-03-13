@@ -32,7 +32,7 @@ public class PatchTokenExample
         try
         {
             var response = new AccessTokensApi(config).patchToken(
-                null, // id
+                "id_string", // id
                 patchOperation
             );
 

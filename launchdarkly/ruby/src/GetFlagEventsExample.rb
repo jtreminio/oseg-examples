@@ -7,8 +7,8 @@ end
 
 begin
     response = LaunchDarklyClient::InsightsFlagEventsBetaApi.new.get_flag_events(
-        nil, # project_key
-        nil, # environment_key
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
     )
 
     p response

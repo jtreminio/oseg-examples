@@ -28,7 +28,6 @@ public class UpdatePhaseStatusExample
         audiences1ReleaseGuardianConfiguration.randomizationUnit("user");
 
         var audiences1 = new ReleaserAudienceConfigInput();
-        audiences1.audienceId(null);
         audiences1.notifyMemberIds(List.of (
             "1234a56b7c89d012345e678f"
         ));
@@ -42,15 +41,14 @@ public class UpdatePhaseStatusExample
         ));
 
         var updatePhaseStatusInput = new UpdatePhaseStatusInput();
-        updatePhaseStatusInput.status(null);
         updatePhaseStatusInput.audiences(audiences);
 
         try
         {
             var response = new ReleasesBetaApi(config).updatePhaseStatus(
-                null, // projectKey
-                null, // flagKey
-                null, // phaseId
+                "projectKey_string", // projectKey
+                "flagKey_string", // flagKey
+                "phaseId_string", // phaseId
                 updatePhaseStatusInput
             );
 

@@ -15,9 +15,9 @@ ai_config_patch.tags = [
 
 begin
     response = LaunchDarklyClient::AIConfigsBetaApi.new.patch_ai_config(
-        nil, # ld_api_version
-        nil, # project_key
-        nil, # config_key
+        "beta", # ld_api_version
+        "projectKey_string", # project_key
+        "configKey_string", # config_key
         {
             ai_config_patch: ai_config_patch,
         },

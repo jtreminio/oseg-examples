@@ -19,8 +19,8 @@ public class GetExperimentsExample
         try
         {
             var response = new ExperimentsApi(config).GetExperiments(
-                projectKey: null,
-                environmentKey: null,
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
                 limit: null,
                 offset: null,
                 filter: null,

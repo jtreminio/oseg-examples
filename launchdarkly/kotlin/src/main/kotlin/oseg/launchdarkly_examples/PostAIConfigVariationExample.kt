@@ -37,7 +37,7 @@ class PostAIConfigVariationExample
         val aiConfigVariationPost = AIConfigVariationPost(
             key = "key",
             name = "name",
-            model = Map.of (),
+            model = mapOf<String, Any> (),
             modelConfigKey = "modelConfigKey",
             messages = messages,
         )
@@ -45,9 +45,9 @@ class PostAIConfigVariationExample
         try
         {
             val response = AIConfigsBetaApi().postAIConfigVariation(
-                ldAPIVersion = null,
-                projectKey = null,
-                configKey = null,
+                ldAPIVersion = AIConfigsBetaApi.LdAPIVersionPostAIConfigVariation.beta,
+                projectKey = "projectKey_string",
+                configKey = "configKey_string",
                 aiConfigVariationPost = aiConfigVariationPost,
             )
 

@@ -43,7 +43,7 @@ public class CreateMetricGroupExample
         try
         {
             var response = new MetricsBetaApi(config).createMetricGroup(
-                null, // projectKey
+                "projectKey_string", // projectKey
                 metricGroupPost
             );
 

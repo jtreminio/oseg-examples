@@ -30,9 +30,9 @@ with ApiClient(configuration) as api_client:
 
     try:
         api.SegmentsApi(api_client).update_big_segment_context_targets(
-            project_key=None,
-            environment_key=None,
-            segment_key=None,
+            project_key="projectKey_string",
+            environment_key="environmentKey_string",
+            segment_key="segmentKey_string",
             segment_user_state=segment_user_state,
         )
     except ApiException as e:

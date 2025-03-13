@@ -22,10 +22,10 @@ class GetUserFlagSettingExample
         try
         {
             val response = UserSettingsApi().getUserFlagSetting(
-                projectKey = null,
-                environmentKey = null,
-                userKey = null,
-                featureFlagKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                userKey = "userKey_string",
+                featureFlagKey = "featureFlagKey_string",
             )
 
             println(response)

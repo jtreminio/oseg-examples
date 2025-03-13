@@ -19,7 +19,7 @@ public class PatchApprovalRequestExample
         try
         {
             var response = new ApprovalsBetaApi(config).PatchApprovalRequest(
-                id: null
+                id: "id_string"
             );
 
             Console.WriteLine(response);

@@ -30,7 +30,7 @@ class PostMetricExample
         try
         {
             val response = MetricsApi().postMetric(
-                projectKey = null,
+                projectKey = "projectKey_string",
                 metricPost = metricPost,
             )
 

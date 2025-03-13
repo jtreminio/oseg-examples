@@ -19,7 +19,7 @@ public class DeleteRepositoryExample
         try
         {
             new CodeReferencesApi(config).DeleteRepository(
-                repo: null
+                repo: "repo_string"
             );
         }
         catch (ApiException e)

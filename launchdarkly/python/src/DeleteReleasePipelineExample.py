@@ -11,8 +11,8 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.ReleasePipelinesBetaApi(api_client).delete_release_pipeline(
-            project_key=None,
-            pipeline_key=None,
+            project_key="projectKey_string",
+            pipeline_key="pipelineKey_string",
         )
     except ApiException as e:
         print("Exception when calling ReleasePipelinesBetaApi#delete_release_pipeline: %s\n" % e)

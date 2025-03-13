@@ -19,10 +19,10 @@ public class DeleteIntegrationDeliveryConfigurationExample
         try
         {
             new IntegrationDeliveryConfigurationsBetaApi(config).DeleteIntegrationDeliveryConfiguration(
-                projectKey: null,
-                environmentKey: null,
-                integrationKey: null,
-                id: null
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                integrationKey: "integrationKey_string",
+                id: "id_string"
             );
         }
         catch (ApiException e)

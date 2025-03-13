@@ -7,8 +7,8 @@ end
 
 begin
     response = LaunchDarklyClient::EnvironmentsApi.new.reset_environment_mobile_key(
-        nil, # project_key
-        nil, # environment_key
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
     )
 
     p response

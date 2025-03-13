@@ -13,8 +13,8 @@ context_instance_search.continuation_token = "QAGFKH1313KUGI2351"
 
 begin
     response = LaunchDarklyClient::ContextsApi.new.search_context_instances(
-        nil, # project_key
-        nil, # environment_key
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
         context_instance_search,
     )
 

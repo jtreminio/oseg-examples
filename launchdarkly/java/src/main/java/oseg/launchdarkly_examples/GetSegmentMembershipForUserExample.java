@@ -24,10 +24,10 @@ public class GetSegmentMembershipForUserExample
         try
         {
             var response = new SegmentsApi(config).getSegmentMembershipForUser(
-                null, // projectKey
-                null, // environmentKey
-                null, // segmentKey
-                null // userKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "segmentKey_string", // segmentKey
+                "userKey_string" // userKey
             );
 
             System.out.println(response);

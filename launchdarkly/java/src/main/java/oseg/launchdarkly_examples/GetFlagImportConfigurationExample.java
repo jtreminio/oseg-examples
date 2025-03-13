@@ -24,9 +24,9 @@ public class GetFlagImportConfigurationExample
         try
         {
             var response = new FlagImportConfigurationsBetaApi(config).getFlagImportConfiguration(
-                null, // projectKey
-                null, // integrationKey
-                null // integrationId
+                "projectKey_string", // projectKey
+                "integrationKey_string", // integrationKey
+                "integrationId_string" // integrationId
             );
 
             System.out.println(response);

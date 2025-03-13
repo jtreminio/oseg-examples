@@ -23,7 +23,10 @@ public class GetWorkflowTemplatesExample
 
         try
         {
-            var response = new WorkflowTemplatesApi(config).getWorkflowTemplates();
+            var response = new WorkflowTemplatesApi(config).getWorkflowTemplates(
+                null, // summary
+                null // search
+            );
 
             System.out.println(response);
         } catch (ApiException e) {

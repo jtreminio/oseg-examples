@@ -24,7 +24,7 @@ public class DeleteWorkflowTemplateExample
         try
         {
             new WorkflowTemplatesApi(config).deleteWorkflowTemplate(
-                null // templateKey
+                "templateKey_string" // templateKey
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling WorkflowTemplatesApi#deleteWorkflowTemplate");

@@ -6,9 +6,9 @@ const apiCaller = new api.ContextsApi();
 apiCaller.setApiKey(api.ContextsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getContextAttributeValues(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // attributeName
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "attributeName_string", // attributeName
   undefined, // filter
   undefined, // limit
 ).then(response => {

@@ -6,7 +6,7 @@ const apiCaller = new api.AIConfigsBetaApi();
 apiCaller.setApiKey(api.AIConfigsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getAIConfigs(
-  undefined, // lDAPIVersion
+  "beta", // lDAPIVersion
   "default", // projectKey
   undefined, // sort
   undefined, // limit

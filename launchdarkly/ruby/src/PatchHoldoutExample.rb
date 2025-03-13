@@ -19,9 +19,9 @@ holdout_patch_input.comment = "Optional comment describing the update"
 
 begin
     response = LaunchDarklyClient::HoldoutsBetaApi.new.patch_holdout(
-        nil, # project_key
-        nil, # environment_key
-        nil, # holdout_key
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
+        "holdoutKey_string", # holdout_key
         holdout_patch_input,
     )
 

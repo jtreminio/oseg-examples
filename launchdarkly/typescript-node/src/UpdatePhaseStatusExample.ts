@@ -12,7 +12,6 @@ audiences1ReleaseGuardianConfiguration.rollbackOnRegression = true;
 audiences1ReleaseGuardianConfiguration.randomizationUnit = "user";
 
 const audiences1 = new models.ReleaserAudienceConfigInput();
-audiences1.audienceId = undefined;
 audiences1.notifyMemberIds = [
   "1234a56b7c89d012345e678f",
 ];
@@ -26,13 +25,12 @@ const audiences = [
 ];
 
 const updatePhaseStatusInput = new models.UpdatePhaseStatusInput();
-updatePhaseStatusInput.status = undefined;
 updatePhaseStatusInput.audiences = audiences;
 
 apiCaller.updatePhaseStatus(
-  undefined, // projectKey
-  undefined, // flagKey
-  undefined, // phaseId
+  "projectKey_string", // projectKey
+  "flagKey_string", // flagKey
+  "phaseId_string", // phaseId
   updatePhaseStatusInput,
 ).then(response => {
   console.log(response.body);

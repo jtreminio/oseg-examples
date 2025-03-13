@@ -22,9 +22,9 @@ class DeleteFlagImportConfigurationExample
         try
         {
             FlagImportConfigurationsBetaApi().deleteFlagImportConfiguration(
-                projectKey = null,
-                integrationKey = null,
-                integrationId = null,
+                projectKey = "projectKey_string",
+                integrationKey = "integrationKey_string",
+                integrationId = "integrationId_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling FlagImportConfigurationsBetaApi#deleteFlagImportConfiguration")

@@ -14,7 +14,7 @@ const patchOperation = [
 ];
 
 apiCaller.patchWebhook(
-  undefined, // id
+  "id_string", // id
   patchOperation,
 ).then(response => {
   console.log(response.body);

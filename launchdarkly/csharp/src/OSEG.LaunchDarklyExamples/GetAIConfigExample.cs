@@ -19,9 +19,9 @@ public class GetAIConfigExample
         try
         {
             var response = new AIConfigsBetaApi(config).GetAIConfig(
-                lDAPIVersion: null,
-                projectKey: null,
-                configKey: null
+                lDAPIVersion: "beta",
+                projectKey: "projectKey_string",
+                configKey: "configKey_string"
             );
 
             Console.WriteLine(response);

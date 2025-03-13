@@ -33,7 +33,7 @@ public class PatchCustomRoleExample
         try
         {
             var response = new CustomRolesApi(config).PatchCustomRole(
-                customRoleKey: null,
+                customRoleKey: "customRoleKey_string",
                 patchWithComment: patchWithComment
             );
 
