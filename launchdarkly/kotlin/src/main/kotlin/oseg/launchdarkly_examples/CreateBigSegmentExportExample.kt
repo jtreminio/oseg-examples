@@ -22,9 +22,9 @@ class CreateBigSegmentExportExample
         try
         {
             SegmentsApi().createBigSegmentExport(
-                projectKey = null,
-                environmentKey = null,
-                segmentKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                segmentKey = "segmentKey_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling SegmentsApi#createBigSegmentExport")

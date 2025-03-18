@@ -49,7 +49,7 @@ integrationConfigurationPost.tags = [
 integrationConfigurationPost.capabilityConfig = capabilityConfig;
 
 apiCaller.createIntegrationConfiguration(
-  undefined, // integrationKey
+  "integrationKey_string", // integrationKey
   integrationConfigurationPost,
 ).then(response => {
   console.log(response.body);

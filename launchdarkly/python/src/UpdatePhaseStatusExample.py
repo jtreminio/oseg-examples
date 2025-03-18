@@ -17,7 +17,6 @@ with ApiClient(configuration) as api_client:
     )
 
     audiences_1 = models.ReleaserAudienceConfigInput(
-        audienceId=None,
         notifyMemberIds=[
             "1234a56b7c89d012345e678f",
         ],
@@ -32,15 +31,14 @@ with ApiClient(configuration) as api_client:
     ]
 
     update_phase_status_input = models.UpdatePhaseStatusInput(
-        status=None,
         audiences=audiences,
     )
 
     try:
         response = api.ReleasesBetaApi(api_client).update_phase_status(
-            project_key=None,
-            flag_key=None,
-            phase_id=None,
+            project_key="projectKey_string",
+            flag_key="flagKey_string",
+            phase_id="phaseId_string",
             update_phase_status_input=update_phase_status_input,
         )
 

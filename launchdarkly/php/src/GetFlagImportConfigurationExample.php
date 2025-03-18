@@ -12,9 +12,9 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     $response = (new LaunchDarkly\Client\Api\FlagImportConfigurationsBetaApi(config: $config))->getFlagImportConfiguration(
-        project_key: null,
-        integration_key: null,
-        integration_id: null,
+        project_key: "projectKey_string",
+        integration_key: "integrationKey_string",
+        integration_id: "integrationId_string",
     );
 
     print_r($response);

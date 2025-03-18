@@ -19,7 +19,7 @@ public class GetApplicationExample
         try
         {
             var response = new ApplicationsBetaApi(config).GetApplication(
-                applicationKey: null,
+                applicationKey: "applicationKey_string",
                 expand: null
             );
 

@@ -7,7 +7,7 @@ end
 
 begin
     LaunchDarklyClient::RelayProxyConfigurationsApi.new.delete_relay_auto_config(
-        nil, # id
+        "id_string", # id
     )
 rescue LaunchDarklyClient::ApiError => e
     puts "Exception when calling RelayProxyConfigurationsApi#delete_relay_auto_config: #{e}"

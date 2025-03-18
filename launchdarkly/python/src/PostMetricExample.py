@@ -19,7 +19,7 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.MetricsApi(api_client).post_metric(
-            project_key=None,
+            project_key="projectKey_string",
             metric_post=metric_post,
         )
 

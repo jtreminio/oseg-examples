@@ -26,8 +26,8 @@ public class SearchContextInstancesExample
         try
         {
             var response = new ContextsApi(config).SearchContextInstances(
-                projectKey: null,
-                environmentKey: null,
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
                 contextInstanceSearch: contextInstanceSearch,
                 limit: null,
                 continuationToken: null,

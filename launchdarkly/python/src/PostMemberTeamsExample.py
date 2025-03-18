@@ -18,7 +18,7 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.AccountMembersApi(api_client).post_member_teams(
-            id=None,
+            id="id_string",
             member_teams_post_input=member_teams_post_input,
         )
 

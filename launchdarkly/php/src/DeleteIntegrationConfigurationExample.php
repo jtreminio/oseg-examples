@@ -12,7 +12,7 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     (new LaunchDarkly\Client\Api\IntegrationsBetaApi(config: $config))->deleteIntegrationConfiguration(
-        integration_configuration_id: null,
+        integration_configuration_id: "integrationConfigurationId_string",
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
     echo "Exception when calling IntegrationsBetaApi#deleteIntegrationConfiguration: {$e->getMessage()}";

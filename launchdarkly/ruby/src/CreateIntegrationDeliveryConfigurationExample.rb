@@ -21,9 +21,9 @@ integration_delivery_configuration_post.tags = [
 
 begin
     response = LaunchDarklyClient::IntegrationDeliveryConfigurationsBetaApi.new.create_integration_delivery_configuration(
-        nil, # project_key
-        nil, # environment_key
-        nil, # integration_key
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
+        "integrationKey_string", # integration_key
         integration_delivery_configuration_post,
     )
 

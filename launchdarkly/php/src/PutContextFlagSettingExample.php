@@ -15,11 +15,11 @@ $value_put = (new LaunchDarkly\Client\Model\ValuePut())
 
 try {
     (new LaunchDarkly\Client\Api\ContextSettingsApi(config: $config))->putContextFlagSetting(
-        project_key: null,
-        environment_key: null,
-        context_kind: null,
-        context_key: null,
-        feature_flag_key: null,
+        project_key: "projectKey_string",
+        environment_key: "environmentKey_string",
+        context_kind: "contextKind_string",
+        context_key: "contextKey_string",
+        feature_flag_key: "featureFlagKey_string",
         value_put: $value_put,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {

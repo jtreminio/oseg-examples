@@ -7,10 +7,10 @@ end
 
 begin
     response = LaunchDarklyClient::SegmentsApi.new.get_big_segment_import(
-        nil, # project_key
-        nil, # environment_key
-        nil, # segment_key
-        nil, # import_id
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
+        "segmentKey_string", # segment_key
+        "importID_string", # import_id
     )
 
     p response

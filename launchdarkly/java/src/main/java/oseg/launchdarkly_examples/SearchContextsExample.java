@@ -30,8 +30,8 @@ public class SearchContextsExample
         try
         {
             var response = new ContextsApi(config).searchContexts(
-                null, // projectKey
-                null, // environmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
                 contextSearch,
                 null, // limit
                 null, // continuationToken

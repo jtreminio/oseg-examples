@@ -23,7 +23,17 @@ public class GetDeploymentFrequencyChartExample
 
         try
         {
-            var response = new InsightsChartsBetaApi(config).getDeploymentFrequencyChart();
+            var response = new InsightsChartsBetaApi(config).getDeploymentFrequencyChart(
+                null, // projectKey
+                null, // environmentKey
+                null, // applicationKey
+                null, // from
+                null, // to
+                null, // bucketType
+                null, // bucketMs
+                null, // groupBy
+                null // expand
+            );
 
             System.out.println(response);
         } catch (ApiException e) {

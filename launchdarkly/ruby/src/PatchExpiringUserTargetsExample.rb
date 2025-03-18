@@ -21,9 +21,9 @@ patch_flags_request.comment = "optional comment"
 
 begin
     response = LaunchDarklyClient::FeatureFlagsApi.new.patch_expiring_user_targets(
-        nil, # project_key
-        nil, # environment_key
-        nil, # feature_flag_key
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
+        "featureFlagKey_string", # feature_flag_key
         patch_flags_request,
     )
 

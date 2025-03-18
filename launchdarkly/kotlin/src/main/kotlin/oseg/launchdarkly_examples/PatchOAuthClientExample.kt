@@ -31,7 +31,7 @@ class PatchOAuthClientExample
         try
         {
             val response = OAuth2ClientsApi().patchOAuthClient(
-                clientId = null,
+                clientId = "clientId_string",
                 patchOperation = patchOperation,
             )
 

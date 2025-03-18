@@ -6,8 +6,8 @@ const apiCaller = new api.EnvironmentsApi();
 apiCaller.setApiKey(api.EnvironmentsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.resetEnvironmentMobileKey(
-  undefined, // projectKey
-  undefined, // environmentKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

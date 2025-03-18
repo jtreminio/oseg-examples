@@ -32,7 +32,7 @@ public class PatchOAuthClientExample
         try
         {
             var response = new OAuth2ClientsApi(config).patchOAuthClient(
-                null, // clientId
+                "clientId_string", // clientId
                 patchOperation
             );
 

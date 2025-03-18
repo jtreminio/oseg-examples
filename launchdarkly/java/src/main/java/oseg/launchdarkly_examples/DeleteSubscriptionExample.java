@@ -24,8 +24,8 @@ public class DeleteSubscriptionExample
         try
         {
             new IntegrationAuditLogSubscriptionsApi(config).deleteSubscription(
-                null, // integrationKey
-                null // id
+                "integrationKey_string", // integrationKey
+                "id_string" // id
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling IntegrationAuditLogSubscriptionsApi#deleteSubscription");

@@ -12,10 +12,10 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     (new LaunchDarkly\Client\Api\AIConfigsBetaApi(config: $config))->deleteAIConfigVariation(
-        ld_api_version: null,
-        project_key: null,
-        config_key: null,
-        variation_key: null,
+        ld_api_version: "beta",
+        project_key: "projectKey_string",
+        config_key: "configKey_string",
+        variation_key: "variationKey_string",
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
     echo "Exception when calling AIConfigsBetaApi#deleteAIConfigVariation: {$e->getMessage()}";

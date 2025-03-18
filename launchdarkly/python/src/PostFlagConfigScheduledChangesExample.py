@@ -23,9 +23,9 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.ScheduledChangesApi(api_client).post_flag_config_scheduled_changes(
-            project_key=None,
-            feature_flag_key=None,
-            environment_key=None,
+            project_key="projectKey_string",
+            feature_flag_key="featureFlagKey_string",
+            environment_key="environmentKey_string",
             post_flag_scheduled_changes_input=post_flag_scheduled_changes_input,
             ignore_conflicts=None,
         )

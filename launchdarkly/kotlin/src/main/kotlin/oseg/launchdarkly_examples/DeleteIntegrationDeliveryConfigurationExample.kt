@@ -22,10 +22,10 @@ class DeleteIntegrationDeliveryConfigurationExample
         try
         {
             IntegrationDeliveryConfigurationsBetaApi().deleteIntegrationDeliveryConfiguration(
-                projectKey = null,
-                environmentKey = null,
-                integrationKey = null,
-                id = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                integrationKey = "integrationKey_string",
+                id = "id_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling IntegrationDeliveryConfigurationsBetaApi#deleteIntegrationDeliveryConfiguration")

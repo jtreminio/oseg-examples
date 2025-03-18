@@ -11,8 +11,8 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.ReleasesBetaApi(api_client).delete_release_by_flag_key(
-            project_key=None,
-            flag_key=None,
+            project_key="projectKey_string",
+            flag_key="flagKey_string",
         )
     except ApiException as e:
         print("Exception when calling ReleasesBetaApi#delete_release_by_flag_key: %s\n" % e)

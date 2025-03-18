@@ -7,7 +7,7 @@ end
 
 begin
     response = LaunchDarklyClient::AIConfigsBetaApi.new.get_ai_config_variation(
-        nil, # ld_api_version
+        "beta", # ld_api_version
         "default", # project_key
         "default", # config_key
         "default", # variation_key

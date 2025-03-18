@@ -33,7 +33,7 @@ public class PatchRelayAutoConfigExample
         try
         {
             var response = new RelayProxyConfigurationsApi(config).PatchRelayAutoConfig(
-                id: null,
+                id: "id_string",
                 patchWithComment: patchWithComment
             );
 

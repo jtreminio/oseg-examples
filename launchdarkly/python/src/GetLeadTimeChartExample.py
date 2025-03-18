@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.InsightsChartsBetaApi(api_client).get_lead_time_chart(
-            project_key=None,
+            project_key="projectKey_string",
             environment_key=None,
             application_key=None,
             var_from=None,

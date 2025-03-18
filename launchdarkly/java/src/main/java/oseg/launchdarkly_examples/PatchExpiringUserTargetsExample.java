@@ -37,9 +37,9 @@ public class PatchExpiringUserTargetsExample
         try
         {
             var response = new FeatureFlagsApi(config).patchExpiringUserTargets(
-                null, // projectKey
-                null, // environmentKey
-                null, // featureFlagKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "featureFlagKey_string", // featureFlagKey
                 patchFlagsRequest
             );
 

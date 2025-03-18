@@ -22,14 +22,13 @@ public class CreateReleaseForFlagExample
         ((ApiKeyAuth) config.getAuthentication("ApiKey")).setApiKey("YOUR_API_KEY");
 
         var createReleaseInput = new CreateReleaseInput();
-        createReleaseInput.releasePipelineKey(null);
-        createReleaseInput.releaseVariationId(null);
+        createReleaseInput.releasePipelineKey("releasePipelineKey_string");
 
         try
         {
             var response = new ReleasesBetaApi(config).createReleaseForFlag(
-                null, // projectKey
-                null, // flagKey
+                "projectKey_string", // projectKey
+                "flagKey_string", // flagKey
                 createReleaseInput
             );
 

@@ -33,10 +33,10 @@ class PatchTriggerWorkflowExample
         try
         {
             val response = FlagTriggersApi().patchTriggerWorkflow(
-                projectKey = null,
-                environmentKey = null,
-                featureFlagKey = null,
-                id = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                featureFlagKey = "featureFlagKey_string",
+                id = "id_string",
                 flagTriggerInput = flagTriggerInput,
             )
 

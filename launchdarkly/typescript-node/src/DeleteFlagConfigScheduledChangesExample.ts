@@ -6,10 +6,10 @@ const apiCaller = new api.ScheduledChangesApi();
 apiCaller.setApiKey(api.ScheduledChangesApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.deleteFlagConfigScheduledChanges(
-  undefined, // projectKey
-  undefined, // featureFlagKey
-  undefined, // environmentKey
-  undefined, // id
+  "projectKey_string", // projectKey
+  "featureFlagKey_string", // featureFlagKey
+  "environmentKey_string", // environmentKey
+  "id_string", // id
 ).catch(error => {
   console.log("Exception when calling ScheduledChangesApi#deleteFlagConfigScheduledChanges:");
   console.log(error.body);

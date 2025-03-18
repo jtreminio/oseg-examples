@@ -25,8 +25,8 @@ $layer_patch_input = (new LaunchDarkly\Client\Model\LayerPatchInput())
 
 try {
     $response = (new LaunchDarkly\Client\Api\LayersApi(config: $config))->updateLayer(
-        project_key: null,
-        layer_key: null,
+        project_key: "projectKey_string",
+        layer_key: "layerKey_string",
         layer_patch_input: $layer_patch_input,
     );
 

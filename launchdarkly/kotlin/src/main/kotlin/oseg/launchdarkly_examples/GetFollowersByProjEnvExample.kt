@@ -22,8 +22,8 @@ class GetFollowersByProjEnvExample
         try
         {
             val response = FollowFlagsApi().getFollowersByProjEnv(
-                projectKey = null,
-                environmentKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
             )
 
             println(response)

@@ -24,10 +24,10 @@ public class GetExperimentResultsForMetricGroupExample
         try
         {
             var response = new ExperimentsApi(config).getExperimentResultsForMetricGroup(
-                null, // projectKey
-                null, // environmentKey
-                null, // experimentKey
-                null, // metricGroupKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "experimentKey_string", // experimentKey
+                "metricGroupKey_string", // metricGroupKey
                 null // iterationId
             );
 

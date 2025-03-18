@@ -51,7 +51,7 @@ class CreateExperimentExample
 
         val iteration = IterationInput(
             hypothesis = "Example hypothesis, the new button placement will increase conversion",
-            flags = null,
+            flags = mapOf<String, Any> (),
             canReshuffleTraffic = true,
             primarySingleMetricKey = "metric-key-123abc",
             primaryFunnelKey = "metric-group-key-123abc",
@@ -77,8 +77,8 @@ class CreateExperimentExample
         try
         {
             val response = ExperimentsApi().createExperiment(
-                projectKey = null,
-                environmentKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
                 experimentPost = experimentPost,
             )
 

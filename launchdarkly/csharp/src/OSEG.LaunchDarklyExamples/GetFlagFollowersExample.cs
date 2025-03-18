@@ -19,9 +19,9 @@ public class GetFlagFollowersExample
         try
         {
             var response = new FollowFlagsApi(config).GetFlagFollowers(
-                projectKey: null,
-                featureFlagKey: null,
-                environmentKey: null
+                projectKey: "projectKey_string",
+                featureFlagKey: "featureFlagKey_string",
+                environmentKey: "environmentKey_string"
             );
 
             Console.WriteLine(response);

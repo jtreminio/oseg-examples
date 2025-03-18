@@ -22,8 +22,8 @@ class GetMetricExample
         try
         {
             val response = MetricsApi().getMetric(
-                projectKey = null,
-                metricKey = null,
+                projectKey = "projectKey_string",
+                metricKey = "metricKey_string",
                 expand = null,
                 versionId = null,
             )

@@ -27,9 +27,9 @@ ai_config_variation_post.messages = messages
 
 begin
     response = LaunchDarklyClient::AIConfigsBetaApi.new.post_ai_config_variation(
-        nil, # ld_api_version
-        nil, # project_key
-        nil, # config_key
+        "beta", # ld_api_version
+        "projectKey_string", # project_key
+        "configKey_string", # config_key
         ai_config_variation_post,
     )
 

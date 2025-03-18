@@ -12,9 +12,9 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     (new LaunchDarkly\Client\Api\SegmentsApi(config: $config))->createBigSegmentImport(
-        project_key: null,
-        environment_key: null,
-        segment_key: null,
+        project_key: "projectKey_string",
+        environment_key: "environmentKey_string",
+        segment_key: "segmentKey_string",
         file: null,
         mode: null,
         wait_on_approvals: null,

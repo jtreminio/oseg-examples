@@ -29,8 +29,8 @@ public class UpdateSubscriptionExample
         try
         {
             var response = new IntegrationAuditLogSubscriptionsApi(config).UpdateSubscription(
-                integrationKey: null,
-                id: null,
+                integrationKey: "integrationKey_string",
+                id: "id_string",
                 patchOperation: patchOperation
             );
 

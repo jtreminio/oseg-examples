@@ -22,7 +22,7 @@ class GetPullRequestsExample
         try
         {
             val response = InsightsPullRequestsBetaApi().getPullRequests(
-                projectKey = null,
+                projectKey = "projectKey_string",
                 environmentKey = null,
                 applicationKey = null,
                 status = null,
@@ -30,8 +30,8 @@ class GetPullRequestsExample
                 limit = null,
                 expand = null,
                 sort = null,
-                from = OffsetDateTime.parse("None"),
-                to = OffsetDateTime.parse("None"),
+                from = null,
+                to = null,
                 after = null,
                 before = null,
             )

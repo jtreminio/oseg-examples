@@ -19,8 +19,8 @@ public class GetReleaseFrequencyChartExample
         try
         {
             var response = new InsightsChartsBetaApi(config).GetReleaseFrequencyChart(
-                projectKey: null,
-                environmentKey: null,
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
                 applicationKey: null,
                 hasExperiments: null,
                 global: null,

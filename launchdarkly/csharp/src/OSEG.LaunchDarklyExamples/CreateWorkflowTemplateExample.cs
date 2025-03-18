@@ -44,13 +44,7 @@ public class CreateWorkflowTemplateExample
         };
 
         var createWorkflowTemplateInput = new CreateWorkflowTemplateInput(
-            key: null,
-            name: null,
-            description: null,
-            workflowId: null,
-            projectKey: null,
-            environmentKey: null,
-            flagKey: null,
+            key: "key_string",
             stages: stages
         );
 

@@ -24,9 +24,9 @@ public class GetDependentFlagsByEnvExample
         try
         {
             var response = new FeatureFlagsBetaApi(config).getDependentFlagsByEnv(
-                null, // projectKey
-                null, // environmentKey
-                null // featureFlagKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "featureFlagKey_string" // featureFlagKey
             );
 
             System.out.println(response);

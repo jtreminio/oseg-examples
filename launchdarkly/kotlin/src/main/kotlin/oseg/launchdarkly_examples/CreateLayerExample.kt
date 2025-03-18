@@ -22,13 +22,13 @@ class CreateLayerExample
         val layerPost = LayerPost(
             key = "checkout-flow",
             name = "Checkout Flow",
-            description = null,
+            description = "description_string",
         )
 
         try
         {
             val response = LayersApi().createLayer(
-                projectKey = null,
+                projectKey = "projectKey_string",
                 layerPost = layerPost,
             )
 

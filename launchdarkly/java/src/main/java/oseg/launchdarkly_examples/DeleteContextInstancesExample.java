@@ -24,9 +24,9 @@ public class DeleteContextInstancesExample
         try
         {
             new ContextsApi(config).deleteContextInstances(
-                null, // projectKey
-                null, // environmentKey
-                null // id
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "id_string" // id
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling ContextsApi#deleteContextInstances");

@@ -24,8 +24,8 @@ public class GetFlagStatusChartExample
         try
         {
             var response = new InsightsChartsBetaApi(config).getFlagStatusChart(
-                null, // projectKey
-                null, // environmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
                 null // applicationKey
             );
 

@@ -12,10 +12,10 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     $response = (new LaunchDarkly\Client\Api\PersistentStoreIntegrationsBetaApi(config: $config))->getBigSegmentStoreIntegration(
-        project_key: null,
-        environment_key: null,
-        integration_key: null,
-        integration_id: null,
+        project_key: "projectKey_string",
+        environment_key: "environmentKey_string",
+        integration_key: "integrationKey_string",
+        integration_id: "integrationId_string",
     );
 
     print_r($response);

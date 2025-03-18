@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.IntegrationsBetaApi(api_client).delete_integration_configuration(
-            integration_configuration_id=None,
+            integration_configuration_id="integrationConfigurationId_string",
         )
     except ApiException as e:
         print("Exception when calling IntegrationsBetaApi#delete_integration_configuration: %s\n" % e)

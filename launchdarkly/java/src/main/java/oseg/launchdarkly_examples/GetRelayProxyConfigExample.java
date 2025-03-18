@@ -24,7 +24,7 @@ public class GetRelayProxyConfigExample
         try
         {
             var response = new RelayProxyConfigurationsApi(config).getRelayProxyConfig(
-                null // id
+                "id_string" // id
             );
 
             System.out.println(response);

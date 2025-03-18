@@ -6,7 +6,7 @@ const apiCaller = new api.InsightsChartsBetaApi();
 apiCaller.setApiKey(api.InsightsChartsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getLeadTimeChart(
-  undefined, // projectKey
+  "projectKey_string", // projectKey
   undefined, // environmentKey
   undefined, // applicationKey
   undefined, // from

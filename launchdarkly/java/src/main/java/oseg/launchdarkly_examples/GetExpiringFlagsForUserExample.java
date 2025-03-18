@@ -24,9 +24,9 @@ public class GetExpiringFlagsForUserExample
         try
         {
             var response = new UserSettingsApi(config).getExpiringFlagsForUser(
-                null, // projectKey
-                null, // userKey
-                null // environmentKey
+                "projectKey_string", // projectKey
+                "userKey_string", // userKey
+                "environmentKey_string" // environmentKey
             );
 
             System.out.println(response);

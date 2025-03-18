@@ -6,8 +6,8 @@ const apiCaller = new api.ExperimentsApi();
 apiCaller.setApiKey(api.ExperimentsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getExperiments(
-  undefined, // projectKey
-  undefined, // environmentKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
   undefined, // limit
   undefined, // offset
   undefined, // filter

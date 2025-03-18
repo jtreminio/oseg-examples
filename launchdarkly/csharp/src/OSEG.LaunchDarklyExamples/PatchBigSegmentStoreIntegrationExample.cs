@@ -29,10 +29,10 @@ public class PatchBigSegmentStoreIntegrationExample
         try
         {
             var response = new PersistentStoreIntegrationsBetaApi(config).PatchBigSegmentStoreIntegration(
-                projectKey: null,
-                environmentKey: null,
-                integrationKey: null,
-                integrationId: null,
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                integrationKey: "integrationKey_string",
+                integrationId: "integrationId_string",
                 patchOperation: patchOperation
             );
 

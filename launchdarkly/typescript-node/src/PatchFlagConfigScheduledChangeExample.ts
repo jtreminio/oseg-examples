@@ -19,10 +19,10 @@ flagScheduledChangesInput.instructions = [
 flagScheduledChangesInput.comment = "Optional comment describing the update to the scheduled changes";
 
 apiCaller.patchFlagConfigScheduledChange(
-  undefined, // projectKey
-  undefined, // featureFlagKey
-  undefined, // environmentKey
-  undefined, // id
+  "projectKey_string", // projectKey
+  "featureFlagKey_string", // featureFlagKey
+  "environmentKey_string", // environmentKey
+  "id_string", // id
   flagScheduledChangesInput,
   undefined, // ignoreConflicts
 ).then(response => {

@@ -11,9 +11,9 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.UserSettingsApi(api_client).get_expiring_flags_for_user(
-            project_key=None,
-            user_key=None,
-            environment_key=None,
+            project_key="projectKey_string",
+            user_key="userKey_string",
+            environment_key="environmentKey_string",
         )
 
         pprint(response)

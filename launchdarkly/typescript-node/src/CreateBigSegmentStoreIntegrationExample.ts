@@ -17,9 +17,9 @@ integrationDeliveryConfigurationPost.tags = [
 ];
 
 apiCaller.createBigSegmentStoreIntegration(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // integrationKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "integrationKey_string", // integrationKey
   integrationDeliveryConfigurationPost,
 ).then(response => {
   console.log(response.body);

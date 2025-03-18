@@ -30,8 +30,8 @@ public class SearchContextInstancesExample
         try
         {
             var response = new ContextsApi(config).searchContextInstances(
-                null, // projectKey
-                null, // environmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
                 contextInstanceSearch,
                 null, // limit
                 null, // continuationToken

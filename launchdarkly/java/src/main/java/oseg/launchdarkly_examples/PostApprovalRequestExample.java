@@ -32,7 +32,6 @@ public class PostApprovalRequestExample
         createApprovalRequestRequest.notifyTeamKeys(List.of (
             "example-reviewer-team"
         ));
-        createApprovalRequestRequest.integrationConfig(null);
 
         try
         {

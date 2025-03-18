@@ -56,8 +56,8 @@ class PutBranchExample
         try
         {
             CodeReferencesApi().putBranch(
-                repo = null,
-                branch = null,
+                repo = "repo_string",
+                branch = "branch_string",
                 putBranch = putBranch,
             )
         } catch (e: ClientException) {

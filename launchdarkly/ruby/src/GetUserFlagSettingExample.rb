@@ -7,10 +7,10 @@ end
 
 begin
     response = LaunchDarklyClient::UserSettingsApi.new.get_user_flag_setting(
-        nil, # project_key
-        nil, # environment_key
-        nil, # user_key
-        nil, # feature_flag_key
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
+        "userKey_string", # user_key
+        "featureFlagKey_string", # feature_flag_key
     )
 
     p response

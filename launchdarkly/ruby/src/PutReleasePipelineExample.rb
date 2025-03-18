@@ -12,7 +12,7 @@ phases_1_audiences_1_configuration_release_guardian_configuration.rollback_on_re
 phases_1_audiences_1_configuration_release_guardian_configuration.randomization_unit = "user"
 
 phases_1_audiences_1_configuration = LaunchDarklyClient::AudienceConfiguration.new
-phases_1_audiences_1_configuration.release_strategy = nil
+phases_1_audiences_1_configuration.release_strategy = "releaseStrategy_string"
 phases_1_audiences_1_configuration.require_approval = true
 phases_1_audiences_1_configuration.notify_member_ids = [
     "1234a56b7c89d012345e678f",
@@ -23,8 +23,8 @@ phases_1_audiences_1_configuration.notify_team_keys = [
 phases_1_audiences_1_configuration.release_guardian_configuration = phases_1_audiences_1_configuration_release_guardian_configuration
 
 phases_1_audiences_1 = LaunchDarklyClient::AudiencePost.new
-phases_1_audiences_1.environment_key = nil
-phases_1_audiences_1.name = nil
+phases_1_audiences_1.environment_key = "environmentKey_string"
+phases_1_audiences_1.name = "name_string"
 phases_1_audiences_1.segment_keys = [
 ]
 phases_1_audiences_1.configuration = phases_1_audiences_1_configuration
@@ -51,8 +51,8 @@ update_release_pipeline_input.phases = phases
 
 begin
     response = LaunchDarklyClient::ReleasePipelinesBetaApi.new.put_release_pipeline(
-        nil, # project_key
-        nil, # pipeline_key
+        "projectKey_string", # project_key
+        "pipelineKey_string", # pipeline_key
         update_release_pipeline_input,
     )
 

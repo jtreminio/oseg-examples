@@ -24,7 +24,7 @@ public class GetOAuthClientByIdExample
         try
         {
             var response = new OAuth2ClientsApi(config).getOAuthClientById(
-                null // clientId
+                "clientId_string" // clientId
             );
 
             System.out.println(response);

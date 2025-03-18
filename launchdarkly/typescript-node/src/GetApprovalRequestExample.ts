@@ -6,7 +6,7 @@ const apiCaller = new api.ApprovalsApi();
 apiCaller.setApiKey(api.ApprovalsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getApprovalRequest(
-  undefined, // id
+  "id_string", // id
   undefined, // expand
 ).then(response => {
   console.log(response.body);

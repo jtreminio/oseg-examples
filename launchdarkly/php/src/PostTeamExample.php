@@ -20,8 +20,7 @@ $team_post_input = (new LaunchDarkly\Client\Model\TeamPostInput())
     ])
     ->setMemberIDs([
         "12ab3c45de678910fgh12345",
-    ])
-    ->setRoleAttributes(null);
+    ]);
 
 try {
     $response = (new LaunchDarkly\Client\Api\TeamsApi(config: $config))->postTeam(

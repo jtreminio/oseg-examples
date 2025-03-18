@@ -24,7 +24,7 @@ public class PatchApprovalRequestExample
         try
         {
             var response = new ApprovalsBetaApi(config).patchApprovalRequest(
-                null // id
+                "id_string" // id
             );
 
             System.out.println(response);

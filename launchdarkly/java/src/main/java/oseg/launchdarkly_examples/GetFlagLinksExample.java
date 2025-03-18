@@ -24,8 +24,8 @@ public class GetFlagLinksExample
         try
         {
             var response = new FlagLinksBetaApi(config).getFlagLinks(
-                null, // projectKey
-                null // featureFlagKey
+                "projectKey_string", // projectKey
+                "featureFlagKey_string" // featureFlagKey
             );
 
             System.out.println(response);

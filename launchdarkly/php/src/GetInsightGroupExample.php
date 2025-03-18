@@ -12,7 +12,7 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     $response = (new LaunchDarkly\Client\Api\InsightsScoresBetaApi(config: $config))->getInsightGroup(
-        insight_group_key: null,
+        insight_group_key: "insightGroupKey_string",
         expand: null,
     );
 

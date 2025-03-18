@@ -7,8 +7,8 @@ end
 
 begin
     LaunchDarklyClient::ReleasePipelinesBetaApi.new.delete_release_pipeline(
-        nil, # project_key
-        nil, # pipeline_key
+        "projectKey_string", # project_key
+        "pipelineKey_string", # pipeline_key
     )
 rescue LaunchDarklyClient::ApiError => e
     puts "Exception when calling ReleasePipelinesBetaApi#delete_release_pipeline: #{e}"

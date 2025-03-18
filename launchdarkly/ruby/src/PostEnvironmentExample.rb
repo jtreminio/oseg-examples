@@ -12,7 +12,7 @@ environment_post.color = "DADBEE"
 
 begin
     response = LaunchDarklyClient::EnvironmentsApi.new.post_environment(
-        nil, # project_key
+        "projectKey_string", # project_key
         environment_post,
     )
 

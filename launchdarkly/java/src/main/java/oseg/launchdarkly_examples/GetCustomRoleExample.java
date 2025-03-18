@@ -24,7 +24,7 @@ public class GetCustomRoleExample
         try
         {
             var response = new CustomRolesApi(config).getCustomRole(
-                null // customRoleKey
+                "customRoleKey_string" // customRoleKey
             );
 
             System.out.println(response);

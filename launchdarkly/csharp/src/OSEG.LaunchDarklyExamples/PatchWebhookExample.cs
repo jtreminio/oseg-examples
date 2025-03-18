@@ -29,7 +29,7 @@ public class PatchWebhookExample
         try
         {
             var response = new WebhooksApi(config).PatchWebhook(
-                id: null,
+                id: "id_string",
                 patchOperation: patchOperation
             );
 

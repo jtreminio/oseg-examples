@@ -7,7 +7,7 @@ end
 
 begin
     response = LaunchDarklyClient::ProjectsApi.new.get_flag_defaults_by_project(
-        nil, # project_key
+        "projectKey_string", # project_key
     )
 
     p response

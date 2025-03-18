@@ -12,7 +12,7 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     $response = (new LaunchDarkly\Client\Api\CustomRolesApi(config: $config))->getCustomRole(
-        custom_role_key: null,
+        custom_role_key: "customRoleKey_string",
     );
 
     print_r($response);

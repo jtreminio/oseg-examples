@@ -15,8 +15,8 @@ patch_operation = [
 
 begin
     response = LaunchDarklyClient::EnvironmentsApi.new.patch_environment(
-        nil, # project_key
-        nil, # environment_key
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
         patch_operation,
     )
 

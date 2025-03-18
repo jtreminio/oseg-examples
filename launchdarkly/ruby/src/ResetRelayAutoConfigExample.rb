@@ -7,7 +7,7 @@ end
 
 begin
     response = LaunchDarklyClient::RelayProxyConfigurationsApi.new.reset_relay_auto_config(
-        nil, # id
+        "id_string", # id
     )
 
     p response

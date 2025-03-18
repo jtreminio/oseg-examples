@@ -20,7 +20,7 @@ $patch_operation = [
 
 try {
     $response = (new LaunchDarkly\Client\Api\AccessTokensApi(config: $config))->patchToken(
-        id: null,
+        id: "id_string",
         patch_operation: $patch_operation,
     );
 

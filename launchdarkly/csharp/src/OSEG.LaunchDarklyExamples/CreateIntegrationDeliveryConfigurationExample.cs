@@ -33,9 +33,9 @@ public class CreateIntegrationDeliveryConfigurationExample
         try
         {
             var response = new IntegrationDeliveryConfigurationsBetaApi(config).CreateIntegrationDeliveryConfiguration(
-                projectKey: null,
-                environmentKey: null,
-                integrationKey: null,
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                integrationKey: "integrationKey_string",
                 integrationDeliveryConfigurationPost: integrationDeliveryConfigurationPost
             );
 

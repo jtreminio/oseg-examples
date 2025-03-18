@@ -26,8 +26,7 @@ public class PostApprovalRequestExample
             ],
             notifyTeamKeys: [
                 "example-reviewer-team",
-            ],
-            integrationConfig: null
+            ]
         );
 
         try

@@ -24,7 +24,7 @@ public class GetMetricGroupsExample
         try
         {
             var response = new MetricsBetaApi(config).getMetricGroups(
-                null, // projectKey
+                "projectKey_string", // projectKey
                 null, // filter
                 null, // expand
                 null, // limit

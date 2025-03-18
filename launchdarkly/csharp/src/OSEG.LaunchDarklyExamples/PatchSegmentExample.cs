@@ -39,9 +39,9 @@ public class PatchSegmentExample
         try
         {
             var response = new SegmentsApi(config).PatchSegment(
-                projectKey: null,
-                environmentKey: null,
-                segmentKey: null,
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                segmentKey: "segmentKey_string",
                 patchWithComment: patchWithComment
             );
 

@@ -22,7 +22,7 @@ class GetStreamUsageExample
         try
         {
             val response = AccountUsageBetaApi().getStreamUsage(
-                source = null,
+                source = "source_string",
                 from = null,
                 to = null,
                 tz = null,

@@ -22,9 +22,9 @@ class GetExpiringTargetsForSegmentExample
         try
         {
             val response = SegmentsApi().getExpiringTargetsForSegment(
-                projectKey = null,
-                environmentKey = null,
-                segmentKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                segmentKey = "segmentKey_string",
             )
 
             println(response)

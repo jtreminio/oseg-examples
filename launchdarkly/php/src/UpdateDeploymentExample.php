@@ -20,7 +20,7 @@ $patch_operation = [
 
 try {
     $response = (new LaunchDarkly\Client\Api\InsightsDeploymentsBetaApi(config: $config))->updateDeployment(
-        deployment_id: null,
+        deployment_id: "deploymentID_string",
         patch_operation: $patch_operation,
     );
 

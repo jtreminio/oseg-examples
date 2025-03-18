@@ -20,9 +20,9 @@ $patch_operation = [
 
 try {
     $response = (new LaunchDarkly\Client\Api\FlagLinksBetaApi(config: $config))->updateFlagLink(
-        project_key: null,
-        feature_flag_key: null,
-        id: null,
+        project_key: "projectKey_string",
+        feature_flag_key: "featureFlagKey_string",
+        id: "id_string",
         patch_operation: $patch_operation,
     );
 

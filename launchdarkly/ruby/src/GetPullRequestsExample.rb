@@ -7,7 +7,7 @@ end
 
 begin
     response = LaunchDarklyClient::InsightsPullRequestsBetaApi.new.get_pull_requests(
-        nil, # project_key
+        "projectKey_string", # project_key
     )
 
     p response

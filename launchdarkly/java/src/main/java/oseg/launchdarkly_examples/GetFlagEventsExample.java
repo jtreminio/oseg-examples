@@ -24,8 +24,8 @@ public class GetFlagEventsExample
         try
         {
             var response = new InsightsFlagEventsBetaApi(config).getFlagEvents(
-                null, // projectKey
-                null, // environmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
                 null, // applicationKey
                 null, // query
                 null, // impactSize

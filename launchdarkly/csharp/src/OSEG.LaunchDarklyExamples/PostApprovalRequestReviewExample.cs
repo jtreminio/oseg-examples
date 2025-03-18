@@ -24,7 +24,7 @@ public class PostApprovalRequestReviewExample
         try
         {
             var response = new ApprovalsApi(config).PostApprovalRequestReview(
-                id: null,
+                id: "id_string",
                 postApprovalRequestReviewRequest: postApprovalRequestReviewRequest
             );
 

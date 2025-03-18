@@ -22,8 +22,8 @@ class DeleteReleasePipelineExample
         try
         {
             ReleasePipelinesBetaApi().deleteReleasePipeline(
-                projectKey = null,
-                pipelineKey = null,
+                projectKey = "projectKey_string",
+                pipelineKey = "pipelineKey_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling ReleasePipelinesBetaApi#deleteReleasePipeline")

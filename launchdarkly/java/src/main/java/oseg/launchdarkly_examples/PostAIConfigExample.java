@@ -33,8 +33,8 @@ public class PostAIConfigExample
         try
         {
             var response = new AiConfigsBetaApi(config).postAIConfig(
-                null, // ldAPIVersion
-                null, // projectKey
+                AIConfigPost.LDAPIVersionEnum.BETA, // ldAPIVersion
+                "projectKey_string", // projectKey
                 aiConfigPost
             );
 

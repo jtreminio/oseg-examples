@@ -19,10 +19,10 @@ public class GetUserFlagSettingExample
         try
         {
             var response = new UserSettingsApi(config).GetUserFlagSetting(
-                projectKey: null,
-                environmentKey: null,
-                userKey: null,
-                featureFlagKey: null
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                userKey: "userKey_string",
+                featureFlagKey: "featureFlagKey_string"
             );
 
             Console.WriteLine(response);

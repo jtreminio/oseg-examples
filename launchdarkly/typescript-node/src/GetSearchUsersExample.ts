@@ -6,8 +6,8 @@ const apiCaller = new api.UsersApi();
 apiCaller.setApiKey(api.UsersApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getSearchUsers(
-  undefined, // projectKey
-  undefined, // environmentKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
   undefined, // q
   undefined, // limit
   undefined, // offset

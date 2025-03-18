@@ -6,7 +6,7 @@ const apiCaller = new api.TeamsApi();
 apiCaller.setApiKey(api.TeamsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getTeamMaintainers(
-  undefined, // teamKey
+  "teamKey_string", // teamKey
   undefined, // limit
   undefined, // offset
 ).then(response => {

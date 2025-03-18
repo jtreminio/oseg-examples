@@ -22,8 +22,8 @@ class GetUserAttributeNamesExample
         try
         {
             val response = UsersBetaApi().getUserAttributeNames(
-                projectKey = null,
-                environmentKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
             )
 
             println(response)

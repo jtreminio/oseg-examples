@@ -19,7 +19,7 @@ public class GetWebhookExample
         try
         {
             var response = new WebhooksApi(config).GetWebhook(
-                id: null
+                id: "id_string"
             );
 
             Console.WriteLine(response);

@@ -19,8 +19,8 @@ public class GetMetricGroupExample
         try
         {
             var response = new MetricsBetaApi(config).GetMetricGroup(
-                projectKey: null,
-                metricGroupKey: null,
+                projectKey: "projectKey_string",
+                metricGroupKey: "metricGroupKey_string",
                 expand: null
             );
 

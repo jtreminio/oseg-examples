@@ -6,8 +6,8 @@ const apiCaller = new api.FlagLinksBetaApi();
 apiCaller.setApiKey(api.FlagLinksBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getFlagLinks(
-  undefined, // projectKey
-  undefined, // featureFlagKey
+  "projectKey_string", // projectKey
+  "featureFlagKey_string", // featureFlagKey
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

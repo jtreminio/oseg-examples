@@ -24,7 +24,7 @@ public class GetDeploymentExample
         try
         {
             var response = new InsightsDeploymentsBetaApi(config).getDeployment(
-                null, // deploymentID
+                "deploymentID_string", // deploymentID
                 null // expand
             );
 

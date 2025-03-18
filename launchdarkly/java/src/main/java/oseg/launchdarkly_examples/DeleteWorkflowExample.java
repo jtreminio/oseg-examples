@@ -24,10 +24,10 @@ public class DeleteWorkflowExample
         try
         {
             new WorkflowsApi(config).deleteWorkflow(
-                null, // projectKey
-                null, // featureFlagKey
-                null, // environmentKey
-                null // workflowId
+                "projectKey_string", // projectKey
+                "featureFlagKey_string", // featureFlagKey
+                "environmentKey_string", // environmentKey
+                "workflowId_string" // workflowId
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling WorkflowsApi#deleteWorkflow");

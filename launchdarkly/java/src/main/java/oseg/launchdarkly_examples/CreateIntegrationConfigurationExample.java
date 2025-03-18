@@ -66,7 +66,7 @@ public class CreateIntegrationConfigurationExample
         try
         {
             var response = new IntegrationsBetaApi(config).createIntegrationConfiguration(
-                null, // integrationKey
+                "integrationKey_string", // integrationKey
                 integrationConfigurationPost
             );
 

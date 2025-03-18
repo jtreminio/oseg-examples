@@ -19,9 +19,9 @@ public class GetDestinationExample
         try
         {
             var response = new DataExportDestinationsApi(config).GetDestination(
-                projectKey: null,
-                environmentKey: null,
-                id: null
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                id: "id_string"
             );
 
             Console.WriteLine(response);

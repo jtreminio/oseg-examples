@@ -7,9 +7,9 @@ end
 
 begin
     response = LaunchDarklyClient::FlagImportConfigurationsBetaApi.new.get_flag_import_configuration(
-        nil, # project_key
-        nil, # integration_key
-        nil, # integration_id
+        "projectKey_string", # project_key
+        "integrationKey_string", # integration_key
+        "integrationId_string", # integration_id
     )
 
     p response

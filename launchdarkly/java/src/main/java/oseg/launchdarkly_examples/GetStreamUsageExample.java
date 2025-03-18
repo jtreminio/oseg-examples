@@ -24,7 +24,7 @@ public class GetStreamUsageExample
         try
         {
             var response = new AccountUsageBetaApi(config).getStreamUsage(
-                null, // source
+                "source_string", // source
                 null, // from
                 null, // to
                 null // tz

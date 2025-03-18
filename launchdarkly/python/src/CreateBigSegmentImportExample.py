@@ -11,9 +11,9 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.SegmentsApi(api_client).create_big_segment_import(
-            project_key=None,
-            environment_key=None,
-            segment_key=None,
+            project_key="projectKey_string",
+            environment_key="environmentKey_string",
+            segment_key="segmentKey_string",
             file=None,
             mode=None,
             wait_on_approvals=None,

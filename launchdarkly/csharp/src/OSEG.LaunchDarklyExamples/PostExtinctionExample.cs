@@ -32,8 +32,8 @@ public class PostExtinctionExample
         try
         {
             new CodeReferencesApi(config).PostExtinction(
-                repo: null,
-                branch: null,
+                repo: "repo_string",
+                branch: "branch_string",
                 extinction: extinction
             );
         }

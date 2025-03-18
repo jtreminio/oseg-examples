@@ -6,7 +6,7 @@ const apiCaller = new api.WebhooksApi();
 apiCaller.setApiKey(api.WebhooksApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.deleteWebhook(
-  undefined, // id
+  "id_string", // id
 ).catch(error => {
   console.log("Exception when calling WebhooksApi#deleteWebhook:");
   console.log(error.body);

@@ -20,7 +20,7 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.WebhooksApi(api_client).patch_webhook(
-            id=None,
+            id="id_string",
             patch_operation=patch_operation,
         )
 

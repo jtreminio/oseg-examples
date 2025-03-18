@@ -8,7 +8,6 @@ additionalProperties:
   oseg.composerPackageName: oseg/namsor_examples
   oseg.namespace: OSEG\NamsorExamples
   oseg.autoloadLocation: "__DIR__ . '/../vendor/autoload.php'"
-  oseg.ignoreOptionalUnset: false
   oseg.security.api_key.api_key: YOUR_API_KEY
 globalProperties:
   apiTests: false

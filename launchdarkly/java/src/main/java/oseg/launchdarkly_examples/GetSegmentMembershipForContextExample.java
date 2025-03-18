@@ -24,10 +24,10 @@ public class GetSegmentMembershipForContextExample
         try
         {
             var response = new SegmentsApi(config).getSegmentMembershipForContext(
-                null, // projectKey
-                null, // environmentKey
-                null, // segmentKey
-                null // contextKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "segmentKey_string", // segmentKey
+                "contextKey_string" // contextKey
             );
 
             System.out.println(response);

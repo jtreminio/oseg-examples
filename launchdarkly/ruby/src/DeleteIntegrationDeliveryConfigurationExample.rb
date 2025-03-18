@@ -7,10 +7,10 @@ end
 
 begin
     LaunchDarklyClient::IntegrationDeliveryConfigurationsBetaApi.new.delete_integration_delivery_configuration(
-        nil, # project_key
-        nil, # environment_key
-        nil, # integration_key
-        nil, # id
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
+        "integrationKey_string", # integration_key
+        "id_string", # id
     )
 rescue LaunchDarklyClient::ApiError => e
     puts "Exception when calling IntegrationDeliveryConfigurationsBetaApi#delete_integration_delivery_configuration: #{e}"

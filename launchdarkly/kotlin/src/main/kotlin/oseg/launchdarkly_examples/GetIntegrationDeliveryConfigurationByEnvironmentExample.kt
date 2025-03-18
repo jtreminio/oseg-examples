@@ -22,8 +22,8 @@ class GetIntegrationDeliveryConfigurationByEnvironmentExample
         try
         {
             val response = IntegrationDeliveryConfigurationsBetaApi().getIntegrationDeliveryConfigurationByEnvironment(
-                projectKey = null,
-                environmentKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
             )
 
             println(response)

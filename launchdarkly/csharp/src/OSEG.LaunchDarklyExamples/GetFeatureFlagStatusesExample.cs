@@ -19,8 +19,8 @@ public class GetFeatureFlagStatusesExample
         try
         {
             var response = new FeatureFlagsApi(config).GetFeatureFlagStatuses(
-                projectKey: null,
-                environmentKey: null
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string"
             );
 
             Console.WriteLine(response);

@@ -19,10 +19,10 @@ public class GetBigSegmentImportExample
         try
         {
             var response = new SegmentsApi(config).GetBigSegmentImport(
-                projectKey: null,
-                environmentKey: null,
-                segmentKey: null,
-                importID: null
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                segmentKey: "segmentKey_string",
+                importID: "importID_string"
             );
 
             Console.WriteLine(response);

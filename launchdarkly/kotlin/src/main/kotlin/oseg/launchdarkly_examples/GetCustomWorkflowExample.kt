@@ -22,10 +22,10 @@ class GetCustomWorkflowExample
         try
         {
             val response = WorkflowsApi().getCustomWorkflow(
-                projectKey = null,
-                featureFlagKey = null,
-                environmentKey = null,
-                workflowId = null,
+                projectKey = "projectKey_string",
+                featureFlagKey = "featureFlagKey_string",
+                environmentKey = "environmentKey_string",
+                workflowId = "workflowId_string",
             )
 
             println(response)

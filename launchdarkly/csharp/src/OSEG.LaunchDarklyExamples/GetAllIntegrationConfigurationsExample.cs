@@ -19,7 +19,7 @@ public class GetAllIntegrationConfigurationsExample
         try
         {
             var response = new IntegrationsBetaApi(config).GetAllIntegrationConfigurations(
-                integrationKey: null
+                integrationKey: "integrationKey_string"
             );
 
             Console.WriteLine(response);

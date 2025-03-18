@@ -19,9 +19,9 @@ post_flag_scheduled_changes_input.comment = "Optional comment describing the sch
 
 begin
     response = LaunchDarklyClient::ScheduledChangesApi.new.post_flag_config_scheduled_changes(
-        nil, # project_key
-        nil, # feature_flag_key
-        nil, # environment_key
+        "projectKey_string", # project_key
+        "featureFlagKey_string", # feature_flag_key
+        "environmentKey_string", # environment_key
         post_flag_scheduled_changes_input,
     )
 

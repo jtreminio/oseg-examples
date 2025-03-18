@@ -28,13 +28,7 @@ const stages = [
 ];
 
 const createWorkflowTemplateInput = new models.CreateWorkflowTemplateInput();
-createWorkflowTemplateInput.key = undefined;
-createWorkflowTemplateInput.name = undefined;
-createWorkflowTemplateInput.description = undefined;
-createWorkflowTemplateInput.workflowId = undefined;
-createWorkflowTemplateInput.projectKey = undefined;
-createWorkflowTemplateInput.environmentKey = undefined;
-createWorkflowTemplateInput.flagKey = undefined;
+createWorkflowTemplateInput.key = "key_string";
 createWorkflowTemplateInput.stages = stages;
 
 apiCaller.createWorkflowTemplate(

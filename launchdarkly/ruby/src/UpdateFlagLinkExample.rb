@@ -15,9 +15,9 @@ patch_operation = [
 
 begin
     response = LaunchDarklyClient::FlagLinksBetaApi.new.update_flag_link(
-        nil, # project_key
-        nil, # feature_flag_key
-        nil, # id
+        "projectKey_string", # project_key
+        "featureFlagKey_string", # feature_flag_key
+        "id_string", # id
         patch_operation,
     )
 

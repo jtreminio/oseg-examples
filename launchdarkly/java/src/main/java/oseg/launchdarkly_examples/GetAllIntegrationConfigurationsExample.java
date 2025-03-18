@@ -24,7 +24,7 @@ public class GetAllIntegrationConfigurationsExample
         try
         {
             var response = new IntegrationsBetaApi(config).getAllIntegrationConfigurations(
-                null // integrationKey
+                "integrationKey_string" // integrationKey
             );
 
             System.out.println(response);

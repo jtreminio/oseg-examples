@@ -12,10 +12,10 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     $response = (new LaunchDarkly\Client\Api\ExperimentsApi(config: $config))->getExperimentResults(
-        project_key: null,
-        environment_key: null,
-        experiment_key: null,
-        metric_key: null,
+        project_key: "projectKey_string",
+        environment_key: "environmentKey_string",
+        experiment_key: "experimentKey_string",
+        metric_key: "metricKey_string",
         iteration_id: null,
         expand: null,
     );

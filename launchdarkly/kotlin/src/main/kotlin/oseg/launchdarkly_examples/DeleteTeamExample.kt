@@ -22,7 +22,7 @@ class DeleteTeamExample
         try
         {
             TeamsApi().deleteTeam(
-                teamKey = null,
+                teamKey = "teamKey_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling TeamsApi#deleteTeam")

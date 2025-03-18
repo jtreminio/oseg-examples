@@ -22,9 +22,9 @@ class GetAIConfigExample
         try
         {
             val response = AIConfigsBetaApi().getAIConfig(
-                ldAPIVersion = null,
-                projectKey = null,
-                configKey = null,
+                ldAPIVersion = AIConfigsBetaApi.LdAPIVersionGetAIConfig.beta,
+                projectKey = "projectKey_string",
+                configKey = "configKey_string",
             )
 
             println(response)

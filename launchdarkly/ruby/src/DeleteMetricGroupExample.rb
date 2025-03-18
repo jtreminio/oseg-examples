@@ -7,8 +7,8 @@ end
 
 begin
     LaunchDarklyClient::MetricsBetaApi.new.delete_metric_group(
-        nil, # project_key
-        nil, # metric_group_key
+        "projectKey_string", # project_key
+        "metricGroupKey_string", # metric_group_key
     )
 rescue LaunchDarklyClient::ApiError => e
     puts "Exception when calling MetricsBetaApi#delete_metric_group: #{e}"

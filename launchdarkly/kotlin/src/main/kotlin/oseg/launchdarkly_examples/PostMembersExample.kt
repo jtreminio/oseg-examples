@@ -33,7 +33,6 @@ class PostMembersExample
                 "team-1",
                 "team-2",
             ),
-            roleAttributes = null,
         )
 
         val newMemberForm = arrayListOf<NewMemberForm>(

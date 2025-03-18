@@ -23,7 +23,13 @@ public class GetApplicationsExample
 
         try
         {
-            var response = new ApplicationsBetaApi(config).getApplications();
+            var response = new ApplicationsBetaApi(config).getApplications(
+                null, // filter
+                null, // limit
+                null, // offset
+                null, // sort
+                null // expand
+            );
 
             System.out.println(response);
         } catch (ApiException e) {

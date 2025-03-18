@@ -44,10 +44,10 @@ public class PatchAIConfigVariationExample
         try
         {
             var response = new AiConfigsBetaApi(config).patchAIConfigVariation(
-                null, // ldAPIVersion
-                null, // projectKey
-                null, // configKey
-                null, // variationKey
+                AIConfigVariationPatch.LDAPIVersionEnum.BETA, // ldAPIVersion
+                "projectKey_string", // projectKey
+                "configKey_string", // configKey
+                "variationKey_string", // variationKey
                 aiConfigVariationPatch
             );
 

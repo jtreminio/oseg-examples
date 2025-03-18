@@ -50,7 +50,7 @@ public class CreateSubscriptionExample
         try
         {
             var response = new IntegrationAuditLogSubscriptionsApi(config).CreateSubscription(
-                integrationKey: null,
+                integrationKey: "integrationKey_string",
                 subscriptionPost: subscriptionPost
             );
 

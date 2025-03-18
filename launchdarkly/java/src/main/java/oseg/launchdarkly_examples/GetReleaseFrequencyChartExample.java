@@ -24,14 +24,14 @@ public class GetReleaseFrequencyChartExample
         try
         {
             var response = new InsightsChartsBetaApi(config).getReleaseFrequencyChart(
-                null, // projectKey
-                null, // environmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
                 null, // applicationKey
                 null, // hasExperiments
                 null, // global
                 null, // groupBy
-                OffsetDateTime.parse("None"), // from
-                OffsetDateTime.parse("None"), // to
+                null, // from
+                null, // to
                 null, // bucketType
                 null, // bucketMs
                 null // expand

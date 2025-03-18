@@ -24,9 +24,9 @@ public class DeleteUserExample
         try
         {
             new UsersApi(config).deleteUser(
-                null, // projectKey
-                null, // environmentKey
-                null // userKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "userKey_string" // userKey
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling UsersApi#deleteUser");

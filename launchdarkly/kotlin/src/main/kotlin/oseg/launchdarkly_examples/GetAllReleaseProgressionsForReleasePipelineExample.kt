@@ -22,8 +22,8 @@ class GetAllReleaseProgressionsForReleasePipelineExample
         try
         {
             val response = ReleasePipelinesBetaApi().getAllReleaseProgressionsForReleasePipeline(
-                projectKey = null,
-                pipelineKey = null,
+                projectKey = "projectKey_string",
+                pipelineKey = "pipelineKey_string",
                 filter = null,
                 limit = null,
                 offset = null,

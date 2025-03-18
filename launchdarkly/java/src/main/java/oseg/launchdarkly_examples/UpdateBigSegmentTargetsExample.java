@@ -36,9 +36,9 @@ public class UpdateBigSegmentTargetsExample
         try
         {
             new SegmentsApi(config).updateBigSegmentTargets(
-                null, // projectKey
-                null, // environmentKey
-                null, // segmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "segmentKey_string", // segmentKey
                 segmentUserState
             );
         } catch (ApiException e) {

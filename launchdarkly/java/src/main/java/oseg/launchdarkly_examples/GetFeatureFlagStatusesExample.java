@@ -24,8 +24,8 @@ public class GetFeatureFlagStatusesExample
         try
         {
             var response = new FeatureFlagsApi(config).getFeatureFlagStatuses(
-                null, // projectKey
-                null // environmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string" // environmentKey
             );
 
             System.out.println(response);

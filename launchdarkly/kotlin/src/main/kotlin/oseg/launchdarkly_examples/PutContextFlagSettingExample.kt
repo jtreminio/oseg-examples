@@ -26,11 +26,11 @@ class PutContextFlagSettingExample
         try
         {
             ContextSettingsApi().putContextFlagSetting(
-                projectKey = null,
-                environmentKey = null,
-                contextKind = null,
-                contextKey = null,
-                featureFlagKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                contextKind = "contextKind_string",
+                contextKey = "contextKey_string",
+                featureFlagKey = "featureFlagKey_string",
                 valuePut = valuePut,
             )
         } catch (e: ClientException) {

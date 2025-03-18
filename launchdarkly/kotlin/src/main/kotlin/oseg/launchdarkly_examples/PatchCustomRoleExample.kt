@@ -35,7 +35,7 @@ class PatchCustomRoleExample
         try
         {
             val response = CustomRolesApi().patchCustomRole(
-                customRoleKey = null,
+                customRoleKey = "customRoleKey_string",
                 patchWithComment = patchWithComment,
             )
 

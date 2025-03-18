@@ -22,8 +22,8 @@ class DeleteMetricExample
         try
         {
             MetricsApi().deleteMetric(
-                projectKey = null,
-                metricKey = null,
+                projectKey = "projectKey_string",
+                metricKey = "metricKey_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling MetricsApi#deleteMetric")

@@ -6,10 +6,10 @@ const apiCaller = new api.ScheduledChangesApi();
 apiCaller.setApiKey(api.ScheduledChangesApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getFeatureFlagScheduledChange(
-  undefined, // projectKey
-  undefined, // featureFlagKey
-  undefined, // environmentKey
-  undefined, // id
+  "projectKey_string", // projectKey
+  "featureFlagKey_string", // featureFlagKey
+  "environmentKey_string", // environmentKey
+  "id_string", // id
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

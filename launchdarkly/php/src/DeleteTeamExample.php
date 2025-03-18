@@ -12,7 +12,7 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     (new LaunchDarkly\Client\Api\TeamsApi(config: $config))->deleteTeam(
-        team_key: null,
+        team_key: "teamKey_string",
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
     echo "Exception when calling TeamsApi#deleteTeam: {$e->getMessage()}";

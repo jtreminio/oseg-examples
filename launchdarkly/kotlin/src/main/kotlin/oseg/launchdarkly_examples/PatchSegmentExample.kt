@@ -41,9 +41,9 @@ class PatchSegmentExample
         try
         {
             val response = SegmentsApi().patchSegment(
-                projectKey = null,
-                environmentKey = null,
-                segmentKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                segmentKey = "segmentKey_string",
                 patchWithComment = patchWithComment,
             )
 

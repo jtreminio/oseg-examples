@@ -28,9 +28,9 @@ $patch_segment_expiring_target_input_rep = (new LaunchDarkly\Client\Model\PatchS
 
 try {
     $response = (new LaunchDarkly\Client\Api\SegmentsApi(config: $config))->patchExpiringTargetsForSegment(
-        project_key: null,
-        environment_key: null,
-        segment_key: null,
+        project_key: "projectKey_string",
+        environment_key: "environmentKey_string",
+        segment_key: "segmentKey_string",
         patch_segment_expiring_target_input_rep: $patch_segment_expiring_target_input_rep,
     );
 

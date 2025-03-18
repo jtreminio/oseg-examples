@@ -32,7 +32,7 @@ public class PatchFlagDefaultsByProjectExample
         try
         {
             var response = new ProjectsApi(config).patchFlagDefaultsByProject(
-                null, // projectKey
+                "projectKey_string", // projectKey
                 patchOperation
             );
 

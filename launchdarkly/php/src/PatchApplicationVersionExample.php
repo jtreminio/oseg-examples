@@ -20,8 +20,8 @@ $patch_operation = [
 
 try {
     $response = (new LaunchDarkly\Client\Api\ApplicationsBetaApi(config: $config))->patchApplicationVersion(
-        application_key: null,
-        version_key: null,
+        application_key: "applicationKey_string",
+        version_key: "versionKey_string",
         patch_operation: $patch_operation,
     );
 

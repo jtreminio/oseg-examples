@@ -15,11 +15,9 @@ $statements_1 = (new LaunchDarkly\Client\Model\StatementPost())
     ->setResources([
         "proj/*:env/*:flag/*;testing-tag",
     ])
-    ->setNotResources(null)
     ->setActions([
         "*",
-    ])
-    ->setNotActions(null);
+    ]);
 
 $statements = [
     $statements_1,
@@ -35,8 +33,6 @@ $subscription_post = (new LaunchDarkly\Client\Model\SubscriptionPost())
         }
     EOD, true))
     ->setOn(false)
-    ->setUrl(null)
-    ->setApiKey(null)
     ->setTags([
         "testing-tag",
     ])
@@ -44,7 +40,7 @@ $subscription_post = (new LaunchDarkly\Client\Model\SubscriptionPost())
 
 try {
     $response = (new LaunchDarkly\Client\Api\IntegrationAuditLogSubscriptionsApi(config: $config))->createSubscription(
-        integration_key: null,
+        integration_key: "integrationKey_string",
         subscription_post: $subscription_post,
     );
 

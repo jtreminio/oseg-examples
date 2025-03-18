@@ -27,7 +27,6 @@ class UpdatePhaseStatusExample
         )
 
         val audiences1 = ReleaserAudienceConfigInput(
-            audienceId = null,
             notifyMemberIds = listOf (
                 "1234a56b7c89d012345e678f",
             ),
@@ -42,16 +41,15 @@ class UpdatePhaseStatusExample
         )
 
         val updatePhaseStatusInput = UpdatePhaseStatusInput(
-            status = null,
             audiences = audiences,
         )
 
         try
         {
             val response = ReleasesBetaApi().updatePhaseStatus(
-                projectKey = null,
-                flagKey = null,
-                phaseId = null,
+                projectKey = "projectKey_string",
+                flagKey = "flagKey_string",
+                phaseId = "phaseId_string",
                 updatePhaseStatusInput = updatePhaseStatusInput,
             )
 

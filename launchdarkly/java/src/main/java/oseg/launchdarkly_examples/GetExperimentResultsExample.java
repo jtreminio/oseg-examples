@@ -24,10 +24,10 @@ public class GetExperimentResultsExample
         try
         {
             var response = new ExperimentsApi(config).getExperimentResults(
-                null, // projectKey
-                null, // environmentKey
-                null, // experimentKey
-                null, // metricKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "experimentKey_string", // experimentKey
+                "metricKey_string", // metricKey
                 null, // iterationId
                 null // expand
             );

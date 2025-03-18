@@ -19,7 +19,7 @@ public class GetIntegrationConfigurationExample
         try
         {
             var response = new IntegrationsBetaApi(config).GetIntegrationConfiguration(
-                integrationConfigurationId: null
+                integrationConfigurationId: "integrationConfigurationId_string"
             );
 
             Console.WriteLine(response);

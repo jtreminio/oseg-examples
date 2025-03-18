@@ -19,8 +19,8 @@ public class GetSubscriptionByIDExample
         try
         {
             var response = new IntegrationAuditLogSubscriptionsApi(config).GetSubscriptionByID(
-                integrationKey: null,
-                id: null
+                integrationKey: "integrationKey_string",
+                id: "id_string"
             );
 
             Console.WriteLine(response);

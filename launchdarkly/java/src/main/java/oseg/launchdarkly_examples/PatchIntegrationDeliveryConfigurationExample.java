@@ -32,10 +32,10 @@ public class PatchIntegrationDeliveryConfigurationExample
         try
         {
             var response = new IntegrationDeliveryConfigurationsBetaApi(config).patchIntegrationDeliveryConfiguration(
-                null, // projectKey
-                null, // environmentKey
-                null, // integrationKey
-                null, // id
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "integrationKey_string", // integrationKey
+                "id_string", // id
                 patchOperation
             );
 

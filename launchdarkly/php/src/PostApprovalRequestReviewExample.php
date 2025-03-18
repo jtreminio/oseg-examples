@@ -16,7 +16,7 @@ $post_approval_request_review_request = (new LaunchDarkly\Client\Model\PostAppro
 
 try {
     $response = (new LaunchDarkly\Client\Api\ApprovalsApi(config: $config))->postApprovalRequestReview(
-        id: null,
+        id: "id_string",
         post_approval_request_review_request: $post_approval_request_review_request,
     );
 

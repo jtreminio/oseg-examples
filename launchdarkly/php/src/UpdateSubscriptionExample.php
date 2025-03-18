@@ -20,8 +20,8 @@ $patch_operation = [
 
 try {
     $response = (new LaunchDarkly\Client\Api\IntegrationAuditLogSubscriptionsApi(config: $config))->updateSubscription(
-        integration_key: null,
-        id: null,
+        integration_key: "integrationKey_string",
+        id: "id_string",
         patch_operation: $patch_operation,
     );
 

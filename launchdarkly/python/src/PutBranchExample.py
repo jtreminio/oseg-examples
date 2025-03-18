@@ -45,8 +45,8 @@ with ApiClient(configuration) as api_client:
 
     try:
         api.CodeReferencesApi(api_client).put_branch(
-            repo=None,
-            branch=None,
+            repo="repo_string",
+            branch="branch_string",
             put_branch=put_branch,
         )
     except ApiException as e:

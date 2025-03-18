@@ -32,8 +32,8 @@ public class UpdateSubscriptionExample
         try
         {
             var response = new IntegrationAuditLogSubscriptionsApi(config).updateSubscription(
-                null, // integrationKey
-                null, // id
+                "integrationKey_string", // integrationKey
+                "id_string", // id
                 patchOperation
             );
 

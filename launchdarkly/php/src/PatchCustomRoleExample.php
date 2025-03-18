@@ -19,12 +19,11 @@ $patch = [
 ];
 
 $patch_with_comment = (new LaunchDarkly\Client\Model\PatchWithComment())
-    ->setComment(null)
     ->setPatch($patch);
 
 try {
     $response = (new LaunchDarkly\Client\Api\CustomRolesApi(config: $config))->patchCustomRole(
-        custom_role_key: null,
+        custom_role_key: "customRoleKey_string",
         patch_with_comment: $patch_with_comment,
     );
 

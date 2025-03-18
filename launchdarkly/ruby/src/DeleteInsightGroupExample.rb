@@ -7,7 +7,7 @@ end
 
 begin
     LaunchDarklyClient::InsightsScoresBetaApi.new.delete_insight_group(
-        nil, # insight_group_key
+        "insightGroupKey_string", # insight_group_key
     )
 rescue LaunchDarklyClient::ApiError => e
     puts "Exception when calling InsightsScoresBetaApi#delete_insight_group: #{e}"

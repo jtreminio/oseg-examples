@@ -57,7 +57,7 @@ $integration_configuration_post = (new LaunchDarkly\Client\Model\IntegrationConf
 
 try {
     $response = (new LaunchDarkly\Client\Api\IntegrationsBetaApi(config: $config))->createIntegrationConfiguration(
-        integration_key: null,
+        integration_key: "integrationKey_string",
         integration_configuration_post: $integration_configuration_post,
     );
 

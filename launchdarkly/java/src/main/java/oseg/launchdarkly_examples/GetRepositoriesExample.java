@@ -23,7 +23,12 @@ public class GetRepositoriesExample
 
         try
         {
-            var response = new CodeReferencesApi(config).getRepositories();
+            var response = new CodeReferencesApi(config).getRepositories(
+                null, // withBranches
+                null, // withReferencesForDefaultBranch
+                null, // projKey
+                null // flagKey
+            );
 
             System.out.println(response);
         } catch (ApiException e) {

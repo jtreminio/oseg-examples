@@ -24,14 +24,13 @@ $patch = [
 ];
 
 $patch_with_comment = (new LaunchDarkly\Client\Model\PatchWithComment())
-    ->setComment(null)
     ->setPatch($patch);
 
 try {
     $response = (new LaunchDarkly\Client\Api\SegmentsApi(config: $config))->patchSegment(
-        project_key: null,
-        environment_key: null,
-        segment_key: null,
+        project_key: "projectKey_string",
+        environment_key: "environmentKey_string",
+        segment_key: "segmentKey_string",
         patch_with_comment: $patch_with_comment,
     );
 

@@ -22,7 +22,7 @@ class GetApplicationVersionsExample
         try
         {
             val response = ApplicationsBetaApi().getApplicationVersions(
-                applicationKey = null,
+                applicationKey = "applicationKey_string",
                 filter = null,
                 limit = null,
                 offset = null,

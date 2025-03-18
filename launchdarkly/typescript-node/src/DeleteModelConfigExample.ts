@@ -6,9 +6,9 @@ const apiCaller = new api.AIConfigsBetaApi();
 apiCaller.setApiKey(api.AIConfigsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.deleteModelConfig(
-  undefined, // lDAPIVersion
+  "beta", // lDAPIVersion
   "default", // projectKey
-  undefined, // modelConfigKey
+  "modelConfigKey_string", // modelConfigKey
 ).catch(error => {
   console.log("Exception when calling AIConfigsBetaApi#deleteModelConfig:");
   console.log(error.body);

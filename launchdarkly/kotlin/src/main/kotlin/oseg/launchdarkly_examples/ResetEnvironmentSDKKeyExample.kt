@@ -22,8 +22,8 @@ class ResetEnvironmentSDKKeyExample
         try
         {
             val response = EnvironmentsApi().resetEnvironmentSDKKey(
-                projectKey = null,
-                environmentKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
                 expiry = null,
             )
 

@@ -22,8 +22,8 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.SegmentsApi(api_client).post_segment(
-            project_key=None,
-            environment_key=None,
+            project_key="projectKey_string",
+            environment_key="environmentKey_string",
             segment_body=segment_body,
         )
 

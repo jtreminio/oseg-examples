@@ -24,7 +24,7 @@ public class GetMetricsExample
         try
         {
             var response = new MetricsApi(config).getMetrics(
-                null, // projectKey
+                "projectKey_string", // projectKey
                 null, // expand
                 null, // limit
                 null, // offset

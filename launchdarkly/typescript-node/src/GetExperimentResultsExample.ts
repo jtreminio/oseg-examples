@@ -6,10 +6,10 @@ const apiCaller = new api.ExperimentsApi();
 apiCaller.setApiKey(api.ExperimentsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getExperimentResults(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // experimentKey
-  undefined, // metricKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "experimentKey_string", // experimentKey
+  "metricKey_string", // metricKey
   undefined, // iterationId
   undefined, // expand
 ).then(response => {

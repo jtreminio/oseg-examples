@@ -22,7 +22,7 @@ class DeleteMemberExample
         try
         {
             AccountMembersApi().deleteMember(
-                id = null,
+                id = "id_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling AccountMembersApi#deleteMember")

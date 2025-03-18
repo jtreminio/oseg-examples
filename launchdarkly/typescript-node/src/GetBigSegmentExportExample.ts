@@ -6,10 +6,10 @@ const apiCaller = new api.SegmentsApi();
 apiCaller.setApiKey(api.SegmentsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getBigSegmentExport(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // segmentKey
-  undefined, // exportID
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "segmentKey_string", // segmentKey
+  "exportID_string", // exportID
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.InsightsScoresBetaApi(api_client).delete_insight_group(
-            insight_group_key=None,
+            insight_group_key="insightGroupKey_string",
         )
     except ApiException as e:
         print("Exception when calling InsightsScoresBetaApi#delete_insight_group: %s\n" % e)

@@ -11,10 +11,10 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.SegmentsApi(api_client).get_big_segment_export(
-            project_key=None,
-            environment_key=None,
-            segment_key=None,
-            export_id=None,
+            project_key="projectKey_string",
+            environment_key="environmentKey_string",
+            segment_key="segmentKey_string",
+            export_id="exportID_string",
         )
 
         pprint(response)

@@ -24,8 +24,8 @@ public class GetFeatureFlagStatusAcrossEnvironmentsExample
         try
         {
             var response = new FeatureFlagsApi(config).getFeatureFlagStatusAcrossEnvironments(
-                null, // projectKey
-                null, // featureFlagKey
+                "projectKey_string", // projectKey
+                "featureFlagKey_string", // featureFlagKey
                 null // env
             );
 

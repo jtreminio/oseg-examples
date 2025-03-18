@@ -24,10 +24,10 @@ public class GetBigSegmentExportExample
         try
         {
             var response = new SegmentsApi(config).getBigSegmentExport(
-                null, // projectKey
-                null, // environmentKey
-                null, // segmentKey
-                null // exportID
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "segmentKey_string", // segmentKey
+                "exportID_string" // exportID
             );
 
             System.out.println(response);

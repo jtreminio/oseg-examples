@@ -22,7 +22,7 @@ class DeleteWorkflowTemplateExample
         try
         {
             WorkflowTemplatesApi().deleteWorkflowTemplate(
-                templateKey = null,
+                templateKey = "templateKey_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling WorkflowTemplatesApi#deleteWorkflowTemplate")

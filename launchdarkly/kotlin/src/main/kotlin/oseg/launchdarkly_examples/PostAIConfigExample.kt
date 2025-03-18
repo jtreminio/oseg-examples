@@ -32,8 +32,8 @@ class PostAIConfigExample
         try
         {
             val response = AIConfigsBetaApi().postAIConfig(
-                ldAPIVersion = null,
-                projectKey = null,
+                ldAPIVersion = AIConfigsBetaApi.LdAPIVersionPostAIConfig.beta,
+                projectKey = "projectKey_string",
                 aiConfigPost = aiConfigPost,
             )
 

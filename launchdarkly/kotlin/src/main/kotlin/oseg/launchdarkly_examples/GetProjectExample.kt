@@ -22,7 +22,7 @@ class GetProjectExample
         try
         {
             val response = ProjectsApi().getProject(
-                projectKey = null,
+                projectKey = "projectKey_string",
                 expand = null,
             )
 

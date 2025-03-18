@@ -19,7 +19,7 @@ public class GetOAuthClientByIdExample
         try
         {
             var response = new OAuth2ClientsApi(config).GetOAuthClientById(
-                clientId: null
+                clientId: "clientId_string"
             );
 
             Console.WriteLine(response);

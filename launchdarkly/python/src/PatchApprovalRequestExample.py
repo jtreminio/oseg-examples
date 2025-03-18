@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.ApprovalsBetaApi(api_client).patch_approval_request(
-            id=None,
+            id="id_string",
         )
 
         pprint(response)

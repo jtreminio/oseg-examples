@@ -12,8 +12,8 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     $response = (new LaunchDarkly\Client\Api\MetricsApi(config: $config))->getMetric(
-        project_key: null,
-        metric_key: null,
+        project_key: "projectKey_string",
+        metric_key: "metricKey_string",
         expand: null,
         version_id: null,
     );

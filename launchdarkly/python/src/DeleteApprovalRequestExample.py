@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.ApprovalsApi(api_client).delete_approval_request(
-            id=None,
+            id="id_string",
         )
     except ApiException as e:
         print("Exception when calling ApprovalsApi#delete_approval_request: %s\n" % e)

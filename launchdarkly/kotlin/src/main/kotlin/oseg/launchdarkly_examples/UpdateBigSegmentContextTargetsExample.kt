@@ -37,9 +37,9 @@ class UpdateBigSegmentContextTargetsExample
         try
         {
             SegmentsApi().updateBigSegmentContextTargets(
-                projectKey = null,
-                environmentKey = null,
-                segmentKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                segmentKey = "segmentKey_string",
                 segmentUserState = segmentUserState,
             )
         } catch (e: ClientException) {

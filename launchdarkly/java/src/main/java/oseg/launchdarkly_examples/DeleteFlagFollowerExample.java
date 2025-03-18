@@ -24,10 +24,10 @@ public class DeleteFlagFollowerExample
         try
         {
             new FollowFlagsApi(config).deleteFlagFollower(
-                null, // projectKey
-                null, // featureFlagKey
-                null, // environmentKey
-                null // memberId
+                "projectKey_string", // projectKey
+                "featureFlagKey_string", // featureFlagKey
+                "environmentKey_string", // environmentKey
+                "memberId_string" // memberId
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling FollowFlagsApi#deleteFlagFollower");

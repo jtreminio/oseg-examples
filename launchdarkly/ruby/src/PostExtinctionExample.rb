@@ -18,8 +18,8 @@ extinction = [
 
 begin
     LaunchDarklyClient::CodeReferencesApi.new.post_extinction(
-        nil, # repo
-        nil, # branch
+        "repo_string", # repo
+        "branch_string", # branch
         extinction,
     )
 rescue LaunchDarklyClient::ApiError => e

@@ -31,7 +31,7 @@ $metric_group_post = (new LaunchDarkly\Client\Model\MetricGroupPost())
 
 try {
     $response = (new LaunchDarkly\Client\Api\MetricsBetaApi(config: $config))->createMetricGroup(
-        project_key: null,
+        project_key: "projectKey_string",
         metric_group_post: $metric_group_post,
     );
 

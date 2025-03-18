@@ -7,7 +7,7 @@ end
 
 begin
     response = LaunchDarklyClient::MetricsBetaApi.new.get_metric_groups(
-        nil, # project_key
+        "projectKey_string", # project_key
     )
 
     p response

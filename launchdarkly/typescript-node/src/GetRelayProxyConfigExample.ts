@@ -6,7 +6,7 @@ const apiCaller = new api.RelayProxyConfigurationsApi();
 apiCaller.setApiKey(api.RelayProxyConfigurationsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getRelayProxyConfig(
-  undefined, // id
+  "id_string", // id
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

@@ -26,7 +26,7 @@ class PostApprovalRequestApplyExample
         try
         {
             val response = ApprovalsApi().postApprovalRequestApply(
-                id = null,
+                id = "id_string",
                 postApprovalRequestApplyRequest = postApprovalRequestApplyRequest,
             )
 

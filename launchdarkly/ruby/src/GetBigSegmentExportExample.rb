@@ -7,10 +7,10 @@ end
 
 begin
     response = LaunchDarklyClient::SegmentsApi.new.get_big_segment_export(
-        nil, # project_key
-        nil, # environment_key
-        nil, # segment_key
-        nil, # export_id
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
+        "segmentKey_string", # segment_key
+        "exportID_string", # export_id
     )
 
     p response

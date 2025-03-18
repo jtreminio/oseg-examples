@@ -14,14 +14,9 @@ $stages_1_action = (new LaunchDarkly\Client\Model\ActionInput());
 
 $stages_1_conditions_1 = (new LaunchDarkly\Client\Model\ConditionInput())
     ->setScheduleKind("relative")
-    ->setExecutionDate(null)
     ->setWaitDuration(2)
     ->setWaitDurationUnit("calendarDay")
-    ->setExecuteNow(null)
-    ->setDescription(null)
-    ->setKind("schedule")
-    ->setNotifyMemberIds(null)
-    ->setNotifyTeamKeys(null);
+    ->setKind("schedule");
 
 $stages_1_conditions = [
     $stages_1_conditions_1,
@@ -29,7 +24,6 @@ $stages_1_conditions = [
 
 $stages_1 = (new LaunchDarkly\Client\Model\StageInput())
     ->setName("10% rollout on day 1")
-    ->setExecuteConditionsInSequence(null)
     ->setAction($stages_1_action)
     ->setConditions($stages_1_conditions);
 
@@ -39,16 +33,14 @@ $stages = [
 
 $custom_workflow_input = (new LaunchDarkly\Client\Model\CustomWorkflowInput())
     ->setName("Progressive rollout starting in two days")
-    ->setMaintainerId(null)
     ->setDescription("Turn flag on for 10% of customers each day")
-    ->setTemplateKey(null)
     ->setStages($stages);
 
 try {
     $response = (new LaunchDarkly\Client\Api\WorkflowsApi(config: $config))->postWorkflow(
-        project_key: null,
-        feature_flag_key: null,
-        environment_key: null,
+        project_key: "projectKey_string",
+        feature_flag_key: "featureFlagKey_string",
+        environment_key: "environmentKey_string",
         custom_workflow_input: $custom_workflow_input,
         template_key: null,
         dry_run: null,

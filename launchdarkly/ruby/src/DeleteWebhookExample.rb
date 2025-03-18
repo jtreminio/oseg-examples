@@ -7,7 +7,7 @@ end
 
 begin
     LaunchDarklyClient::WebhooksApi.new.delete_webhook(
-        nil, # id
+        "id_string", # id
     )
 rescue LaunchDarklyClient::ApiError => e
     puts "Exception when calling WebhooksApi#delete_webhook: #{e}"

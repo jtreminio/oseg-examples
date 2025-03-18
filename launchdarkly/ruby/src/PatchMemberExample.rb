@@ -15,7 +15,7 @@ patch_operation = [
 
 begin
     response = LaunchDarklyClient::AccountMembersApi.new.patch_member(
-        nil, # id
+        "id_string", # id
         patch_operation,
     )
 

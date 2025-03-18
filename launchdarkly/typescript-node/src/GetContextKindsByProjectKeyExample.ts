@@ -6,7 +6,7 @@ const apiCaller = new api.ContextsApi();
 apiCaller.setApiKey(api.ContextsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getContextKindsByProjectKey(
-  undefined, // projectKey
+  "projectKey_string", // projectKey
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

@@ -11,8 +11,8 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.EnvironmentsApi(api_client).delete_environment(
-            project_key=None,
-            environment_key=None,
+            project_key="projectKey_string",
+            environment_key="environmentKey_string",
         )
     except ApiException as e:
         print("Exception when calling EnvironmentsApi#delete_environment: %s\n" % e)

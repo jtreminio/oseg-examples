@@ -25,7 +25,7 @@ public class PostEnvironmentExample
         try
         {
             var response = new EnvironmentsApi(config).PostEnvironment(
-                projectKey: null,
+                projectKey: "projectKey_string",
                 environmentPost: environmentPost
             );
 

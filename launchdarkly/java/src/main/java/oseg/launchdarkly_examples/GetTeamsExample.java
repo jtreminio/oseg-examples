@@ -23,7 +23,12 @@ public class GetTeamsExample
 
         try
         {
-            var response = new TeamsApi(config).getTeams();
+            var response = new TeamsApi(config).getTeams(
+                null, // limit
+                null, // offset
+                null, // filter
+                null // expand
+            );
 
             System.out.println(response);
         } catch (ApiException e) {

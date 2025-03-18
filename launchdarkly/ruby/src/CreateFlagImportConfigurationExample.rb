@@ -25,8 +25,8 @@ flag_import_configuration_post.tags = [
 
 begin
     response = LaunchDarklyClient::FlagImportConfigurationsBetaApi.new.create_flag_import_configuration(
-        nil, # project_key
-        nil, # integration_key
+        "projectKey_string", # project_key
+        "integrationKey_string", # integration_key
         flag_import_configuration_post,
     )
 

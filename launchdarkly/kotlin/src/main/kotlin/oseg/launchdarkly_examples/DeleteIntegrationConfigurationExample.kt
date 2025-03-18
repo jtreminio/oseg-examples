@@ -22,7 +22,7 @@ class DeleteIntegrationConfigurationExample
         try
         {
             IntegrationsBetaApi().deleteIntegrationConfiguration(
-                integrationConfigurationId = null,
+                integrationConfigurationId = "integrationConfigurationId_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling IntegrationsBetaApi#deleteIntegrationConfiguration")

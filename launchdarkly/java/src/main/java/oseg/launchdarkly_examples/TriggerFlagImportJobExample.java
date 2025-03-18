@@ -24,9 +24,9 @@ public class TriggerFlagImportJobExample
         try
         {
             new FlagImportConfigurationsBetaApi(config).triggerFlagImportJob(
-                null, // projectKey
-                null, // integrationKey
-                null // integrationId
+                "projectKey_string", // projectKey
+                "integrationKey_string", // integrationKey
+                "integrationId_string" // integrationId
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling FlagImportConfigurationsBetaApi#triggerFlagImportJob");

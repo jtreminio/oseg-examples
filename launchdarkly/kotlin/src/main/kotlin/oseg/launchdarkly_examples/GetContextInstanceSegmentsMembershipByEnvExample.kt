@@ -22,8 +22,8 @@ class GetContextInstanceSegmentsMembershipByEnvExample
         try
         {
             val response = SegmentsApi().getContextInstanceSegmentsMembershipByEnv(
-                projectKey = null,
-                environmentKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
                 requestBody = Serializer.moshi.adapter<Map<String, Any>>().fromJson("""
                     {
                         "address": {

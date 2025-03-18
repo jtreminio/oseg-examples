@@ -6,10 +6,10 @@ const apiCaller = new api.WorkflowsApi();
 apiCaller.setApiKey(api.WorkflowsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getCustomWorkflow(
-  undefined, // projectKey
-  undefined, // featureFlagKey
-  undefined, // environmentKey
-  undefined, // workflowId
+  "projectKey_string", // projectKey
+  "featureFlagKey_string", // featureFlagKey
+  "environmentKey_string", // environmentKey
+  "workflowId_string", // workflowId
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

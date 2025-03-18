@@ -19,7 +19,7 @@ public class GetApplicationVersionsExample
         try
         {
             var response = new ApplicationsBetaApi(config).GetApplicationVersions(
-                applicationKey: null,
+                applicationKey: "applicationKey_string",
                 filter: null,
                 limit: null,
                 offset: null,

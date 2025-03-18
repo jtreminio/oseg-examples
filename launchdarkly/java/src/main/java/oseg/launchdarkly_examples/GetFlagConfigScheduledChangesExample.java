@@ -24,9 +24,9 @@ public class GetFlagConfigScheduledChangesExample
         try
         {
             var response = new ScheduledChangesApi(config).getFlagConfigScheduledChanges(
-                null, // projectKey
-                null, // featureFlagKey
-                null // environmentKey
+                "projectKey_string", // projectKey
+                "featureFlagKey_string", // featureFlagKey
+                "environmentKey_string" // environmentKey
             );
 
             System.out.println(response);

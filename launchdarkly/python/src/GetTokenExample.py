@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.AccessTokensApi(api_client).get_token(
-            id=None,
+            id="id_string",
         )
 
         pprint(response)

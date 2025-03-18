@@ -7,9 +7,9 @@ end
 
 begin
     LaunchDarklyClient::DataExportDestinationsApi.new.delete_destination(
-        nil, # project_key
-        nil, # environment_key
-        nil, # id
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
+        "id_string", # id
     )
 rescue LaunchDarklyClient::ApiError => e
     puts "Exception when calling DataExportDestinationsApi#delete_destination: #{e}"

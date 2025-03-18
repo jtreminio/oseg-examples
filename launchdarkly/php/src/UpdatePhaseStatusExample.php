@@ -17,7 +17,6 @@ $audiences_1_release_guardian_configuration = (new LaunchDarkly\Client\Model\Rel
     ->setRandomizationUnit("user");
 
 $audiences_1 = (new LaunchDarkly\Client\Model\ReleaserAudienceConfigInput())
-    ->setAudienceId(null)
     ->setNotifyMemberIds([
         "1234a56b7c89d012345e678f",
     ])
@@ -31,14 +30,13 @@ $audiences = [
 ];
 
 $update_phase_status_input = (new LaunchDarkly\Client\Model\UpdatePhaseStatusInput())
-    ->setStatus(null)
     ->setAudiences($audiences);
 
 try {
     $response = (new LaunchDarkly\Client\Api\ReleasesBetaApi(config: $config))->updatePhaseStatus(
-        project_key: null,
-        flag_key: null,
-        phase_id: null,
+        project_key: "projectKey_string",
+        flag_key: "flagKey_string",
+        phase_id: "phaseId_string",
         update_phase_status_input: $update_phase_status_input,
     );
 

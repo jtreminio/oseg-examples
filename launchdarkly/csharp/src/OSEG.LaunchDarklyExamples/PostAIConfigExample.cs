@@ -29,8 +29,8 @@ public class PostAIConfigExample
         try
         {
             var response = new AIConfigsBetaApi(config).PostAIConfig(
-                lDAPIVersion: null,
-                projectKey: null,
+                lDAPIVersion: AIConfigPost.LDAPIVersionEnum.Beta,
+                projectKey: "projectKey_string",
                 aIConfigPost: aIConfigPost
             );
 

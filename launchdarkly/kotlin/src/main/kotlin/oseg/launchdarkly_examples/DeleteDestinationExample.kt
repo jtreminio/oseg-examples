@@ -22,9 +22,9 @@ class DeleteDestinationExample
         try
         {
             DataExportDestinationsApi().deleteDestination(
-                projectKey = null,
-                environmentKey = null,
-                id = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                id = "id_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling DataExportDestinationsApi#deleteDestination")

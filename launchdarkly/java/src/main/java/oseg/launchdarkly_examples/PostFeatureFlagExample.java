@@ -33,7 +33,7 @@ public class PostFeatureFlagExample
         try
         {
             var response = new FeatureFlagsApi(config).postFeatureFlag(
-                null, // projectKey
+                "projectKey_string", // projectKey
                 featureFlagBody,
                 null // clone
             );

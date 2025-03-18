@@ -6,8 +6,8 @@ const apiCaller = new api.FeatureFlagsApi();
 apiCaller.setApiKey(api.FeatureFlagsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.deleteFeatureFlag(
-  undefined, // projectKey
-  undefined, // featureFlagKey
+  "projectKey_string", // projectKey
+  "featureFlagKey_string", // featureFlagKey
 ).catch(error => {
   console.log("Exception when calling FeatureFlagsApi#deleteFeatureFlag:");
   console.log(error.body);

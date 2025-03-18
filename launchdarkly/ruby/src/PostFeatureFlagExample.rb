@@ -16,7 +16,7 @@ feature_flag_body.client_side_availability = client_side_availability
 
 begin
     response = LaunchDarklyClient::FeatureFlagsApi.new.post_feature_flag(
-        nil, # project_key
+        "projectKey_string", # project_key
         feature_flag_body,
     )
 

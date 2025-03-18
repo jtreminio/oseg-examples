@@ -17,8 +17,8 @@ layerPatchInput.comment = "Example comment describing the update";
 layerPatchInput.environmentKey = "production";
 
 apiCaller.updateLayer(
-  undefined, // projectKey
-  undefined, // layerKey
+  "projectKey_string", // projectKey
+  "layerKey_string", // layerKey
   layerPatchInput,
 ).then(response => {
   console.log(response.body);

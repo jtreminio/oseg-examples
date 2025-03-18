@@ -19,7 +19,6 @@ newMemberForm1.teamKeys = [
   "team-1",
   "team-2",
 ];
-newMemberForm1.roleAttributes = undefined;
 
 const newMemberForm = [
   newMemberForm1,

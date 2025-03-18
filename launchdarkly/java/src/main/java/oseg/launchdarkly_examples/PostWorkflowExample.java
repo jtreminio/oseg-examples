@@ -50,9 +50,9 @@ public class PostWorkflowExample
         try
         {
             var response = new WorkflowsApi(config).postWorkflow(
-                null, // projectKey
-                null, // featureFlagKey
-                null, // environmentKey
+                "projectKey_string", // projectKey
+                "featureFlagKey_string", // featureFlagKey
+                "environmentKey_string", // environmentKey
                 customWorkflowInput,
                 null, // templateKey
                 null // dryRun

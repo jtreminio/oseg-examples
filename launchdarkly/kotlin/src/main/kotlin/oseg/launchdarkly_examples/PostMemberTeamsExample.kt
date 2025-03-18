@@ -29,7 +29,7 @@ class PostMemberTeamsExample
         try
         {
             val response = AccountMembersApi().postMemberTeams(
-                id = null,
+                id = "id_string",
                 memberTeamsPostInput = memberTeamsPostInput,
             )
 

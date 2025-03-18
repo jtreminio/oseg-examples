@@ -7,10 +7,10 @@ end
 
 begin
     response = LaunchDarklyClient::ExperimentsApi.new.get_experiment_results_for_metric_group(
-        nil, # project_key
-        nil, # environment_key
-        nil, # experiment_key
-        nil, # metric_group_key
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
+        "experimentKey_string", # experiment_key
+        "metricGroupKey_string", # metric_group_key
     )
 
     p response

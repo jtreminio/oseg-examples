@@ -32,7 +32,7 @@ subscriptionPost.tags = [
 subscriptionPost.statements = statements;
 
 apiCaller.createSubscription(
-  undefined, // integrationKey
+  "integrationKey_string", // integrationKey
   subscriptionPost,
 ).then(response => {
   console.log(response.body);

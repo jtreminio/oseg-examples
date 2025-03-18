@@ -10,9 +10,6 @@ configuration = Configuration(
 
 with ApiClient(configuration) as api_client:
     oauth_client_post = models.OauthClientPost(
-        name=None,
-        redirectUri=None,
-        description=None,
     )
 
     try:

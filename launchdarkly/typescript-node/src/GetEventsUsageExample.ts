@@ -6,7 +6,7 @@ const apiCaller = new api.AccountUsageBetaApi();
 apiCaller.setApiKey(api.AccountUsageBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getEventsUsage(
-  undefined, // type
+  "type_string", // type
   undefined, // from
   undefined, // to
 ).then(response => {

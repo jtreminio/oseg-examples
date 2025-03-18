@@ -15,7 +15,7 @@ patch_operation = [
 
 begin
     response = LaunchDarklyClient::OAuth2ClientsApi.new.patch_o_auth_client(
-        nil, # client_id
+        "clientId_string", # client_id
         patch_operation,
     )
 

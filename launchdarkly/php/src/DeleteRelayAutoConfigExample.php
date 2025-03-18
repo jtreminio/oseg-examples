@@ -12,7 +12,7 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     (new LaunchDarkly\Client\Api\RelayProxyConfigurationsApi(config: $config))->deleteRelayAutoConfig(
-        id: null,
+        id: "id_string",
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
     echo "Exception when calling RelayProxyConfigurationsApi#deleteRelayAutoConfig: {$e->getMessage()}";

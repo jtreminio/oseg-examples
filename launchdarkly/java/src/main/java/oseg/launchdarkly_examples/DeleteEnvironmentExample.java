@@ -24,8 +24,8 @@ public class DeleteEnvironmentExample
         try
         {
             new EnvironmentsApi(config).deleteEnvironment(
-                null, // projectKey
-                null // environmentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string" // environmentKey
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling EnvironmentsApi#deleteEnvironment");

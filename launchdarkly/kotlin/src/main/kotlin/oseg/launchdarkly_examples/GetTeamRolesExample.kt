@@ -22,7 +22,7 @@ class GetTeamRolesExample
         try
         {
             val response = TeamsApi().getTeamRoles(
-                teamKey = null,
+                teamKey = "teamKey_string",
                 limit = null,
                 offset = null,
             )

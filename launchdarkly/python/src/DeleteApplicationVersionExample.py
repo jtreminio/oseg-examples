@@ -11,8 +11,8 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.ApplicationsBetaApi(api_client).delete_application_version(
-            application_key=None,
-            version_key=None,
+            application_key="applicationKey_string",
+            version_key="versionKey_string",
         )
     except ApiException as e:
         print("Exception when calling ApplicationsBetaApi#delete_application_version: %s\n" % e)

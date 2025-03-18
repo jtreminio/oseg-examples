@@ -32,7 +32,7 @@ public class PatchInsightGroupExample
         try
         {
             var response = new InsightsScoresBetaApi(config).patchInsightGroup(
-                null, // insightGroupKey
+                "insightGroupKey_string", // insightGroupKey
                 patchOperation
             );
 

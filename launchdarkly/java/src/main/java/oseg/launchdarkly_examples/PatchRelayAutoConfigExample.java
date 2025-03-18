@@ -35,7 +35,7 @@ public class PatchRelayAutoConfigExample
         try
         {
             var response = new RelayProxyConfigurationsApi(config).patchRelayAutoConfig(
-                null, // id
+                "id_string", // id
                 patchWithComment
             );
 

@@ -19,7 +19,7 @@ public class GetTeamRolesExample
         try
         {
             var response = new TeamsApi(config).GetTeamRoles(
-                teamKey: null,
+                teamKey: "teamKey_string",
                 limit: null,
                 offset: null
             );

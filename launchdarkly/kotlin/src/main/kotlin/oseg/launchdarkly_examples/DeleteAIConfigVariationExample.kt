@@ -22,10 +22,10 @@ class DeleteAIConfigVariationExample
         try
         {
             AIConfigsBetaApi().deleteAIConfigVariation(
-                ldAPIVersion = null,
-                projectKey = null,
-                configKey = null,
-                variationKey = null,
+                ldAPIVersion = AIConfigsBetaApi.LdAPIVersionDeleteAIConfigVariation.beta,
+                projectKey = "projectKey_string",
+                configKey = "configKey_string",
+                variationKey = "variationKey_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling AIConfigsBetaApi#deleteAIConfigVariation")

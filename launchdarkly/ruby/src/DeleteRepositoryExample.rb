@@ -7,7 +7,7 @@ end
 
 begin
     LaunchDarklyClient::CodeReferencesApi.new.delete_repository(
-        nil, # repo
+        "repo_string", # repo
     )
 rescue LaunchDarklyClient::ApiError => e
     puts "Exception when calling CodeReferencesApi#delete_repository: #{e}"

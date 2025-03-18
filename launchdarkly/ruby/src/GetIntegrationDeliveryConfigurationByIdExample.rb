@@ -7,10 +7,10 @@ end
 
 begin
     response = LaunchDarklyClient::IntegrationDeliveryConfigurationsBetaApi.new.get_integration_delivery_configuration_by_id(
-        nil, # project_key
-        nil, # environment_key
-        nil, # integration_key
-        nil, # id
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
+        "integrationKey_string", # integration_key
+        "id_string", # id
     )
 
     p response

@@ -61,7 +61,7 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.IntegrationsBetaApi(api_client).create_integration_configuration(
-            integration_key=None,
+            integration_key="integrationKey_string",
             integration_configuration_post=integration_configuration_post,
         )
 

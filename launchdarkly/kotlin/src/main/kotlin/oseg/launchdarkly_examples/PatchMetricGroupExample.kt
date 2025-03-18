@@ -31,8 +31,8 @@ class PatchMetricGroupExample
         try
         {
             val response = MetricsBetaApi().patchMetricGroup(
-                projectKey = null,
-                metricGroupKey = null,
+                projectKey = "projectKey_string",
+                metricGroupKey = "metricGroupKey_string",
                 patchOperation = patchOperation,
             )
 

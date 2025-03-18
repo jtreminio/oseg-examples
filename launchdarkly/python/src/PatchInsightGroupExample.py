@@ -20,7 +20,7 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.InsightsScoresBetaApi(api_client).patch_insight_group(
-            insight_group_key=None,
+            insight_group_key="insightGroupKey_string",
             patch_operation=patch_operation,
         )
 

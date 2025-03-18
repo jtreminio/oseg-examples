@@ -22,8 +22,8 @@ class GetSearchUsersExample
         try
         {
             val response = UsersApi().getSearchUsers(
-                projectKey = null,
-                environmentKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
                 q = null,
                 limit = null,
                 offset = null,

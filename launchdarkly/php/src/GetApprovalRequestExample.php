@@ -12,7 +12,7 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     $response = (new LaunchDarkly\Client\Api\ApprovalsApi(config: $config))->getApprovalRequest(
-        id: null,
+        id: "id_string",
         expand: null,
     );
 

@@ -10,7 +10,7 @@ postApprovalRequestReviewRequest.kind = models.PostApprovalRequestReviewRequest.
 postApprovalRequestReviewRequest.comment = "Looks good, thanks for updating";
 
 apiCaller.postApprovalRequestReview(
-  undefined, // id
+  "id_string", // id
   postApprovalRequestReviewRequest,
 ).then(response => {
   console.log(response.body);

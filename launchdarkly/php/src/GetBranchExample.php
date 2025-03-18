@@ -12,8 +12,8 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     $response = (new LaunchDarkly\Client\Api\CodeReferencesApi(config: $config))->getBranch(
-        repo: null,
-        branch: null,
+        repo: "repo_string",
+        branch: "branch_string",
         proj_key: null,
         flag_key: null,
     );

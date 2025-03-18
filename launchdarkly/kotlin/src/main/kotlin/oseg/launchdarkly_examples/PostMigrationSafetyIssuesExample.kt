@@ -21,15 +21,14 @@ class PostMigrationSafetyIssuesExample
 
         val flagSempatch = FlagSempatch(
             instructions = listOf (),
-            comment = null,
         )
 
         try
         {
             val response = FeatureFlagsApi().postMigrationSafetyIssues(
-                projectKey = null,
-                flagKey = null,
-                environmentKey = null,
+                projectKey = "projectKey_string",
+                flagKey = "flagKey_string",
+                environmentKey = "environmentKey_string",
                 flagSempatch = flagSempatch,
             )
 

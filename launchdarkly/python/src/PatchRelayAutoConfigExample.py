@@ -24,7 +24,7 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.RelayProxyConfigurationsApi(api_client).patch_relay_auto_config(
-            id=None,
+            id="id_string",
             patch_with_comment=patch_with_comment,
         )
 

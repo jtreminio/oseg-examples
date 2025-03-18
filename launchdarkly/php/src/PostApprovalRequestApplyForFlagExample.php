@@ -15,10 +15,10 @@ $post_approval_request_apply_request = (new LaunchDarkly\Client\Model\PostApprov
 
 try {
     $response = (new LaunchDarkly\Client\Api\ApprovalsApi(config: $config))->postApprovalRequestApplyForFlag(
-        project_key: null,
-        feature_flag_key: null,
-        environment_key: null,
-        id: null,
+        project_key: "projectKey_string",
+        feature_flag_key: "featureFlagKey_string",
+        environment_key: "environmentKey_string",
+        id: "id_string",
         post_approval_request_apply_request: $post_approval_request_apply_request,
     );
 

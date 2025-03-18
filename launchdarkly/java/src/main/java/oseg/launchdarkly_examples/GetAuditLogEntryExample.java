@@ -24,7 +24,7 @@ public class GetAuditLogEntryExample
         try
         {
             var response = new AuditLogApi(config).getAuditLogEntry(
-                null // id
+                "id_string" // id
             );
 
             System.out.println(response);

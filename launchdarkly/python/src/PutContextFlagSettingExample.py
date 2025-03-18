@@ -15,11 +15,11 @@ with ApiClient(configuration) as api_client:
 
     try:
         api.ContextSettingsApi(api_client).put_context_flag_setting(
-            project_key=None,
-            environment_key=None,
-            context_kind=None,
-            context_key=None,
-            feature_flag_key=None,
+            project_key="projectKey_string",
+            environment_key="environmentKey_string",
+            context_kind="contextKind_string",
+            context_key="contextKey_string",
+            feature_flag_key="featureFlagKey_string",
             value_put=value_put,
         )
     except ApiException as e:

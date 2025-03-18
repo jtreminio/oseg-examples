@@ -20,10 +20,10 @@ $patch_operation = [
 
 try {
     $response = (new LaunchDarkly\Client\Api\PersistentStoreIntegrationsBetaApi(config: $config))->patchBigSegmentStoreIntegration(
-        project_key: null,
-        environment_key: null,
-        integration_key: null,
-        integration_id: null,
+        project_key: "projectKey_string",
+        environment_key: "environmentKey_string",
+        integration_key: "integrationKey_string",
+        integration_id: "integrationId_string",
         patch_operation: $patch_operation,
     );
 

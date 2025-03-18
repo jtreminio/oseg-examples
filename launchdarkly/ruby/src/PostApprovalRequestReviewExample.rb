@@ -11,7 +11,7 @@ post_approval_request_review_request.comment = "Looks good, thanks for updating"
 
 begin
     response = LaunchDarklyClient::ApprovalsApi.new.post_approval_request_review(
-        nil, # id
+        "id_string", # id
         post_approval_request_review_request,
     )
 

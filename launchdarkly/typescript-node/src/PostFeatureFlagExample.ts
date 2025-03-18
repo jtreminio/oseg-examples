@@ -15,7 +15,7 @@ featureFlagBody.key = "flag-key-123abc";
 featureFlagBody.clientSideAvailability = clientSideAvailability;
 
 apiCaller.postFeatureFlag(
-  undefined, // projectKey
+  "projectKey_string", // projectKey
   featureFlagBody,
   undefined, // clone
 ).then(response => {

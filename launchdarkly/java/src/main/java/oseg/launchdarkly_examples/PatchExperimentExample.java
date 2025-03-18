@@ -35,9 +35,9 @@ public class PatchExperimentExample
         try
         {
             var response = new ExperimentsApi(config).patchExperiment(
-                null, // projectKey
-                null, // environmentKey
-                null, // experimentKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "experimentKey_string", // experimentKey
                 experimentPatchInput
             );
 

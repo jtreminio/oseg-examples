@@ -29,7 +29,7 @@ public class PatchOAuthClientExample
         try
         {
             var response = new OAuth2ClientsApi(config).PatchOAuthClient(
-                clientId: null,
+                clientId: "clientId_string",
                 patchOperation: patchOperation
             );
 

@@ -19,7 +19,7 @@ public class ListModelConfigsExample
         try
         {
             var response = new AIConfigsBetaApi(config).ListModelConfigs(
-                lDAPIVersion: null,
+                lDAPIVersion: "beta",
                 projectKey: "default"
             );
 

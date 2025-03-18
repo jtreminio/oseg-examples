@@ -22,9 +22,9 @@ class GetHoldoutExample
         try
         {
             val response = HoldoutsBetaApi().getHoldout(
-                projectKey = null,
-                environmentKey = null,
-                holdoutKey = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                holdoutKey = "holdoutKey_string",
                 expand = null,
             )
 

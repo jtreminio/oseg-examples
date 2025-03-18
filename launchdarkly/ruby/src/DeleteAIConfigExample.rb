@@ -7,9 +7,9 @@ end
 
 begin
     LaunchDarklyClient::AIConfigsBetaApi.new.delete_ai_config(
-        nil, # ld_api_version
+        "beta", # ld_api_version
         "default", # project_key
-        nil, # config_key
+        "configKey_string", # config_key
     )
 rescue LaunchDarklyClient::ApiError => e
     puts "Exception when calling AIConfigsBetaApi#delete_ai_config: #{e}"

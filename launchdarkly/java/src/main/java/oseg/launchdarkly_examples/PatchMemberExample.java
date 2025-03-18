@@ -32,7 +32,7 @@ public class PatchMemberExample
         try
         {
             var response = new AccountMembersApi(config).patchMember(
-                null, // id
+                "id_string", // id
                 patchOperation
             );
 

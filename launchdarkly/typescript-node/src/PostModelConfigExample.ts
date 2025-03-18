@@ -19,7 +19,7 @@ modelConfigPost.params = {};
 modelConfigPost.customParams = {};
 
 apiCaller.postModelConfig(
-  undefined, // lDAPIVersion
+  models.ModelConfigPost.LDAPIVersionEnum.Beta, // lDAPIVersion
   "default", // projectKey
   modelConfigPost,
 ).then(response => {

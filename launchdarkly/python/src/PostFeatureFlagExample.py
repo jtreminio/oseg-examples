@@ -22,7 +22,7 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.FeatureFlagsApi(api_client).post_feature_flag(
-            project_key=None,
+            project_key="projectKey_string",
             feature_flag_body=feature_flag_body,
             clone=None,
         )

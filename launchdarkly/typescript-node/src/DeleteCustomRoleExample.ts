@@ -6,7 +6,7 @@ const apiCaller = new api.CustomRolesApi();
 apiCaller.setApiKey(api.CustomRolesApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.deleteCustomRole(
-  undefined, // customRoleKey
+  "customRoleKey_string", // customRoleKey
 ).catch(error => {
   console.log("Exception when calling CustomRolesApi#deleteCustomRole:");
   console.log(error.body);

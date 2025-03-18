@@ -22,7 +22,7 @@ class GetAuditLogEntryExample
         try
         {
             val response = AuditLogApi().getAuditLogEntry(
-                id = null,
+                id = "id_string",
             )
 
             println(response)

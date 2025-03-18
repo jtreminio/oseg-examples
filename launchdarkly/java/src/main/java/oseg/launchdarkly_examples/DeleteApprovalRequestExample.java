@@ -24,7 +24,7 @@ public class DeleteApprovalRequestExample
         try
         {
             new ApprovalsApi(config).deleteApprovalRequest(
-                null // id
+                "id_string" // id
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling ApprovalsApi#deleteApprovalRequest");

@@ -11,8 +11,8 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.MetricsBetaApi(api_client).get_metric_group(
-            project_key=None,
-            metric_group_key=None,
+            project_key="projectKey_string",
+            metric_group_key="metricGroupKey_string",
             expand=None,
         )
 

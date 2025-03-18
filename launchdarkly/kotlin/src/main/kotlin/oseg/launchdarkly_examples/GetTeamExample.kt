@@ -22,7 +22,7 @@ class GetTeamExample
         try
         {
             val response = TeamsApi().getTeam(
-                teamKey = null,
+                teamKey = "teamKey_string",
                 expand = null,
             )
 

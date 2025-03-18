@@ -7,7 +7,7 @@ end
 
 begin
     response = LaunchDarklyClient::ApplicationsBetaApi.new.get_application(
-        nil, # application_key
+        "applicationKey_string", # application_key
     )
 
     p response

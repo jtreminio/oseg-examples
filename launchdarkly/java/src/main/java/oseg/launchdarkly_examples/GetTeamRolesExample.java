@@ -24,7 +24,7 @@ public class GetTeamRolesExample
         try
         {
             var response = new TeamsApi(config).getTeamRoles(
-                null, // teamKey
+                "teamKey_string", // teamKey
                 null, // limit
                 null // offset
             );

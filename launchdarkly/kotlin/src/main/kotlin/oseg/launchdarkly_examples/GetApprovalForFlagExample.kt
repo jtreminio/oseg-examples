@@ -22,10 +22,10 @@ class GetApprovalForFlagExample
         try
         {
             val response = ApprovalsApi().getApprovalForFlag(
-                projectKey = null,
-                featureFlagKey = null,
-                environmentKey = null,
-                id = null,
+                projectKey = "projectKey_string",
+                featureFlagKey = "featureFlagKey_string",
+                environmentKey = "environmentKey_string",
+                id = "id_string",
             )
 
             println(response)

@@ -24,12 +24,12 @@ public class GetAIConfigMetricsExample
         try
         {
             var response = new AiConfigsBetaApi(config).getAIConfigMetrics(
-                null, // ldAPIVersion
-                null, // projectKey
-                null, // configKey
+                "beta", // ldAPIVersion
+                "projectKey_string", // projectKey
+                "configKey_string", // configKey
                 123, // from
                 456, // to
-                null // env
+                "env_string" // env
             );
 
             System.out.println(response);

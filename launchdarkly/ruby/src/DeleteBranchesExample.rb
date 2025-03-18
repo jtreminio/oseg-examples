@@ -7,7 +7,7 @@ end
 
 begin
     LaunchDarklyClient::CodeReferencesApi.new.delete_branches(
-        nil, # repo
+        "repo_string", # repo
         [
             "branch-to-be-deleted",
             "another-branch-to-be-deleted",

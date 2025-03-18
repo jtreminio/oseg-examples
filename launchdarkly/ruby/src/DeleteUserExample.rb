@@ -7,9 +7,9 @@ end
 
 begin
     LaunchDarklyClient::UsersApi.new.delete_user(
-        nil, # project_key
-        nil, # environment_key
-        nil, # user_key
+        "projectKey_string", # project_key
+        "environmentKey_string", # environment_key
+        "userKey_string", # user_key
     )
 rescue LaunchDarklyClient::ApiError => e
     puts "Exception when calling UsersApi#delete_user: #{e}"

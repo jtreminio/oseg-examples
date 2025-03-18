@@ -6,9 +6,9 @@ const apiCaller = new api.UserSettingsApi();
 apiCaller.setApiKey(api.UserSettingsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getUserFlagSettings(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // userKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "userKey_string", // userKey
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

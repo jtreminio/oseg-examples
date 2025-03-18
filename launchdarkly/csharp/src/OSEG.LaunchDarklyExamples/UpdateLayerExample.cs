@@ -33,8 +33,8 @@ public class UpdateLayerExample
         try
         {
             var response = new LayersApi(config).UpdateLayer(
-                projectKey: null,
-                layerKey: null,
+                projectKey: "projectKey_string",
+                layerKey: "layerKey_string",
                 layerPatchInput: layerPatchInput
             );
 

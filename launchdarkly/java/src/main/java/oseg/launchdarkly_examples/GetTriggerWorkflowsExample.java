@@ -24,9 +24,9 @@ public class GetTriggerWorkflowsExample
         try
         {
             var response = new FlagTriggersApi(config).getTriggerWorkflows(
-                null, // projectKey
-                null, // environmentKey
-                null // featureFlagKey
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "featureFlagKey_string" // featureFlagKey
             );
 
             System.out.println(response);

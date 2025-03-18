@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.InsightsDeploymentsBetaApi(api_client).get_deployment(
-            deployment_id=None,
+            deployment_id="deploymentID_string",
             expand=None,
         )
 

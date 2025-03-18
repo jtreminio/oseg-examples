@@ -24,7 +24,7 @@ public class GetStatisticsExample
         try
         {
             var response = new CodeReferencesApi(config).getStatistics(
-                null, // projectKey
+                "projectKey_string", // projectKey
                 null // flagKey
             );
 

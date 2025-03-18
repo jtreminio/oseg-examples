@@ -20,7 +20,7 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.OAuth2ClientsApi(api_client).patch_o_auth_client(
-            client_id=None,
+            client_id="clientId_string",
             patch_operation=patch_operation,
         )
 

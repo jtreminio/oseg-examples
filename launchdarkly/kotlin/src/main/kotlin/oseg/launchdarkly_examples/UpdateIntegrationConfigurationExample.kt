@@ -31,7 +31,7 @@ class UpdateIntegrationConfigurationExample
         try
         {
             val response = IntegrationsBetaApi().updateIntegrationConfiguration(
-                integrationConfigurationId = null,
+                integrationConfigurationId = "integrationConfigurationId_string",
                 patchOperation = patchOperation,
             )
 

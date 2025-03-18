@@ -24,7 +24,7 @@ public class DeleteIntegrationConfigurationExample
         try
         {
             new IntegrationsBetaApi(config).deleteIntegrationConfiguration(
-                null // integrationConfigurationId
+                "integrationConfigurationId_string" // integrationConfigurationId
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling IntegrationsBetaApi#deleteIntegrationConfiguration");

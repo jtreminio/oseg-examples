@@ -12,9 +12,9 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 
 try {
     (new LaunchDarkly\Client\Api\UsersApi(config: $config))->deleteUser(
-        project_key: null,
-        environment_key: null,
-        user_key: null,
+        project_key: "projectKey_string",
+        environment_key: "environmentKey_string",
+        user_key: "userKey_string",
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
     echo "Exception when calling UsersApi#deleteUser: {$e->getMessage()}";

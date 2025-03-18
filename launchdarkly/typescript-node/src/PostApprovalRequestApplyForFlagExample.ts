@@ -9,10 +9,10 @@ const postApprovalRequestApplyRequest = new models.PostApprovalRequestApplyReque
 postApprovalRequestApplyRequest.comment = "Looks good, thanks for updating";
 
 apiCaller.postApprovalRequestApplyForFlag(
-  undefined, // projectKey
-  undefined, // featureFlagKey
-  undefined, // environmentKey
-  undefined, // id
+  "projectKey_string", // projectKey
+  "featureFlagKey_string", // featureFlagKey
+  "environmentKey_string", // environmentKey
+  "id_string", // id
   postApprovalRequestApplyRequest,
 ).then(response => {
   console.log(response.body);

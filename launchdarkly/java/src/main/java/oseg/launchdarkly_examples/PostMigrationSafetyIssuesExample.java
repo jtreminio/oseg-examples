@@ -23,14 +23,13 @@ public class PostMigrationSafetyIssuesExample
 
         var flagSempatch = new FlagSempatch();
         flagSempatch.instructions(List.of ());
-        flagSempatch.comment(null);
 
         try
         {
             var response = new FeatureFlagsApi(config).postMigrationSafetyIssues(
-                null, // projectKey
-                null, // flagKey
-                null, // environmentKey
+                "projectKey_string", // projectKey
+                "flagKey_string", // flagKey
+                "environmentKey_string", // environmentKey
                 flagSempatch
             );
 

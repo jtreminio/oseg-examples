@@ -23,8 +23,8 @@ $extinction = [
 
 try {
     (new LaunchDarkly\Client\Api\CodeReferencesApi(config: $config))->postExtinction(
-        repo: null,
-        branch: null,
+        repo: "repo_string",
+        branch: "branch_string",
         extinction: $extinction,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {

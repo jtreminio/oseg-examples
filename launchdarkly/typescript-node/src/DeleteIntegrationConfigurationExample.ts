@@ -6,7 +6,7 @@ const apiCaller = new api.IntegrationsBetaApi();
 apiCaller.setApiKey(api.IntegrationsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.deleteIntegrationConfiguration(
-  undefined, // integrationConfigurationId
+  "integrationConfigurationId_string", // integrationConfigurationId
 ).catch(error => {
   console.log("Exception when calling IntegrationsBetaApi#deleteIntegrationConfiguration:");
   console.log(error.body);

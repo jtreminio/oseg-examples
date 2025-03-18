@@ -6,8 +6,8 @@ const apiCaller = new api.ReleasesBetaApi();
 apiCaller.setApiKey(api.ReleasesBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.deleteReleaseByFlagKey(
-  undefined, // projectKey
-  undefined, // flagKey
+  "projectKey_string", // projectKey
+  "flagKey_string", // flagKey
 ).catch(error => {
   console.log("Exception when calling ReleasesBetaApi#deleteReleaseByFlagKey:");
   console.log(error.body);

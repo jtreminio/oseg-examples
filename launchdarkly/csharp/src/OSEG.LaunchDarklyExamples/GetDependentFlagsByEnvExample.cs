@@ -19,9 +19,9 @@ public class GetDependentFlagsByEnvExample
         try
         {
             var response = new FeatureFlagsBetaApi(config).GetDependentFlagsByEnv(
-                projectKey: null,
-                environmentKey: null,
-                featureFlagKey: null
+                projectKey: "projectKey_string",
+                environmentKey: "environmentKey_string",
+                featureFlagKey: "featureFlagKey_string"
             );
 
             Console.WriteLine(response);

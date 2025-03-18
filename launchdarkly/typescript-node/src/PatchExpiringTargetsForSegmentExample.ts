@@ -22,9 +22,9 @@ patchSegmentExpiringTargetInputRep.comment = "optional comment";
 patchSegmentExpiringTargetInputRep.instructions = instructions;
 
 apiCaller.patchExpiringTargetsForSegment(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // segmentKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "segmentKey_string", // segmentKey
   patchSegmentExpiringTargetInputRep,
 ).then(response => {
   console.log(response.body);

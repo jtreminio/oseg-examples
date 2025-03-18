@@ -24,10 +24,10 @@ public class GetContextsExample
         try
         {
             var response = new ContextsApi(config).getContexts(
-                null, // projectKey
-                null, // environmentKey
-                null, // kind
-                null, // key
+                "projectKey_string", // projectKey
+                "environmentKey_string", // environmentKey
+                "kind_string", // kind
+                "key_string", // key
                 null, // limit
                 null, // continuationToken
                 null, // sort

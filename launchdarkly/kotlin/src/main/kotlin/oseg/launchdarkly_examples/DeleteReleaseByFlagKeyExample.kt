@@ -22,8 +22,8 @@ class DeleteReleaseByFlagKeyExample
         try
         {
             ReleasesBetaApi().deleteReleaseByFlagKey(
-                projectKey = null,
-                flagKey = null,
+                projectKey = "projectKey_string",
+                flagKey = "flagKey_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling ReleasesBetaApi#deleteReleaseByFlagKey")

@@ -23,10 +23,10 @@ flag_scheduled_changes_input.comment = "Optional comment describing the update t
 
 begin
     response = LaunchDarklyClient::ScheduledChangesApi.new.patch_flag_config_scheduled_change(
-        nil, # project_key
-        nil, # feature_flag_key
-        nil, # environment_key
-        nil, # id
+        "projectKey_string", # project_key
+        "featureFlagKey_string", # feature_flag_key
+        "environmentKey_string", # environment_key
+        "id_string", # id
         flag_scheduled_changes_input,
     )
 

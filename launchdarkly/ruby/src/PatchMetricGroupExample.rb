@@ -15,8 +15,8 @@ patch_operation = [
 
 begin
     response = LaunchDarklyClient::MetricsBetaApi.new.patch_metric_group(
-        nil, # project_key
-        nil, # metric_group_key
+        "projectKey_string", # project_key
+        "metricGroupKey_string", # metric_group_key
         patch_operation,
     )
 

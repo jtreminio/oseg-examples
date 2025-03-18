@@ -24,7 +24,7 @@ public class DeleteRepositoryExample
         try
         {
             new CodeReferencesApi(config).deleteRepository(
-                null // repo
+                "repo_string" // repo
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling CodeReferencesApi#deleteRepository");

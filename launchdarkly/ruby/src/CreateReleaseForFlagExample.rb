@@ -6,13 +6,12 @@ LaunchDarklyClient.configure do |config|
 end
 
 create_release_input = LaunchDarklyClient::CreateReleaseInput.new
-create_release_input.release_pipeline_key = nil
-create_release_input.release_variation_id = nil
+create_release_input.release_pipeline_key = "releasePipelineKey_string"
 
 begin
     response = LaunchDarklyClient::ReleasesBetaApi.new.create_release_for_flag(
-        nil, # project_key
-        nil, # flag_key
+        "projectKey_string", # project_key
+        "flagKey_string", # flag_key
         create_release_input,
     )
 

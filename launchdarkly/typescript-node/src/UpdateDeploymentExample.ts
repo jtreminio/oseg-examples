@@ -14,7 +14,7 @@ const patchOperation = [
 ];
 
 apiCaller.updateDeployment(
-  undefined, // deploymentID
+  "deploymentID_string", // deploymentID
   patchOperation,
 ).then(response => {
   console.log(response.body);

@@ -24,8 +24,8 @@ public class DeleteMetricExample
         try
         {
             new MetricsApi(config).deleteMetric(
-                null, // projectKey
-                null // metricKey
+                "projectKey_string", // projectKey
+                "metricKey_string" // metricKey
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling MetricsApi#deleteMetric");

@@ -6,10 +6,10 @@ const apiCaller = new api.FlagTriggersApi();
 apiCaller.setApiKey(api.FlagTriggersApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.deleteTriggerWorkflow(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // featureFlagKey
-  undefined, // id
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "featureFlagKey_string", // featureFlagKey
+  "id_string", // id
 ).catch(error => {
   console.log("Exception when calling FlagTriggersApi#deleteTriggerWorkflow:");
   console.log(error.body);

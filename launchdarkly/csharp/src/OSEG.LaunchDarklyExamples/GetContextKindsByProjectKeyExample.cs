@@ -19,7 +19,7 @@ public class GetContextKindsByProjectKeyExample
         try
         {
             var response = new ContextsApi(config).GetContextKindsByProjectKey(
-                projectKey: null
+                projectKey: "projectKey_string"
             );
 
             Console.WriteLine(response);

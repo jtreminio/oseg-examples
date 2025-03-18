@@ -19,7 +19,7 @@ public class DeleteInsightGroupExample
         try
         {
             new InsightsScoresBetaApi(config).DeleteInsightGroup(
-                insightGroupKey: null
+                insightGroupKey: "insightGroupKey_string"
             );
         }
         catch (ApiException e)

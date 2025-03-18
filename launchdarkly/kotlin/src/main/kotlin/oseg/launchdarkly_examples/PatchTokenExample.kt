@@ -31,7 +31,7 @@ class PatchTokenExample
         try
         {
             val response = AccessTokensApi().patchToken(
-                id = null,
+                id = "id_string",
                 patchOperation = patchOperation,
             )
 

@@ -22,10 +22,10 @@ class DeleteWorkflowExample
         try
         {
             WorkflowsApi().deleteWorkflow(
-                projectKey = null,
-                featureFlagKey = null,
-                environmentKey = null,
-                workflowId = null,
+                projectKey = "projectKey_string",
+                featureFlagKey = "featureFlagKey_string",
+                environmentKey = "environmentKey_string",
+                workflowId = "workflowId_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling WorkflowsApi#deleteWorkflow")

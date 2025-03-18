@@ -24,7 +24,7 @@ public class GetEventsUsageExample
         try
         {
             var response = new AccountUsageBetaApi(config).getEventsUsage(
-                null, // type
+                "type_string", // type
                 null, // from
                 null // to
             );

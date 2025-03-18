@@ -22,10 +22,10 @@ class DeleteTriggerWorkflowExample
         try
         {
             FlagTriggersApi().deleteTriggerWorkflow(
-                projectKey = null,
-                environmentKey = null,
-                featureFlagKey = null,
-                id = null,
+                projectKey = "projectKey_string",
+                environmentKey = "environmentKey_string",
+                featureFlagKey = "featureFlagKey_string",
+                id = "id_string",
             )
         } catch (e: ClientException) {
             println("4xx response calling FlagTriggersApi#deleteTriggerWorkflow")

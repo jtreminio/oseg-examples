@@ -6,8 +6,8 @@ const apiCaller = new api.ApplicationsBetaApi();
 apiCaller.setApiKey(api.ApplicationsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.deleteApplicationVersion(
-  undefined, // applicationKey
-  undefined, // versionKey
+  "applicationKey_string", // applicationKey
+  "versionKey_string", // versionKey
 ).catch(error => {
   console.log("Exception when calling ApplicationsBetaApi#deleteApplicationVersion:");
   console.log(error.body);

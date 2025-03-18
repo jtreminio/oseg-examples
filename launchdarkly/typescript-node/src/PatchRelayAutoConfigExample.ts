@@ -17,7 +17,7 @@ const patchWithComment = new models.PatchWithComment();
 patchWithComment.patch = patch;
 
 apiCaller.patchRelayAutoConfig(
-  undefined, // id
+  "id_string", // id
   patchWithComment,
 ).then(response => {
   console.log(response.body);

@@ -39,7 +39,7 @@ $treatments = [
 
 $iteration_input = (new LaunchDarkly\Client\Model\IterationInput())
     ->setHypothesis("Example hypothesis, the new button placement will increase conversion")
-    ->setFlags(null)
+    ->setFlags([])
     ->setCanReshuffleTraffic(true)
     ->setPrimarySingleMetricKey("metric-key-123abc")
     ->setPrimaryFunnelKey("metric-group-key-123abc")
@@ -54,9 +54,9 @@ $iteration_input = (new LaunchDarkly\Client\Model\IterationInput())
 
 try {
     $response = (new LaunchDarkly\Client\Api\ExperimentsApi(config: $config))->createIteration(
-        project_key: null,
-        environment_key: null,
-        experiment_key: null,
+        project_key: "projectKey_string",
+        environment_key: "environmentKey_string",
+        experiment_key: "experimentKey_string",
         iteration_input: $iteration_input,
     );
 

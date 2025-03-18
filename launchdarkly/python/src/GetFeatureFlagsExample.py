@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.FeatureFlagsApi(api_client).get_feature_flags(
-            project_key=None,
+            project_key="projectKey_string",
             env=None,
             tag=None,
             limit=None,

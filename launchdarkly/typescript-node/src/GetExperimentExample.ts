@@ -6,9 +6,9 @@ const apiCaller = new api.ExperimentsApi();
 apiCaller.setApiKey(api.ExperimentsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
 apiCaller.getExperiment(
-  undefined, // projectKey
-  undefined, // environmentKey
-  undefined, // experimentKey
+  "projectKey_string", // projectKey
+  "environmentKey_string", // environmentKey
+  "experimentKey_string", // experimentKey
   undefined, // expand
 ).then(response => {
   console.log(response.body);

@@ -11,10 +11,10 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.ExperimentsApi(api_client).get_experiment_results_for_metric_group(
-            project_key=None,
-            environment_key=None,
-            experiment_key=None,
-            metric_group_key=None,
+            project_key="projectKey_string",
+            environment_key="environmentKey_string",
+            experiment_key="experimentKey_string",
+            metric_group_key="metricGroupKey_string",
             iteration_id=None,
         )
 
