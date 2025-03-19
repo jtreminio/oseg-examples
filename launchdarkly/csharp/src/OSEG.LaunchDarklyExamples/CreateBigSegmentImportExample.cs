@@ -21,10 +21,7 @@ public class CreateBigSegmentImportExample
             new SegmentsApi(config).CreateBigSegmentImport(
                 projectKey: "projectKey_string",
                 environmentKey: "environmentKey_string",
-                segmentKey: "segmentKey_string",
-                file: null,
-                mode: null,
-                waitOnApprovals: null
+                segmentKey: "segmentKey_string"
             );
         }
         catch (ApiException e)

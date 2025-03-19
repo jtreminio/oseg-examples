@@ -15,9 +15,6 @@ try {
         project_key: "projectKey_string",
         environment_key: "environmentKey_string",
         segment_key: "segmentKey_string",
-        file: null,
-        mode: null,
-        wait_on_approvals: null,
     );
 } catch (LaunchDarkly\Client\ApiException $e) {
     echo "Exception when calling SegmentsApi#createBigSegmentImport: {$e->getMessage()}";

@@ -12,7 +12,6 @@ with ApiClient(configuration) as api_client:
     try:
         response = api.TeamsApi(api_client).post_team_members(
             team_key="teamKey_string",
-            file=None,
         )
 
         pprint(response)

@@ -19,8 +19,7 @@ public class PostTeamMembersExample
         try
         {
             var response = new TeamsApi(config).PostTeamMembers(
-                teamKey: "teamKey_string",
-                file: null
+                teamKey: "teamKey_string"
             );
 
             Console.WriteLine(response);

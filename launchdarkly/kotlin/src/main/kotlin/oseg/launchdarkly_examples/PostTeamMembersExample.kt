@@ -23,7 +23,6 @@ class PostTeamMembersExample
         {
             val response = TeamsApi().postTeamMembers(
                 teamKey = "teamKey_string",
-                file = null,
             )
 
             println(response)

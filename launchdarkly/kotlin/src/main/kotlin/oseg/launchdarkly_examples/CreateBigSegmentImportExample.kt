@@ -25,9 +25,6 @@ class CreateBigSegmentImportExample
                 projectKey = "projectKey_string",
                 environmentKey = "environmentKey_string",
                 segmentKey = "segmentKey_string",
-                file = null,
-                mode = null,
-                waitOnApprovals = null,
             )
         } catch (e: ClientException) {
             println("4xx response calling SegmentsApi#createBigSegmentImport")
