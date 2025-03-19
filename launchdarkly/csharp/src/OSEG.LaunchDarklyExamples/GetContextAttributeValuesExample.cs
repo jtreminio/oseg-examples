@@ -21,9 +21,7 @@ public class GetContextAttributeValuesExample
             var response = new ContextsApi(config).GetContextAttributeValues(
                 projectKey: "projectKey_string",
                 environmentKey: "environmentKey_string",
-                attributeName: "attributeName_string",
-                filter: null,
-                limit: null
+                attributeName: "attributeName_string"
             );
 
             Console.WriteLine(response);

@@ -35,8 +35,7 @@ public class PatchFeatureFlagExample
             var response = new FeatureFlagsApi(config).PatchFeatureFlag(
                 projectKey: "projectKey_string",
                 featureFlagKey: "featureFlagKey_string",
-                patchWithComment: patchWithComment,
-                ignoreConflicts: null
+                patchWithComment: patchWithComment
             );
 
             Console.WriteLine(response);

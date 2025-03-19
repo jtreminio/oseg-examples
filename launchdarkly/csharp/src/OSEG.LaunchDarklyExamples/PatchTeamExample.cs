@@ -32,8 +32,7 @@ public class PatchTeamExample
         {
             var response = new TeamsApi(config).PatchTeam(
                 teamKey: "teamKey_string",
-                teamPatchInput: teamPatchInput,
-                expand: null
+                teamPatchInput: teamPatchInput
             );
 
             Console.WriteLine(response);

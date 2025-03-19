@@ -13,16 +13,6 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 try {
     $response = (new LaunchDarkly\Client\Api\FeatureFlagsApi(config: $config))->getFeatureFlags(
         project_key: "projectKey_string",
-        env: null,
-        tag: null,
-        limit: null,
-        offset: null,
-        archived: null,
-        summary: null,
-        filter: null,
-        sort: null,
-        compare: null,
-        expand: null,
     );
 
     print_r($response);

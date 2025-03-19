@@ -20,9 +20,7 @@ public class GetUsersExample
         {
             var response = new UsersApi(config).GetUsers(
                 projectKey: "projectKey_string",
-                environmentKey: "environmentKey_string",
-                limit: null,
-                searchAfter: null
+                environmentKey: "environmentKey_string"
             );
 
             Console.WriteLine(response);

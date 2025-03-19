@@ -14,9 +14,6 @@ try {
     $response = (new LaunchDarkly\Client\Api\ReleasePipelinesBetaApi(config: $config))->getAllReleaseProgressionsForReleasePipeline(
         project_key: "projectKey_string",
         pipeline_key: "pipelineKey_string",
-        filter: null,
-        limit: null,
-        offset: null,
     );
 
     print_r($response);

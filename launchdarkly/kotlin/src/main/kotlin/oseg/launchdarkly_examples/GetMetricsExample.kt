@@ -23,11 +23,6 @@ class GetMetricsExample
         {
             val response = MetricsApi().getMetrics(
                 projectKey = "projectKey_string",
-                expand = null,
-                limit = null,
-                offset = null,
-                sort = null,
-                filter = null,
             )
 
             println(response)

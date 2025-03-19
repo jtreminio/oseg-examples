@@ -14,15 +14,6 @@ try {
     $response = (new LaunchDarkly\Client\Api\InsightsChartsBetaApi(config: $config))->getReleaseFrequencyChart(
         project_key: "projectKey_string",
         environment_key: "environmentKey_string",
-        application_key: null,
-        has_experiments: null,
-        global: null,
-        group_by: null,
-        from: null,
-        to: null,
-        bucket_type: null,
-        bucket_ms: null,
-        expand: null,
     );
 
     print_r($response);

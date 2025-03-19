@@ -13,7 +13,6 @@ with ApiClient(configuration) as api_client:
         response = api.MetricsBetaApi(api_client).get_metric_group(
             project_key="projectKey_string",
             metric_group_key="metricGroupKey_string",
-            expand=None,
         )
 
         pprint(response)

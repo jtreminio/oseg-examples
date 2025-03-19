@@ -14,17 +14,6 @@ try {
     $response = (new LaunchDarkly\Client\Api\InsightsFlagEventsBetaApi(config: $config))->getFlagEvents(
         project_key: "projectKey_string",
         environment_key: "environmentKey_string",
-        application_key: null,
-        query: null,
-        impact_size: null,
-        has_experiments: null,
-        global: null,
-        expand: null,
-        limit: null,
-        from: null,
-        to: null,
-        after: null,
-        before: null,
     );
 
     print_r($response);

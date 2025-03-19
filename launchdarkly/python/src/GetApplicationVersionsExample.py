@@ -12,10 +12,6 @@ with ApiClient(configuration) as api_client:
     try:
         response = api.ApplicationsBetaApi(api_client).get_application_versions(
             application_key="applicationKey_string",
-            filter=None,
-            limit=None,
-            offset=None,
-            sort=None,
         )
 
         pprint(response)

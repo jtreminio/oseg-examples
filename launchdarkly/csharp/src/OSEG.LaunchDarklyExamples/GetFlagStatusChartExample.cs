@@ -20,8 +20,7 @@ public class GetFlagStatusChartExample
         {
             var response = new InsightsChartsBetaApi(config).GetFlagStatusChart(
                 projectKey: "projectKey_string",
-                environmentKey: "environmentKey_string",
-                applicationKey: null
+                environmentKey: "environmentKey_string"
             );
 
             Console.WriteLine(response);

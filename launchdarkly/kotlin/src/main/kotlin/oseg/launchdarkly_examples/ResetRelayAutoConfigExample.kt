@@ -23,7 +23,6 @@ class ResetRelayAutoConfigExample
         {
             val response = RelayProxyConfigurationsApi().resetRelayAutoConfig(
                 id = "id_string",
-                expiry = null,
             )
 
             println(response)

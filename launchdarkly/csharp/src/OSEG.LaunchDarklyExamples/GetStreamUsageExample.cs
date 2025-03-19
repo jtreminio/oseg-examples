@@ -19,10 +19,7 @@ public class GetStreamUsageExample
         try
         {
             var response = new AccountUsageBetaApi(config).GetStreamUsage(
-                source: "source_string",
-                from: null,
-                to: null,
-                tz: null
+                source: "source_string"
             );
 
             Console.WriteLine(response);

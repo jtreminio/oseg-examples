@@ -13,11 +13,6 @@ with ApiClient(configuration) as api_client:
         response = api.ExperimentsApi(api_client).get_experiments(
             project_key="projectKey_string",
             environment_key="environmentKey_string",
-            limit=None,
-            offset=None,
-            filter=None,
-            expand=None,
-            lifecycle_state=None,
         )
 
         pprint(response)

@@ -12,11 +12,6 @@ with ApiClient(configuration) as api_client:
     try:
         response = api.AccountUsageBetaApi(api_client).get_stream_usage_by_sdk_version(
             source="source_string",
-            var_from=None,
-            to=None,
-            tz=None,
-            sdk=None,
-            version=None,
         )
 
         pprint(response)

@@ -55,8 +55,6 @@ class PostWorkflowExample
                 featureFlagKey = "featureFlagKey_string",
                 environmentKey = "environmentKey_string",
                 customWorkflowInput = customWorkflowInput,
-                templateKey = null,
-                dryRun = null,
             )
 
             println(response)

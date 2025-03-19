@@ -20,8 +20,7 @@ public class GetMetricGroupExample
         {
             var response = new MetricsBetaApi(config).GetMetricGroup(
                 projectKey: "projectKey_string",
-                metricGroupKey: "metricGroupKey_string",
-                expand: null
+                metricGroupKey: "metricGroupKey_string"
             );
 
             Console.WriteLine(response);

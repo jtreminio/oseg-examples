@@ -23,7 +23,6 @@ class GetDeploymentExample
         {
             val response = InsightsDeploymentsBetaApi().getDeployment(
                 deploymentID = "deploymentID_string",
-                expand = null,
             )
 
             println(response)

@@ -13,10 +13,6 @@ with ApiClient(configuration) as api_client:
         response = api.AIConfigsBetaApi(api_client).get_ai_configs(
             ld_api_version="beta",
             project_key="default",
-            sort=None,
-            limit=None,
-            offset=None,
-            filter=None,
         )
 
         pprint(response)

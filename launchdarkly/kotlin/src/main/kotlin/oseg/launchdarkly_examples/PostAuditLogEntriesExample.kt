@@ -38,10 +38,6 @@ class PostAuditLogEntriesExample
         try
         {
             val response = AuditLogApi().postAuditLogEntries(
-                before = null,
-                after = null,
-                q = null,
-                limit = null,
                 statementPost = statementPost,
             )
 

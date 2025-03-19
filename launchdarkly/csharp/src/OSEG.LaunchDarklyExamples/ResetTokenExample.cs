@@ -19,8 +19,7 @@ public class ResetTokenExample
         try
         {
             var response = new AccessTokensApi(config).ResetToken(
-                id: "id_string",
-                expiry: null
+                id: "id_string"
             );
 
             Console.WriteLine(response);

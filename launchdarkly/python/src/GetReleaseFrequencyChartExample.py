@@ -13,15 +13,6 @@ with ApiClient(configuration) as api_client:
         response = api.InsightsChartsBetaApi(api_client).get_release_frequency_chart(
             project_key="projectKey_string",
             environment_key="environmentKey_string",
-            application_key=None,
-            has_experiments=None,
-            var_global=None,
-            group_by=None,
-            var_from=None,
-            to=None,
-            bucket_type=None,
-            bucket_ms=None,
-            expand=None,
         )
 
         pprint(response)

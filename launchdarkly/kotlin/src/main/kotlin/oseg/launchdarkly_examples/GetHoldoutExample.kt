@@ -25,7 +25,6 @@ class GetHoldoutExample
                 projectKey = "projectKey_string",
                 environmentKey = "environmentKey_string",
                 holdoutKey = "holdoutKey_string",
-                expand = null,
             )
 
             println(response)

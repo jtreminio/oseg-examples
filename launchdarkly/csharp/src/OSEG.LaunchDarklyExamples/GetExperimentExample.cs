@@ -21,8 +21,7 @@ public class GetExperimentExample
             var response = new ExperimentsApi(config).GetExperiment(
                 projectKey: "projectKey_string",
                 environmentKey: "environmentKey_string",
-                experimentKey: "experimentKey_string",
-                expand: null
+                experimentKey: "experimentKey_string"
             );
 
             Console.WriteLine(response);

@@ -13,7 +13,6 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 try {
     $response = (new LaunchDarkly\Client\Api\ProjectsApi(config: $config))->getProject(
         project_key: "projectKey_string",
-        expand: null,
     );
 
     print_r($response);

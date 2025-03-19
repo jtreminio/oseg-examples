@@ -16,11 +16,6 @@ try {
         environment_key: "environmentKey_string",
         kind: "kind_string",
         key: "key_string",
-        limit: null,
-        continuation_token: null,
-        sort: null,
-        filter: null,
-        include_total_count: null,
     );
 
     print_r($response);

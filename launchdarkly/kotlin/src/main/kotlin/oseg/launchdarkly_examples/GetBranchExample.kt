@@ -24,8 +24,6 @@ class GetBranchExample
             val response = CodeReferencesApi().getBranch(
                 repo = "repo_string",
                 branch = "branch_string",
-                projKey = null,
-                flagKey = null,
             )
 
             println(response)

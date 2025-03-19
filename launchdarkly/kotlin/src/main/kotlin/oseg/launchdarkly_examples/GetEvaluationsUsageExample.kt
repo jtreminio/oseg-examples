@@ -25,9 +25,6 @@ class GetEvaluationsUsageExample
                 projectKey = "projectKey_string",
                 environmentKey = "environmentKey_string",
                 featureFlagKey = "featureFlagKey_string",
-                from = null,
-                to = null,
-                tz = null,
             )
 
             println(response)

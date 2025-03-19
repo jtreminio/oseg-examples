@@ -23,7 +23,6 @@ class GetApprovalRequestExample
         {
             val response = ApprovalsApi().getApprovalRequest(
                 id = "id_string",
-                expand = null,
             )
 
             println(response)

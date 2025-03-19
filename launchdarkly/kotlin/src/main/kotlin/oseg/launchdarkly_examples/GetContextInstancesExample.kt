@@ -25,11 +25,6 @@ class GetContextInstancesExample
                 projectKey = "projectKey_string",
                 environmentKey = "environmentKey_string",
                 id = "id_string",
-                limit = null,
-                continuationToken = null,
-                sort = null,
-                filter = null,
-                includeTotalCount = null,
             )
 
             println(response)

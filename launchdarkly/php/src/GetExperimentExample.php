@@ -15,7 +15,6 @@ try {
         project_key: "projectKey_string",
         environment_key: "environmentKey_string",
         experiment_key: "experimentKey_string",
-        expand: null,
     );
 
     print_r($response);

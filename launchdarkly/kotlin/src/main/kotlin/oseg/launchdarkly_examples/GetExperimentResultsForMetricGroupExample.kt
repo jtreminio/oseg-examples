@@ -26,7 +26,6 @@ class GetExperimentResultsForMetricGroupExample
                 environmentKey = "environmentKey_string",
                 experimentKey = "experimentKey_string",
                 metricGroupKey = "metricGroupKey_string",
-                iterationId = null,
             )
 
             println(response)

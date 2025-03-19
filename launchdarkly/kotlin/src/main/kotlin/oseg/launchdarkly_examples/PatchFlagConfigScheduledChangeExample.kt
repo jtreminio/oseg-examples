@@ -43,7 +43,6 @@ class PatchFlagConfigScheduledChangeExample
                 environmentKey = "environmentKey_string",
                 id = "id_string",
                 flagScheduledChangesInput = flagScheduledChangesInput,
-                ignoreConflicts = null,
             )
 
             println(response)

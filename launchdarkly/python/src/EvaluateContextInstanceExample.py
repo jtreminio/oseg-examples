@@ -20,10 +20,6 @@ with ApiClient(configuration) as api_client:
                     "otherAttribute": "other attribute value"
                 }
             """),
-            limit=None,
-            offset=None,
-            sort=None,
-            filter=None,
         )
 
         pprint(response)

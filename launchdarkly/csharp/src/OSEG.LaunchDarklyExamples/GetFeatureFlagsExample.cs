@@ -19,17 +19,7 @@ public class GetFeatureFlagsExample
         try
         {
             var response = new FeatureFlagsApi(config).GetFeatureFlags(
-                projectKey: "projectKey_string",
-                env: null,
-                tag: null,
-                limit: null,
-                offset: null,
-                archived: null,
-                summary: null,
-                filter: null,
-                sort: null,
-                compare: null,
-                expand: null
+                projectKey: "projectKey_string"
             );
 
             Console.WriteLine(response);

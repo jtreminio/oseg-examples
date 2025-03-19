@@ -21,10 +21,6 @@ try {
                 "otherAttribute": "other attribute value"
             }
         EOD, true),
-        limit: null,
-        offset: null,
-        sort: null,
-        filter: null,
     );
 
     print_r($response);

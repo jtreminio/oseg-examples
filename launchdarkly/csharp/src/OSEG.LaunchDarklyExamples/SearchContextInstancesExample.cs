@@ -28,12 +28,7 @@ public class SearchContextInstancesExample
             var response = new ContextsApi(config).SearchContextInstances(
                 projectKey: "projectKey_string",
                 environmentKey: "environmentKey_string",
-                contextInstanceSearch: contextInstanceSearch,
-                limit: null,
-                continuationToken: null,
-                sort: null,
-                filter: null,
-                includeTotalCount: null
+                contextInstanceSearch: contextInstanceSearch
             );
 
             Console.WriteLine(response);

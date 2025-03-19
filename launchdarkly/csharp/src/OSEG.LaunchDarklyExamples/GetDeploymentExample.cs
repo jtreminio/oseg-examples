@@ -19,8 +19,7 @@ public class GetDeploymentExample
         try
         {
             var response = new InsightsDeploymentsBetaApi(config).GetDeployment(
-                deploymentID: "deploymentID_string",
-                expand: null
+                deploymentID: "deploymentID_string"
             );
 
             Console.WriteLine(response);

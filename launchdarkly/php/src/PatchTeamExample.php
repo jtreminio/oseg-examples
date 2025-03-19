@@ -25,7 +25,6 @@ try {
     $response = (new LaunchDarkly\Client\Api\TeamsApi(config: $config))->patchTeam(
         team_key: "teamKey_string",
         team_patch_input: $team_patch_input,
-        expand: null,
     );
 
     print_r($response);

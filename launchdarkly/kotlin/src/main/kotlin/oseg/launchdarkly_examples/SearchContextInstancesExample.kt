@@ -32,11 +32,6 @@ class SearchContextInstancesExample
                 projectKey = "projectKey_string",
                 environmentKey = "environmentKey_string",
                 contextInstanceSearch = contextInstanceSearch,
-                limit = null,
-                continuationToken = null,
-                sort = null,
-                filter = null,
-                includeTotalCount = null,
             )
 
             println(response)

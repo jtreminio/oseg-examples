@@ -13,17 +13,6 @@ with ApiClient(configuration) as api_client:
         response = api.InsightsFlagEventsBetaApi(api_client).get_flag_events(
             project_key="projectKey_string",
             environment_key="environmentKey_string",
-            application_key=None,
-            query=None,
-            impact_size=None,
-            has_experiments=None,
-            var_global=None,
-            expand=None,
-            limit=None,
-            var_from=None,
-            to=None,
-            after=None,
-            before=None,
         )
 
         pprint(response)

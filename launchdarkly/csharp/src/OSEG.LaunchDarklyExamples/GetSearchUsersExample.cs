@@ -20,14 +20,7 @@ public class GetSearchUsersExample
         {
             var response = new UsersApi(config).GetSearchUsers(
                 projectKey: "projectKey_string",
-                environmentKey: "environmentKey_string",
-                q: null,
-                limit: null,
-                offset: null,
-                after: null,
-                sort: null,
-                searchAfter: null,
-                filter: null
+                environmentKey: "environmentKey_string"
             );
 
             Console.WriteLine(response);

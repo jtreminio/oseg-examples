@@ -45,8 +45,6 @@ with ApiClient(configuration) as api_client:
             feature_flag_key="featureFlagKey_string",
             environment_key="environmentKey_string",
             custom_workflow_input=custom_workflow_input,
-            template_key=None,
-            dry_run=None,
         )
 
         pprint(response)

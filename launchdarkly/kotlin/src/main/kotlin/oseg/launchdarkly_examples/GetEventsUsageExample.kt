@@ -23,8 +23,6 @@ class GetEventsUsageExample
         {
             val response = AccountUsageBetaApi().getEventsUsage(
                 type = "type_string",
-                from = null,
-                to = null,
             )
 
             println(response)

@@ -23,7 +23,6 @@ class GetInsightGroupExample
         {
             val response = InsightsScoresBetaApi().getInsightGroup(
                 insightGroupKey = "insightGroupKey_string",
-                expand = null,
             )
 
             println(response)

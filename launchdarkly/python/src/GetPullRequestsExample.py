@@ -12,17 +12,6 @@ with ApiClient(configuration) as api_client:
     try:
         response = api.InsightsPullRequestsBetaApi(api_client).get_pull_requests(
             project_key="projectKey_string",
-            environment_key=None,
-            application_key=None,
-            status=None,
-            query=None,
-            limit=None,
-            expand=None,
-            sort=None,
-            var_from=None,
-            to=None,
-            after=None,
-            before=None,
         )
 
         pprint(response)

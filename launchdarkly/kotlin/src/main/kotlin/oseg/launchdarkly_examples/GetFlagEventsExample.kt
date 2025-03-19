@@ -24,17 +24,6 @@ class GetFlagEventsExample
             val response = InsightsFlagEventsBetaApi().getFlagEvents(
                 projectKey = "projectKey_string",
                 environmentKey = "environmentKey_string",
-                applicationKey = null,
-                query = null,
-                impactSize = null,
-                hasExperiments = null,
-                global = null,
-                expand = null,
-                limit = null,
-                from = null,
-                to = null,
-                after = null,
-                before = null,
             )
 
             println(response)

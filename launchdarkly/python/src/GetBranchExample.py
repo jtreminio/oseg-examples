@@ -13,8 +13,6 @@ with ApiClient(configuration) as api_client:
         response = api.CodeReferencesApi(api_client).get_branch(
             repo="repo_string",
             branch="branch_string",
-            proj_key=None,
-            flag_key=None,
         )
 
         pprint(response)

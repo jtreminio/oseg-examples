@@ -20,11 +20,7 @@ public class GetSegmentsExample
         {
             var response = new SegmentsApi(config).GetSegments(
                 projectKey: "projectKey_string",
-                environmentKey: "environmentKey_string",
-                limit: null,
-                offset: null,
-                sort: null,
-                filter: null
+                environmentKey: "environmentKey_string"
             );
 
             Console.WriteLine(response);

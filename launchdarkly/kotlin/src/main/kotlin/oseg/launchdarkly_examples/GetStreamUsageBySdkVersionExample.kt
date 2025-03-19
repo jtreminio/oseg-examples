@@ -23,11 +23,6 @@ class GetStreamUsageBySdkVersionExample
         {
             val response = AccountUsageBetaApi().getStreamUsageBySdkVersion(
                 source = "source_string",
-                from = null,
-                to = null,
-                tz = null,
-                sdk = null,
-                version = null,
             )
 
             println(response)

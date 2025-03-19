@@ -20,8 +20,7 @@ public class GetFeatureFlagStatusAcrossEnvironmentsExample
         {
             var response = new FeatureFlagsApi(config).GetFeatureFlagStatusAcrossEnvironments(
                 projectKey: "projectKey_string",
-                featureFlagKey: "featureFlagKey_string",
-                env: null
+                featureFlagKey: "featureFlagKey_string"
             );
 
             Console.WriteLine(response);

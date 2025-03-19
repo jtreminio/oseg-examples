@@ -12,14 +12,6 @@ with ApiClient(configuration) as api_client:
     try:
         response = api.InsightsChartsBetaApi(api_client).get_lead_time_chart(
             project_key="projectKey_string",
-            environment_key=None,
-            application_key=None,
-            var_from=None,
-            to=None,
-            bucket_type=None,
-            bucket_ms=None,
-            group_by=None,
-            expand=None,
         )
 
         pprint(response)

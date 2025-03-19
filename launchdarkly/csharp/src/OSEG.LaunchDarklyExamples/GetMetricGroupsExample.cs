@@ -19,11 +19,7 @@ public class GetMetricGroupsExample
         try
         {
             var response = new MetricsBetaApi(config).GetMetricGroups(
-                projectKey: "projectKey_string",
-                filter: null,
-                expand: null,
-                limit: null,
-                offset: null
+                projectKey: "projectKey_string"
             );
 
             Console.WriteLine(response);

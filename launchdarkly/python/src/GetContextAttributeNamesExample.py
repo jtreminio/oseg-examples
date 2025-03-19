@@ -13,8 +13,6 @@ with ApiClient(configuration) as api_client:
         response = api.ContextsApi(api_client).get_context_attribute_names(
             project_key="projectKey_string",
             environment_key="environmentKey_string",
-            filter=None,
-            limit=None,
         )
 
         pprint(response)

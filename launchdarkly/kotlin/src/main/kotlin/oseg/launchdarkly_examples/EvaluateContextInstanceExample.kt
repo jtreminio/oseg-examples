@@ -31,10 +31,6 @@ class EvaluateContextInstanceExample
                         "otherAttribute": "other attribute value"
                     }
                 """)!!,
-                limit = null,
-                offset = null,
-                sort = null,
-                filter = null,
             )
 
             println(response)

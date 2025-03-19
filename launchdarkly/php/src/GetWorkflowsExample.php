@@ -15,10 +15,6 @@ try {
         project_key: "projectKey_string",
         feature_flag_key: "featureFlagKey_string",
         environment_key: "environmentKey_string",
-        status: null,
-        sort: null,
-        limit: null,
-        offset: null,
     );
 
     print_r($response);

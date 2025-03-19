@@ -24,7 +24,6 @@ class GetFeatureFlagStatusAcrossEnvironmentsExample
             val response = FeatureFlagsApi().getFeatureFlagStatusAcrossEnvironments(
                 projectKey = "projectKey_string",
                 featureFlagKey = "featureFlagKey_string",
-                env = null,
             )
 
             println(response)

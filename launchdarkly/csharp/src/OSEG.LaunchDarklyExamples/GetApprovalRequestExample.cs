@@ -19,8 +19,7 @@ public class GetApprovalRequestExample
         try
         {
             var response = new ApprovalsApi(config).GetApprovalRequest(
-                id: "id_string",
-                expand: null
+                id: "id_string"
             );
 
             Console.WriteLine(response);

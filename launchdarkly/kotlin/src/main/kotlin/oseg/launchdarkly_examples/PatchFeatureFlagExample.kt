@@ -38,7 +38,6 @@ class PatchFeatureFlagExample
                 projectKey = "projectKey_string",
                 featureFlagKey = "featureFlagKey_string",
                 patchWithComment = patchWithComment,
-                ignoreConflicts = null,
             )
 
             println(response)

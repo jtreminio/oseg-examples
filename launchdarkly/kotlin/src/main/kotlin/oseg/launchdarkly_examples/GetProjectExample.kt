@@ -23,7 +23,6 @@ class GetProjectExample
         {
             val response = ProjectsApi().getProject(
                 projectKey = "projectKey_string",
-                expand = null,
             )
 
             println(response)

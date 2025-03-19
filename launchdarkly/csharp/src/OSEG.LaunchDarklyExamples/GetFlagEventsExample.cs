@@ -20,18 +20,7 @@ public class GetFlagEventsExample
         {
             var response = new InsightsFlagEventsBetaApi(config).GetFlagEvents(
                 projectKey: "projectKey_string",
-                environmentKey: "environmentKey_string",
-                applicationKey: null,
-                query: null,
-                impactSize: null,
-                hasExperiments: null,
-                global: null,
-                expand: null,
-                limit: null,
-                from: null,
-                to: null,
-                after: null,
-                before: null
+                environmentKey: "environmentKey_string"
             );
 
             Console.WriteLine(response);

@@ -19,12 +19,7 @@ public class GetMetricsExample
         try
         {
             var response = new MetricsApi(config).GetMetrics(
-                projectKey: "projectKey_string",
-                expand: null,
-                limit: null,
-                offset: null,
-                sort: null,
-                filter: null
+                projectKey: "projectKey_string"
             );
 
             Console.WriteLine(response);

@@ -24,7 +24,6 @@ class GetInsightsScoresExample
             val response = InsightsScoresBetaApi().getInsightsScores(
                 projectKey = "projectKey_string",
                 environmentKey = "environmentKey_string",
-                applicationKey = null,
             )
 
             println(response)

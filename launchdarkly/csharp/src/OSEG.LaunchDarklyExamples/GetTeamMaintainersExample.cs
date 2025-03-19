@@ -19,9 +19,7 @@ public class GetTeamMaintainersExample
         try
         {
             var response = new TeamsApi(config).GetTeamMaintainers(
-                teamKey: "teamKey_string",
-                limit: null,
-                offset: null
+                teamKey: "teamKey_string"
             );
 
             Console.WriteLine(response);

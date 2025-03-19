@@ -36,7 +36,6 @@ class PatchTeamExample
             val response = TeamsApi().patchTeam(
                 teamKey = "teamKey_string",
                 teamPatchInput = teamPatchInput,
-                expand = null,
             )
 
             println(response)

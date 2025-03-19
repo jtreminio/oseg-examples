@@ -16,8 +16,6 @@ try {
         environment_key: "environmentKey_string",
         experiment_key: "experimentKey_string",
         metric_key: "metricKey_string",
-        iteration_id: null,
-        expand: null,
     );
 
     print_r($response);

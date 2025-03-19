@@ -24,8 +24,6 @@ class GetAllHoldoutsExample
             val response = HoldoutsBetaApi().getAllHoldouts(
                 projectKey = "projectKey_string",
                 environmentKey = "environmentKey_string",
-                limit = null,
-                offset = null,
             )
 
             println(response)

@@ -13,10 +13,6 @@ with ApiClient(configuration) as api_client:
         response = api.SegmentsApi(api_client).get_segments(
             project_key="projectKey_string",
             environment_key="environmentKey_string",
-            limit=None,
-            offset=None,
-            sort=None,
-            filter=None,
         )
 
         pprint(response)

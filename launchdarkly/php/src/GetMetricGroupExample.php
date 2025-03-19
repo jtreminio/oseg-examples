@@ -14,7 +14,6 @@ try {
     $response = (new LaunchDarkly\Client\Api\MetricsBetaApi(config: $config))->getMetricGroup(
         project_key: "projectKey_string",
         metric_group_key: "metricGroupKey_string",
-        expand: null,
     );
 
     print_r($response);

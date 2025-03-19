@@ -13,7 +13,6 @@ with ApiClient(configuration) as api_client:
         response = api.InsightsChartsBetaApi(api_client).get_flag_status_chart(
             project_key="projectKey_string",
             environment_key="environmentKey_string",
-            application_key=None,
         )
 
         pprint(response)

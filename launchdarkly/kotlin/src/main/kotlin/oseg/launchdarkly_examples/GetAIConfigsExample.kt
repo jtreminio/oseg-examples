@@ -24,10 +24,6 @@ class GetAIConfigsExample
             val response = AIConfigsBetaApi().getAIConfigs(
                 ldAPIVersion = AIConfigsBetaApi.LdAPIVersionGetAIConfigs.beta,
                 projectKey = "default",
-                sort = null,
-                limit = null,
-                offset = null,
-                filter = null,
             )
 
             println(response)

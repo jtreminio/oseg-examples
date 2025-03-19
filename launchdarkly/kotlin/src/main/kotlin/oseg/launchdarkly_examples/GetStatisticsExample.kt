@@ -23,7 +23,6 @@ class GetStatisticsExample
         {
             val response = CodeReferencesApi().getStatistics(
                 projectKey = "projectKey_string",
-                flagKey = null,
             )
 
             println(response)

@@ -14,10 +14,6 @@ try {
     $response = (new LaunchDarkly\Client\Api\AIConfigsBetaApi(config: $config))->getAIConfigs(
         ld_api_version: "beta",
         project_key: "default",
-        sort: null,
-        limit: null,
-        offset: null,
-        filter: null,
     );
 
     print_r($response);

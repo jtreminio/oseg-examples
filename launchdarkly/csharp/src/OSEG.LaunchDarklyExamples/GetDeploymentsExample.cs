@@ -20,16 +20,7 @@ public class GetDeploymentsExample
         {
             var response = new InsightsDeploymentsBetaApi(config).GetDeployments(
                 projectKey: "projectKey_string",
-                environmentKey: "environmentKey_string",
-                applicationKey: null,
-                limit: null,
-                expand: null,
-                from: null,
-                to: null,
-                after: null,
-                before: null,
-                kind: null,
-                status: null
+                environmentKey: "environmentKey_string"
             );
 
             Console.WriteLine(response);

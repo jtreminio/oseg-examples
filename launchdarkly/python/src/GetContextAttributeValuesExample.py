@@ -14,8 +14,6 @@ with ApiClient(configuration) as api_client:
             project_key="projectKey_string",
             environment_key="environmentKey_string",
             attribute_name="attributeName_string",
-            filter=None,
-            limit=None,
         )
 
         pprint(response)

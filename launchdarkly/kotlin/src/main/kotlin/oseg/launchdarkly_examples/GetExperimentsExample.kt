@@ -24,11 +24,6 @@ class GetExperimentsExample
             val response = ExperimentsApi().getExperiments(
                 projectKey = "projectKey_string",
                 environmentKey = "environmentKey_string",
-                limit = null,
-                offset = null,
-                filter = null,
-                expand = null,
-                lifecycleState = null,
             )
 
             println(response)

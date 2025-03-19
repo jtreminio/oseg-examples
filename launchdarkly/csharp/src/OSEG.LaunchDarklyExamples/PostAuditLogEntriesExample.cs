@@ -38,10 +38,6 @@ public class PostAuditLogEntriesExample
         try
         {
             var response = new AuditLogApi(config).PostAuditLogEntries(
-                before: null,
-                after: null,
-                q: null,
-                limit: null,
                 statementPost: statementPost
             );
 

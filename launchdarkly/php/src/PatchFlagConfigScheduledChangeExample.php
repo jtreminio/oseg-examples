@@ -32,7 +32,6 @@ try {
         environment_key: "environmentKey_string",
         id: "id_string",
         flag_scheduled_changes_input: $flag_scheduled_changes_input,
-        ignore_conflicts: null,
     );
 
     print_r($response);

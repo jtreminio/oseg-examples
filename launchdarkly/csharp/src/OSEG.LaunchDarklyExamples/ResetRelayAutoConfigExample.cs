@@ -19,8 +19,7 @@ public class ResetRelayAutoConfigExample
         try
         {
             var response = new RelayProxyConfigurationsApi(config).ResetRelayAutoConfig(
-                id: "id_string",
-                expiry: null
+                id: "id_string"
             );
 
             Console.WriteLine(response);

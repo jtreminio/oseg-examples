@@ -13,7 +13,6 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 try {
     $response = (new LaunchDarkly\Client\Api\AccessTokensApi(config: $config))->resetToken(
         id: "id_string",
-        expiry: null,
     );
 
     print_r($response);

@@ -14,10 +14,6 @@ try {
     $response = (new LaunchDarkly\Client\Api\SegmentsApi(config: $config))->getSegments(
         project_key: "projectKey_string",
         environment_key: "environmentKey_string",
-        limit: null,
-        offset: null,
-        sort: null,
-        filter: null,
     );
 
     print_r($response);

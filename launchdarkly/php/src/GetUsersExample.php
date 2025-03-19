@@ -14,8 +14,6 @@ try {
     $response = (new LaunchDarkly\Client\Api\UsersApi(config: $config))->getUsers(
         project_key: "projectKey_string",
         environment_key: "environmentKey_string",
-        limit: null,
-        search_after: null,
     );
 
     print_r($response);

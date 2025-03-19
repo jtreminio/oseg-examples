@@ -22,12 +22,7 @@ public class GetContextsExample
                 projectKey: "projectKey_string",
                 environmentKey: "environmentKey_string",
                 kind: "kind_string",
-                key: "key_string",
-                limit: null,
-                continuationToken: null,
-                sort: null,
-                filter: null,
-                includeTotalCount: null
+                key: "key_string"
             );
 
             Console.WriteLine(response);

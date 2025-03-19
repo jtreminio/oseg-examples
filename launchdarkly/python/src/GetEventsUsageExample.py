@@ -12,8 +12,6 @@ with ApiClient(configuration) as api_client:
     try:
         response = api.AccountUsageBetaApi(api_client).get_events_usage(
             type="type_string",
-            var_from=None,
-            to=None,
         )
 
         pprint(response)

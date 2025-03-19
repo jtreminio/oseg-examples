@@ -20,9 +20,7 @@ public class GetAllHoldoutsExample
         {
             var response = new HoldoutsBetaApi(config).GetAllHoldouts(
                 projectKey: "projectKey_string",
-                environmentKey: "environmentKey_string",
-                limit: null,
-                offset: null
+                environmentKey: "environmentKey_string"
             );
 
             Console.WriteLine(response);

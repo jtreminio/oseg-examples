@@ -25,7 +25,6 @@ class GetExperimentExample
                 projectKey = "projectKey_string",
                 environmentKey = "environmentKey_string",
                 experimentKey = "experimentKey_string",
-                expand = null,
             )
 
             println(response)

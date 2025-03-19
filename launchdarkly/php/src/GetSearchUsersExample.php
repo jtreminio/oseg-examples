@@ -14,13 +14,6 @@ try {
     $response = (new LaunchDarkly\Client\Api\UsersApi(config: $config))->getSearchUsers(
         project_key: "projectKey_string",
         environment_key: "environmentKey_string",
-        q: null,
-        limit: null,
-        offset: null,
-        after: null,
-        sort: null,
-        search_after: null,
-        filter: null,
     );
 
     print_r($response);

@@ -27,7 +27,6 @@ with ApiClient(configuration) as api_client:
             feature_flag_key="featureFlagKey_string",
             environment_key="environmentKey_string",
             post_flag_scheduled_changes_input=post_flag_scheduled_changes_input,
-            ignore_conflicts=None,
         )
 
         pprint(response)

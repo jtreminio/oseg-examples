@@ -29,10 +29,6 @@ $statement_post = [
 
 try {
     $response = (new LaunchDarkly\Client\Api\AuditLogApi(config: $config))->postAuditLogEntries(
-        before: null,
-        after: null,
-        q: null,
-        limit: null,
         statement_post: $statement_post,
     );
 

@@ -21,8 +21,7 @@ public class GetHoldoutExample
             var response = new HoldoutsBetaApi(config).GetHoldout(
                 projectKey: "projectKey_string",
                 environmentKey: "environmentKey_string",
-                holdoutKey: "holdoutKey_string",
-                expand: null
+                holdoutKey: "holdoutKey_string"
             );
 
             Console.WriteLine(response);

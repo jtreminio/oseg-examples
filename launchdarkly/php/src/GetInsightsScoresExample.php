@@ -14,7 +14,6 @@ try {
     $response = (new LaunchDarkly\Client\Api\InsightsScoresBetaApi(config: $config))->getInsightsScores(
         project_key: "projectKey_string",
         environment_key: "environmentKey_string",
-        application_key: null,
     );
 
     print_r($response);

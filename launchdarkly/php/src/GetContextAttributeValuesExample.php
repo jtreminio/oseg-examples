@@ -15,8 +15,6 @@ try {
         project_key: "projectKey_string",
         environment_key: "environmentKey_string",
         attribute_name: "attributeName_string",
-        filter: null,
-        limit: null,
     );
 
     print_r($response);

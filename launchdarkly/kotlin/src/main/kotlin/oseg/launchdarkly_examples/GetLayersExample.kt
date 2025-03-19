@@ -23,7 +23,6 @@ class GetLayersExample
         {
             val response = LayersApi().getLayers(
                 projectKey = "projectKey_string",
-                filter = null,
             )
 
             println(response)

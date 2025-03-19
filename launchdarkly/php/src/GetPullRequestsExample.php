@@ -13,17 +13,6 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 try {
     $response = (new LaunchDarkly\Client\Api\InsightsPullRequestsBetaApi(config: $config))->getPullRequests(
         project_key: "projectKey_string",
-        environment_key: null,
-        application_key: null,
-        status: null,
-        query: null,
-        limit: null,
-        expand: null,
-        sort: null,
-        from: null,
-        to: null,
-        after: null,
-        before: null,
     );
 
     print_r($response);

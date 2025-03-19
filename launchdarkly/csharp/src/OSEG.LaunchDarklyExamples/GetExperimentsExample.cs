@@ -20,12 +20,7 @@ public class GetExperimentsExample
         {
             var response = new ExperimentsApi(config).GetExperiments(
                 projectKey: "projectKey_string",
-                environmentKey: "environmentKey_string",
-                limit: null,
-                offset: null,
-                filter: null,
-                expand: null,
-                lifecycleState: null
+                environmentKey: "environmentKey_string"
             );
 
             Console.WriteLine(response);

@@ -13,7 +13,6 @@ with ApiClient(configuration) as api_client:
         response = api.EnvironmentsApi(api_client).reset_environment_sdk_key(
             project_key="projectKey_string",
             environment_key="environmentKey_string",
-            expiry=None,
         )
 
         pprint(response)

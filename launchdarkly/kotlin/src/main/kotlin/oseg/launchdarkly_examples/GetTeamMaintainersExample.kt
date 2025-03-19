@@ -23,8 +23,6 @@ class GetTeamMaintainersExample
         {
             val response = TeamsApi().getTeamMaintainers(
                 teamKey = "teamKey_string",
-                limit = null,
-                offset = null,
             )
 
             println(response)

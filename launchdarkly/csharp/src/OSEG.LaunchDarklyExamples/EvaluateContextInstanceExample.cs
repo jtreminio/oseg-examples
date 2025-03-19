@@ -27,11 +27,7 @@ public class EvaluateContextInstanceExample
                         "kind": "user",
                         "otherAttribute": "other attribute value"
                     }
-                """),
-                limit: null,
-                offset: null,
-                sort: null,
-                filter: null
+                """)
             );
 
             Console.WriteLine(response);

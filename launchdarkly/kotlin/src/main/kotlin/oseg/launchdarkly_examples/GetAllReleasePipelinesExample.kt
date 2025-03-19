@@ -23,9 +23,6 @@ class GetAllReleasePipelinesExample
         {
             val response = ReleasePipelinesBetaApi().getAllReleasePipelines(
                 projectKey = "projectKey_string",
-                filter = null,
-                limit = null,
-                offset = null,
             )
 
             println(response)

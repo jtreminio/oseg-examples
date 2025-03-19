@@ -20,8 +20,7 @@ public class ResetEnvironmentSDKKeyExample
         {
             var response = new EnvironmentsApi(config).ResetEnvironmentSDKKey(
                 projectKey: "projectKey_string",
-                environmentKey: "environmentKey_string",
-                expiry: null
+                environmentKey: "environmentKey_string"
             );
 
             Console.WriteLine(response);

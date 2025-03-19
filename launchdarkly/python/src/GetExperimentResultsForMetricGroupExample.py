@@ -15,7 +15,6 @@ with ApiClient(configuration) as api_client:
             environment_key="environmentKey_string",
             experiment_key="experimentKey_string",
             metric_group_key="metricGroupKey_string",
-            iteration_id=None,
         )
 
         pprint(response)

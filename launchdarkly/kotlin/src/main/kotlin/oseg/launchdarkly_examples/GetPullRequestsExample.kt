@@ -23,17 +23,6 @@ class GetPullRequestsExample
         {
             val response = InsightsPullRequestsBetaApi().getPullRequests(
                 projectKey = "projectKey_string",
-                environmentKey = null,
-                applicationKey = null,
-                status = null,
-                query = null,
-                limit = null,
-                expand = null,
-                sort = null,
-                from = null,
-                to = null,
-                after = null,
-                before = null,
             )
 
             println(response)

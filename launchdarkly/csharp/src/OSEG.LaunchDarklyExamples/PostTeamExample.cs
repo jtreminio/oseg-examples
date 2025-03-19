@@ -32,8 +32,7 @@ public class PostTeamExample
         try
         {
             var response = new TeamsApi(config).PostTeam(
-                teamPostInput: teamPostInput,
-                expand: null
+                teamPostInput: teamPostInput
             );
 
             Console.WriteLine(response);

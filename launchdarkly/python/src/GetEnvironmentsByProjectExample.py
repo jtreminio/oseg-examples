@@ -12,10 +12,6 @@ with ApiClient(configuration) as api_client:
     try:
         response = api.EnvironmentsApi(api_client).get_environments_by_project(
             project_key="projectKey_string",
-            limit=None,
-            offset=None,
-            filter=None,
-            sort=None,
         )
 
         pprint(response)

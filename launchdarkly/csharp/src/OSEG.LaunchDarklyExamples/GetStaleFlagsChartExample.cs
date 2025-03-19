@@ -20,12 +20,7 @@ public class GetStaleFlagsChartExample
         {
             var response = new InsightsChartsBetaApi(config).GetStaleFlagsChart(
                 projectKey: "projectKey_string",
-                environmentKey: "environmentKey_string",
-                applicationKey: null,
-                groupBy: null,
-                maintainerId: null,
-                maintainerTeamKey: null,
-                expand: null
+                environmentKey: "environmentKey_string"
             );
 
             Console.WriteLine(response);

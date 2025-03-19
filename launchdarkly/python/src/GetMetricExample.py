@@ -13,8 +13,6 @@ with ApiClient(configuration) as api_client:
         response = api.MetricsApi(api_client).get_metric(
             project_key="projectKey_string",
             metric_key="metricKey_string",
-            expand=None,
-            version_id=None,
         )
 
         pprint(response)

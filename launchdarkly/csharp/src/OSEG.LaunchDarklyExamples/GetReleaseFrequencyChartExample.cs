@@ -20,16 +20,7 @@ public class GetReleaseFrequencyChartExample
         {
             var response = new InsightsChartsBetaApi(config).GetReleaseFrequencyChart(
                 projectKey: "projectKey_string",
-                environmentKey: "environmentKey_string",
-                applicationKey: null,
-                hasExperiments: null,
-                global: null,
-                groupBy: null,
-                from: DateTime.Parse("None"),
-                to: DateTime.Parse("None"),
-                bucketType: null,
-                bucketMs: null,
-                expand: null
+                environmentKey: "environmentKey_string"
             );
 
             Console.WriteLine(response);

@@ -12,16 +12,6 @@ with ApiClient(configuration) as api_client:
     try:
         response = api.FeatureFlagsApi(api_client).get_feature_flags(
             project_key="projectKey_string",
-            env=None,
-            tag=None,
-            limit=None,
-            offset=None,
-            archived=None,
-            summary=None,
-            filter=None,
-            sort=None,
-            compare=None,
-            expand=None,
         )
 
         pprint(response)

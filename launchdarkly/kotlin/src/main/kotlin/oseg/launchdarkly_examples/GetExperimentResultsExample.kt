@@ -26,8 +26,6 @@ class GetExperimentResultsExample
                 environmentKey = "environmentKey_string",
                 experimentKey = "experimentKey_string",
                 metricKey = "metricKey_string",
-                iterationId = null,
-                expand = null,
             )
 
             println(response)

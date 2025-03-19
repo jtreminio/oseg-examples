@@ -19,9 +19,7 @@ public class GetEventsUsageExample
         try
         {
             var response = new AccountUsageBetaApi(config).GetEventsUsage(
-                type: "type_string",
-                from: null,
-                to: null
+                type: "type_string"
             );
 
             Console.WriteLine(response);

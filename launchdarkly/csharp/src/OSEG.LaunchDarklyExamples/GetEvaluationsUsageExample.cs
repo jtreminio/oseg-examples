@@ -21,10 +21,7 @@ public class GetEvaluationsUsageExample
             var response = new AccountUsageBetaApi(config).GetEvaluationsUsage(
                 projectKey: "projectKey_string",
                 environmentKey: "environmentKey_string",
-                featureFlagKey: "featureFlagKey_string",
-                from: null,
-                to: null,
-                tz: null
+                featureFlagKey: "featureFlagKey_string"
             );
 
             Console.WriteLine(response);

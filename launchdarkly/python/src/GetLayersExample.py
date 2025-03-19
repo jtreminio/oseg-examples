@@ -12,7 +12,6 @@ with ApiClient(configuration) as api_client:
     try:
         response = api.LayersApi(api_client).get_layers(
             project_key="projectKey_string",
-            filter=None,
         )
 
         pprint(response)

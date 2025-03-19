@@ -19,12 +19,7 @@ public class GetStreamUsageBySdkVersionExample
         try
         {
             var response = new AccountUsageBetaApi(config).GetStreamUsageBySdkVersion(
-                source: "source_string",
-                from: null,
-                to: null,
-                tz: null,
-                sdk: null,
-                version: null
+                source: "source_string"
             );
 
             Console.WriteLine(response);

@@ -23,7 +23,6 @@ try {
     $response = (new LaunchDarkly\Client\Api\FeatureFlagsApi(config: $config))->postFeatureFlag(
         project_key: "projectKey_string",
         feature_flag_body: $feature_flag_body,
-        clone: null,
     );
 
     print_r($response);

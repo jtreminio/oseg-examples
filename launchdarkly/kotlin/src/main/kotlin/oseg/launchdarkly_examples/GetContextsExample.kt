@@ -26,11 +26,6 @@ class GetContextsExample
                 environmentKey = "environmentKey_string",
                 kind = "kind_string",
                 key = "key_string",
-                limit = null,
-                continuationToken = null,
-                sort = null,
-                filter = null,
-                includeTotalCount = null,
             )
 
             println(response)

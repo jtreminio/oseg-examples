@@ -24,11 +24,6 @@ class GetStaleFlagsChartExample
             val response = InsightsChartsBetaApi().getStaleFlagsChart(
                 projectKey = "projectKey_string",
                 environmentKey = "environmentKey_string",
-                applicationKey = null,
-                groupBy = null,
-                maintainerId = null,
-                maintainerTeamKey = null,
-                expand = null,
             )
 
             println(response)

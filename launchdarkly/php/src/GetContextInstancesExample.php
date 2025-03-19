@@ -15,11 +15,6 @@ try {
         project_key: "projectKey_string",
         environment_key: "environmentKey_string",
         id: "id_string",
-        limit: null,
-        continuation_token: null,
-        sort: null,
-        filter: null,
-        include_total_count: null,
     );
 
     print_r($response);

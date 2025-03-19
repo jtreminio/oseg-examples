@@ -39,8 +39,7 @@ public class PatchFlagConfigScheduledChangeExample
                 featureFlagKey: "featureFlagKey_string",
                 environmentKey: "environmentKey_string",
                 id: "id_string",
-                flagScheduledChangesInput: flagScheduledChangesInput,
-                ignoreConflicts: null
+                flagScheduledChangesInput: flagScheduledChangesInput
             );
 
             Console.WriteLine(response);

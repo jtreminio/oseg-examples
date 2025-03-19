@@ -31,8 +31,7 @@ public class PostFeatureFlagExample
         {
             var response = new FeatureFlagsApi(config).PostFeatureFlag(
                 projectKey: "projectKey_string",
-                featureFlagBody: featureFlagBody,
-                clone: null
+                featureFlagBody: featureFlagBody
             );
 
             Console.WriteLine(response);

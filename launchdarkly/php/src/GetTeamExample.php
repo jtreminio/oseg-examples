@@ -13,7 +13,6 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 try {
     $response = (new LaunchDarkly\Client\Api\TeamsApi(config: $config))->getTeam(
         team_key: "teamKey_string",
-        expand: null,
     );
 
     print_r($response);

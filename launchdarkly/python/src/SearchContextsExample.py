@@ -21,11 +21,6 @@ with ApiClient(configuration) as api_client:
             project_key="projectKey_string",
             environment_key="environmentKey_string",
             context_search=context_search,
-            limit=None,
-            continuation_token=None,
-            sort=None,
-            filter=None,
-            include_total_count=None,
         )
 
         pprint(response)

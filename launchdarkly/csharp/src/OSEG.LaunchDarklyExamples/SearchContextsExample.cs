@@ -28,12 +28,7 @@ public class SearchContextsExample
             var response = new ContextsApi(config).SearchContexts(
                 projectKey: "projectKey_string",
                 environmentKey: "environmentKey_string",
-                contextSearch: contextSearch,
-                limit: null,
-                continuationToken: null,
-                sort: null,
-                filter: null,
-                includeTotalCount: null
+                contextSearch: contextSearch
             );
 
             Console.WriteLine(response);

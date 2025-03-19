@@ -14,8 +14,6 @@ try {
     $response = (new LaunchDarkly\Client\Api\ContextsApi(config: $config))->getContextAttributeNames(
         project_key: "projectKey_string",
         environment_key: "environmentKey_string",
-        filter: null,
-        limit: null,
     );
 
     print_r($response);

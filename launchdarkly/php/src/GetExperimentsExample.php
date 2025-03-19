@@ -14,11 +14,6 @@ try {
     $response = (new LaunchDarkly\Client\Api\ExperimentsApi(config: $config))->getExperiments(
         project_key: "projectKey_string",
         environment_key: "environmentKey_string",
-        limit: null,
-        offset: null,
-        filter: null,
-        expand: null,
-        lifecycle_state: null,
     );
 
     print_r($response);

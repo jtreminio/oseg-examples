@@ -26,7 +26,6 @@ try {
         project_key: "projectKey_string",
         feature_flag_key: "featureFlagKey_string",
         patch_with_comment: $patch_with_comment,
-        ignore_conflicts: null,
     );
 
     print_r($response);

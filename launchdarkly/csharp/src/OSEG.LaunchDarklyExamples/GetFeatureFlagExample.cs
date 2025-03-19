@@ -20,9 +20,7 @@ public class GetFeatureFlagExample
         {
             var response = new FeatureFlagsApi(config).GetFeatureFlag(
                 projectKey: "projectKey_string",
-                featureFlagKey: "featureFlagKey_string",
-                env: null,
-                expand: null
+                featureFlagKey: "featureFlagKey_string"
             );
 
             Console.WriteLine(response);

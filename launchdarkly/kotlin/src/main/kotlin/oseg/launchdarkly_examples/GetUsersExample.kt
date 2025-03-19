@@ -24,8 +24,6 @@ class GetUsersExample
             val response = UsersApi().getUsers(
                 projectKey = "projectKey_string",
                 environmentKey = "environmentKey_string",
-                limit = null,
-                searchAfter = null,
             )
 
             println(response)

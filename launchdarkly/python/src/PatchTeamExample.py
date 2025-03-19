@@ -25,7 +25,6 @@ with ApiClient(configuration) as api_client:
         response = api.TeamsApi(api_client).patch_team(
             team_key="teamKey_string",
             team_patch_input=team_patch_input,
-            expand=None,
         )
 
         pprint(response)

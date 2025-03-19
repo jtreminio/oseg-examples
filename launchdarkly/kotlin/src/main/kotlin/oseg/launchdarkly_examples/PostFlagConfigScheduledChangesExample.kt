@@ -38,7 +38,6 @@ class PostFlagConfigScheduledChangesExample
                 featureFlagKey = "featureFlagKey_string",
                 environmentKey = "environmentKey_string",
                 postFlagScheduledChangesInput = postFlagScheduledChangesInput,
-                ignoreConflicts = null,
             )
 
             println(response)

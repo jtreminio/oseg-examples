@@ -12,7 +12,6 @@ with ApiClient(configuration) as api_client:
     try:
         response = api.AccessTokensApi(api_client).reset_token(
             id="id_string",
-            expiry=None,
         )
 
         pprint(response)

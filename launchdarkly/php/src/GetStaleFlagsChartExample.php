@@ -14,11 +14,6 @@ try {
     $response = (new LaunchDarkly\Client\Api\InsightsChartsBetaApi(config: $config))->getStaleFlagsChart(
         project_key: "projectKey_string",
         environment_key: "environmentKey_string",
-        application_key: null,
-        group_by: null,
-        maintainer_id: null,
-        maintainer_team_key: null,
-        expand: null,
     );
 
     print_r($response);

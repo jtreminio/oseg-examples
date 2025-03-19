@@ -12,10 +12,6 @@ with ApiClient(configuration) as api_client:
     try:
         response = api.MetricsBetaApi(api_client).get_metric_groups(
             project_key="projectKey_string",
-            filter=None,
-            expand=None,
-            limit=None,
-            offset=None,
         )
 
         pprint(response)

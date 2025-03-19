@@ -14,9 +14,6 @@ with ApiClient(configuration) as api_client:
             project_key="projectKey_string",
             environment_key="environmentKey_string",
             feature_flag_key="featureFlagKey_string",
-            var_from=None,
-            to=None,
-            tz=None,
         )
 
         pprint(response)

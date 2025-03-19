@@ -20,11 +20,7 @@ public class GetAIConfigsExample
         {
             var response = new AIConfigsBetaApi(config).GetAIConfigs(
                 lDAPIVersion: "beta",
-                projectKey: "default",
-                sort: null,
-                limit: null,
-                offset: null,
-                filter: null
+                projectKey: "default"
             );
 
             Console.WriteLine(response);

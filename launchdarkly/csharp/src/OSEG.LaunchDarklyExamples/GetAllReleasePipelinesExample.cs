@@ -19,10 +19,7 @@ public class GetAllReleasePipelinesExample
         try
         {
             var response = new ReleasePipelinesBetaApi(config).GetAllReleasePipelines(
-                projectKey: "projectKey_string",
-                filter: null,
-                limit: null,
-                offset: null
+                projectKey: "projectKey_string"
             );
 
             Console.WriteLine(response);

@@ -23,14 +23,6 @@ class GetLeadTimeChartExample
         {
             val response = InsightsChartsBetaApi().getLeadTimeChart(
                 projectKey = "projectKey_string",
-                environmentKey = null,
-                applicationKey = null,
-                from = null,
-                to = null,
-                bucketType = null,
-                bucketMs = null,
-                groupBy = null,
-                expand = null,
             )
 
             println(response)

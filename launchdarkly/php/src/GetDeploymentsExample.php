@@ -14,15 +14,6 @@ try {
     $response = (new LaunchDarkly\Client\Api\InsightsDeploymentsBetaApi(config: $config))->getDeployments(
         project_key: "projectKey_string",
         environment_key: "environmentKey_string",
-        application_key: null,
-        limit: null,
-        expand: null,
-        from: null,
-        to: null,
-        after: null,
-        before: null,
-        kind: null,
-        status: null,
     );
 
     print_r($response);

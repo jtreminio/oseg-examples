@@ -13,7 +13,6 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 try {
     $response = (new LaunchDarkly\Client\Api\InsightsDeploymentsBetaApi(config: $config))->getDeployment(
         deployment_id: "deploymentID_string",
-        expand: null,
     );
 
     print_r($response);

@@ -22,9 +22,7 @@ public class GetExperimentResultsExample
                 projectKey: "projectKey_string",
                 environmentKey: "environmentKey_string",
                 experimentKey: "experimentKey_string",
-                metricKey: "metricKey_string",
-                iterationId: null,
-                expand: null
+                metricKey: "metricKey_string"
             );
 
             Console.WriteLine(response);

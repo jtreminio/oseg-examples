@@ -21,11 +21,6 @@ try {
         project_key: "projectKey_string",
         environment_key: "environmentKey_string",
         context_search: $context_search,
-        limit: null,
-        continuation_token: null,
-        sort: null,
-        filter: null,
-        include_total_count: null,
     );
 
     print_r($response);

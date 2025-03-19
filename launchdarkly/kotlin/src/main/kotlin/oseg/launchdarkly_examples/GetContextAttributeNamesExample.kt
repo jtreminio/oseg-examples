@@ -24,8 +24,6 @@ class GetContextAttributeNamesExample
             val response = ContextsApi().getContextAttributeNames(
                 projectKey = "projectKey_string",
                 environmentKey = "environmentKey_string",
-                filter = null,
-                limit = null,
             )
 
             println(response)

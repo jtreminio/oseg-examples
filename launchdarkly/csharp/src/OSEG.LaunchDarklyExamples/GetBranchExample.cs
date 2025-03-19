@@ -20,9 +20,7 @@ public class GetBranchExample
         {
             var response = new CodeReferencesApi(config).GetBranch(
                 repo: "repo_string",
-                branch: "branch_string",
-                projKey: null,
-                flagKey: null
+                branch: "branch_string"
             );
 
             Console.WriteLine(response);

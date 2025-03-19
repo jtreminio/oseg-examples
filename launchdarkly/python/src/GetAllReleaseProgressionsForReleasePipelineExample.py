@@ -13,9 +13,6 @@ with ApiClient(configuration) as api_client:
         response = api.ReleasePipelinesBetaApi(api_client).get_all_release_progressions_for_release_pipeline(
             project_key="projectKey_string",
             pipeline_key="pipelineKey_string",
-            filter=None,
-            limit=None,
-            offset=None,
         )
 
         pprint(response)

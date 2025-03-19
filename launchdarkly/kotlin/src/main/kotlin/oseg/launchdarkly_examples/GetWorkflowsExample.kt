@@ -25,10 +25,6 @@ class GetWorkflowsExample
                 projectKey = "projectKey_string",
                 featureFlagKey = "featureFlagKey_string",
                 environmentKey = "environmentKey_string",
-                status = null,
-                sort = null,
-                limit = null,
-                offset = null,
             )
 
             println(response)

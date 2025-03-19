@@ -36,7 +36,6 @@ class PostTeamExample
         {
             val response = TeamsApi().postTeam(
                 teamPostInput = teamPostInput,
-                expand = null,
             )
 
             println(response)

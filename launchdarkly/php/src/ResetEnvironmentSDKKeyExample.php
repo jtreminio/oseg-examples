@@ -14,7 +14,6 @@ try {
     $response = (new LaunchDarkly\Client\Api\EnvironmentsApi(config: $config))->resetEnvironmentSDKKey(
         project_key: "projectKey_string",
         environment_key: "environmentKey_string",
-        expiry: null,
     );
 
     print_r($response);

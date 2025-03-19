@@ -13,9 +13,6 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 try {
     $response = (new LaunchDarkly\Client\Api\ReleasePipelinesBetaApi(config: $config))->getAllReleasePipelines(
         project_key: "projectKey_string",
-        filter: null,
-        limit: null,
-        offset: null,
     );
 
     print_r($response);

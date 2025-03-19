@@ -25,8 +25,6 @@ class GetContextAttributeValuesExample
                 projectKey = "projectKey_string",
                 environmentKey = "environmentKey_string",
                 attributeName = "attributeName_string",
-                filter = null,
-                limit = null,
             )
 
             println(response)

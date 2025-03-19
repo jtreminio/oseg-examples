@@ -20,8 +20,7 @@ public class GetInsightsScoresExample
         {
             var response = new InsightsScoresBetaApi(config).GetInsightsScores(
                 projectKey: "projectKey_string",
-                environmentKey: "environmentKey_string",
-                applicationKey: null
+                environmentKey: "environmentKey_string"
             );
 
             Console.WriteLine(response);

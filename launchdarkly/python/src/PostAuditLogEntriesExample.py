@@ -29,10 +29,6 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.AuditLogApi(api_client).post_audit_log_entries(
-            before=None,
-            after=None,
-            q=None,
-            limit=None,
             statement_post=statement_post,
         )
 

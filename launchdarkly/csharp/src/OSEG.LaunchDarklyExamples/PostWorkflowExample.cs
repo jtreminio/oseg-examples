@@ -54,9 +54,7 @@ public class PostWorkflowExample
                 projectKey: "projectKey_string",
                 featureFlagKey: "featureFlagKey_string",
                 environmentKey: "environmentKey_string",
-                customWorkflowInput: customWorkflowInput,
-                templateKey: null,
-                dryRun: null
+                customWorkflowInput: customWorkflowInput
             );
 
             Console.WriteLine(response);

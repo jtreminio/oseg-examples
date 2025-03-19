@@ -24,10 +24,6 @@ class GetSegmentsExample
             val response = SegmentsApi().getSegments(
                 projectKey = "projectKey_string",
                 environmentKey = "environmentKey_string",
-                limit = null,
-                offset = null,
-                sort = null,
-                filter = null,
             )
 
             println(response)

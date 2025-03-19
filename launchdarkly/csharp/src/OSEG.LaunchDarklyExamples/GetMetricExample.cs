@@ -20,9 +20,7 @@ public class GetMetricExample
         {
             var response = new MetricsApi(config).GetMetric(
                 projectKey: "projectKey_string",
-                metricKey: "metricKey_string",
-                expand: null,
-                versionId: null
+                metricKey: "metricKey_string"
             );
 
             Console.WriteLine(response);

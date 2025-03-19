@@ -13,8 +13,6 @@ $config->setApiKey("Authorization", "YOUR_API_KEY");
 try {
     $response = (new LaunchDarkly\Client\Api\AccountUsageBetaApi(config: $config))->getEventsUsage(
         type: "type_string",
-        from: null,
-        to: null,
     );
 
     print_r($response);

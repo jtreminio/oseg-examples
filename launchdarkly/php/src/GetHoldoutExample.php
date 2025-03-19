@@ -15,7 +15,6 @@ try {
         project_key: "projectKey_string",
         environment_key: "environmentKey_string",
         holdout_key: "holdoutKey_string",
-        expand: null,
     );
 
     print_r($response);

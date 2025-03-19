@@ -19,8 +19,7 @@ public class GetTeamExample
         try
         {
             var response = new TeamsApi(config).GetTeam(
-                teamKey: "teamKey_string",
-                expand: null
+                teamKey: "teamKey_string"
             );
 
             Console.WriteLine(response);

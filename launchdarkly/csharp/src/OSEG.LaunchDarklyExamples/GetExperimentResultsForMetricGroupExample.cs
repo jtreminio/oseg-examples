@@ -22,8 +22,7 @@ public class GetExperimentResultsForMetricGroupExample
                 projectKey: "projectKey_string",
                 environmentKey: "environmentKey_string",
                 experimentKey: "experimentKey_string",
-                metricGroupKey: "metricGroupKey_string",
-                iterationId: null
+                metricGroupKey: "metricGroupKey_string"
             );
 
             Console.WriteLine(response);

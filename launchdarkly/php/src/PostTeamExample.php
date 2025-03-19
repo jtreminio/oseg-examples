@@ -25,7 +25,6 @@ $team_post_input = (new LaunchDarkly\Client\Model\TeamPostInput())
 try {
     $response = (new LaunchDarkly\Client\Api\TeamsApi(config: $config))->postTeam(
         team_post_input: $team_post_input,
-        expand: null,
     );
 
     print_r($response);

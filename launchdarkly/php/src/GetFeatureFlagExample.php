@@ -14,8 +14,6 @@ try {
     $response = (new LaunchDarkly\Client\Api\FeatureFlagsApi(config: $config))->getFeatureFlag(
         project_key: "projectKey_string",
         feature_flag_key: "featureFlagKey_string",
-        env: null,
-        expand: null,
     );
 
     print_r($response);

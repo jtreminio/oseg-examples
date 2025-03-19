@@ -23,7 +23,6 @@ class GetMemberExample
         {
             val response = AccountMembersApi().getMember(
                 id = "id_string",
-                expand = null,
             )
 
             println(response)

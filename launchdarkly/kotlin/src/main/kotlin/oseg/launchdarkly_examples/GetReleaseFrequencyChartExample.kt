@@ -24,15 +24,6 @@ class GetReleaseFrequencyChartExample
             val response = InsightsChartsBetaApi().getReleaseFrequencyChart(
                 projectKey = "projectKey_string",
                 environmentKey = "environmentKey_string",
-                applicationKey = null,
-                hasExperiments = null,
-                global = null,
-                groupBy = null,
-                from = null,
-                to = null,
-                bucketType = null,
-                bucketMs = null,
-                expand = null,
             )
 
             println(response)

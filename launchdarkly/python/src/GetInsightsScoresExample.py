@@ -13,7 +13,6 @@ with ApiClient(configuration) as api_client:
         response = api.InsightsScoresBetaApi(api_client).get_insights_scores(
             project_key="projectKey_string",
             environment_key="environmentKey_string",
-            application_key=None,
         )
 
         pprint(response)

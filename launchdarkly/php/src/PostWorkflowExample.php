@@ -42,8 +42,6 @@ try {
         feature_flag_key: "featureFlagKey_string",
         environment_key: "environmentKey_string",
         custom_workflow_input: $custom_workflow_input,
-        template_key: null,
-        dry_run: null,
     );
 
     print_r($response);

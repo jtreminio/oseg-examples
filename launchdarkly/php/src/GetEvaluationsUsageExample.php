@@ -15,9 +15,6 @@ try {
         project_key: "projectKey_string",
         environment_key: "environmentKey_string",
         feature_flag_key: "featureFlagKey_string",
-        from: null,
-        to: null,
-        tz: null,
     );
 
     print_r($response);

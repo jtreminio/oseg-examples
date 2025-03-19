@@ -13,8 +13,6 @@ with ApiClient(configuration) as api_client:
         response = api.FeatureFlagsApi(api_client).get_feature_flag(
             project_key="projectKey_string",
             feature_flag_key="featureFlagKey_string",
-            env=None,
-            expand=None,
         )
 
         pprint(response)
