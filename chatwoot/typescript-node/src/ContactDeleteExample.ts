@@ -8,8 +8,8 @@ apiCaller.setApiKey(api.ContactsApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.ContactsApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
 apiCaller.contactDelete(
-  undefined, // accountId
-  undefined, // id
+  0, // accountId
+  0, // id
 ).catch(error => {
   console.log("Exception when calling ContactsApi#contactDelete:");
   console.log(error.body);

@@ -2,13 +2,13 @@ require "json"
 require "chatwoot_client"
 
 ChatwootClient.configure do |config|
-    config.api_key["userApiKey"] = "USER_API_KEY"
+    config.api_key["api_access_token"] = "USER_API_KEY"
 end
 
 begin
     response = ChatwootClient::CustomAttributesApi.new.get_account_custom_attribute(
-        nil, # account_id
-        nil, # attribute_model
+        0, # account_id
+        "0", # attribute_model
     )
 
     p response

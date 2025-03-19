@@ -14,19 +14,22 @@ public class CreateANewMessageInAConversationExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
-        // config.ApiKey = new Dictionary<string, string> {["agentBotApiKey"] = "AGENT_BOT_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
+        // config.ApiKey.Add("api_access_token", "AGENT_BOT_API_KEY");
 
         var templateParams = new ConversationMessageCreateTemplateParams(
             name: "sample_issue_resolution",
             category: "UTILITY",
-            language: "en_US"
+            language: "en_US",
+            processedParams: JsonSerializer.Deserialize<Dictionary<string, object>>("""
+                {
+                    "1": "Chatwoot"
+                }
+            """)
         );
 
         var conversationMessageCreate = new ConversationMessageCreate(
-            content: null,
-            messageType: null,
-            varPrivate: null,
+            content: "content_string",
             contentType: ConversationMessageCreate.ContentTypeEnum.Cards,
             templateParams: templateParams
         );
@@ -34,8 +37,8 @@ public class CreateANewMessageInAConversationExample
         try
         {
             var response = new MessagesApi(config).CreateANewMessageInAConversation(
-                accountId: null,
-                conversationId: null,
+                accountId: 0,
+                conversationId: 0,
                 data: conversationMessageCreate
             );
 

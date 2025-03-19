@@ -8,10 +8,10 @@ public_message_update_payload = ChatwootClient::PublicMessageUpdatePayload.new
 
 begin
     response = ChatwootClient::MessagesAPIApi.new.update_a_message(
-        nil, # inbox_identifier
-        nil, # contact_identifier
-        nil, # conversation_id
-        nil, # message_id
+        "inbox_identifier_string", # inbox_identifier
+        "contact_identifier_string", # contact_identifier
+        0, # conversation_id
+        0, # message_id
         public_message_update_payload, # data
     )
 

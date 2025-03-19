@@ -19,15 +19,15 @@ public class DeleteAnIntegrationHookExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
-        // config.setApiKey("AGENT_BOT_API_KEY");
-        // config.setApiKey("PLATFORM_APP_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
+        // ((ApiKeyAuth) config.getAuthentication("agentBotApiKey")).setApiKey("AGENT_BOT_API_KEY");
+        // ((ApiKeyAuth) config.getAuthentication("platformAppApiKey")).setApiKey("PLATFORM_APP_API_KEY");
 
         try
         {
             new IntegrationsApi(config).deleteAnIntegrationHook(
-                null, // accountId
-                null // hookId
+                0, // accountId
+                0 // hookId
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling IntegrationsApi#deleteAnIntegrationHook");

@@ -8,8 +8,8 @@ apiCaller.setApiKey(api.CustomAttributesApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.CustomAttributesApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
 apiCaller.getDetailsOfASingleCustomAttribute(
-  undefined, // accountId
-  undefined, // id
+  0, // accountId
+  0, // id
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

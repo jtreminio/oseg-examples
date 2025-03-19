@@ -15,9 +15,9 @@ $public_message_create_payload = (new Chatwoot\Client\Model\PublicMessageCreateP
 
 try {
     $response = (new Chatwoot\Client\Api\MessagesAPIApi(config: $config))->createAMessage(
-        inbox_identifier: null,
-        contact_identifier: null,
-        conversation_id: null,
+        inbox_identifier: "inbox_identifier_string",
+        contact_identifier: "contact_identifier_string",
+        conversation_id: 0,
         data: public_message_create_payload,
     );
 

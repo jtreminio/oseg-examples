@@ -5,7 +5,7 @@ import models from "chatwoot_client"
 const apiCaller = new api.InboxAPIApi();
 
 apiCaller.getDetailsOfAInbox(
-  undefined, // inboxIdentifier
+  "inbox_identifier_string", // inboxIdentifier
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

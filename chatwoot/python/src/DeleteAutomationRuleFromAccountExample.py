@@ -11,8 +11,8 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.AutomationRuleApi(api_client).delete_automation_rule_from_account(
-            account_id=None,
-            id=None,
+            account_id=0,
+            id=0,
         )
     except ApiException as e:
         print("Exception when calling AutomationRuleApi#delete_automation_rule_from_account: %s\n" % e)

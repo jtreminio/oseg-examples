@@ -8,7 +8,7 @@ apiCaller.setApiKey(api.CustomFiltersApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.CustomFiltersApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
 apiCaller.listAllFilters(
-  undefined, // accountId
+  0, // accountId
   undefined, // filterType
 ).then(response => {
   console.log(response.body);

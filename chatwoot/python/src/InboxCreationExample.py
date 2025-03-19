@@ -11,25 +11,13 @@ configuration = Configuration(
 )
 
 with ApiClient(configuration) as api_client:
-    channel = models.InboxCreationRequestChannel(
-        type=None,
-        website_url=None,
-        welcome_title=None,
-        welcome_tagline=None,
-        agent_away_message=None,
-        widget_color=None,
-    )
-
     inbox_creation_request = models.InboxCreationRequest(
-        name=None,
-        avatar=None,
-        channel=channel,
     )
 
     try:
         response = api.InboxesApi(api_client).inbox_creation(
-            account_id=None,
-            inbox_creation_request=inbox_creation_request,
+            account_id=0,
+            data=inbox_creation_request,
         )
 
         pprint(response)

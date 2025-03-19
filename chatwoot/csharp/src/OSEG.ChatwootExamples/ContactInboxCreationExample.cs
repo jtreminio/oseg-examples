@@ -14,20 +14,19 @@ public class ContactInboxCreationExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
-        // config.ApiKey = new Dictionary<string, string> {["agentBotApiKey"] = "AGENT_BOT_API_KEY"};
-        // config.ApiKey = new Dictionary<string, string> {["platformAppApiKey"] = "PLATFORM_APP_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
+        // config.ApiKey.Add("api_access_token", "AGENT_BOT_API_KEY");
+        // config.ApiKey.Add("api_access_token", "PLATFORM_APP_API_KEY");
 
         var contactInboxCreationRequest = new ContactInboxCreationRequest(
-            inboxId: null,
-            sourceId: null
+            inboxId: 0
         );
 
         try
         {
             var response = new ContactApi(config).ContactInboxCreation(
-                accountId: null,
-                id: null,
+                accountId: 0,
+                id: 0,
                 data: contactInboxCreationRequest
             );
 

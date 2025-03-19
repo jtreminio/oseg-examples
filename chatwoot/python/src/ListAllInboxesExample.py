@@ -13,7 +13,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.InboxesApi(api_client).list_all_inboxes(
-            account_id=None,
+            account_id=0,
         )
 
         pprint(response)

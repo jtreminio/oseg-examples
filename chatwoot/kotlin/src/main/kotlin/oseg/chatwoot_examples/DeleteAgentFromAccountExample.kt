@@ -17,13 +17,13 @@ class DeleteAgentFromAccountExample
 {
     fun deleteAgentFromAccount()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
 
         try
         {
             AgentsApi().deleteAgentFromAccount(
-                accountId = null,
-                id = null,
+                accountId = 0,
+                id = 0,
             )
         } catch (e: ClientException) {
             println("4xx response calling AgentsApi#deleteAgentFromAccount")

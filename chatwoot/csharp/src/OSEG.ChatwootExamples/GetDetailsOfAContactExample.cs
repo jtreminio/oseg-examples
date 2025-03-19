@@ -18,8 +18,8 @@ public class GetDetailsOfAContactExample
         try
         {
             var response = new ContactsAPIApi(config).GetDetailsOfAContact(
-                inboxIdentifier: null,
-                contactIdentifier: null
+                inboxIdentifier: "inbox_identifier_string",
+                contactIdentifier: "contact_identifier_string"
             );
 
             Console.WriteLine(response);

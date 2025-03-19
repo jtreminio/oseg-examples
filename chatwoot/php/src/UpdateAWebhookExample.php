@@ -8,9 +8,9 @@ use SplFileObject;
 use Chatwoot;
 
 $config = Chatwoot\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("userApiKey", "USER_API_KEY");
-// $config->setApiKey("agentBotApiKey", "AGENT_BOT_API_KEY");
-// $config->setApiKey("platformAppApiKey", "PLATFORM_APP_API_KEY");
+$config->setApiKey("api_access_token", "USER_API_KEY");
+// $config->setApiKey("api_access_token", "AGENT_BOT_API_KEY");
+// $config->setApiKey("api_access_token", "PLATFORM_APP_API_KEY");
 
 $webhook_create_update_payload = (new Chatwoot\Client\Model\WebhookCreateUpdatePayload())
     ->setUrl(null)
@@ -19,8 +19,8 @@ $webhook_create_update_payload = (new Chatwoot\Client\Model\WebhookCreateUpdateP
 
 try {
     $response = (new Chatwoot\Client\Api\WebhooksApi(config: $config))->updateAWebhook(
-        account_id: null,
-        webhook_id: null,
+        account_id: 0,
+        webhook_id: 0,
         data: webhook_create_update_payload,
     );
 

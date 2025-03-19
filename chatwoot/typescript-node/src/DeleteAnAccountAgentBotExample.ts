@@ -8,8 +8,8 @@ apiCaller.setApiKey(api.AccountAgentBotsApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.AccountAgentBotsApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
 apiCaller.deleteAnAccountAgentBot(
-  undefined, // accountId
-  undefined, // id
+  0, // accountId
+  0, // id
 ).catch(error => {
   console.log("Exception when calling AccountAgentBotsApi#deleteAnAccountAgentBot:");
   console.log(error.body);

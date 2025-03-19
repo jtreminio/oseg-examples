@@ -2,9 +2,9 @@ require "json"
 require "chatwoot_client"
 
 ChatwootClient.configure do |config|
-    config.api_key["userApiKey"] = "USER_API_KEY"
-    # config.api_key["agentBotApiKey"] = "AGENT_BOT_API_KEY"
-    # config.api_key["platformAppApiKey"] = "PLATFORM_APP_API_KEY"
+    config.api_key["api_access_token"] = "USER_API_KEY"
+    # config.api_key["api_access_token"] = "AGENT_BOT_API_KEY"
+    # config.api_key["api_access_token"] = "PLATFORM_APP_API_KEY"
 end
 
 contact_add_labels_request = ChatwootClient::ContactAddLabelsRequest.new
@@ -13,8 +13,8 @@ contact_add_labels_request.labels = [
 
 begin
     response = ChatwootClient::ContactLabelsApi.new.contact_add_labels(
-        nil, # account_id
-        nil, # contact_identifier
+        0, # account_id
+        "contact_identifier_string", # contact_identifier
         contact_add_labels_request, # data
     )
 

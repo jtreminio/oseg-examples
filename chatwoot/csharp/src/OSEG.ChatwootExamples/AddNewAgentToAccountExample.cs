@@ -14,20 +14,18 @@ public class AddNewAgentToAccountExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
 
         var addNewAgentToAccountRequest = new AddNewAgentToAccountRequest(
-            email: null,
-            name: null,
-            role: null,
-            availabilityStatus: null,
-            autoOffline: null
+            email: "email_string",
+            name: "name_string",
+            role: AddNewAgentToAccountRequest.RoleEnum.Agent
         );
 
         try
         {
             var response = new AgentsApi(config).AddNewAgentToAccount(
-                accountId: null,
+                accountId: 0,
                 data: addNewAgentToAccountRequest
             );
 

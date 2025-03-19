@@ -10,17 +10,15 @@ configuration = Configuration(
 
 with ApiClient(configuration) as api_client:
     add_new_agent_to_account_request = models.AddNewAgentToAccountRequest(
-        email=None,
-        name=None,
-        role=None,
-        availability_status=None,
-        auto_offline=None,
+        email="email_string",
+        name="name_string",
+        role="agent",
     )
 
     try:
         response = api.AgentsApi(api_client).add_new_agent_to_account(
-            account_id=None,
-            add_new_agent_to_account_request=add_new_agent_to_account_request,
+            account_id=0,
+            data=add_new_agent_to_account_request,
         )
 
         pprint(response)

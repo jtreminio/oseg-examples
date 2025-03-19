@@ -13,11 +13,11 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.MessagesAPIApi(api_client).update_a_message(
-            inbox_identifier=None,
-            contact_identifier=None,
-            conversation_id=None,
-            message_id=None,
-            public_message_update_payload=public_message_update_payload,
+            inbox_identifier="inbox_identifier_string",
+            contact_identifier="contact_identifier_string",
+            conversation_id=0,
+            message_id=0,
+            data=public_message_update_payload,
         )
 
         pprint(response)

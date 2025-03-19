@@ -6,11 +6,16 @@ const apiCaller = new api.ConversationsApi();
 apiCaller.setApiKey(api.ConversationsApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.ConversationsApiApiKeys.agentBotApiKey, "AGENT_BOT_API_KEY");
 
-const updateCustomAttributesOfAConversationRequest = new models.UpdateCustomAttributesOfAConversationRequest();
+const updateCustomAttributesOfAConversationRequest: models.UpdateCustomAttributesOfAConversationRequest = {
+  customAttributes: {
+    "order_id": "12345",
+    "previous_conversation": "67890"
+  },
+};
 
 apiCaller.updateCustomAttributesOfAConversation(
-  undefined, // accountId
-  undefined, // conversationId
+  0, // accountId
+  0, // conversationId
   updateCustomAttributesOfAConversationRequest, // data
 ).then(response => {
   console.log(response.body);

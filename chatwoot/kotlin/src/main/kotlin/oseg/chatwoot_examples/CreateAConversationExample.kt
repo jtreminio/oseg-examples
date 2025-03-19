@@ -19,13 +19,12 @@ class CreateAConversationExample
     {
 
         val publicConversationCreatePayload = PublicConversationCreatePayload()
-        )
 
         try
         {
             val response = ConversationsAPIApi().createAConversation(
-                inboxIdentifier = null,
-                contactIdentifier = null,
+                inboxIdentifier = "inbox_identifier_string",
+                contactIdentifier = "contact_identifier_string",
                 _data = publicConversationCreatePayload,
             )
 

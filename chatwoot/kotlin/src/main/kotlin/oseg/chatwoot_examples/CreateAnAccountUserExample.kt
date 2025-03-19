@@ -17,17 +17,17 @@ class CreateAnAccountUserExample
 {
     fun createAnAccountUser()
     {
-        ApiClient.apiKey["platformAppApiKey"] = "PLATFORM_APP_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "PLATFORM_APP_API_KEY"
 
         val createAnAccountUserRequest = CreateAnAccountUserRequest(
-            role = null,
-            userId = null,
+            role = "role_string",
+            userId = 0,
         )
 
         try
         {
             val response = AccountUsersApi().createAnAccountUser(
-                accountId = null,
+                accountId = 0,
                 _data = createAnAccountUserRequest,
             )
 

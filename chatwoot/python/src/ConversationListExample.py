@@ -13,13 +13,9 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.ConversationsApi(api_client).conversation_list(
-            account_id=None,
+            account_id=0,
             assignee_type="all",
             status="open",
-            q=None,
-            inbox_id=None,
-            team_id=None,
-            labels=None,
             page=1,
         )
 

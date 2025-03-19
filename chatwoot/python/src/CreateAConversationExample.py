@@ -13,9 +13,9 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.ConversationsAPIApi(api_client).create_a_conversation(
-            inbox_identifier=None,
-            contact_identifier=None,
-            public_conversation_create_payload=public_conversation_create_payload,
+            inbox_identifier="inbox_identifier_string",
+            contact_identifier="contact_identifier_string",
+            data=public_conversation_create_payload,
         )
 
         pprint(response)

@@ -17,16 +17,16 @@ class DeleteAnAccountUserExample
 {
     fun deleteAnAccountUser()
     {
-        ApiClient.apiKey["platformAppApiKey"] = "PLATFORM_APP_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "PLATFORM_APP_API_KEY"
 
         val deleteAnAccountUserRequest = DeleteAnAccountUserRequest(
-            userId = null,
+            userId = 0,
         )
 
         try
         {
             AccountUsersApi().deleteAnAccountUser(
-                accountId = null,
+                accountId = 0,
                 _data = deleteAnAccountUserRequest,
             )
         } catch (e: ClientException) {

@@ -2,17 +2,17 @@ require "json"
 require "chatwoot_client"
 
 ChatwootClient.configure do |config|
-    config.api_key["userApiKey"] = "USER_API_KEY"
-    # config.api_key["agentBotApiKey"] = "AGENT_BOT_API_KEY"
-    # config.api_key["platformAppApiKey"] = "PLATFORM_APP_API_KEY"
+    config.api_key["api_access_token"] = "USER_API_KEY"
+    # config.api_key["api_access_token"] = "AGENT_BOT_API_KEY"
+    # config.api_key["api_access_token"] = "PLATFORM_APP_API_KEY"
 end
 
 integrations_hook_update_payload = ChatwootClient::IntegrationsHookUpdatePayload.new
 
 begin
     response = ChatwootClient::IntegrationsApi.new.update_an_integrations_hook(
-        nil, # account_id
-        nil, # hook_id
+        0, # account_id
+        0, # hook_id
         integrations_hook_update_payload, # data
     )
 

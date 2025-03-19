@@ -10,7 +10,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.CSATSurveyPageApi(api_client).get_csat_survey_page(
-            conversation_uuid=None,
+            conversation_uuid=0,
         )
     except ApiException as e:
         print("Exception when calling CSATSurveyPageApi#get_csat_survey_page: %s\n" % e)

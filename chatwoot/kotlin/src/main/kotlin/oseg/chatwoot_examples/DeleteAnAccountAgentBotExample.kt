@@ -17,15 +17,15 @@ class DeleteAnAccountAgentBotExample
 {
     fun deleteAnAccountAgentBot()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
-        // ApiClient.apiKey["agentBotApiKey"] = "AGENT_BOT_API_KEY"
-        // ApiClient.apiKey["platformAppApiKey"] = "PLATFORM_APP_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "AGENT_BOT_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "PLATFORM_APP_API_KEY"
 
         try
         {
             AccountAgentBotsApi().deleteAnAccountAgentBot(
-                accountId = null,
-                id = null,
+                accountId = 0,
+                id = 0,
             )
         } catch (e: ClientException) {
             println("4xx response calling AccountAgentBotsApi#deleteAnAccountAgentBot")

@@ -8,14 +8,14 @@ use SplFileObject;
 use Chatwoot;
 
 $config = Chatwoot\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("platformAppApiKey", "PLATFORM_APP_API_KEY");
+$config->setApiKey("api_access_token", "PLATFORM_APP_API_KEY");
 
 $delete_an_account_user_request = (new Chatwoot\Client\Model\DeleteAnAccountUserRequest())
-    ->setUserId(null);
+    ->setUserId(0);
 
 try {
     (new Chatwoot\Client\Api\AccountUsersApi(config: $config))->deleteAnAccountUser(
-        account_id: null,
+        account_id: 0,
         data: delete_an_account_user_request,
     );
 } catch (Chatwoot\Client\ApiException $e) {

@@ -19,18 +19,16 @@ public class UpdateAgentInAccountExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
 
         var updateAgentInAccountRequest = new UpdateAgentInAccountRequest();
-        updateAgentInAccountRequest.role(null);
-        updateAgentInAccountRequest.availability(null);
-        updateAgentInAccountRequest.autoOffline(null);
+        updateAgentInAccountRequest.role(UpdateAgentInAccountRequest.RoleEnum.AGENT);
 
         try
         {
             var response = new AgentsApi(config).updateAgentInAccount(
-                null, // accountId
-                null, // id
+                0, // accountId
+                0, // id
                 updateAgentInAccountRequest // data
             );
 

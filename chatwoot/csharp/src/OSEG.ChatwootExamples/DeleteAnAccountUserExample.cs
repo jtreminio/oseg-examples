@@ -14,16 +14,16 @@ public class DeleteAnAccountUserExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["platformAppApiKey"] = "PLATFORM_APP_API_KEY"};
+        config.ApiKey.Add("api_access_token", "PLATFORM_APP_API_KEY");
 
         var deleteAnAccountUserRequest = new DeleteAnAccountUserRequest(
-            userId: null
+            userId: 0
         );
 
         try
         {
             new AccountUsersApi(config).DeleteAnAccountUser(
-                accountId: null,
+                accountId: 0,
                 data: deleteAnAccountUserRequest
             );
         }

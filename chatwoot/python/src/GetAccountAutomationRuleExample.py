@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.AutomationRuleApi(api_client).get_account_automation_rule(
-            account_id=None,
+            account_id=0,
             page=1,
         )
 

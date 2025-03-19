@@ -14,13 +14,13 @@ public class GetAccountCustomAttributeExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
 
         try
         {
             var response = new CustomAttributesApi(config).GetAccountCustomAttribute(
-                accountId: null,
-                attributeModel: null
+                accountId: 0,
+                attributeModel: "0"
             );
 
             Console.WriteLine(response);

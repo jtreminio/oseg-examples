@@ -6,28 +6,29 @@ const apiCaller = new api.ContactsApi();
 apiCaller.setApiKey(api.ContactsApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.ContactsApiApiKeys.agentBotApiKey, "AGENT_BOT_API_KEY");
 
-const contactFilterRequest = new models.ContactFilterRequest();
-contactFilterRequest.payload =   [
-  {
-    "attribute_key": "name",
-    "filter_operator": "equal_to",
-    "query_operator": "AND",
-    "values": [
-      "en"
-    ]
-  },
-  {
-    "attribute_key": "country_code",
-    "filter_operator": "equal_to",
-    "query_operator": null,
-    "values": [
-      "us"
-    ]
-  }
-];
+const contactFilterRequest: models.ContactFilterRequest = {
+  payload: [
+    {
+      "attribute_key": "name",
+      "filter_operator": "equal_to",
+      "query_operator": "AND",
+      "values": [
+        "en"
+      ]
+    },
+    {
+      "attribute_key": "country_code",
+      "filter_operator": "equal_to",
+      "query_operator": null,
+      "values": [
+        "us"
+      ]
+    }
+  ],
+};
 
 apiCaller.contactFilter(
-  undefined, // accountId
+  0, // accountId
   contactFilterRequest, // body
   undefined, // page
 ).then(response => {

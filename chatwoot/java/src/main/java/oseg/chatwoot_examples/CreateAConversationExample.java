@@ -25,8 +25,8 @@ public class CreateAConversationExample
         try
         {
             var response = new ConversationsApiApi(config).createAConversation(
-                null, // inboxIdentifier
-                null, // contactIdentifier
+                "inbox_identifier_string", // inboxIdentifier
+                "contact_identifier_string", // contactIdentifier
                 publicConversationCreatePayload // data
             );
 

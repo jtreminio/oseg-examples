@@ -7,13 +7,13 @@ apiCaller.setApiKey(api.ContactApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.ContactApiApiKeys.agentBotApiKey, "AGENT_BOT_API_KEY");
 // apiCaller.setApiKey(api.ContactApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
-const contactInboxCreationRequest = new models.ContactInboxCreationRequest();
-contactInboxCreationRequest.inboxId = undefined;
-contactInboxCreationRequest.sourceId = undefined;
+const contactInboxCreationRequest: models.ContactInboxCreationRequest = {
+  inboxId: 0,
+};
 
 apiCaller.contactInboxCreation(
-  undefined, // accountId
-  undefined, // id
+  0, // accountId
+  0, // id
   contactInboxCreationRequest, // data
 ).then(response => {
   console.log(response.body);

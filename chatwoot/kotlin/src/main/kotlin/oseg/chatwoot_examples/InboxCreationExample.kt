@@ -17,29 +17,16 @@ class InboxCreationExample
 {
     fun inboxCreation()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
-        // ApiClient.apiKey["agentBotApiKey"] = "AGENT_BOT_API_KEY"
-        // ApiClient.apiKey["platformAppApiKey"] = "PLATFORM_APP_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "AGENT_BOT_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "PLATFORM_APP_API_KEY"
 
-        val channel = InboxCreationRequestChannel(
-            type = null,
-            websiteUrl = null,
-            welcomeTitle = null,
-            welcomeTagline = null,
-            agentAwayMessage = null,
-            widgetColor = null,
-        )
-
-        val inboxCreationRequest = InboxCreationRequest(
-            name = null,
-            avatar = null,
-            channel = channel,
-        )
+        val inboxCreationRequest = InboxCreationRequest()
 
         try
         {
             val response = InboxesApi().inboxCreation(
-                accountId = null,
+                accountId = 0,
                 _data = inboxCreationRequest,
             )
 

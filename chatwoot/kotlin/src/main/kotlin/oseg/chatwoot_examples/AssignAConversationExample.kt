@@ -17,19 +17,16 @@ class AssignAConversationExample
 {
     fun assignAConversation()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
-        // ApiClient.apiKey["agentBotApiKey"] = "AGENT_BOT_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "AGENT_BOT_API_KEY"
 
-        val assignAConversationRequest = AssignAConversationRequest(
-            assigneeId = null,
-            teamId = null,
-        )
+        val assignAConversationRequest = AssignAConversationRequest()
 
         try
         {
             val response = ConversationAssignmentApi().assignAConversation(
-                accountId = null,
-                conversationId = null,
+                accountId = 0,
+                conversationId = 0,
                 _data = assignAConversationRequest,
             )
 

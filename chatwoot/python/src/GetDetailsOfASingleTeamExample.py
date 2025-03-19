@@ -13,8 +13,8 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.TeamsApi(api_client).get_details_of_a_single_team(
-            account_id=None,
-            team_id=None,
+            account_id=0,
+            team_id=0,
         )
 
         pprint(response)

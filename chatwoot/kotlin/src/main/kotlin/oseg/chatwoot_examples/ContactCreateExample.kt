@@ -17,24 +17,18 @@ class ContactCreateExample
 {
     fun contactCreate()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
-        // ApiClient.apiKey["agentBotApiKey"] = "AGENT_BOT_API_KEY"
-        // ApiClient.apiKey["platformAppApiKey"] = "PLATFORM_APP_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "AGENT_BOT_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "PLATFORM_APP_API_KEY"
 
         val contactCreate = ContactCreate(
-            inboxId = null,
-            name = null,
-            email = null,
-            phoneNumber = null,
-            avatarUrl = null,
-            identifier = null,
-            avatar = null,
+            inboxId = 0,
         )
 
         try
         {
             val response = ContactsApi().contactCreate(
-                accountId = null,
+                accountId = 0,
                 _data = contactCreate,
             )
 

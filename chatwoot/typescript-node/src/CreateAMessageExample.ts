@@ -4,14 +4,13 @@ import models from "chatwoot_client"
 
 const apiCaller = new api.MessagesAPIApi();
 
-const publicMessageCreatePayload = new models.PublicMessageCreatePayload();
-publicMessageCreatePayload.content = undefined;
-publicMessageCreatePayload.echoId = undefined;
+const publicMessageCreatePayload: models.PublicMessageCreatePayload = {
+};
 
 apiCaller.createAMessage(
-  undefined, // inboxIdentifier
-  undefined, // contactIdentifier
-  undefined, // conversationId
+  "inbox_identifier_string", // inboxIdentifier
+  "contact_identifier_string", // contactIdentifier
+  0, // conversationId
   publicMessageCreatePayload, // data
 ).then(response => {
   console.log(response.body);

@@ -19,7 +19,7 @@ public class DeleteAgentInTeamExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
 
         var deleteAgentInTeamRequest = new DeleteAgentInTeamRequest();
         deleteAgentInTeamRequest.userIds(List.of ());
@@ -27,8 +27,8 @@ public class DeleteAgentInTeamExample
         try
         {
             new TeamsApi(config).deleteAgentInTeam(
-                null, // accountId
-                null, // teamId
+                0, // accountId
+                0, // teamId
                 deleteAgentInTeamRequest // data
             );
         } catch (ApiException e) {

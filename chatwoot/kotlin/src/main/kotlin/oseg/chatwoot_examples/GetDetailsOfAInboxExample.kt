@@ -21,7 +21,7 @@ class GetDetailsOfAInboxExample
         try
         {
             val response = InboxAPIApi().getDetailsOfAInbox(
-                inboxIdentifier = null,
+                inboxIdentifier = "inbox_identifier_string",
             )
 
             println(response)

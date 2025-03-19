@@ -8,9 +8,9 @@ apiCaller.setApiKey(api.ReportsApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.ReportsApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
 apiCaller.listAllConversationStatistics(
-  undefined, // accountId
-  undefined, // metric
-  undefined, // type
+  0, // accountId
+  "conversations_count", // metric
+  "account", // type
   undefined, // id
   undefined, // since
   undefined, // until

@@ -19,24 +19,16 @@ public class AddNewCategoryToAccountExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
 
         var categoryCreateUpdatePayload = new CategoryCreateUpdatePayload();
-        categoryCreateUpdatePayload.description(null);
         categoryCreateUpdatePayload.locale("en/es");
-        categoryCreateUpdatePayload.name(null);
-        categoryCreateUpdatePayload.slug(null);
-        categoryCreateUpdatePayload.position(null);
-        categoryCreateUpdatePayload.portalId(null);
-        categoryCreateUpdatePayload.accountId(null);
-        categoryCreateUpdatePayload.associatedCategoryId(null);
-        categoryCreateUpdatePayload.parentCategoryId(null);
 
         try
         {
             var response = new HelpCenterApi(config).addNewCategoryToAccount(
-                null, // accountId
-                null, // portalId
+                0, // accountId
+                0, // portalId
                 categoryCreateUpdatePayload // data
             );
 

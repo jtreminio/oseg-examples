@@ -5,11 +5,11 @@ import models from "chatwoot_client"
 const apiCaller = new api.AccountsApi();
 apiCaller.setApiKey(api.AccountsApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
-const accountCreateUpdatePayload = new models.AccountCreateUpdatePayload();
-accountCreateUpdatePayload.name = undefined;
+const accountCreateUpdatePayload: models.AccountCreateUpdatePayload = {
+};
 
 apiCaller.updateAnAccount(
-  undefined, // accountId
+  0, // accountId
   accountCreateUpdatePayload, // data
 ).then(response => {
   console.log(response.body);

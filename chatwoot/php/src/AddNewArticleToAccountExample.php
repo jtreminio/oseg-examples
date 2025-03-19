@@ -8,7 +8,7 @@ use SplFileObject;
 use Chatwoot;
 
 $config = Chatwoot\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("userApiKey", "USER_API_KEY");
+$config->setApiKey("api_access_token", "USER_API_KEY");
 
 $article_create_update_payload = (new Chatwoot\Client\Model\ArticleCreateUpdatePayload())
     ->setContent(null)
@@ -22,12 +22,21 @@ $article_create_update_payload = (new Chatwoot\Client\Model\ArticleCreateUpdateP
     ->setAuthorId(null)
     ->setCategoryId(null)
     ->setFolderId(null)
-    ->setAssociatedArticleId(null);
+    ->setAssociatedArticleId(null)
+    ->setMeta(json_decode(<<<'EOD'
+        {
+            "description": "article description",
+            "tags": [
+                "article_name"
+            ],
+            "title": "article title"
+        }
+    EOD, true));
 
 try {
     $response = (new Chatwoot\Client\Api\HelpCenterApi(config: $config))->addNewArticleToAccount(
-        account_id: null,
-        portal_id: null,
+        account_id: 0,
+        portal_id: 0,
         data: article_create_update_payload,
     );
 

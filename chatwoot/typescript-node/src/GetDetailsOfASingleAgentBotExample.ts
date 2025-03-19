@@ -6,7 +6,7 @@ const apiCaller = new api.AgentBotsApi();
 apiCaller.setApiKey(api.AgentBotsApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
 apiCaller.getDetailsOfASingleAgentBot(
-  undefined, // id
+  0, // id
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

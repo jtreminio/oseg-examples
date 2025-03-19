@@ -17,13 +17,13 @@ class GetAccountCustomAttributeExample
 {
     fun getAccountCustomAttribute()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
 
         try
         {
             val response = CustomAttributesApi().getAccountCustomAttribute(
-                accountId = null,
-                attributeModel = null,
+                accountId = 0,
+                attributeModel = CustomAttributesApi.AttributeModelGetAccountCustomAttribute.0,
             )
 
             println(response)

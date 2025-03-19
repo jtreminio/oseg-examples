@@ -6,7 +6,7 @@ const apiCaller = new api.AutomationRuleApi();
 apiCaller.setApiKey(api.AutomationRuleApiApiKeys.userApiKey, "USER_API_KEY");
 
 apiCaller.getAccountAutomationRule(
-  undefined, // accountId
+  0, // accountId
   1, // page
 ).then(response => {
   console.log(response.body);

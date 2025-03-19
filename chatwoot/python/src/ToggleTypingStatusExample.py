@@ -13,10 +13,10 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.ConversationsAPIApi(api_client).toggle_typing_status(
-            inbox_identifier=None,
-            contact_identifier=None,
-            conversation_id=None,
-            typing_status=None,
+            inbox_identifier="inbox_identifier_string",
+            contact_identifier="contact_identifier_string",
+            conversation_id=0,
+            typing_status="typing_status_string",
         )
     except ApiException as e:
         print("Exception when calling ConversationsAPIApi#toggle_typing_status: %s\n" % e)

@@ -23,7 +23,7 @@ public class GetCsatSurveyPageExample
         try
         {
             new CsatSurveyPageApi(config).getCsatSurveyPage(
-                null // conversationUuid
+                0 // conversationUuid
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling CsatSurveyPageApi#getCsatSurveyPage");

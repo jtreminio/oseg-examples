@@ -17,25 +17,17 @@ class AddNewCategoryToAccountExample
 {
     fun addNewCategoryToAccount()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
 
         val categoryCreateUpdatePayload = CategoryCreateUpdatePayload(
-            description = null,
             locale = "en/es",
-            name = null,
-            slug = null,
-            position = null,
-            portalId = null,
-            accountId = null,
-            associatedCategoryId = null,
-            parentCategoryId = null,
         )
 
         try
         {
             val response = HelpCenterApi().addNewCategoryToAccount(
-                accountId = null,
-                portalId = null,
+                accountId = 0,
+                portalId = 0,
                 _data = categoryCreateUpdatePayload,
             )
 

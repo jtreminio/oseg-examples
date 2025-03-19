@@ -10,14 +10,11 @@ configuration = Configuration(
 
 with ApiClient(configuration) as api_client:
     user_create_update_payload = models.UserCreateUpdatePayload(
-        name=None,
-        email=None,
-        password=None,
     )
 
     try:
         response = api.UsersApi(api_client).create_a_user(
-            user_create_update_payload=user_create_update_payload,
+            data=user_create_update_payload,
         )
 
         pprint(response)

@@ -10,13 +10,13 @@ configuration = Configuration(
 
 with ApiClient(configuration) as api_client:
     delete_an_account_user_request = models.DeleteAnAccountUserRequest(
-        user_id=None,
+        user_id=0,
     )
 
     try:
         api.AccountUsersApi(api_client).delete_an_account_user(
-            account_id=None,
-            delete_an_account_user_request=delete_an_account_user_request,
+            account_id=0,
+            data=delete_an_account_user_request,
         )
     except ApiException as e:
         print("Exception when calling AccountUsersApi#delete_an_account_user: %s\n" % e)

@@ -17,24 +17,28 @@ class UpdateNewPortalToAccountExample
 {
     fun updateNewPortalToAccount()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
 
         val portalCreateUpdatePayload = PortalCreateUpdatePayload(
-            archived = null,
             color = "add color HEX string, \"#fffff\"",
             customDomain = "https://chatwoot.help/.",
             headerText = "Handbook",
             homepageLink = "https://www.chatwoot.com/",
-            name = null,
-            slug = null,
-            pageTitle = null,
-            accountId = null,
+            config = Serializer.moshi.adapter<Map<String, Any>>().fromJson("""
+                {
+                    "allowed_locales": [
+                        "en",
+                        "es"
+                    ],
+                    "default_locale": "en"
+                }
+            """)!!,
         )
 
         try
         {
             val response = HelpCenterApi().updateNewPortalToAccount(
-                accountId = null,
+                accountId = 0,
                 _data = portalCreateUpdatePayload,
             )
 

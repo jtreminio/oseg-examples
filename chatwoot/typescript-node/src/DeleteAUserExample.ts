@@ -6,7 +6,7 @@ const apiCaller = new api.UsersApi();
 apiCaller.setApiKey(api.UsersApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
 apiCaller.deleteAUser(
-  undefined, // id
+  0, // id
 ).catch(error => {
   console.log("Exception when calling UsersApi#deleteAUser:");
   console.log(error.body);

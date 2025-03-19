@@ -13,8 +13,8 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.AccountAgentBotsApi(api_client).delete_an_account_agent_bot(
-            account_id=None,
-            id=None,
+            account_id=0,
+            id=0,
         )
     except ApiException as e:
         print("Exception when calling AccountAgentBotsApi#delete_an_account_agent_bot: %s\n" % e)

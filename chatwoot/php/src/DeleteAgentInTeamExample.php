@@ -8,7 +8,7 @@ use SplFileObject;
 use Chatwoot;
 
 $config = Chatwoot\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("userApiKey", "USER_API_KEY");
+$config->setApiKey("api_access_token", "USER_API_KEY");
 
 $delete_agent_in_team_request = (new Chatwoot\Client\Model\DeleteAgentInTeamRequest())
     ->setUserIds([
@@ -16,8 +16,8 @@ $delete_agent_in_team_request = (new Chatwoot\Client\Model\DeleteAgentInTeamRequ
 
 try {
     (new Chatwoot\Client\Api\TeamsApi(config: $config))->deleteAgentInTeam(
-        account_id: null,
-        team_id: null,
+        account_id: 0,
+        team_id: 0,
         data: delete_agent_in_team_request,
     );
 } catch (Chatwoot\Client\ApiException $e) {

@@ -13,8 +13,8 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.ContactsApi(api_client).contact_delete(
-            account_id=None,
-            id=None,
+            account_id=0,
+            id=0,
         )
     except ApiException as e:
         print("Exception when calling ContactsApi#contact_delete: %s\n" % e)

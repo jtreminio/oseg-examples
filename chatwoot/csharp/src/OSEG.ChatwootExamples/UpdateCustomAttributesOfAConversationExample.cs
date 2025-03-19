@@ -14,17 +14,23 @@ public class UpdateCustomAttributesOfAConversationExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
-        // config.ApiKey = new Dictionary<string, string> {["agentBotApiKey"] = "AGENT_BOT_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
+        // config.ApiKey.Add("api_access_token", "AGENT_BOT_API_KEY");
 
         var updateCustomAttributesOfAConversationRequest = new UpdateCustomAttributesOfAConversationRequest(
+            customAttributes: JsonSerializer.Deserialize<Dictionary<string, object>>("""
+                {
+                    "order_id": "12345",
+                    "previous_conversation": "67890"
+                }
+            """)
         );
 
         try
         {
             var response = new ConversationsApi(config).UpdateCustomAttributesOfAConversation(
-                accountId: null,
-                conversationId: null,
+                accountId: 0,
+                conversationId: 0,
                 data: updateCustomAttributesOfAConversationRequest
             );
 

@@ -18,7 +18,7 @@ public class GetDetailsOfAInboxExample
         try
         {
             var response = new InboxAPIApi(config).GetDetailsOfAInbox(
-                inboxIdentifier: null
+                inboxIdentifier: "inbox_identifier_string"
             );
 
             Console.WriteLine(response);

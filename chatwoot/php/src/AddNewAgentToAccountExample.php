@@ -8,18 +8,18 @@ use SplFileObject;
 use Chatwoot;
 
 $config = Chatwoot\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("userApiKey", "USER_API_KEY");
+$config->setApiKey("api_access_token", "USER_API_KEY");
 
 $add_new_agent_to_account_request = (new Chatwoot\Client\Model\AddNewAgentToAccountRequest())
-    ->setEmail(null)
-    ->setName(null)
-    ->setRole(null)
+    ->setEmail("email_string")
+    ->setName("name_string")
+    ->setRole(Chatwoot\Client\Model\AddNewAgentToAccountRequest::ROLE_AGENT)
     ->setAvailabilityStatus(null)
     ->setAutoOffline(null);
 
 try {
     $response = (new Chatwoot\Client\Api\AgentsApi(config: $config))->addNewAgentToAccount(
-        account_id: null,
+        account_id: 0,
         data: add_new_agent_to_account_request,
     );
 

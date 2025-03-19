@@ -14,14 +14,9 @@ public class UpdateCustomAttributeInAccountExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
 
         var customAttributeCreateUpdatePayload = new CustomAttributeCreateUpdatePayload(
-            attributeDisplayName: null,
-            attributeDisplayType: null,
-            attributeDescription: null,
-            attributeKey: null,
-            attributeModel: null,
             attributeValues: [
             ]
         );
@@ -29,8 +24,8 @@ public class UpdateCustomAttributeInAccountExample
         try
         {
             var response = new CustomAttributesApi(config).UpdateCustomAttributeInAccount(
-                accountId: null,
-                id: null,
+                accountId: 0,
+                id: 0,
                 data: customAttributeCreateUpdatePayload
             );
 

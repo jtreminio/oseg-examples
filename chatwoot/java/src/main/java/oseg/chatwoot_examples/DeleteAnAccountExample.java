@@ -19,12 +19,12 @@ public class DeleteAnAccountExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("PLATFORM_APP_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("platformAppApiKey")).setApiKey("PLATFORM_APP_API_KEY");
 
         try
         {
             new AccountsApi(config).deleteAnAccount(
-                null // accountId
+                0 // accountId
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling AccountsApi#deleteAnAccount");

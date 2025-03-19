@@ -17,13 +17,13 @@ class GetInboxMembersExample
 {
     fun getInboxMembers()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
 
         try
         {
             val response = InboxesApi().getInboxMembers(
-                accountId = null,
-                inboxId = null,
+                accountId = 0,
+                inboxId = 0,
             )
 
             println(response)

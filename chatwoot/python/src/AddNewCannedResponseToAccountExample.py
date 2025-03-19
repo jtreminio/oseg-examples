@@ -10,14 +10,12 @@ configuration = Configuration(
 
 with ApiClient(configuration) as api_client:
     canned_response_create_update_payload = models.CannedResponseCreateUpdatePayload(
-        content=None,
-        short_code=None,
     )
 
     try:
         response = api.CannedResponsesApi(api_client).add_new_canned_response_to_account(
-            account_id=None,
-            canned_response_create_update_payload=canned_response_create_update_payload,
+            account_id=0,
+            data=canned_response_create_update_payload,
         )
 
         pprint(response)

@@ -14,16 +14,15 @@ public class UpdateAnAccountExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["platformAppApiKey"] = "PLATFORM_APP_API_KEY"};
+        config.ApiKey.Add("api_access_token", "PLATFORM_APP_API_KEY");
 
         var accountCreateUpdatePayload = new AccountCreateUpdatePayload(
-            name: null
         );
 
         try
         {
             var response = new AccountsApi(config).UpdateAnAccount(
-                accountId: null,
+                accountId: 0,
                 data: accountCreateUpdatePayload
             );
 

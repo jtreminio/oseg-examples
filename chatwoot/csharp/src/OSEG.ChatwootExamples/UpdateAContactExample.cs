@@ -16,19 +16,13 @@ public class UpdateAContactExample
         var config = new Configuration();
 
         var publicContactCreateUpdatePayload = new PublicContactCreateUpdatePayload(
-            identifier: null,
-            identifierHash: null,
-            email: null,
-            name: null,
-            phoneNumber: null,
-            avatarUrl: null
         );
 
         try
         {
             var response = new ContactsAPIApi(config).UpdateAContact(
-                inboxIdentifier: null,
-                contactIdentifier: null,
+                inboxIdentifier: "inbox_identifier_string",
+                contactIdentifier: "contact_identifier_string",
                 data: publicContactCreateUpdatePayload
             );
 

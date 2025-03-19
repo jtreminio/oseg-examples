@@ -14,16 +14,16 @@ public class ListAllConverationMessagesExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
-        // config.ApiKey = new Dictionary<string, string> {["agentBotApiKey"] = "AGENT_BOT_API_KEY"};
-        // config.ApiKey = new Dictionary<string, string> {["platformAppApiKey"] = "PLATFORM_APP_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
+        // config.ApiKey.Add("api_access_token", "AGENT_BOT_API_KEY");
+        // config.ApiKey.Add("api_access_token", "PLATFORM_APP_API_KEY");
 
         try
         {
             var response = new MessagesAPIApi(config).ListAllConverationMessages(
-                inboxIdentifier: null,
-                contactIdentifier: null,
-                conversationId: null
+                inboxIdentifier: "inbox_identifier_string",
+                contactIdentifier: "contact_identifier_string",
+                conversationId: 0
             );
 
             Console.WriteLine(response);

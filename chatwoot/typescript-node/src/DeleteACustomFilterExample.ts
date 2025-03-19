@@ -8,8 +8,8 @@ apiCaller.setApiKey(api.CustomFiltersApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.CustomFiltersApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
 apiCaller.deleteACustomFilter(
-  undefined, // accountId
-  undefined, // customFilterId
+  0, // accountId
+  0, // customFilterId
 ).catch(error => {
   console.log("Exception when calling CustomFiltersApi#deleteACustomFilter:");
   console.log(error.body);

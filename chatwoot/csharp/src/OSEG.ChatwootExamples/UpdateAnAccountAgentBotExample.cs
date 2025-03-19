@@ -14,21 +14,18 @@ public class UpdateAnAccountAgentBotExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
-        // config.ApiKey = new Dictionary<string, string> {["agentBotApiKey"] = "AGENT_BOT_API_KEY"};
-        // config.ApiKey = new Dictionary<string, string> {["platformAppApiKey"] = "PLATFORM_APP_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
+        // config.ApiKey.Add("api_access_token", "AGENT_BOT_API_KEY");
+        // config.ApiKey.Add("api_access_token", "PLATFORM_APP_API_KEY");
 
         var agentBotCreateUpdatePayload = new AgentBotCreateUpdatePayload(
-            name: null,
-            description: null,
-            outgoingUrl: null
         );
 
         try
         {
             var response = new AccountAgentBotsApi(config).UpdateAnAccountAgentBot(
-                accountId: null,
-                id: null,
+                accountId: 0,
+                id: 0,
                 data: agentBotCreateUpdatePayload
             );
 

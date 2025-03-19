@@ -2,8 +2,8 @@ require "json"
 require "chatwoot_client"
 
 ChatwootClient.configure do |config|
-    config.api_key["userApiKey"] = "USER_API_KEY"
-    # config.api_key["agentBotApiKey"] = "AGENT_BOT_API_KEY"
+    config.api_key["api_access_token"] = "USER_API_KEY"
+    # config.api_key["api_access_token"] = "AGENT_BOT_API_KEY"
 end
 
 conversation_filter_request = ChatwootClient::ConversationFilterRequest.new
@@ -31,7 +31,7 @@ conversation_filter_request.payload = JSON.parse(<<-EOD
 
 begin
     response = ChatwootClient::ConversationsApi.new.conversation_filter(
-        nil, # account_id
+        0, # account_id
         conversation_filter_request, # body
     )
 

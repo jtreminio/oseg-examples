@@ -17,12 +17,12 @@ class GetPortalExample
 {
     fun getPortal()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
 
         try
         {
             val response = HelpCenterApi().getPortal(
-                accountId = null,
+                accountId = 0,
             )
 
             println(response)

@@ -17,15 +17,15 @@ class ListAllContactConversationsExample
 {
     fun listAllContactConversations()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
-        // ApiClient.apiKey["agentBotApiKey"] = "AGENT_BOT_API_KEY"
-        // ApiClient.apiKey["platformAppApiKey"] = "PLATFORM_APP_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "AGENT_BOT_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "PLATFORM_APP_API_KEY"
 
         try
         {
             val response = ConversationsAPIApi().listAllContactConversations(
-                inboxIdentifier = null,
-                contactIdentifier = null,
+                inboxIdentifier = "inbox_identifier_string",
+                contactIdentifier = "contact_identifier_string",
             )
 
             println(response)

@@ -8,8 +8,8 @@ apiCaller.setApiKey(api.MessagesApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.MessagesApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
 apiCaller.listAllMessages(
-  undefined, // accountId
-  undefined, // conversationId
+  0, // accountId
+  0, // conversationId
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

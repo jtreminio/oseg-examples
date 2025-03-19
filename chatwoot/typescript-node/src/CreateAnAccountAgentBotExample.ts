@@ -7,13 +7,11 @@ apiCaller.setApiKey(api.AccountAgentBotsApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.AccountAgentBotsApiApiKeys.agentBotApiKey, "AGENT_BOT_API_KEY");
 // apiCaller.setApiKey(api.AccountAgentBotsApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
-const agentBotCreateUpdatePayload = new models.AgentBotCreateUpdatePayload();
-agentBotCreateUpdatePayload.name = undefined;
-agentBotCreateUpdatePayload.description = undefined;
-agentBotCreateUpdatePayload.outgoingUrl = undefined;
+const agentBotCreateUpdatePayload: models.AgentBotCreateUpdatePayload = {
+};
 
 apiCaller.createAnAccountAgentBot(
-  undefined, // accountId
+  0, // accountId
   agentBotCreateUpdatePayload, // data
 ).then(response => {
   console.log(response.body);

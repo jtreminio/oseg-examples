@@ -8,7 +8,7 @@ use SplFileObject;
 use Chatwoot;
 
 $config = Chatwoot\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("userApiKey", "USER_API_KEY");
+$config->setApiKey("api_access_token", "USER_API_KEY");
 
 $portal_create_update_payload = (new Chatwoot\Client\Model\PortalCreateUpdatePayload())
     ->setArchived(null)
@@ -19,11 +19,20 @@ $portal_create_update_payload = (new Chatwoot\Client\Model\PortalCreateUpdatePay
     ->setName(null)
     ->setSlug(null)
     ->setPageTitle(null)
-    ->setAccountId(null);
+    ->setAccountId(null)
+    ->setConfig(json_decode(<<<'EOD'
+        {
+            "allowed_locales": [
+                "en",
+                "es"
+            ],
+            "default_locale": "en"
+        }
+    EOD, true));
 
 try {
     $response = (new Chatwoot\Client\Api\HelpCenterApi(config: $config))->updateNewPortalToAccount(
-        account_id: null,
+        account_id: 0,
         data: portal_create_update_payload,
     );
 

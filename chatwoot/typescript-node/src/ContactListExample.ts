@@ -8,7 +8,7 @@ apiCaller.setApiKey(api.ContactsApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.ContactsApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
 apiCaller.contactList(
-  undefined, // accountId
+  0, // accountId
   undefined, // sort
   1, // page
 ).then(response => {

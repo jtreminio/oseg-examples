@@ -13,12 +13,9 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.ReportsApi(api_client).list_all_conversation_statistics(
-            account_id=None,
-            metric=None,
-            type=None,
-            id=None,
-            since=None,
-            until=None,
+            account_id=0,
+            metric="conversations_count",
+            type="account",
         )
 
         pprint(response)

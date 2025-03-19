@@ -11,7 +11,7 @@ $config = Chatwoot\Client\Configuration::getDefaultConfiguration();
 
 try {
     (new Chatwoot\Client\Api\CSATSurveyPageApi(config: $config))->getCsatSurveyPage(
-        conversation_uuid: null,
+        conversation_uuid: 0,
     );
 } catch (Chatwoot\Client\ApiException $e) {
     echo "Exception when calling CSATSurveyPageApi#getCsatSurveyPage: {$e->getMessage()}";

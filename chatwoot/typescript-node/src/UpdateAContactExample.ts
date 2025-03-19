@@ -4,17 +4,12 @@ import models from "chatwoot_client"
 
 const apiCaller = new api.ContactsAPIApi();
 
-const publicContactCreateUpdatePayload = new models.PublicContactCreateUpdatePayload();
-publicContactCreateUpdatePayload.identifier = undefined;
-publicContactCreateUpdatePayload.identifierHash = undefined;
-publicContactCreateUpdatePayload.email = undefined;
-publicContactCreateUpdatePayload.name = undefined;
-publicContactCreateUpdatePayload.phoneNumber = undefined;
-publicContactCreateUpdatePayload.avatarUrl = undefined;
+const publicContactCreateUpdatePayload: models.PublicContactCreateUpdatePayload = {
+};
 
 apiCaller.updateAContact(
-  undefined, // inboxIdentifier
-  undefined, // contactIdentifier
+  "inbox_identifier_string", // inboxIdentifier
+  "contact_identifier_string", // contactIdentifier
   publicContactCreateUpdatePayload, // data
 ).then(response => {
   console.log(response.body);

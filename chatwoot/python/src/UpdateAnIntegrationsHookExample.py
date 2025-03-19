@@ -16,9 +16,9 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.IntegrationsApi(api_client).update_an_integrations_hook(
-            account_id=None,
-            hook_id=None,
-            integrations_hook_update_payload=integrations_hook_update_payload,
+            account_id=0,
+            hook_id=0,
+            data=integrations_hook_update_payload,
         )
 
         pprint(response)

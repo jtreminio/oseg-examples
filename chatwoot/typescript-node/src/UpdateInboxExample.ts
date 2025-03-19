@@ -7,22 +7,13 @@ apiCaller.setApiKey(api.InboxesApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.InboxesApiApiKeys.agentBotApiKey, "AGENT_BOT_API_KEY");
 // apiCaller.setApiKey(api.InboxesApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
-const channel = new models.UpdateInboxRequestChannel();
-channel.websiteUrl = undefined;
-channel.welcomeTitle = undefined;
-channel.welcomeTagline = undefined;
-channel.agentAwayMessage = undefined;
-channel.widgetColor = undefined;
-
-const updateInboxRequest = new models.UpdateInboxRequest();
-updateInboxRequest.enableAutoAssignment = undefined;
-updateInboxRequest.name = undefined;
-updateInboxRequest.avatar = undefined;
-updateInboxRequest.channel = channel;
+const updateInboxRequest: models.UpdateInboxRequest = {
+  enableAutoAssignment: false,
+};
 
 apiCaller.updateInbox(
-  undefined, // accountId
-  undefined, // id
+  0, // accountId
+  0, // id
   updateInboxRequest, // data
 ).then(response => {
   console.log(response.body);

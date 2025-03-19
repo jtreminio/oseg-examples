@@ -8,7 +8,7 @@ apiCaller.setApiKey(api.ConversationsApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.ConversationsApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
 apiCaller.conversationList(
-  undefined, // accountId
+  0, // accountId
   "all", // assigneeType
   "open", // status
   undefined, // q

@@ -17,8 +17,8 @@ class ConversationFilterExample
 {
     fun conversationFilter()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
-        // ApiClient.apiKey["agentBotApiKey"] = "AGENT_BOT_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "AGENT_BOT_API_KEY"
 
         val conversationFilterRequest = ConversationFilterRequest(
             payload = Serializer.moshi.adapter<List<Map<String, Any>>>().fromJson("""
@@ -46,9 +46,8 @@ class ConversationFilterExample
         try
         {
             val response = ConversationsApi().conversationFilter(
-                accountId = null,
+                accountId = 0,
                 body = conversationFilterRequest,
-                page = null,
             )
 
             println(response)

@@ -16,9 +16,9 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.TeamsApi(api_client).add_new_agent_to_team(
-            account_id=None,
-            team_id=None,
-            add_new_agent_to_team_request=add_new_agent_to_team_request,
+            account_id=0,
+            team_id=0,
+            data=add_new_agent_to_team_request,
         )
 
         pprint(response)

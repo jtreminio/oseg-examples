@@ -6,12 +6,13 @@ const apiCaller = new api.ConversationsApi();
 apiCaller.setApiKey(api.ConversationsApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.ConversationsApiApiKeys.agentBotApiKey, "AGENT_BOT_API_KEY");
 
-const togglePriorityOfAConversationRequest = new models.TogglePriorityOfAConversationRequest();
-togglePriorityOfAConversationRequest.priority = undefined;
+const togglePriorityOfAConversationRequest: models.TogglePriorityOfAConversationRequest = {
+  priority: models.TogglePriorityOfAConversationRequest.PriorityEnum.Urgent,
+};
 
 apiCaller.togglePriorityOfAConversation(
-  undefined, // accountId
-  undefined, // conversationId
+  0, // accountId
+  0, // conversationId
   togglePriorityOfAConversationRequest, // data
 ).catch(error => {
   console.log("Exception when calling ConversationsApi#togglePriorityOfAConversation:");

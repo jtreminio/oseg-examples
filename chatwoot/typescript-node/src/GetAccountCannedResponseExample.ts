@@ -6,7 +6,7 @@ const apiCaller = new api.CannedResponsesApi();
 apiCaller.setApiKey(api.CannedResponsesApiApiKeys.userApiKey, "USER_API_KEY");
 
 apiCaller.getAccountCannedResponse(
-  undefined, // accountId
+  0, // accountId
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

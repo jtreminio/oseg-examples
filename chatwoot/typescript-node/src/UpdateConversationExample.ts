@@ -6,13 +6,12 @@ const apiCaller = new api.ConversationsApi();
 apiCaller.setApiKey(api.ConversationsApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.ConversationsApiApiKeys.agentBotApiKey, "AGENT_BOT_API_KEY");
 
-const updateConversationRequest = new models.UpdateConversationRequest();
-updateConversationRequest.priority = undefined;
-updateConversationRequest.slaPolicyId = undefined;
+const updateConversationRequest: models.UpdateConversationRequest = {
+};
 
 apiCaller.updateConversation(
-  undefined, // accountId
-  undefined, // conversationId
+  0, // accountId
+  0, // conversationId
   updateConversationRequest, // data
 ).catch(error => {
   console.log("Exception when calling ConversationsApi#updateConversation:");

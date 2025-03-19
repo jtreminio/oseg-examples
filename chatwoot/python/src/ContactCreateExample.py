@@ -12,19 +12,13 @@ configuration = Configuration(
 
 with ApiClient(configuration) as api_client:
     contact_create = models.ContactCreate(
-        inbox_id=None,
-        name=None,
-        email=None,
-        phone_number=None,
-        avatar_url=None,
-        identifier=None,
-        avatar=None,
+        inbox_id=0,
     )
 
     try:
         response = api.ContactsApi(api_client).contact_create(
-            account_id=None,
-            contact_create=contact_create,
+            account_id=0,
+            data=contact_create,
         )
 
         pprint(response)

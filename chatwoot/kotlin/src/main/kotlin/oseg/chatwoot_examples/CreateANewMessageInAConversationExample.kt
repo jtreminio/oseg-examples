@@ -17,19 +17,22 @@ class CreateANewMessageInAConversationExample
 {
     fun createANewMessageInAConversation()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
-        // ApiClient.apiKey["agentBotApiKey"] = "AGENT_BOT_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "AGENT_BOT_API_KEY"
 
         val templateParams = ConversationMessageCreateTemplateParams(
             name = "sample_issue_resolution",
             category = "UTILITY",
             language = "en_US",
+            processedParams = Serializer.moshi.adapter<Map<String, Any>>().fromJson("""
+                {
+                    "1": "Chatwoot"
+                }
+            """)!!,
         )
 
         val conversationMessageCreate = ConversationMessageCreate(
-            content = null,
-            messageType = null,
-            _private = null,
+            content = "content_string",
             contentType = ConversationMessageCreate.ContentType.cards,
             templateParams = templateParams,
         )
@@ -37,8 +40,8 @@ class CreateANewMessageInAConversationExample
         try
         {
             val response = MessagesApi().createANewMessageInAConversation(
-                accountId = null,
-                conversationId = null,
+                accountId = 0,
+                conversationId = 0,
                 _data = conversationMessageCreate,
             )
 

@@ -6,8 +6,8 @@ const apiCaller = new api.InboxesApi();
 apiCaller.setApiKey(api.InboxesApiApiKeys.userApiKey, "USER_API_KEY");
 
 apiCaller.getInboxMembers(
-  undefined, // accountId
-  undefined, // inboxId
+  0, // accountId
+  0, // inboxId
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

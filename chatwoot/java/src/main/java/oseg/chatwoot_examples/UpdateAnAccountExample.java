@@ -19,15 +19,14 @@ public class UpdateAnAccountExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("PLATFORM_APP_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("platformAppApiKey")).setApiKey("PLATFORM_APP_API_KEY");
 
         var accountCreateUpdatePayload = new AccountCreateUpdatePayload();
-        accountCreateUpdatePayload.name(null);
 
         try
         {
             var response = new AccountsApi(config).updateAnAccount(
-                null, // accountId
+                0, // accountId
                 accountCreateUpdatePayload // data
             );
 

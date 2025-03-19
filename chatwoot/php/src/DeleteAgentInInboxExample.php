@@ -8,16 +8,16 @@ use SplFileObject;
 use Chatwoot;
 
 $config = Chatwoot\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("userApiKey", "USER_API_KEY");
+$config->setApiKey("api_access_token", "USER_API_KEY");
 
 $delete_agent_in_inbox_request = (new Chatwoot\Client\Model\DeleteAgentInInboxRequest())
-    ->setInboxId(null)
+    ->setInboxId("inbox_id_string")
     ->setUserIds([
     ]);
 
 try {
     (new Chatwoot\Client\Api\InboxesApi(config: $config))->deleteAgentInInbox(
-        account_id: null,
+        account_id: 0,
         data: delete_agent_in_inbox_request,
     );
 } catch (Chatwoot\Client\ApiException $e) {

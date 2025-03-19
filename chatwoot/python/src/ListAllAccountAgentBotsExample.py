@@ -13,7 +13,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.AccountAgentBotsApi(api_client).list_all_account_agent_bots(
-            account_id=None,
+            account_id=0,
         )
 
         pprint(response)

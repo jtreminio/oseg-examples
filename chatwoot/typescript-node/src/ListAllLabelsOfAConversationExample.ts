@@ -8,8 +8,8 @@ apiCaller.setApiKey(api.ConversationLabelsApiApiKeys.userApiKey, "USER_API_KEY")
 // apiCaller.setApiKey(api.ConversationLabelsApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
 apiCaller.listAllLabelsOfAConversation(
-  undefined, // accountId
-  undefined, // conversationId
+  0, // accountId
+  0, // conversationId
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

@@ -17,21 +17,17 @@ class UpdateAnAccountAgentBotExample
 {
     fun updateAnAccountAgentBot()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
-        // ApiClient.apiKey["agentBotApiKey"] = "AGENT_BOT_API_KEY"
-        // ApiClient.apiKey["platformAppApiKey"] = "PLATFORM_APP_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "AGENT_BOT_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "PLATFORM_APP_API_KEY"
 
-        val agentBotCreateUpdatePayload = AgentBotCreateUpdatePayload(
-            name = null,
-            description = null,
-            outgoingUrl = null,
-        )
+        val agentBotCreateUpdatePayload = AgentBotCreateUpdatePayload()
 
         try
         {
             val response = AccountAgentBotsApi().updateAnAccountAgentBot(
-                accountId = null,
-                id = null,
+                accountId = 0,
+                id = 0,
                 _data = agentBotCreateUpdatePayload,
             )
 

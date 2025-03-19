@@ -1,5 +1,9 @@
 **/.github/
 **/.openapi-generator/
+**/.venv
 
 **/sdk/
 !**/python/sdk/
+
+**/python/pyproject.toml
+**/python/uv.lock

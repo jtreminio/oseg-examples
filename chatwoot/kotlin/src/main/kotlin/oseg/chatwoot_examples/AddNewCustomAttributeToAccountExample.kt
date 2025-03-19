@@ -17,21 +17,16 @@ class AddNewCustomAttributeToAccountExample
 {
     fun addNewCustomAttributeToAccount()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
 
         val customAttributeCreateUpdatePayload = CustomAttributeCreateUpdatePayload(
-            attributeDisplayName = null,
-            attributeDisplayType = null,
-            attributeDescription = null,
-            attributeKey = null,
-            attributeModel = null,
             attributeValues = listOf (),
         )
 
         try
         {
             val response = CustomAttributesApi().addNewCustomAttributeToAccount(
-                accountId = null,
+                accountId = 0,
                 _data = customAttributeCreateUpdatePayload,
             )
 

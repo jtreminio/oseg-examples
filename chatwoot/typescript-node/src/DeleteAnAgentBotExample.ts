@@ -6,7 +6,7 @@ const apiCaller = new api.AgentBotsApi();
 apiCaller.setApiKey(api.AgentBotsApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
 apiCaller.deleteAnAgentBot(
-  undefined, // id
+  0, // id
 ).catch(error => {
   console.log("Exception when calling AgentBotsApi#deleteAnAgentBot:");
   console.log(error.body);

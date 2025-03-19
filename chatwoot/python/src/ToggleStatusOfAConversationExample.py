@@ -11,14 +11,14 @@ configuration = Configuration(
 
 with ApiClient(configuration) as api_client:
     toggle_status_of_a_conversation_request = models.ToggleStatusOfAConversationRequest(
-        status=None,
+        status="open",
     )
 
     try:
         response = api.ConversationsApi(api_client).toggle_status_of_a_conversation(
-            account_id=None,
-            conversation_id=None,
-            toggle_status_of_a_conversation_request=toggle_status_of_a_conversation_request,
+            account_id=0,
+            conversation_id=0,
+            data=toggle_status_of_a_conversation_request,
         )
 
         pprint(response)

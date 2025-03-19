@@ -17,14 +17,14 @@ class ListAllWebhooksExample
 {
     fun listAllWebhooks()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
-        // ApiClient.apiKey["agentBotApiKey"] = "AGENT_BOT_API_KEY"
-        // ApiClient.apiKey["platformAppApiKey"] = "PLATFORM_APP_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "AGENT_BOT_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "PLATFORM_APP_API_KEY"
 
         try
         {
             val response = WebhooksApi().listAllWebhooks(
-                accountId = null,
+                accountId = 0,
             )
 
             println(response)

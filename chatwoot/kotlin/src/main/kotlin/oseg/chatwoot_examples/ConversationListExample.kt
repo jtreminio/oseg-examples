@@ -17,20 +17,16 @@ class ConversationListExample
 {
     fun conversationList()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
-        // ApiClient.apiKey["agentBotApiKey"] = "AGENT_BOT_API_KEY"
-        // ApiClient.apiKey["platformAppApiKey"] = "PLATFORM_APP_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "AGENT_BOT_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "PLATFORM_APP_API_KEY"
 
         try
         {
             val response = ConversationsApi().conversationList(
-                accountId = null,
-                assigneeType = all,
-                status = open,
-                q = null,
-                inboxId = null,
-                teamId = null,
-                labels = null,
+                accountId = 0,
+                assigneeType = ConversationsApi.AssigneeTypeConversationList.all,
+                status = ConversationsApi.StatusConversationList.open,
                 page = 1,
             )
 

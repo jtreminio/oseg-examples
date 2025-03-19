@@ -7,17 +7,12 @@ apiCaller.setApiKey(api.ContactsApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.ContactsApiApiKeys.agentBotApiKey, "AGENT_BOT_API_KEY");
 // apiCaller.setApiKey(api.ContactsApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
-const contactUpdate = new models.ContactUpdate();
-contactUpdate.name = undefined;
-contactUpdate.email = undefined;
-contactUpdate.phoneNumber = undefined;
-contactUpdate.avatarUrl = undefined;
-contactUpdate.identifier = undefined;
-contactUpdate.avatar = undefined;
+const contactUpdate: models.ContactUpdate = {
+};
 
 apiCaller.contactUpdate(
-  undefined, // accountId
-  undefined, // id
+  0, // accountId
+  0, // id
   contactUpdate, // data
 ).then(response => {
   console.log(response.body);

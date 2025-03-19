@@ -19,15 +19,15 @@ public class ListAllContactConversationsExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
-        // config.setApiKey("AGENT_BOT_API_KEY");
-        // config.setApiKey("PLATFORM_APP_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
+        // ((ApiKeyAuth) config.getAuthentication("agentBotApiKey")).setApiKey("AGENT_BOT_API_KEY");
+        // ((ApiKeyAuth) config.getAuthentication("platformAppApiKey")).setApiKey("PLATFORM_APP_API_KEY");
 
         try
         {
             var response = new ConversationsApiApi(config).listAllContactConversations(
-                null, // inboxIdentifier
-                null // contactIdentifier
+                "inbox_identifier_string", // inboxIdentifier
+                "contact_identifier_string" // contactIdentifier
             );
 
             System.out.println(response);

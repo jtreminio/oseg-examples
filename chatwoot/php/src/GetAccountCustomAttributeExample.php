@@ -8,12 +8,12 @@ use SplFileObject;
 use Chatwoot;
 
 $config = Chatwoot\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("userApiKey", "USER_API_KEY");
+$config->setApiKey("api_access_token", "USER_API_KEY");
 
 try {
     $response = (new Chatwoot\Client\Api\CustomAttributesApi(config: $config))->getAccountCustomAttribute(
-        account_id: null,
-        attribute_model: null,
+        account_id: 0,
+        attribute_model: "0",
     );
 
     print_r($response);

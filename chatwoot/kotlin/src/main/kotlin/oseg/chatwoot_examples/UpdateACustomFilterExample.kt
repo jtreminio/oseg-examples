@@ -17,20 +17,17 @@ class UpdateACustomFilterExample
 {
     fun updateACustomFilter()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
-        // ApiClient.apiKey["agentBotApiKey"] = "AGENT_BOT_API_KEY"
-        // ApiClient.apiKey["platformAppApiKey"] = "PLATFORM_APP_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "AGENT_BOT_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "PLATFORM_APP_API_KEY"
 
-        val customFilterCreateUpdatePayload = CustomFilterCreateUpdatePayload(
-            name = null,
-            type = null,
-        )
+        val customFilterCreateUpdatePayload = CustomFilterCreateUpdatePayload()
 
         try
         {
             val response = CustomFiltersApi().updateACustomFilter(
-                accountId = null,
-                customFilterId = null,
+                accountId = 0,
+                customFilterId = 0,
                 _data = customFilterCreateUpdatePayload,
             )
 

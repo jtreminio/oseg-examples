@@ -9,12 +9,13 @@ use Chatwoot;
 
 $config = Chatwoot\Client\Configuration::getDefaultConfiguration();
 
-$public_conversation_create_payload = (new Chatwoot\Client\Model\PublicConversationCreatePayload());
+$public_conversation_create_payload = (new Chatwoot\Client\Model\PublicConversationCreatePayload())
+    ->setCustomAttributes(null);
 
 try {
     $response = (new Chatwoot\Client\Api\ConversationsAPIApi(config: $config))->createAConversation(
-        inbox_identifier: null,
-        contact_identifier: null,
+        inbox_identifier: "inbox_identifier_string",
+        contact_identifier: "contact_identifier_string",
         data: public_conversation_create_payload,
     );
 

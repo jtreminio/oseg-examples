@@ -19,23 +19,27 @@ public class UpdateNewPortalToAccountExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
 
         var portalCreateUpdatePayload = new PortalCreateUpdatePayload();
-        portalCreateUpdatePayload.archived(null);
         portalCreateUpdatePayload.color("add color HEX string, \"#fffff\"");
         portalCreateUpdatePayload.customDomain("https://chatwoot.help/.");
         portalCreateUpdatePayload.headerText("Handbook");
         portalCreateUpdatePayload.homepageLink("https://www.chatwoot.com/");
-        portalCreateUpdatePayload.name(null);
-        portalCreateUpdatePayload.slug(null);
-        portalCreateUpdatePayload.pageTitle(null);
-        portalCreateUpdatePayload.accountId(null);
+        portalCreateUpdatePayload.config(JSON.deserialize("""
+            {
+                "allowed_locales": [
+                    "en",
+                    "es"
+                ],
+                "default_locale": "en"
+            }
+        """, Map.class));
 
         try
         {
             var response = new HelpCenterApi(config).updateNewPortalToAccount(
-                null, // accountId
+                0, // accountId
                 portalCreateUpdatePayload // data
             );
 

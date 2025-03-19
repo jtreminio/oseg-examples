@@ -19,16 +19,22 @@ public class UpdateCustomAttributesOfAConversationExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
-        // config.setApiKey("AGENT_BOT_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
+        // ((ApiKeyAuth) config.getAuthentication("agentBotApiKey")).setApiKey("AGENT_BOT_API_KEY");
 
         var updateCustomAttributesOfAConversationRequest = new UpdateCustomAttributesOfAConversationRequest();
+        updateCustomAttributesOfAConversationRequest.customAttributes(JSON.deserialize("""
+            {
+                "order_id": "12345",
+                "previous_conversation": "67890"
+            }
+        """, Map.class));
 
         try
         {
             var response = new ConversationsApi(config).updateCustomAttributesOfAConversation(
-                null, // accountId
-                null, // conversationId
+                0, // accountId
+                0, // conversationId
                 updateCustomAttributesOfAConversationRequest // data
             );
 

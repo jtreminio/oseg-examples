@@ -25,10 +25,10 @@ public class UpdateAMessageExample
         try
         {
             var response = new MessagesApiApi(config).updateAMessage(
-                null, // inboxIdentifier
-                null, // contactIdentifier
-                null, // conversationId
-                null, // messageId
+                "inbox_identifier_string", // inboxIdentifier
+                "contact_identifier_string", // contactIdentifier
+                0, // conversationId
+                0, // messageId
                 publicMessageUpdatePayload // data
             );
 

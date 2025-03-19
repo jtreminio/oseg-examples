@@ -13,13 +13,34 @@ with ApiClient(configuration) as api_client:
         name="Add label on message create event",
         description="Add label support and sales on message create event if incoming message content contains text help",
         event_name="message_created",
-        active=None,
+        actions=json.loads("""
+            [
+                {
+                    "action_name": "add_label",
+                    "action_params": [
+                        "support"
+                    ]
+                }
+            ]
+        """),
+        conditions=json.loads("""
+            [
+                {
+                    "attribute_key": "content",
+                    "filter_operator": "contains",
+                    "query_operator": "nil",
+                    "values": [
+                        "help"
+                    ]
+                }
+            ]
+        """),
     )
 
     try:
         response = api.AutomationRuleApi(api_client).add_new_automation_rule_to_account(
-            account_id=None,
-            automation_rule_create_update_payload=automation_rule_create_update_payload,
+            account_id=0,
+            data=automation_rule_create_update_payload,
         )
 
         pprint(response)

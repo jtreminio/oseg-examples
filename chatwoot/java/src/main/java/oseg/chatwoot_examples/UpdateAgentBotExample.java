@@ -19,18 +19,18 @@ public class UpdateAgentBotExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
-        // config.setApiKey("AGENT_BOT_API_KEY");
-        // config.setApiKey("PLATFORM_APP_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
+        // ((ApiKeyAuth) config.getAuthentication("agentBotApiKey")).setApiKey("AGENT_BOT_API_KEY");
+        // ((ApiKeyAuth) config.getAuthentication("platformAppApiKey")).setApiKey("PLATFORM_APP_API_KEY");
 
         var updateAgentBotRequest = new UpdateAgentBotRequest();
-        updateAgentBotRequest.agentBot(null);
+        updateAgentBotRequest.agentBot(0);
 
         try
         {
             new InboxesApi(config).updateAgentBot(
-                null, // accountId
-                null, // id
+                0, // accountId
+                0, // id
                 updateAgentBotRequest // data
             );
         } catch (ApiException e) {

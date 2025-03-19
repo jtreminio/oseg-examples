@@ -17,28 +17,25 @@ class AddNewArticleToAccountExample
 {
     fun addNewArticleToAccount()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
 
         val articleCreateUpdatePayload = ArticleCreateUpdatePayload(
-            content = null,
-            position = null,
-            status = null,
-            title = null,
-            slug = null,
-            views = null,
-            portalId = null,
-            accountId = null,
-            authorId = null,
-            categoryId = null,
-            folderId = null,
-            associatedArticleId = null,
+            meta = Serializer.moshi.adapter<Map<String, Any>>().fromJson("""
+                {
+                    "description": "article description",
+                    "tags": [
+                        "article_name"
+                    ],
+                    "title": "article title"
+                }
+            """)!!,
         )
 
         try
         {
             val response = HelpCenterApi().addNewArticleToAccount(
-                accountId = null,
-                portalId = null,
+                accountId = 0,
+                portalId = 0,
                 _data = articleCreateUpdatePayload,
             )
 

@@ -16,9 +16,9 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.TeamsApi(api_client).update_agents_in_team(
-            account_id=None,
-            team_id=None,
-            update_agents_in_team_request=update_agents_in_team_request,
+            account_id=0,
+            team_id=0,
+            data=update_agents_in_team_request,
         )
 
         pprint(response)

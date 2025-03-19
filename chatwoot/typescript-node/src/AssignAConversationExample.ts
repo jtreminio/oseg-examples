@@ -6,13 +6,12 @@ const apiCaller = new api.ConversationAssignmentApi();
 apiCaller.setApiKey(api.ConversationAssignmentApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.ConversationAssignmentApiApiKeys.agentBotApiKey, "AGENT_BOT_API_KEY");
 
-const assignAConversationRequest = new models.AssignAConversationRequest();
-assignAConversationRequest.assigneeId = undefined;
-assignAConversationRequest.teamId = undefined;
+const assignAConversationRequest: models.AssignAConversationRequest = {
+};
 
 apiCaller.assignAConversation(
-  undefined, // accountId
-  undefined, // conversationId
+  0, // accountId
+  0, // conversationId
   assignAConversationRequest, // data
 ).then(response => {
   console.log(response.body);

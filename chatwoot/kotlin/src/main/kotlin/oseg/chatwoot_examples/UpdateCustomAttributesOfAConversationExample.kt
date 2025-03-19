@@ -17,17 +17,23 @@ class UpdateCustomAttributesOfAConversationExample
 {
     fun updateCustomAttributesOfAConversation()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
-        // ApiClient.apiKey["agentBotApiKey"] = "AGENT_BOT_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "AGENT_BOT_API_KEY"
 
-        val updateCustomAttributesOfAConversationRequest = UpdateCustomAttributesOfAConversationRequest()
+        val updateCustomAttributesOfAConversationRequest = UpdateCustomAttributesOfAConversationRequest(
+            customAttributes = Serializer.moshi.adapter<Map<String, Any>>().fromJson("""
+                {
+                    "order_id": "12345",
+                    "previous_conversation": "67890"
+                }
+            """)!!,
         )
 
         try
         {
             val response = ConversationsApi().updateCustomAttributesOfAConversation(
-                accountId = null,
-                conversationId = null,
+                accountId = 0,
+                conversationId = 0,
                 _data = updateCustomAttributesOfAConversationRequest,
             )
 

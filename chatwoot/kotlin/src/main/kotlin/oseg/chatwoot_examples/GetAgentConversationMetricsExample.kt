@@ -17,16 +17,15 @@ class GetAgentConversationMetricsExample
 {
     fun getAgentConversationMetrics()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
-        // ApiClient.apiKey["agentBotApiKey"] = "AGENT_BOT_API_KEY"
-        // ApiClient.apiKey["platformAppApiKey"] = "PLATFORM_APP_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "AGENT_BOT_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "PLATFORM_APP_API_KEY"
 
         try
         {
             val response = ReportsApi().getAgentConversationMetrics(
-                accountId = null,
-                type = null,
-                userId = null,
+                accountId = 0,
+                type = ReportsApi.TypeGetAgentConversationMetrics.agent,
             )
 
             println(response)

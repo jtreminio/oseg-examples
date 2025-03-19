@@ -19,12 +19,9 @@ public class CreateAUserExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("PLATFORM_APP_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("platformAppApiKey")).setApiKey("PLATFORM_APP_API_KEY");
 
         var userCreateUpdatePayload = new UserCreateUpdatePayload();
-        userCreateUpdatePayload.name(null);
-        userCreateUpdatePayload.email(null);
-        userCreateUpdatePayload.password(null);
 
         try
         {

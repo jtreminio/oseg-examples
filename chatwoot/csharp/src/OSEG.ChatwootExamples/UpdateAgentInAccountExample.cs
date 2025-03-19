@@ -14,19 +14,17 @@ public class UpdateAgentInAccountExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
 
         var updateAgentInAccountRequest = new UpdateAgentInAccountRequest(
-            role: null,
-            availability: null,
-            autoOffline: null
+            role: UpdateAgentInAccountRequest.RoleEnum.Agent
         );
 
         try
         {
             var response = new AgentsApi(config).UpdateAgentInAccount(
-                accountId: null,
-                id: null,
+                accountId: 0,
+                id: 0,
                 data: updateAgentInAccountRequest
             );
 

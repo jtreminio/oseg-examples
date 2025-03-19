@@ -6,8 +6,8 @@ const apiCaller = new api.TeamsApi();
 apiCaller.setApiKey(api.TeamsApiApiKeys.userApiKey, "USER_API_KEY");
 
 apiCaller.getTeamMembers(
-  undefined, // accountId
-  undefined, // teamId
+  0, // accountId
+  0, // teamId
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

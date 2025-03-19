@@ -14,12 +14,12 @@ public class DeleteAnAccountExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["platformAppApiKey"] = "PLATFORM_APP_API_KEY"};
+        config.ApiKey.Add("api_access_token", "PLATFORM_APP_API_KEY");
 
         try
         {
             new AccountsApi(config).DeleteAnAccount(
-                accountId: null
+                accountId: 0
             );
         }
         catch (ApiException e)

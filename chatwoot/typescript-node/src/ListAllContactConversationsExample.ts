@@ -8,8 +8,8 @@ apiCaller.setApiKey(api.ConversationsAPIApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.ConversationsAPIApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
 apiCaller.listAllContactConversations(
-  undefined, // inboxIdentifier
-  undefined, // contactIdentifier
+  "inbox_identifier_string", // inboxIdentifier
+  "contact_identifier_string", // contactIdentifier
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

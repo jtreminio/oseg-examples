@@ -13,8 +13,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.ContactsApi(api_client).contact_list(
-            account_id=None,
-            sort=None,
+            account_id=0,
             page=1,
         )
 

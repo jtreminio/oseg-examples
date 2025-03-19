@@ -8,8 +8,8 @@ apiCaller.setApiKey(api.ReportsApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.ReportsApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
 apiCaller.getAgentConversationMetrics(
-  undefined, // accountId
-  undefined, // type
+  0, // accountId
+  "agent", // type
   undefined, // userId
 ).then(response => {
   console.log(response.body);

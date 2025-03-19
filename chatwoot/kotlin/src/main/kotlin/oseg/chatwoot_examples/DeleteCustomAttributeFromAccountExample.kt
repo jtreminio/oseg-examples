@@ -17,13 +17,13 @@ class DeleteCustomAttributeFromAccountExample
 {
     fun deleteCustomAttributeFromAccount()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
 
         try
         {
             CustomAttributesApi().deleteCustomAttributeFromAccount(
-                accountId = null,
-                id = null,
+                accountId = 0,
+                id = 0,
             )
         } catch (e: ClientException) {
             println("4xx response calling CustomAttributesApi#deleteCustomAttributeFromAccount")

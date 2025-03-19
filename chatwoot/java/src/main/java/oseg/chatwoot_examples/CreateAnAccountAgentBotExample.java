@@ -19,19 +19,16 @@ public class CreateAnAccountAgentBotExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
-        // config.setApiKey("AGENT_BOT_API_KEY");
-        // config.setApiKey("PLATFORM_APP_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
+        // ((ApiKeyAuth) config.getAuthentication("agentBotApiKey")).setApiKey("AGENT_BOT_API_KEY");
+        // ((ApiKeyAuth) config.getAuthentication("platformAppApiKey")).setApiKey("PLATFORM_APP_API_KEY");
 
         var agentBotCreateUpdatePayload = new AgentBotCreateUpdatePayload();
-        agentBotCreateUpdatePayload.name(null);
-        agentBotCreateUpdatePayload.description(null);
-        agentBotCreateUpdatePayload.outgoingUrl(null);
 
         try
         {
             var response = new AccountAgentBotsApi(config).createAnAccountAgentBot(
-                null, // accountId
+                0, // accountId
                 agentBotCreateUpdatePayload // data
             );
 

@@ -17,7 +17,7 @@ class AddNewAgentToTeamExample
 {
     fun addNewAgentToTeam()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
 
         val addNewAgentToTeamRequest = AddNewAgentToTeamRequest(
             userIds = listOf (),
@@ -26,8 +26,8 @@ class AddNewAgentToTeamExample
         try
         {
             val response = TeamsApi().addNewAgentToTeam(
-                accountId = null,
-                teamId = null,
+                accountId = 0,
+                teamId = 0,
                 _data = addNewAgentToTeamRequest,
             )
 

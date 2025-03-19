@@ -9,18 +9,12 @@ configuration = Configuration(
 
 with ApiClient(configuration) as api_client:
     public_contact_create_update_payload = models.PublicContactCreateUpdatePayload(
-        identifier=None,
-        identifier_hash=None,
-        email=None,
-        name=None,
-        phone_number=None,
-        avatar_url=None,
     )
 
     try:
         response = api.ContactsAPIApi(api_client).create_a_contact(
-            inbox_identifier=None,
-            public_contact_create_update_payload=public_contact_create_update_payload,
+            inbox_identifier="inbox_identifier_string",
+            data=public_contact_create_update_payload,
         )
 
         pprint(response)

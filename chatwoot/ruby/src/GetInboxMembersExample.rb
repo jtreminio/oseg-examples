@@ -2,13 +2,13 @@ require "json"
 require "chatwoot_client"
 
 ChatwootClient.configure do |config|
-    config.api_key["userApiKey"] = "USER_API_KEY"
+    config.api_key["api_access_token"] = "USER_API_KEY"
 end
 
 begin
     response = ChatwootClient::InboxesApi.new.get_inbox_members(
-        nil, # account_id
-        nil, # inbox_id
+        0, # account_id
+        0, # inbox_id
     )
 
     p response

@@ -2,18 +2,16 @@ require "json"
 require "chatwoot_client"
 
 ChatwootClient.configure do |config|
-    config.api_key["userApiKey"] = "USER_API_KEY"
+    config.api_key["api_access_token"] = "USER_API_KEY"
 end
 
 update_agent_in_account_request = ChatwootClient::UpdateAgentInAccountRequest.new
-update_agent_in_account_request.role = nil
-update_agent_in_account_request.availability = nil
-update_agent_in_account_request.auto_offline = nil
+update_agent_in_account_request.role = "agent"
 
 begin
     response = ChatwootClient::AgentsApi.new.update_agent_in_account(
-        nil, # account_id
-        nil, # id
+        0, # account_id
+        0, # id
         update_agent_in_account_request, # data
     )
 

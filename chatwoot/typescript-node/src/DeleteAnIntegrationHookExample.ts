@@ -8,8 +8,8 @@ apiCaller.setApiKey(api.IntegrationsApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.IntegrationsApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
 apiCaller.deleteAnIntegrationHook(
-  undefined, // accountId
-  undefined, // hookId
+  0, // accountId
+  0, // hookId
 ).catch(error => {
   console.log("Exception when calling IntegrationsApi#deleteAnIntegrationHook:");
   console.log(error.body);

@@ -6,12 +6,13 @@ const apiCaller = new api.ConversationsApi();
 apiCaller.setApiKey(api.ConversationsApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.ConversationsApiApiKeys.agentBotApiKey, "AGENT_BOT_API_KEY");
 
-const toggleStatusOfAConversationRequest = new models.ToggleStatusOfAConversationRequest();
-toggleStatusOfAConversationRequest.status = undefined;
+const toggleStatusOfAConversationRequest: models.ToggleStatusOfAConversationRequest = {
+  status: models.ToggleStatusOfAConversationRequest.StatusEnum.Open,
+};
 
 apiCaller.toggleStatusOfAConversation(
-  undefined, // accountId
-  undefined, // conversationId
+  0, // accountId
+  0, // conversationId
   toggleStatusOfAConversationRequest, // data
 ).then(response => {
   console.log(response.body);

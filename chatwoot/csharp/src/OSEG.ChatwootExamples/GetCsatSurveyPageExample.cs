@@ -18,7 +18,7 @@ public class GetCsatSurveyPageExample
         try
         {
             new CSATSurveyPageApi(config).GetCsatSurveyPage(
-                conversationUuid: null
+                conversationUuid: 0
             );
         }
         catch (ApiException e)

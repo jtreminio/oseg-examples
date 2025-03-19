@@ -11,8 +11,8 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.CannedResponsesApi(api_client).delete_canned_response_from_account(
-            account_id=None,
-            id=None,
+            account_id=0,
+            id=0,
         )
     except ApiException as e:
         print("Exception when calling CannedResponsesApi#delete_canned_response_from_account: %s\n" % e)

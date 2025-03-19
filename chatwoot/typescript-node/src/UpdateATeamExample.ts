@@ -7,14 +7,12 @@ apiCaller.setApiKey(api.TeamsApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.TeamsApiApiKeys.agentBotApiKey, "AGENT_BOT_API_KEY");
 // apiCaller.setApiKey(api.TeamsApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
-const teamCreateUpdatePayload = new models.TeamCreateUpdatePayload();
-teamCreateUpdatePayload.name = undefined;
-teamCreateUpdatePayload.description = undefined;
-teamCreateUpdatePayload.allowAutoAssign = undefined;
+const teamCreateUpdatePayload: models.TeamCreateUpdatePayload = {
+};
 
 apiCaller.updateATeam(
-  undefined, // accountId
-  undefined, // teamId
+  0, // accountId
+  0, // teamId
   teamCreateUpdatePayload, // data
 ).then(response => {
   console.log(response.body);

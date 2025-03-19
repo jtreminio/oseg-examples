@@ -35,9 +35,8 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.ContactsApi(api_client).contact_filter(
-            account_id=None,
-            contact_filter_request=contact_filter_request,
-            page=None,
+            account_id=0,
+            body=contact_filter_request,
         )
 
         pprint(response)

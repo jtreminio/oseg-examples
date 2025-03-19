@@ -17,20 +17,41 @@ class UpdateAutomationRuleInAccountExample
 {
     fun updateAutomationRuleInAccount()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
 
         val automationRuleCreateUpdatePayload = AutomationRuleCreateUpdatePayload(
             name = "Add label on message create event",
             description = "Add label support and sales on message create event if incoming message content contains text help",
             eventName = AutomationRuleCreateUpdatePayload.EventName.messageCreated,
-            active = null,
+            actions = Serializer.moshi.adapter<List<Map<String, Any>>>().fromJson("""
+                [
+                    {
+                        "action_name": "add_label",
+                        "action_params": [
+                            "support"
+                        ]
+                    }
+                ]
+            """)!!,
+            conditions = Serializer.moshi.adapter<List<Map<String, Any>>>().fromJson("""
+                [
+                    {
+                        "attribute_key": "content",
+                        "filter_operator": "contains",
+                        "query_operator": "nil",
+                        "values": [
+                            "help"
+                        ]
+                    }
+                ]
+            """)!!,
         )
 
         try
         {
             val response = AutomationRuleApi().updateAutomationRuleInAccount(
-                accountId = null,
-                id = null,
+                accountId = 0,
+                id = 0,
                 _data = automationRuleCreateUpdatePayload,
             )
 

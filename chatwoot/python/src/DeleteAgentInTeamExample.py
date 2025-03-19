@@ -16,9 +16,9 @@ with ApiClient(configuration) as api_client:
 
     try:
         api.TeamsApi(api_client).delete_agent_in_team(
-            account_id=None,
-            team_id=None,
-            delete_agent_in_team_request=delete_agent_in_team_request,
+            account_id=0,
+            team_id=0,
+            data=delete_agent_in_team_request,
         )
     except ApiException as e:
         print("Exception when calling TeamsApi#delete_agent_in_team: %s\n" % e)

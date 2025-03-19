@@ -8,12 +8,12 @@ use SplFileObject;
 use Chatwoot;
 
 $config = Chatwoot\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("userApiKey", "USER_API_KEY");
+$config->setApiKey("api_access_token", "USER_API_KEY");
 
 try {
     $response = (new Chatwoot\Client\Api\InboxesApi(config: $config))->getInboxMembers(
-        account_id: null,
-        inbox_id: null,
+        account_id: 0,
+        inbox_id: 0,
     );
 
     print_r($response);

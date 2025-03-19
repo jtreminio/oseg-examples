@@ -17,19 +17,16 @@ class CreateAnIntegrationHookExample
 {
     fun createAnIntegrationHook()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
-        // ApiClient.apiKey["agentBotApiKey"] = "AGENT_BOT_API_KEY"
-        // ApiClient.apiKey["platformAppApiKey"] = "PLATFORM_APP_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "AGENT_BOT_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "PLATFORM_APP_API_KEY"
 
-        val integrationsHookCreatePayload = IntegrationsHookCreatePayload(
-            appId = null,
-            inboxId = null,
-        )
+        val integrationsHookCreatePayload = IntegrationsHookCreatePayload()
 
         try
         {
             val response = IntegrationsApi().createAnIntegrationHook(
-                accountId = null,
+                accountId = 0,
                 _data = integrationsHookCreatePayload,
             )
 

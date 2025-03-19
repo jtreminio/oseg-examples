@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.UsersApi(api_client).get_details_of_a_user(
-            id=None,
+            id=0,
         )
 
         pprint(response)

@@ -14,7 +14,7 @@ public class DeleteAgentInTeamExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
 
         var deleteAgentInTeamRequest = new DeleteAgentInTeamRequest(
             userIds: [
@@ -24,8 +24,8 @@ public class DeleteAgentInTeamExample
         try
         {
             new TeamsApi(config).DeleteAgentInTeam(
-                accountId: null,
-                teamId: null,
+                accountId: 0,
+                teamId: 0,
                 data: deleteAgentInTeamRequest
             );
         }

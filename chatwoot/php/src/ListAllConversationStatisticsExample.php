@@ -8,18 +8,15 @@ use SplFileObject;
 use Chatwoot;
 
 $config = Chatwoot\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("userApiKey", "USER_API_KEY");
-// $config->setApiKey("agentBotApiKey", "AGENT_BOT_API_KEY");
-// $config->setApiKey("platformAppApiKey", "PLATFORM_APP_API_KEY");
+$config->setApiKey("api_access_token", "USER_API_KEY");
+// $config->setApiKey("api_access_token", "AGENT_BOT_API_KEY");
+// $config->setApiKey("api_access_token", "PLATFORM_APP_API_KEY");
 
 try {
     $response = (new Chatwoot\Client\Api\ReportsApi(config: $config))->listAllConversationStatistics(
-        account_id: null,
-        metric: null,
-        type: null,
-        id: null,
-        since: null,
-        until: null,
+        account_id: 0,
+        metric: "conversations_count",
+        type: "account",
     );
 
     print_r($response);

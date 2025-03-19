@@ -19,27 +19,16 @@ public class InboxCreationExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
-        // config.setApiKey("AGENT_BOT_API_KEY");
-        // config.setApiKey("PLATFORM_APP_API_KEY");
-
-        var channel = new InboxCreationRequestChannel();
-        channel.type(null);
-        channel.websiteUrl(null);
-        channel.welcomeTitle(null);
-        channel.welcomeTagline(null);
-        channel.agentAwayMessage(null);
-        channel.widgetColor(null);
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
+        // ((ApiKeyAuth) config.getAuthentication("agentBotApiKey")).setApiKey("AGENT_BOT_API_KEY");
+        // ((ApiKeyAuth) config.getAuthentication("platformAppApiKey")).setApiKey("PLATFORM_APP_API_KEY");
 
         var inboxCreationRequest = new InboxCreationRequest();
-        inboxCreationRequest.name(null);
-        inboxCreationRequest.avatar(null);
-        inboxCreationRequest.channel(channel);
 
         try
         {
             var response = new InboxesApi(config).inboxCreation(
-                null, // accountId
+                0, // accountId
                 inboxCreationRequest // data
             );
 

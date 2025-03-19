@@ -23,7 +23,7 @@ public class GetDetailsOfAInboxExample
         try
         {
             var response = new InboxApiApi(config).getDetailsOfAInbox(
-                null // inboxIdentifier
+                "inbox_identifier_string" // inboxIdentifier
             );
 
             System.out.println(response);

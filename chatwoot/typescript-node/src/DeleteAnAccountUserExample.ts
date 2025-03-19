@@ -5,11 +5,12 @@ import models from "chatwoot_client"
 const apiCaller = new api.AccountUsersApi();
 apiCaller.setApiKey(api.AccountUsersApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
-const deleteAnAccountUserRequest = new models.DeleteAnAccountUserRequest();
-deleteAnAccountUserRequest.userId = undefined;
+const deleteAnAccountUserRequest: models.DeleteAnAccountUserRequest = {
+  userId: 0,
+};
 
 apiCaller.deleteAnAccountUser(
-  undefined, // accountId
+  0, // accountId
   deleteAnAccountUserRequest, // data
 ).catch(error => {
   console.log("Exception when calling AccountUsersApi#deleteAnAccountUser:");

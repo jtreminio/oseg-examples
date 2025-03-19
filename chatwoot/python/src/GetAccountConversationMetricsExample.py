@@ -13,8 +13,8 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.ReportsApi(api_client).get_account_conversation_metrics(
-            account_id=None,
-            type=None,
+            account_id=0,
+            type="account",
         )
 
         pprint(response)

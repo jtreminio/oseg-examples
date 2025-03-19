@@ -19,13 +19,13 @@ public class GetAccountCustomAttributeExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
 
         try
         {
             var response = new CustomAttributesApi(config).getAccountCustomAttribute(
-                null, // accountId
-                null // attributeModel
+                0, // accountId
+                "0" // attributeModel
             );
 
             System.out.println(response);

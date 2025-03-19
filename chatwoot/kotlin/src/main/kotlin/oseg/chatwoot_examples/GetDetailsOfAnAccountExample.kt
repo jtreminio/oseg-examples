@@ -17,12 +17,12 @@ class GetDetailsOfAnAccountExample
 {
     fun getDetailsOfAnAccount()
     {
-        ApiClient.apiKey["platformAppApiKey"] = "PLATFORM_APP_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "PLATFORM_APP_API_KEY"
 
         try
         {
             val response = AccountsApi().getDetailsOfAnAccount(
-                accountId = null,
+                accountId = 0,
             )
 
             println(response)

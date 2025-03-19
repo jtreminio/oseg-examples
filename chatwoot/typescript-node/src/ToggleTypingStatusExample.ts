@@ -8,10 +8,10 @@ apiCaller.setApiKey(api.ConversationsAPIApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.ConversationsAPIApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
 apiCaller.toggleTypingStatus(
-  undefined, // inboxIdentifier
-  undefined, // contactIdentifier
-  undefined, // conversationId
-  undefined, // typingStatus
+  "inbox_identifier_string", // inboxIdentifier
+  "contact_identifier_string", // contactIdentifier
+  0, // conversationId
+  "typing_status_string", // typingStatus
 ).catch(error => {
   console.log("Exception when calling ConversationsAPIApi#toggleTypingStatus:");
   console.log(error.body);

@@ -19,16 +19,16 @@ public class UpdateAgentsInInboxExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
 
         var updateAgentsInInboxRequest = new UpdateAgentsInInboxRequest();
-        updateAgentsInInboxRequest.inboxId(null);
+        updateAgentsInInboxRequest.inboxId("inbox_id_string");
         updateAgentsInInboxRequest.userIds(List.of ());
 
         try
         {
             var response = new InboxesApi(config).updateAgentsInInbox(
-                null, // accountId
+                0, // accountId
                 updateAgentsInInboxRequest // data
             );
 

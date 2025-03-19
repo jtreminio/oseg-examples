@@ -17,34 +17,41 @@ class NewConversationExample
 {
     fun newConversation()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
-        // ApiClient.apiKey["agentBotApiKey"] = "AGENT_BOT_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "AGENT_BOT_API_KEY"
 
         val messageTemplateParams = NewConversationRequestMessageTemplateParams(
             name = "sample_issue_resolution",
             category = "UTILITY",
             language = "en_US",
+            processedParams = Serializer.moshi.adapter<Map<String, Any>>().fromJson("""
+                {
+                    "1": "Chatwoot"
+                }
+            """)!!,
         )
 
         val message = NewConversationRequestMessage(
-            content = null,
+            content = "content_string",
             templateParams = messageTemplateParams,
         )
 
         val newConversationRequest = NewConversationRequest(
-            inboxId = null,
-            sourceId = null,
-            contactId = null,
-            status = null,
-            assigneeId = null,
-            teamId = null,
+            inboxId = "inbox_id_string",
+            sourceId = "source_id_string",
+            customAttributes = Serializer.moshi.adapter<Map<String, Any>>().fromJson("""
+                {
+                    "attribute_key": "attribute_value",
+                    "priority_conversation_number": 3
+                }
+            """)!!,
             message = message,
         )
 
         try
         {
             val response = ConversationsApi().newConversation(
-                accountId = null,
+                accountId = 0,
                 _data = newConversationRequest,
             )
 

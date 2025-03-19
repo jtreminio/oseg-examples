@@ -16,16 +16,14 @@ public class CreateAMessageExample
         var config = new Configuration();
 
         var publicMessageCreatePayload = new PublicMessageCreatePayload(
-            content: null,
-            echoId: null
         );
 
         try
         {
             var response = new MessagesAPIApi(config).CreateAMessage(
-                inboxIdentifier: null,
-                contactIdentifier: null,
-                conversationId: null,
+                inboxIdentifier: "inbox_identifier_string",
+                contactIdentifier: "contact_identifier_string",
+                conversationId: 0,
                 data: publicMessageCreatePayload
             );
 

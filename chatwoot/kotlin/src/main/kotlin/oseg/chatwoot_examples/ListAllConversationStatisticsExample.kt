@@ -17,19 +17,16 @@ class ListAllConversationStatisticsExample
 {
     fun listAllConversationStatistics()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
-        // ApiClient.apiKey["agentBotApiKey"] = "AGENT_BOT_API_KEY"
-        // ApiClient.apiKey["platformAppApiKey"] = "PLATFORM_APP_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "AGENT_BOT_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "PLATFORM_APP_API_KEY"
 
         try
         {
             val response = ReportsApi().listAllConversationStatistics(
-                accountId = null,
-                metric = null,
-                type = null,
-                id = null,
-                since = null,
-                until = null,
+                accountId = 0,
+                metric = ReportsApi.MetricListAllConversationStatistics.conversations_count,
+                type = ReportsApi.TypeListAllConversationStatistics.account,
             )
 
             println(response)

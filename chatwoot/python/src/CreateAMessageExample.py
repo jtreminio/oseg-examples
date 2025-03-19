@@ -9,16 +9,14 @@ configuration = Configuration(
 
 with ApiClient(configuration) as api_client:
     public_message_create_payload = models.PublicMessageCreatePayload(
-        content=None,
-        echo_id=None,
     )
 
     try:
         response = api.MessagesAPIApi(api_client).create_a_message(
-            inbox_identifier=None,
-            contact_identifier=None,
-            conversation_id=None,
-            public_message_create_payload=public_message_create_payload,
+            inbox_identifier="inbox_identifier_string",
+            contact_identifier="contact_identifier_string",
+            conversation_id=0,
+            data=public_message_create_payload,
         )
 
         pprint(response)

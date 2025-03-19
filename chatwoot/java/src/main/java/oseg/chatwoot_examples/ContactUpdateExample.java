@@ -19,23 +19,17 @@ public class ContactUpdateExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
-        // config.setApiKey("AGENT_BOT_API_KEY");
-        // config.setApiKey("PLATFORM_APP_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
+        // ((ApiKeyAuth) config.getAuthentication("agentBotApiKey")).setApiKey("AGENT_BOT_API_KEY");
+        // ((ApiKeyAuth) config.getAuthentication("platformAppApiKey")).setApiKey("PLATFORM_APP_API_KEY");
 
         var contactUpdate = new ContactUpdate();
-        contactUpdate.name(null);
-        contactUpdate.email(null);
-        contactUpdate.phoneNumber(null);
-        contactUpdate.avatarUrl(null);
-        contactUpdate.identifier(null);
-        contactUpdate.avatar(null);
 
         try
         {
             var response = new ContactsApi(config).contactUpdate(
-                null, // accountId
-                null, // id
+                0, // accountId
+                0, // id
                 contactUpdate // data
             );
 

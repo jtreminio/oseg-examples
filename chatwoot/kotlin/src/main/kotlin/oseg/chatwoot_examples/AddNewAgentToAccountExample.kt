@@ -17,20 +17,18 @@ class AddNewAgentToAccountExample
 {
     fun addNewAgentToAccount()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
 
         val addNewAgentToAccountRequest = AddNewAgentToAccountRequest(
-            email = null,
-            name = null,
-            role = null,
-            availabilityStatus = null,
-            autoOffline = null,
+            email = "email_string",
+            name = "name_string",
+            role = AddNewAgentToAccountRequest.Role.agent,
         )
 
         try
         {
             val response = AgentsApi().addNewAgentToAccount(
-                accountId = null,
+                accountId = 0,
                 _data = addNewAgentToAccountRequest,
             )
 

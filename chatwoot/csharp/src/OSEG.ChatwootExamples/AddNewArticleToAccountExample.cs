@@ -14,28 +14,25 @@ public class AddNewArticleToAccountExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
 
         var articleCreateUpdatePayload = new ArticleCreateUpdatePayload(
-            content: null,
-            position: null,
-            status: null,
-            title: null,
-            slug: null,
-            views: null,
-            portalId: null,
-            accountId: null,
-            authorId: null,
-            categoryId: null,
-            folderId: null,
-            associatedArticleId: null
+            meta: JsonSerializer.Deserialize<Dictionary<string, object>>("""
+                {
+                    "description": "article description",
+                    "tags": [
+                        "article_name"
+                    ],
+                    "title": "article title"
+                }
+            """)
         );
 
         try
         {
             var response = new HelpCenterApi(config).AddNewArticleToAccount(
-                accountId: null,
-                portalId: null,
+                accountId: 0,
+                portalId: 0,
                 data: articleCreateUpdatePayload
             );
 

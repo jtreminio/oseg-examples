@@ -2,8 +2,8 @@ require "json"
 require "chatwoot_client"
 
 ChatwootClient.configure do |config|
-    config.api_key["userApiKey"] = "USER_API_KEY"
-    # config.api_key["agentBotApiKey"] = "AGENT_BOT_API_KEY"
+    config.api_key["api_access_token"] = "USER_API_KEY"
+    # config.api_key["api_access_token"] = "AGENT_BOT_API_KEY"
 end
 
 contact_filter_request = ChatwootClient::ContactFilterRequest.new
@@ -31,7 +31,7 @@ contact_filter_request.payload = JSON.parse(<<-EOD
 
 begin
     response = ChatwootClient::ContactsApi.new.contact_filter(
-        nil, # account_id
+        0, # account_id
         contact_filter_request, # body
     )
 

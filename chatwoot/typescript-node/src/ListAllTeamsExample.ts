@@ -8,7 +8,7 @@ apiCaller.setApiKey(api.TeamsApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.TeamsApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
 apiCaller.listAllTeams(
-  undefined, // accountId
+  0, // accountId
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

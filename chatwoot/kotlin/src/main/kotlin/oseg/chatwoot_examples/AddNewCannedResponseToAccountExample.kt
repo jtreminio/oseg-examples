@@ -17,17 +17,14 @@ class AddNewCannedResponseToAccountExample
 {
     fun addNewCannedResponseToAccount()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
 
-        val cannedResponseCreateUpdatePayload = CannedResponseCreateUpdatePayload(
-            content = null,
-            shortCode = null,
-        )
+        val cannedResponseCreateUpdatePayload = CannedResponseCreateUpdatePayload()
 
         try
         {
             val response = CannedResponsesApi().addNewCannedResponseToAccount(
-                accountId = null,
+                accountId = 0,
                 _data = cannedResponseCreateUpdatePayload,
             )
 

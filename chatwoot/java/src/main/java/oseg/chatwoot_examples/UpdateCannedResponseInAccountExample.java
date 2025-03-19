@@ -19,17 +19,15 @@ public class UpdateCannedResponseInAccountExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
 
         var cannedResponseCreateUpdatePayload = new CannedResponseCreateUpdatePayload();
-        cannedResponseCreateUpdatePayload.content(null);
-        cannedResponseCreateUpdatePayload.shortCode(null);
 
         try
         {
             var response = new CannedResponseApi(config).updateCannedResponseInAccount(
-                null, // accountId
-                null, // id
+                0, // accountId
+                0, // id
                 cannedResponseCreateUpdatePayload // data
             );
 

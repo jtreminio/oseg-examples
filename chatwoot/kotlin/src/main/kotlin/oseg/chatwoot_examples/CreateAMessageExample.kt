@@ -18,17 +18,14 @@ class CreateAMessageExample
     fun createAMessage()
     {
 
-        val publicMessageCreatePayload = PublicMessageCreatePayload(
-            content = null,
-            echoId = null,
-        )
+        val publicMessageCreatePayload = PublicMessageCreatePayload()
 
         try
         {
             val response = MessagesAPIApi().createAMessage(
-                inboxIdentifier = null,
-                contactIdentifier = null,
-                conversationId = null,
+                inboxIdentifier = "inbox_identifier_string",
+                contactIdentifier = "contact_identifier_string",
+                conversationId = 0,
                 _data = publicMessageCreatePayload,
             )
 

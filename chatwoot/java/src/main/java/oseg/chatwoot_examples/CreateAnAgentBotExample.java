@@ -19,12 +19,9 @@ public class CreateAnAgentBotExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("PLATFORM_APP_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("platformAppApiKey")).setApiKey("PLATFORM_APP_API_KEY");
 
         var agentBotCreateUpdatePayload = new AgentBotCreateUpdatePayload();
-        agentBotCreateUpdatePayload.name(null);
-        agentBotCreateUpdatePayload.description(null);
-        agentBotCreateUpdatePayload.outgoingUrl(null);
 
         try
         {

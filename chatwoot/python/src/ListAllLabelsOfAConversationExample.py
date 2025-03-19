@@ -13,8 +13,8 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.ConversationLabelsApi(api_client).list_all_labels_of_a_conversation(
-            account_id=None,
-            conversation_id=None,
+            account_id=0,
+            conversation_id=0,
         )
 
         pprint(response)

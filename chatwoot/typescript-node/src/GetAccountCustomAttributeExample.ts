@@ -6,8 +6,8 @@ const apiCaller = new api.CustomAttributesApi();
 apiCaller.setApiKey(api.CustomAttributesApiApiKeys.userApiKey, "USER_API_KEY");
 
 apiCaller.getAccountCustomAttribute(
-  undefined, // accountId
-  undefined, // attributeModel
+  0, // accountId
+  "0", // attributeModel
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

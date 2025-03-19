@@ -14,21 +14,24 @@ with ApiClient(configuration) as api_client:
         name="sample_issue_resolution",
         category="UTILITY",
         language="en_US",
+        processed_params=json.loads("""
+            {
+                "1": "Chatwoot"
+            }
+        """),
     )
 
     conversation_message_create = models.ConversationMessageCreate(
-        content=None,
-        message_type=None,
-        private=None,
+        content="content_string",
         content_type="cards",
         template_params=template_params,
     )
 
     try:
         response = api.MessagesApi(api_client).create_a_new_message_in_a_conversation(
-            account_id=None,
-            conversation_id=None,
-            conversation_message_create=conversation_message_create,
+            account_id=0,
+            conversation_id=0,
+            data=conversation_message_create,
         )
 
         pprint(response)

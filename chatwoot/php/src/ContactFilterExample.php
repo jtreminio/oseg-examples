@@ -8,8 +8,8 @@ use SplFileObject;
 use Chatwoot;
 
 $config = Chatwoot\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("userApiKey", "USER_API_KEY");
-// $config->setApiKey("agentBotApiKey", "AGENT_BOT_API_KEY");
+$config->setApiKey("api_access_token", "USER_API_KEY");
+// $config->setApiKey("api_access_token", "AGENT_BOT_API_KEY");
 
 $contact_filter_request = (new Chatwoot\Client\Model\ContactFilterRequest())
     ->setPayload(json_decode(<<<'EOD'
@@ -35,9 +35,8 @@ $contact_filter_request = (new Chatwoot\Client\Model\ContactFilterRequest())
 
 try {
     $response = (new Chatwoot\Client\Api\ContactsApi(config: $config))->contactFilter(
-        account_id: null,
+        account_id: 0,
         body: contact_filter_request,
-        page: null,
     );
 
     print_r($response);

@@ -7,12 +7,13 @@ apiCaller.setApiKey(api.InboxesApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.InboxesApiApiKeys.agentBotApiKey, "AGENT_BOT_API_KEY");
 // apiCaller.setApiKey(api.InboxesApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
-const updateAgentBotRequest = new models.UpdateAgentBotRequest();
-updateAgentBotRequest.agentBot = undefined;
+const updateAgentBotRequest: models.UpdateAgentBotRequest = {
+  agentBot: 0,
+};
 
 apiCaller.updateAgentBot(
-  undefined, // accountId
-  undefined, // id
+  0, // accountId
+  0, // id
   updateAgentBotRequest, // data
 ).catch(error => {
   console.log("Exception when calling InboxesApi#updateAgentBot:");

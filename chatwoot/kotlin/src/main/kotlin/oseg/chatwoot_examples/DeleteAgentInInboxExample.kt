@@ -17,17 +17,17 @@ class DeleteAgentInInboxExample
 {
     fun deleteAgentInInbox()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
 
         val deleteAgentInInboxRequest = DeleteAgentInInboxRequest(
-            inboxId = null,
+            inboxId = "inbox_id_string",
             userIds = listOf (),
         )
 
         try
         {
             InboxesApi().deleteAgentInInbox(
-                accountId = null,
+                accountId = 0,
                 _data = deleteAgentInInboxRequest,
             )
         } catch (e: ClientException) {

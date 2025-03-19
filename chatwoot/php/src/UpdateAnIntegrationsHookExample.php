@@ -8,16 +8,17 @@ use SplFileObject;
 use Chatwoot;
 
 $config = Chatwoot\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("userApiKey", "USER_API_KEY");
-// $config->setApiKey("agentBotApiKey", "AGENT_BOT_API_KEY");
-// $config->setApiKey("platformAppApiKey", "PLATFORM_APP_API_KEY");
+$config->setApiKey("api_access_token", "USER_API_KEY");
+// $config->setApiKey("api_access_token", "AGENT_BOT_API_KEY");
+// $config->setApiKey("api_access_token", "PLATFORM_APP_API_KEY");
 
-$integrations_hook_update_payload = (new Chatwoot\Client\Model\IntegrationsHookUpdatePayload());
+$integrations_hook_update_payload = (new Chatwoot\Client\Model\IntegrationsHookUpdatePayload())
+    ->setSettings(null);
 
 try {
     $response = (new Chatwoot\Client\Api\IntegrationsApi(config: $config))->updateAnIntegrationsHook(
-        account_id: null,
-        hook_id: null,
+        account_id: 0,
+        hook_id: 0,
         data: integrations_hook_update_payload,
     );
 

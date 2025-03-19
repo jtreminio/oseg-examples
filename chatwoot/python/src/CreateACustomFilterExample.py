@@ -12,15 +12,12 @@ configuration = Configuration(
 
 with ApiClient(configuration) as api_client:
     custom_filter_create_update_payload = models.CustomFilterCreateUpdatePayload(
-        name=None,
-        type=None,
     )
 
     try:
         response = api.CustomFiltersApi(api_client).create_a_custom_filter(
-            account_id=None,
-            custom_filter_create_update_payload=custom_filter_create_update_payload,
-            filter_type=None,
+            account_id=0,
+            data=custom_filter_create_update_payload,
         )
 
         pprint(response)

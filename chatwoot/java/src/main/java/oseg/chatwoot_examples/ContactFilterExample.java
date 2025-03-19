@@ -19,8 +19,8 @@ public class ContactFilterExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
-        // config.setApiKey("AGENT_BOT_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
+        // ((ApiKeyAuth) config.getAuthentication("agentBotApiKey")).setApiKey("AGENT_BOT_API_KEY");
 
         var contactFilterRequest = new ContactFilterRequest();
         contactFilterRequest.payload(JSON.deserialize("""
@@ -47,7 +47,7 @@ public class ContactFilterExample
         try
         {
             var response = new ContactsApi(config).contactFilter(
-                null, // accountId
+                0, // accountId
                 contactFilterRequest, // body
                 null // page
             );

@@ -8,7 +8,7 @@ apiCaller.setApiKey(api.AccountAgentBotsApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.AccountAgentBotsApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
 apiCaller.listAllAccountAgentBots(
-  undefined, // accountId
+  0, // accountId
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

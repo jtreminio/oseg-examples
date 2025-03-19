@@ -19,20 +19,15 @@ public class AddNewCustomAttributeToAccountExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
 
         var customAttributeCreateUpdatePayload = new CustomAttributeCreateUpdatePayload();
-        customAttributeCreateUpdatePayload.attributeDisplayName(null);
-        customAttributeCreateUpdatePayload.attributeDisplayType(null);
-        customAttributeCreateUpdatePayload.attributeDescription(null);
-        customAttributeCreateUpdatePayload.attributeKey(null);
-        customAttributeCreateUpdatePayload.attributeModel(null);
         customAttributeCreateUpdatePayload.attributeValues(List.of ());
 
         try
         {
             var response = new CustomAttributesApi(config).addNewCustomAttributeToAccount(
-                null, // accountId
+                0, // accountId
                 customAttributeCreateUpdatePayload // data
             );
 

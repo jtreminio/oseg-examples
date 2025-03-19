@@ -14,19 +14,16 @@ public class ListAllConversationStatisticsExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
-        // config.ApiKey = new Dictionary<string, string> {["agentBotApiKey"] = "AGENT_BOT_API_KEY"};
-        // config.ApiKey = new Dictionary<string, string> {["platformAppApiKey"] = "PLATFORM_APP_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
+        // config.ApiKey.Add("api_access_token", "AGENT_BOT_API_KEY");
+        // config.ApiKey.Add("api_access_token", "PLATFORM_APP_API_KEY");
 
         try
         {
             var response = new ReportsApi(config).ListAllConversationStatistics(
-                accountId: null,
-                metric: null,
-                type: null,
-                id: null,
-                since: null,
-                until: null
+                accountId: 0,
+                metric: "conversations_count",
+                type: "account"
             );
 
             Console.WriteLine(response);

@@ -19,27 +19,24 @@ public class AddNewArticleToAccountExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
 
         var articleCreateUpdatePayload = new ArticleCreateUpdatePayload();
-        articleCreateUpdatePayload.content(null);
-        articleCreateUpdatePayload.position(null);
-        articleCreateUpdatePayload.status(null);
-        articleCreateUpdatePayload.title(null);
-        articleCreateUpdatePayload.slug(null);
-        articleCreateUpdatePayload.views(null);
-        articleCreateUpdatePayload.portalId(null);
-        articleCreateUpdatePayload.accountId(null);
-        articleCreateUpdatePayload.authorId(null);
-        articleCreateUpdatePayload.categoryId(null);
-        articleCreateUpdatePayload.folderId(null);
-        articleCreateUpdatePayload.associatedArticleId(null);
+        articleCreateUpdatePayload.meta(JSON.deserialize("""
+            {
+                "description": "article description",
+                "tags": [
+                    "article_name"
+                ],
+                "title": "article title"
+            }
+        """, Map.class));
 
         try
         {
             var response = new HelpCenterApi(config).addNewArticleToAccount(
-                null, // accountId
-                null, // portalId
+                0, // accountId
+                0, // portalId
                 articleCreateUpdatePayload // data
             );
 

@@ -13,8 +13,8 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.IntegrationsApi(api_client).delete_an_integration_hook(
-            account_id=None,
-            hook_id=None,
+            account_id=0,
+            hook_id=0,
         )
     except ApiException as e:
         print("Exception when calling IntegrationsApi#delete_an_integration_hook: %s\n" % e)

@@ -17,16 +17,14 @@ class UpdateAnAccountExample
 {
     fun updateAnAccount()
     {
-        ApiClient.apiKey["platformAppApiKey"] = "PLATFORM_APP_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "PLATFORM_APP_API_KEY"
 
-        val accountCreateUpdatePayload = AccountCreateUpdatePayload(
-            name = null,
-        )
+        val accountCreateUpdatePayload = AccountCreateUpdatePayload()
 
         try
         {
             val response = AccountsApi().updateAnAccount(
-                accountId = null,
+                accountId = 0,
                 _data = accountCreateUpdatePayload,
             )
 

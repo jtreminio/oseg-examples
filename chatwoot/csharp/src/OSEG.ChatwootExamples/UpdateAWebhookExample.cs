@@ -14,12 +14,11 @@ public class UpdateAWebhookExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
-        // config.ApiKey = new Dictionary<string, string> {["agentBotApiKey"] = "AGENT_BOT_API_KEY"};
-        // config.ApiKey = new Dictionary<string, string> {["platformAppApiKey"] = "PLATFORM_APP_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
+        // config.ApiKey.Add("api_access_token", "AGENT_BOT_API_KEY");
+        // config.ApiKey.Add("api_access_token", "PLATFORM_APP_API_KEY");
 
         var webhookCreateUpdatePayload = new WebhookCreateUpdatePayload(
-            url: null,
             subscriptions: [
             ]
         );
@@ -27,8 +26,8 @@ public class UpdateAWebhookExample
         try
         {
             var response = new WebhooksApi(config).UpdateAWebhook(
-                accountId: null,
-                webhookId: null,
+                accountId: 0,
+                webhookId: 0,
                 data: webhookCreateUpdatePayload
             );
 

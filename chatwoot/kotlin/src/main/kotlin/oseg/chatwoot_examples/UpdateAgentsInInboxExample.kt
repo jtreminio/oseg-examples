@@ -17,17 +17,17 @@ class UpdateAgentsInInboxExample
 {
     fun updateAgentsInInbox()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
 
         val updateAgentsInInboxRequest = UpdateAgentsInInboxRequest(
-            inboxId = null,
+            inboxId = "inbox_id_string",
             userIds = listOf (),
         )
 
         try
         {
             val response = InboxesApi().updateAgentsInInbox(
-                accountId = null,
+                accountId = 0,
                 _data = updateAgentsInInboxRequest,
             )
 

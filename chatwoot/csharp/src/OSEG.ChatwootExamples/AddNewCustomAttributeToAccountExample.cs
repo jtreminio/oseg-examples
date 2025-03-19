@@ -14,14 +14,9 @@ public class AddNewCustomAttributeToAccountExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
 
         var customAttributeCreateUpdatePayload = new CustomAttributeCreateUpdatePayload(
-            attributeDisplayName: null,
-            attributeDisplayType: null,
-            attributeDescription: null,
-            attributeKey: null,
-            attributeModel: null,
             attributeValues: [
             ]
         );
@@ -29,7 +24,7 @@ public class AddNewCustomAttributeToAccountExample
         try
         {
             var response = new CustomAttributesApi(config).AddNewCustomAttributeToAccount(
-                accountId: null,
+                accountId: 0,
                 data: customAttributeCreateUpdatePayload
             );
 

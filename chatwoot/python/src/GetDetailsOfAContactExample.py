@@ -10,8 +10,8 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.ContactsAPIApi(api_client).get_details_of_a_contact(
-            inbox_identifier=None,
-            contact_identifier=None,
+            inbox_identifier="inbox_identifier_string",
+            contact_identifier="contact_identifier_string",
         )
 
         pprint(response)

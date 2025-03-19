@@ -8,7 +8,7 @@ apiCaller.setApiKey(api.IntegrationsApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.IntegrationsApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
 apiCaller.getDetailsOfAllIntegrations(
-  undefined, // accountId
+  0, // accountId
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

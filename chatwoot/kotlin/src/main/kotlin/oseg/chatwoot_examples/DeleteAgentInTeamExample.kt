@@ -17,7 +17,7 @@ class DeleteAgentInTeamExample
 {
     fun deleteAgentInTeam()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
 
         val deleteAgentInTeamRequest = DeleteAgentInTeamRequest(
             userIds = listOf (),
@@ -26,8 +26,8 @@ class DeleteAgentInTeamExample
         try
         {
             TeamsApi().deleteAgentInTeam(
-                accountId = null,
-                teamId = null,
+                accountId = 0,
+                teamId = 0,
                 _data = deleteAgentInTeamRequest,
             )
         } catch (e: ClientException) {

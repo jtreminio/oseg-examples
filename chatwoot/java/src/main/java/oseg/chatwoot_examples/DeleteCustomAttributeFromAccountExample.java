@@ -19,13 +19,13 @@ public class DeleteCustomAttributeFromAccountExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
 
         try
         {
             new CustomAttributesApi(config).deleteCustomAttributeFromAccount(
-                null, // accountId
-                null // id
+                0, // accountId
+                0 // id
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling CustomAttributesApi#deleteCustomAttributeFromAccount");

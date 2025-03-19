@@ -12,14 +12,14 @@ configuration = Configuration(
 
 with ApiClient(configuration) as api_client:
     update_agent_bot_request = models.UpdateAgentBotRequest(
-        agent_bot=None,
+        agent_bot=0,
     )
 
     try:
         api.InboxesApi(api_client).update_agent_bot(
-            account_id=None,
-            id=None,
-            update_agent_bot_request=update_agent_bot_request,
+            account_id=0,
+            id=0,
+            data=update_agent_bot_request,
         )
     except ApiException as e:
         print("Exception when calling InboxesApi#update_agent_bot: %s\n" % e)

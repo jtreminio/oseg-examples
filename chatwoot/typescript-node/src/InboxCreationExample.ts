@@ -7,21 +7,11 @@ apiCaller.setApiKey(api.InboxesApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.InboxesApiApiKeys.agentBotApiKey, "AGENT_BOT_API_KEY");
 // apiCaller.setApiKey(api.InboxesApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
-const channel = new models.InboxCreationRequestChannel();
-channel.type = undefined;
-channel.websiteUrl = undefined;
-channel.welcomeTitle = undefined;
-channel.welcomeTagline = undefined;
-channel.agentAwayMessage = undefined;
-channel.widgetColor = undefined;
-
-const inboxCreationRequest = new models.InboxCreationRequest();
-inboxCreationRequest.name = undefined;
-inboxCreationRequest.avatar = undefined;
-inboxCreationRequest.channel = channel;
+const inboxCreationRequest: models.InboxCreationRequest = {
+};
 
 apiCaller.inboxCreation(
-  undefined, // accountId
+  0, // accountId
   inboxCreationRequest, // data
 ).then(response => {
   console.log(response.body);

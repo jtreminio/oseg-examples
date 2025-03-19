@@ -5,17 +5,13 @@ import models from "chatwoot_client"
 const apiCaller = new api.CustomAttributesApi();
 apiCaller.setApiKey(api.CustomAttributesApiApiKeys.userApiKey, "USER_API_KEY");
 
-const customAttributeCreateUpdatePayload = new models.CustomAttributeCreateUpdatePayload();
-customAttributeCreateUpdatePayload.attributeDisplayName = undefined;
-customAttributeCreateUpdatePayload.attributeDisplayType = undefined;
-customAttributeCreateUpdatePayload.attributeDescription = undefined;
-customAttributeCreateUpdatePayload.attributeKey = undefined;
-customAttributeCreateUpdatePayload.attributeModel = undefined;
-customAttributeCreateUpdatePayload.attributeValues = [
-];
+const customAttributeCreateUpdatePayload: models.CustomAttributeCreateUpdatePayload = {
+  attributeValues: [
+  ],
+};
 
 apiCaller.addNewCustomAttributeToAccount(
-  undefined, // accountId
+  0, // accountId
   customAttributeCreateUpdatePayload, // data
 ).then(response => {
   console.log(response.body);

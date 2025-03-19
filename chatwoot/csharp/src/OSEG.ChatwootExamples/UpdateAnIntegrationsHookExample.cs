@@ -14,9 +14,9 @@ public class UpdateAnIntegrationsHookExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
-        // config.ApiKey = new Dictionary<string, string> {["agentBotApiKey"] = "AGENT_BOT_API_KEY"};
-        // config.ApiKey = new Dictionary<string, string> {["platformAppApiKey"] = "PLATFORM_APP_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
+        // config.ApiKey.Add("api_access_token", "AGENT_BOT_API_KEY");
+        // config.ApiKey.Add("api_access_token", "PLATFORM_APP_API_KEY");
 
         var integrationsHookUpdatePayload = new IntegrationsHookUpdatePayload(
         );
@@ -24,8 +24,8 @@ public class UpdateAnIntegrationsHookExample
         try
         {
             var response = new IntegrationsApi(config).UpdateAnIntegrationsHook(
-                accountId: null,
-                hookId: null,
+                accountId: 0,
+                hookId: 0,
                 data: integrationsHookUpdatePayload
             );
 

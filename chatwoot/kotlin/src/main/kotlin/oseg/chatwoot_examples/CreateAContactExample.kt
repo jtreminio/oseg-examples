@@ -18,19 +18,12 @@ class CreateAContactExample
     fun createAContact()
     {
 
-        val publicContactCreateUpdatePayload = PublicContactCreateUpdatePayload(
-            identifier = null,
-            identifierHash = null,
-            email = null,
-            name = null,
-            phoneNumber = null,
-            avatarUrl = null,
-        )
+        val publicContactCreateUpdatePayload = PublicContactCreateUpdatePayload()
 
         try
         {
             val response = ContactsAPIApi().createAContact(
-                inboxIdentifier = null,
+                inboxIdentifier = "inbox_identifier_string",
                 _data = publicContactCreateUpdatePayload,
             )
 

@@ -18,9 +18,9 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.ConversationLabelsApi(api_client).conversation_add_labels(
-            account_id=None,
-            conversation_id=None,
-            conversation_add_labels_request=conversation_add_labels_request,
+            account_id=0,
+            conversation_id=0,
+            data=conversation_add_labels_request,
         )
 
         pprint(response)

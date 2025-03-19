@@ -13,8 +13,8 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.ConversationsAPIApi(api_client).list_all_contact_conversations(
-            inbox_identifier=None,
-            contact_identifier=None,
+            inbox_identifier="inbox_identifier_string",
+            contact_identifier="contact_identifier_string",
         )
 
         pprint(response)

@@ -10,16 +10,14 @@ configuration = Configuration(
 
 with ApiClient(configuration) as api_client:
     update_agent_in_account_request = models.UpdateAgentInAccountRequest(
-        role=None,
-        availability=None,
-        auto_offline=None,
+        role="agent",
     )
 
     try:
         response = api.AgentsApi(api_client).update_agent_in_account(
-            account_id=None,
-            id=None,
-            update_agent_in_account_request=update_agent_in_account_request,
+            account_id=0,
+            id=0,
+            data=update_agent_in_account_request,
         )
 
         pprint(response)

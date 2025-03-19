@@ -14,19 +14,17 @@ public class UpdateConversationExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
-        // config.ApiKey = new Dictionary<string, string> {["agentBotApiKey"] = "AGENT_BOT_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
+        // config.ApiKey.Add("api_access_token", "AGENT_BOT_API_KEY");
 
         var updateConversationRequest = new UpdateConversationRequest(
-            priority: null,
-            slaPolicyId: null
         );
 
         try
         {
             new ConversationsApi(config).UpdateConversation(
-                accountId: null,
-                conversationId: null,
+                accountId: 0,
+                conversationId: 0,
                 data: updateConversationRequest
             );
         }

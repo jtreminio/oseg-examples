@@ -17,12 +17,12 @@ class GetSsoUrlOfAUserExample
 {
     fun getSsoUrlOfAUser()
     {
-        ApiClient.apiKey["platformAppApiKey"] = "PLATFORM_APP_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "PLATFORM_APP_API_KEY"
 
         try
         {
             val response = UsersApi().getSsoUrlOfAUser(
-                id = null,
+                id = 0,
             )
 
             println(response)

@@ -6,8 +6,8 @@ const apiCaller = new api.AgentsApi();
 apiCaller.setApiKey(api.AgentsApiApiKeys.userApiKey, "USER_API_KEY");
 
 apiCaller.deleteAgentFromAccount(
-  undefined, // accountId
-  undefined, // id
+  0, // accountId
+  0, // id
 ).catch(error => {
   console.log("Exception when calling AgentsApi#deleteAgentFromAccount:");
   console.log(error.body);

@@ -11,13 +11,19 @@ configuration = Configuration(
 
 with ApiClient(configuration) as api_client:
     update_custom_attributes_of_a_conversation_request = models.UpdateCustomAttributesOfAConversationRequest(
+        custom_attributes=json.loads("""
+            {
+                "order_id": "12345",
+                "previous_conversation": "67890"
+            }
+        """),
     )
 
     try:
         response = api.ConversationsApi(api_client).update_custom_attributes_of_a_conversation(
-            account_id=None,
-            conversation_id=None,
-            update_custom_attributes_of_a_conversation_request=update_custom_attributes_of_a_conversation_request,
+            account_id=0,
+            conversation_id=0,
+            data=update_custom_attributes_of_a_conversation_request,
         )
 
         pprint(response)

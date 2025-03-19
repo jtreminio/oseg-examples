@@ -7,12 +7,11 @@ apiCaller.setApiKey(api.IntegrationsApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.IntegrationsApiApiKeys.agentBotApiKey, "AGENT_BOT_API_KEY");
 // apiCaller.setApiKey(api.IntegrationsApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
-const integrationsHookCreatePayload = new models.IntegrationsHookCreatePayload();
-integrationsHookCreatePayload.appId = undefined;
-integrationsHookCreatePayload.inboxId = undefined;
+const integrationsHookCreatePayload: models.IntegrationsHookCreatePayload = {
+};
 
 apiCaller.createAnIntegrationHook(
-  undefined, // accountId
+  0, // accountId
   integrationsHookCreatePayload, // data
 ).then(response => {
   console.log(response.body);

@@ -17,11 +17,9 @@ class CreateAnAccountExample
 {
     fun createAnAccount()
     {
-        ApiClient.apiKey["platformAppApiKey"] = "PLATFORM_APP_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "PLATFORM_APP_API_KEY"
 
-        val accountCreateUpdatePayload = AccountCreateUpdatePayload(
-            name = null,
-        )
+        val accountCreateUpdatePayload = AccountCreateUpdatePayload()
 
         try
         {

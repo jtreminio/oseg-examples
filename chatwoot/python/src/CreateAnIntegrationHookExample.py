@@ -12,14 +12,12 @@ configuration = Configuration(
 
 with ApiClient(configuration) as api_client:
     integrations_hook_create_payload = models.IntegrationsHookCreatePayload(
-        app_id=None,
-        inbox_id=None,
     )
 
     try:
         response = api.IntegrationsApi(api_client).create_an_integration_hook(
-            account_id=None,
-            integrations_hook_create_payload=integrations_hook_create_payload,
+            account_id=0,
+            data=integrations_hook_create_payload,
         )
 
         pprint(response)

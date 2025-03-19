@@ -11,15 +11,13 @@ configuration = Configuration(
 
 with ApiClient(configuration) as api_client:
     update_conversation_request = models.UpdateConversationRequest(
-        priority=None,
-        sla_policy_id=None,
     )
 
     try:
         api.ConversationsApi(api_client).update_conversation(
-            account_id=None,
-            conversation_id=None,
-            update_conversation_request=update_conversation_request,
+            account_id=0,
+            conversation_id=0,
+            data=update_conversation_request,
         )
     except ApiException as e:
         print("Exception when calling ConversationsApi#update_conversation: %s\n" % e)

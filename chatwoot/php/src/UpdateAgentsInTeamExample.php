@@ -8,7 +8,7 @@ use SplFileObject;
 use Chatwoot;
 
 $config = Chatwoot\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("userApiKey", "USER_API_KEY");
+$config->setApiKey("api_access_token", "USER_API_KEY");
 
 $update_agents_in_team_request = (new Chatwoot\Client\Model\UpdateAgentsInTeamRequest())
     ->setUserIds([
@@ -16,8 +16,8 @@ $update_agents_in_team_request = (new Chatwoot\Client\Model\UpdateAgentsInTeamRe
 
 try {
     $response = (new Chatwoot\Client\Api\TeamsApi(config: $config))->updateAgentsInTeam(
-        account_id: null,
-        team_id: null,
+        account_id: 0,
+        team_id: 0,
         data: update_agents_in_team_request,
     );
 

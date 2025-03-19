@@ -9,14 +9,15 @@ use Chatwoot;
 
 $config = Chatwoot\Client\Configuration::getDefaultConfiguration();
 
-$public_message_update_payload = (new Chatwoot\Client\Model\PublicMessageUpdatePayload());
+$public_message_update_payload = (new Chatwoot\Client\Model\PublicMessageUpdatePayload())
+    ->setSubmittedValues(null);
 
 try {
     $response = (new Chatwoot\Client\Api\MessagesAPIApi(config: $config))->updateAMessage(
-        inbox_identifier: null,
-        contact_identifier: null,
-        conversation_id: null,
-        message_id: null,
+        inbox_identifier: "inbox_identifier_string",
+        contact_identifier: "contact_identifier_string",
+        conversation_id: 0,
+        message_id: 0,
         data: public_message_update_payload,
     );
 

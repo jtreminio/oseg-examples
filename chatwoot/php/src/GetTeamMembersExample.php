@@ -8,12 +8,12 @@ use SplFileObject;
 use Chatwoot;
 
 $config = Chatwoot\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("userApiKey", "USER_API_KEY");
+$config->setApiKey("api_access_token", "USER_API_KEY");
 
 try {
     $response = (new Chatwoot\Client\Api\TeamsApi(config: $config))->getTeamMembers(
-        account_id: null,
-        team_id: null,
+        account_id: 0,
+        team_id: 0,
     );
 
     print_r($response);

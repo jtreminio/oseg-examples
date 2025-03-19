@@ -14,20 +14,17 @@ public class CreateATeamExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
-        // config.ApiKey = new Dictionary<string, string> {["agentBotApiKey"] = "AGENT_BOT_API_KEY"};
-        // config.ApiKey = new Dictionary<string, string> {["platformAppApiKey"] = "PLATFORM_APP_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
+        // config.ApiKey.Add("api_access_token", "AGENT_BOT_API_KEY");
+        // config.ApiKey.Add("api_access_token", "PLATFORM_APP_API_KEY");
 
         var teamCreateUpdatePayload = new TeamCreateUpdatePayload(
-            name: null,
-            description: null,
-            allowAutoAssign: null
         );
 
         try
         {
             var response = new TeamsApi(config).CreateATeam(
-                accountId: null,
+                accountId: 0,
                 data: teamCreateUpdatePayload
             );
 

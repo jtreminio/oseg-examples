@@ -19,9 +19,9 @@ public class ContactAddLabelsExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
-        // config.setApiKey("AGENT_BOT_API_KEY");
-        // config.setApiKey("PLATFORM_APP_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
+        // ((ApiKeyAuth) config.getAuthentication("agentBotApiKey")).setApiKey("AGENT_BOT_API_KEY");
+        // ((ApiKeyAuth) config.getAuthentication("platformAppApiKey")).setApiKey("PLATFORM_APP_API_KEY");
 
         var contactAddLabelsRequest = new ContactAddLabelsRequest();
         contactAddLabelsRequest.labels(List.of ());
@@ -29,8 +29,8 @@ public class ContactAddLabelsExample
         try
         {
             var response = new ContactLabelsApi(config).contactAddLabels(
-                null, // accountId
-                null, // contactIdentifier
+                0, // accountId
+                "contact_identifier_string", // contactIdentifier
                 contactAddLabelsRequest // data
             );
 

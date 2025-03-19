@@ -5,15 +5,14 @@ import models from "chatwoot_client"
 const apiCaller = new api.AgentsApi();
 apiCaller.setApiKey(api.AgentsApiApiKeys.userApiKey, "USER_API_KEY");
 
-const addNewAgentToAccountRequest = new models.AddNewAgentToAccountRequest();
-addNewAgentToAccountRequest.email = undefined;
-addNewAgentToAccountRequest.name = undefined;
-addNewAgentToAccountRequest.role = undefined;
-addNewAgentToAccountRequest.availabilityStatus = undefined;
-addNewAgentToAccountRequest.autoOffline = undefined;
+const addNewAgentToAccountRequest: models.AddNewAgentToAccountRequest = {
+  email: "email_string",
+  name: "name_string",
+  role: models.AddNewAgentToAccountRequest.RoleEnum.Agent,
+};
 
 apiCaller.addNewAgentToAccount(
-  undefined, // accountId
+  0, // accountId
   addNewAgentToAccountRequest, // data
 ).then(response => {
   console.log(response.body);

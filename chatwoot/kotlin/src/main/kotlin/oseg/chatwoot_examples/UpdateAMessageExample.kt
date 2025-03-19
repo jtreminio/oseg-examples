@@ -19,15 +19,14 @@ class UpdateAMessageExample
     {
 
         val publicMessageUpdatePayload = PublicMessageUpdatePayload()
-        )
 
         try
         {
             val response = MessagesAPIApi().updateAMessage(
-                inboxIdentifier = null,
-                contactIdentifier = null,
-                conversationId = null,
-                messageId = null,
+                inboxIdentifier = "inbox_identifier_string",
+                contactIdentifier = "contact_identifier_string",
+                conversationId = 0,
+                messageId = 0,
                 _data = publicMessageUpdatePayload,
             )
 

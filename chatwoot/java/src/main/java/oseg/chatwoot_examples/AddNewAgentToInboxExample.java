@@ -19,16 +19,16 @@ public class AddNewAgentToInboxExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
 
         var addNewAgentToInboxRequest = new AddNewAgentToInboxRequest();
-        addNewAgentToInboxRequest.inboxId(null);
+        addNewAgentToInboxRequest.inboxId("inbox_id_string");
         addNewAgentToInboxRequest.userIds(List.of ());
 
         try
         {
             var response = new InboxesApi(config).addNewAgentToInbox(
-                null, // accountId
+                0, // accountId
                 addNewAgentToInboxRequest // data
             );
 

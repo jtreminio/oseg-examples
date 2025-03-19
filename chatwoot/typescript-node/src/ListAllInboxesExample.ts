@@ -8,7 +8,7 @@ apiCaller.setApiKey(api.InboxesApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.InboxesApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
 apiCaller.listAllInboxes(
-  undefined, // accountId
+  0, // accountId
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

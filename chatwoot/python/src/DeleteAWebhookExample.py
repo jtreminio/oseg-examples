@@ -13,8 +13,8 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.WebhooksApi(api_client).delete_a_webhook(
-            account_id=None,
-            webhook_id=None,
+            account_id=0,
+            webhook_id=0,
         )
     except ApiException as e:
         print("Exception when calling WebhooksApi#delete_a_webhook: %s\n" % e)

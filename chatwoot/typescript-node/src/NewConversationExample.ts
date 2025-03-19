@@ -6,26 +6,32 @@ const apiCaller = new api.ConversationsApi();
 apiCaller.setApiKey(api.ConversationsApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.ConversationsApiApiKeys.agentBotApiKey, "AGENT_BOT_API_KEY");
 
-const messageTemplateParams = new models.NewConversationRequestMessageTemplateParams();
-messageTemplateParams.name = "sample_issue_resolution";
-messageTemplateParams.category = "UTILITY";
-messageTemplateParams.language = "en_US";
+const messageTemplateParams: models.NewConversationRequestMessageTemplateParams = {
+  name: "sample_issue_resolution",
+  category: "UTILITY",
+  language: "en_US",
+  processedParams: {
+    "1": "Chatwoot"
+  },
+};
 
-const message = new models.NewConversationRequestMessage();
-message.content = undefined;
-message.templateParams = messageTemplateParams;
+const message: models.NewConversationRequestMessage = {
+  content: "content_string",
+  templateParams: messageTemplateParams,
+};
 
-const newConversationRequest = new models.NewConversationRequest();
-newConversationRequest.inboxId = undefined;
-newConversationRequest.sourceId = undefined;
-newConversationRequest.contactId = undefined;
-newConversationRequest.status = undefined;
-newConversationRequest.assigneeId = undefined;
-newConversationRequest.teamId = undefined;
-newConversationRequest.message = message;
+const newConversationRequest: models.NewConversationRequest = {
+  inboxId: "inbox_id_string",
+  sourceId: "source_id_string",
+  customAttributes: {
+    "attribute_key": "attribute_value",
+    "priority_conversation_number": 3
+  },
+  message: message,
+};
 
 apiCaller.newConversation(
-  undefined, // accountId
+  0, // accountId
   newConversationRequest, // data
 ).then(response => {
   console.log(response.body);

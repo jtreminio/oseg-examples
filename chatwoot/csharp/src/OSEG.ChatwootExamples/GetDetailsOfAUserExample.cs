@@ -14,12 +14,12 @@ public class GetDetailsOfAUserExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["platformAppApiKey"] = "PLATFORM_APP_API_KEY"};
+        config.ApiKey.Add("api_access_token", "PLATFORM_APP_API_KEY");
 
         try
         {
             var response = new UsersApi(config).GetDetailsOfAUser(
-                id: null
+                id: 0
             );
 
             Console.WriteLine(response);

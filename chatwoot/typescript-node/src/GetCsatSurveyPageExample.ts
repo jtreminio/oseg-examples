@@ -5,7 +5,7 @@ import models from "chatwoot_client"
 const apiCaller = new api.CSATSurveyPageApi();
 
 apiCaller.getCsatSurveyPage(
-  undefined, // conversationUuid
+  0, // conversationUuid
 ).catch(error => {
   console.log("Exception when calling CSATSurveyPageApi#getCsatSurveyPage:");
   console.log(error.body);

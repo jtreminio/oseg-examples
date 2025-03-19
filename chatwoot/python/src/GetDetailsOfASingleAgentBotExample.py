@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.AgentBotsApi(api_client).get_details_of_a_single_agent_bot(
-            id=None,
+            id=0,
         )
 
         pprint(response)

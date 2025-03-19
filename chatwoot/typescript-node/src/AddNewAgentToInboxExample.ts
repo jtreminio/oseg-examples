@@ -5,13 +5,14 @@ import models from "chatwoot_client"
 const apiCaller = new api.InboxesApi();
 apiCaller.setApiKey(api.InboxesApiApiKeys.userApiKey, "USER_API_KEY");
 
-const addNewAgentToInboxRequest = new models.AddNewAgentToInboxRequest();
-addNewAgentToInboxRequest.inboxId = undefined;
-addNewAgentToInboxRequest.userIds = [
-];
+const addNewAgentToInboxRequest: models.AddNewAgentToInboxRequest = {
+  inboxId: "inbox_id_string",
+  userIds: [
+  ],
+};
 
 apiCaller.addNewAgentToInbox(
-  undefined, // accountId
+  0, // accountId
   addNewAgentToInboxRequest, // data
 ).then(response => {
   console.log(response.body);

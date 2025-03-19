@@ -19,17 +19,17 @@ public class TogglePriorityOfAConversationExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
-        // config.setApiKey("AGENT_BOT_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
+        // ((ApiKeyAuth) config.getAuthentication("agentBotApiKey")).setApiKey("AGENT_BOT_API_KEY");
 
         var togglePriorityOfAConversationRequest = new TogglePriorityOfAConversationRequest();
-        togglePriorityOfAConversationRequest.priority(null);
+        togglePriorityOfAConversationRequest.priority(TogglePriorityOfAConversationRequest.PriorityEnum.URGENT);
 
         try
         {
             new ConversationsApi(config).togglePriorityOfAConversation(
-                null, // accountId
-                null, // conversationId
+                0, // accountId
+                0, // conversationId
                 togglePriorityOfAConversationRequest // data
             );
         } catch (ApiException e) {

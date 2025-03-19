@@ -8,7 +8,7 @@ use SplFileObject;
 use Chatwoot;
 
 $config = Chatwoot\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("platformAppApiKey", "PLATFORM_APP_API_KEY");
+$config->setApiKey("api_access_token", "PLATFORM_APP_API_KEY");
 
 $agent_bot_create_update_payload = (new Chatwoot\Client\Model\AgentBotCreateUpdatePayload())
     ->setName(null)
@@ -17,7 +17,7 @@ $agent_bot_create_update_payload = (new Chatwoot\Client\Model\AgentBotCreateUpda
 
 try {
     $response = (new Chatwoot\Client\Api\AgentBotsApi(config: $config))->updateAnAgentBot(
-        id: null,
+        id: 0,
         data: agent_bot_create_update_payload,
     );
 

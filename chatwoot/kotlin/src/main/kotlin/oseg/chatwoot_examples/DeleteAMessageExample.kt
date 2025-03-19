@@ -17,16 +17,16 @@ class DeleteAMessageExample
 {
     fun deleteAMessage()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
-        // ApiClient.apiKey["agentBotApiKey"] = "AGENT_BOT_API_KEY"
-        // ApiClient.apiKey["platformAppApiKey"] = "PLATFORM_APP_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "AGENT_BOT_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "PLATFORM_APP_API_KEY"
 
         try
         {
             MessagesApi().deleteAMessage(
-                accountId = null,
-                conversationId = null,
-                messageId = null,
+                accountId = 0,
+                conversationId = 0,
+                messageId = 0,
             )
         } catch (e: ClientException) {
             println("4xx response calling MessagesApi#deleteAMessage")

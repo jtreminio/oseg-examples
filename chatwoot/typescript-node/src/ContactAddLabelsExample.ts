@@ -7,13 +7,14 @@ apiCaller.setApiKey(api.ContactLabelsApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.ContactLabelsApiApiKeys.agentBotApiKey, "AGENT_BOT_API_KEY");
 // apiCaller.setApiKey(api.ContactLabelsApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
-const contactAddLabelsRequest = new models.ContactAddLabelsRequest();
-contactAddLabelsRequest.labels = [
-];
+const contactAddLabelsRequest: models.ContactAddLabelsRequest = {
+  labels: [
+  ],
+};
 
 apiCaller.contactAddLabels(
-  undefined, // accountId
-  undefined, // contactIdentifier
+  0, // accountId
+  "contact_identifier_string", // contactIdentifier
   contactAddLabelsRequest, // data
 ).then(response => {
   console.log(response.body);

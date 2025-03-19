@@ -6,7 +6,7 @@ const apiCaller = new api.AgentsApi();
 apiCaller.setApiKey(api.AgentsApiApiKeys.userApiKey, "USER_API_KEY");
 
 apiCaller.getAccountAgents(
-  undefined, // accountId
+  0, // accountId
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

@@ -8,8 +8,8 @@ apiCaller.setApiKey(api.ContactLabelsApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.ContactLabelsApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
 apiCaller.listAllLabelsOfAContact(
-  undefined, // accountId
-  undefined, // contactIdentifier
+  0, // accountId
+  "contact_identifier_string", // contactIdentifier
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

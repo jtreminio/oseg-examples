@@ -2,16 +2,14 @@ require "json"
 require "chatwoot_client"
 
 ChatwootClient.configure do |config|
-    config.api_key["userApiKey"] = "USER_API_KEY"
+    config.api_key["api_access_token"] = "USER_API_KEY"
 end
 
 canned_response_create_update_payload = ChatwootClient::CannedResponseCreateUpdatePayload.new
-canned_response_create_update_payload.content = nil
-canned_response_create_update_payload.short_code = nil
 
 begin
     response = ChatwootClient::CannedResponsesApi.new.add_new_canned_response_to_account(
-        nil, # account_id
+        0, # account_id
         canned_response_create_update_payload, # data
     )
 

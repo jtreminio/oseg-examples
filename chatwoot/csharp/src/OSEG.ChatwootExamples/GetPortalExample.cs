@@ -14,12 +14,12 @@ public class GetPortalExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
 
         try
         {
             var response = new HelpCenterApi(config).GetPortal(
-                accountId: null
+                accountId: 0
             );
 
             Console.WriteLine(response);

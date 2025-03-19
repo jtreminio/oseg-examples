@@ -14,13 +14,13 @@ public class GetInboxMembersExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
 
         try
         {
             var response = new InboxesApi(config).GetInboxMembers(
-                accountId: null,
-                inboxId: null
+                accountId: 0,
+                inboxId: 0
             );
 
             Console.WriteLine(response);

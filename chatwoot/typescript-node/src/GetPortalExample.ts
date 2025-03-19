@@ -6,7 +6,7 @@ const apiCaller = new api.HelpCenterApi();
 apiCaller.setApiKey(api.HelpCenterApiApiKeys.userApiKey, "USER_API_KEY");
 
 apiCaller.getPortal(
-  undefined, // accountId
+  0, // accountId
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

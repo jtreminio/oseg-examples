@@ -7,13 +7,12 @@ apiCaller.setApiKey(api.CustomFiltersApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.CustomFiltersApiApiKeys.agentBotApiKey, "AGENT_BOT_API_KEY");
 // apiCaller.setApiKey(api.CustomFiltersApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
-const customFilterCreateUpdatePayload = new models.CustomFilterCreateUpdatePayload();
-customFilterCreateUpdatePayload.name = undefined;
-customFilterCreateUpdatePayload.type = undefined;
+const customFilterCreateUpdatePayload: models.CustomFilterCreateUpdatePayload = {
+};
 
 apiCaller.updateACustomFilter(
-  undefined, // accountId
-  undefined, // customFilterId
+  0, // accountId
+  0, // customFilterId
   customFilterCreateUpdatePayload, // data
 ).then(response => {
   console.log(response.body);

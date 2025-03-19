@@ -13,9 +13,9 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.ConversationsAPIApi(api_client).update_last_seen(
-            inbox_identifier=None,
-            contact_identifier=None,
-            conversation_id=None,
+            inbox_identifier="inbox_identifier_string",
+            contact_identifier="contact_identifier_string",
+            conversation_id=0,
         )
     except ApiException as e:
         print("Exception when calling ConversationsAPIApi#update_last_seen: %s\n" % e)

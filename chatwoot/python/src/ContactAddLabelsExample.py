@@ -18,9 +18,9 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.ContactLabelsApi(api_client).contact_add_labels(
-            account_id=None,
-            contact_identifier=None,
-            contact_add_labels_request=contact_add_labels_request,
+            account_id=0,
+            contact_identifier="contact_identifier_string",
+            data=contact_add_labels_request,
         )
 
         pprint(response)

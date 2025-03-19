@@ -14,24 +14,28 @@ public class UpdateNewPortalToAccountExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
 
         var portalCreateUpdatePayload = new PortalCreateUpdatePayload(
-            archived: null,
             color: "add color HEX string, \"#fffff\"",
             customDomain: "https://chatwoot.help/.",
             headerText: "Handbook",
             homepageLink: "https://www.chatwoot.com/",
-            name: null,
-            slug: null,
-            pageTitle: null,
-            accountId: null
+            config: JsonSerializer.Deserialize<Dictionary<string, object>>("""
+                {
+                    "allowed_locales": [
+                        "en",
+                        "es"
+                    ],
+                    "default_locale": "en"
+                }
+            """)
         );
 
         try
         {
             var response = new HelpCenterApi(config).UpdateNewPortalToAccount(
-                accountId: null,
+                accountId: 0,
                 data: portalCreateUpdatePayload
             );
 

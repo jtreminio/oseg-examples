@@ -23,8 +23,8 @@ public class GetDetailsOfAContactExample
         try
         {
             var response = new ContactsApiApi(config).getDetailsOfAContact(
-                null, // inboxIdentifier
-                null // contactIdentifier
+                "inbox_identifier_string", // inboxIdentifier
+                "contact_identifier_string" // contactIdentifier
             );
 
             System.out.println(response);

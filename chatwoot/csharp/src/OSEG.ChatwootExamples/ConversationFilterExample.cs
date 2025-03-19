@@ -14,8 +14,8 @@ public class ConversationFilterExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
-        // config.ApiKey = new Dictionary<string, string> {["agentBotApiKey"] = "AGENT_BOT_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
+        // config.ApiKey.Add("api_access_token", "AGENT_BOT_API_KEY");
 
         var conversationFilterRequest = new ConversationFilterRequest(
             payload: JsonSerializer.Deserialize<List<Dictionary<string, object>>>("""
@@ -43,9 +43,8 @@ public class ConversationFilterExample
         try
         {
             var response = new ConversationsApi(config).ConversationFilter(
-                accountId: null,
-                body: conversationFilterRequest,
-                page: null
+                accountId: 0,
+                body: conversationFilterRequest
             );
 
             Console.WriteLine(response);

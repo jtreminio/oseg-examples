@@ -7,13 +7,14 @@ apiCaller.setApiKey(api.ConversationLabelsApiApiKeys.userApiKey, "USER_API_KEY")
 // apiCaller.setApiKey(api.ConversationLabelsApiApiKeys.agentBotApiKey, "AGENT_BOT_API_KEY");
 // apiCaller.setApiKey(api.ConversationLabelsApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
-const conversationAddLabelsRequest = new models.ConversationAddLabelsRequest();
-conversationAddLabelsRequest.labels = [
-];
+const conversationAddLabelsRequest: models.ConversationAddLabelsRequest = {
+  labels: [
+  ],
+};
 
 apiCaller.conversationAddLabels(
-  undefined, // accountId
-  undefined, // conversationId
+  0, // accountId
+  0, // conversationId
   conversationAddLabelsRequest, // data
 ).then(response => {
   console.log(response.body);

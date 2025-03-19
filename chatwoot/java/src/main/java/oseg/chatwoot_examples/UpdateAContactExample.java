@@ -21,18 +21,12 @@ public class UpdateAContactExample
         var config = Configuration.getDefaultApiClient();
 
         var publicContactCreateUpdatePayload = new PublicContactCreateUpdatePayload();
-        publicContactCreateUpdatePayload.identifier(null);
-        publicContactCreateUpdatePayload.identifierHash(null);
-        publicContactCreateUpdatePayload.email(null);
-        publicContactCreateUpdatePayload.name(null);
-        publicContactCreateUpdatePayload.phoneNumber(null);
-        publicContactCreateUpdatePayload.avatarUrl(null);
 
         try
         {
             var response = new ContactsApiApi(config).updateAContact(
-                null, // inboxIdentifier
-                null, // contactIdentifier
+                "inbox_identifier_string", // inboxIdentifier
+                "contact_identifier_string", // contactIdentifier
                 publicContactCreateUpdatePayload // data
             );
 

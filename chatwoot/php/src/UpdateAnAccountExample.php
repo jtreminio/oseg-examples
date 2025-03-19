@@ -8,14 +8,14 @@ use SplFileObject;
 use Chatwoot;
 
 $config = Chatwoot\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("platformAppApiKey", "PLATFORM_APP_API_KEY");
+$config->setApiKey("api_access_token", "PLATFORM_APP_API_KEY");
 
 $account_create_update_payload = (new Chatwoot\Client\Model\AccountCreateUpdatePayload())
     ->setName(null);
 
 try {
     $response = (new Chatwoot\Client\Api\AccountsApi(config: $config))->updateAnAccount(
-        account_id: null,
+        account_id: 0,
         data: account_create_update_payload,
     );
 

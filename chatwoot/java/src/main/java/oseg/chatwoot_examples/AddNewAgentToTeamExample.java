@@ -19,7 +19,7 @@ public class AddNewAgentToTeamExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
 
         var addNewAgentToTeamRequest = new AddNewAgentToTeamRequest();
         addNewAgentToTeamRequest.userIds(List.of ());
@@ -27,8 +27,8 @@ public class AddNewAgentToTeamExample
         try
         {
             var response = new TeamsApi(config).addNewAgentToTeam(
-                null, // accountId
-                null, // teamId
+                0, // accountId
+                0, // teamId
                 addNewAgentToTeamRequest // data
             );
 

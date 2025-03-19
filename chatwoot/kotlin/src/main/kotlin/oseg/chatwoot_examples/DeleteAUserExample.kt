@@ -17,12 +17,12 @@ class DeleteAUserExample
 {
     fun deleteAUser()
     {
-        ApiClient.apiKey["platformAppApiKey"] = "PLATFORM_APP_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "PLATFORM_APP_API_KEY"
 
         try
         {
             UsersApi().deleteAUser(
-                id = null,
+                id = 0,
             )
         } catch (e: ClientException) {
             println("4xx response calling UsersApi#deleteAUser")

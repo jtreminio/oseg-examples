@@ -13,8 +13,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.CustomFiltersApi(api_client).list_all_filters(
-            account_id=None,
-            filter_type=None,
+            account_id=0,
         )
 
         pprint(response)

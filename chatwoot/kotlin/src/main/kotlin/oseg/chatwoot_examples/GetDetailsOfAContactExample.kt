@@ -21,8 +21,8 @@ class GetDetailsOfAContactExample
         try
         {
             val response = ContactsAPIApi().getDetailsOfAContact(
-                inboxIdentifier = null,
-                contactIdentifier = null,
+                inboxIdentifier = "inbox_identifier_string",
+                contactIdentifier = "contact_identifier_string",
             )
 
             println(response)

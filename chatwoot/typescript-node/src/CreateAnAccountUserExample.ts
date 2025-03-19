@@ -5,12 +5,13 @@ import models from "chatwoot_client"
 const apiCaller = new api.AccountUsersApi();
 apiCaller.setApiKey(api.AccountUsersApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
-const createAnAccountUserRequest = new models.CreateAnAccountUserRequest();
-createAnAccountUserRequest.role = undefined;
-createAnAccountUserRequest.userId = undefined;
+const createAnAccountUserRequest: models.CreateAnAccountUserRequest = {
+  role: "role_string",
+  userId: 0,
+};
 
 apiCaller.createAnAccountUser(
-  undefined, // accountId
+  0, // accountId
   createAnAccountUserRequest, // data
 ).then(response => {
   console.log(response.body);

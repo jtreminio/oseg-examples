@@ -10,25 +10,22 @@ configuration = Configuration(
 
 with ApiClient(configuration) as api_client:
     article_create_update_payload = models.ArticleCreateUpdatePayload(
-        content=None,
-        position=None,
-        status=None,
-        title=None,
-        slug=None,
-        views=None,
-        portal_id=None,
-        account_id=None,
-        author_id=None,
-        category_id=None,
-        folder_id=None,
-        associated_article_id=None,
+        meta=json.loads("""
+            {
+                "description": "article description",
+                "tags": [
+                    "article_name"
+                ],
+                "title": "article title"
+            }
+        """),
     )
 
     try:
         response = api.HelpCenterApi(api_client).add_new_article_to_account(
-            account_id=None,
-            portal_id=None,
-            article_create_update_payload=article_create_update_payload,
+            account_id=0,
+            portal_id=0,
+            data=article_create_update_payload,
         )
 
         pprint(response)

@@ -17,18 +17,18 @@ class ToggleStatusOfAConversationExample
 {
     fun toggleStatusOfAConversation()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
-        // ApiClient.apiKey["agentBotApiKey"] = "AGENT_BOT_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "AGENT_BOT_API_KEY"
 
         val toggleStatusOfAConversationRequest = ToggleStatusOfAConversationRequest(
-            status = null,
+            status = ToggleStatusOfAConversationRequest.Status.open,
         )
 
         try
         {
             val response = ConversationsApi().toggleStatusOfAConversation(
-                accountId = null,
-                conversationId = null,
+                accountId = 0,
+                conversationId = 0,
                 _data = toggleStatusOfAConversationRequest,
             )
 

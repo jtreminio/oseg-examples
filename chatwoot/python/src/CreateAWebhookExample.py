@@ -12,15 +12,14 @@ configuration = Configuration(
 
 with ApiClient(configuration) as api_client:
     webhook_create_update_payload = models.WebhookCreateUpdatePayload(
-        url=None,
         subscriptions=[
         ],
     )
 
     try:
         response = api.WebhooksApi(api_client).create_a_webhook(
-            account_id=None,
-            webhook_create_update_payload=webhook_create_update_payload,
+            account_id=0,
+            data=webhook_create_update_payload,
         )
 
         pprint(response)

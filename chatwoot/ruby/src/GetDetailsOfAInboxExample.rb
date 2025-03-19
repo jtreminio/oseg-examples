@@ -6,7 +6,7 @@ end
 
 begin
     response = ChatwootClient::InboxAPIApi.new.get_details_of_a_inbox(
-        nil, # inbox_identifier
+        "inbox_identifier_string", # inbox_identifier
     )
 
     p response

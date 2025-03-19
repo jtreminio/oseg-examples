@@ -14,13 +14,13 @@ public class GetTeamMembersExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
 
         try
         {
             var response = new TeamsApi(config).GetTeamMembers(
-                accountId: null,
-                teamId: null
+                accountId: 0,
+                teamId: 0
             );
 
             Console.WriteLine(response);

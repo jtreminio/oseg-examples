@@ -17,17 +17,17 @@ class AddNewAgentToInboxExample
 {
     fun addNewAgentToInbox()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
 
         val addNewAgentToInboxRequest = AddNewAgentToInboxRequest(
-            inboxId = null,
+            inboxId = "inbox_id_string",
             userIds = listOf (),
         )
 
         try
         {
             val response = InboxesApi().addNewAgentToInbox(
-                accountId = null,
+                accountId = 0,
                 _data = addNewAgentToInboxRequest,
             )
 

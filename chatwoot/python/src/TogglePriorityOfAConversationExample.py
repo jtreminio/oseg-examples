@@ -11,14 +11,14 @@ configuration = Configuration(
 
 with ApiClient(configuration) as api_client:
     toggle_priority_of_a_conversation_request = models.TogglePriorityOfAConversationRequest(
-        priority=None,
+        priority="urgent",
     )
 
     try:
         api.ConversationsApi(api_client).toggle_priority_of_a_conversation(
-            account_id=None,
-            conversation_id=None,
-            toggle_priority_of_a_conversation_request=toggle_priority_of_a_conversation_request,
+            account_id=0,
+            conversation_id=0,
+            data=toggle_priority_of_a_conversation_request,
         )
     except ApiException as e:
         print("Exception when calling ConversationsApi#toggle_priority_of_a_conversation: %s\n" % e)

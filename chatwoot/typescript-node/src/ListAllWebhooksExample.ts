@@ -8,7 +8,7 @@ apiCaller.setApiKey(api.WebhooksApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.WebhooksApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
 apiCaller.listAllWebhooks(
-  undefined, // accountId
+  0, // accountId
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

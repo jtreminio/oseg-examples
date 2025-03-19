@@ -11,7 +11,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.HelpCenterApi(api_client).get_portal(
-            account_id=None,
+            account_id=0,
         )
 
         pprint(response)

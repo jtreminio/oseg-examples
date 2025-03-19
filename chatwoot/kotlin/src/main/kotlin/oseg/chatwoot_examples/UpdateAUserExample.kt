@@ -17,18 +17,14 @@ class UpdateAUserExample
 {
     fun updateAUser()
     {
-        ApiClient.apiKey["platformAppApiKey"] = "PLATFORM_APP_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "PLATFORM_APP_API_KEY"
 
-        val userCreateUpdatePayload = UserCreateUpdatePayload(
-            name = null,
-            email = null,
-            password = null,
-        )
+        val userCreateUpdatePayload = UserCreateUpdatePayload()
 
         try
         {
             val response = UsersApi().updateAUser(
-                id = null,
+                id = 0,
                 _data = userCreateUpdatePayload,
             )
 

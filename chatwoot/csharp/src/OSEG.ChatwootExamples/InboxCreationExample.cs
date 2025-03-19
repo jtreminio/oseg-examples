@@ -14,29 +14,17 @@ public class InboxCreationExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
-        // config.ApiKey = new Dictionary<string, string> {["agentBotApiKey"] = "AGENT_BOT_API_KEY"};
-        // config.ApiKey = new Dictionary<string, string> {["platformAppApiKey"] = "PLATFORM_APP_API_KEY"};
-
-        var channel = new InboxCreationRequestChannel(
-            type: null,
-            websiteUrl: null,
-            welcomeTitle: null,
-            welcomeTagline: null,
-            agentAwayMessage: null,
-            widgetColor: null
-        );
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
+        // config.ApiKey.Add("api_access_token", "AGENT_BOT_API_KEY");
+        // config.ApiKey.Add("api_access_token", "PLATFORM_APP_API_KEY");
 
         var inboxCreationRequest = new InboxCreationRequest(
-            name: null,
-            avatar: null,
-            channel: channel
         );
 
         try
         {
             var response = new InboxesApi(config).InboxCreation(
-                accountId: null,
+                accountId: 0,
                 data: inboxCreationRequest
             );
 

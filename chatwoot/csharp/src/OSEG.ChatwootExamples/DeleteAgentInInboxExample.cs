@@ -14,10 +14,10 @@ public class DeleteAgentInInboxExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
 
         var deleteAgentInInboxRequest = new DeleteAgentInInboxRequest(
-            inboxId: null,
+            inboxId: "inbox_id_string",
             userIds: [
             ]
         );
@@ -25,7 +25,7 @@ public class DeleteAgentInInboxExample
         try
         {
             new InboxesApi(config).DeleteAgentInInbox(
-                accountId: null,
+                accountId: 0,
                 data: deleteAgentInInboxRequest
             );
         }

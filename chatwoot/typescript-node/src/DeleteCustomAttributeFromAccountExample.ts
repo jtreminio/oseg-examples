@@ -6,8 +6,8 @@ const apiCaller = new api.CustomAttributesApi();
 apiCaller.setApiKey(api.CustomAttributesApiApiKeys.userApiKey, "USER_API_KEY");
 
 apiCaller.deleteCustomAttributeFromAccount(
-  undefined, // accountId
-  undefined, // id
+  0, // accountId
+  0, // id
 ).catch(error => {
   console.log("Exception when calling CustomAttributesApi#deleteCustomAttributeFromAccount:");
   console.log(error.body);

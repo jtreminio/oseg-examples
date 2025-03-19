@@ -19,8 +19,8 @@ public class ConversationFilterExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
-        // config.setApiKey("AGENT_BOT_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
+        // ((ApiKeyAuth) config.getAuthentication("agentBotApiKey")).setApiKey("AGENT_BOT_API_KEY");
 
         var conversationFilterRequest = new ConversationFilterRequest();
         conversationFilterRequest.payload(JSON.deserialize("""
@@ -47,7 +47,7 @@ public class ConversationFilterExample
         try
         {
             var response = new ConversationsApi(config).conversationFilter(
-                null, // accountId
+                0, // accountId
                 conversationFilterRequest, // body
                 null // page
             );

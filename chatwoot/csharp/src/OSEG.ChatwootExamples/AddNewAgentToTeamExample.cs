@@ -14,7 +14,7 @@ public class AddNewAgentToTeamExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
 
         var addNewAgentToTeamRequest = new AddNewAgentToTeamRequest(
             userIds: [
@@ -24,8 +24,8 @@ public class AddNewAgentToTeamExample
         try
         {
             var response = new TeamsApi(config).AddNewAgentToTeam(
-                accountId: null,
-                teamId: null,
+                accountId: 0,
+                teamId: 0,
                 data: addNewAgentToTeamRequest
             );
 

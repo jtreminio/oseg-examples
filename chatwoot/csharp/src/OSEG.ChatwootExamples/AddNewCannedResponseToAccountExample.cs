@@ -14,17 +14,15 @@ public class AddNewCannedResponseToAccountExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
 
         var cannedResponseCreateUpdatePayload = new CannedResponseCreateUpdatePayload(
-            content: null,
-            shortCode: null
         );
 
         try
         {
             var response = new CannedResponsesApi(config).AddNewCannedResponseToAccount(
-                accountId: null,
+                accountId: 0,
                 data: cannedResponseCreateUpdatePayload
             );
 

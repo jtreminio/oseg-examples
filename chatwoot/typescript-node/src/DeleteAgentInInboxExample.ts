@@ -5,13 +5,14 @@ import models from "chatwoot_client"
 const apiCaller = new api.InboxesApi();
 apiCaller.setApiKey(api.InboxesApiApiKeys.userApiKey, "USER_API_KEY");
 
-const deleteAgentInInboxRequest = new models.DeleteAgentInInboxRequest();
-deleteAgentInInboxRequest.inboxId = undefined;
-deleteAgentInInboxRequest.userIds = [
-];
+const deleteAgentInInboxRequest: models.DeleteAgentInInboxRequest = {
+  inboxId: "inbox_id_string",
+  userIds: [
+  ],
+};
 
 apiCaller.deleteAgentInInbox(
-  undefined, // accountId
+  0, // accountId
   deleteAgentInInboxRequest, // data
 ).catch(error => {
   console.log("Exception when calling InboxesApi#deleteAgentInInbox:");

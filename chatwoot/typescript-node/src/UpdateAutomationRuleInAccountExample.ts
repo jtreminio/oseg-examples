@@ -5,15 +5,33 @@ import models from "chatwoot_client"
 const apiCaller = new api.AutomationRuleApi();
 apiCaller.setApiKey(api.AutomationRuleApiApiKeys.userApiKey, "USER_API_KEY");
 
-const automationRuleCreateUpdatePayload = new models.AutomationRuleCreateUpdatePayload();
-automationRuleCreateUpdatePayload.name = "Add label on message create event";
-automationRuleCreateUpdatePayload.description = "Add label support and sales on message create event if incoming message content contains text help";
-automationRuleCreateUpdatePayload.eventName = models.AutomationRuleCreateUpdatePayload.EventNameEnum.MessageCreated;
-automationRuleCreateUpdatePayload.active = undefined;
+const automationRuleCreateUpdatePayload: models.AutomationRuleCreateUpdatePayload = {
+  name: "Add label on message create event",
+  description: "Add label support and sales on message create event if incoming message content contains text help",
+  eventName: models.AutomationRuleCreateUpdatePayload.EventNameEnum.MessageCreated,
+  actions: [
+    {
+      "action_name": "add_label",
+      "action_params": [
+        "support"
+      ]
+    }
+  ],
+  conditions: [
+    {
+      "attribute_key": "content",
+      "filter_operator": "contains",
+      "query_operator": "nil",
+      "values": [
+        "help"
+      ]
+    }
+  ],
+};
 
 apiCaller.updateAutomationRuleInAccount(
-  undefined, // accountId
-  undefined, // id
+  0, // accountId
+  0, // id
   automationRuleCreateUpdatePayload, // data
 ).then(response => {
   console.log(response.body);

@@ -10,15 +10,15 @@ configuration = Configuration(
 
 with ApiClient(configuration) as api_client:
     delete_agent_in_inbox_request = models.DeleteAgentInInboxRequest(
-        inbox_id=None,
+        inbox_id="inbox_id_string",
         user_ids=[
         ],
     )
 
     try:
         api.InboxesApi(api_client).delete_agent_in_inbox(
-            account_id=None,
-            delete_agent_in_inbox_request=delete_agent_in_inbox_request,
+            account_id=0,
+            data=delete_agent_in_inbox_request,
         )
     except ApiException as e:
         print("Exception when calling InboxesApi#delete_agent_in_inbox: %s\n" % e)

@@ -14,13 +14,13 @@ public class DeleteAgentFromAccountExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
 
         try
         {
             new AgentsApi(config).DeleteAgentFromAccount(
-                accountId: null,
-                id: null
+                accountId: 0,
+                id: 0
             );
         }
         catch (ApiException e)

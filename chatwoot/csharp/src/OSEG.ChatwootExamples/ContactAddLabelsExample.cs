@@ -14,9 +14,9 @@ public class ContactAddLabelsExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
-        // config.ApiKey = new Dictionary<string, string> {["agentBotApiKey"] = "AGENT_BOT_API_KEY"};
-        // config.ApiKey = new Dictionary<string, string> {["platformAppApiKey"] = "PLATFORM_APP_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
+        // config.ApiKey.Add("api_access_token", "AGENT_BOT_API_KEY");
+        // config.ApiKey.Add("api_access_token", "PLATFORM_APP_API_KEY");
 
         var contactAddLabelsRequest = new ContactAddLabelsRequest(
             labels: [
@@ -26,8 +26,8 @@ public class ContactAddLabelsExample
         try
         {
             var response = new ContactLabelsApi(config).ContactAddLabels(
-                accountId: null,
-                contactIdentifier: null,
+                accountId: 0,
+                contactIdentifier: "contact_identifier_string",
                 data: contactAddLabelsRequest
             );
 

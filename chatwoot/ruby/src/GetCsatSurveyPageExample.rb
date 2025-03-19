@@ -6,7 +6,7 @@ end
 
 begin
     ChatwootClient::CSATSurveyPageApi.new.get_csat_survey_page(
-        nil, # conversation_uuid
+        0, # conversation_uuid
     )
 rescue ChatwootClient::ApiError => e
     puts "Exception when calling CSATSurveyPageApi#get_csat_survey_page: #{e}"

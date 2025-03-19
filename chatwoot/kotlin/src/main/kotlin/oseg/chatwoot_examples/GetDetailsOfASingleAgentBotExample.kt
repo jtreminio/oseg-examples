@@ -17,12 +17,12 @@ class GetDetailsOfASingleAgentBotExample
 {
     fun getDetailsOfASingleAgentBot()
     {
-        ApiClient.apiKey["platformAppApiKey"] = "PLATFORM_APP_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "PLATFORM_APP_API_KEY"
 
         try
         {
             val response = AgentBotsApi().getDetailsOfASingleAgentBot(
-                id = null,
+                id = 0,
             )
 
             println(response)

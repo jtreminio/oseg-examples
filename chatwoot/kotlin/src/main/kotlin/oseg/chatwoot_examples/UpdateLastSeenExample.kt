@@ -17,16 +17,16 @@ class UpdateLastSeenExample
 {
     fun updateLastSeen()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
-        // ApiClient.apiKey["agentBotApiKey"] = "AGENT_BOT_API_KEY"
-        // ApiClient.apiKey["platformAppApiKey"] = "PLATFORM_APP_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "AGENT_BOT_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "PLATFORM_APP_API_KEY"
 
         try
         {
             ConversationsAPIApi().updateLastSeen(
-                inboxIdentifier = null,
-                contactIdentifier = null,
-                conversationId = null,
+                inboxIdentifier = "inbox_identifier_string",
+                contactIdentifier = "contact_identifier_string",
+                conversationId = 0,
             )
         } catch (e: ClientException) {
             println("4xx response calling ConversationsAPIApi#updateLastSeen")

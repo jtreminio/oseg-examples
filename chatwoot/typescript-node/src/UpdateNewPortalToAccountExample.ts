@@ -5,19 +5,22 @@ import models from "chatwoot_client"
 const apiCaller = new api.HelpCenterApi();
 apiCaller.setApiKey(api.HelpCenterApiApiKeys.userApiKey, "USER_API_KEY");
 
-const portalCreateUpdatePayload = new models.PortalCreateUpdatePayload();
-portalCreateUpdatePayload.archived = undefined;
-portalCreateUpdatePayload.color = "add color HEX string, \"#fffff\"";
-portalCreateUpdatePayload.customDomain = "https://chatwoot.help/.";
-portalCreateUpdatePayload.headerText = "Handbook";
-portalCreateUpdatePayload.homepageLink = "https://www.chatwoot.com/";
-portalCreateUpdatePayload.name = undefined;
-portalCreateUpdatePayload.slug = undefined;
-portalCreateUpdatePayload.pageTitle = undefined;
-portalCreateUpdatePayload.accountId = undefined;
+const portalCreateUpdatePayload: models.PortalCreateUpdatePayload = {
+  color: "add color HEX string, \"#fffff\"",
+  customDomain: "https://chatwoot.help/.",
+  headerText: "Handbook",
+  homepageLink: "https://www.chatwoot.com/",
+  config: {
+    "allowed_locales": [
+      "en",
+      "es"
+    ],
+    "default_locale": "en"
+  },
+};
 
 apiCaller.updateNewPortalToAccount(
-  undefined, // accountId
+  0, // accountId
   portalCreateUpdatePayload, // data
 ).then(response => {
   console.log(response.body);

@@ -5,23 +5,19 @@ import models from "chatwoot_client"
 const apiCaller = new api.HelpCenterApi();
 apiCaller.setApiKey(api.HelpCenterApiApiKeys.userApiKey, "USER_API_KEY");
 
-const articleCreateUpdatePayload = new models.ArticleCreateUpdatePayload();
-articleCreateUpdatePayload.content = undefined;
-articleCreateUpdatePayload.position = undefined;
-articleCreateUpdatePayload.status = undefined;
-articleCreateUpdatePayload.title = undefined;
-articleCreateUpdatePayload.slug = undefined;
-articleCreateUpdatePayload.views = undefined;
-articleCreateUpdatePayload.portalId = undefined;
-articleCreateUpdatePayload.accountId = undefined;
-articleCreateUpdatePayload.authorId = undefined;
-articleCreateUpdatePayload.categoryId = undefined;
-articleCreateUpdatePayload.folderId = undefined;
-articleCreateUpdatePayload.associatedArticleId = undefined;
+const articleCreateUpdatePayload: models.ArticleCreateUpdatePayload = {
+  meta: {
+    "description": "article description",
+    "tags": [
+      "article_name"
+    ],
+    "title": "article title"
+  },
+};
 
 apiCaller.addNewArticleToAccount(
-  undefined, // accountId
-  undefined, // portalId
+  0, // accountId
+  0, // portalId
   articleCreateUpdatePayload, // data
 ).then(response => {
   console.log(response.body);

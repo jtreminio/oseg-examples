@@ -19,31 +19,38 @@ public class NewConversationExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
-        // config.setApiKey("AGENT_BOT_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
+        // ((ApiKeyAuth) config.getAuthentication("agentBotApiKey")).setApiKey("AGENT_BOT_API_KEY");
 
         var messageTemplateParams = new NewConversationRequestMessageTemplateParams();
         messageTemplateParams.name("sample_issue_resolution");
         messageTemplateParams.category("UTILITY");
         messageTemplateParams.language("en_US");
+        messageTemplateParams.processedParams(JSON.deserialize("""
+            {
+                "1": "Chatwoot"
+            }
+        """, Map.class));
 
         var message = new NewConversationRequestMessage();
-        message.content(null);
+        message.content("content_string");
         message.templateParams(messageTemplateParams);
 
         var newConversationRequest = new NewConversationRequest();
-        newConversationRequest.inboxId(null);
-        newConversationRequest.sourceId(null);
-        newConversationRequest.contactId(null);
-        newConversationRequest.status(null);
-        newConversationRequest.assigneeId(null);
-        newConversationRequest.teamId(null);
+        newConversationRequest.inboxId("inbox_id_string");
+        newConversationRequest.sourceId("source_id_string");
+        newConversationRequest.customAttributes(JSON.deserialize("""
+            {
+                "attribute_key": "attribute_value",
+                "priority_conversation_number": 3
+            }
+        """, Map.class));
         newConversationRequest.message(message);
 
         try
         {
             var response = new ConversationsApi(config).newConversation(
-                null, // accountId
+                0, // accountId
                 newConversationRequest // data
             );
 

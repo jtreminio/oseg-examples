@@ -8,8 +8,8 @@ apiCaller.setApiKey(api.AutomationRuleApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.AutomationRuleApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
 apiCaller.getDetailsOfASingleAutomationRule(
-  undefined, // accountId
-  undefined, // id
+  0, // accountId
+  0, // id
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

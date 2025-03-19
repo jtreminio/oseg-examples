@@ -17,18 +17,15 @@ class ListAllConversationStatisticsSummaryExample
 {
     fun listAllConversationStatisticsSummary()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
-        // ApiClient.apiKey["agentBotApiKey"] = "AGENT_BOT_API_KEY"
-        // ApiClient.apiKey["platformAppApiKey"] = "PLATFORM_APP_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "AGENT_BOT_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "PLATFORM_APP_API_KEY"
 
         try
         {
             val response = ReportsApi().listAllConversationStatisticsSummary(
-                accountId = null,
-                type = null,
-                id = null,
-                since = null,
-                until = null,
+                accountId = 0,
+                type = ReportsApi.TypeListAllConversationStatisticsSummary.account,
             )
 
             println(response)

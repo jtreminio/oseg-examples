@@ -11,26 +11,15 @@ configuration = Configuration(
 )
 
 with ApiClient(configuration) as api_client:
-    channel = models.UpdateInboxRequestChannel(
-        website_url=None,
-        welcome_title=None,
-        welcome_tagline=None,
-        agent_away_message=None,
-        widget_color=None,
-    )
-
     update_inbox_request = models.UpdateInboxRequest(
-        enable_auto_assignment=None,
-        name=None,
-        avatar=None,
-        channel=channel,
+        enable_auto_assignment=False,
     )
 
     try:
         response = api.InboxesApi(api_client).update_inbox(
-            account_id=None,
-            id=None,
-            update_inbox_request=update_inbox_request,
+            account_id=0,
+            id=0,
+            data=update_inbox_request,
         )
 
         pprint(response)

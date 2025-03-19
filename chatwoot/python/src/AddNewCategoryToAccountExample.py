@@ -10,22 +10,14 @@ configuration = Configuration(
 
 with ApiClient(configuration) as api_client:
     category_create_update_payload = models.CategoryCreateUpdatePayload(
-        description=None,
         locale="en/es",
-        name=None,
-        slug=None,
-        position=None,
-        portal_id=None,
-        account_id=None,
-        associated_category_id=None,
-        parent_category_id=None,
     )
 
     try:
         response = api.HelpCenterApi(api_client).add_new_category_to_account(
-            account_id=None,
-            portal_id=None,
-            category_create_update_payload=category_create_update_payload,
+            account_id=0,
+            portal_id=0,
+            data=category_create_update_payload,
         )
 
         pprint(response)

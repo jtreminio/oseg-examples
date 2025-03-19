@@ -8,7 +8,7 @@ use SplFileObject;
 use Chatwoot;
 
 $config = Chatwoot\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("userApiKey", "USER_API_KEY");
+$config->setApiKey("api_access_token", "USER_API_KEY");
 
 $category_create_update_payload = (new Chatwoot\Client\Model\CategoryCreateUpdatePayload())
     ->setDescription(null)
@@ -23,8 +23,8 @@ $category_create_update_payload = (new Chatwoot\Client\Model\CategoryCreateUpdat
 
 try {
     $response = (new Chatwoot\Client\Api\HelpCenterApi(config: $config))->addNewCategoryToAccount(
-        account_id: null,
-        portal_id: null,
+        account_id: 0,
+        portal_id: 0,
         data: category_create_update_payload,
     );
 

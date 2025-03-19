@@ -8,12 +8,13 @@ use SplFileObject;
 use Chatwoot;
 
 $config = Chatwoot\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("platformAppApiKey", "PLATFORM_APP_API_KEY");
+$config->setApiKey("api_access_token", "PLATFORM_APP_API_KEY");
 
 $user_create_update_payload = (new Chatwoot\Client\Model\UserCreateUpdatePayload())
     ->setName(null)
     ->setEmail(null)
-    ->setPassword(null);
+    ->setPassword(null)
+    ->setCustomAttributes(null);
 
 try {
     $response = (new Chatwoot\Client\Api\UsersApi(config: $config))->createAUser(

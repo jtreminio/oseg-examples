@@ -5,14 +5,12 @@ ChatwootClient.configure do |config|
 end
 
 public_message_create_payload = ChatwootClient::PublicMessageCreatePayload.new
-public_message_create_payload.content = nil
-public_message_create_payload.echo_id = nil
 
 begin
     response = ChatwootClient::MessagesAPIApi.new.create_a_message(
-        nil, # inbox_identifier
-        nil, # contact_identifier
-        nil, # conversation_id
+        "inbox_identifier_string", # inbox_identifier
+        "contact_identifier_string", # contact_identifier
+        0, # conversation_id
         public_message_create_payload, # data
     )
 

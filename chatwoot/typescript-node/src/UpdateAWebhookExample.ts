@@ -7,14 +7,14 @@ apiCaller.setApiKey(api.WebhooksApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.WebhooksApiApiKeys.agentBotApiKey, "AGENT_BOT_API_KEY");
 // apiCaller.setApiKey(api.WebhooksApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
-const webhookCreateUpdatePayload = new models.WebhookCreateUpdatePayload();
-webhookCreateUpdatePayload.url = undefined;
-webhookCreateUpdatePayload.subscriptions = [
-];
+const webhookCreateUpdatePayload: models.WebhookCreateUpdatePayload = {
+  subscriptions: [
+  ],
+};
 
 apiCaller.updateAWebhook(
-  undefined, // accountId
-  undefined, // webhookId
+  0, // accountId
+  0, // webhookId
   webhookCreateUpdatePayload, // data
 ).then(response => {
   console.log(response.body);

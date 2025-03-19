@@ -21,7 +21,7 @@ class GetCsatSurveyPageExample
         try
         {
             CSATSurveyPageApi().getCsatSurveyPage(
-                conversationUuid = null,
+                conversationUuid = 0,
             )
         } catch (e: ClientException) {
             println("4xx response calling CSATSurveyPageApi#getCsatSurveyPage")

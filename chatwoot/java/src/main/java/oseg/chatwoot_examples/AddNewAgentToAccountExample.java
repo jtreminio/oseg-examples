@@ -19,19 +19,17 @@ public class AddNewAgentToAccountExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
 
         var addNewAgentToAccountRequest = new AddNewAgentToAccountRequest();
-        addNewAgentToAccountRequest.email(null);
-        addNewAgentToAccountRequest.name(null);
-        addNewAgentToAccountRequest.role(null);
-        addNewAgentToAccountRequest.availabilityStatus(null);
-        addNewAgentToAccountRequest.autoOffline(null);
+        addNewAgentToAccountRequest.email("email_string");
+        addNewAgentToAccountRequest.name("name_string");
+        addNewAgentToAccountRequest.role(AddNewAgentToAccountRequest.RoleEnum.AGENT);
 
         try
         {
             var response = new AgentsApi(config).addNewAgentToAccount(
-                null, // accountId
+                0, // accountId
                 addNewAgentToAccountRequest // data
             );
 

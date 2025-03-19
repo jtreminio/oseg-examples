@@ -13,7 +13,7 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.IntegrationsApi(api_client).get_details_of_all_integrations(
-            account_id=None,
+            account_id=0,
         )
 
         pprint(response)

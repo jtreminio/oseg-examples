@@ -19,16 +19,16 @@ public class DeleteAgentInInboxExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
 
         var deleteAgentInInboxRequest = new DeleteAgentInInboxRequest();
-        deleteAgentInInboxRequest.inboxId(null);
+        deleteAgentInInboxRequest.inboxId("inbox_id_string");
         deleteAgentInInboxRequest.userIds(List.of ());
 
         try
         {
             new InboxesApi(config).deleteAgentInInbox(
-                null, // accountId
+                0, // accountId
                 deleteAgentInInboxRequest // data
             );
         } catch (ApiException e) {

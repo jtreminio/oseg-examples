@@ -19,12 +19,12 @@ public class DeleteAnAgentBotExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("PLATFORM_APP_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("platformAppApiKey")).setApiKey("PLATFORM_APP_API_KEY");
 
         try
         {
             new AgentBotsApi(config).deleteAnAgentBot(
-                null // id
+                0 // id
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling AgentBotsApi#deleteAnAgentBot");

@@ -19,18 +19,39 @@ public class AddNewAutomationRuleToAccountExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
 
         var automationRuleCreateUpdatePayload = new AutomationRuleCreateUpdatePayload();
         automationRuleCreateUpdatePayload.name("Add label on message create event");
         automationRuleCreateUpdatePayload.description("Add label support and sales on message create event if incoming message content contains text help");
         automationRuleCreateUpdatePayload.eventName(AutomationRuleCreateUpdatePayload.EventNameEnum.MESSAGE_CREATED);
-        automationRuleCreateUpdatePayload.active(null);
+        automationRuleCreateUpdatePayload.actions(JSON.deserialize("""
+            [
+                {
+                    "action_name": "add_label",
+                    "action_params": [
+                        "support"
+                    ]
+                }
+            ]
+        """, List.class));
+        automationRuleCreateUpdatePayload.conditions(JSON.deserialize("""
+            [
+                {
+                    "attribute_key": "content",
+                    "filter_operator": "contains",
+                    "query_operator": "nil",
+                    "values": [
+                        "help"
+                    ]
+                }
+            ]
+        """, List.class));
 
         try
         {
             var response = new AutomationRuleApi(config).addNewAutomationRuleToAccount(
-                null, // accountId
+                0, // accountId
                 automationRuleCreateUpdatePayload // data
             );
 

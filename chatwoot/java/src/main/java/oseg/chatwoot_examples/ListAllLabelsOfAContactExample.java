@@ -19,15 +19,15 @@ public class ListAllLabelsOfAContactExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
-        // config.setApiKey("AGENT_BOT_API_KEY");
-        // config.setApiKey("PLATFORM_APP_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
+        // ((ApiKeyAuth) config.getAuthentication("agentBotApiKey")).setApiKey("AGENT_BOT_API_KEY");
+        // ((ApiKeyAuth) config.getAuthentication("platformAppApiKey")).setApiKey("PLATFORM_APP_API_KEY");
 
         try
         {
             var response = new ContactLabelsApi(config).listAllLabelsOfAContact(
-                null, // accountId
-                null // contactIdentifier
+                0, // accountId
+                "contact_identifier_string" // contactIdentifier
             );
 
             System.out.println(response);

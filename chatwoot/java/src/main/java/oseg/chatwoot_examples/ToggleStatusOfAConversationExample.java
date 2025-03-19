@@ -19,17 +19,17 @@ public class ToggleStatusOfAConversationExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
-        // config.setApiKey("AGENT_BOT_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
+        // ((ApiKeyAuth) config.getAuthentication("agentBotApiKey")).setApiKey("AGENT_BOT_API_KEY");
 
         var toggleStatusOfAConversationRequest = new ToggleStatusOfAConversationRequest();
-        toggleStatusOfAConversationRequest.status(null);
+        toggleStatusOfAConversationRequest.status(ToggleStatusOfAConversationRequest.StatusEnum.OPEN);
 
         try
         {
             var response = new ConversationsApi(config).toggleStatusOfAConversation(
-                null, // accountId
-                null, // conversationId
+                0, // accountId
+                0, // conversationId
                 toggleStatusOfAConversationRequest // data
             );
 

@@ -5,20 +5,13 @@ import models from "chatwoot_client"
 const apiCaller = new api.HelpCenterApi();
 apiCaller.setApiKey(api.HelpCenterApiApiKeys.userApiKey, "USER_API_KEY");
 
-const categoryCreateUpdatePayload = new models.CategoryCreateUpdatePayload();
-categoryCreateUpdatePayload.description = undefined;
-categoryCreateUpdatePayload.locale = "en/es";
-categoryCreateUpdatePayload.name = undefined;
-categoryCreateUpdatePayload.slug = undefined;
-categoryCreateUpdatePayload.position = undefined;
-categoryCreateUpdatePayload.portalId = undefined;
-categoryCreateUpdatePayload.accountId = undefined;
-categoryCreateUpdatePayload.associatedCategoryId = undefined;
-categoryCreateUpdatePayload.parentCategoryId = undefined;
+const categoryCreateUpdatePayload: models.CategoryCreateUpdatePayload = {
+  locale: "en/es",
+};
 
 apiCaller.addNewCategoryToAccount(
-  undefined, // accountId
-  undefined, // portalId
+  0, // accountId
+  0, // portalId
   categoryCreateUpdatePayload, // data
 ).then(response => {
   console.log(response.body);

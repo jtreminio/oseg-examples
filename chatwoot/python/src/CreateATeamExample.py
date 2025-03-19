@@ -12,15 +12,12 @@ configuration = Configuration(
 
 with ApiClient(configuration) as api_client:
     team_create_update_payload = models.TeamCreateUpdatePayload(
-        name=None,
-        description=None,
-        allow_auto_assign=None,
     )
 
     try:
         response = api.TeamsApi(api_client).create_a_team(
-            account_id=None,
-            team_create_update_payload=team_create_update_payload,
+            account_id=0,
+            data=team_create_update_payload,
         )
 
         pprint(response)

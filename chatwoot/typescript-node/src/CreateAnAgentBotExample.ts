@@ -5,10 +5,8 @@ import models from "chatwoot_client"
 const apiCaller = new api.AgentBotsApi();
 apiCaller.setApiKey(api.AgentBotsApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
-const agentBotCreateUpdatePayload = new models.AgentBotCreateUpdatePayload();
-agentBotCreateUpdatePayload.name = undefined;
-agentBotCreateUpdatePayload.description = undefined;
-agentBotCreateUpdatePayload.outgoingUrl = undefined;
+const agentBotCreateUpdatePayload: models.AgentBotCreateUpdatePayload = {
+};
 
 apiCaller.createAnAgentBot(
   agentBotCreateUpdatePayload, // data

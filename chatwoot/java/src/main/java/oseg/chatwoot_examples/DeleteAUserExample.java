@@ -19,12 +19,12 @@ public class DeleteAUserExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("PLATFORM_APP_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("platformAppApiKey")).setApiKey("PLATFORM_APP_API_KEY");
 
         try
         {
             new UsersApi(config).deleteAUser(
-                null // id
+                0 // id
             );
         } catch (ApiException e) {
             System.err.println("Exception when calling UsersApi#deleteAUser");

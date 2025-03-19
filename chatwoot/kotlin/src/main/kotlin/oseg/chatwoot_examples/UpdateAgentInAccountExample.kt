@@ -17,19 +17,17 @@ class UpdateAgentInAccountExample
 {
     fun updateAgentInAccount()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
 
         val updateAgentInAccountRequest = UpdateAgentInAccountRequest(
-            role = null,
-            availability = null,
-            autoOffline = null,
+            role = UpdateAgentInAccountRequest.Role.agent,
         )
 
         try
         {
             val response = AgentsApi().updateAgentInAccount(
-                accountId = null,
-                id = null,
+                accountId = 0,
+                id = 0,
                 _data = updateAgentInAccountRequest,
             )
 

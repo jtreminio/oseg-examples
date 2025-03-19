@@ -8,7 +8,7 @@ use SplFileObject;
 use Chatwoot;
 
 $config = Chatwoot\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("userApiKey", "USER_API_KEY");
+$config->setApiKey("api_access_token", "USER_API_KEY");
 
 $custom_attribute_create_update_payload = (new Chatwoot\Client\Model\CustomAttributeCreateUpdatePayload())
     ->setAttributeDisplayName(null)
@@ -21,7 +21,7 @@ $custom_attribute_create_update_payload = (new Chatwoot\Client\Model\CustomAttri
 
 try {
     $response = (new Chatwoot\Client\Api\CustomAttributesApi(config: $config))->addNewCustomAttributeToAccount(
-        account_id: null,
+        account_id: 0,
         data: custom_attribute_create_update_payload,
     );
 

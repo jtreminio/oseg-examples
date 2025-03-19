@@ -8,8 +8,8 @@ apiCaller.setApiKey(api.InboxesApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.InboxesApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
 apiCaller.getInboxAgentBot(
-  undefined, // accountId
-  undefined, // id
+  0, // accountId
+  0, // id
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

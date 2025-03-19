@@ -14,25 +14,17 @@ public class AddNewCategoryToAccountExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
 
         var categoryCreateUpdatePayload = new CategoryCreateUpdatePayload(
-            description: null,
-            locale: "en/es",
-            name: null,
-            slug: null,
-            position: null,
-            portalId: null,
-            accountId: null,
-            associatedCategoryId: null,
-            parentCategoryId: null
+            locale: "en/es"
         );
 
         try
         {
             var response = new HelpCenterApi(config).AddNewCategoryToAccount(
-                accountId: null,
-                portalId: null,
+                accountId: 0,
+                portalId: 0,
                 data: categoryCreateUpdatePayload
             );
 

@@ -14,24 +14,18 @@ public class ContactCreateExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
-        // config.ApiKey = new Dictionary<string, string> {["agentBotApiKey"] = "AGENT_BOT_API_KEY"};
-        // config.ApiKey = new Dictionary<string, string> {["platformAppApiKey"] = "PLATFORM_APP_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
+        // config.ApiKey.Add("api_access_token", "AGENT_BOT_API_KEY");
+        // config.ApiKey.Add("api_access_token", "PLATFORM_APP_API_KEY");
 
         var contactCreate = new ContactCreate(
-            inboxId: null,
-            name: null,
-            email: null,
-            phoneNumber: null,
-            avatarUrl: null,
-            identifier: null,
-            avatar: null
+            inboxId: 0
         );
 
         try
         {
             var response = new ContactsApi(config).ContactCreate(
-                accountId: null,
+                accountId: 0,
                 data: contactCreate
             );
 

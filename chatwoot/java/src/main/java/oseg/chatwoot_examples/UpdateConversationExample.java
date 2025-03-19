@@ -19,18 +19,16 @@ public class UpdateConversationExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
-        // config.setApiKey("AGENT_BOT_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
+        // ((ApiKeyAuth) config.getAuthentication("agentBotApiKey")).setApiKey("AGENT_BOT_API_KEY");
 
         var updateConversationRequest = new UpdateConversationRequest();
-        updateConversationRequest.priority(null);
-        updateConversationRequest.slaPolicyId(null);
 
         try
         {
             new ConversationsApi(config).updateConversation(
-                null, // accountId
-                null, // conversationId
+                0, // accountId
+                0, // conversationId
                 updateConversationRequest // data
             );
         } catch (ApiException e) {

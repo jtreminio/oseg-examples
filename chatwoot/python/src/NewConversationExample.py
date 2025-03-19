@@ -14,27 +14,34 @@ with ApiClient(configuration) as api_client:
         name="sample_issue_resolution",
         category="UTILITY",
         language="en_US",
+        processed_params=json.loads("""
+            {
+                "1": "Chatwoot"
+            }
+        """),
     )
 
     message = models.NewConversationRequestMessage(
-        content=None,
+        content="content_string",
         template_params=message_template_params,
     )
 
     new_conversation_request = models.NewConversationRequest(
-        inbox_id=None,
-        source_id=None,
-        contact_id=None,
-        status=None,
-        assignee_id=None,
-        team_id=None,
+        inbox_id="inbox_id_string",
+        source_id="source_id_string",
+        custom_attributes=json.loads("""
+            {
+                "attribute_key": "attribute_value",
+                "priority_conversation_number": 3
+            }
+        """),
         message=message,
     )
 
     try:
         response = api.ConversationsApi(api_client).new_conversation(
-            account_id=None,
-            new_conversation_request=new_conversation_request,
+            account_id=0,
+            data=new_conversation_request,
         )
 
         pprint(response)

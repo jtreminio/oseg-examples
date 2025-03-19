@@ -6,8 +6,8 @@ end
 
 begin
     response = ChatwootClient::ContactsAPIApi.new.get_details_of_a_contact(
-        nil, # inbox_identifier
-        nil, # contact_identifier
+        "inbox_identifier_string", # inbox_identifier
+        "contact_identifier_string", # contact_identifier
     )
 
     p response

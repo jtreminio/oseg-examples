@@ -11,7 +11,7 @@ $config = Chatwoot\Client\Configuration::getDefaultConfiguration();
 
 try {
     $response = (new Chatwoot\Client\Api\InboxAPIApi(config: $config))->getDetailsOfAInbox(
-        inbox_identifier: null,
+        inbox_identifier: "inbox_identifier_string",
     );
 
     print_r($response);

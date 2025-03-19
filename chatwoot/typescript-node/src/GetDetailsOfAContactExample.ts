@@ -5,8 +5,8 @@ import models from "chatwoot_client"
 const apiCaller = new api.ContactsAPIApi();
 
 apiCaller.getDetailsOfAContact(
-  undefined, // inboxIdentifier
-  undefined, // contactIdentifier
+  "inbox_identifier_string", // inboxIdentifier
+  "contact_identifier_string", // contactIdentifier
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

@@ -8,8 +8,8 @@ apiCaller.setApiKey(api.WebhooksApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.WebhooksApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
 apiCaller.deleteAWebhook(
-  undefined, // accountId
-  undefined, // webhookId
+  0, // accountId
+  0, // webhookId
 ).catch(error => {
   console.log("Exception when calling WebhooksApi#deleteAWebhook:");
   console.log(error.body);

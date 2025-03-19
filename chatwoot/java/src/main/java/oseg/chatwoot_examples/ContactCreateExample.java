@@ -19,23 +19,17 @@ public class ContactCreateExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
-        // config.setApiKey("AGENT_BOT_API_KEY");
-        // config.setApiKey("PLATFORM_APP_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
+        // ((ApiKeyAuth) config.getAuthentication("agentBotApiKey")).setApiKey("AGENT_BOT_API_KEY");
+        // ((ApiKeyAuth) config.getAuthentication("platformAppApiKey")).setApiKey("PLATFORM_APP_API_KEY");
 
         var contactCreate = new ContactCreate();
-        contactCreate.inboxId(null);
-        contactCreate.name(null);
-        contactCreate.email(null);
-        contactCreate.phoneNumber(null);
-        contactCreate.avatarUrl(null);
-        contactCreate.identifier(null);
-        contactCreate.avatar(null);
+        contactCreate.inboxId(0);
 
         try
         {
             var response = new ContactsApi(config).contactCreate(
-                null, // accountId
+                0, // accountId
                 contactCreate // data
             );
 

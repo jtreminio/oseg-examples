@@ -10,14 +10,11 @@ configuration = Configuration(
 
 with ApiClient(configuration) as api_client:
     agent_bot_create_update_payload = models.AgentBotCreateUpdatePayload(
-        name=None,
-        description=None,
-        outgoing_url=None,
     )
 
     try:
         response = api.AgentBotsApi(api_client).create_an_agent_bot(
-            agent_bot_create_update_payload=agent_bot_create_update_payload,
+            data=agent_bot_create_update_payload,
         )
 
         pprint(response)

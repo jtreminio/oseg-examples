@@ -19,12 +19,12 @@ public class GetAccountAutomationRuleExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
 
         try
         {
             var response = new AutomationRuleApi(config).getAccountAutomationRule(
-                null, // accountId
+                0, // accountId
                 1 // page
             );
 

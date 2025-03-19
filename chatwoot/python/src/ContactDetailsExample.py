@@ -13,8 +13,8 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.ContactsApi(api_client).contact_details(
-            account_id=None,
-            id=None,
+            account_id=0,
+            id=0,
         )
 
         pprint(response)

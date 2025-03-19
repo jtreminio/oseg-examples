@@ -35,9 +35,8 @@ with ApiClient(configuration) as api_client:
 
     try:
         response = api.ConversationsApi(api_client).conversation_filter(
-            account_id=None,
-            conversation_filter_request=conversation_filter_request,
-            page=None,
+            account_id=0,
+            body=conversation_filter_request,
         )
 
         pprint(response)

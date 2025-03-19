@@ -6,8 +6,8 @@ const apiCaller = new api.CannedResponsesApi();
 apiCaller.setApiKey(api.CannedResponsesApiApiKeys.userApiKey, "USER_API_KEY");
 
 apiCaller.deleteCannedResponseFromAccount(
-  undefined, // accountId
-  undefined, // id
+  0, // accountId
+  0, // id
 ).catch(error => {
   console.log("Exception when calling CannedResponsesApi#deleteCannedResponseFromAccount:");
   console.log(error.body);

@@ -11,8 +11,8 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.CustomAttributesApi(api_client).get_account_custom_attribute(
-            account_id=None,
-            attribute_model=None,
+            account_id=0,
+            attribute_model="0",
         )
 
         pprint(response)

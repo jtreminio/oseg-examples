@@ -12,19 +12,13 @@ configuration = Configuration(
 
 with ApiClient(configuration) as api_client:
     contact_update = models.ContactUpdate(
-        name=None,
-        email=None,
-        phone_number=None,
-        avatar_url=None,
-        identifier=None,
-        avatar=None,
     )
 
     try:
         response = api.ContactsApi(api_client).contact_update(
-            account_id=None,
-            id=None,
-            contact_update=contact_update,
+            account_id=0,
+            id=0,
+            data=contact_update,
         )
 
         pprint(response)

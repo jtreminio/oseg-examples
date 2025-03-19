@@ -13,8 +13,8 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.ContactLabelsApi(api_client).list_all_labels_of_a_contact(
-            account_id=None,
-            contact_identifier=None,
+            account_id=0,
+            contact_identifier="contact_identifier_string",
         )
 
         pprint(response)

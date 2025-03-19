@@ -14,10 +14,10 @@ public class AddNewAgentToInboxExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
 
         var addNewAgentToInboxRequest = new AddNewAgentToInboxRequest(
-            inboxId: null,
+            inboxId: "inbox_id_string",
             userIds: [
             ]
         );
@@ -25,7 +25,7 @@ public class AddNewAgentToInboxExample
         try
         {
             var response = new InboxesApi(config).AddNewAgentToInbox(
-                accountId: null,
+                accountId: 0,
                 data: addNewAgentToInboxRequest
             );
 

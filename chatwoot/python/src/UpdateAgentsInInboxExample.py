@@ -10,15 +10,15 @@ configuration = Configuration(
 
 with ApiClient(configuration) as api_client:
     update_agents_in_inbox_request = models.UpdateAgentsInInboxRequest(
-        inbox_id=None,
+        inbox_id="inbox_id_string",
         user_ids=[
         ],
     )
 
     try:
         response = api.InboxesApi(api_client).update_agents_in_inbox(
-            account_id=None,
-            update_agents_in_inbox_request=update_agents_in_inbox_request,
+            account_id=0,
+            data=update_agents_in_inbox_request,
         )
 
         pprint(response)

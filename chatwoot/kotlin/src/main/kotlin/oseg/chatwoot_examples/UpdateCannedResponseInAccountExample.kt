@@ -17,18 +17,15 @@ class UpdateCannedResponseInAccountExample
 {
     fun updateCannedResponseInAccount()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
 
-        val cannedResponseCreateUpdatePayload = CannedResponseCreateUpdatePayload(
-            content = null,
-            shortCode = null,
-        )
+        val cannedResponseCreateUpdatePayload = CannedResponseCreateUpdatePayload()
 
         try
         {
             val response = CannedResponseApi().updateCannedResponseInAccount(
-                accountId = null,
-                id = null,
+                accountId = 0,
+                id = 0,
                 _data = cannedResponseCreateUpdatePayload,
             )
 

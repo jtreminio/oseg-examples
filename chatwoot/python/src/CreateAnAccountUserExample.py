@@ -10,14 +10,14 @@ configuration = Configuration(
 
 with ApiClient(configuration) as api_client:
     create_an_account_user_request = models.CreateAnAccountUserRequest(
-        role=None,
-        user_id=None,
+        role="role_string",
+        user_id=0,
     )
 
     try:
         response = api.AccountUsersApi(api_client).create_an_account_user(
-            account_id=None,
-            create_an_account_user_request=create_an_account_user_request,
+            account_id=0,
+            data=create_an_account_user_request,
         )
 
         pprint(response)

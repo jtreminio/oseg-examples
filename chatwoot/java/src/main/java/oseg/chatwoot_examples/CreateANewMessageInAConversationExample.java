@@ -19,26 +19,29 @@ public class CreateANewMessageInAConversationExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
-        // config.setApiKey("AGENT_BOT_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
+        // ((ApiKeyAuth) config.getAuthentication("agentBotApiKey")).setApiKey("AGENT_BOT_API_KEY");
 
         var templateParams = new ConversationMessageCreateTemplateParams();
         templateParams.name("sample_issue_resolution");
         templateParams.category("UTILITY");
         templateParams.language("en_US");
+        templateParams.processedParams(JSON.deserialize("""
+            {
+                "1": "Chatwoot"
+            }
+        """, Map.class));
 
         var conversationMessageCreate = new ConversationMessageCreate();
-        conversationMessageCreate.content(null);
-        conversationMessageCreate.messageType(null);
-        conversationMessageCreate._private(null);
+        conversationMessageCreate.content("content_string");
         conversationMessageCreate.contentType(ConversationMessageCreate.ContentTypeEnum.CARDS);
         conversationMessageCreate.templateParams(templateParams);
 
         try
         {
             var response = new MessagesApi(config).createANewMessageInAConversation(
-                null, // accountId
-                null, // conversationId
+                0, // accountId
+                0, // conversationId
                 conversationMessageCreate // data
             );
 

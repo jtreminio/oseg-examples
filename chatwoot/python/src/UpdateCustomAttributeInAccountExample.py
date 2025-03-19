@@ -10,20 +10,15 @@ configuration = Configuration(
 
 with ApiClient(configuration) as api_client:
     custom_attribute_create_update_payload = models.CustomAttributeCreateUpdatePayload(
-        attribute_display_name=None,
-        attribute_display_type=None,
-        attribute_description=None,
-        attribute_key=None,
-        attribute_model=None,
         attribute_values=[
         ],
     )
 
     try:
         response = api.CustomAttributesApi(api_client).update_custom_attribute_in_account(
-            account_id=None,
-            id=None,
-            custom_attribute_create_update_payload=custom_attribute_create_update_payload,
+            account_id=0,
+            id=0,
+            data=custom_attribute_create_update_payload,
         )
 
         pprint(response)

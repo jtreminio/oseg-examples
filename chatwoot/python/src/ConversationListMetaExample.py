@@ -13,12 +13,8 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         response = api.ConversationsApi(api_client).conversation_list_meta(
-            account_id=None,
+            account_id=0,
             status="open",
-            q=None,
-            inbox_id=None,
-            team_id=None,
-            labels=None,
         )
 
         pprint(response)

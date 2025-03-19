@@ -13,9 +13,9 @@ configuration = Configuration(
 with ApiClient(configuration) as api_client:
     try:
         api.MessagesApi(api_client).delete_a_message(
-            account_id=None,
-            conversation_id=None,
-            message_id=None,
+            account_id=0,
+            conversation_id=0,
+            message_id=0,
         )
     except ApiException as e:
         print("Exception when calling MessagesApi#delete_a_message: %s\n" % e)

@@ -8,9 +8,9 @@ apiCaller.setApiKey(api.MessagesAPIApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.MessagesAPIApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
 apiCaller.listAllConverationMessages(
-  undefined, // inboxIdentifier
-  undefined, // contactIdentifier
-  undefined, // conversationId
+  "inbox_identifier_string", // inboxIdentifier
+  "contact_identifier_string", // contactIdentifier
+  0, // conversationId
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

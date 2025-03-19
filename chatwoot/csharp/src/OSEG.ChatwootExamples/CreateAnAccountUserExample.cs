@@ -14,17 +14,17 @@ public class CreateAnAccountUserExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["platformAppApiKey"] = "PLATFORM_APP_API_KEY"};
+        config.ApiKey.Add("api_access_token", "PLATFORM_APP_API_KEY");
 
         var createAnAccountUserRequest = new CreateAnAccountUserRequest(
-            role: null,
-            userId: null
+            role: "role_string",
+            userId: 0
         );
 
         try
         {
             var response = new AccountUsersApi(config).CreateAnAccountUser(
-                accountId: null,
+                accountId: 0,
                 data: createAnAccountUserRequest
             );
 

@@ -11,8 +11,8 @@ $config = Chatwoot\Client\Configuration::getDefaultConfiguration();
 
 try {
     $response = (new Chatwoot\Client\Api\ContactsAPIApi(config: $config))->getDetailsOfAContact(
-        inbox_identifier: null,
-        contact_identifier: null,
+        inbox_identifier: "inbox_identifier_string",
+        contact_identifier: "contact_identifier_string",
     );
 
     print_r($response);

@@ -10,21 +10,25 @@ configuration = Configuration(
 
 with ApiClient(configuration) as api_client:
     portal_create_update_payload = models.PortalCreateUpdatePayload(
-        archived=None,
         color="add color HEX string, \"#fffff\"",
         custom_domain="https://chatwoot.help/.",
         header_text="Handbook",
         homepage_link="https://www.chatwoot.com/",
-        name=None,
-        slug=None,
-        page_title=None,
-        account_id=None,
+        config=json.loads("""
+            {
+                "allowed_locales": [
+                    "en",
+                    "es"
+                ],
+                "default_locale": "en"
+            }
+        """),
     )
 
     try:
         response = api.HelpCenterApi(api_client).update_new_portal_to_account(
-            account_id=None,
-            portal_create_update_payload=portal_create_update_payload,
+            account_id=0,
+            data=portal_create_update_payload,
         )
 
         pprint(response)

@@ -19,13 +19,13 @@ public class GetInboxMembersExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
 
         try
         {
             var response = new InboxesApi(config).getInboxMembers(
-                null, // accountId
-                null // inboxId
+                0, // accountId
+                0 // inboxId
             );
 
             System.out.println(response);

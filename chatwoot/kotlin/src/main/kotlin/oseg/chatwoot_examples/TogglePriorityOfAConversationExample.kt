@@ -17,18 +17,18 @@ class TogglePriorityOfAConversationExample
 {
     fun togglePriorityOfAConversation()
     {
-        ApiClient.apiKey["userApiKey"] = "USER_API_KEY"
-        // ApiClient.apiKey["agentBotApiKey"] = "AGENT_BOT_API_KEY"
+        ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
+        // ApiClient.apiKey["api_access_token"] = "AGENT_BOT_API_KEY"
 
         val togglePriorityOfAConversationRequest = TogglePriorityOfAConversationRequest(
-            priority = null,
+            priority = TogglePriorityOfAConversationRequest.Priority.urgent,
         )
 
         try
         {
             ConversationsApi().togglePriorityOfAConversation(
-                accountId = null,
-                conversationId = null,
+                accountId = 0,
+                conversationId = 0,
                 _data = togglePriorityOfAConversationRequest,
             )
         } catch (e: ClientException) {

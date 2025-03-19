@@ -19,19 +19,18 @@ public class UpdateAWebhookExample
     public static void main(String[] args)
     {
         var config = Configuration.getDefaultApiClient();
-        config.setApiKey("USER_API_KEY");
-        // config.setApiKey("AGENT_BOT_API_KEY");
-        // config.setApiKey("PLATFORM_APP_API_KEY");
+        ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
+        // ((ApiKeyAuth) config.getAuthentication("agentBotApiKey")).setApiKey("AGENT_BOT_API_KEY");
+        // ((ApiKeyAuth) config.getAuthentication("platformAppApiKey")).setApiKey("PLATFORM_APP_API_KEY");
 
         var webhookCreateUpdatePayload = new WebhookCreateUpdatePayload();
-        webhookCreateUpdatePayload.url(null);
         webhookCreateUpdatePayload.subscriptions(List.of ());
 
         try
         {
             var response = new WebhooksApi(config).updateAWebhook(
-                null, // accountId
-                null, // webhookId
+                0, // accountId
+                0, // webhookId
                 webhookCreateUpdatePayload // data
             );
 

@@ -8,9 +8,9 @@ use SplFileObject;
 use Chatwoot;
 
 $config = Chatwoot\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("userApiKey", "USER_API_KEY");
-// $config->setApiKey("agentBotApiKey", "AGENT_BOT_API_KEY");
-// $config->setApiKey("platformAppApiKey", "PLATFORM_APP_API_KEY");
+$config->setApiKey("api_access_token", "USER_API_KEY");
+// $config->setApiKey("api_access_token", "AGENT_BOT_API_KEY");
+// $config->setApiKey("api_access_token", "PLATFORM_APP_API_KEY");
 
 $conversation_add_labels_request = (new Chatwoot\Client\Model\ConversationAddLabelsRequest())
     ->setLabels([
@@ -18,8 +18,8 @@ $conversation_add_labels_request = (new Chatwoot\Client\Model\ConversationAddLab
 
 try {
     $response = (new Chatwoot\Client\Api\ConversationLabelsApi(config: $config))->conversationAddLabels(
-        account_id: null,
-        conversation_id: null,
+        account_id: 0,
+        conversation_id: 0,
         data: conversation_add_labels_request,
     );
 

@@ -6,21 +6,24 @@ const apiCaller = new api.MessagesApi();
 apiCaller.setApiKey(api.MessagesApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.MessagesApiApiKeys.agentBotApiKey, "AGENT_BOT_API_KEY");
 
-const templateParams = new models.ConversationMessageCreateTemplateParams();
-templateParams.name = "sample_issue_resolution";
-templateParams.category = "UTILITY";
-templateParams.language = "en_US";
+const templateParams: models.ConversationMessageCreateTemplateParams = {
+  name: "sample_issue_resolution",
+  category: "UTILITY",
+  language: "en_US",
+  processedParams: {
+    "1": "Chatwoot"
+  },
+};
 
-const conversationMessageCreate = new models.ConversationMessageCreate();
-conversationMessageCreate.content = undefined;
-conversationMessageCreate.messageType = undefined;
-conversationMessageCreate._private = undefined;
-conversationMessageCreate.contentType = models.ConversationMessageCreate.ContentTypeEnum.Cards;
-conversationMessageCreate.templateParams = templateParams;
+const conversationMessageCreate: models.ConversationMessageCreate = {
+  content: "content_string",
+  contentType: models.ConversationMessageCreate.ContentTypeEnum.Cards,
+  templateParams: templateParams,
+};
 
 apiCaller.createANewMessageInAConversation(
-  undefined, // accountId
-  undefined, // conversationId
+  0, // accountId
+  0, // conversationId
   conversationMessageCreate, // data
 ).then(response => {
   console.log(response.body);

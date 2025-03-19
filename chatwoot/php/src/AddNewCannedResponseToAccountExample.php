@@ -8,7 +8,7 @@ use SplFileObject;
 use Chatwoot;
 
 $config = Chatwoot\Client\Configuration::getDefaultConfiguration();
-$config->setApiKey("userApiKey", "USER_API_KEY");
+$config->setApiKey("api_access_token", "USER_API_KEY");
 
 $canned_response_create_update_payload = (new Chatwoot\Client\Model\CannedResponseCreateUpdatePayload())
     ->setContent(null)
@@ -16,7 +16,7 @@ $canned_response_create_update_payload = (new Chatwoot\Client\Model\CannedRespon
 
 try {
     $response = (new Chatwoot\Client\Api\CannedResponsesApi(config: $config))->addNewCannedResponseToAccount(
-        account_id: null,
+        account_id: 0,
         data: canned_response_create_update_payload,
     );
 

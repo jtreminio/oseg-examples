@@ -5,10 +5,8 @@ import models from "chatwoot_client"
 const apiCaller = new api.UsersApi();
 apiCaller.setApiKey(api.UsersApiApiKeys.platformAppApiKey, "PLATFORM_APP_API_KEY");
 
-const userCreateUpdatePayload = new models.UserCreateUpdatePayload();
-userCreateUpdatePayload.name = undefined;
-userCreateUpdatePayload.email = undefined;
-userCreateUpdatePayload.password = undefined;
+const userCreateUpdatePayload: models.UserCreateUpdatePayload = {
+};
 
 apiCaller.createAUser(
   userCreateUpdatePayload, // data

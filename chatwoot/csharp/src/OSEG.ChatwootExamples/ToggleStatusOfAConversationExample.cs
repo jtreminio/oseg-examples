@@ -14,18 +14,18 @@ public class ToggleStatusOfAConversationExample
     public static void Run()
     {
         var config = new Configuration();
-        config.ApiKey = new Dictionary<string, string> {["userApiKey"] = "USER_API_KEY"};
-        // config.ApiKey = new Dictionary<string, string> {["agentBotApiKey"] = "AGENT_BOT_API_KEY"};
+        config.ApiKey.Add("api_access_token", "USER_API_KEY");
+        // config.ApiKey.Add("api_access_token", "AGENT_BOT_API_KEY");
 
         var toggleStatusOfAConversationRequest = new ToggleStatusOfAConversationRequest(
-            status: null
+            status: ToggleStatusOfAConversationRequest.StatusEnum.Open
         );
 
         try
         {
             var response = new ConversationsApi(config).ToggleStatusOfAConversation(
-                accountId: null,
-                conversationId: null,
+                accountId: 0,
+                conversationId: 0,
                 data: toggleStatusOfAConversationRequest
             );
 

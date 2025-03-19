@@ -11,15 +11,13 @@ configuration = Configuration(
 
 with ApiClient(configuration) as api_client:
     assign_a_conversation_request = models.AssignAConversationRequest(
-        assignee_id=None,
-        team_id=None,
     )
 
     try:
         response = api.ConversationAssignmentApi(api_client).assign_a_conversation(
-            account_id=None,
-            conversation_id=None,
-            assign_a_conversation_request=assign_a_conversation_request,
+            account_id=0,
+            conversation_id=0,
+            data=assign_a_conversation_request,
         )
 
         pprint(response)
