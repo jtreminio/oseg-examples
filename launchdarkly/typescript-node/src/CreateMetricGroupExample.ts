@@ -5,24 +5,26 @@ import models from "launchdarkly_client"
 const apiCaller = new api.MetricsBetaApi();
 apiCaller.setApiKey(api.MetricsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const metrics1 = new models.MetricInMetricGroupInput();
-metrics1.key = "metric-key-123abc";
-metrics1.nameInGroup = "Step 1";
+const metrics1: models.MetricInMetricGroupInput = {
+  key: "metric-key-123abc",
+  nameInGroup: "Step 1",
+};
 
 const metrics = [
   metrics1,
 ];
 
-const metricGroupPost = new models.MetricGroupPost();
-metricGroupPost.key = "metric-group-key-123abc";
-metricGroupPost.name = "My metric group";
-metricGroupPost.kind = models.MetricGroupPost.KindEnum.Funnel;
-metricGroupPost.maintainerId = "569fdeadbeef1644facecafe";
-metricGroupPost.tags = [
-  "ops",
-];
-metricGroupPost.description = "Description of the metric group";
-metricGroupPost.metrics = metrics;
+const metricGroupPost: models.MetricGroupPost = {
+  key: "metric-group-key-123abc",
+  name: "My metric group",
+  kind: models.MetricGroupPost.KindEnum.Funnel,
+  maintainerId: "569fdeadbeef1644facecafe",
+  tags: [
+    "ops",
+  ],
+  description: "Description of the metric group",
+  metrics: metrics,
+};
 
 apiCaller.createMetricGroup(
   "projectKey_string", // projectKey

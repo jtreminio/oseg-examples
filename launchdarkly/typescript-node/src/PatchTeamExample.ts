@@ -5,14 +5,15 @@ import models from "launchdarkly_client"
 const apiCaller = new api.TeamsApi();
 apiCaller.setApiKey(api.TeamsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const teamPatchInput = new models.TeamPatchInput();
-teamPatchInput.instructions = [
-  {
-    "kind": "updateDescription",
-    "value": "New description for the team"
-  }
-];
-teamPatchInput.comment = "Optional comment about the update";
+const teamPatchInput: models.TeamPatchInput = {
+  instructions: [
+    {
+      "kind": "updateDescription",
+      "value": "New description for the team"
+    }
+  ],
+  comment: "Optional comment about the update",
+};
 
 apiCaller.patchTeam(
   "teamKey_string", // teamKey

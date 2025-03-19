@@ -5,20 +5,22 @@ import models from "launchdarkly_client"
 const apiCaller = new api.SegmentsApi();
 apiCaller.setApiKey(api.SegmentsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const instructions1 = new models.PatchSegmentInstruction();
-instructions1.kind = models.PatchSegmentInstruction.KindEnum.AddExpireUserTargetDate;
-instructions1.userKey = "sample-user-key";
-instructions1.targetType = models.PatchSegmentInstruction.TargetTypeEnum.Included;
-instructions1.value = 16534692;
-instructions1.version = 0;
+const instructions1: models.PatchSegmentInstruction = {
+  kind: models.PatchSegmentInstruction.KindEnum.AddExpireUserTargetDate,
+  userKey: "sample-user-key",
+  targetType: models.PatchSegmentInstruction.TargetTypeEnum.Included,
+  value: 16534692,
+  version: 0,
+};
 
 const instructions = [
   instructions1,
 ];
 
-const patchSegmentRequest = new models.PatchSegmentRequest();
-patchSegmentRequest.comment = "optional comment";
-patchSegmentRequest.instructions = instructions;
+const patchSegmentRequest: models.PatchSegmentRequest = {
+  comment: "optional comment",
+  instructions: instructions,
+};
 
 apiCaller.patchExpiringUserTargetsForSegment(
   "the-project-key", // projectKey

@@ -5,18 +5,19 @@ import models from "launchdarkly_client"
 const apiCaller = new api.AIConfigsBetaApi();
 apiCaller.setApiKey(api.AIConfigsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const modelConfigPost = new models.ModelConfigPost();
-modelConfigPost.id = "id";
-modelConfigPost.key = "key";
-modelConfigPost.name = "name";
-modelConfigPost.icon = "icon";
-modelConfigPost.provider = "provider";
-modelConfigPost.tags = [
-  "tags",
-  "tags",
-];
-modelConfigPost.params = {};
-modelConfigPost.customParams = {};
+const modelConfigPost: models.ModelConfigPost = {
+  id: "id",
+  key: "key",
+  name: "name",
+  icon: "icon",
+  provider: "provider",
+  tags: [
+    "tags",
+    "tags",
+  ],
+  params: {},
+  customParams: {},
+};
 
 apiCaller.postModelConfig(
   models.ModelConfigPost.LDAPIVersionEnum.Beta, // lDAPIVersion

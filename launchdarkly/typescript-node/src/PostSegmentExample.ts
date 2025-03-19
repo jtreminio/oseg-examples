@@ -5,15 +5,16 @@ import models from "launchdarkly_client"
 const apiCaller = new api.SegmentsApi();
 apiCaller.setApiKey(api.SegmentsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const segmentBody = new models.SegmentBody();
-segmentBody.name = "Example segment";
-segmentBody.key = "segment-key-123abc";
-segmentBody.description = "Bundle our sample customers together";
-segmentBody.unbounded = false;
-segmentBody.unboundedContextKind = "device";
-segmentBody.tags = [
-  "testing",
-];
+const segmentBody: models.SegmentBody = {
+  name: "Example segment",
+  key: "segment-key-123abc",
+  description: "Bundle our sample customers together",
+  unbounded: false,
+  unboundedContextKind: "device",
+  tags: [
+    "testing",
+  ],
+};
 
 apiCaller.postSegment(
   "projectKey_string", // projectKey

@@ -5,29 +5,31 @@ import models from "launchdarkly_client"
 const apiCaller = new api.HoldoutsBetaApi();
 apiCaller.setApiKey(api.HoldoutsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const metrics1 = new models.MetricInput();
-metrics1.key = "metric-key-123abc";
-metrics1.isGroup = true;
-metrics1.primary = true;
+const metrics1: models.MetricInput = {
+  key: "metric-key-123abc",
+  isGroup: true,
+  primary: true,
+};
 
 const metrics = [
   metrics1,
 ];
 
-const holdoutPostRequest = new models.HoldoutPostRequest();
-holdoutPostRequest.name = "holdout-one-name";
-holdoutPostRequest.key = "holdout-key";
-holdoutPostRequest.description = "My holdout-one description";
-holdoutPostRequest.randomizationunit = "user";
-holdoutPostRequest.holdoutamount = "10";
-holdoutPostRequest.primarymetrickey = "metric-key-123abc";
-holdoutPostRequest.prerequisiteflagkey = "flag-key-123abc";
-holdoutPostRequest.attributes = [
-  "country",
-  "device",
-  "os",
-];
-holdoutPostRequest.metrics = metrics;
+const holdoutPostRequest: models.HoldoutPostRequest = {
+  name: "holdout-one-name",
+  key: "holdout-key",
+  description: "My holdout-one description",
+  randomizationunit: "user",
+  holdoutamount: "10",
+  primarymetrickey: "metric-key-123abc",
+  prerequisiteflagkey: "flag-key-123abc",
+  attributes: [
+    "country",
+    "device",
+    "os",
+  ],
+  metrics: metrics,
+};
 
 apiCaller.postHoldout(
   "projectKey_string", // projectKey

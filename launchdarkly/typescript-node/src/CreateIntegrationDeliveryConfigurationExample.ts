@@ -5,16 +5,17 @@ import models from "launchdarkly_client"
 const apiCaller = new api.IntegrationDeliveryConfigurationsBetaApi();
 apiCaller.setApiKey(api.IntegrationDeliveryConfigurationsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const integrationDeliveryConfigurationPost = new models.IntegrationDeliveryConfigurationPost();
-integrationDeliveryConfigurationPost.config = {
-  "optional": "example value for optional formVariables property for sample-integration",
-  "required": "example value for required formVariables property for sample-integration"
+const integrationDeliveryConfigurationPost: models.IntegrationDeliveryConfigurationPost = {
+  config: {
+    "optional": "example value for optional formVariables property for sample-integration",
+    "required": "example value for required formVariables property for sample-integration"
+  },
+  on: false,
+  name: "Sample integration",
+  tags: [
+    "example-tag",
+  ],
 };
-integrationDeliveryConfigurationPost.on = false;
-integrationDeliveryConfigurationPost.name = "Sample integration";
-integrationDeliveryConfigurationPost.tags = [
-  "example-tag",
-];
 
 apiCaller.createIntegrationDeliveryConfiguration(
   "projectKey_string", // projectKey

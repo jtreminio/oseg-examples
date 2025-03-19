@@ -5,23 +5,26 @@ import models from "namsor_client"
 const apiCaller = new api.PersonalApi();
 apiCaller.setApiKey(api.PersonalApiApiKeys.api_key, "YOUR_API_KEY");
 
-const personalNames1 = new models.PersonalNameGeoIn();
-personalNames1.id = "id";
-personalNames1.name = "name";
-personalNames1.countryIso2 = "countryIso2";
+const personalNames1: models.PersonalNameGeoIn = {
+  id: "id",
+  name: "name",
+  countryIso2: "countryIso2",
+};
 
-const personalNames2 = new models.PersonalNameGeoIn();
-personalNames2.id = "id";
-personalNames2.name = "name";
-personalNames2.countryIso2 = "countryIso2";
+const personalNames2: models.PersonalNameGeoIn = {
+  id: "id",
+  name: "name",
+  countryIso2: "countryIso2",
+};
 
 const personalNames = [
   personalNames1,
   personalNames2,
 ];
 
-const batchPersonalNameGeoIn = new models.BatchPersonalNameGeoIn();
-batchPersonalNameGeoIn.personalNames = personalNames;
+const batchPersonalNameGeoIn: models.BatchPersonalNameGeoIn = {
+  personalNames: personalNames,
+};
 
 apiCaller.communityEngageFullBatch(
   batchPersonalNameGeoIn,

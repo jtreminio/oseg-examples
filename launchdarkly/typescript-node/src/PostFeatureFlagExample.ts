@@ -5,14 +5,16 @@ import models from "launchdarkly_client"
 const apiCaller = new api.FeatureFlagsApi();
 apiCaller.setApiKey(api.FeatureFlagsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const clientSideAvailability = new models.ClientSideAvailabilityPost();
-clientSideAvailability.usingEnvironmentId = true;
-clientSideAvailability.usingMobileKey = true;
+const clientSideAvailability: models.ClientSideAvailabilityPost = {
+  usingEnvironmentId: true,
+  usingMobileKey: true,
+};
 
-const featureFlagBody = new models.FeatureFlagBody();
-featureFlagBody.name = "My Flag";
-featureFlagBody.key = "flag-key-123abc";
-featureFlagBody.clientSideAvailability = clientSideAvailability;
+const featureFlagBody: models.FeatureFlagBody = {
+  name: "My Flag",
+  key: "flag-key-123abc",
+  clientSideAvailability: clientSideAvailability,
+};
 
 apiCaller.postFeatureFlag(
   "projectKey_string", // projectKey

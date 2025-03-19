@@ -5,16 +5,18 @@ import models from "launchdarkly_client"
 const apiCaller = new api.RelayProxyConfigurationsApi();
 apiCaller.setApiKey(api.RelayProxyConfigurationsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const patch1 = new models.PatchOperation();
-patch1.op = "replace";
-patch1.path = "/policy/0";
+const patch1: models.PatchOperation = {
+  op: "replace",
+  path: "/policy/0",
+};
 
 const patch = [
   patch1,
 ];
 
-const patchWithComment = new models.PatchWithComment();
-patchWithComment.patch = patch;
+const patchWithComment: models.PatchWithComment = {
+  patch: patch,
+};
 
 apiCaller.patchRelayAutoConfig(
   "id_string", // id

@@ -5,11 +5,12 @@ import models from "launchdarkly_client"
 const apiCaller = new api.ContextsApi();
 apiCaller.setApiKey(api.ContextsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const contextSearch = new models.ContextSearch();
-contextSearch.filter = "*.name startsWith Jo,kind anyOf [\"user\",\"organization\"]";
-contextSearch.sort = "-ts";
-contextSearch.limit = 10;
-contextSearch.continuationToken = "QAGFKH1313KUGI2351";
+const contextSearch: models.ContextSearch = {
+  filter: "*.name startsWith Jo,kind anyOf [\"user\",\"organization\"]",
+  sort: "-ts",
+  limit: 10,
+  continuationToken: "QAGFKH1313KUGI2351",
+};
 
 apiCaller.searchContexts(
   "projectKey_string", // projectKey

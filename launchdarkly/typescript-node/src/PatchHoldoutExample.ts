@@ -5,14 +5,15 @@ import models from "launchdarkly_client"
 const apiCaller = new api.HoldoutsBetaApi();
 apiCaller.setApiKey(api.HoldoutsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const holdoutPatchInput = new models.HoldoutPatchInput();
-holdoutPatchInput.instructions = [
-  {
-    "kind": "updateName",
-    "value": "Updated holdout name"
-  }
-];
-holdoutPatchInput.comment = "Optional comment describing the update";
+const holdoutPatchInput: models.HoldoutPatchInput = {
+  instructions: [
+    {
+      "kind": "updateName",
+      "value": "Updated holdout name"
+    }
+  ],
+  comment: "Optional comment describing the update",
+};
 
 apiCaller.patchHoldout(
   "projectKey_string", // projectKey

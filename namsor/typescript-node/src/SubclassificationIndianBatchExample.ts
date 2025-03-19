@@ -5,17 +5,19 @@ import models from "namsor_client"
 const apiCaller = new api.IndianApi();
 apiCaller.setApiKey(api.IndianApiApiKeys.api_key, "YOUR_API_KEY");
 
-const personalNames1 = new models.FirstLastNameGeoIn();
-personalNames1.id = "e630dda5-13b3-42c5-8f1d-648aa8a21c42";
-personalNames1.firstName = "Jannat";
-personalNames1.lastName = "Rahmani";
+const personalNames1: models.FirstLastNameGeoIn = {
+  id: "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+  firstName: "Jannat",
+  lastName: "Rahmani",
+};
 
 const personalNames = [
   personalNames1,
 ];
 
-const batchFirstLastNameGeoIn = new models.BatchFirstLastNameGeoIn();
-batchFirstLastNameGeoIn.personalNames = personalNames;
+const batchFirstLastNameGeoIn: models.BatchFirstLastNameGeoIn = {
+  personalNames: personalNames,
+};
 
 apiCaller.subclassificationIndianBatch(
   batchFirstLastNameGeoIn,

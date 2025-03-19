@@ -5,8 +5,9 @@ import models from "launchdarkly_client"
 const apiCaller = new api.DataExportDestinationsApi();
 apiCaller.setApiKey(api.DataExportDestinationsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const destinationPost = new models.DestinationPost();
-destinationPost.kind = models.DestinationPost.KindEnum.GooglePubsub;
+const destinationPost: models.DestinationPost = {
+  kind: models.DestinationPost.KindEnum.GooglePubsub,
+};
 
 apiCaller.postDestination(
   "projectKey_string", // projectKey

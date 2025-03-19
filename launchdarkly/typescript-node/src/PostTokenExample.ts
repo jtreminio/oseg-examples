@@ -5,8 +5,9 @@ import models from "launchdarkly_client"
 const apiCaller = new api.AccessTokensApi();
 apiCaller.setApiKey(api.AccessTokensApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const accessTokenPost = new models.AccessTokenPost();
-accessTokenPost.role = models.AccessTokenPost.RoleEnum.Reader;
+const accessTokenPost: models.AccessTokenPost = {
+  role: models.AccessTokenPost.RoleEnum.Reader,
+};
 
 apiCaller.postToken(
   accessTokenPost,

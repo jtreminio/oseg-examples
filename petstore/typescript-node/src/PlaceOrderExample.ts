@@ -6,13 +6,14 @@ const apiCaller = new api.StoreApi();
 apiCaller.accessToken = "YOUR_ACCESS_TOKEN";
 // apiCaller.setApiKey(api.StoreApiApiKeys.api_key, "YOUR_API_KEY");
 
-const order = new models.Order();
-order.id = 12345;
-order.petId = 98765;
-order.quantity = 5;
-order.shipDate = new Date("2025-01-01T17:32:28Z");
-order.status = models.Order.StatusEnum.Approved;
-order.complete = false;
+const order: models.Order = {
+  id: 12345,
+  petId: 98765,
+  quantity: 5,
+  shipDate: new Date("2025-01-01T17:32:28Z"),
+  status: models.Order.StatusEnum.Approved,
+  complete: false,
+};
 
 apiCaller.placeOrder(
   order,

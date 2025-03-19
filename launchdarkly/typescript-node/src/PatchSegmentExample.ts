@@ -5,21 +5,24 @@ import models from "launchdarkly_client"
 const apiCaller = new api.SegmentsApi();
 apiCaller.setApiKey(api.SegmentsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const patch1 = new models.PatchOperation();
-patch1.op = "replace";
-patch1.path = "/description";
+const patch1: models.PatchOperation = {
+  op: "replace",
+  path: "/description",
+};
 
-const patch2 = new models.PatchOperation();
-patch2.op = "add";
-patch2.path = "/tags/0";
+const patch2: models.PatchOperation = {
+  op: "add",
+  path: "/tags/0",
+};
 
 const patch = [
   patch1,
   patch2,
 ];
 
-const patchWithComment = new models.PatchWithComment();
-patchWithComment.patch = patch;
+const patchWithComment: models.PatchWithComment = {
+  patch: patch,
+};
 
 apiCaller.patchSegment(
   "projectKey_string", // projectKey

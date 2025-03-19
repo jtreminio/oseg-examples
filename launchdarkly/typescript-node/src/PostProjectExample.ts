@@ -5,9 +5,10 @@ import models from "launchdarkly_client"
 const apiCaller = new api.ProjectsApi();
 apiCaller.setApiKey(api.ProjectsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const projectPost = new models.ProjectPost();
-projectPost.name = "My Project";
-projectPost.key = "project-key-123abc";
+const projectPost: models.ProjectPost = {
+  name: "My Project",
+  key: "project-key-123abc",
+};
 
 apiCaller.postProject(
   projectPost,

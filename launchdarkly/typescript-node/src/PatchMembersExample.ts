@@ -5,18 +5,19 @@ import models from "launchdarkly_client"
 const apiCaller = new api.AccountMembersBetaApi();
 apiCaller.setApiKey(api.AccountMembersBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const membersPatchInput = new models.MembersPatchInput();
-membersPatchInput.instructions = [
-  {
-    "kind": "replaceMembersRoles",
-    "memberIDs": [
-      "1234a56b7c89d012345e678f",
-      "507f1f77bcf86cd799439011"
-    ],
-    "value": "reader"
-  }
-];
-membersPatchInput.comment = "Optional comment about the update";
+const membersPatchInput: models.MembersPatchInput = {
+  instructions: [
+    {
+      "kind": "replaceMembersRoles",
+      "memberIDs": [
+        "1234a56b7c89d012345e678f",
+        "507f1f77bcf86cd799439011"
+      ],
+      "value": "reader"
+    }
+  ],
+  comment: "Optional comment about the update",
+};
 
 apiCaller.patchMembers(
   membersPatchInput,

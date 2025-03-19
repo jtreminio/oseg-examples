@@ -5,11 +5,12 @@ import models from "launchdarkly_client"
 const apiCaller = new api.AccountMembersApi();
 apiCaller.setApiKey(api.AccountMembersApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const memberTeamsPostInput = new models.MemberTeamsPostInput();
-memberTeamsPostInput.teamKeys = [
-  "team1",
-  "team2",
-];
+const memberTeamsPostInput: models.MemberTeamsPostInput = {
+  teamKeys: [
+    "team1",
+    "team2",
+  ],
+};
 
 apiCaller.postMemberTeams(
   "id_string", // id

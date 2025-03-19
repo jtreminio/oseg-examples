@@ -5,9 +5,10 @@ import models from "launchdarkly_client"
 const apiCaller = new api.ReleasesBetaApi();
 apiCaller.setApiKey(api.ReleasesBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const patchOperation1 = new models.PatchOperation();
-patchOperation1.op = "replace";
-patchOperation1.path = "/phases/0/complete";
+const patchOperation1: models.PatchOperation = {
+  op: "replace",
+  path: "/phases/0/complete",
+};
 
 const patchOperation = [
   patchOperation1,

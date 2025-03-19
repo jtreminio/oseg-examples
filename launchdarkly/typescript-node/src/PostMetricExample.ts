@@ -5,12 +5,13 @@ import models from "launchdarkly_client"
 const apiCaller = new api.MetricsApi();
 apiCaller.setApiKey(api.MetricsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const metricPost = new models.MetricPost();
-metricPost.key = "metric-key-123abc";
-metricPost.kind = models.MetricPost.KindEnum.Custom;
-metricPost.isActive = true;
-metricPost.isNumeric = false;
-metricPost.eventKey = "trackedClick";
+const metricPost: models.MetricPost = {
+  key: "metric-key-123abc",
+  kind: models.MetricPost.KindEnum.Custom,
+  isActive: true,
+  isNumeric: false,
+  eventKey: "trackedClick",
+};
 
 apiCaller.postMetric(
   "projectKey_string", // projectKey

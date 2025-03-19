@@ -5,31 +5,33 @@ import models from "launchdarkly_client"
 const apiCaller = new api.IntegrationAuditLogSubscriptionsApi();
 apiCaller.setApiKey(api.IntegrationAuditLogSubscriptionsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const statements1 = new models.StatementPost();
-statements1.effect = models.StatementPost.EffectEnum.Allow;
-statements1.resources = [
-  "proj/*:env/*:flag/*;testing-tag",
-];
-statements1.actions = [
-  "*",
-];
+const statements1: models.StatementPost = {
+  effect: models.StatementPost.EffectEnum.Allow,
+  resources: [
+    "proj/*:env/*:flag/*;testing-tag",
+  ],
+  actions: [
+    "*",
+  ],
+};
 
 const statements = [
   statements1,
 ];
 
-const subscriptionPost = new models.SubscriptionPost();
-subscriptionPost.name = "Example audit log subscription.";
-subscriptionPost.config = {
-  "optional": "an optional property",
-  "required": "the required property",
-  "url": "https://example.com"
+const subscriptionPost: models.SubscriptionPost = {
+  name: "Example audit log subscription.",
+  config: {
+    "optional": "an optional property",
+    "required": "the required property",
+    "url": "https://example.com"
+  },
+  on: false,
+  tags: [
+    "testing-tag",
+  ],
+  statements: statements,
 };
-subscriptionPost.on = false;
-subscriptionPost.tags = [
-  "testing-tag",
-];
-subscriptionPost.statements = statements;
 
 apiCaller.createSubscription(
   "integrationKey_string", // integrationKey

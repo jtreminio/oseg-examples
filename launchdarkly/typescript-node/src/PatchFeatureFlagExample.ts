@@ -5,16 +5,18 @@ import models from "launchdarkly_client"
 const apiCaller = new api.FeatureFlagsApi();
 apiCaller.setApiKey(api.FeatureFlagsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const patch1 = new models.PatchOperation();
-patch1.op = "replace";
-patch1.path = "/description";
+const patch1: models.PatchOperation = {
+  op: "replace",
+  path: "/description",
+};
 
 const patch = [
   patch1,
 ];
 
-const patchWithComment = new models.PatchWithComment();
-patchWithComment.patch = patch;
+const patchWithComment: models.PatchWithComment = {
+  patch: patch,
+};
 
 apiCaller.patchFeatureFlag(
   "projectKey_string", // projectKey

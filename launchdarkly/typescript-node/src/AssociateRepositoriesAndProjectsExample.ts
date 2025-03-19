@@ -5,16 +5,18 @@ import models from "launchdarkly_client"
 const apiCaller = new api.InsightsRepositoriesBetaApi();
 apiCaller.setApiKey(api.InsightsRepositoriesBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const mappings1 = new models.InsightsRepositoryProject();
-mappings1.repositoryKey = "launchdarkly/LaunchDarkly-Docs";
-mappings1.projectKey = "default";
+const mappings1: models.InsightsRepositoryProject = {
+  repositoryKey: "launchdarkly/LaunchDarkly-Docs",
+  projectKey: "default",
+};
 
 const mappings = [
   mappings1,
 ];
 
-const insightsRepositoryProjectMappings = new models.InsightsRepositoryProjectMappings();
-insightsRepositoryProjectMappings.mappings = mappings;
+const insightsRepositoryProjectMappings: models.InsightsRepositoryProjectMappings = {
+  mappings: mappings,
+};
 
 apiCaller.associateRepositoriesAndProjects(
   insightsRepositoryProjectMappings,

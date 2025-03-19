@@ -5,16 +5,18 @@ import models from "namsor_client"
 const apiCaller = new api.JapaneseApi();
 apiCaller.setApiKey(api.JapaneseApiApiKeys.api_key, "YOUR_API_KEY");
 
-const personalNames1 = new models.PersonalNameIn();
-personalNames1.id = "e630dda5-13b3-42c5-8f1d-648aa8a21c42";
-personalNames1.name = "中松 義郎";
+const personalNames1: models.PersonalNameIn = {
+  id: "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+  name: "中松 義郎",
+};
 
 const personalNames = [
   personalNames1,
 ];
 
-const batchPersonalNameIn = new models.BatchPersonalNameIn();
-batchPersonalNameIn.personalNames = personalNames;
+const batchPersonalNameIn: models.BatchPersonalNameIn = {
+  personalNames: personalNames,
+};
 
 apiCaller.genderJapaneseNameFullBatch(
   batchPersonalNameIn,

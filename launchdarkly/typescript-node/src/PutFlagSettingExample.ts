@@ -5,8 +5,9 @@ import models from "launchdarkly_client"
 const apiCaller = new api.UserSettingsApi();
 apiCaller.setApiKey(api.UserSettingsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const valuePut = new models.ValuePut();
-valuePut.comment = "make sure this context experiences a specific variation";
+const valuePut: models.ValuePut = {
+  comment: "make sure this context experiences a specific variation",
+};
 
 apiCaller.putFlagSetting(
   "projectKey_string", // projectKey

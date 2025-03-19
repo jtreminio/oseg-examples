@@ -5,18 +5,21 @@ import models from "launchdarkly_client"
 const apiCaller = new api.FeatureFlagsApi();
 apiCaller.setApiKey(api.FeatureFlagsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const source = new models.FlagCopyConfigEnvironment();
-source.key = "source-env-key-123abc";
-source.currentVersion = 1;
+const source: models.FlagCopyConfigEnvironment = {
+  key: "source-env-key-123abc",
+  currentVersion: 1,
+};
 
-const target = new models.FlagCopyConfigEnvironment();
-target.key = "target-env-key-123abc";
-target.currentVersion = 1;
+const target: models.FlagCopyConfigEnvironment = {
+  key: "target-env-key-123abc",
+  currentVersion: 1,
+};
 
-const flagCopyConfigPost = new models.FlagCopyConfigPost();
-flagCopyConfigPost.comment = "optional comment";
-flagCopyConfigPost.source = source;
-flagCopyConfigPost.target = target;
+const flagCopyConfigPost: models.FlagCopyConfigPost = {
+  comment: "optional comment",
+  source: source,
+  target: target,
+};
 
 apiCaller.copyFeatureFlag(
   "projectKey_string", // projectKey

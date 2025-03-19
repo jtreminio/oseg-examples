@@ -5,17 +5,19 @@ import models from "namsor_client"
 const apiCaller = new api.PersonalApi();
 apiCaller.setApiKey(api.PersonalApiApiKeys.api_key, "YOUR_API_KEY");
 
-const personalNames1 = new models.FirstLastNameIn();
-personalNames1.id = "b590b04c-da23-4f2f-a334-aee384ee420a";
-personalNames1.firstName = "Keith";
-personalNames1.lastName = "Haring";
+const personalNames1: models.FirstLastNameIn = {
+  id: "b590b04c-da23-4f2f-a334-aee384ee420a",
+  firstName: "Keith",
+  lastName: "Haring",
+};
 
 const personalNames = [
   personalNames1,
 ];
 
-const batchFirstLastNameIn = new models.BatchFirstLastNameIn();
-batchFirstLastNameIn.personalNames = personalNames;
+const batchFirstLastNameIn: models.BatchFirstLastNameIn = {
+  personalNames: personalNames,
+};
 
 apiCaller.genderBatch(
   batchFirstLastNameIn,

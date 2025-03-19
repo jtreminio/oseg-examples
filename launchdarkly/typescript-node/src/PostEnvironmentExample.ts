@@ -5,10 +5,11 @@ import models from "launchdarkly_client"
 const apiCaller = new api.EnvironmentsApi();
 apiCaller.setApiKey(api.EnvironmentsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const environmentPost = new models.EnvironmentPost();
-environmentPost.name = "My Environment";
-environmentPost.key = "environment-key-123abc";
-environmentPost.color = "DADBEE";
+const environmentPost: models.EnvironmentPost = {
+  name: "My Environment",
+  key: "environment-key-123abc",
+  color: "DADBEE",
+};
 
 apiCaller.postEnvironment(
   "projectKey_string", // projectKey

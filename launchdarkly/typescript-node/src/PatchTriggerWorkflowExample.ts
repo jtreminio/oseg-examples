@@ -5,13 +5,14 @@ import models from "launchdarkly_client"
 const apiCaller = new api.FlagTriggersApi();
 apiCaller.setApiKey(api.FlagTriggersApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const flagTriggerInput = new models.FlagTriggerInput();
-flagTriggerInput.comment = "optional comment";
-flagTriggerInput.instructions = [
-  {
-    "kind": "disableTrigger"
-  }
-];
+const flagTriggerInput: models.FlagTriggerInput = {
+  comment: "optional comment",
+  instructions: [
+    {
+      "kind": "disableTrigger"
+    }
+  ],
+};
 
 apiCaller.patchTriggerWorkflow(
   "projectKey_string", // projectKey

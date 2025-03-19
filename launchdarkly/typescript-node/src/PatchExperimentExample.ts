@@ -5,14 +5,15 @@ import models from "launchdarkly_client"
 const apiCaller = new api.ExperimentsApi();
 apiCaller.setApiKey(api.ExperimentsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const experimentPatchInput = new models.ExperimentPatchInput();
-experimentPatchInput.instructions = [
-  {
-    "kind": "updateName",
-    "value": "Updated experiment name"
-  }
-];
-experimentPatchInput.comment = "Example comment describing the update";
+const experimentPatchInput: models.ExperimentPatchInput = {
+  instructions: [
+    {
+      "kind": "updateName",
+      "value": "Updated experiment name"
+    }
+  ],
+  comment: "Example comment describing the update",
+};
 
 apiCaller.patchExperiment(
   "projectKey_string", // projectKey

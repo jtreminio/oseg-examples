@@ -5,8 +5,9 @@ import models from "launchdarkly_client"
 const apiCaller = new api.FeatureFlagsApi();
 apiCaller.setApiKey(api.FeatureFlagsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const flagSempatch = new models.FlagSempatch();
-flagSempatch.instructions = [];
+const flagSempatch: models.FlagSempatch = {
+  instructions: [],
+};
 
 apiCaller.postMigrationSafetyIssues(
   "projectKey_string", // projectKey

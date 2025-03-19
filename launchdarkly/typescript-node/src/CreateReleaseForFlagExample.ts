@@ -5,8 +5,9 @@ import models from "launchdarkly_client"
 const apiCaller = new api.ReleasesBetaApi();
 apiCaller.setApiKey(api.ReleasesBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const createReleaseInput = new models.CreateReleaseInput();
-createReleaseInput.releasePipelineKey = "releasePipelineKey_string";
+const createReleaseInput: models.CreateReleaseInput = {
+  releasePipelineKey: "releasePipelineKey_string",
+};
 
 apiCaller.createReleaseForFlag(
   "projectKey_string", // projectKey

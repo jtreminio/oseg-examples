@@ -5,13 +5,14 @@ import models from "launchdarkly_client"
 const apiCaller = new api.CodeReferencesApi();
 apiCaller.setApiKey(api.CodeReferencesApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const repositoryPost = new models.RepositoryPost();
-repositoryPost.name = "LaunchDarkly-Docs";
-repositoryPost.sourceLink = "https://github.com/launchdarkly/LaunchDarkly-Docs";
-repositoryPost.commitUrlTemplate = "https://github.com/launchdarkly/LaunchDarkly-Docs/commit/${sha}";
-repositoryPost.hunkUrlTemplate = "https://github.com/launchdarkly/LaunchDarkly-Docs/blob/${sha}/${filePath}#L${lineNumber}";
-repositoryPost.type = models.RepositoryPost.TypeEnum.Github;
-repositoryPost.defaultBranch = "main";
+const repositoryPost: models.RepositoryPost = {
+  name: "LaunchDarkly-Docs",
+  sourceLink: "https://github.com/launchdarkly/LaunchDarkly-Docs",
+  commitUrlTemplate: "https://github.com/launchdarkly/LaunchDarkly-Docs/commit/${sha}",
+  hunkUrlTemplate: "https://github.com/launchdarkly/LaunchDarkly-Docs/blob/${sha}/${filePath}#L${lineNumber}",
+  type: models.RepositoryPost.TypeEnum.Github,
+  defaultBranch: "main",
+};
 
 apiCaller.postRepository(
   repositoryPost,

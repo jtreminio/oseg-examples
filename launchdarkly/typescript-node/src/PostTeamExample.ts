@@ -5,17 +5,18 @@ import models from "launchdarkly_client"
 const apiCaller = new api.TeamsApi();
 apiCaller.setApiKey(api.TeamsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const teamPostInput = new models.TeamPostInput();
-teamPostInput.key = "team-key-123abc";
-teamPostInput.name = "Example team";
-teamPostInput.description = "An example team";
-teamPostInput.customRoleKeys = [
-  "example-role1",
-  "example-role2",
-];
-teamPostInput.memberIDs = [
-  "12ab3c45de678910fgh12345",
-];
+const teamPostInput: models.TeamPostInput = {
+  key: "team-key-123abc",
+  name: "Example team",
+  description: "An example team",
+  customRoleKeys: [
+    "example-role1",
+    "example-role2",
+  ],
+  memberIDs: [
+    "12ab3c45de678910fgh12345",
+  ],
+};
 
 apiCaller.postTeam(
   teamPostInput,

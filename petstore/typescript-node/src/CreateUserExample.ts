@@ -5,15 +5,16 @@ import models from "openapi_client"
 const apiCaller = new api.UserApi();
 apiCaller.setApiKey(api.UserApiApiKeys.api_key, "YOUR_API_KEY");
 
-const user = new models.User();
-user.id = 12345;
-user.username = "my_user";
-user.firstName = "John";
-user.lastName = "Doe";
-user.email = "john@example.com";
-user.password = "secure_123";
-user.phone = "555-123-1234";
-user.userStatus = 1;
+const user: models.User = {
+  id: 12345,
+  username: "my_user",
+  firstName: "John",
+  lastName: "Doe",
+  email: "john@example.com",
+  password: "secure_123",
+  phone: "555-123-1234",
+  userStatus: 1,
+};
 
 apiCaller.createUser(
   user,

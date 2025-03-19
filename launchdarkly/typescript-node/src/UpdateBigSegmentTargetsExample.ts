@@ -5,21 +5,24 @@ import models from "launchdarkly_client"
 const apiCaller = new api.SegmentsApi();
 apiCaller.setApiKey(api.SegmentsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const included = new models.SegmentUserList();
-included.add = [
-];
-included.remove = [
-];
+const included: models.SegmentUserList = {
+  add: [
+  ],
+  remove: [
+  ],
+};
 
-const excluded = new models.SegmentUserList();
-excluded.add = [
-];
-excluded.remove = [
-];
+const excluded: models.SegmentUserList = {
+  add: [
+  ],
+  remove: [
+  ],
+};
 
-const segmentUserState = new models.SegmentUserState();
-segmentUserState.included = included;
-segmentUserState.excluded = excluded;
+const segmentUserState: models.SegmentUserState = {
+  included: included,
+  excluded: excluded,
+};
 
 apiCaller.updateBigSegmentTargets(
   "projectKey_string", // projectKey

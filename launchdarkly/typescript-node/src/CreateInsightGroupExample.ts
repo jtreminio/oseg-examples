@@ -5,15 +5,16 @@ import models from "launchdarkly_client"
 const apiCaller = new api.InsightsScoresBetaApi();
 apiCaller.setApiKey(api.InsightsScoresBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const postInsightGroupParams = new models.PostInsightGroupParams();
-postInsightGroupParams.name = "Production - All Apps";
-postInsightGroupParams.key = "default-production-all-apps";
-postInsightGroupParams.projectKey = "default";
-postInsightGroupParams.environmentKey = "production";
-postInsightGroupParams.applicationKeys = [
-  "billing-service",
-  "inventory-service",
-];
+const postInsightGroupParams: models.PostInsightGroupParams = {
+  name: "Production - All Apps",
+  key: "default-production-all-apps",
+  projectKey: "default",
+  environmentKey: "production",
+  applicationKeys: [
+    "billing-service",
+    "inventory-service",
+  ],
+};
 
 apiCaller.createInsightGroup(
   postInsightGroupParams,

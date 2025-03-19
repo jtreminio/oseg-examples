@@ -5,17 +5,19 @@ import models from "namsor_client"
 const apiCaller = new api.IndianApi();
 apiCaller.setApiKey(api.IndianApiApiKeys.api_key, "YOUR_API_KEY");
 
-const personalNames1 = new models.PersonalNameSubdivisionIn();
-personalNames1.id = "e630dda5-13b3-42c5-8f1d-648aa8a21c42";
-personalNames1.name = "Akash Sharma";
-personalNames1.subdivisionIso = "IN-UP";
+const personalNames1: models.PersonalNameSubdivisionIn = {
+  id: "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+  name: "Akash Sharma",
+  subdivisionIso: "IN-UP",
+};
 
 const personalNames = [
   personalNames1,
 ];
 
-const batchPersonalNameSubdivisionIn = new models.BatchPersonalNameSubdivisionIn();
-batchPersonalNameSubdivisionIn.personalNames = personalNames;
+const batchPersonalNameSubdivisionIn: models.BatchPersonalNameSubdivisionIn = {
+  personalNames: personalNames,
+};
 
 apiCaller.castegroupIndianFullBatch(
   batchPersonalNameSubdivisionIn,

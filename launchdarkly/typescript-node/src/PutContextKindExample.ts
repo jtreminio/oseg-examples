@@ -5,12 +5,13 @@ import models from "launchdarkly_client"
 const apiCaller = new api.ContextsApi();
 apiCaller.setApiKey(api.ContextsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const upsertContextKindPayload = new models.UpsertContextKindPayload();
-upsertContextKindPayload.name = "organization";
-upsertContextKindPayload.description = "An example context kind for organizations";
-upsertContextKindPayload.hideInTargeting = false;
-upsertContextKindPayload.archived = false;
-upsertContextKindPayload.version = 1;
+const upsertContextKindPayload: models.UpsertContextKindPayload = {
+  name: "organization",
+  description: "An example context kind for organizations",
+  hideInTargeting: false,
+  archived: false,
+  version: 1,
+};
 
 apiCaller.putContextKind(
   "projectKey_string", // projectKey

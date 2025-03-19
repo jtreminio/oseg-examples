@@ -5,25 +5,28 @@ import models from "launchdarkly_client"
 const apiCaller = new api.AIConfigsBetaApi();
 apiCaller.setApiKey(api.AIConfigsBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const messages1 = new models.Message();
-messages1.content = "content";
-messages1.role = "role";
+const messages1: models.Message = {
+  content: "content",
+  role: "role",
+};
 
-const messages2 = new models.Message();
-messages2.content = "content";
-messages2.role = "role";
+const messages2: models.Message = {
+  content: "content",
+  role: "role",
+};
 
 const messages = [
   messages1,
   messages2,
 ];
 
-const aIConfigVariationPatch = new models.AIConfigVariationPatch();
-aIConfigVariationPatch.modelConfigKey = "modelConfigKey";
-aIConfigVariationPatch.name = "name";
-aIConfigVariationPatch.published = true;
-aIConfigVariationPatch.model = {};
-aIConfigVariationPatch.messages = messages;
+const aIConfigVariationPatch: models.AIConfigVariationPatch = {
+  modelConfigKey: "modelConfigKey",
+  name: "name",
+  published: true,
+  model: {},
+  messages: messages,
+};
 
 apiCaller.patchAIConfigVariation(
   models.AIConfigVariationPatch.LDAPIVersionEnum.Beta, // lDAPIVersion

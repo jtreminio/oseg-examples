@@ -5,20 +5,21 @@ import models from "launchdarkly_client"
 const apiCaller = new api.AccountMembersApi();
 apiCaller.setApiKey(api.AccountMembersApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const newMemberForm1 = new models.NewMemberForm();
-newMemberForm1.email = "sandy@acme.com";
-newMemberForm1.password = "***";
-newMemberForm1.firstName = "Ariel";
-newMemberForm1.lastName = "Flores";
-newMemberForm1.role = models.NewMemberForm.RoleEnum.Reader;
-newMemberForm1.customRoles = [
-  "customRole1",
-  "customRole2",
-];
-newMemberForm1.teamKeys = [
-  "team-1",
-  "team-2",
-];
+const newMemberForm1: models.NewMemberForm = {
+  email: "sandy@acme.com",
+  password: "***",
+  firstName: "Ariel",
+  lastName: "Flores",
+  role: models.NewMemberForm.RoleEnum.Reader,
+  customRoles: [
+    "customRole1",
+    "customRole2",
+  ],
+  teamKeys: [
+    "team-1",
+    "team-2",
+  ],
+};
 
 const newMemberForm = [
   newMemberForm1,

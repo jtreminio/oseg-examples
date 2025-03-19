@@ -5,16 +5,18 @@ import models from "launchdarkly_client"
 const apiCaller = new api.CustomRolesApi();
 apiCaller.setApiKey(api.CustomRolesApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const patch1 = new models.PatchOperation();
-patch1.op = "add";
-patch1.path = "/policy/0";
+const patch1: models.PatchOperation = {
+  op: "add",
+  path: "/policy/0",
+};
 
 const patch = [
   patch1,
 ];
 
-const patchWithComment = new models.PatchWithComment();
-patchWithComment.patch = patch;
+const patchWithComment: models.PatchWithComment = {
+  patch: patch,
+};
 
 apiCaller.patchCustomRole(
   "customRoleKey_string", // customRoleKey

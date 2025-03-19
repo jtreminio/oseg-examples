@@ -5,22 +5,24 @@ import models from "launchdarkly_client"
 const apiCaller = new api.RelayProxyConfigurationsApi();
 apiCaller.setApiKey(api.RelayProxyConfigurationsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const policy1 = new models.Statement();
-policy1.effect = models.Statement.EffectEnum.Allow;
-policy1.resources = [
-  "proj/*:env/*",
-];
-policy1.actions = [
-  "*",
-];
+const policy1: models.Statement = {
+  effect: models.Statement.EffectEnum.Allow,
+  resources: [
+    "proj/*:env/*",
+  ],
+  actions: [
+    "*",
+  ],
+};
 
 const policy = [
   policy1,
 ];
 
-const relayAutoConfigPost = new models.RelayAutoConfigPost();
-relayAutoConfigPost.name = "Sample Relay Proxy config for all proj and env";
-relayAutoConfigPost.policy = policy;
+const relayAutoConfigPost: models.RelayAutoConfigPost = {
+  name: "Sample Relay Proxy config for all proj and env",
+  policy: policy,
+};
 
 apiCaller.postRelayAutoConfig(
   relayAutoConfigPost,

@@ -5,18 +5,20 @@ import models from "namsor_client"
 const apiCaller = new api.ChineseApi();
 apiCaller.setApiKey(api.ChineseApiApiKeys.api_key, "YOUR_API_KEY");
 
-const personalNames1 = new models.FirstLastNameGenderIn();
-personalNames1.id = "e630dda5-13b3-42c5-8f1d-648aa8a21c42";
-personalNames1.firstName = "LiYing";
-personalNames1.lastName = "Zhao";
-personalNames1.gender = "female";
+const personalNames1: models.FirstLastNameGenderIn = {
+  id: "e630dda5-13b3-42c5-8f1d-648aa8a21c42",
+  firstName: "LiYing",
+  lastName: "Zhao",
+  gender: "female",
+};
 
 const personalNames = [
   personalNames1,
 ];
 
-const batchFirstLastNameGenderIn = new models.BatchFirstLastNameGenderIn();
-batchFirstLastNameGenderIn.personalNames = personalNames;
+const batchFirstLastNameGenderIn: models.BatchFirstLastNameGenderIn = {
+  personalNames: personalNames,
+};
 
 apiCaller.chineseNameCandidatesGenderBatch(
   batchFirstLastNameGenderIn,

@@ -5,18 +5,19 @@ import models from "launchdarkly_client"
 const apiCaller = new api.AuditLogApi();
 apiCaller.setApiKey(api.AuditLogApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const statementPost1 = new models.StatementPost();
-statementPost1.effect = models.StatementPost.EffectEnum.Allow;
-statementPost1.resources = [
-  "proj/*:env/*:flag/*;testing-tag",
-];
-statementPost1.notResources = [
-];
-statementPost1.actions = [
-  "*",
-];
-statementPost1.notActions = [
-];
+const statementPost1: models.StatementPost = {
+  effect: models.StatementPost.EffectEnum.Allow,
+  resources: [
+    "proj/*:env/*:flag/*;testing-tag",
+  ],
+  notResources: [
+  ],
+  actions: [
+    "*",
+  ],
+  notActions: [
+  ],
+};
 
 const statementPost = [
   statementPost1,

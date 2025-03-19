@@ -5,9 +5,10 @@ import models from "launchdarkly_client"
 const apiCaller = new api.AccountMembersApi();
 apiCaller.setApiKey(api.AccountMembersApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const patchOperation1 = new models.PatchOperation();
-patchOperation1.op = "add";
-patchOperation1.path = "/role";
+const patchOperation1: models.PatchOperation = {
+  op: "add",
+  path: "/role",
+};
 
 const patchOperation = [
   patchOperation1,

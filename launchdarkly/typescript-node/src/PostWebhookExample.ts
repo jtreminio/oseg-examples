@@ -5,28 +5,30 @@ import models from "launchdarkly_client"
 const apiCaller = new api.WebhooksApi();
 apiCaller.setApiKey(api.WebhooksApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const statements1 = new models.StatementPost();
-statements1.effect = models.StatementPost.EffectEnum.Allow;
-statements1.resources = [
-  "proj/test",
-];
-statements1.actions = [
-  "*",
-];
+const statements1: models.StatementPost = {
+  effect: models.StatementPost.EffectEnum.Allow,
+  resources: [
+    "proj/test",
+  ],
+  actions: [
+    "*",
+  ],
+};
 
 const statements = [
   statements1,
 ];
 
-const webhookPost = new models.WebhookPost();
-webhookPost.url = "https://example.com";
-webhookPost.sign = false;
-webhookPost.on = true;
-webhookPost.name = "apidocs test webhook";
-webhookPost.tags = [
-  "example-tag",
-];
-webhookPost.statements = statements;
+const webhookPost: models.WebhookPost = {
+  url: "https://example.com",
+  sign: false,
+  on: true,
+  name: "apidocs test webhook",
+  tags: [
+    "example-tag",
+  ],
+  statements: statements,
+};
 
 apiCaller.postWebhook(
   webhookPost,

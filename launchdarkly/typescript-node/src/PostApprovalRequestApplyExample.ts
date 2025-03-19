@@ -5,8 +5,9 @@ import models from "launchdarkly_client"
 const apiCaller = new api.ApprovalsApi();
 apiCaller.setApiKey(api.ApprovalsApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const postApprovalRequestApplyRequest = new models.PostApprovalRequestApplyRequest();
-postApprovalRequestApplyRequest.comment = "Looks good, thanks for updating";
+const postApprovalRequestApplyRequest: models.PostApprovalRequestApplyRequest = {
+  comment: "Looks good, thanks for updating",
+};
 
 apiCaller.postApprovalRequestApply(
   "id_string", // id

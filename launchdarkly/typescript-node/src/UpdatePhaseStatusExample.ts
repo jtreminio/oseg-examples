@@ -5,27 +5,30 @@ import models from "launchdarkly_client"
 const apiCaller = new api.ReleasesBetaApi();
 apiCaller.setApiKey(api.ReleasesBetaApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const audiences1ReleaseGuardianConfiguration = new models.ReleaseGuardianConfigurationInput();
-audiences1ReleaseGuardianConfiguration.monitoringWindowMilliseconds = 60000;
-audiences1ReleaseGuardianConfiguration.rolloutWeight = 50;
-audiences1ReleaseGuardianConfiguration.rollbackOnRegression = true;
-audiences1ReleaseGuardianConfiguration.randomizationUnit = "user";
+const audiences1ReleaseGuardianConfiguration: models.ReleaseGuardianConfigurationInput = {
+  monitoringWindowMilliseconds: 60000,
+  rolloutWeight: 50,
+  rollbackOnRegression: true,
+  randomizationUnit: "user",
+};
 
-const audiences1 = new models.ReleaserAudienceConfigInput();
-audiences1.notifyMemberIds = [
-  "1234a56b7c89d012345e678f",
-];
-audiences1.notifyTeamKeys = [
-  "example-reviewer-team",
-];
-audiences1.releaseGuardianConfiguration = audiences1ReleaseGuardianConfiguration;
+const audiences1: models.ReleaserAudienceConfigInput = {
+  notifyMemberIds: [
+    "1234a56b7c89d012345e678f",
+  ],
+  notifyTeamKeys: [
+    "example-reviewer-team",
+  ],
+  releaseGuardianConfiguration: audiences1ReleaseGuardianConfiguration,
+};
 
 const audiences = [
   audiences1,
 ];
 
-const updatePhaseStatusInput = new models.UpdatePhaseStatusInput();
-updatePhaseStatusInput.audiences = audiences;
+const updatePhaseStatusInput: models.UpdatePhaseStatusInput = {
+  audiences: audiences,
+};
 
 apiCaller.updatePhaseStatus(
   "projectKey_string", // projectKey

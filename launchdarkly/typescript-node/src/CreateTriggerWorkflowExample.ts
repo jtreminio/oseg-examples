@@ -5,14 +5,15 @@ import models from "launchdarkly_client"
 const apiCaller = new api.FlagTriggersApi();
 apiCaller.setApiKey(api.FlagTriggersApiApiKeys.ApiKey, "YOUR_API_KEY");
 
-const triggerPost = new models.TriggerPost();
-triggerPost.integrationKey = "generic-trigger";
-triggerPost.comment = "example comment";
-triggerPost.instructions = [
-  {
-    "kind": "turnFlagOn"
-  }
-];
+const triggerPost: models.TriggerPost = {
+  integrationKey: "generic-trigger",
+  comment: "example comment",
+  instructions: [
+    {
+      "kind": "turnFlagOn"
+    }
+  ],
+};
 
 apiCaller.createTriggerWorkflow(
   "projectKey_string", // projectKey
