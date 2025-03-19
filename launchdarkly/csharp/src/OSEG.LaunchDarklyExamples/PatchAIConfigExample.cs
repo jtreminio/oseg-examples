@@ -28,7 +28,7 @@ public class PatchAIConfigExample
         try
         {
             var response = new AIConfigsBetaApi(config).PatchAIConfig(
-                lDAPIVersion: AIConfigPatch.LDAPIVersionEnum.Beta,
+                lDAPIVersion: "beta",
                 projectKey: "projectKey_string",
                 configKey: "configKey_string",
                 aIConfigPatch: aIConfigPatch

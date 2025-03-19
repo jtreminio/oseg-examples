@@ -15,7 +15,7 @@ const aIConfigPatch: models.AIConfigPatch = {
 };
 
 apiCaller.patchAIConfig(
-  models.AIConfigPatch.LDAPIVersionEnum.Beta, // lDAPIVersion
+  "beta", // lDAPIVersion
   "projectKey_string", // projectKey
   "configKey_string", // configKey
   aIConfigPatch,

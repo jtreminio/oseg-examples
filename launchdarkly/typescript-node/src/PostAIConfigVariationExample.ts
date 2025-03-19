@@ -29,7 +29,7 @@ const aIConfigVariationPost: models.AIConfigVariationPost = {
 };
 
 apiCaller.postAIConfigVariation(
-  models.AIConfigVariationPost.LDAPIVersionEnum.Beta, // lDAPIVersion
+  "beta", // lDAPIVersion
   "projectKey_string", // projectKey
   "configKey_string", // configKey
   aIConfigVariationPost,

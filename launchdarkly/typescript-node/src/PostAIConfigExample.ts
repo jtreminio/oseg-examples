@@ -16,7 +16,7 @@ const aIConfigPost: models.AIConfigPost = {
 };
 
 apiCaller.postAIConfig(
-  models.AIConfigPost.LDAPIVersionEnum.Beta, // lDAPIVersion
+  "beta", // lDAPIVersion
   "projectKey_string", // projectKey
   aIConfigPost,
 ).then(response => {

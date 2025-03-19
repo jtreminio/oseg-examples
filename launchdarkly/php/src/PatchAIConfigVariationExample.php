@@ -32,7 +32,7 @@ $ai_config_variation_patch = (new LaunchDarkly\Client\Model\AIConfigVariationPat
 
 try {
     $response = (new LaunchDarkly\Client\Api\AIConfigsBetaApi(config: $config))->patchAIConfigVariation(
-        ld_api_version: LaunchDarkly\Client\Model\AIConfigVariationPatch::LD_API_VERSION_BETA,
+        ld_api_version: "beta",
         project_key: "projectKey_string",
         config_key: "configKey_string",
         variation_key: "variationKey_string",

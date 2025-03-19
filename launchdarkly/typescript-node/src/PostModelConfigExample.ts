@@ -20,7 +20,7 @@ const modelConfigPost: models.ModelConfigPost = {
 };
 
 apiCaller.postModelConfig(
-  models.ModelConfigPost.LDAPIVersionEnum.Beta, // lDAPIVersion
+  "beta", // lDAPIVersion
   "default", // projectKey
   modelConfigPost,
 ).then(response => {

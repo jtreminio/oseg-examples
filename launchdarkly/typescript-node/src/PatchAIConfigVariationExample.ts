@@ -29,7 +29,7 @@ const aIConfigVariationPatch: models.AIConfigVariationPatch = {
 };
 
 apiCaller.patchAIConfigVariation(
-  models.AIConfigVariationPatch.LDAPIVersionEnum.Beta, // lDAPIVersion
+  "beta", // lDAPIVersion
   "projectKey_string", // projectKey
   "configKey_string", // configKey
   "variationKey_string", // variationKey

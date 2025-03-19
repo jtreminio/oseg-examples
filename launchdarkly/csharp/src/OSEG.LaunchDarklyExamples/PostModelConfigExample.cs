@@ -33,7 +33,7 @@ public class PostModelConfigExample
         try
         {
             var response = new AIConfigsBetaApi(config).PostModelConfig(
-                lDAPIVersion: ModelConfigPost.LDAPIVersionEnum.Beta,
+                lDAPIVersion: "beta",
                 projectKey: "default",
                 modelConfigPost: modelConfigPost
             );

@@ -32,7 +32,7 @@ public class PatchAIConfigExample
         try
         {
             var response = new AiConfigsBetaApi(config).patchAIConfig(
-                AIConfigPatch.LDAPIVersionEnum.BETA, // ldAPIVersion
+                "beta", // ldAPIVersion
                 "projectKey_string", // projectKey
                 "configKey_string", // configKey
                 aiConfigPatch
