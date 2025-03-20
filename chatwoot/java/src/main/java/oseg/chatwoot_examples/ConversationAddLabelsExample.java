@@ -23,15 +23,15 @@ public class ConversationAddLabelsExample
         // ((ApiKeyAuth) config.getAuthentication("agentBotApiKey")).setApiKey("AGENT_BOT_API_KEY");
         // ((ApiKeyAuth) config.getAuthentication("platformAppApiKey")).setApiKey("PLATFORM_APP_API_KEY");
 
-        var conversationAddLabelsRequest = new ConversationAddLabelsRequest();
-        conversationAddLabelsRequest.labels(List.of ());
+        var contactAddLabelsRequest = new ContactAddLabelsRequest();
+        contactAddLabelsRequest.labels(List.of ());
 
         try
         {
             var response = new ConversationLabelsApi(config).conversationAddLabels(
                 0, // accountId
                 0, // conversationId
-                conversationAddLabelsRequest // data
+                contactAddLabelsRequest // data
             );
 
             System.out.println(response);

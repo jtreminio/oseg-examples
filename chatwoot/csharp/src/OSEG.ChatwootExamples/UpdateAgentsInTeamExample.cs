@@ -16,7 +16,7 @@ public class UpdateAgentsInTeamExample
         var config = new Configuration();
         config.ApiKey.Add("api_access_token", "USER_API_KEY");
 
-        var updateAgentsInTeamRequest = new UpdateAgentsInTeamRequest(
+        var addNewAgentToTeamRequest = new AddNewAgentToTeamRequest(
             userIds: [
             ]
         );
@@ -26,7 +26,7 @@ public class UpdateAgentsInTeamExample
             var response = new TeamsApi(config).UpdateAgentsInTeam(
                 accountId: 0,
                 teamId: 0,
-                data: updateAgentsInTeamRequest
+                data: addNewAgentToTeamRequest
             );
 
             Console.WriteLine(response);

@@ -9,7 +9,7 @@ configuration = Configuration(
 )
 
 with ApiClient(configuration) as api_client:
-    update_agents_in_inbox_request = models.UpdateAgentsInInboxRequest(
+    add_new_agent_to_inbox_request = models.AddNewAgentToInboxRequest(
         inbox_id="inbox_id_string",
         user_ids=[
         ],
@@ -18,7 +18,7 @@ with ApiClient(configuration) as api_client:
     try:
         response = api.InboxesApi(api_client).update_agents_in_inbox(
             account_id=0,
-            data=update_agents_in_inbox_request,
+            data=add_new_agent_to_inbox_request,
         )
 
         pprint(response)

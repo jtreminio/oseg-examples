@@ -11,7 +11,7 @@ configuration = Configuration(
 )
 
 with ApiClient(configuration) as api_client:
-    conversation_add_labels_request = models.ConversationAddLabelsRequest(
+    contact_add_labels_request = models.ContactAddLabelsRequest(
         labels=[
         ],
     )
@@ -20,7 +20,7 @@ with ApiClient(configuration) as api_client:
         response = api.ConversationLabelsApi(api_client).conversation_add_labels(
             account_id=0,
             conversation_id=0,
-            data=conversation_add_labels_request,
+            data=contact_add_labels_request,
         )
 
         pprint(response)

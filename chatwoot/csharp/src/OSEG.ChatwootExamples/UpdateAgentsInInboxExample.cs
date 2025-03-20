@@ -16,7 +16,7 @@ public class UpdateAgentsInInboxExample
         var config = new Configuration();
         config.ApiKey.Add("api_access_token", "USER_API_KEY");
 
-        var updateAgentsInInboxRequest = new UpdateAgentsInInboxRequest(
+        var addNewAgentToInboxRequest = new AddNewAgentToInboxRequest(
             inboxId: "inbox_id_string",
             userIds: [
             ]
@@ -26,7 +26,7 @@ public class UpdateAgentsInInboxExample
         {
             var response = new InboxesApi(config).UpdateAgentsInInbox(
                 accountId: 0,
-                data: updateAgentsInInboxRequest
+                data: addNewAgentToInboxRequest
             );
 
             Console.WriteLine(response);

@@ -12,7 +12,7 @@ $config->setApiKey("api_access_token", "USER_API_KEY");
 // $config->setApiKey("api_access_token", "AGENT_BOT_API_KEY");
 // $config->setApiKey("api_access_token", "PLATFORM_APP_API_KEY");
 
-$conversation_add_labels_request = (new Chatwoot\Client\Model\ConversationAddLabelsRequest())
+$contact_add_labels_request = (new Chatwoot\Client\Model\ContactAddLabelsRequest())
     ->setLabels([
     ]);
 
@@ -20,7 +20,7 @@ try {
     $response = (new Chatwoot\Client\Api\ConversationLabelsApi(config: $config))->conversationAddLabels(
         account_id: 0,
         conversation_id: 0,
-        data: conversation_add_labels_request,
+        data: contact_add_labels_request,
     );
 
     print_r($response);

@@ -5,15 +5,15 @@ ChatwootClient.configure do |config|
     config.api_key["api_access_token"] = "USER_API_KEY"
 end
 
-update_agents_in_team_request = ChatwootClient::UpdateAgentsInTeamRequest.new
-update_agents_in_team_request.user_ids = [
+add_new_agent_to_team_request = ChatwootClient::AddNewAgentToTeamRequest.new
+add_new_agent_to_team_request.user_ids = [
 ]
 
 begin
     response = ChatwootClient::TeamsApi.new.update_agents_in_team(
         0, # account_id
         0, # team_id
-        update_agents_in_team_request, # data
+        add_new_agent_to_team_request, # data
     )
 
     p response

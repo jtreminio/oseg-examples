@@ -18,7 +18,7 @@ public class ConversationAddLabelsExample
         // config.ApiKey.Add("api_access_token", "AGENT_BOT_API_KEY");
         // config.ApiKey.Add("api_access_token", "PLATFORM_APP_API_KEY");
 
-        var conversationAddLabelsRequest = new ConversationAddLabelsRequest(
+        var contactAddLabelsRequest = new ContactAddLabelsRequest(
             labels: [
             ]
         );
@@ -28,7 +28,7 @@ public class ConversationAddLabelsExample
             var response = new ConversationLabelsApi(config).ConversationAddLabels(
                 accountId: 0,
                 conversationId: 0,
-                data: conversationAddLabelsRequest
+                data: contactAddLabelsRequest
             );
 
             Console.WriteLine(response);

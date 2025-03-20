@@ -9,7 +9,7 @@ configuration = Configuration(
 )
 
 with ApiClient(configuration) as api_client:
-    update_agents_in_team_request = models.UpdateAgentsInTeamRequest(
+    add_new_agent_to_team_request = models.AddNewAgentToTeamRequest(
         user_ids=[
         ],
     )
@@ -18,7 +18,7 @@ with ApiClient(configuration) as api_client:
         response = api.TeamsApi(api_client).update_agents_in_team(
             account_id=0,
             team_id=0,
-            data=update_agents_in_team_request,
+            data=add_new_agent_to_team_request,
         )
 
         pprint(response)

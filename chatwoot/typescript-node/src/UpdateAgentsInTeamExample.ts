@@ -5,7 +5,7 @@ import models from "chatwoot_client"
 const apiCaller = new api.TeamsApi();
 apiCaller.setApiKey(api.TeamsApiApiKeys.userApiKey, "USER_API_KEY");
 
-const updateAgentsInTeamRequest: models.UpdateAgentsInTeamRequest = {
+const addNewAgentToTeamRequest: models.AddNewAgentToTeamRequest = {
   userIds: [
   ],
 };
@@ -13,7 +13,7 @@ const updateAgentsInTeamRequest: models.UpdateAgentsInTeamRequest = {
 apiCaller.updateAgentsInTeam(
   0, // accountId
   0, // teamId
-  updateAgentsInTeamRequest, // data
+  addNewAgentToTeamRequest, // data
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

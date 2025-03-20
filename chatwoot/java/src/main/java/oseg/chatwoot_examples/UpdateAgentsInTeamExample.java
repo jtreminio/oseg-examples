@@ -21,15 +21,15 @@ public class UpdateAgentsInTeamExample
         var config = Configuration.getDefaultApiClient();
         ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
 
-        var updateAgentsInTeamRequest = new UpdateAgentsInTeamRequest();
-        updateAgentsInTeamRequest.userIds(List.of ());
+        var addNewAgentToTeamRequest = new AddNewAgentToTeamRequest();
+        addNewAgentToTeamRequest.userIds(List.of ());
 
         try
         {
             var response = new TeamsApi(config).updateAgentsInTeam(
                 0, // accountId
                 0, // teamId
-                updateAgentsInTeamRequest // data
+                addNewAgentToTeamRequest // data
             );
 
             System.out.println(response);

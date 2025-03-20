@@ -7,15 +7,15 @@ ChatwootClient.configure do |config|
     # config.api_key["api_access_token"] = "PLATFORM_APP_API_KEY"
 end
 
-conversation_add_labels_request = ChatwootClient::ConversationAddLabelsRequest.new
-conversation_add_labels_request.labels = [
+contact_add_labels_request = ChatwootClient::ContactAddLabelsRequest.new
+contact_add_labels_request.labels = [
 ]
 
 begin
     response = ChatwootClient::ConversationLabelsApi.new.conversation_add_labels(
         0, # account_id
         0, # conversation_id
-        conversation_add_labels_request, # data
+        contact_add_labels_request, # data
     )
 
     p response

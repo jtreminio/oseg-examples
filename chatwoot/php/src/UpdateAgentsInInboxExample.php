@@ -10,7 +10,7 @@ use Chatwoot;
 $config = Chatwoot\Client\Configuration::getDefaultConfiguration();
 $config->setApiKey("api_access_token", "USER_API_KEY");
 
-$update_agents_in_inbox_request = (new Chatwoot\Client\Model\UpdateAgentsInInboxRequest())
+$add_new_agent_to_inbox_request = (new Chatwoot\Client\Model\AddNewAgentToInboxRequest())
     ->setInboxId("inbox_id_string")
     ->setUserIds([
     ]);
@@ -18,7 +18,7 @@ $update_agents_in_inbox_request = (new Chatwoot\Client\Model\UpdateAgentsInInbox
 try {
     $response = (new Chatwoot\Client\Api\InboxesApi(config: $config))->updateAgentsInInbox(
         account_id: 0,
-        data: update_agents_in_inbox_request,
+        data: add_new_agent_to_inbox_request,
     );
 
     print_r($response);

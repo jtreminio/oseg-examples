@@ -19,7 +19,7 @@ class UpdateAgentsInInboxExample
     {
         ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
 
-        val updateAgentsInInboxRequest = UpdateAgentsInInboxRequest(
+        val addNewAgentToInboxRequest = AddNewAgentToInboxRequest(
             inboxId = "inbox_id_string",
             userIds = listOf (),
         )
@@ -28,7 +28,7 @@ class UpdateAgentsInInboxExample
         {
             val response = InboxesApi().updateAgentsInInbox(
                 accountId = 0,
-                _data = updateAgentsInInboxRequest,
+                _data = addNewAgentToInboxRequest,
             )
 
             println(response)

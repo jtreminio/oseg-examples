@@ -10,7 +10,7 @@ use Chatwoot;
 $config = Chatwoot\Client\Configuration::getDefaultConfiguration();
 $config->setApiKey("api_access_token", "USER_API_KEY");
 
-$update_agents_in_team_request = (new Chatwoot\Client\Model\UpdateAgentsInTeamRequest())
+$add_new_agent_to_team_request = (new Chatwoot\Client\Model\AddNewAgentToTeamRequest())
     ->setUserIds([
     ]);
 
@@ -18,7 +18,7 @@ try {
     $response = (new Chatwoot\Client\Api\TeamsApi(config: $config))->updateAgentsInTeam(
         account_id: 0,
         team_id: 0,
-        data: update_agents_in_team_request,
+        data: add_new_agent_to_team_request,
     );
 
     print_r($response);

@@ -19,7 +19,7 @@ class UpdateAgentsInTeamExample
     {
         ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
 
-        val updateAgentsInTeamRequest = UpdateAgentsInTeamRequest(
+        val addNewAgentToTeamRequest = AddNewAgentToTeamRequest(
             userIds = listOf (),
         )
 
@@ -28,7 +28,7 @@ class UpdateAgentsInTeamExample
             val response = TeamsApi().updateAgentsInTeam(
                 accountId = 0,
                 teamId = 0,
-                _data = updateAgentsInTeamRequest,
+                _data = addNewAgentToTeamRequest,
             )
 
             println(response)

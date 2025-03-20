@@ -21,7 +21,7 @@ class ConversationAddLabelsExample
         // ApiClient.apiKey["api_access_token"] = "AGENT_BOT_API_KEY"
         // ApiClient.apiKey["api_access_token"] = "PLATFORM_APP_API_KEY"
 
-        val conversationAddLabelsRequest = ConversationAddLabelsRequest(
+        val contactAddLabelsRequest = ContactAddLabelsRequest(
             labels = listOf (),
         )
 
@@ -30,7 +30,7 @@ class ConversationAddLabelsExample
             val response = ConversationLabelsApi().conversationAddLabels(
                 accountId = 0,
                 conversationId = 0,
-                _data = conversationAddLabelsRequest,
+                _data = contactAddLabelsRequest,
             )
 
             println(response)
