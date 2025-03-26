@@ -22,7 +22,7 @@ public class CreateANewMessageInAConversationExample
         ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
         // ((ApiKeyAuth) config.getAuthentication("agentBotApiKey")).setApiKey("AGENT_BOT_API_KEY");
 
-        var templateParams = new ConversationMessageCreateTemplateParams();
+        var templateParams = new NewConversationRequestMessageTemplateParams();
         templateParams.name("sample_issue_resolution");
         templateParams.category("UTILITY");
         templateParams.language("en_US");

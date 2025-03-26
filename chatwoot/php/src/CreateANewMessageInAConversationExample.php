@@ -11,7 +11,7 @@ $config = Chatwoot\Client\Configuration::getDefaultConfiguration();
 $config->setApiKey("api_access_token", "USER_API_KEY");
 // $config->setApiKey("api_access_token", "AGENT_BOT_API_KEY");
 
-$template_params = (new Chatwoot\Client\Model\ConversationMessageCreateTemplateParams())
+$template_params = (new Chatwoot\Client\Model\NewConversationRequestMessageTemplateParams())
     ->setName("sample_issue_resolution")
     ->setCategory("UTILITY")
     ->setLanguage("en_US")

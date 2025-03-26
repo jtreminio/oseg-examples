@@ -17,7 +17,7 @@ public class CreateANewMessageInAConversationExample
         config.ApiKey.Add("api_access_token", "USER_API_KEY");
         // config.ApiKey.Add("api_access_token", "AGENT_BOT_API_KEY");
 
-        var templateParams = new ConversationMessageCreateTemplateParams(
+        var templateParams = new NewConversationRequestMessageTemplateParams(
             name: "sample_issue_resolution",
             category: "UTILITY",
             language: "en_US",

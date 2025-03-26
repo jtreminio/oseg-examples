@@ -6,7 +6,7 @@ ChatwootClient.configure do |config|
     # config.api_key["api_access_token"] = "AGENT_BOT_API_KEY"
 end
 
-template_params = ChatwootClient::ConversationMessageCreateTemplateParams.new
+template_params = ChatwootClient::NewConversationRequestMessageTemplateParams.new
 template_params.name = "sample_issue_resolution"
 template_params.category = "UTILITY"
 template_params.language = "en_US"

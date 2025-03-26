@@ -10,7 +10,7 @@ configuration = Configuration(
 )
 
 with ApiClient(configuration) as api_client:
-    template_params = models.ConversationMessageCreateTemplateParams(
+    template_params = models.NewConversationRequestMessageTemplateParams(
         name="sample_issue_resolution",
         category="UTILITY",
         language="en_US",

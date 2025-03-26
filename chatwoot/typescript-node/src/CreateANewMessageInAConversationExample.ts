@@ -6,7 +6,7 @@ const apiCaller = new api.MessagesApi();
 apiCaller.setApiKey(api.MessagesApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.MessagesApiApiKeys.agentBotApiKey, "AGENT_BOT_API_KEY");
 
-const templateParams: models.ConversationMessageCreateTemplateParams = {
+const templateParams: models.NewConversationRequestMessageTemplateParams = {
   name: "sample_issue_resolution",
   category: "UTILITY",
   language: "en_US",

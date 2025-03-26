@@ -20,7 +20,7 @@ class CreateANewMessageInAConversationExample
         ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
         // ApiClient.apiKey["api_access_token"] = "AGENT_BOT_API_KEY"
 
-        val templateParams = ConversationMessageCreateTemplateParams(
+        val templateParams = NewConversationRequestMessageTemplateParams(
             name = "sample_issue_resolution",
             category = "UTILITY",
             language = "en_US",
