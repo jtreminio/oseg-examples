@@ -18,7 +18,7 @@ $user_create_update_payload = (new Chatwoot\Client\Model\UserCreateUpdatePayload
 
 try {
     $response = (new Chatwoot\Client\Api\UsersApi(config: $config))->createAUser(
-        data: user_create_update_payload,
+        data: $user_create_update_payload,
     );
 
     print_r($response);

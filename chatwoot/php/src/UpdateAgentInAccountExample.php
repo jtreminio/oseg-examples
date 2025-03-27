@@ -19,7 +19,7 @@ try {
     $response = (new Chatwoot\Client\Api\AgentsApi(config: $config))->updateAgentInAccount(
         account_id: 0,
         id: 0,
-        data: update_agent_in_account_request,
+        data: $update_agent_in_account_request,
     );
 
     print_r($response);

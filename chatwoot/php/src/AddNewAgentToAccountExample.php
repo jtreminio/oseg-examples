@@ -20,7 +20,7 @@ $add_new_agent_to_account_request = (new Chatwoot\Client\Model\AddNewAgentToAcco
 try {
     $response = (new Chatwoot\Client\Api\AgentsApi(config: $config))->addNewAgentToAccount(
         account_id: 0,
-        data: add_new_agent_to_account_request,
+        data: $add_new_agent_to_account_request,
     );
 
     print_r($response);

@@ -21,7 +21,7 @@ try {
     $response = (new Chatwoot\Client\Api\WebhooksApi(config: $config))->updateAWebhook(
         account_id: 0,
         webhook_id: 0,
-        data: webhook_create_update_payload,
+        data: $webhook_create_update_payload,
     );
 
     print_r($response);

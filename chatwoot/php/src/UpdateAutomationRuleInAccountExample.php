@@ -42,7 +42,7 @@ try {
     $response = (new Chatwoot\Client\Api\AutomationRuleApi(config: $config))->updateAutomationRuleInAccount(
         account_id: 0,
         id: 0,
-        data: automation_rule_create_update_payload,
+        data: $automation_rule_create_update_payload,
     );
 
     print_r($response);

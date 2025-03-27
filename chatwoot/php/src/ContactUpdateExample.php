@@ -25,7 +25,7 @@ try {
     $response = (new Chatwoot\Client\Api\ContactsApi(config: $config))->contactUpdate(
         account_id: 0,
         id: 0,
-        data: contact_update,
+        data: $contact_update,
     );
 
     print_r($response);

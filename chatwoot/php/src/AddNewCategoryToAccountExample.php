@@ -25,7 +25,7 @@ try {
     $response = (new Chatwoot\Client\Api\HelpCenterApi(config: $config))->addNewCategoryToAccount(
         account_id: 0,
         portal_id: 0,
-        data: category_create_update_payload,
+        data: $category_create_update_payload,
     );
 
     print_r($response);

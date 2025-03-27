@@ -19,7 +19,7 @@ try {
     $response = (new Chatwoot\Client\Api\ConversationAssignmentApi(config: $config))->assignAConversation(
         account_id: 0,
         conversation_id: 0,
-        data: assign_a_conversation_request,
+        data: $assign_a_conversation_request,
     );
 
     print_r($response);

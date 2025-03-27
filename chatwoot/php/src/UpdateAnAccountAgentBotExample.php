@@ -21,7 +21,7 @@ try {
     $response = (new Chatwoot\Client\Api\AccountAgentBotsApi(config: $config))->updateAnAccountAgentBot(
         account_id: 0,
         id: 0,
-        data: agent_bot_create_update_payload,
+        data: $agent_bot_create_update_payload,
     );
 
     print_r($response);

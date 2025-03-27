@@ -33,7 +33,7 @@ $portal_create_update_payload = (new Chatwoot\Client\Model\PortalCreateUpdatePay
 try {
     $response = (new Chatwoot\Client\Api\HelpCenterApi(config: $config))->updateNewPortalToAccount(
         account_id: 0,
-        data: portal_create_update_payload,
+        data: $portal_create_update_payload,
     );
 
     print_r($response);

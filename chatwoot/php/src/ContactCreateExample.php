@@ -25,7 +25,7 @@ $contact_create = (new Chatwoot\Client\Model\ContactCreate())
 try {
     $response = (new Chatwoot\Client\Api\ContactsApi(config: $config))->contactCreate(
         account_id: 0,
-        data: contact_create,
+        data: $contact_create,
     );
 
     print_r($response);

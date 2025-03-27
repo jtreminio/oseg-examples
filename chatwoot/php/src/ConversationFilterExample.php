@@ -14,7 +14,7 @@ $config->setApiKey("api_access_token", "USER_API_KEY");
 $payload_1 = (new Chatwoot\Client\Model\ContactFilterRequestPayloadInner())
     ->setAttributeKey("browser_language")
     ->setFilterOperator(Chatwoot\Client\Model\ContactFilterRequestPayloadInner::FILTER_OPERATOR_NOT_EQUAL_TO)
-    ->setQueryOperator(Chatwoot\Client\Model\ContactFilterRequestPayloadInner::QUERY_OPERATOR_AND)
+    ->setQueryOperator(Chatwoot\Client\Model\ContactFilterRequestPayloadInner::QUERY_OPERATOR__AND)
     ->setValues([
         "en",
     ]);
@@ -38,7 +38,7 @@ $conversation_filter_request = (new Chatwoot\Client\Model\ConversationFilterRequ
 try {
     $response = (new Chatwoot\Client\Api\ConversationsApi(config: $config))->conversationFilter(
         account_id: 123,
-        body: conversation_filter_request,
+        body: $conversation_filter_request,
         page: 1,
     );
 

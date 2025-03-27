@@ -18,7 +18,7 @@ try {
     $response = (new Chatwoot\Client\Api\CannedResponseApi(config: $config))->updateCannedResponseInAccount(
         account_id: 0,
         id: 0,
-        data: canned_response_create_update_payload,
+        data: $canned_response_create_update_payload,
     );
 
     print_r($response);

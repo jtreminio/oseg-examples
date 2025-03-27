@@ -16,7 +16,7 @@ $account_create_update_payload = (new Chatwoot\Client\Model\AccountCreateUpdateP
 try {
     $response = (new Chatwoot\Client\Api\AccountsApi(config: $config))->updateAnAccount(
         account_id: 0,
-        data: account_create_update_payload,
+        data: $account_create_update_payload,
     );
 
     print_r($response);

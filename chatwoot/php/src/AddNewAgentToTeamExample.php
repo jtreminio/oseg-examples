@@ -18,7 +18,7 @@ try {
     $response = (new Chatwoot\Client\Api\TeamsApi(config: $config))->addNewAgentToTeam(
         account_id: 0,
         team_id: 0,
-        data: add_new_agent_to_team_request,
+        data: $add_new_agent_to_team_request,
     );
 
     print_r($response);

@@ -19,7 +19,7 @@ try {
     (new Chatwoot\Client\Api\ConversationsApi(config: $config))->updateConversation(
         account_id: 0,
         conversation_id: 0,
-        data: update_conversation_request,
+        data: $update_conversation_request,
     );
 } catch (Chatwoot\Client\ApiException $e) {
     echo "Exception when calling ConversationsApi#updateConversation: {$e->getMessage()}";

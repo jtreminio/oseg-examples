@@ -19,7 +19,7 @@ try {
     (new Chatwoot\Client\Api\InboxesApi(config: $config))->updateAgentBot(
         account_id: 0,
         id: 0,
-        data: update_agent_bot_request,
+        data: $update_agent_bot_request,
     );
 } catch (Chatwoot\Client\ApiException $e) {
     echo "Exception when calling InboxesApi#updateAgentBot: {$e->getMessage()}";

@@ -18,7 +18,7 @@ try {
         contact_identifier: "contact_identifier_string",
         conversation_id: 0,
         message_id: 0,
-        data: public_message_update_payload,
+        data: $public_message_update_payload,
     );
 
     print_r($response);

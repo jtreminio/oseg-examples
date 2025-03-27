@@ -21,7 +21,7 @@ try {
     $response = (new Chatwoot\Client\Api\TeamsApi(config: $config))->updateATeam(
         account_id: 0,
         team_id: 0,
-        data: team_create_update_payload,
+        data: $team_create_update_payload,
     );
 
     print_r($response);

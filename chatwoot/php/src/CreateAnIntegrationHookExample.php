@@ -20,7 +20,7 @@ $integrations_hook_create_payload = (new Chatwoot\Client\Model\IntegrationsHookC
 try {
     $response = (new Chatwoot\Client\Api\IntegrationsApi(config: $config))->createAnIntegrationHook(
         account_id: 0,
-        data: integrations_hook_create_payload,
+        data: $integrations_hook_create_payload,
     );
 
     print_r($response);

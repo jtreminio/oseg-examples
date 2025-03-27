@@ -18,7 +18,7 @@ try {
     (new Chatwoot\Client\Api\ConversationsApi(config: $config))->togglePriorityOfAConversation(
         account_id: 0,
         conversation_id: 0,
-        data: toggle_priority_of_a_conversation_request,
+        data: $toggle_priority_of_a_conversation_request,
     );
 } catch (Chatwoot\Client\ApiException $e) {
     echo "Exception when calling ConversationsApi#togglePriorityOfAConversation: {$e->getMessage()}";

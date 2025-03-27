@@ -23,7 +23,7 @@ try {
     $response = (new Chatwoot\Client\Api\ConversationsApi(config: $config))->updateCustomAttributesOfAConversation(
         account_id: 0,
         conversation_id: 0,
-        data: update_custom_attributes_of_a_conversation_request,
+        data: $update_custom_attributes_of_a_conversation_request,
     );
 
     print_r($response);

@@ -22,7 +22,7 @@ try {
     $response = (new Chatwoot\Client\Api\ContactsAPIApi(config: $config))->updateAContact(
         inbox_identifier: "inbox_identifier_string",
         contact_identifier: "contact_identifier_string",
-        data: public_contact_create_update_payload,
+        data: $public_contact_create_update_payload,
     );
 
     print_r($response);

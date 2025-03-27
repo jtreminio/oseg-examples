@@ -18,7 +18,7 @@ try {
     (new Chatwoot\Client\Api\TeamsApi(config: $config))->deleteAgentInTeam(
         account_id: 0,
         team_id: 0,
-        data: delete_agent_in_team_request,
+        data: $delete_agent_in_team_request,
     );
 } catch (Chatwoot\Client\ApiException $e) {
     echo "Exception when calling TeamsApi#deleteAgentInTeam: {$e->getMessage()}";

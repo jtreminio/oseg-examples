@@ -22,7 +22,7 @@ $custom_attribute_create_update_payload = (new Chatwoot\Client\Model\CustomAttri
 try {
     $response = (new Chatwoot\Client\Api\CustomAttributesApi(config: $config))->addNewCustomAttributeToAccount(
         account_id: 0,
-        data: custom_attribute_create_update_payload,
+        data: $custom_attribute_create_update_payload,
     );
 
     print_r($response);

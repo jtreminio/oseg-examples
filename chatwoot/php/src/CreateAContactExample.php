@@ -21,7 +21,7 @@ $public_contact_create_update_payload = (new Chatwoot\Client\Model\PublicContact
 try {
     $response = (new Chatwoot\Client\Api\ContactsAPIApi(config: $config))->createAContact(
         inbox_identifier: "inbox_identifier_string",
-        data: public_contact_create_update_payload,
+        data: $public_contact_create_update_payload,
     );
 
     print_r($response);

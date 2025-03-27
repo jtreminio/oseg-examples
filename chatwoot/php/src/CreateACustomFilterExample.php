@@ -20,7 +20,7 @@ $custom_filter_create_update_payload = (new Chatwoot\Client\Model\CustomFilterCr
 try {
     $response = (new Chatwoot\Client\Api\CustomFiltersApi(config: $config))->createACustomFilter(
         account_id: 0,
-        data: custom_filter_create_update_payload,
+        data: $custom_filter_create_update_payload,
     );
 
     print_r($response);

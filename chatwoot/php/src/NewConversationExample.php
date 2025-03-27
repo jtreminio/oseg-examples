@@ -44,7 +44,7 @@ $new_conversation_request = (new Chatwoot\Client\Model\NewConversationRequest())
 try {
     $response = (new Chatwoot\Client\Api\ConversationsApi(config: $config))->newConversation(
         account_id: 0,
-        data: new_conversation_request,
+        data: $new_conversation_request,
     );
 
     print_r($response);

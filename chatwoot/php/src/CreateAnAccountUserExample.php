@@ -17,7 +17,7 @@ $create_an_account_user_request = (new Chatwoot\Client\Model\CreateAnAccountUser
 try {
     $response = (new Chatwoot\Client\Api\AccountUsersApi(config: $config))->createAnAccountUser(
         account_id: 0,
-        data: create_an_account_user_request,
+        data: $create_an_account_user_request,
     );
 
     print_r($response);

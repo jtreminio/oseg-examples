@@ -16,7 +16,7 @@ try {
     $response = (new Chatwoot\Client\Api\ConversationsAPIApi(config: $config))->createAConversation(
         inbox_identifier: "inbox_identifier_string",
         contact_identifier: "contact_identifier_string",
-        data: public_conversation_create_payload,
+        data: $public_conversation_create_payload,
     );
 
     print_r($response);

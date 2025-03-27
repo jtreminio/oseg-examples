@@ -16,7 +16,7 @@ $delete_an_account_user_request = (new Chatwoot\Client\Model\DeleteAnAccountUser
 try {
     (new Chatwoot\Client\Api\AccountUsersApi(config: $config))->deleteAnAccountUser(
         account_id: 0,
-        data: delete_an_account_user_request,
+        data: $delete_an_account_user_request,
     );
 } catch (Chatwoot\Client\ApiException $e) {
     echo "Exception when calling AccountUsersApi#deleteAnAccountUser: {$e->getMessage()}";

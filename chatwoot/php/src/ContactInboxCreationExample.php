@@ -20,7 +20,7 @@ try {
     $response = (new Chatwoot\Client\Api\ContactApi(config: $config))->contactInboxCreation(
         account_id: 0,
         id: 0,
-        data: contact_inbox_creation_request,
+        data: $contact_inbox_creation_request,
     );
 
     print_r($response);

@@ -20,7 +20,7 @@ try {
     $response = (new Chatwoot\Client\Api\ContactLabelsApi(config: $config))->contactAddLabels(
         account_id: 0,
         contact_identifier: "contact_identifier_string",
-        data: contact_add_labels_request,
+        data: $contact_add_labels_request,
     );
 
     print_r($response);

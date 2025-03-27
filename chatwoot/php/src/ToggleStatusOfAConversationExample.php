@@ -18,7 +18,7 @@ try {
     $response = (new Chatwoot\Client\Api\ConversationsApi(config: $config))->toggleStatusOfAConversation(
         account_id: 0,
         conversation_id: 0,
-        data: toggle_status_of_a_conversation_request,
+        data: $toggle_status_of_a_conversation_request,
     );
 
     print_r($response);

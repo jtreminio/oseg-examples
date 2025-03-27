@@ -19,7 +19,7 @@ $inbox_creation_request = (new Chatwoot\Client\Model\InboxCreationRequest())
 try {
     $response = (new Chatwoot\Client\Api\InboxesApi(config: $config))->inboxCreation(
         account_id: 0,
-        data: inbox_creation_request,
+        data: $inbox_creation_request,
     );
 
     print_r($response);

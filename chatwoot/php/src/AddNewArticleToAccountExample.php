@@ -37,7 +37,7 @@ try {
     $response = (new Chatwoot\Client\Api\HelpCenterApi(config: $config))->addNewArticleToAccount(
         account_id: 0,
         portal_id: 0,
-        data: article_create_update_payload,
+        data: $article_create_update_payload,
     );
 
     print_r($response);

@@ -21,7 +21,7 @@ try {
     $response = (new Chatwoot\Client\Api\InboxesApi(config: $config))->updateInbox(
         account_id: 0,
         id: 0,
-        data: update_inbox_request,
+        data: $update_inbox_request,
     );
 
     print_r($response);

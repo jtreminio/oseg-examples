@@ -17,7 +17,7 @@ $agent_bot_create_update_payload = (new Chatwoot\Client\Model\AgentBotCreateUpda
 
 try {
     $response = (new Chatwoot\Client\Api\AgentBotsApi(config: $config))->createAnAgentBot(
-        data: agent_bot_create_update_payload,
+        data: $agent_bot_create_update_payload,
     );
 
     print_r($response);

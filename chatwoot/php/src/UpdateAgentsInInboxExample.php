@@ -18,7 +18,7 @@ $add_new_agent_to_inbox_request = (new Chatwoot\Client\Model\AddNewAgentToInboxR
 try {
     $response = (new Chatwoot\Client\Api\InboxesApi(config: $config))->updateAgentsInInbox(
         account_id: 0,
-        data: add_new_agent_to_inbox_request,
+        data: $add_new_agent_to_inbox_request,
     );
 
     print_r($response);

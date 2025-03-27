@@ -18,7 +18,7 @@ $delete_agent_in_inbox_request = (new Chatwoot\Client\Model\DeleteAgentInInboxRe
 try {
     (new Chatwoot\Client\Api\InboxesApi(config: $config))->deleteAgentInInbox(
         account_id: 0,
-        data: delete_agent_in_inbox_request,
+        data: $delete_agent_in_inbox_request,
     );
 } catch (Chatwoot\Client\ApiException $e) {
     echo "Exception when calling InboxesApi#deleteAgentInInbox: {$e->getMessage()}";

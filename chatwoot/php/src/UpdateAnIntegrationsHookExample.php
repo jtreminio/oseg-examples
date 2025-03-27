@@ -19,7 +19,7 @@ try {
     $response = (new Chatwoot\Client\Api\IntegrationsApi(config: $config))->updateAnIntegrationsHook(
         account_id: 0,
         hook_id: 0,
-        data: integrations_hook_update_payload,
+        data: $integrations_hook_update_payload,
     );
 
     print_r($response);

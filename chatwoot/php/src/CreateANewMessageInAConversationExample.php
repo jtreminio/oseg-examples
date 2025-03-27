@@ -33,7 +33,7 @@ try {
     $response = (new Chatwoot\Client\Api\MessagesApi(config: $config))->createANewMessageInAConversation(
         account_id: 0,
         conversation_id: 0,
-        data: conversation_message_create,
+        data: $conversation_message_create,
     );
 
     print_r($response);
