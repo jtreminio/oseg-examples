@@ -1,0 +1,15 @@
+generatorName: kotlin
+additionalProperties:
+  groupId: com.chatwoot
+  packageName: com.chatwoot.client
+  artifactId: chatwoot-kotlin-client
+  hideGenerationTimestamp: true
+  oseg.package: oseg.chatwoot_examples
+  oseg.security.userApiKey.api_key: USER_API_KEY
+  oseg.security.agentBotApiKey.api_key: AGENT_BOT_API_KEY
+  oseg.security.platformAppApiKey.api_key: PLATFORM_APP_API_KEY
+globalProperties:
+  apiTests: false
+  modelTests: false
+  apiDocs: false
+  modelDocs: false

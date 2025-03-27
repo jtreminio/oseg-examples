@@ -1,0 +1,19 @@
+generatorName: php
+additionalProperties:
+  invokerPackage: "Chatwoot\\Client"
+  packageName: chatwoot/client
+  composerPackageName: chatwoot/client
+  packageVersion: "1.0.0"
+  artifactVersion: "1.0.0"
+  oseg.composerPackageName: oseg/chatwoot_examples
+  oseg.namespace: OSEG\ChatwootExamples
+  oseg.autoloadLocation: "__DIR__ . '/../vendor/autoload.php'"
+  oseg.ignoreOptionalUnset: false
+  oseg.security.userApiKey.api_key: USER_API_KEY
+  oseg.security.agentBotApiKey.api_key: AGENT_BOT_API_KEY
+  oseg.security.platformAppApiKey.api_key: PLATFORM_APP_API_KEY
+globalProperties:
+  apiTests: false
+  modelTests: false
+  apiDocs: false
+  modelDocs: false

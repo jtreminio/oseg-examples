@@ -1,0 +1,13 @@
+generatorName: typescript-node
+additionalProperties:
+  npmName: chatwoot_client
+  oseg.npmName: "@oseg/chatwoot"
+  oseg.security.userApiKey.api_key: USER_API_KEY
+  oseg.security.agentBotApiKey.api_key: AGENT_BOT_API_KEY
+  oseg.security.platformAppApiKey.api_key: PLATFORM_APP_API_KEY
+  oseg.printApiCallProperty: true
+globalProperties:
+  apiTests: false
+  modelTests: false
+  apiDocs: false
+  modelDocs: false

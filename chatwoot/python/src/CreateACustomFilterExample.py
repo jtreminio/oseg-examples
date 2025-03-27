@@ -1,0 +1,25 @@
+import json
+from datetime import date, datetime
+from pprint import pprint
+
+from chatwoot_client import ApiClient, ApiException, Configuration, api, models
+
+configuration = Configuration(
+    api_key={"userApiKey": "USER_API_KEY"},
+    # api_key={"agentBotApiKey": "AGENT_BOT_API_KEY"},
+    # api_key={"platformAppApiKey": "PLATFORM_APP_API_KEY"},
+)
+
+with ApiClient(configuration) as api_client:
+    custom_filter_create_update_payload = models.CustomFilterCreateUpdatePayload(
+    )
+
+    try:
+        response = api.CustomFiltersApi(api_client).create_a_custom_filter(
+            account_id=0,
+            data=custom_filter_create_update_payload,
+        )
+
+        pprint(response)
+    except ApiException as e:
+        print("Exception when calling CustomFiltersApi#create_a_custom_filter: %s\n" % e)

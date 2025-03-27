@@ -1,0 +1,13 @@
+generatorName: python
+additionalProperties:
+  packageName: chatwoot_client
+  projectName: chatwoot-client
+  oseg.propertyNamingConvention: snake_case
+  oseg.security.userApiKey.api_key: USER_API_KEY
+  oseg.security.agentBotApiKey.api_key: AGENT_BOT_API_KEY
+  oseg.security.platformAppApiKey.api_key: PLATFORM_APP_API_KEY
+globalProperties:
+  apiTests: false
+  modelTests: false
+  apiDocs: false
+  modelDocs: false
