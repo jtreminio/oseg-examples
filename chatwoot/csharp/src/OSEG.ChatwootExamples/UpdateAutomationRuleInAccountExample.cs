@@ -20,7 +20,7 @@ public class UpdateAutomationRuleInAccountExample
             name: "Add label on message create event",
             description: "Add label support and sales on message create event if incoming message content contains text help",
             eventName: AutomationRuleCreateUpdatePayload.EventNameEnum.MessageCreated,
-            actions: JsonSerializer.Deserialize<List<Dictionary<string, object>>>("""
+            actions: JsonSerializer.Deserialize<List<object>>("""
                 [
                     {
                         "action_name": "add_label",
@@ -30,7 +30,7 @@ public class UpdateAutomationRuleInAccountExample
                     }
                 ]
             """),
-            conditions: JsonSerializer.Deserialize<List<Dictionary<string, object>>>("""
+            conditions: JsonSerializer.Deserialize<List<object>>("""
                 [
                     {
                         "attribute_key": "content",

@@ -13,7 +13,7 @@ update_inbox_request.enable_auto_assignment = false
 begin
     response = ChatwootClient::InboxesApi.new.update_inbox(
         0, # account_id
-        0, # id
+        (0).to_f, # id
         update_inbox_request, # data
     )
 

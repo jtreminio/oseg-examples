@@ -10,7 +10,7 @@ end
 begin
     ChatwootClient::ContactsApi.new.contact_delete(
         0, # account_id
-        0, # id
+        (0).to_f, # id
     )
 rescue ChatwootClient::ApiError => e
     puts "Exception when calling ContactsApi#contact_delete: #{e}"

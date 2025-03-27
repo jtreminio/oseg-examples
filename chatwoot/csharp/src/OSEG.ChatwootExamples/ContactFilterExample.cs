@@ -17,27 +17,31 @@ public class ContactFilterExample
         config.ApiKey.Add("api_access_token", "USER_API_KEY");
         // config.ApiKey.Add("api_access_token", "AGENT_BOT_API_KEY");
 
+        var payload1 = new ContactFilterRequestPayloadInner(
+            attributeKey: "name",
+            filterOperator: ContactFilterRequestPayloadInner.FilterOperatorEnum.EqualTo,
+            queryOperator: ContactFilterRequestPayloadInner.QueryOperatorEnum.AND,
+            values: [
+                "en",
+            ]
+        );
+
+        var payload2 = new ContactFilterRequestPayloadInner(
+            attributeKey: "country_code",
+            filterOperator: ContactFilterRequestPayloadInner.FilterOperatorEnum.EqualTo,
+            values: [
+                "us",
+            ]
+        );
+
+        var payload = new List<ContactFilterRequestPayloadInner>
+        {
+            payload1,
+            payload2,
+        };
+
         var contactFilterRequest = new ContactFilterRequest(
-            payload: JsonSerializer.Deserialize<List<Dictionary<string, object>>>("""
-                [
-                    {
-                        "attribute_key": "name",
-                        "filter_operator": "equal_to",
-                        "query_operator": "AND",
-                        "values": [
-                            "en"
-                        ]
-                    },
-                    {
-                        "attribute_key": "country_code",
-                        "filter_operator": "equal_to",
-                        "query_operator": null,
-                        "values": [
-                            "us"
-                        ]
-                    }
-                ]
-            """)
+            payload: payload
         );
 
         try

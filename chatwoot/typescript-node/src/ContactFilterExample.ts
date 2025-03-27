@@ -6,25 +6,30 @@ const apiCaller = new api.ContactsApi();
 apiCaller.setApiKey(api.ContactsApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.ContactsApiApiKeys.agentBotApiKey, "AGENT_BOT_API_KEY");
 
-const contactFilterRequest: models.ContactFilterRequest = {
-  payload: [
-    {
-      "attribute_key": "name",
-      "filter_operator": "equal_to",
-      "query_operator": "AND",
-      "values": [
-        "en"
-      ]
-    },
-    {
-      "attribute_key": "country_code",
-      "filter_operator": "equal_to",
-      "query_operator": null,
-      "values": [
-        "us"
-      ]
-    }
+const payload1: models.ContactFilterRequestPayloadInner = {
+  attributeKey: "name",
+  filterOperator: models.ContactFilterRequestPayloadInner.FilterOperatorEnum.EqualTo,
+  queryOperator: models.ContactFilterRequestPayloadInner.QueryOperatorEnum.And,
+  values: [
+    "en",
   ],
+};
+
+const payload2: models.ContactFilterRequestPayloadInner = {
+  attributeKey: "country_code",
+  filterOperator: models.ContactFilterRequestPayloadInner.FilterOperatorEnum.EqualTo,
+  values: [
+    "us",
+  ],
+};
+
+const payload = [
+  payload1,
+  payload2,
+];
+
+const contactFilterRequest: models.ContactFilterRequest = {
+  payload: payload,
 };
 
 apiCaller.contactFilter(

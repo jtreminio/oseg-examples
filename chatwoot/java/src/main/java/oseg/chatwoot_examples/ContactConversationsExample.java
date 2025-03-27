@@ -8,6 +8,7 @@ import com.chatwoot.client.JSON;
 import com.chatwoot.client.model.*;
 
 import java.io.File;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
@@ -27,7 +28,7 @@ public class ContactConversationsExample
         {
             var response = new ContactsApi(config).contactConversations(
                 0, // accountId
-                0 // id
+                BigDecimal.valueOf(0) // id
             );
 
             System.out.println(response);

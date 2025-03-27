@@ -6,31 +6,36 @@ const apiCaller = new api.ConversationsApi();
 apiCaller.setApiKey(api.ConversationsApiApiKeys.userApiKey, "USER_API_KEY");
 // apiCaller.setApiKey(api.ConversationsApiApiKeys.agentBotApiKey, "AGENT_BOT_API_KEY");
 
-const conversationFilterRequest: models.ConversationFilterRequest = {
-  payload: [
-    {
-      "attribute_key": "browser_language",
-      "filter_operator": "not_eq",
-      "query_operator": "AND",
-      "values": [
-        "en"
-      ]
-    },
-    {
-      "attribute_key": "status",
-      "filter_operator": "eq",
-      "query_operator": null,
-      "values": [
-        "pending"
-      ]
-    }
+const payload1: models.ContactFilterRequestPayloadInner = {
+  attributeKey: "browser_language",
+  filterOperator: models.ContactFilterRequestPayloadInner.FilterOperatorEnum.NotEqualTo,
+  queryOperator: models.ContactFilterRequestPayloadInner.QueryOperatorEnum.And,
+  values: [
+    "en",
   ],
 };
 
+const payload2: models.ContactFilterRequestPayloadInner = {
+  attributeKey: "status",
+  filterOperator: models.ContactFilterRequestPayloadInner.FilterOperatorEnum.EqualTo,
+  values: [
+    "pending",
+  ],
+};
+
+const payload = [
+  payload1,
+  payload2,
+];
+
+const conversationFilterRequest: models.ConversationFilterRequest = {
+  payload: payload,
+};
+
 apiCaller.conversationFilter(
-  0, // accountId
+  123, // accountId
   conversationFilterRequest, // body
-  undefined, // page
+  1, // page
 ).then(response => {
   console.log(response.body);
 }).catch(error => {

@@ -10,7 +10,7 @@ end
 begin
     response = ChatwootClient::ContactApi.new.contactable_inboxes_get(
         0, # account_id
-        0, # id
+        (0).to_f, # id
     )
 
     p response

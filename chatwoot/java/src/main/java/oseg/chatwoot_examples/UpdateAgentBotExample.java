@@ -8,6 +8,7 @@ import com.chatwoot.client.JSON;
 import com.chatwoot.client.model.*;
 
 import java.io.File;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
@@ -24,13 +25,13 @@ public class UpdateAgentBotExample
         // ((ApiKeyAuth) config.getAuthentication("platformAppApiKey")).setApiKey("PLATFORM_APP_API_KEY");
 
         var updateAgentBotRequest = new UpdateAgentBotRequest();
-        updateAgentBotRequest.agentBot(0);
+        updateAgentBotRequest.agentBot(BigDecimal.valueOf(0));
 
         try
         {
             new InboxesApi(config).updateAgentBot(
                 0, // accountId
-                0, // id
+                BigDecimal.valueOf(0), // id
                 updateAgentBotRequest // data
             );
         } catch (ApiException e) {

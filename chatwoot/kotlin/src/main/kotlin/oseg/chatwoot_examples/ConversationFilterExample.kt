@@ -20,34 +20,38 @@ class ConversationFilterExample
         ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
         // ApiClient.apiKey["api_access_token"] = "AGENT_BOT_API_KEY"
 
+        val payload1 = ContactFilterRequestPayloadInner(
+            attributeKey = "browser_language",
+            filterOperator = ContactFilterRequestPayloadInner.FilterOperator.notEqualTo,
+            queryOperator = ContactFilterRequestPayloadInner.QueryOperator.aND,
+            values = listOf (
+                "en",
+            ),
+        )
+
+        val payload2 = ContactFilterRequestPayloadInner(
+            attributeKey = "status",
+            filterOperator = ContactFilterRequestPayloadInner.FilterOperator.equalTo,
+            values = listOf (
+                "pending",
+            ),
+        )
+
+        val payload = arrayListOf<ContactFilterRequestPayloadInner>(
+            payload1,
+            payload2,
+        )
+
         val conversationFilterRequest = ConversationFilterRequest(
-            payload = Serializer.moshi.adapter<List<Map<String, Any>>>().fromJson("""
-                [
-                    {
-                        "attribute_key": "browser_language",
-                        "filter_operator": "not_eq",
-                        "query_operator": "AND",
-                        "values": [
-                            "en"
-                        ]
-                    },
-                    {
-                        "attribute_key": "status",
-                        "filter_operator": "eq",
-                        "query_operator": null,
-                        "values": [
-                            "pending"
-                        ]
-                    }
-                ]
-            """)!!,
+            payload = payload,
         )
 
         try
         {
             val response = ConversationsApi().conversationFilter(
-                accountId = 0,
+                accountId = 123,
                 body = conversationFilterRequest,
+                page = 1,
             )
 
             println(response)

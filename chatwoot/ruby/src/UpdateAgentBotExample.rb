@@ -8,12 +8,12 @@ ChatwootClient.configure do |config|
 end
 
 update_agent_bot_request = ChatwootClient::UpdateAgentBotRequest.new
-update_agent_bot_request.agent_bot = 0
+update_agent_bot_request.agent_bot = (0).to_f
 
 begin
     ChatwootClient::InboxesApi.new.update_agent_bot(
         0, # account_id
-        0, # id
+        (0).to_f, # id
         update_agent_bot_request, # data
     )
 rescue ChatwootClient::ApiError => e

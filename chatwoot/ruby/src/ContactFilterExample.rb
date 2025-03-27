@@ -6,28 +6,28 @@ ChatwootClient.configure do |config|
     # config.api_key["api_access_token"] = "AGENT_BOT_API_KEY"
 end
 
+payload_1 = ChatwootClient::ContactFilterRequestPayloadInner.new
+payload_1.attribute_key = "name"
+payload_1.filter_operator = "equal_to"
+payload_1.query_operator = "AND"
+payload_1.values = [
+    "en",
+]
+
+payload_2 = ChatwootClient::ContactFilterRequestPayloadInner.new
+payload_2.attribute_key = "country_code"
+payload_2.filter_operator = "equal_to"
+payload_2.values = [
+    "us",
+]
+
+payload = [
+    payload_1,
+    payload_2,
+]
+
 contact_filter_request = ChatwootClient::ContactFilterRequest.new
-contact_filter_request.payload = JSON.parse(<<-EOD
-    [
-        {
-            "attribute_key": "name",
-            "filter_operator": "equal_to",
-            "query_operator": "AND",
-            "values": [
-                "en"
-            ]
-        },
-        {
-            "attribute_key": "country_code",
-            "filter_operator": "equal_to",
-            "query_operator": null,
-            "values": [
-                "us"
-            ]
-        }
-    ]
-    EOD
-)
+contact_filter_request.payload = payload
 
 begin
     response = ChatwootClient::ContactsApi.new.contact_filter(

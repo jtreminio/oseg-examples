@@ -8,7 +8,7 @@ ChatwootClient.configure do |config|
 end
 
 contact_create = ChatwootClient::ContactCreate.new
-contact_create.inbox_id = 0
+contact_create.inbox_id = (0).to_f
 
 begin
     response = ChatwootClient::ContactsApi.new.contact_create(

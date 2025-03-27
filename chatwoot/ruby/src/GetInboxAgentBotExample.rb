@@ -10,7 +10,7 @@ end
 begin
     response = ChatwootClient::InboxesApi.new.get_inbox_agent_bot(
         0, # account_id
-        0, # id
+        (0).to_f, # id
     )
 
     p response

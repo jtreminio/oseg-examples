@@ -10,33 +10,37 @@ configuration = Configuration(
 )
 
 with ApiClient(configuration) as api_client:
+    payload_1 = models.ContactFilterRequestPayloadInner(
+        attribute_key="browser_language",
+        filter_operator="not_equal_to",
+        query_operator="AND",
+        values=[
+            "en",
+        ],
+    )
+
+    payload_2 = models.ContactFilterRequestPayloadInner(
+        attribute_key="status",
+        filter_operator="equal_to",
+        values=[
+            "pending",
+        ],
+    )
+
+    payload = [
+        payload_1,
+        payload_2,
+    ]
+
     conversation_filter_request = models.ConversationFilterRequest(
-        payload=json.loads("""
-            [
-                {
-                    "attribute_key": "browser_language",
-                    "filter_operator": "not_eq",
-                    "query_operator": "AND",
-                    "values": [
-                        "en"
-                    ]
-                },
-                {
-                    "attribute_key": "status",
-                    "filter_operator": "eq",
-                    "query_operator": null,
-                    "values": [
-                        "pending"
-                    ]
-                }
-            ]
-        """),
+        payload=payload,
     )
 
     try:
         response = api.ConversationsApi(api_client).conversation_filter(
-            account_id=0,
+            account_id=123,
             body=conversation_filter_request,
+            page=1,
         )
 
         pprint(response)

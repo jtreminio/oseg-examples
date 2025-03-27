@@ -20,27 +20,30 @@ class ContactFilterExample
         ApiClient.apiKey["api_access_token"] = "USER_API_KEY"
         // ApiClient.apiKey["api_access_token"] = "AGENT_BOT_API_KEY"
 
+        val payload1 = ContactFilterRequestPayloadInner(
+            attributeKey = "name",
+            filterOperator = ContactFilterRequestPayloadInner.FilterOperator.equalTo,
+            queryOperator = ContactFilterRequestPayloadInner.QueryOperator.aND,
+            values = listOf (
+                "en",
+            ),
+        )
+
+        val payload2 = ContactFilterRequestPayloadInner(
+            attributeKey = "country_code",
+            filterOperator = ContactFilterRequestPayloadInner.FilterOperator.equalTo,
+            values = listOf (
+                "us",
+            ),
+        )
+
+        val payload = arrayListOf<ContactFilterRequestPayloadInner>(
+            payload1,
+            payload2,
+        )
+
         val contactFilterRequest = ContactFilterRequest(
-            payload = Serializer.moshi.adapter<List<Map<String, Any>>>().fromJson("""
-                [
-                    {
-                        "attribute_key": "name",
-                        "filter_operator": "equal_to",
-                        "query_operator": "AND",
-                        "values": [
-                            "en"
-                        ]
-                    },
-                    {
-                        "attribute_key": "country_code",
-                        "filter_operator": "equal_to",
-                        "query_operator": null,
-                        "values": [
-                            "us"
-                        ]
-                    }
-                ]
-            """)!!,
+            payload = payload,
         )
 
         try

@@ -8,6 +8,7 @@ import com.chatwoot.client.JSON;
 import com.chatwoot.client.model.*;
 
 import java.io.File;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
@@ -24,7 +25,7 @@ public class ContactCreateExample
         // ((ApiKeyAuth) config.getAuthentication("platformAppApiKey")).setApiKey("PLATFORM_APP_API_KEY");
 
         var contactCreate = new ContactCreate();
-        contactCreate.inboxId(0);
+        contactCreate.inboxId(BigDecimal.valueOf(0));
 
         try
         {

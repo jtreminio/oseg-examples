@@ -8,6 +8,7 @@ import com.chatwoot.client.JSON;
 import com.chatwoot.client.model.*;
 
 import java.io.File;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
@@ -22,27 +23,28 @@ public class ContactFilterExample
         ((ApiKeyAuth) config.getAuthentication("userApiKey")).setApiKey("USER_API_KEY");
         // ((ApiKeyAuth) config.getAuthentication("agentBotApiKey")).setApiKey("AGENT_BOT_API_KEY");
 
+        var payload1 = new ContactFilterRequestPayloadInner();
+        payload1.attributeKey("name");
+        payload1.filterOperator(ContactFilterRequestPayloadInner.FilterOperatorEnum.EQUAL_TO);
+        payload1.queryOperator(ContactFilterRequestPayloadInner.QueryOperatorEnum.AND);
+        payload1.values(List.of (
+            "en"
+        ));
+
+        var payload2 = new ContactFilterRequestPayloadInner();
+        payload2.attributeKey("country_code");
+        payload2.filterOperator(ContactFilterRequestPayloadInner.FilterOperatorEnum.EQUAL_TO);
+        payload2.values(List.of (
+            "us"
+        ));
+
+        var payload = new ArrayList<ContactFilterRequestPayloadInner>(List.of (
+            payload1,
+            payload2
+        ));
+
         var contactFilterRequest = new ContactFilterRequest();
-        contactFilterRequest.payload(JSON.deserialize("""
-            [
-                {
-                    "attribute_key": "name",
-                    "filter_operator": "equal_to",
-                    "query_operator": "AND",
-                    "values": [
-                        "en"
-                    ]
-                },
-                {
-                    "attribute_key": "country_code",
-                    "filter_operator": "equal_to",
-                    "query_operator": null,
-                    "values": [
-                        "us"
-                    ]
-                }
-            ]
-        """, List.class));
+        contactFilterRequest.payload(payload);
 
         try
         {

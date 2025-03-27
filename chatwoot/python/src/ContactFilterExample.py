@@ -10,27 +10,30 @@ configuration = Configuration(
 )
 
 with ApiClient(configuration) as api_client:
+    payload_1 = models.ContactFilterRequestPayloadInner(
+        attribute_key="name",
+        filter_operator="equal_to",
+        query_operator="AND",
+        values=[
+            "en",
+        ],
+    )
+
+    payload_2 = models.ContactFilterRequestPayloadInner(
+        attribute_key="country_code",
+        filter_operator="equal_to",
+        values=[
+            "us",
+        ],
+    )
+
+    payload = [
+        payload_1,
+        payload_2,
+    ]
+
     contact_filter_request = models.ContactFilterRequest(
-        payload=json.loads("""
-            [
-                {
-                    "attribute_key": "name",
-                    "filter_operator": "equal_to",
-                    "query_operator": "AND",
-                    "values": [
-                        "en"
-                    ]
-                },
-                {
-                    "attribute_key": "country_code",
-                    "filter_operator": "equal_to",
-                    "query_operator": null,
-                    "values": [
-                        "us"
-                    ]
-                }
-            ]
-        """),
+        payload=payload,
     )
 
     try:

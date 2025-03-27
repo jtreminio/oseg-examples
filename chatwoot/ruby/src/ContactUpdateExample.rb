@@ -12,7 +12,7 @@ contact_update = ChatwootClient::ContactUpdate.new
 begin
     response = ChatwootClient::ContactsApi.new.contact_update(
         0, # account_id
-        0, # id
+        (0).to_f, # id
         contact_update, # data
     )
 

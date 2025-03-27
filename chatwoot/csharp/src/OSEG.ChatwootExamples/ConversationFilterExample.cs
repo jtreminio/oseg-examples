@@ -17,34 +17,39 @@ public class ConversationFilterExample
         config.ApiKey.Add("api_access_token", "USER_API_KEY");
         // config.ApiKey.Add("api_access_token", "AGENT_BOT_API_KEY");
 
+        var payload1 = new ContactFilterRequestPayloadInner(
+            attributeKey: "browser_language",
+            filterOperator: ContactFilterRequestPayloadInner.FilterOperatorEnum.NotEqualTo,
+            queryOperator: ContactFilterRequestPayloadInner.QueryOperatorEnum.AND,
+            values: [
+                "en",
+            ]
+        );
+
+        var payload2 = new ContactFilterRequestPayloadInner(
+            attributeKey: "status",
+            filterOperator: ContactFilterRequestPayloadInner.FilterOperatorEnum.EqualTo,
+            values: [
+                "pending",
+            ]
+        );
+
+        var payload = new List<ContactFilterRequestPayloadInner>
+        {
+            payload1,
+            payload2,
+        };
+
         var conversationFilterRequest = new ConversationFilterRequest(
-            payload: JsonSerializer.Deserialize<List<Dictionary<string, object>>>("""
-                [
-                    {
-                        "attribute_key": "browser_language",
-                        "filter_operator": "not_eq",
-                        "query_operator": "AND",
-                        "values": [
-                            "en"
-                        ]
-                    },
-                    {
-                        "attribute_key": "status",
-                        "filter_operator": "eq",
-                        "query_operator": null,
-                        "values": [
-                            "pending"
-                        ]
-                    }
-                ]
-            """)
+            payload: payload
         );
 
         try
         {
             var response = new ConversationsApi(config).ConversationFilter(
-                accountId: 0,
-                body: conversationFilterRequest
+                accountId: 123,
+                body: conversationFilterRequest,
+                page: 1
             );
 
             Console.WriteLine(response);
