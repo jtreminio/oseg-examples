@@ -8,6 +8,7 @@ import com.launchdarkly.client.JSON;
 import com.launchdarkly.client.model.*;
 
 import java.io.File;
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
