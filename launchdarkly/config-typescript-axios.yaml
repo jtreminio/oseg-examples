@@ -1,0 +1,11 @@
+generatorName: typescript-axios
+additionalProperties:
+  npmName: launchdarkly_client
+  oseg.npmName: "@oseg/launchdarkly_examples"
+  oseg.security.ApiKey.api_key: YOUR_API_KEY
+  oseg.printApiCallProperty: true
+globalProperties:
+    apiTests: false
+    modelTests: false
+    apiDocs: false
+    modelDocs: false

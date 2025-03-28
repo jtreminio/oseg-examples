@@ -1,0 +1,22 @@
+import axios, { AxiosError } from "axios";
+import * as api from "chatwoot_client"
+
+const configuration = new api.Configuration({
+  apiKey: "USER_API_KEY",
+  // apiKey: "AGENT_BOT_API_KEY",
+  // apiKey: "PLATFORM_APP_API_KEY",
+});
+
+new api.ConversationsApi(configuration).conversationListMeta(
+  0, // accountId
+  "open", // status
+  undefined, // q
+  undefined, // inboxId
+  undefined, // teamId
+  undefined, // labels
+).then(response => {
+  console.log(response.data);
+}).catch((error: Error | AxiosError) => {
+  console.log("Exception when calling ConversationsApi#conversationListMeta:");
+  axios.isAxiosError(error) ? console.log(error.message) : console.log(error);
+});
