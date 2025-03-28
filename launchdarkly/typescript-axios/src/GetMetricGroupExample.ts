@@ -1,0 +1,17 @@
+import axios, { AxiosError } from "axios";
+import * as api from "launchdarkly_client"
+
+const configuration = new api.Configuration({
+  apiKey: "YOUR_API_KEY",
+});
+
+new api.MetricsBetaApi(configuration).getMetricGroup(
+  "projectKey_string", // projectKey
+  "metricGroupKey_string", // metricGroupKey
+  undefined, // expand
+).then(response => {
+  console.log(response.data);
+}).catch((error: Error | AxiosError) => {
+  console.log("Exception when calling MetricsBetaApi#getMetricGroup:");
+  axios.isAxiosError(error) ? console.log(error.message) : console.log(error);
+});
